@@ -1,0 +1,115 @@
+@mixin responsive($break) {
+    @if $break == small-screens {
+        @media (min-width: $break-small) { 
+            @content; 
+        }
+    }
+    @else if $break == large-screens {
+        @media (min-width: $break-large) { 
+            @content; 
+        }
+    }
+}
+
+@mixin header {
+    width: $width-wide;
+    background: url(../images/header_back.png) no-repeat;
+    background-size: cover;
+
+    @include responsive(large-screens) {
+        height: 440px;
+    }
+
+    .logo-icon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .search-menu {
+            display: flex;
+            a {
+                margin-right: 30px;
+                img {
+                    width: 36px;
+                }
+            }
+            a:first-child {
+                display: none;
+            }
+            a:nth-child(2) {
+                display: none;
+            }
+            .menu-toggle-btn {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                padding: 10px;
+                span {
+                    width: 25px;
+                    height: 3px;
+                    background-color: black;
+                }
+            }
+        }
+    }
+
+    @include responsive(large-screens) {
+        .logo-icon {
+            .search-menu {
+                a:first-child {
+                    display: block;
+                }
+                a:nth-child(2) {
+                    display: block;
+                }
+                a:nth-child(3) {
+                    display: none;
+                }
+                .menu-toggle-btn {
+                    display: none;
+                }
+            }    
+        }
+    }
+
+    .menu_box {
+        display: none;
+    }
+    @include responsive(large-screens) {
+        .menu_box {
+            display: block;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .mainmenu {
+                width: 700px;
+                // background-color: green;
+                .gnb {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 42px;
+                    li {
+                        position: relative;
+                        .submenu {
+                            display: none;
+                            li {
+                                a {
+                                    font-family: $font-pre-regular;
+                                }
+                            }
+                        }
+                        a {
+                            color: #171717;
+                            font-size: 20px;
+                            height: 30px;
+                            line-height: 30px;
+                            text-align: center;
+                            text-decoration: underline;
+                            font-family: $font-main;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
