@@ -63,7 +63,7 @@ ul {
 
 a {
   display: block;
-  color: black;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -314,6 +314,7 @@ footer .public a {
   font-family: "KimjungchulMyungjo-Regular";
   margin-right: 42px;
   margin-bottom: 46px;
+  color: white;
 }
 footer .public a:hover {
   color: #ffbe0f;
