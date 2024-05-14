@@ -79,7 +79,7 @@
             display: block;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: baseline;
             .mainmenu {
                 width: 700px;
                 // background-color: green;
@@ -90,13 +90,20 @@
                     li {
                         position: relative;
                         .submenu {
-                            display: none;
+                            margin-top: 27px;
                             li {
                                 a {
                                     font-family: $font-pre-regular;
-                                }
+                                    text-decoration: none;
+                                    font-size: 18px;
+                                    color: #7e7e7e;
+                                    &:hover {
+                                        color: #ffbe0f;
+                                    }
+                                }   
                             }
                         }
+                    }
                         a {
                             color: #171717;
                             font-size: 20px;
@@ -104,12 +111,33 @@
                             line-height: 30px;
                             text-align: center;
                             text-decoration: underline;
-                            font-family: $font-main;
+                            font-family: $font-regular;
+                            &:hover {
+                                color: #ffbe0f;
+                            }
+                        }
+                    }
+                }
+                form {
+                    .search-box {
+                        position: relative;
+                        display: flex;
+                        input {
+                            border-top: 0;
+                            border-left: 0;
+                            border-right: 0;
+                            color: black;
+                        }
+                        .search{
+                            position: absolute;
+                            top: -18px;
+                            left: 135px;
+                            img {
+                                width: 30px;
+                            }
                         }
                     }
                 }
             }
         }
     }
-
-}

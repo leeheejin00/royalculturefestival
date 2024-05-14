@@ -62,6 +62,24 @@
                 }
             }
         }
+        form {
+            text-align: center;
+            label {
+                select {
+                    border: 0;
+                    color: white;
+                    font-family: $font-pre-regular;
+                    font-size: 26px;
+                    background: transparent;
+                    width: 214px;
+                    @include responsive(large-screens) {
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+    }
+ 
     
         hr {
             width: 411px;
@@ -73,12 +91,16 @@
             display: flex;
             justify-content: center;
             a {
-                font-size: 20px;
-                font-family: $font-main;
+                font-size: 26px;
+                font-family: $font-regular;
                 margin-right: 42px;
                 margin-bottom: 46px;
+                color: white;
                 &:hover {
                     color: #ffbe0f;
+                }
+                @include responsive(large-screens) {
+                    font-size: 20px;
                 }
             }
             a:last-child {
@@ -87,21 +109,34 @@
         }
         .address {
             font-size: 20px;
+            font-family: $font-light;
+            @include responsive(large-screens) {
+                font-size: 18px;
+            }
         }
         .question {
             display: flex;
             justify-content: center;
-            font-size: 18px;
+            margin: 0 auto;
             address {
-                    font-size: 18px;
+                    font-size: 20px;
                     margin-right: 42px;
                     margin-bottom: 34px;
+                    font-family: $font-extra;
+                    text-align: center;
+                    @include responsive(large-screens) {
+                        font-size: 18px;
+                    }
                 }
             }
         .copyright {
             p {
                 padding-bottom: 51px;
+                font-size: 18px;
+                font-family: $font-extra;
+                @include responsive(large-screens) {
+                    font-size: 16px;
+                }
             }   
         }
-    }
 }
