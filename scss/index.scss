@@ -6,7 +6,10 @@
     width: $width-wide;
     max-width: 1416px;
     margin: 32px auto;
+<<<<<<< HEAD
     padding: 0 32px;
+=======
+>>>>>>> 6d1059f5c27faa06e9a994707d311b4ab76cc393
 }
 
 // ==== header ====
@@ -78,7 +81,11 @@ header {
             display: block;
             display: flex;
             justify-content: space-between;
+<<<<<<< HEAD
             align-items: baseline;
+=======
+            align-items: center;
+>>>>>>> 6d1059f5c27faa06e9a994707d311b4ab76cc393
             .mainmenu {
                 width: 700px;
                 // background-color: green;
@@ -88,6 +95,7 @@ header {
                     margin-top: 42px;
                     li {
                         position: relative;
+<<<<<<< HEAD
                         .submenu {
                             margin-top: 27px;
                             li {
@@ -103,6 +111,15 @@ header {
                             }
                         }
                     }
+=======
+                        .submenu
+                            li {
+                                a {
+                                    font-family: $font-pre-regular;
+                                }
+                            }
+                        }
+>>>>>>> 6d1059f5c27faa06e9a994707d311b4ab76cc393
                         a {
                             color: #171717;
                             font-size: 20px;
@@ -110,13 +127,18 @@ header {
                             line-height: 30px;
                             text-align: center;
                             text-decoration: underline;
+<<<<<<< HEAD
                             font-family: $font-regular;
+=======
+                            font-family: "KimjungchulGothic-Bold";
+>>>>>>> 6d1059f5c27faa06e9a994707d311b4ab76cc393
                             &:hover {
                                 color: #ffbe0f;
                             }
                         }
                     }
                 }
+<<<<<<< HEAD
                 form {
                     .search-box {
                         position: relative;
@@ -137,6 +159,13 @@ header {
                         }
                     }
                 }
+=======
+                // form {
+                //     img {
+                //         width: 32px;
+                //     }
+                // }
+>>>>>>> 6d1059f5c27faa06e9a994707d311b4ab76cc393
             }
         }
     }
@@ -195,6 +224,7 @@ footer {
             }
         }
         form {
+<<<<<<< HEAD
             text-align: center;
             label {
                 select {
@@ -212,6 +242,17 @@ footer {
         }
     }
  
+=======
+            label {
+                select {
+                    border: 0;
+                    color: black;
+                    background: transparent;
+                }
+            }
+        }
+    } 
+>>>>>>> 6d1059f5c27faa06e9a994707d311b4ab76cc393
     
         hr {
             width: 411px;
@@ -223,6 +264,7 @@ footer {
             display: flex;
             justify-content: center;
             a {
+<<<<<<< HEAD
                 font-size: 26px;
                 font-family: $font-regular;
                 margin-right: 42px;
@@ -234,6 +276,15 @@ footer {
                 @include responsive(large-screens) {
                     font-size: 20px;
                 }
+=======
+                font-size: 20px;
+                font-family: $font-main;
+                margin-right: 42px;
+                margin-bottom: 46px;
+                &:hover {
+                    color: #ffbe0f;
+                }
+>>>>>>> 6d1059f5c27faa06e9a994707d311b4ab76cc393
             }
             a:last-child {
                 margin-right: 0;
@@ -241,14 +292,18 @@ footer {
         }
         .address {
             font-size: 20px;
+<<<<<<< HEAD
             font-family: $font-light;
             @include responsive(large-screens) {
                 font-size: 18px;
             }
+=======
+>>>>>>> 6d1059f5c27faa06e9a994707d311b4ab76cc393
         }
         .question {
             display: flex;
             justify-content: center;
+<<<<<<< HEAD
             margin: 0 auto;
             address {
                     font-size: 20px;
@@ -259,11 +314,19 @@ footer {
                     @include responsive(large-screens) {
                         font-size: 18px;
                     }
+=======
+            font-size: 18px;
+            address {
+                    font-size: 18px;
+                    margin-right: 42px;
+                    margin-bottom: 34px;
+>>>>>>> 6d1059f5c27faa06e9a994707d311b4ab76cc393
                 }
             }
         .copyright {
             p {
                 padding-bottom: 51px;
+<<<<<<< HEAD
                 font-size: 18px;
                 font-family: $font-extra;
                 @include responsive(large-screens) {
@@ -272,4 +335,9 @@ footer {
             }   
         }
 }
+=======
+            }   
+        }
+    }
+>>>>>>> 6d1059f5c27faa06e9a994707d311b4ab76cc393
 
