@@ -7,12 +7,97 @@
 
 section.title {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
 }
 
 section.title > h2 {
+  margin-right: 10px;
   border-bottom: 1px solid #111;
 }
 
 section.title > .filter {
   display: flex;
+}
+
+section.title > .filter > p {
+  margin-right: 12px;
+}
+
+section.booking-list > .desc {
+  margin-bottom: 40px;
+  font: "Pretendard-Thin";
+  color: #333333;
+}
+
+section.booking-list > div {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 24px;
+  padding: 32px;
+  border: 1px solid #2f2411;
+}
+
+section.booking-list > .booking01 > img {
+  width: 33%;
+}
+
+section.booking-list .num-name {
+  display: flex;
+}
+
+section.booking-list .line {
+  width: 5px;
+  height: 84px;
+  margin-right: 16px;
+  background-color: #2f2411;
+}
+
+section.booking-list .booking-name {
+  font-size: 30px;
+}
+
+section.booking-list .more-btn {
+  display: none;
+}
+
+section.booking-list .more-btn img {
+  width: 24px;
+}
+
+section.booking-list .date-place-count {
+  display: flex;
+  position: absolute;
+  bottom: 32px;
+}
+
+section.booking-list .date-place-count > p.place,
+section.booking-list .date-place-count > p > span {
+  display: none;
+}
+
+section.booking-list .date-place-count > p {
+  margin-right: 24px;
+}
+
+section.booking-list > .page-num {
+  display: none;
+}
+
+section.booking-list > button.more {
+  width: 100px;
+  margin: 20px auto 96px;
+  border: 0;
+  background-color: transparent;
+}
+
+section.recommend-lists {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.recommend-lists > div {
+  width: 50%;
+  background-color: aqua;
 }/*# sourceMappingURL=예매확인.css.map */
