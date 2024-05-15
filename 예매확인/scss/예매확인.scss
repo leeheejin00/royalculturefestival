@@ -5,3 +5,21 @@
 @import "../../scss/style.scss";
 @import "../../scss/header.scss";
 @import "../../scss/footer.scss";
+
+.container {
+    width: $width-wide;
+    max-width: 1416px;
+    margin: 32px auto;
+    padding: 0 32px;
+}
+
+// ==== title ====
+section.title {
+    display: flex;
+}
+section.title > h2 {
+    border-bottom: 1px solid #111;
+}
+section.title > .filter {
+    display: flex;
+}

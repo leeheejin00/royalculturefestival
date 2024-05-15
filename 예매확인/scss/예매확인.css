@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  max-width: 1416px;
+  margin: 32px auto;
+  padding: 0 32px;
+}
+
+section.title {
+  display: flex;
+}
+
+section.title > h2 {
+  border-bottom: 1px solid #111;
+}
+
+section.title > .filter {
+  display: flex;
+}/*# sourceMappingURL=예매확인.css.map */
