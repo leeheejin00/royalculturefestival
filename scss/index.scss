@@ -6,6 +6,7 @@
     width: $width-wide;
     max-width: 1416px;
     margin: 32px auto;
+    padding: 0 32px;
 }
 
 // ==== header ====
@@ -15,7 +16,7 @@ header {
     background-size: cover;
 
     @include responsive(large-screens) {
-        height: 440px;
+        height: 340px;
     }
 
     .logo-icon {
@@ -47,6 +48,17 @@ header {
                     background-color: black;
                 }
             }
+            .menu-toggle-btn.open {
+                span:nth-child(1) {
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+                span:nth-child(2) {
+                    opacity: 0;
+                }
+                span:nth-child(3) {
+                    transform: rotate(-45deg) translate(7px, -6px);
+                }
+            }
         }
     }
 
@@ -68,16 +80,56 @@ header {
             }    
         }
     }
+    .side-menu {
+        position: fixed;
+        width: 250px; 
+        height: 100%;
+        top: 0;
+        right: -250px; 
+        background-color: white; 
+        z-index: 1000;
+        transition: right 0.3s;
+        .side-nav {
+            padding: 20px;
+            .gnb {
+                li {
+                    a {
+                        display: block;
+                        color: #2f2411;
+                        padding: 10px;
+                        text-decoration: none;
+                        font-size: 28px;
+                        font-family: $font-regular;
+                        &:hover {
+                            color: #ffbe0f;
+                        }
+                    }
+                    .submenu {
+                        li {
+                            a {
+                                font-size:26px;
+                                color: #7e7e7e;
+                                font-family: $font-pre-regular;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     .menu_box {
         display: none;
     }
     @include responsive(large-screens) {
+        .side-menu {
+            display: none;
+        }
         .menu_box {
             display: block;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: baseline;
             .mainmenu {
                 width: 700px;
                 // background-color: green;
@@ -87,13 +139,21 @@ header {
                     margin-top: 42px;
                     li {
                         position: relative;
-                        .submenu
+                        .submenu {
+                            margin-top: 27px;
                             li {
                                 a {
                                     font-family: $font-pre-regular;
-                                }
+                                    text-decoration: none;
+                                    font-size: 18px;
+                                    color: #7e7e7e;
+                                    &:hover {
+                                        color: #ffbe0f;
+                                    }
+                                }   
                             }
                         }
+                    }
                         a {
                             color: #171717;
                             font-size: 20px;
@@ -101,18 +161,33 @@ header {
                             line-height: 30px;
                             text-align: center;
                             text-decoration: underline;
-                            font-family: "KimjungchulGothic-Bold";
+                            font-family: $font-regular;
                             &:hover {
                                 color: #ffbe0f;
                             }
                         }
                     }
                 }
-                // form {
-                //     img {
-                //         width: 32px;
-                //     }
-                // }
+                form {
+                    .search-box {
+                        position: relative;
+                        display: flex;
+                        input {
+                            border-top: 0;
+                            border-left: 0;
+                            border-right: 0;
+                            color: black;
+                        }
+                        .search{
+                            position: absolute;
+                            top: -18px;
+                            left: 135px;
+                            img {
+                                width: 30px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -171,15 +246,23 @@ footer {
             }
         }
         form {
+            text-align: center;
             label {
                 select {
                     border: 0;
-                    color: black;
+                    color: white;
+                    font-family: $font-pre-regular;
+                    font-size: 26px;
                     background: transparent;
+                    width: 214px;
+                    @include responsive(large-screens) {
+                        font-size: 21px;
+                    }
                 }
             }
         }
-    } 
+    }
+ 
     
         hr {
             width: 411px;
@@ -191,12 +274,16 @@ footer {
             display: flex;
             justify-content: center;
             a {
-                font-size: 20px;
-                font-family: $font-main;
+                font-size: 26px;
+                font-family: $font-regular;
                 margin-right: 42px;
                 margin-bottom: 46px;
+                color: white;
                 &:hover {
                     color: #ffbe0f;
+                }
+                @include responsive(large-screens) {
+                    font-size: 20px;
                 }
             }
             a:last-child {
@@ -205,21 +292,35 @@ footer {
         }
         .address {
             font-size: 20px;
+            font-family: $font-light;
+            @include responsive(large-screens) {
+                font-size: 18px;
+            }
         }
         .question {
             display: flex;
             justify-content: center;
-            font-size: 18px;
+            margin: 0 auto;
             address {
-                    font-size: 18px;
+                    font-size: 20px;
                     margin-right: 42px;
                     margin-bottom: 34px;
+                    font-family: $font-extra;
+                    text-align: center;
+                    @include responsive(large-screens) {
+                        font-size: 18px;
+                    }
                 }
             }
         .copyright {
             p {
                 padding-bottom: 51px;
+                font-size: 18px;
+                font-family: $font-extra;
+                @include responsive(large-screens) {
+                    font-size: 16px;
+                }
             }   
         }
-    }
+}
 
