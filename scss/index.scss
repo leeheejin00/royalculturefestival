@@ -228,8 +228,8 @@ footer {
     }
 
     .footer-back {
-        background: url(../images/footer_pattern.png);
-        background-size: cover;
+        background: url(../images/footer-pattern.png);
+
         background-color: #2f2411;
         @include responsive(large-screens) {
             background: url(../images/header_backpc.png);
