@@ -1,1 +1,89 @@
-/*# sourceMappingURL=예매확인상세.css.map */
+.container {
+  width: 100%;
+  max-width: 1416px;
+  margin: 32px auto;
+  padding: 0 32px;
+}
+
+section.title > h2 {
+  text-decoration: underline;
+  margin-bottom: 48px;
+}
+
+section.details > p {
+  margin-bottom: 48px;
+}
+
+section.details > .booking-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 96px;
+}
+
+section.details > .booking-info > a,
+section.details > .booking-info > .info-1-2 {
+  width: 48%;
+  margin-bottom: 40px;
+}
+
+section.details > .booking-info > .info3,
+section.details > .booking-info > button {
+  width: 100%;
+}
+
+.booking-info h3 {
+  margin-bottom: 48px;
+}
+
+.booking-info .print {
+  display: none;
+}
+
+.booking-info > .info-1-2 > .info1 > p,
+.booking-info > .info-1-2 > .info2 > p {
+  margin: 20px 0;
+}
+
+.booking-info .sort {
+  padding: 4px 6px;
+  margin-right: 16px;
+  text-align: left;
+  border-radius: 4px;
+  background-color: #eaeaea;
+}
+
+.booking-info > .info3 > p {
+  margin-bottom: 24px;
+}
+
+.booking-info > .info3 > table {
+  width: 100%;
+  margin-bottom: 32px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+
+.booking-info > .info3 > table th {
+  padding: 16px 0;
+  background-color: #eaeaea;
+}
+
+.booking-info > .info3 > table td {
+  padding: 32px 0;
+}
+
+.booking-info button {
+  font-size: 24px;
+  padding: 8px 0;
+  border-radius: 12px;
+  color: white;
+  background-color: #2f2411;
+}
+
+.note {
+  margin-bottom: 56px;
+  padding: 40px 0 72px;
+  background-color: #f8efe0;
+}/*# sourceMappingURL=예매확인상세.css.map */

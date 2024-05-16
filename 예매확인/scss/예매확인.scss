@@ -61,7 +61,7 @@ section.booking-list .num-name {
     display: flex;
 }
 section.booking-list .line {
-    width: 5px; height: 84px;
+    width: 5px; height: 112px;
     margin-right: 16px;
     background-color: $basic-brown;
 }
@@ -100,6 +100,7 @@ section.booking-list > button.more {
 }
 
 section.recommend-lists {
+    padding-top: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
