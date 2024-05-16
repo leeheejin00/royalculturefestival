@@ -1,0 +1,137 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@import "../../scss/mixin.scss";
+@import "../../scss/style.scss";
+@import "../../scss/header.scss";
+@import "../../scss/footer.scss";
+
+    
+.start-section {
+    width: 100%;
+    position: relative;
+    img {
+        width: 616px;
+        height: 400px;
+
+        margin: 0 0 150px 0;
+    }
+    .main-info {
+        position: absolute;
+        top: 290px; right: 32px;
+        width: 364px;
+        height: 230px;
+        background-color: #f1ebde;
+        
+        opacity: 0.8;
+
+        h2 {
+            font: 28px 'Pretendard';
+            margin: 20px 0 20px 20px;
+        }
+
+        p {
+            font: 20px 'Pretendard';
+            margin: 0 20px;
+            padding: 0 0 20px 0;
+        }
+    }
+  } // start-section
+
+  .slide {
+    display: none;
+  }
+
+  .festival {
+    width: 100%;
+    position: relative;
+
+    img {
+        width: 616px;
+        height: 400px;
+
+        margin: 0 0 200px 0;
+    }
+    .main-info2 {
+        position: absolute;
+        top: 280px; left: 32px;
+        width: 400px;
+        height: 300px;
+        background-color: #f1ebde;
+        
+        opacity: 0.8;
+
+        
+        h2 {
+            font: 28px 'Pretendard';
+            text-align: right;
+
+            margin: 20px 20px 20px 0;
+        }
+
+        p {
+            font: 20px 'Pretendard';
+            padding: 0 20px 20px 20px;
+
+            text-align: right;
+        }
+    }
+} // festival
+
+.history {
+
+    position: relative;
+    margin-left: 32px;
+    margin-bottom: 80px;
+
+    .history-hour {
+        width: 196px;
+        height: 153px;
+        
+        h2 {
+            font: 36px 'Pretendard';
+        }
+    }
+
+    .year-arr {
+        margin-top: 95px;
+        .year {
+            font: 20px 'Pretendard';
+            display: flex;
+            line-height: 1.5;
+        }
+    }
+
+    .num-festi {
+        position: absolute;
+        top: 243px; right: 217px;
+        width: 244px;
+        height: 160px;
+        background-color: white;
+
+        strong {
+            font: 28px 'Pretendard';
+        }
+
+        .more {
+            width: 83px;
+            height: 35px;
+            background-color: #251a06;
+            border-radius: 15px;
+            line-height: 35px;
+            text-align: center;
+
+            color: white;
+        }
+    }
+    
+
+    img {
+        position: absolute;
+        top: 0; right: 0;
+
+        width: 325px;
+        height: 458px;
+    }
+
+}

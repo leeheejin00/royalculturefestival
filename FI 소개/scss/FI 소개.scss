@@ -6,3 +6,301 @@
 @import "../../scss/header.scss";
 @import "../../scss/footer.scss";
 
+    
+    hr {
+        display: none;
+        
+        @include responsive(large-screens) {
+            display: block;
+            margin: 135px 0;
+            width: 100%;
+        }
+    }
+    
+    .fi-intro {
+
+        h2 {
+            display: none;
+        }
+
+        h3 {
+            text-align: center;
+            font: 30px 'Pretendard';
+            
+            text-decoration: underline;
+            text-underline-position: under;
+            text-decoration-thickness: 2px;
+
+            margin-top: 32px;
+        }
+
+        .subinfo {
+            font: 28px 'Kim jung chul Myungjo';
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        img {
+            width: 100%;
+            margin: 45px auto;
+        }
+        
+        .info1 {
+            text-align: center;
+            font: 24px 'Kim jung chul Myungjo';
+            line-height: 1.2;
+
+            margin-bottom: 55px;
+        }
+        
+        @include responsive(large-screens) {
+                h2 {
+                    display: block;
+                    text-align: left;
+                    font: 48px 'Pretendard';
+                    text-decoration: underline;
+                    text-underline-position: under;
+                    text-decoration-thickness: 3px;
+                }
+                
+                h3 {
+                    text-align: left;     
+                    font: 24px 'Pretendard' 'bold';
+
+                    text-decoration-thickness: 3px;
+                    
+                    margin-top: 130px;
+                    margin-bottom: 45px;
+                }
+                
+                img {
+                    width: 610px;
+
+                    display: block;
+                    margin: 40px auto;
+                }
+                
+                .info1 {
+                    line-height: 2;
+                }
+            } // fi-intro-large-screens
+        } // fi-intro
+            
+    .rogo-type {
+                
+        background-color: #f1f1f1;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        
+        h3 {
+            text-align: center;
+            font: 30px 'Pretendard';
+            
+            text-decoration: underline;
+            text-underline-position: under;
+            text-decoration-thickness: 2px;
+        }
+        img {
+            width: 100%;
+            margin: 45px auto;
+        }
+        
+        .info2 {
+            text-align: center;
+            font: 24px 'Kim jung chul Myungjo';
+            line-height: 1.2;
+        } 
+        
+        @include responsive(large-screens) {
+
+                background-color: white;
+                padding: 0;
+
+                h3 {
+                    font: 24px 'Pretendard' 'bold';
+
+                    text-decoration-thickness: 3px;
+                    
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    
+                    text-align: left;
+                }
+                
+                img {
+                    width: 360px;
+                    float: left;
+                    margin: 130px 0 0;
+                }
+                
+                .info2 {
+                    text-align: right;
+                    line-height: 2;
+                }
+        } // include
+    } // rogo-type
+        
+    .main-symbolmark {
+        margin-top: 45px;
+        
+        h3 {
+            text-align: center;
+            font: 30px 'Pretendard';
+            
+            text-decoration: underline;
+            text-underline-position: under;
+            text-decoration-thickness: 2px;
+        }
+        img {
+            width: 100%;
+            margin: 45px auto;
+        }
+        
+        .info3 {
+            text-align: center;
+            font: 24px 'Kim jung chul Myungjo';
+            line-height: 1.2;
+        } 
+        
+        @include responsive(large-screens) {
+
+                h3 {
+                    text-align: right;
+
+                    font: 24px 'Pretendard' 'bold';
+
+                    text-decoration-thickness: 3px;
+                    
+                    margin-top: 130px;
+                }
+                
+                img {
+                    display: block;
+
+                    width: 240px;
+                    float: right;
+
+                    margin: 66px 0 0;
+                }
+                
+                .info3 {
+                    text-align: left;
+
+                    line-height: 2;
+                }  
+                 
+        } // include
+    } // main-symbolmark 
+
+    .main-signature {
+        background-color: #f1f1f1;
+        padding-top: 45px;
+        padding-bottom: 40px;
+        
+        h3 {
+            text-align: center;
+            font: 30px 'Pretendard';
+            
+            text-decoration: underline;
+            text-underline-position: under;
+            text-decoration-thickness: 2px;
+        }
+        img {
+            width: 100%;
+            margin: 45px auto;
+        }
+                
+        .info4 {
+            text-align: center;
+            font: 24px 'Kim jung chul Myungjo';
+            line-height: 1.2;
+        } 
+
+        @include responsive(large-screens) {
+            background-color: white;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            h3 {
+                text-align: left;
+                font: 30px 'Pretendard' 'bold';
+                
+                text-decoration-thickness: 3px;
+            }
+            img {
+                width: 404px;
+                float: left;
+                margin: 45px 0 0;
+            }
+                    
+            .info4 {
+                text-align: right;
+
+                line-height: 2;
+            } 
+        }
+    } //main-signature
+
+    .useno-box {
+        display: none;
+
+        @include responsive(large-screens) {
+            display: block;
+
+            .useno {
+                margin: 130px auto 100px;
+
+                h2 {
+                    font: 48px 'Pretendard';  
+                }
+            }
+
+            div {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    .center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 15vh;
+
+        .buttons {
+    
+            display: flex;
+
+            .download {
+                margin: 0 10px;
+                padding: 10px 20px;
+                background-color: $color-hover;
+                color: white;
+                border: none;
+                font: 21px 'Pretendard';
+                cursor: pointer;
+            }
+        }
+
+        @include responsive(large-screens) {
+
+            height: 30vh;
+    
+            .buttons {
+        
+                display: flex;
+    
+                .download {
+                    margin: 0 10px;
+                    padding: 10px 20px;
+                    background-color: $color-hover;
+                    color: white;
+                    border: none;
+                    font: 48px 'Pretendard';
+                    cursor: pointer;
+                }
+            }
+        }
+    }
