@@ -3,8 +3,6 @@
 @import "./mixin.scss";
 @import "../../scss/mixin.scss";
 @import "../../scss/style.scss";
-@import "../../scss/header.scss";
-@import "../../scss/footer.scss";
 
 .container {
     width: $width-wide;
@@ -13,14 +11,36 @@
 }
 
 header {
-  width: $width-wide;
-  background: url(../images/header-background.png) no-repeat;
-  background-size: cover;
-
-  @include responsive(large-screens) {
-      background: url(../images/footer_pattern.png);
+    width: $width-wide;
+    height: 868px;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+  
+    @include responsive(large-screens) {
       height: 440px;
-  }
+    }
+  
+    .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        overflow: hidden;
+    
+        video {
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
 
   .logo-icon {
       display: flex;
@@ -162,7 +182,7 @@ main {
         .intro-imgbox {
           display: grid;
           grid-template-columns: repeat(2,1fr);
-          grid-auto-rows: minmax(100px, auto);
+          grid-auto-rows: minmax(200px, auto);
           grid-gap: 24px;
 
           @include responsive(large-screens) {
@@ -176,6 +196,7 @@ main {
         
             img {
               width: $width-wide;
+              height: 100%;
               display: block;
               border-radius: 5px;
             }
@@ -195,7 +216,7 @@ main {
                 padding: 10px;
                 border-radius: 5px;
                 background: rgba(0, 0, 0, 0.5);
-                opacity: 0;
+                opacity: 1;
                 transition: opacity 0.3s;
 
                 @include responsive(large-screens) {
@@ -208,7 +229,7 @@ main {
                   }
                   .date-box {
                     position: absolute;
-                    top: 200px;
+                    top: 83%;
                     display: flex;
                     p {
                       font-size: 16px;
@@ -217,11 +238,6 @@ main {
             
                   
             }
-            &:hover {
-                .overlay {
-                  opacity: 1;
-                }
-              }
             .overlay2 {
                 display: none;
 
@@ -247,7 +263,6 @@ main {
             }
             
             @include responsive(large-screens) {
-                
                     .overlay {
                         display: none;
                     }
@@ -278,6 +293,7 @@ main {
         
     
     #palace {
+        margin-top: 117px;
         position: relative;
         @include responsive(large-screens) {
             background-color: #f8efe0;
@@ -291,10 +307,10 @@ main {
         }
         .palace-txt1 {
             position: absolute;
-            top: 58px;
+            top: 10%;
             left: 0;
             width: 80%;
-            height: 291px;
+            height: 45%;;
             background: rgba(255, 255, 255, 0.9);
             opacity: 65%;
             /* img {
@@ -303,25 +319,33 @@ main {
                 display: block;
             }
             } */
-            h2 {
-                font-family: $font-pre-bold;
-                font-size: 28px;
-                padding-top: 41px;
-                padding-left: 32px;
-            }
-            p {
-                padding-left: 32px;
-                .txt1 {
-                    font-size: 38px;
-                    font-family: $font-thin;
+            .txt {
+                width: $width-wide;
+                h2 {
+                    width: $width-wide;
+                    font-family: $font-pre-bold;
+                    font-size: 28px;
+                    padding-top: 41px;
+                    padding-left: 32px;
                 }
-                .txt2 {
-                    font-size: 38px;
-                    font-family: $font-light;
-                }
-                .txt3 {
-                    font-size: 48px;
-                    font-family: $font-semibold;
+                p {
+                    width: $width-wide;
+                    padding-left: 32px;
+                    .txt1 {
+                        width: $width-wide;
+                        font-size: 38px;
+                        font-family: $font-thin;
+                    }
+                    .txt2 {
+                        width: $width-wide;
+                        font-size: 38px;
+                        font-family: $font-light;
+                    }
+                    .txt3 {
+                        width: $width-wide;
+                        font-size: 48px;
+                        font-family: $font-semibold;
+                    }
                 }
             }
             
@@ -359,6 +383,7 @@ main {
 
     }
     #banner {
+        margin-top: 97px;
         width: $width-wide;
         margin-top: 229px;
         .baner-slide {
