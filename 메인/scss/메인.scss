@@ -310,7 +310,7 @@ main {
             top: 10%;
             left: 0;
             width: 80%;
-            height: 45%;;
+            height: auto;
             background: rgba(255, 255, 255, 0.9);
             opacity: 65%;
             /* img {
@@ -351,12 +351,13 @@ main {
             
         }
         .palace-txt2 {
+            margin-bottom: 97px;
             width: $width-wide;
             position: absolute;
             top: 80%;
             left: 10%;
             width: 90%;
-            height: 353px;
+            height: auto;
             background-color: #2f2411;
             opacity: 80%;
             color: #fff;
@@ -383,11 +384,12 @@ main {
 
     }
     #banner {
-        margin-top: 97px;
+        
         width: $width-wide;
         margin-top: 229px;
         .baner-slide {
           img {
+            margin-top: 97px;
             width: $width-wide;
           }
         }
@@ -430,7 +432,7 @@ main {
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // 가벼운 그림자 효과
             flex: 1; // 텍스트 영역 최대 너비 사용
             width: 60%;
-            height: 525px;
+            height: auto;
             padding: 0 20px; // 좌우 패딩
       
             span {

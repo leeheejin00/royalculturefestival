@@ -281,7 +281,7 @@ main .intro-imgbox a .overlay2 {
   top: 10%;
   left: 0;
   width: 80%;
-  height: 45%;
+  height: auto;
   background: rgba(255, 255, 255, 0.9);
   opacity: 65%;
   /* img {
@@ -321,12 +321,13 @@ main .intro-imgbox a .overlay2 {
   font-family: "Pretendard-SemiBold";
 }
 #palace .palace-txt2 {
+  margin-bottom: 97px;
   width: 100%;
   position: absolute;
   top: 80%;
   left: 10%;
   width: 90%;
-  height: 353px;
+  height: auto;
   background-color: #2f2411;
   opacity: 80%;
   color: #fff;
@@ -351,11 +352,11 @@ main .intro-imgbox a .overlay2 {
 }
 
 #banner {
-  margin-top: 97px;
   width: 100%;
   margin-top: 229px;
 }
 #banner .baner-slide img {
+  margin-top: 97px;
   width: 100%;
 }
 
@@ -389,7 +390,7 @@ main .intro-imgbox a .overlay2 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   flex: 1;
   width: 60%;
-  height: 525px;
+  height: auto;
   padding: 0 20px;
 }
 #notice .notice_box .notice-txt span {
