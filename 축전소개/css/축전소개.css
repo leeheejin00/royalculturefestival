@@ -79,18 +79,27 @@
   display: flex;
   line-height: 1.5;
 }
+.history .year-arr .year:hover {
+  text-decoration: line-through;
+}
 .history .num-festi {
-  position: absolute;
-  top: 243px;
-  right: 217px;
-  width: 244px;
+  width: 200px;
   height: 160px;
-  background-color: white;
+  content: "";
+  position: absolute;
+  top: 70%;
+  right: 40%;
+  background-color: rgba(255, 255, 255, 0.7);
+  transform: translateY(-50%);
+  padding: 20px 5px 25px 40px;
+  z-index: 1;
 }
 .history .num-festi strong {
   font: 28px "Pretendard";
 }
 .history .num-festi .more {
+  position: absolute;
+  right: 25px;
   width: 83px;
   height: 35px;
   background-color: #251a06;
@@ -101,8 +110,8 @@
 }
 .history img {
   position: absolute;
-  top: 0;
+  top: 35px;
   right: 0;
-  width: 325px;
-  height: 458px;
+  width: 225px;
+  height: 325px;
 }/*# sourceMappingURL=축전소개.css.map */
