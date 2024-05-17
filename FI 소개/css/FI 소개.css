@@ -198,11 +198,15 @@ hr {
   }
   .useno-box .useno h2 {
     font: 48px "Pretendard";
+    text-align: center;
   }
-  .useno-box div {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  .useno-box .useno-ex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-template-rows: 400px;
+    width: 100%;
+    max-width: 1920px;
   }
 }
 
@@ -237,7 +241,7 @@ hr {
     background-color: #ffbe0f;
     color: white;
     border: none;
-    font: 48px "Pretendard";
+    font: 28px "Pretendard";
     cursor: pointer;
   }
 }/*# sourceMappingURL=FI 소개.css.map */
