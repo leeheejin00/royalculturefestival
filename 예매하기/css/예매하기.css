@@ -1,0 +1,87 @@
+.container {
+  width: 100%;
+  max-width: 1416px;
+  margin: 32px auto;
+  padding: 0 32px;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+section.title {
+  display: flex;
+  justify-content: space-between;
+  margin: 48px 0;
+}
+
+section.title > .filter > img {
+  width: 24px;
+  margin-left: 12px;
+}
+
+section.popular > .section-name {
+  margin-bottom: 40px;
+}
+
+section.popular > .poster {
+  position: relative;
+}
+
+section.popular > .poster > .selected {
+  width: 70%;
+  margin: 0 auto;
+}
+
+section.popular > .poster img {
+  width: 100%;
+}
+
+section.popular > .poster > .program5,
+section.popular > .poster > .selected + li {
+  position: absolute;
+  top: 5%;
+  width: 55%;
+  opacity: 0.3;
+}
+
+section.popular > .poster > .selected + li {
+  right: -50%;
+}
+
+section.popular > .poster > .program5 {
+  left: -50%;
+}
+
+section.popular > .poster > .program3,
+section.popular > .poster > .program4 {
+  display: none;
+}
+
+section.popular > .poster > .selected > .program-desc {
+  margin: 40px -40px;
+  border-radius: 16px;
+  background-color: #eaeaea;
+}
+
+section.popular > .poster > .selected > .program-desc > .title {
+  padding: 40px 0 24px 40px;
+  display: flex;
+}
+
+section.popular > .poster > .selected > .program-desc > .place-period {
+  padding: 0 0 56px 40px;
+  display: flex;
+  color: #333333;
+  font-size: 13px;
+}
+
+section.popular > .poster > .selected > .program-desc > .detail {
+  padding: 0 48px 40px;
+}
+
+section.popular > .poster > .selected > .program-desc > .button {
+  padding: 0 108px 32px;
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=예매하기.css.map */

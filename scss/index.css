@@ -78,7 +78,7 @@ header {
 }
 @media (min-width: 1024px) {
   header {
-    height: 340px;
+    height: 440px;
   }
 }
 header .logo-icon {
@@ -112,15 +112,6 @@ header .logo-icon .search-menu .menu-toggle-btn span {
   height: 3px;
   background-color: black;
 }
-header .logo-icon .search-menu .menu-toggle-btn.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-header .logo-icon .search-menu .menu-toggle-btn.open span:nth-child(2) {
-  opacity: 0;
-}
-header .logo-icon .search-menu .menu-toggle-btn.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -6px);
-}
 @media (min-width: 1024px) {
   header .logo-icon .search-menu a:first-child {
     display: block;
@@ -135,42 +126,10 @@ header .logo-icon .search-menu .menu-toggle-btn.open span:nth-child(3) {
     display: none;
   }
 }
-header .side-menu {
-  position: fixed;
-  width: 250px;
-  height: 100%;
-  top: 0;
-  right: -250px;
-  background-color: white;
-  z-index: 1000;
-  transition: right 0.3s;
-}
-header .side-menu .side-nav {
-  padding: 20px;
-}
-header .side-menu .side-nav .gnb li a {
-  display: block;
-  color: #2f2411;
-  padding: 10px;
-  text-decoration: none;
-  font-size: 28px;
-  font-family: "KimjungchulMyungjo-Regular";
-}
-header .side-menu .side-nav .gnb li a:hover {
-  color: #ffbe0f;
-}
-header .side-menu .side-nav .gnb li .submenu li a {
-  font-size: 26px;
-  color: #7e7e7e;
-  font-family: "Pretendard-Regular";
-}
 header .menu_box {
   display: none;
 }
 @media (min-width: 1024px) {
-  header .side-menu {
-    display: none;
-  }
   header .menu_box {
     display: block;
     display: flex;
@@ -269,7 +228,8 @@ footer .sns a img {
   }
 }
 footer .footer-back {
-  background: url(../images/footer-pattern.png);
+  background: url(../images/footer_pattern.png);
+  background-size: cover;
   background-color: #2f2411;
 }
 @media (min-width: 1024px) {

@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/reset.css">
         <link rel="stylesheet" href="../css/index.css"> 
-        <link rel="stylesheet" href="">
+        <!-- <link rel="stylesheet" href="./scss/예매확인.css"> -->
+        <link rel="stylesheet" href="./css/예매확인.css"> <!-- -->
         <title>예매하기</title>
     </head>
     <body>
@@ -83,100 +84,133 @@
         </header>
     
         <main>
-            <section class="title">
-                <h2>예매확인</h2>
-                <div class="filter">
-                    <p class="booked"><span class="selected">예매완료</span></p>
-                    <p class="canceled">예매취소</p>
-                    <p class="all">전체</p>
-                    <img src="./images/filter.png" alt="" class="filter-icon">
-                </div>
-            </section><!-- title -->
+            <div class="container">
+                <section class="title">
+                    <h2>예매확인</h2>
+                    <div class="filter">
+                        <p class="booked"><span class="selected">예매완료</span></p>
+                        <p class="canceled">예매취소</p>
+                        <p class="all">전체</p>
+                        <img src="./images/filter.png" alt="필터" class="filter-icon" width="24px" height="24px">
+                    </div>
+                </section><!-- title -->
+    
+                <section class="booking-list">
+                    <p class="desc">예매내역을 클릭하면 예매 상세 내용을 확인할 수 있습니다.</p>
+                    <div class="booking01">
+                        <div class="txtbox">
+                            <div class="num-name">
+                                <div class="line"> &nbsp; </div>
+                                <div>
+                                    <p class="booking-num">1460067473</p>
+                                    <p class="booking-name">2024년 밤의 석조전</p>
+                                </div>
+                            </div>
+                            <div class="date-place-count">
+                                <p class="date"><span class="bold">일시&nbsp;&nbsp;</span>2024.04.27.(토) 18:15</p>
+                                <p class="place"><span class="bold">장소&nbsp;&nbsp;</span>덕수궁 석조전</p>
+                                <p class="count"><span class="bold">매수&nbsp;&nbsp;</span>2매</p>
+                            </div>
+                        </div><!-- txtbox -->
+                        <img src="./images/poster_seokjo.jpg" alt="석조전 포스터" class="pg-poster">
+                        <div class="more-btn">
+                            <div class="square">
+                                <p>더보기</p>
+                                <img src="./images/right-arrow-white.png" alt="흰색 화살표">
+                            </div><!-- square -->
+                        </div>
+                    </div><!-- booking01 -->
 
-            <section class="booking-list">
-                <p class="desc">예매내역을 클릭하면 예매 상세 내용을 확인할 수 있습니다.</p>
-                <div class="booking01">
-                    <div class="num-name">
-                        <div class="line"> &nbsp; </div>
-                        <p class="booking-num">1460067473</p>
-                        <p class="booking-name">2024년 밤의 석조전</p>
+                    <div class="booking02">
+                        <div class="txtbox">
+                            <div class="num-name">
+                                <div class="line"> &nbsp; </div>
+                                <div>
+                                    <p class="booking-num">14600851339</p>
+                                    <p class="booking-name">2024년 경복궁 별빛야행</p>
+                                </div>
+                            </div>
+                            <div class="date-place-count">
+                                <p class="date"><span class="bold">일시&nbsp;&nbsp;</span>2024.05.03.(금) 19:40</p>
+                            <p class="place"><span class="bold">장소&nbsp;&nbsp;</span>경복궁 일원</p>
+                            <p class="count"><span class="bold">매수&nbsp;&nbsp;</span>2매</p>
+                            </div>
+                        </div><!-- txtbox -->
+                        <img src="./images/poster_seokjo.jpg" alt="석조전 포스터"  class="pg-poster">
+                        <div class="more-btn">
+                            <div class="square">
+                                <p>더보기</p>
+                                <img src="./images/right-arrow-white.png" alt="흰색 화살표">
+                            </div><!-- square -->
+                        </div>
+                    </div><!-- booking02 -->
+    
+                    <!-- <div class="booking02">
+                        <div class="num-name">
+                            <div class="line"> &nbsp; </div>
+                            <p class="booking-num">14600851339</p>
+                            <p class="booking-name">2024년 경복궁 별빛야행</p>
+                        </div>
+                        <div class="date-place-count">
+                            <p class="date"><span class="bold">일시&nbsp;&nbsp;</span>2024.05.03.(금) 19:40</p>
+                            <p class="place"><span class="bold">장소&nbsp;&nbsp;</span>경복궁 일원</p>
+                            <p class="count"><span class="bold">매수&nbsp;&nbsp;</span>2매</p>
+                        </div>
+                        <div class="more-btn">
+                            <div class="square">
+                                <p>더보기</p>
+                                <img src="./images/right-arrow-white.png" alt="흰색 화살표">
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="page-num">
+                        <a href="#">&lt;</a>
+                        <a href="#">1</a>
+                        <a href="#">&gt;</a>
                     </div>
-                    <div class="date-place-count">
-                        <p class="date"><span class="bold">일시&nbsp;&nbsp;</span>2024.04.27.(토) 18:15</p>
-                        <p class="place"><span class="bold">장소&nbsp;&nbsp;</span>덕수궁 석조전</p>
-                        <p class="count"><span class="bold">매수&nbsp;&nbsp;</span>2매</p>
+                    <button class="more">더보기</button>
+                </section><!-- booking-list -->
+    
+                <h4 class="title">추천 프로그램</h4>
+                <section class="recommend-lists">
+                    <div class="program01">
+                        <img src="./images/gb-pg1.jpg" alt="경복궁 별빛야행">
+                        <div class="desc">
+                            <p class="title">2024 경복궁 별빛야행</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">04.03 ~ 05.04</p>
+                            <p class="place">경복궁 일원</p>
+                        </div>
                     </div>
-                    <div class="more-btn">
-                        <div class="square">
-                            <p>더보기</p>
-                            <img src="./images/right-arrow-white.png" alt="흰색 화살표">
-                        </div><!-- square -->
+                    <div class="program02">
+                        <img src="./images/gb-pg1.jpg" alt="밤의 석조전">
+                        <div class="desc">
+                            <p class="title">2024 덕수궁 밤의 석조전</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">04.16 ~ 05.25</p>
+                            <p class="place">덕수궁 석조전</p>
+                        </div>
                     </div>
-                </div><!-- booking01 -->
-
-                <div class="booking02">
-                    <div class="num-name">
-                        <div class="line"> &nbsp; </div>
-                        <p class="booking-num">14600851339</p>
-                        <p class="booking-name">2024년 경복궁 별빛야행</p>
+                    <div class="program03">
+                        <img src="./images/gb-pg1.jpg" alt="창덕궁 달빛기행">
+                        <div class="desc">
+                            <p class="title">2024 창덕궁 달빛기행</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">04.11 ~ 06.02</p>
+                            <p class="place">창덕궁 일원</p>
+                        </div>
                     </div>
-                    <div class="date-place-count">
-                        <p class="date"><span class="bold">일시&nbsp;&nbsp;</span>2024.05.03.(금) 19:40</p>
-                        <p class="place"><span class="bold">장소&nbsp;&nbsp;</span>경복궁 일원</p>
-                        <p class="count"><span class="bold">매수&nbsp;&nbsp;</span>2매</p>
+                    <div class="program04">
+                        <img src="./images/gb-pg1.jpg" alt="경복궁 생과방">
+                        <div class="desc">
+                            <p class="title">2024 경복궁 생과방</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">04.17 ~ 06.24</p>
+                            <p class="place">경복궁 생과방</p>
+                        </div>
                     </div>
-                    <div class="more-btn">
-                        <div class="square">
-                            <p>더보기</p>
-                            <img src="./images/right-arrow-white.png" alt="흰색 화살표">
-                        </div><!-- square -->
-                    </div>
-                </div><!-- booking02 -->
-                <div class="page-num">
-                    <a href="#">&lt;</a>
-                    <a href="#">1</a>
-                    <a href="#">&gt;</a>
-                </div>
-            </section><!-- booking-list -->
-
-            <section class="recommend-lists">
-                <div class="program01">
-                    <img src="#" alt="경복궁 별빛야행">
-                    <div class="desc">
-                        <p class="title">2024 경복궁 별빛야행</p>
-                        <p class="booking">예매하기</p>
-                        <p class="period">04.03 ~ 05.04</p>
-                        <p class="place">경복궁 일원</p>
-                    </div>
-                </div>
-                <div class="program02">
-                    <img src="#" alt="밤의 석조전">
-                    <div class="desc">
-                        <p class="title">2024 덕수궁 밤의 석조전</p>
-                        <p class="booking">예매하기</p>
-                        <p class="period">04.16 ~ 05.25</p>
-                        <p class="place">덕수궁 석조전</p>
-                    </div>
-                </div>
-                <div class="program03">
-                    <img src="#" alt="창덕궁 달빛기행">
-                    <div class="desc">
-                        <p class="title">2024 창덕궁 달빛기행</p>
-                        <p class="booking">예매하기</p>
-                        <p class="period">04.11 ~ 06.02</p>
-                        <p class="place">창덕궁 일원</p>
-                    </div>
-                </div>
-                <div class="program04">
-                    <img src="#" alt="경복궁 생과방">
-                    <div class="desc">
-                        <p class="title">2024 경복궁 생과방</p>
-                        <p class="booking">예매하기</p>
-                        <p class="period">04.17 ~ 06.24</p>
-                        <p class="place">경복궁 생과방</p>
-                    </div>
-                </div>
-            </section><!-- recommend-lists -->
+                </section><!-- recommend-lists -->
+            </div><!-- container -->
         </main>
     
         <footer>
