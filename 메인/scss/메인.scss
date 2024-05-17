@@ -12,7 +12,7 @@
 
 header {
     width: $width-wide;
-    height: 868px;
+    // height: 868px;
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -434,28 +434,38 @@ main {
             width: 60%;
             height: auto;
             padding: 0 20px; // 좌우 패딩
-      
-            span {
-              display: block;
-              font-size: 14px;
-              color: #666;
-              margin-bottom: 5px;
-            }
-      
-            h3 {
-              font-size: 18px;
-              color: #444;
-              margin-bottom: 10px;
+            .border-box {
+                width: 417px;
+                border-left: 5px solid #2f2411;
+                padding-left: 21px;
+                margin-top: 65px;
+                span {
+                  display: block;
+                  font-size: 14px;
+                  color: #666;
+                  margin-bottom: 5px;
+                }
+          
+                h3 {
+                  font-size: 18px;
+                  color: #444;
+                  margin-bottom: 10px;
+                }
             }
       
             p {
-              font-size: 16px;
-              color: #555;
-              line-height: 1.5;
+                margin-top: 56px;
+                margin-bottom: 34px;
+                font-size: 16px;
+                color: #555;
+                line-height: 1.5;
       
               br {
                 margin-bottom: 5px; // 줄바꿈 간격 조정
               }
+            }
+            .date {
+                margin-bottom: 43px;
             }
           }
         }

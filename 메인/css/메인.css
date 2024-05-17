@@ -6,7 +6,6 @@
 
 header {
   width: 100%;
-  height: 868px;
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -384,7 +383,7 @@ main .intro-imgbox a .overlay2 {
 }
 #notice .notice_box .notice-txt {
   background: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   padding: 20px;
   margin: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -393,24 +392,35 @@ main .intro-imgbox a .overlay2 {
   height: auto;
   padding: 0 20px;
 }
-#notice .notice_box .notice-txt span {
+#notice .notice_box .notice-txt .border-box {
+  width: 417px;
+  border-left: 5px solid #2f2411;
+  padding-left: 21px;
+  margin-top: 65px;
+}
+#notice .notice_box .notice-txt .border-box span {
   display: block;
   font-size: 14px;
   color: #666;
   margin-bottom: 5px;
 }
-#notice .notice_box .notice-txt h3 {
+#notice .notice_box .notice-txt .border-box h3 {
   font-size: 18px;
   color: #444;
   margin-bottom: 10px;
 }
 #notice .notice_box .notice-txt p {
+  margin-top: 56px;
+  margin-bottom: 34px;
   font-size: 16px;
   color: #555;
   line-height: 1.5;
 }
 #notice .notice_box .notice-txt p br {
   margin-bottom: 5px;
+}
+#notice .notice_box .notice-txt .date {
+  margin-bottom: 43px;
 }
 
 #history .history-box {
