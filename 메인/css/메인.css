@@ -6,14 +6,33 @@
 
 header {
   width: 100%;
-  background: url(../images/header-background.png) no-repeat;
   background-size: cover;
+  position: relative;
+  overflow: hidden;
 }
 @media (min-width: 1024px) {
   header {
-    background: url(../images/footer_pattern.png);
     height: 440px;
   }
+}
+header .video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+header .video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 header .logo-icon {
   display: flex;
@@ -141,7 +160,7 @@ main #intro h2 {
 main .intro-imgbox {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: minmax(200px, auto);
   grid-gap: 24px;
 }
 @media (min-width: 1024px) {
@@ -157,6 +176,7 @@ main .intro-imgbox a {
 }
 main .intro-imgbox a img {
   width: 100%;
+  height: 100%;
   display: block;
   border-radius: 5px;
 }
@@ -175,7 +195,7 @@ main .intro-imgbox a .overlay {
   padding: 10px;
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s;
 }
 @media (min-width: 1024px) {
@@ -190,14 +210,11 @@ main .intro-imgbox a .overlay h1 {
 }
 main .intro-imgbox a .overlay .date-box {
   position: absolute;
-  top: 200px;
+  top: 83%;
   display: flex;
 }
 main .intro-imgbox a .overlay .date-box p {
   font-size: 16px;
-}
-main .intro-imgbox a:hover .overlay {
-  opacity: 1;
 }
 main .intro-imgbox a .overlay2 {
   display: none;
@@ -244,6 +261,7 @@ main .intro-imgbox a .overlay2 {
 }
 
 #palace {
+  margin-top: 117px;
   position: relative;
 }
 @media (min-width: 1024px) {
@@ -259,10 +277,10 @@ main .intro-imgbox a .overlay2 {
 }
 #palace .palace-txt1 {
   position: absolute;
-  top: 58px;
+  top: 10%;
   left: 0;
   width: 80%;
-  height: 291px;
+  height: auto;
   background: rgba(255, 255, 255, 0.9);
   opacity: 65%;
   /* img {
@@ -272,34 +290,43 @@ main .intro-imgbox a .overlay2 {
   }
   } */
 }
-#palace .palace-txt1 h2 {
+#palace .palace-txt1 .txt {
+  width: 100%;
+}
+#palace .palace-txt1 .txt h2 {
+  width: 100%;
   font-family: "Pretendard-Bold";
   font-size: 28px;
   padding-top: 41px;
   padding-left: 32px;
 }
-#palace .palace-txt1 p {
+#palace .palace-txt1 .txt p {
+  width: 100%;
   padding-left: 32px;
 }
-#palace .palace-txt1 p .txt1 {
+#palace .palace-txt1 .txt p .txt1 {
+  width: 100%;
   font-size: 38px;
   font-family: "Pretendard-Thin";
 }
-#palace .palace-txt1 p .txt2 {
+#palace .palace-txt1 .txt p .txt2 {
+  width: 100%;
   font-size: 38px;
   font-family: "KimjungchulMyungjo-Light";
 }
-#palace .palace-txt1 p .txt3 {
+#palace .palace-txt1 .txt p .txt3 {
+  width: 100%;
   font-size: 48px;
   font-family: "Pretendard-SemiBold";
 }
 #palace .palace-txt2 {
+  margin-bottom: 97px;
   width: 100%;
   position: absolute;
   top: 80%;
   left: 10%;
   width: 90%;
-  height: 353px;
+  height: auto;
   background-color: #2f2411;
   opacity: 80%;
   color: #fff;
@@ -328,6 +355,7 @@ main .intro-imgbox a .overlay2 {
   margin-top: 229px;
 }
 #banner .baner-slide img {
+  margin-top: 97px;
   width: 100%;
 }
 
@@ -355,33 +383,44 @@ main .intro-imgbox a .overlay2 {
 }
 #notice .notice_box .notice-txt {
   background: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   padding: 20px;
   margin: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   flex: 1;
   width: 60%;
-  height: 525px;
+  height: auto;
   padding: 0 20px;
 }
-#notice .notice_box .notice-txt span {
+#notice .notice_box .notice-txt .border-box {
+  width: 417px;
+  border-left: 5px solid #2f2411;
+  padding-left: 21px;
+  margin-top: 65px;
+}
+#notice .notice_box .notice-txt .border-box span {
   display: block;
   font-size: 14px;
   color: #666;
   margin-bottom: 5px;
 }
-#notice .notice_box .notice-txt h3 {
+#notice .notice_box .notice-txt .border-box h3 {
   font-size: 18px;
   color: #444;
   margin-bottom: 10px;
 }
 #notice .notice_box .notice-txt p {
+  margin-top: 56px;
+  margin-bottom: 34px;
   font-size: 16px;
   color: #555;
   line-height: 1.5;
 }
 #notice .notice_box .notice-txt p br {
   margin-bottom: 5px;
+}
+#notice .notice_box .notice-txt .date {
+  margin-bottom: 43px;
 }
 
 #history .history-box {
