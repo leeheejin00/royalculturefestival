@@ -58,6 +58,12 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "Pretendard-ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;

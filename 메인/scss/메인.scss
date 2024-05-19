@@ -268,14 +268,19 @@ main {
                         display: none;
                     }
                     .overlay2 {
+                      p {
+                        font-family: $font-pre-regular;
+                      }
                       h1 {
                         font-size: 40px;
+                        font-family: $font-pre-bold;
                         font-weight: bold;
                         margin: 10px 0;
                         color: #ffbe0f;
                       }
                       .date-box {
                         display: flex;
+                        justify-content: space-evenly;
                         p {
                           font-size: 16px;
                         }
@@ -299,12 +304,18 @@ main {
         @include responsive(large-screens) {
             background-color: #f8efe0;
         }
-        img {
+        .mo-palace {
             width: 88%;
-        /* @include responsive(large-screens) {
+        @include responsive(large-screens) {
           display: none;
-        } */
+        }
 
+        }
+        .palace {
+            display: none;
+            @include responsive(large-screens) {
+                display: block;
+            }
         }
         .palace-txt1 {
             position: absolute;
@@ -314,6 +325,10 @@ main {
             height: auto;
             background: rgba(255, 255, 255, 0.9);
             opacity: 65%;
+            @include responsive(large-screens) {
+                background: transparent;
+                left: 52%;
+            }
             /* img {
               display: none;
               @include responsive(large-screens) {
@@ -362,6 +377,12 @@ main {
             background-color: #2f2411;
             opacity: 80%;
             color: #fff;
+            @include responsive(large-screens) {
+                opacity: 100%;
+                top: 60%;
+                left: 52%;
+                width: 45%;
+            }
             .palace_title {
                 display: flex;
                 
@@ -384,116 +405,220 @@ main {
         }
 
     }
-    #banner {
-        
+    #banner {   
         width: $width-wide;
         margin-top: 229px;
         .baner-slide {
-          img {
-            margin-top: 97px;
-            width: $width-wide;
-          }
+            img {
+              margin-top: 97px;
+              width: $width-wide;
+            }
+            @include responsive(large-screens) {
+                display: none;
+            }
+        }
+        .banner-box {
+            @include responsive(large-screens) {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                width: $width-wide;
+                overflow: hidden;
+            }
+            .baner-slide1, .baner-slide2, .baner-slide3  {
+                display: none;
+                @include responsive(large-screens) {
+                    display: block;
+                    flex: 1;
+                    min-width: 80%;
+                    height: 100%;
+                    position: relative;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                    }
+                    .baner-slide1, .baner-slide3 {
+                        opacity: 60%;
+                        transform: scale(0.9);
+                        z-index: 1;
+                    }
+                    .baner-slide2 {
+                        z-index: 2;
+                    }
+
+                    @keyframes slide {
+                        0% { transform: translateX(0%); }
+                        33% { transform: translateX(-33.33%); }
+                        66% { transform: translateX(-66.66%); }
+                        100% { transform: translateX(0%); }
+                    }
+                    
+                    .banner-box {
+                        animation: slide 12s infinite;
+                        display: flex;
+                        transition: transform 0.5s ease-in-out;
+                    }
+                }
+            }
         }
     }
 
     #notice {
-        .notice-flex-box {
-            display: flex;
+        margin: 110px 0;
+        @include responsive(large-screens) {
+            margin: 162px 0;
         }
         h2 {
-          color: #2f2411;
-          font-size: 28px;
-          font-family: $font-pre-bold;
-          margin-bottom: 15px;
+            color: #2f2411;
+            font-size: 28px;
+            font-family: $font-pre-bold;
+            margin-bottom: 15px;
+            @include responsive(large-screens) {
+                display: none;
+            }
         }
-      
+        .notice-flex-box {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: $width-wide;
+            overflow: hidden;
+            @include responsive(large-screens) {
+                overflow: visible;
+                justify-content: space-between;
+                position: none;
+                .slide-img1 {
+                    display: none;
+                }
+            }
+        }
+        
         .notice_box, .notice_box2, .notice_box3 {
-          display: flex;
-          align-items: center; // 세로 중앙 정렬
-          justify-content: space-between; // 양쪽 화살표와 텍스트 사이 간격 최대화
-      
-          .slide-img1, .slide-img2 {
-            flex: 0 0 40px; // 화살표 이미지 컨테이너 크기 고정
-      
-            a {
-              display: block;
-              width: 100%;
-              height: 100%;
-      
-              img {
+            flex: 1;
+            min-width: 50%;
+            position: relative;
+            @include responsive(large-screens) {
+                flex: none;
+                min-width: 20%;
+                position: none;
+                width: 33%;
+            }
+    
+            
+            .notice-txt {
+                background: #fff;
+                border: 1px solid black;
+                padding: 20px;
+                margin: 20px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // 가벼운 그림자 효과
+                flex: 1; // 텍스트 영역 최대 너비 사용
+                width: 100%;
+                height: 100%;
+                padding: 0 20px; // 좌우 패딩
+                .border-box {
+                    width: 80%;
+                    height: auto;
+                    border-left: 5px solid #2f2411;
+                    padding-left: 21px;
+                    margin-top: 65px;
+                    margin-left: 62px;
+                    span {
+                        display: block;
+                        font-size: 14px;
+                        color: #aaaaaa;
+                        margin-bottom: 5px;
+                        font-family: $font-pre-regular;
+                    }
+                    
+                    h3 {
+                        font-size: 26px;
+                        color: black;
+                        margin-bottom: 10px;
+                        font-family: $font-bold;
+                    }
+                }
+                
+                .main-info {
+                    margin-top: 56px;
+                    margin-left: 62px;
+                    font-size: 24px;
+                    color: black;
+                    line-height: 1.5;
+                    font-family: $font-pre-regular;
+                    
+                    br {
+                        margin-bottom: 5px; // 줄바꿈 간격 조정
+                    }
+                }
+                .main-info2 {
+                    margin-top: 56px;
+                    margin-left: 62px;
+                    font-size: 20px;
+                    color: #555;
+                    line-height: 1.5;
+                    margin-bottom: 34px;
+                    font-family: $font-light;
+                }
+                .date {
+                    display: block;
+                    margin-left: 62px;
+                    padding-bottom: 60px;
+                    font-family: $font-semibold;
+                    color: #aaaaaa;
+                }
+            }
+        }
+        
+        .notice_box2 {
+            z-index: 2;
+            @include responsive(large-screens) {
+                z-index: 1;
+                width: 33%;
+            }
+        }
+    
+        .notice_box, .notice_box3 {
+            opacity: 60%;
+            transform: scale(0.9);
+            z-index: 1;
+            @include responsive(large-screens) {
+                opacity: 100%;
+                transform: none;
+            }
+        }
+    }
+    
+    .notice-flex-box {
+        scroll-behavior: smooth;
+        overflow-x: hidden; /* 슬라이드 overflow 조정 */
+        position: relative;
+        @include responsive(large-screens) {
+            position: none;
+            width: $width-wide;
+        }
+        }
+    .slide-img1, .slide-img2 {
+        flex: 0 0 40px; // 화살표 이미지 컨테이너 크기 고정
+        @include responsive(large-screens) {
+            flex: none;
+            display: none;
+        }
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            img {
                 width: 100%;
                 height: auto;
-              }
             }
-          }
-      
-          .notice-txt {
-            background: #fff;
-            border: 1px solid black;
-            padding: 20px;
-            margin: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // 가벼운 그림자 효과
-            flex: 1; // 텍스트 영역 최대 너비 사용
-            width: 60%;
-            height: auto;
-            padding: 0 20px; // 좌우 패딩
-            .border-box {
-                width: $width-wide;
-                height: auto;
-                border-left: 5px solid #2f2411;
-                padding-left: 21px;
-                margin-top: 65px;
-                margin-left: 62px;
-                span {
-                  display: block;
-                  font-size: 14px;
-                  color: #aaaaaa;
-                  margin-bottom: 5px;
-                  font-family: $font-pre-regular;
-                }
-          
-                h3 {
-                  font-size: 26px;
-                  color: black;
-                  margin-bottom: 10px;
-                  font-family: $font-bold;
-                }
-            }
-      
-            .main-info {
-                margin-top: 56px;
-                margin-left: 62px;
-                font-size: 24px;
-                color: black;
-                line-height: 1.5;
-                font-family: $font-pre-regular;
-      
-              br {
-                margin-bottom: 5px; // 줄바꿈 간격 조정
-              }
-            }
-            .main-info2 {
-                margin-top: 56px;
-                margin-left: 62px;
-                font-size: 20px;
-                color: #555;
-                line-height: 1.5;
-                margin-bottom: 34px;
-                font-family: $font-light;
-            }
-            .date {
-                display: block;
-                margin-left: 62px;
-                padding-bottom: 60px;
-                font-family: $font-semibold;
-                color: #aaaaaa;
-            }
-          }
         }
-      }
+    }
 
-      
+    
     #history {
+        padding-top: 110px;
         .history-box {
             display: flex;
             justify-content: space-between;
@@ -502,6 +627,9 @@ main {
                 color: #2f2411;
                 font-size: 28px;
                 font-family: $font-pre-bold;
+                @include responsive(large-screens) {
+                    display: none;
+                }
             }
             .menu-box {
                 .palace_gnb {
@@ -523,28 +651,32 @@ main {
                         }
                     }
                 }
+                @include responsive(large-screens) {
+                    display: none;
+                }
             }
         }
 
         .palace-img {
             width: $width-wide;
             display: grid;
-            grid-template-columns: repeat(2, 1fr); // 이미지를 2열로 
-            grid-template-areas: 
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
             "a a"
             "b d"
             "c d"
             ;
-            gap: 10px; // 이미지 사이 간격
+            gap: 10px;
             padding: 10px;
             img:nth-child(1) { grid-area: a; }
             img:nth-child(2) { grid-area: b; }
             img:nth-child(3) { grid-area: c; }
             img:nth-child(4) { grid-area: d; }
-      
+
             img {
-              width: 100%; // 이미지가 컬럼 너비에 맞게 조정
-              object-fit: cover;
+                width: $width-wide;
+                height: 100%;
+                object-fit: cover;
             }
           }
         }
