@@ -25,9 +25,79 @@
   margin: 0 20px;
   padding: 0 0 20px 0;
 }
+@media (min-width: 1024px) {
+  .start-section img {
+    width: 100%;
+    height: 1000px;
+  }
+  .start-section .main-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 1000px;
+    background-color: #000;
+    opacity: 0.8;
+  }
+  .start-section .main-info h2 {
+    position: absolute;
+    top: 224px;
+    left: 251px;
+    font: 88px "Pretendard";
+    color: white;
+  }
+  .start-section .main-info p {
+    position: absolute;
+    top: 628px;
+    right: 353px;
+    font: 28px "Pretendard";
+    color: white;
+    text-align: right;
+  }
+}
 
 .slide {
   display: none;
+}
+@media (min-width: 1024px) {
+  .slide {
+    display: block;
+    margin: 168px 0;
+  }
+  .slide .slideLeft {
+    display: flex;
+    justify-content: space-between;
+    animation: scroll 20s linear infinite;
+  }
+  .slide .slideLeft img {
+    width: 631px;
+    height: 303px;
+    margin-right: 40px;
+  }
+  .slide .slide-info {
+    font: 24px "Pretendard-Light";
+    line-height: 36px;
+    margin: 96px 0;
+    text-align: center;
+  }
+  .slide .slideRight {
+    display: flex;
+    justify-content: space-between;
+    animation: scroll 20s linear infinite;
+  }
+  .slide .slideRight img {
+    width: 631px;
+    height: 303px;
+    margin-right: 40px;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .festival {
@@ -37,14 +107,14 @@
 .festival img {
   width: 616px;
   height: 400px;
-  margin: 0 0 200px 0;
+  margin: 0 0 260px 0;
 }
 .festival .main-info2 {
   position: absolute;
   top: 280px;
   left: 32px;
   width: 400px;
-  height: 300px;
+  height: 360px;
   background-color: #f1ebde;
   opacity: 0.8;
 }
@@ -58,10 +128,41 @@
   padding: 0 20px 20px 20px;
   text-align: right;
 }
+@media (min-width: 1024px) {
+  .festival img {
+    width: 100%;
+    height: 1000px;
+    margin-bottom: 200px;
+  }
+  .festival .main-info2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000px;
+    background-color: #000;
+    opacity: 0.8;
+  }
+  .festival .main-info2 h2 {
+    position: absolute;
+    top: 224px;
+    right: 247px;
+    font: 88px "Pretendard";
+    color: white;
+  }
+  .festival .main-info2 p {
+    position: absolute;
+    top: 633px;
+    left: 253px;
+    font: 28px "Pretendard";
+    color: white;
+    text-align: left;
+  }
+}
 
 .history {
   position: relative;
-  margin-left: 32px;
+  margin-left: 0px;
   margin-bottom: 80px;
 }
 .history .history-hour {
@@ -114,4 +215,84 @@
   right: 0;
   width: 225px;
   height: 325px;
+}
+@media (min-width: 1024px) {
+  .history {
+    position: relative;
+    margin-bottom: 240px;
+  }
+  .history .history-hour {
+    width: 500px;
+    height: 315px;
+    margin-bottom: 195px;
+  }
+  .history .history-hour h2 {
+    font: 88px "Pretendard";
+  }
+  .history .year-arr .year {
+    cursor: pointer;
+    margin-left: 120px;
+  }
+  .history .num-festi {
+    top: 90%;
+    right: 50%;
+  }
+  .history .num-festi strong {
+    font: 41px;
+  }
+  .history .num-festi .more {
+    top: 100px;
+    right: 80px;
+  }
+  .history img {
+    position: absolute;
+    top: 0;
+    right: 252px;
+    float: right;
+    width: auto;
+    height: auto;
+  }
+}
+
+.making_people {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .making_people {
+    display: block;
+  }
+  .making_people .logo_making {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 900px;
+    height: 100px;
+  }
+  .making_people .survice {
+    display: flex;
+    flex-direction: column;
+    margin: 60px 0 210px 0;
+  }
+  .making_people .survice .survice_info {
+    width: 916px;
+    height: 50px;
+    margin: 0 auto 10px;
+    background-color: rgba(150, 150, 150, 0.1);
+    display: flex;
+  }
+  .making_people .survice .survice_info h3 {
+    width: 150px;
+    height: 18px;
+    color: #ffbe0f;
+    font: 20px "Pretendard";
+    margin-right: 102px;
+  }
+  .making_people .survice .survice_info p {
+    font: 18px "Pretendard";
+    width: 500px;
+    height: 50px;
+  }
+  .making_people .survice .survice_info small {
+    font: 13px "Pretendard";
+  }
 }/*# sourceMappingURL=축전소개.css.map */
