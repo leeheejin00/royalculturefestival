@@ -6,6 +6,12 @@
 @import "../../scss/header.scss";
 @import "../../scss/footer.scss";
 
+.container {
+    width: $width-wide;
+    max-width: 1416px;
+    margin: 32px auto;
+}
+
 form {
     .search-box {
         position: relative;

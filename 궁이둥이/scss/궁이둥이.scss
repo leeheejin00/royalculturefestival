@@ -5,3 +5,185 @@
 @import "../../scss/style.scss";
 @import "../../scss/header.scss";
 @import "../../scss/footer.scss";
+
+.container {
+    width: $width-wide;
+    max-width: 1416px;
+    margin: 32px auto;
+}
+
+#intro {
+    .title-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+           font-size: 48px;
+           font-family: $font-medium;
+           border-bottom: 1px solid black;
+           width: 26%; 
+        }
+        .title-go-history {
+            .go, .history {
+                font-family: $font-medium;
+                font-size: 20px;
+            }
+            .go {
+                padding-right: 40px;
+            }
+        }
+    }
+    .background {
+        background: url(../images/ｉｎｔｒｏ－ｂａｃｋ.png) no-repeat;
+        background-size: cover;
+        opacity: 80px;
+        h3 {
+            padding: 130px 152px;
+            text-align: center;
+            color: white;
+            font-size: 40px;
+            font-family: $font-medium;
+        }
+        .back-txt1 {
+            font-size: 14px;
+            font-family: $font-pre-light;
+            padding-bottom: 30px;
+            color: white;
+            text-align: center;
+        }
+        .back-txt2 {
+            font-size: 14px;
+            font-family: $font-pre-light;
+            padding-bottom: 88px;
+            color: white;
+            text-align: center;
+        }
+    }
+}
+
+#explain {
+    margin-top: 40px;
+    .explain-title {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px double black;
+        border-bottom: 1px double black;
+        padding: 30px 0;
+        h2 {
+            font-size: 28px;
+            font-family: 'KimjungchulMyungjo-Light';
+        }
+        img {
+            width: 35px;
+        }
+    }
+    .right {
+        display: flex;
+        padding-top: 76px;
+        .right-title {
+            padding-right: 24px;
+            h3 {
+                font-size: 24px;
+                font-family: $font-pre-bold;
+                border-bottom: 2px solid black;
+                width: $width-wide;
+            }
+        }
+        .right-txt {
+            strong {
+                font-size: 32px;
+                font-family: $font-extra-bold;
+            }
+            .decs {
+                display: block;
+                font-family: $font-pre-light;
+                font-size: 24px;
+            }
+            p {
+                display: flex;
+                align-items: baseline;
+                font-size: 22px;
+                font-family: $font-medium;
+                padding-top: 15px;   
+                img {
+                    margin-right: 10px;
+                }
+            }
+            .desc2 {
+                color: #aaaaaa;
+                font-size: 20px;
+                font-family: $font-extra;
+                padding-left: 30px;
+            }
+            
+        }
+    }
+    .schedule {
+        display: flex;
+        .schedule-title {
+            h3 {
+                font-size: 24px;
+                font-family: $font-pre-bold;
+                border-bottom: 2px solid black;
+                width: $width-wide;
+            }
+        }
+        .schedule-txt {
+            .sch {
+                display: flex;
+                align-items: center;
+                background-color: #e9e9e9;
+                margin-bottom: 26px;    
+                h2 {
+                    font-size: 28px;
+                    font-family: $font-semibold;
+                    padding: 25px;
+                }
+                p {
+                    padding-left: 0;
+                    text-align: left;
+                }  
+            }
+        }
+    }
+    .active {
+        display: flex;
+        .active-title {
+            h3 {
+                font-size: 24px;
+                font-family: $font-pre-bold;
+                border-bottom: 2px solid black;
+                width: $width-wide;
+            }
+        }
+        .active-txt {
+            .act {
+                display: flex;
+                align-items: center;
+                background-color: #e9e9e9;
+                margin-bottom: 26px;    
+                h2 {
+                    font-size: 28px;
+                    font-family: $font-semibold;
+                    padding: 25px;
+                }
+                p {
+                    padding-left: 0;
+                    text-align: left;
+                }  
+            }
+        }
+    }
+    .benefit {
+        display: flex;
+        .benefit-title {
+            h3 {
+                font-size: 24px;
+                font-family: $font-pre-bold;
+                border-bottom: 2px solid black;
+                width: $width-wide;
+            }
+        }
+        
+    }
+}

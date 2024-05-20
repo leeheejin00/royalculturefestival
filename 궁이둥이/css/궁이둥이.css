@@ -1,1 +1,164 @@
-/*# sourceMappingURL=궁이둥이.css.map */
+@charset "UTF-8";
+.container {
+  width: 100%;
+  max-width: 1416px;
+  margin: 32px auto;
+}
+
+#intro .title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#intro .title-box h2 {
+  font-size: 48px;
+  font-family: "Pretendard-Medium";
+  border-bottom: 1px solid black;
+  width: 26%;
+}
+#intro .title-box .title-go-history .go, #intro .title-box .title-go-history .history {
+  font-family: "Pretendard-Medium";
+  font-size: 20px;
+}
+#intro .title-box .title-go-history .go {
+  padding-right: 40px;
+}
+#intro .background {
+  background: url(../images/ｉｎｔｒｏ－ｂａｃｋ.png) no-repeat;
+  background-size: cover;
+  opacity: 80px;
+}
+#intro .background h3 {
+  padding: 130px 152px;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-family: "Pretendard-Medium";
+}
+#intro .background .back-txt1 {
+  font-size: 14px;
+  font-family: "Pretendard-Light";
+  padding-bottom: 30px;
+  color: white;
+  text-align: center;
+}
+#intro .background .back-txt2 {
+  font-size: 14px;
+  font-family: "Pretendard-Light";
+  padding-bottom: 88px;
+  color: white;
+  text-align: center;
+}
+
+#explain {
+  margin-top: 40px;
+}
+#explain .explain-title {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px double black;
+  border-bottom: 1px double black;
+  padding: 30px 0;
+}
+#explain .explain-title h2 {
+  font-size: 28px;
+  font-family: "KimjungchulMyungjo-Light";
+}
+#explain .explain-title img {
+  width: 35px;
+}
+#explain .right {
+  display: flex;
+  padding-top: 76px;
+}
+#explain .right .right-title {
+  padding-right: 24px;
+}
+#explain .right .right-title h3 {
+  font-size: 24px;
+  font-family: "Pretendard-Bold";
+  border-bottom: 2px solid black;
+  width: 100%;
+}
+#explain .right .right-txt strong {
+  font-size: 32px;
+  font-family: "Pretendard-ExtraBold";
+}
+#explain .right .right-txt .decs {
+  display: block;
+  font-family: "Pretendard-Light";
+  font-size: 24px;
+}
+#explain .right .right-txt p {
+  display: flex;
+  align-items: baseline;
+  font-size: 22px;
+  font-family: "Pretendard-Medium";
+  padding-top: 15px;
+}
+#explain .right .right-txt p img {
+  margin-right: 10px;
+}
+#explain .right .right-txt .desc2 {
+  color: #aaaaaa;
+  font-size: 20px;
+  font-family: "Pretendard-ExtraLight";
+  padding-left: 30px;
+}
+#explain .schedule {
+  display: flex;
+}
+#explain .schedule .schedule-title h3 {
+  font-size: 24px;
+  font-family: "Pretendard-Bold";
+  border-bottom: 2px solid black;
+  width: 100%;
+}
+#explain .schedule .schedule-txt .sch {
+  display: flex;
+  align-items: center;
+  background-color: #e9e9e9;
+  margin-bottom: 26px;
+}
+#explain .schedule .schedule-txt .sch h2 {
+  font-size: 28px;
+  font-family: "Pretendard-SemiBold";
+  padding: 25px;
+}
+#explain .schedule .schedule-txt .sch p {
+  padding-left: 0;
+  text-align: left;
+}
+#explain .active {
+  display: flex;
+}
+#explain .active .active-title h3 {
+  font-size: 24px;
+  font-family: "Pretendard-Bold";
+  border-bottom: 2px solid black;
+  width: 100%;
+}
+#explain .active .active-txt .act {
+  display: flex;
+  align-items: center;
+  background-color: #e9e9e9;
+  margin-bottom: 26px;
+}
+#explain .active .active-txt .act h2 {
+  font-size: 28px;
+  font-family: "Pretendard-SemiBold";
+  padding: 25px;
+}
+#explain .active .active-txt .act p {
+  padding-left: 0;
+  text-align: left;
+}
+#explain .benefit {
+  display: flex;
+}
+#explain .benefit .benefit-title h3 {
+  font-size: 24px;
+  font-family: "Pretendard-Bold";
+  border-bottom: 2px solid black;
+  width: 100%;
+}/*# sourceMappingURL=궁이둥이.css.map */
