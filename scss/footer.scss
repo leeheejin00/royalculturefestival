@@ -45,7 +45,8 @@
     }
 
     .footer-back {
-        background: url(../images/footer_pattern.png);
+        background: url(../images/footer_pattern.png
+        );
         background-size: cover;
         background-color: #2f2411;
         @include responsive(large-screens) {

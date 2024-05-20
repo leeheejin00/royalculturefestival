@@ -18,12 +18,15 @@ ul, ol, li { list-style: none; }
 section.title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     margin: 48px 0;
 }
-
+section.title > .filter {
+    display: flex;
+}
 section.title > .filter > img {
-    width: 24px;
+    width: 24px; height: 24px;
     margin-left: 12px;
 }
 
@@ -65,20 +68,34 @@ section.popular > .poster > .program4 {
 
 
 section.popular > .poster > .selected > .program-desc {
-    margin: 40px -72px;
+    margin: 32px -72px;
     border-radius: 16px;
     background-color: #eaeaea;
 }
 section.popular > .poster > .selected > .program-desc > .title {
     padding: 40px 0 24px 40px;
+    font-weight: bold;
     display: flex;
 }
+section.popular > .poster > .selected > .program-desc > .title > .tag > span {
+    margin-left: 4px;
+    padding: 4px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: normal;
+    background-color: aqua;
+}
+
 section.popular > .poster > .selected > .program-desc > .place-period {
     padding: 0 0 56px 40px;
     display: flex;
 
     color: #333333;
+}
+section.popular > .poster > .selected > .program-desc > .place-period > p {
+    margin-right: 24px;
     font-size: 13px;
+    color: $basic-gray;
 }
 section.popular > .poster > .selected > .program-desc > .detail {
     padding: 0 48px 40px;
@@ -86,15 +103,40 @@ section.popular > .poster > .selected > .program-desc > .detail {
 }
 
 section.popular > .poster > .selected > .program-desc > .button {
-    padding: 0 108px 32px;
+    padding: 0 96px 32px;
     display: flex;
     justify-content: space-between;
+}
+section.popular > .poster > .selected > .program-desc > .button > button {
+    width: 120px;
+    padding: 8px;
+    border-radius: 8px;
+    // font: ;
+    color: white;
+    background-color: $basic-brown;
 }
 
 section.keyword > .hashtag {
     margin: 40px auto;
-    // display: grid;
-    background-color: aqua;
+    height: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+    width: 100%;
+}
+section.keyword > .hashtag > div {
+    padding: 8px;
+    font-size: 12px;
+    cursor: pointer;;
+    text-align: center;
+    border: 1px solid $basic-gray;
+    border-radius:24px;
+    background-color: $color-white;
+}
+
+section.keyword > .hashtag > .selected {
+    color: $color-hover;
+    background-color: $basic-brown;
 }
 
 section.keyword > .program {
@@ -149,9 +191,17 @@ section.keyword > .program > div > .desc > .place {
 
 section.place > .place-button {
     margin: 40px auto;
+    height: 172px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-gap: 12px;
     width: 100%;
-    background-color: aqua;
+    // background-color: aqua;
+}
+
+section.place > .place-button > .btn-big {
+    border-radius: 8px;
+    text-align: center;
+    line-height: 80px;
+    background-color: $background-lightgray;
 }
