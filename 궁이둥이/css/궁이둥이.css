@@ -337,6 +337,7 @@
 #run .run2 .run2-txt {
   background-color: #f6f6f6;
   width: 80%;
+  margin-bottom: 58px;
 }
 #run .run2 .run2-txt h1 {
   font-size: 48px;
