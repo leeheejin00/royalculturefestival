@@ -204,9 +204,16 @@ hr {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    grid-template-rows: 400px;
-    width: 100%;
-    max-width: 1920px;
+  }
+  .useno-box .useno-ex .grid-img {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .useno-box .useno-ex div:nth-child(4) {
+    width: 358px;
+    height: 269px;
   }
 }
 
