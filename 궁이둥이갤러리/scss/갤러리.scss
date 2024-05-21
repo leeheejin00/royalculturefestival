@@ -66,14 +66,16 @@
 
 #review {
     background-color: #f8efe0;
+    padding: 50px 0;
     h3 {
         font-size: 24px;
         font-family: $font-pre-bold;
         border-bottom: 3px solid #2f2411;
         color: #2f2411;
         width: 12%;
+        margin-bottom: 53px;
     }
-    .review1, .review3 {
+    .review1 {
         display: flex;
         justify-content: space-between;
         align-items: end;
@@ -82,7 +84,7 @@
             width: 90%;
             margin-left: 24px;
             padding: 50px;
-            border-radius: 40px 40px 40px 0;
+            border-radius: 50px 50px 50px 0;
             .re-txt {
                 font-size: 28px;
                 font-family: $font-regular;
@@ -123,7 +125,7 @@
             width: 90%;
             margin-right: 24px;
             padding: 50px;
-            border-radius: 40px 40px 0 40px;
+            border-radius: 50px 50px 0 50px;
             .re-txt {
                 font-size: 28px;
                 font-family: $font-regular;
@@ -153,5 +155,85 @@
                 color: white;
             }
         } 
+    }
+    .review3 {
+        margin-top: 114px;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        .review-txt3 {
+            background-color: #2f2411;
+            width: 90%;
+            margin-left: 24px;
+            padding: 50px;
+            border-radius: 50px 50px 50px 0;
+            .re-txt {
+                font-size: 28px;
+                font-family: $font-regular;
+                color: white;
+                padding-bottom: 50px;
+            }
+            .re-title {
+                font-size: 22px;
+                font-family: $font-pre-regular;
+                color: white;
+            }
+            .time-plus {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: white;
+            }
+            .time {
+                margin-right: auto;
+                font-size: 20px;
+                font-family: $font-pre-light;
+            }
+            a {
+                margin-left: auto;
+                font-size: 20px;
+                font-family: $font-medium;
+                color: white;
+            }
+        } 
+    }
+}
+
+#video {
+    h3 {
+        font-size: 24px;
+        font-family: $font-pre-bold;
+        border-bottom: 3px solid #2f2411;
+        color: #2f2411;
+        width: 12%;
+        margin-bottom: 53px;
+    }
+    .main-video {
+        border-radius: 10px;
+        iframe {
+            width: $width-wide;
+            border-radius: 20px;
+        }
+        p {
+            margin: 17px 0;
+            font-size: 17px;
+            font-family: $font-gothic-regular;
+        }
+    }
+    .sub-video {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .sub-video1, .sub-video2, .sub-video3 {
+            width: 100%;
+            margin-right: 24px;
+            iframe {
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+        .sub-video3 {
+            margin-right: 0;
+        }
     }
 }
