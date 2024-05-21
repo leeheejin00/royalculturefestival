@@ -12,11 +12,11 @@
     font-style: normal;
   }
   @font-face {
-    font-family: "KimjungchulMyungjo-Light";
-    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-light.woff2") format("woff2");
+    font-family: 'KimjungchulMyungjo-Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
-  }
+}
   @font-face {
     font-family: "Pretendard-Thin";
     src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff") format("woff");
@@ -57,6 +57,12 @@
     font-family: "Pretendard-Bold";
     src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
     font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Pretendard-ExtraBold";
+    src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff") format("woff");
+    font-weight: 800;
     font-style: normal;
   }
   * {

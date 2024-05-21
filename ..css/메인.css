@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   width: 100%;
   max-width: 1416px;
@@ -6,7 +7,6 @@
 
 header {
   width: 100%;
-  height: 868px;
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -149,8 +149,9 @@ main {
   width: 100%;
 }
 main #intro h2 {
-  color: #333;
-  font-size: 24px;
+  color: #2f2411;
+  font-size: 28px;
+  font-family: "Pretendard-Bold";
   margin-bottom: 20px;
 }
 @media (min-width: 1024px) {
@@ -360,29 +361,41 @@ main .intro-imgbox a .overlay2 {
   width: 100%;
 }
 
+#notice .notice-flex-box {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative; /* 슬라이드 위치 조정 */
+}
 #notice h2 {
-  color: #333;
-  font-size: 24px;
+  color: #2f2411;
+  font-size: 28px;
+  font-family: "Pretendard-Bold";
   margin-bottom: 15px;
 }
-#notice .notice_box {
+#notice .notice_box, #notice .notice_box2, #notice .notice_box3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex: 0 0 33%; /* 세 개의 박스가 나란히 보이도록 설정 */
+  transition: opacity 0.3s ease; /* 전환 효과 */
 }
-#notice .notice_box .slide-img1, #notice .notice_box .slide-img2 {
+#notice .notice_box.fade, #notice .notice_box2.fade, #notice .notice_box3.fade {
+  opacity: 0.5; /* 희미하게 만들기 */
+}
+#notice .notice_box .slide-img1, #notice .notice_box .slide-img2, #notice .notice_box2 .slide-img1, #notice .notice_box2 .slide-img2, #notice .notice_box3 .slide-img1, #notice .notice_box3 .slide-img2 {
   flex: 0 0 40px;
 }
-#notice .notice_box .slide-img1 a, #notice .notice_box .slide-img2 a {
+#notice .notice_box .slide-img1 a, #notice .notice_box .slide-img2 a, #notice .notice_box2 .slide-img1 a, #notice .notice_box2 .slide-img2 a, #notice .notice_box3 .slide-img1 a, #notice .notice_box3 .slide-img2 a {
   display: block;
   width: 100%;
   height: 100%;
 }
-#notice .notice_box .slide-img1 a img, #notice .notice_box .slide-img2 a img {
+#notice .notice_box .slide-img1 a img, #notice .notice_box .slide-img2 a img, #notice .notice_box2 .slide-img1 a img, #notice .notice_box2 .slide-img2 a img, #notice .notice_box3 .slide-img1 a img, #notice .notice_box3 .slide-img2 a img {
   width: 100%;
   height: auto;
 }
-#notice .notice_box .notice-txt {
+#notice .notice_box .notice-txt, #notice .notice_box2 .notice-txt, #notice .notice_box3 .notice-txt {
   background: #fff;
   border: 1px solid black;
   padding: 20px;
@@ -393,24 +406,65 @@ main .intro-imgbox a .overlay2 {
   height: auto;
   padding: 0 20px;
 }
-#notice .notice_box .notice-txt span {
+#notice .notice_box .notice-txt .border-box, #notice .notice_box2 .notice-txt .border-box, #notice .notice_box3 .notice-txt .border-box {
+  width: 100%;
+  height: auto;
+  border-left: 5px solid #2f2411;
+  padding-left: 21px;
+  margin-top: 65px;
+  margin-left: 62px;
+}
+#notice .notice_box .notice-txt .border-box span, #notice .notice_box2 .notice-txt .border-box span, #notice .notice_box3 .notice-txt .border-box span {
   display: block;
   font-size: 14px;
-  color: #666;
+  color: #aaaaaa;
+  margin-bottom: 5px;
+  font-family: "Pretendard-Regular";
+}
+#notice .notice_box .notice-txt .border-box h3, #notice .notice_box2 .notice-txt .border-box h3, #notice .notice_box3 .notice-txt .border-box h3 {
+  font-size: 26px;
+  color: black;
+  margin-bottom: 10px;
+  font-family: "KimjungchulMyungjo-Bold";
+}
+#notice .notice_box .notice-txt .main-info, #notice .notice_box2 .notice-txt .main-info, #notice .notice_box3 .notice-txt .main-info {
+  margin-top: 56px;
+  margin-left: 62px;
+  font-size: 24px;
+  color: black;
+  line-height: 1.5;
+  font-family: "Pretendard-Regular";
+}
+#notice .notice_box .notice-txt .main-info br, #notice .notice_box2 .notice-txt .main-info br, #notice .notice_box3 .notice-txt .main-info br {
   margin-bottom: 5px;
 }
-#notice .notice_box .notice-txt h3 {
-  font-size: 18px;
-  color: #444;
-  margin-bottom: 10px;
-}
-#notice .notice_box .notice-txt p {
-  font-size: 16px;
+#notice .notice_box .notice-txt .main-info2, #notice .notice_box2 .notice-txt .main-info2, #notice .notice_box3 .notice-txt .main-info2 {
+  margin-top: 56px;
+  margin-left: 62px;
+  font-size: 20px;
   color: #555;
   line-height: 1.5;
+  margin-bottom: 34px;
+  font-family: "KimjungchulMyungjo-Light";
 }
-#notice .notice_box .notice-txt p br {
-  margin-bottom: 5px;
+#notice .notice_box .notice-txt .date, #notice .notice_box2 .notice-txt .date, #notice .notice_box3 .notice-txt .date {
+  display: block;
+  margin-left: 62px;
+  padding-bottom: 60px;
+  font-family: "Pretendard-SemiBold";
+  color: #aaaaaa;
+}
+#notice .notice_box:not(:first-child):not(:last-child) {
+  opacity: 1;
+}
+#notice .notice_box:first-child, #notice .notice_box:last-child {
+  opacity: 0.5;
+}
+
+.notice-flex-box {
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* 슬라이드 overflow 조정 */
+  position: relative;
 }
 
 #history .history-box {
@@ -419,15 +473,18 @@ main .intro-imgbox a .overlay2 {
   align-items: center;
 }
 #history .history-box h2 {
-  font-family: "Pretendard-Bold";
+  color: #2f2411;
   font-size: 28px;
+  font-family: "Pretendard-Bold";
 }
 #history .history-box .menu-box .palace_gnb {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: aqua;
+}
+#history .history-box .menu-box .palace_gnb li {
+  margin-right: 20px;
 }
 #history .history-box .menu-box .palace_gnb li a {
   color: black;
@@ -439,6 +496,7 @@ main .intro-imgbox a .overlay2 {
   font-weight: 600;
 }
 #history .palace-img {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "a a" "b d" "c d";
@@ -459,8 +517,8 @@ main .intro-imgbox a .overlay2 {
 }
 #history .palace-img img {
   width: 100%;
-  height: auto;
-  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer {

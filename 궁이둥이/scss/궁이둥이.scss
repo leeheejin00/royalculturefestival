@@ -1,0 +1,365 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@import "../../scss/mixin.scss";
+@import "../../scss/style.scss";
+@import "../../scss/header.scss";
+@import "../../scss/footer.scss";
+
+.container {
+    width: $width-wide;
+    max-width: 1416px;
+    margin: 32px auto;
+}
+
+#intro {
+    .title-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+           font-size: 48px;
+           font-family: $font-medium;
+           border-bottom: 1px solid black;
+           width: 26%;
+        }
+        .title-go-history {
+            .go, .history {
+                font-family: $font-medium;
+                font-size: 20px;
+            }
+            .go {
+                padding-right: 40px;
+            }
+        }
+    }
+    .background {
+        background: url(../images/ｉｎｔｒｏ－ｂａｃｋ.png) no-repeat;
+        background-size: cover;
+        opacity: 80px;
+        h3 {
+            padding: 130px 0;
+            text-align: center;
+            color: white;
+            font-size: 40px;
+            font-family: $font-medium;
+            @include responsive(large-screens) {
+                text-align: left;
+            }
+        }
+        .back-txt1 {
+            font-size: 14px;
+            font-family: $font-pre-light;
+            padding-bottom: 30px;
+            color: white;
+            text-align: center;
+            @include responsive(large-screens) {
+                text-align: right;
+                font-size: 28px;
+            }
+        }
+        .back-txt2 {
+            font-size: 14px;
+            font-family: $font-pre-light;
+            padding-bottom: 88px;
+            color: white;
+            text-align: center;
+            @include responsive(large-screens) {
+                text-align: right;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+#explain {
+    .explain-box {
+        margin-top: 40px;
+        border-bottom: 1px solid black;
+        margin-bottom: 98px;
+        .explain-title {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px double black;
+            border-bottom: 1px double black;
+            padding: 30px 0;
+            background-color: #e0e0e0;
+            
+            h2 {
+                font-size: 28px;
+                font-family: $font-light;
+            }
+            img {
+                width: 35px;
+            }
+        }
+        .right {
+            display: flex;
+            padding-top: 76px;
+            .right-title {
+                padding-right: 24px;
+                h3 {
+                    font-size: 24px;
+                    font-family: $font-pre-bold;
+                    border-bottom: 2px solid black;
+                    width: $width-wide;
+                }
+            }
+            .right-txt {
+                strong {
+                    font-size: 32px;
+                    font-family: $font-extra-bold;
+                }
+                .decs {
+                    display: block;
+                    font-family: $font-pre-light;
+                    font-size: 24px;
+                }
+                p {
+                    display: flex;
+                    align-items: baseline;
+                    font-size: 22px;
+                    font-family: $font-medium;
+                    padding-top: 15px;   
+                    img {
+                        margin-right: 10px;
+                    }
+                }
+                .desc2 {
+                    color: #2f2411;
+                    font-size: 20px;
+                    font-family: $font-extra;
+                    padding-left: 30px;
+                }
+                
+            }
+        }
+        .schedule {
+            display: flex;
+            padding: 56px 0;
+            .schedule-title {
+                padding-right: 24px;
+                h3 {
+                    font-size: 24px;
+                    font-family: $font-pre-bold;
+                    border-bottom: 2px solid black;
+                    width: $width-wide;
+                }
+            }
+            .schedule-txt {
+                width: $width-wide;
+                .schedule-box {
+                    @include responsive(large-screens) {
+                        display: flex;
+                        height: 100%; 
+                    }
+                    .sch {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        background-color: #e9e9e9;
+                        margin-bottom: 26px;  
+                        @include responsive(large-screens) {
+                            flex-direction: column;
+                            width: 100%;
+                            margin: 10px;
+                        }
+                        h2 {
+                            font-size: 28px;
+                            font-family: $font-semibold;
+                            padding: 25px;
+                        }
+                        p {
+                            font-size: 22px;
+                            font-family: $font-pre-light;
+                            text-align: left;
+                        }  
+                        small {
+                            color: #737373;
+                            font-size: 16px;
+                            font-family: $font-pre-light;
+                            margin-left: 13px;
+                        }
+                    }
+                    .sch:nth-child(4) {
+                        margin-bottom: 0;
+                    }
+                }
+                .sch-dsce {
+                    font-size: 20px;
+                    font-family: $font-extra;
+                    color: #2f2411;
+                    padding-top: 17px;
+                } 
+            }
+        }
+        .active {
+            display: flex;
+            padding-bottom: 56px;
+            .active-title {
+                padding-right: 24px;
+                h3 {
+                    font-size: 24px;
+                    font-family: $font-pre-bold;
+                    border-bottom: 2px solid black;
+                    width: $width-wide;
+                }
+            }
+            .active-txt {
+                width: $width-wide;
+                .active-box {
+                    @include responsive(large-screens) {
+                        display: flex;
+                        height: 100%;
+                    }
+                    .act {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        background-color: #e9e9e9;
+                        width: 100%;
+                        margin-bottom: 26px;
+                        @include responsive(large-screens) {
+                            flex-direction: column;
+                            width: 100%;
+                            margin: 10px;
+                        }    
+                        h2 {
+                            font-size: 28px;
+                            font-family: $font-semibold;
+                            padding: 25px;
+                        }
+                        p {
+                            font-size: 22px;
+                            font-family: $font-pre-light;
+                            text-align: left;
+                        }  
+                    }
+                    .act:nth-child(4) {
+                        margin-bottom: 0;
+                    }
+                }
+                .where {
+                    font-size: 20px;
+                    font-family: $font-extra;
+                    color: #2f2411;
+                    padding-top: 17px;
+                } 
+            }
+        }
+        .benefit {
+            display: flex;
+            margin-bottom: 74px;
+            .benefit-title {
+                padding-right: 24px;
+                h3 {
+                    font-size: 24px;
+                    font-family: $font-pre-bold;
+                    border-bottom: 2px solid black;
+                    width: $width-wide;
+                }
+            }
+            .benefit-txt {
+                p {
+                    display: flex;
+                    align-items: baseline;
+                    font-size: 22px;
+                    font-family: $font-medium;
+                    padding-top: 15px;   
+                    img {
+                        margin-right: 10px;
+                    }
+                }
+                p:first-child {
+                    padding-top: 0;
+                }
+                .serve {
+                    font-size: 20px;
+                    font-family: $font-extra;
+                    color: #2f2411;
+                    margin-bottom: 74px;
+                }
+            }
+    }
+    }
+}
+
+#run {
+    .run1 {
+        position: relative;
+        .run1-img {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+            width: $width-wide;
+            overflow: hidden;
+
+        img {
+            flex: 1;
+            min-width: 60%;
+            height: 100%;
+            position: relative;
+        }
+        img:nth-child(1), img:nth-child(3) {
+            transform: scale(0.9);
+            z-index: 1;
+        }
+        img:nth-child(2) {
+            z-index: 2;
+        }
+        }
+        .run1-txt {
+            position: absolute;
+            
+            background-color: #f6f6f6;
+            width: 80%;
+            h1 {
+                font-size: 48px;
+                font-family: $font-pre-bold;
+                color: #422b2b;
+            }
+            p {
+                font-size: 24px;
+                font-family: $font-pre-light;
+            }
+        }
+    }
+    .run2 {
+        .run2-img {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+            width: $width-wide;
+            overflow: hidden;
+        img {
+            flex: 1;
+            min-width: 33%;
+            height: 100%;
+            position: relative;
+        }
+        img:nth-child(1), img:nth-child(4) {
+            transform: scale(0.9);
+            z-index: 1;
+        }
+        img:nth-child(2), img:nth-child(3) {
+            z-index: 2;
+        }
+        }
+        .run2-txt {
+            background-color: #f6f6f6;
+            width: 80%;
+            margin-bottom: 58px;
+            h1 {
+                font-size: 48px;
+                font-family: $font-pre-bold;
+                color: #422b2b;
+            }
+            p {
+                font-size: 24px;
+                font-family: $font-pre-light;
+            }
+        }
+    }
+}
