@@ -18,10 +18,25 @@ section.title > h2 {
 
 section.title > .filter {
   display: flex;
+  align-items: center;
 }
 
 section.title > .filter > p {
   margin-right: 12px;
+}
+
+@media (min-width: 1024px) {
+  section.booking-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  section.booking-list p {
+    width: 100%;
+  }
+  section.booking-list .booking01, section.booking-list .booking02 {
+    width: 49%;
+  }
 }
 
 section.booking-list > .desc {
@@ -37,6 +52,64 @@ section.booking-list > div {
   margin-bottom: 24px;
   padding: 32px;
   border: 1px solid #2f2411;
+}
+
+@media (min-width: 1024px) {
+  section.booking-list > .booking01:hover,
+  section.booking-list > .booking02:hover {
+    color: #fff;
+    background-color: #2f2411;
+  }
+  section.booking-list > .booking01:hover .line,
+  section.booking-list > .booking02:hover .line {
+    background-color: #fff;
+  }
+  section.booking-list > .booking01:hover .date-place-count,
+  section.booking-list > .booking02:hover .date-place-count {
+    display: inline-block;
+  }
+  section.booking-list > .booking01:hover .date, section.booking-list > .booking01:hover .place, section.booking-list > .booking01:hover .count .bold,
+  section.booking-list > .booking02:hover .date,
+  section.booking-list > .booking02:hover .place,
+  section.booking-list > .booking02:hover .count .bold {
+    display: inline-block;
+    font-size: 14px;
+  }
+  section.booking-list > .booking01:hover img,
+  section.booking-list > .booking02:hover img {
+    display: none;
+  }
+  section.booking-list > .booking01:hover .more-btn,
+  section.booking-list > .booking02:hover .more-btn {
+    display: block;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+  }
+  section.booking-list > .booking01:hover .more-btn .square,
+  section.booking-list > .booking02:hover .more-btn .square {
+    width: 90px;
+    height: 60px;
+    position: relative;
+    padding: 12px 24px;
+    border: 1px solid #fff;
+  }
+  section.booking-list > .booking01:hover .more-btn .square p,
+  section.booking-list > .booking02:hover .more-btn .square p {
+    position: absolute;
+    left: -3px;
+    padding: -5px 0;
+    font-size: 13px;
+    line-height: 35px;
+    background-color: #2f2411;
+  }
+  section.booking-list > .booking01:hover .more-btn .square img,
+  section.booking-list > .booking02:hover .more-btn .square img {
+    position: absolute;
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
 }
 
 section.booking-list > .booking01 > img,
@@ -78,12 +151,23 @@ section.booking-list .date-place-count > p > span {
   display: none;
 }
 
-section.booking-list .date-place-count > p {
+section.booking-list .date-place-count > .date {
+  width: 60%;
   margin-right: 24px;
 }
 
 section.booking-list > .page-num {
   display: none;
+}
+@media (min-width: 1024px) {
+  section.booking-list > .page-num {
+    display: flex;
+    margin: 0 auto;
+    border: 0;
+  }
+  section.booking-list > .page-num a {
+    margin: 0 72px;
+  }
 }
 
 section.booking-list > button.more {
@@ -91,6 +175,11 @@ section.booking-list > button.more {
   margin: 20px auto 96px;
   border: 0;
   background-color: transparent;
+}
+@media (min-width: 1024px) {
+  section.booking-list > button.more {
+    display: none;
+  }
 }
 
 section.recommend-lists {
@@ -106,6 +195,11 @@ section.recommend-lists > div {
   margin-bottom: 32px;
   border-radius: 8px;
   background-color: aqua;
+}
+@media (min-width: 1024px) {
+  section.recommend-lists > div {
+    width: 24%;
+  }
 }
 
 section.recommend-lists > div > img {

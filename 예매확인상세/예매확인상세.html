@@ -96,11 +96,48 @@
                 </p>
     
                 <div class="booking-info">
-                    <a href="#"><img src="#" alt="별빛야행 포스터"></a>
+                    <a href="#" class="poster-image"><img src="./images/poster_starnight.jpg" alt="별빛야행 포스터"></a>
                     <div class="info-1-2">
                         <h3>2024년 경복궁 별빛야행</h3>
                         <p class="print">프린트하기</p>
-                        <div class="info1"> <!-- 테이블 변경 -->
+                        <table class="info1">
+                            <!-- <colgroup>
+                                <col>
+                                <col>
+                            </colgroup> -->
+                            <tbody>
+                                <tr>
+                                    <td class="sort"><span class="box">예매자</span></td>
+                                    <td>홍길동</td>
+                                </tr>
+                                <tr>
+                                    <td class="sort"><span class="box">일시</span></td>
+                                    <td>2024.05.03 (금) 19:40</td>
+                                </tr>
+                                <tr>
+                                    <td class="sort"><span class="box">예매일</span></td>
+                                    <td>2024.04.16 (화)</td>
+                                </tr>
+                                <tr>
+                                    <td class="sort"><span class="box">장소</span></td>
+                                    <td>경복궁 일원</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="info2">
+                            <tbody>
+                                <tr>
+                                    <td class="sort"><span class="box">티켓수령방법</span></td>
+                                    <td>현장수령</td>
+                                </tr>
+                                <tr>
+                                    <td class="sort"><span class="box">예매수단</span></td>
+                                    <td>신용카드</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- <div class="info1">
                             <p><span class="sort">예매자</span>홍길동</p>
                             <p><span class="sort">일시</span>2024.05.03 (금) 19:40</p>
                             <p><span class="sort">예매일</span>2024.04.16 (화)</p>
@@ -109,7 +146,7 @@
                         <div class="info2">
                             <p><span class="sort">티켓수령방법</span>현장수령</p>
                             <p><span class="sort">결제수단</span>신용카드</p>
-                        </div>
+                        </div> -->
                     </div><!-- info-1-2 -->
                     <div class="info3">
                         <p>티켓 예매내역</p>
@@ -124,7 +161,7 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th scope="col">&nbsp;</th>
+                                    <th scope="col">&nbsp;&nbsp;&nbsp;</th>
                                     <th scope="col">예매번호</th>
                                     <th scope="col">매수</th>
                                     <th scope="col">좌석등급 / 번호</th>
@@ -134,7 +171,11 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>checkbox</td>
+                                    <td>
+                                        <form action="#" id="select">
+                                            <input type="checkbox" name="select" id="select">
+                                        </form>
+                                    </td>
                                     <td>1460067473</td>
                                     <td>2</td>
                                     <td>관람권 / 18번, 19번</td>
@@ -144,7 +185,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <button>예매취소</button>
+                    <button class="cancel">예매취소</button>
                 </div><!-- booking-info -->
             </section><!-- details -->
 

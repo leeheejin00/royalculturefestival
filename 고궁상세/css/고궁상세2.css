@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  max-width: 1416px;
+  margin: 32px auto;
+  padding: 0 32px;
+}
+
+section.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.title > .lnb {
+  display: flex;
+  margin-left: 16px;
+}
+
+section.title > h2 > .english {
+  display: none;
+}/*# sourceMappingURL=고궁상세2.css.map */
