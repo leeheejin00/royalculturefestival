@@ -218,6 +218,12 @@ main .intro-imgbox a .overlay .date-box {
 main .intro-imgbox a .overlay .date-box p {
   font-size: 16px;
 }
+main .intro-imgbox a .overlay .date-box .date {
+  margin-right: auto;
+}
+main .intro-imgbox a .overlay .date-box .location {
+  margin-left: auto;
+}
 main .intro-imgbox a .overlay2 {
   display: none;
 }
