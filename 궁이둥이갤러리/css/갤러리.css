@@ -4,6 +4,9 @@
   margin: 32px auto;
 }
 
+#history {
+  padding-bottom: 50px;
+}
 #history .history-title {
   display: flex;
   justify-content: space-between;
@@ -13,6 +16,7 @@
   font-size: 48px;
   font-family: "Pretendard-Medium";
   border-bottom: 1px solid black;
+  margin-bottom: 35px;
 }
 #history .history-title .go {
   display: flex;
@@ -27,38 +31,67 @@
   font-family: "Pretendard-Medium";
 }
 #history .history-img {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "a b c" "d f f" "e f f" "g g h";
   gap: 24px;
 }
-#history .history-img a img:nth-child(1) {
+@media (min-width: 1024px) {
+  #history .history-img {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "a b b c" "d b b e" "f g g h" "i g g j";
+  }
+}
+#history .history-img img:nth-child(1) {
   grid-area: a;
 }
-#history .history-img a img:nth-child(2) {
+#history .history-img img:nth-child(2) {
   grid-area: b;
 }
-#history .history-img a img:nth-child(3) {
+#history .history-img img:nth-child(3) {
   grid-area: c;
 }
-#history .history-img a img:nth-child(4) {
+#history .history-img img:nth-child(4) {
   grid-area: d;
 }
-#history .history-img a img:nth-child(5) {
+#history .history-img img:nth-child(5) {
   grid-area: e;
 }
-#history .history-img a img:nth-child(6) {
+#history .history-img img:nth-child(6) {
   grid-area: f;
 }
-#history .history-img a img:nth-child(7) {
+#history .history-img img:nth-child(7) {
   grid-area: g;
 }
-#history .history-img a img:nth-child(8) {
+#history .history-img img:nth-child(8) {
   grid-area: h;
 }
-#history .history-img a img {
+#history .history-img img:nth-child(9) {
+  display: none;
+}
+#history .history-img img:nth-child(10) {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #history .history-img img:nth-child(9) {
+    display: block;
+    grid-area: i;
+  }
+  #history .history-img img:nth-child(10) {
+    display: block;
+    grid-area: j;
+  }
+}
+#history .history-img img {
   width: 100%;
   height: 100%;
+}
+@media (min-width: 1024px) {
+  #history .history-img {
+    grid-template-columns: repeat(4, 1fr);
+    grid-area: "a b b c" "d b b e" "f g g h" "i g g j";
+  }
 }
 
 #review {
@@ -227,8 +260,13 @@
 }
 #video .sub-video .sub-video1 iframe, #video .sub-video .sub-video2 iframe, #video .sub-video .sub-video3 iframe {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 #video .sub-video .sub-video3 {
   margin-right: 0;
+}
+#video .sub-video p {
+  margin: 13px 0;
+  font-size: 17px;
+  font-family: "KimjungchulGothic-regular";
 }/*# sourceMappingURL=갤러리.css.map */

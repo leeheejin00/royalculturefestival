@@ -7,18 +7,31 @@
 .container {
     width: $width-wide;
     max-width: 1416px;
-    margin: 32px auto;
+    margin: 32px auto; 
+    z-index: 2;
 }
 
 header {
     width: $width-wide;
-    // height: 868px;
+    height: 887px;
     background-size: cover;
     position: relative;
     overflow: hidden;
+    video {
+        position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+    }
+
   
     @include responsive(large-screens) {
-      height: 440px;
+      height: 1079px;
     }
   
     .video-container {
@@ -68,7 +81,7 @@ header {
               span {
                   width: 25px;
                   height: 3px;
-                  background-color: black;
+                  background-color: white;
               }
           }
       }
@@ -127,7 +140,7 @@ header {
                       }
                   }
                       a {
-                          color: #171717;
+                          color: white;
                           font-size: 20px;
                           height: 30px;
                           line-height: 30px;
@@ -148,9 +161,10 @@ header {
                           border-top: 0;
                           border-left: 0;
                           border-right: 0;
-                          color: black;
+                          border-bottom: 2px solid white;
+                          background: transparent;
                       }
-                      .search{
+                      .search {
                           position: absolute;
                           top: -18px;
                           left: 135px;
