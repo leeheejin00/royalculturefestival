@@ -121,7 +121,7 @@ form .search-box .search img {
 }
 #program .program-box .program01 .desc, #program .program-box .program02 .desc, #program .program-box .program03 .desc, #program .program-box .program04 .desc {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   background-color: #2f2411;
   position: absolute;
   bottom: 68px;
@@ -129,8 +129,11 @@ form .search-box .search img {
   color: white;
   padding: 10px;
 }
-#program .program-box .program01 .desc .red, #program .program-box .program01 .desc .green, #program .program-box .program02 .desc .red, #program .program-box .program02 .desc .green, #program .program-box .program03 .desc .red, #program .program-box .program03 .desc .green, #program .program-box .program04 .desc .red, #program .program-box .program04 .desc .green {
-  display: none;
+#program .program-box .program01 .desc .red-green .red, #program .program-box .program02 .desc .red-green .red, #program .program-box .program03 .desc .red-green .red, #program .program-box .program04 .desc .red-green .red {
+  background-color: #a5161a;
+}
+#program .program-box .program01 .desc .red-green .green, #program .program-box .program02 .desc .red-green .green, #program .program-box .program03 .desc .red-green .green, #program .program-box .program04 .desc .red-green .green {
+  background-color: #20783c;
 }
 #program .program-box .program01 .gray, #program .program-box .program02 .gray, #program .program-box .program03 .gray, #program .program-box .program04 .gray {
   margin-top: 25px;

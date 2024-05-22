@@ -163,6 +163,8 @@ main {
   width: 100%;
 }
 main #intro h2 {
+  padding-top: 10%;
+  padding-bottom: 1%;
   color: #2f2411;
   font-size: 28px;
   font-family: "Pretendard-Bold";
@@ -194,9 +196,11 @@ main .intro-imgbox a img {
   width: 100%;
   height: 100%;
   display: block;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 main .intro-imgbox a .overlay {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -209,82 +213,103 @@ main .intro-imgbox a .overlay {
   color: #fff;
   text-align: center;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   background: rgba(0, 0, 0, 0.5);
   opacity: 1;
-  transition: opacity 0.3s;
 }
 @media (min-width: 1024px) {
   main .intro-imgbox a .overlay {
     display: none;
   }
 }
+main .intro-imgbox a .overlay .palace2024 {
+  margin-top: 17%;
+  font-size: 22px;
+  font-family: "Pretendard-Regular";
+}
 main .intro-imgbox a .overlay h1 {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 10px 0;
+  font-size: 40px;
+  font-family: "Pretendard-Bold";
+  margin-top: 1%;
 }
 main .intro-imgbox a .overlay .date-box {
-  position: absolute;
-  top: 83%;
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10%;
 }
 main .intro-imgbox a .overlay .date-box p {
   font-size: 16px;
+  font-family: "Pretendard-Medium";
 }
 main .intro-imgbox a .overlay .date-box .date {
-  margin-right: auto;
+  margin-left: 28px;
 }
 main .intro-imgbox a .overlay .date-box .location {
-  margin-left: auto;
+  margin-right: 28px;
 }
 main .intro-imgbox a .overlay2 {
   display: none;
 }
 @media (min-width: 1024px) {
   main .intro-imgbox a .overlay2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
-    text-align: center;
+    width: 100%;
+    height: 30%;
+    border-radius: 0 0 10px 10px;
+    background-color: #2f2411;
+    display: flex;
+    position: absolute;
+    bottom: 1px;
+    opacity: 70%;
+    color: white;
     padding: 10px;
-    border-radius: 5px;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
+    z-index: 2;
     transition: opacity 0.3s;
+  }
+  main .intro-imgbox a .overlay2 .palace2024 {
+    font-size: 18px;
+    font-family: "Pretendard-Regular";
+  }
+  main .intro-imgbox a .overlay2 h1 {
+    display: none;
+  }
+  main .intro-imgbox a .overlay2 .date-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  main .intro-imgbox a .overlay2 .date-box .date {
+    font-size: 16px;
+    font-family: "Pretendard-Medium";
+  }
+  main .intro-imgbox a .overlay2 .date-box .location {
+    font-size: 16px;
+    font-family: "Pretendard-Medium";
   }
 }
 @media (min-width: 1024px) {
   main .intro-imgbox a .overlay {
     display: none;
   }
-  main .intro-imgbox a .overlay2 p {
-    font-family: "Pretendard-Regular";
-  }
-  main .intro-imgbox a .overlay2 h1 {
+  main .intro-imgbox a h1 {
     font-size: 40px;
     font-family: "Pretendard-Bold";
     font-weight: bold;
     margin: 10px 0;
     color: #ffbe0f;
   }
-  main .intro-imgbox a .overlay2 .date-box {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  main .intro-imgbox a .overlay2 .date-box p {
-    font-size: 16px;
-  }
-  main .intro-imgbox a:hover .overlay2 {
-    opacity: 1;
-  }
+}
+main .intro-imgbox a:hover .overlay2 {
+  transform: translateY(0);
+  height: 100%;
+  border-radius: 10px;
+}
+main .intro-imgbox a:hover .overlay2 h1 {
+  display: block;
 }
 
 #palace {
@@ -296,19 +321,19 @@ main .intro-imgbox a .overlay2 {
     background-color: #f8efe0;
   }
 }
-#palace .mo-palace {
+#palace .mo-palace-box .mo-palace {
   width: 88%;
 }
 @media (min-width: 1024px) {
-  #palace .mo-palace {
+  #palace .mo-palace-box .mo-palace {
     display: none;
   }
 }
-#palace .palace {
+#palace .palace-img-box .palace {
   display: none;
 }
 @media (min-width: 1024px) {
-  #palace .palace {
+  #palace .palace-img-box .palace {
     display: block;
   }
 }
@@ -508,6 +533,11 @@ main .intro-imgbox a .overlay2 {
   flex: 1;
   min-width: 50%;
   position: relative;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-image 0.3s, background-size 0.3s, background-position 0.3s;
 }
 @media (min-width: 1024px) {
   #notice .notice_box, #notice .notice_box2, #notice .notice_box3 {
@@ -518,15 +548,7 @@ main .intro-imgbox a .overlay2 {
   }
 }
 #notice .notice_box .notice-txt, #notice .notice_box2 .notice-txt, #notice .notice_box3 .notice-txt {
-  background: #fff;
-  border: 1px solid black;
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
+  position: relative;
 }
 #notice .notice_box .notice-txt .border-box, #notice .notice_box2 .notice-txt .border-box, #notice .notice_box3 .notice-txt .border-box {
   width: 80%;
@@ -576,6 +598,28 @@ main .intro-imgbox a .overlay2 {
   font-family: "Pretendard-SemiBold";
   color: #aaaaaa;
 }
+#notice .notice_box {
+  opacity: 60%;
+  transform: scale(0.9);
+  z-index: 1;
+}
+@media (min-width: 1024px) {
+  #notice .notice_box {
+    opacity: 100%;
+    transform: none;
+  }
+  #notice .notice_box:hover {
+    background-image: url("../images/notice1.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  #notice .notice_box:hover .main-info, #notice .notice_box:hover .main-info2 {
+    visibility: hidden;
+  }
+  #notice .notice_box:hover h3 {
+    color: white;
+  }
+}
 #notice .notice_box2 {
   z-index: 2;
 }
@@ -584,16 +628,33 @@ main .intro-imgbox a .overlay2 {
     z-index: 1;
     width: 33%;
   }
+  #notice .notice_box2:hover {
+    background-image: url("../images/notice2.png");
+    background-size: cover;
+    background-position: center;
+  }
+  #notice .notice_box2:hover .main-info, #notice .notice_box2:hover .main-info2 {
+    visibility: hidden;
+  }
 }
-#notice .notice_box, #notice .notice_box3 {
+
+.notice_box3 {
   opacity: 60%;
   transform: scale(0.9);
   z-index: 1;
 }
 @media (min-width: 1024px) {
-  #notice .notice_box, #notice .notice_box3 {
+  .notice_box3 {
     opacity: 100%;
     transform: none;
+  }
+  .notice_box3:hover {
+    background-image: url("../images/notice3.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .notice_box3:hover .main-info, .notice_box3:hover .main-info2 {
+    visibility: hidden;
   }
 }
 
@@ -676,6 +737,9 @@ main .intro-imgbox a .overlay2 {
   grid-template-areas: "a a" "b d" "c d";
   gap: 10px;
   padding: 10px;
+}
+#history .palace-img h3 {
+  display: none;
 }
 #history .palace-img img:nth-child(1) {
   grid-area: a;
