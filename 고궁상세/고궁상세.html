@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../..css/index.css">
     <link rel="stylesheet" href="./css/고궁상세.css">
     <title>경복궁</title>
     <script>
@@ -28,11 +28,11 @@
     <header>
         <div class="container">
             <div class="logo-icon">
-                <a href=""><img src="./images/header_logo.png" alt="header_logo"></a>
+                <a href=""><img src="../images/header_logo.png" alt="header_logo"></a>
                 <div class="search-menu">
-                    <a href=""><img src="./images/internet.png" alt=""></a>
-                    <a href=""><img src="./images/korean-hat.png" alt=""></a>
-                    <a href=""><img src="./images/search.png" alt="search"></a>
+                    <a href=""><img src="../images/internet.png" alt=""></a>
+                    <a href=""><img src="../images/korean-hat.png" alt=""></a>
+                    <a href=""><img src="../images/search.png" alt="search"></a>
                     <div class="menu-toggle-btn">
                         <span>&nbsp</span>
                         <span>&nbsp</span>
@@ -136,7 +136,7 @@
                         <label for="find"></label>
                         <input type="search" id="find" name="find" />
                         <div class="search">
-                            <a href=""><img src="./images/search.png" alt=""></a>
+                            <a href=""><img src="../images/search.png" alt=""></a>
                         </div>
                     </div>
                 </form>
@@ -180,16 +180,17 @@
                     </p>
                 </div><!-- conbox -->
             </section><!-- time -->
+        </div><!-- container -->
 
-            <section class="programs">
+        <section class="programs">
+            <div class="container">
                 <div class="title-icon">
                     <div class="title">프로그램</div>
                     <div class="icon">
-                        <a href="./images/calendar.png"><img src="#" alt="calendar"></a>
-                        <a href="./images/filter.png"><img src="#" alt="filter"></a>
+                        <a href="#"><img src="./images/calendar.png" alt="calendar"></a>
+                        <a href="#"><img src="./images/filter.png" alt="filter"></a>
                     </div><!-- button -->
                 </div>
-                
                 <div class="program-list">
                     <div class="program01">
                         <div class="conbox">
@@ -206,7 +207,7 @@
                         </div><!-- conbox -->
                         <button class="disable">현장참여</button>
                     </div>
-
+    
                     <div class="program01">
                         <div class="conbox">
                             <img src="./images/pg01.png" alt="">
@@ -222,7 +223,7 @@
                         </div><!-- conbox -->
                         <button class="disable">현장참여</button>
                     </div>
-
+    
                     <div class="program01">
                         <div class="conbox">
                             <img src="./images/pg01.png" alt="">
@@ -238,10 +239,10 @@
                         </div><!-- conbox -->
                         <button class="disable">현장참여</button>
                     </div>
-
+    
                     <div class="program01">
                         <div class="conbox">
-                            <img src="./images/pg01.png" alt="">
+                            <img src="./images/pg01.png" alt="수문장 교대의식">
                             <div class="desc">
                                 <p class="title">경복궁 수문장 교대의식</p>
                                 <p class="period">01.01 ~ 12.31</p>
@@ -255,9 +256,13 @@
                         <button class="disable">현장참여</button>
                     </div>
                 </div><!-- program-list -->
-            </section><!-- programs -->
+            </div><!-- container -->
+        </section><!-- programs -->
+
+        <div class="container">    
 
             <section class="detail">
+                <div class="title">상세설명</div>
                 <p class="detail">
                     경복궁은 1392년 조선 건국 후 (1394년) 수도를 한양으로 옮긴 뒤 1395년(태조 4) 가장 먼저 지어진 조선왕조의 법궁(法宮)입니다. 북쪽의 백악산(현재의 북악산)을 배경으로 지어진 여러 궁궐 건물과 정문인 광화문 앞으로 넓은 육조거리(현재의 세종로, 광화문광장)는 한양의 중심이었습니다.<br><br>
                     경복궁을 지을 때 격식을 갖춰 일직선의 축을 바탕으로 건물을 배치하였는데, 정문인 광화문을 시작으로 흥례문-근정문-근정전-사정전-강녕전-교태전이 지어졌고 그 주변에 부속건물과 연못 등을 조성하였습니다. 경복궁은 조선 전기에 세종, 성종, 중종 등이 왕위에 올랐으며, 특히 세종대에 훈민정음이 만들어진 곳이기도 합니다.<br><br>
@@ -267,13 +272,38 @@
             </section><!-- detail -->
 
             <section class="address">
+                <div class="title">주소</div>
                 <p class="address">서울 종로구 사직로 161</p>
             </section><!-- address -->
 
             <section class="additional">
-                <div class="transp"></div><!-- transp -->
-                <div class="price"></div><!-- price -->
-                <div class="parking"></div><!-- parking -->
+                <div class="transp">
+                    <div class="title">대중교통</div>
+                    <div class="conbox">
+                        <div class="subway">
+                            <div class="title">지하철</div>
+                            <div class="details">
+                                <p><span class="station">3호선 경복궁역</span>5번 출구 (도보 5분)</p>
+                                <p><span class="station">5호선 광화문역</span>5번 출구  (도보 5분)</p>
+                            </div>
+                        </div><!-- subway -->
+                        <div class="bus">
+                            <div class="title">버스</div>
+                            <div class="details">
+                                <p><span class="station">경복궁 남측</span>109, 171, 272, 601, 606, 1020, 7025</p>
+                                <p><span class="station">경복궁 서측</span>109, 171, 272, 601, 606, 1020, 7212, 6011, 9703</p>
+                            </div>
+                        </div><!-- subway -->
+                    </div>
+                </div><!-- transp -->
+                <div class="price">
+                    <div class="title">이용요금</div>
+
+                </div><!-- price -->
+                <div class="parking">
+                    <div class="title">주차안내</div>
+
+                </div><!-- parking -->
             </section><!-- additional -->
             
         </div><!-- container -->
@@ -281,13 +311,13 @@
 
     <footer>
         <div class="sns">
-            <a href=""><img src="./images/instagram.png" alt="instagram"></a>
-            <a href=""><img src="./images/youtube.png" alt="youtube"></a>
-            <a href=""><img src="./images/naver blog.png" alt="blog"></a>
+            <a href=""><img src="../images/instagram.png" alt="instagram"></a>
+            <a href=""><img src="../images/youtube.png" alt="youtube"></a>
+            <a href=""><img src="../images/naver blog.png" alt="blog"></a>
         </div>
         <div class="footer-back">
             <div class="footLogo">
-                <a href=""><img src="images/footer_logo.png" alt=""></a>
+                <a href=""><img src="../images/footer_logo.png" alt=""></a>
             </div>
             <form action="">
                 <label for="sitemap" class="custom-select">

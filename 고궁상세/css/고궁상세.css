@@ -74,7 +74,7 @@ section.time .conbox .info .light {
 
 section.programs {
   background-color: #f8efe0;
-  margin-bottom: 56px;
+  padding: 40px 0;
 }
 
 .title-icon {
@@ -86,6 +86,10 @@ section.programs {
   display: flex;
   margin-left: 8px;
 }
+.title-icon .icon img {
+  width: 24px;
+  margin-left: 16px;
+}
 
 .program-list {
   display: flex;
@@ -93,9 +97,9 @@ section.programs {
   flex-wrap: wrap;
 }
 .program-list .program01 {
+  position: relative;
   width: 48%;
-  background-color: aqua;
-  margin-bottom: 24px;
+  margin-bottom: 56px;
 }
 .program-list .program01 .conbox {
   position: relative;
@@ -110,10 +114,11 @@ section.programs {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 45%;
+  height: 30%;
+  overflow: hidden;
   border-radius: 0 0 8px 8px;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.5019607843);
+  background-color: rgba(0, 0, 0, 0.5647058824);
 }
 .program-list .program01 .conbox .desc .title {
   text-align: center;
@@ -131,12 +136,49 @@ section.programs {
   padding: 4px 6px;
   border-radius: 8px;
   color: #333333;
-  background-color: #eaeaea;
+  background-color: #ffbe0f;
 }
 .program-list .program01 button.disable {
-  margin: 0 auto;
-  padding: 12px 56px;
+  position: absolute;
+  left: 50%;
+  bottom: -32px;
+  transform: translateX(-50%);
+  width: 50%;
+  max-width: 208px;
+  padding: 12px 0;
   border: 0;
   border-radius: 24px;
   background-color: #eaeaea;
+}
+
+section.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 56px;
+}
+section.detail .title {
+  width: 15%;
+}
+section.detail p.detail {
+  width: 85%;
+}
+
+section.address {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 56px;
+}
+section.address .title {
+  width: 15%;
+}
+section.address p.address {
+  width: 85%;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+section.additional {
+  display: flex;
 }/*# sourceMappingURL=고궁상세.css.map */
