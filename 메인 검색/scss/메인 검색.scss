@@ -137,13 +137,34 @@ form {
                 opacity: 70%;
                 color: white;
                 padding: 10px;
+                transform: translateY(0); /* 초기 위치 */
+                transition: transform 0.3s ease;
+                .period-time {
+                    display: flex;
+             
+                }
                 .red-green {
+                    display: none;
                     .red {
                         background-color: #a5161a;
+                        font-size: 15px;
+                        font-family: $font-pre-regular;
+                        border-radius: 5px;
+                        padding: 1px 7px;
                     }
                     .green {
                         background-color: #20783c;
+                        font-size: 15px;
+                        font-family: $font-pre-regular;
+                        border-radius: 5px;
+                        padding: 1px 7px;
                     }
+                }
+            }
+            &:hover .desc { /* 부모 요소에 호버 효과 적용 */
+                transform: translateY(0); /* 호버 시 위로 이동하도록 설정 */
+                .red-green {
+                    display: block;
                 }
             }
             .gray {
@@ -207,67 +228,134 @@ form {
         .notice-box1, .notice-box2 {
             flex: 1;
             min-width: 75%;
-            height: 256px;
+            // height: 256px;
             position: relative;
         }
         .notice-box1 {
             width: 100%;
-            height: 100%;
-            border-top: 1px solid #eeeeee;
-            border-bottom: 1px solid #eeeeee;
+            padding: 38px 0;
+            border-top: 3px solid #eeeeee;
+            border-bottom: 3px solid #eeeeee;
             display: flex;
+            align-items: center;
             z-index: 2;
             .notice-img {
-
+                width: 50%;
                 img {
-                    width: $width-wide;
-                    height: auto;
+                    width: 100%;
+                    object-fit: cover;
                 }
             }
             .notice_txt {
-                width: $width-wide;
+                width: 50%;
+                padding-left: 24px;
+                h3 {
+                    font-size: 20px;
+                    font-family: $font-medium;
+                    padding-bottom: 15px;
+                }
+                h4 {
+                    display: none;
+                }
+                .notice-txt1, .notice-txt2 {
+                    font-size: 12px;
+                    font-family: $font-pre-light;
+                    color: #aaaaaa;
+                }
+                .date {
+                    font-size: 12px;
+                    font-family: $font-pre-light;
+                    float: right;
+                }
             }
         }
         .notice-box2 {
-            width: $width-wide;
-            border-top: 1px solid #eeeeee;
-            border-bottom: 1px solid #eeeeee;
+            margin-left: 24px;
+            width: 100%;
+            height: 100%;
+            padding: 38px 0;
+            border-top: 3px solid #eeeeee;
+            border-bottom: 3px solid #eeeeee;
             display: flex;
+            align-items: center;
             z-index: 1;
-            transform: scale(0.9);
-            // transform: translateX(50%);
             .notice-img {
-                width: 100%;
+                width: 50%;
                 img {
-                    width: $width-wide;
+                    width: 100%;
+                    object-fit: cover;
                 }
             }
             .notice_txt {
-                width: 60%;
+                width: 50%;
+                padding-left: 24px;
+                h3 {
+                    font-size: 20px;
+                    font-family: $font-medium;
+                    padding-bottom: 15px;
+                }
+                h4 {
+                    display: none;
+                }
+                .notice-txt1, .notice-txt2 {
+                    font-size: 12px;
+                    font-family: $font-pre-light;
+                    color: #aaaaaa;
+                }
+                .date {
+                    font-size: 12px;
+                    font-family: $font-pre-light;
+                    float: right;
+                }
             }
         }
         .notice-box3 {
             display: none;
             @include responsive(large-screens) {
-                display: flex;
-                width: $width-wide;
-                .notice-img {
-                    width: $width-wide;
-                    img {
-                        width: $width-wide;
-                    }
+                width: 100%;
+            padding: 38px 0;
+            border-top: 3px solid #eeeeee;
+            border-bottom: 3px solid #eeeeee;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            .notice-img {
+                width: 50%;
+                img {
+                    width: 100%;
+                    object-fit: cover;
                 }
-                .notice_txt {
-                    width: 60%;
+            }
+            .notice_txt {
+                width: 50%;
+                padding-left: 24px;
+                h3 {
+                    font-size: 20px;
+                    font-family: $font-medium;
+                    padding-bottom: 15px;
                 }
+                h4 {
+                    display: none;
+                }
+                .notice-txt1, .notice-txt2 {
+                    font-size: 12px;
+                    font-family: $font-pre-light;
+                    color: #aaaaaa;
+                }
+                .date {
+                    font-size: 12px;
+                    font-family: $font-pre-light;
+                    float: right;
+                }
+            }
             }
         }
-        a {
-            p {
-                text-align: right;
-                float: right;
-            }
-        }   
+        .notice-plus {
+            display: none;
+            a {
+                font-size: 0;
+            }   
+        }
     }
 }
 
