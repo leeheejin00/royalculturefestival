@@ -181,4 +181,61 @@ section.address p.address {
 
 section.additional {
   display: flex;
+  justify-content: space-between;
+}
+section.additional div.selected {
+  color: #fff;
+  background-color: #2f2411;
+}
+section.additional div.transp {
+  width: 100%;
+  padding: 24px;
+}
+section.additional div.transp .add-menu {
+  display: flex;
+  margin-bottom: 64px;
+}
+section.additional div.transp .add-menu div {
+  margin: 13px 8px 0 0;
+  padding-top: 8px;
+}
+section.additional div.transp .add-menu .selected {
+  font-weight: bold;
+  border-top: 2px solid #fff;
+}
+section.additional div.transp .conbox .subway, section.additional div.transp .conbox .bus {
+  display: flex;
+  margin-bottom: 12px;
+}
+section.additional div.transp .conbox .subway .title, section.additional div.transp .conbox .bus .title {
+  width: 15%;
+  margin-right: 16px;
+}
+section.additional div.transp .conbox .subway .details, section.additional div.transp .conbox .bus .details {
+  width: 85%;
+}
+section.additional div.transp .conbox .subway .details p, section.additional div.transp .conbox .bus .details p {
+  font-size: 14px;
+}
+section.additional div.transp .conbox .subway .station, section.additional div.transp .conbox .bus .station {
+  margin-right: 8px;
+  color: #ffbe0f;
+}
+@media (min-width: 1024px) {
+  section.additional div.transp {
+    width: 49%;
+  }
+  section.additional div.transp .title-price, section.additional div.transp .title-parking {
+    display: none;
+  }
+}
+section.additional div.price, section.additional div.parking {
+  display: none;
+}
+@media (min-width: 1024px) {
+  section.additional div.price, section.additional div.parking {
+    display: block;
+    width: 23%;
+    border: 1px solid #eaeaea;
+  }
 }/*# sourceMappingURL=고궁상세.css.map */
