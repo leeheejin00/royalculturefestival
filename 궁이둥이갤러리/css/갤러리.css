@@ -4,6 +4,9 @@
   margin: 32px auto;
 }
 
+#history {
+  padding-bottom: 50px;
+}
 #history .history-title {
   display: flex;
   justify-content: space-between;
@@ -13,6 +16,7 @@
   font-size: 48px;
   font-family: "Pretendard-Medium";
   border-bottom: 1px solid black;
+  margin-bottom: 35px;
 }
 #history .history-title .go {
   display: flex;
@@ -27,42 +31,72 @@
   font-family: "Pretendard-Medium";
 }
 #history .history-img {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "a b c" "d f f" "e f f" "g g h";
   gap: 24px;
 }
-#history .history-img a img:nth-child(1) {
+@media (min-width: 1024px) {
+  #history .history-img {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "a b b c" "d b b e" "f g g h" "i g g j";
+  }
+}
+#history .history-img img:nth-child(1) {
   grid-area: a;
 }
-#history .history-img a img:nth-child(2) {
+#history .history-img img:nth-child(2) {
   grid-area: b;
 }
-#history .history-img a img:nth-child(3) {
+#history .history-img img:nth-child(3) {
   grid-area: c;
 }
-#history .history-img a img:nth-child(4) {
+#history .history-img img:nth-child(4) {
   grid-area: d;
 }
-#history .history-img a img:nth-child(5) {
+#history .history-img img:nth-child(5) {
   grid-area: e;
 }
-#history .history-img a img:nth-child(6) {
+#history .history-img img:nth-child(6) {
   grid-area: f;
 }
-#history .history-img a img:nth-child(7) {
+#history .history-img img:nth-child(7) {
   grid-area: g;
 }
-#history .history-img a img:nth-child(8) {
+#history .history-img img:nth-child(8) {
   grid-area: h;
 }
-#history .history-img a img {
+#history .history-img img:nth-child(9) {
+  display: none;
+}
+#history .history-img img:nth-child(10) {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #history .history-img img:nth-child(9) {
+    display: block;
+    grid-area: i;
+  }
+  #history .history-img img:nth-child(10) {
+    display: block;
+    grid-area: j;
+  }
+}
+#history .history-img img {
   width: 100%;
   height: 100%;
+}
+@media (min-width: 1024px) {
+  #history .history-img {
+    grid-template-columns: repeat(4, 1fr);
+    grid-area: "a b b c" "d b b e" "f g g h" "i g g j";
+  }
 }
 
 #review {
   background-color: #f8efe0;
+  padding: 50px 0;
 }
 #review h3 {
   font-size: 24px;
@@ -70,42 +104,43 @@
   border-bottom: 3px solid #2f2411;
   color: #2f2411;
   width: 12%;
+  margin-bottom: 53px;
 }
-#review .review1, #review .review3 {
+#review .review1 {
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
-#review .review1 .review-txt1, #review .review3 .review-txt1 {
+#review .review1 .review-txt1 {
   background-color: #2f2411;
   width: 90%;
   margin-left: 24px;
   padding: 50px;
-  border-radius: 40px 40px 40px 0;
+  border-radius: 50px 50px 50px 0;
 }
-#review .review1 .review-txt1 .re-txt, #review .review3 .review-txt1 .re-txt {
+#review .review1 .review-txt1 .re-txt {
   font-size: 28px;
   font-family: "KimjungchulMyungjo-Regular";
   color: white;
   padding-bottom: 50px;
 }
-#review .review1 .review-txt1 .re-title, #review .review3 .review-txt1 .re-title {
+#review .review1 .review-txt1 .re-title {
   font-size: 22px;
   font-family: "Pretendard-Regular";
   color: white;
 }
-#review .review1 .review-txt1 .time-plus, #review .review3 .review-txt1 .time-plus {
+#review .review1 .review-txt1 .time-plus {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
 }
-#review .review1 .review-txt1 .time, #review .review3 .review-txt1 .time {
+#review .review1 .review-txt1 .time {
   margin-right: auto;
   font-size: 20px;
   font-family: "Pretendard-Light";
 }
-#review .review1 .review-txt1 a, #review .review3 .review-txt1 a {
+#review .review1 .review-txt1 a {
   margin-left: auto;
   font-size: 20px;
   font-family: "Pretendard-Medium";
@@ -122,7 +157,7 @@
   width: 90%;
   margin-right: 24px;
   padding: 50px;
-  border-radius: 40px 40px 0 40px;
+  border-radius: 50px 50px 0 50px;
 }
 #review .review2 .review-txt2 .re-txt {
   font-size: 28px;
@@ -151,4 +186,87 @@
   font-size: 20px;
   font-family: "Pretendard-Medium";
   color: white;
+}
+#review .review3 {
+  margin-top: 114px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+#review .review3 .review-txt3 {
+  background-color: #2f2411;
+  width: 90%;
+  margin-left: 24px;
+  padding: 50px;
+  border-radius: 50px 50px 50px 0;
+}
+#review .review3 .review-txt3 .re-txt {
+  font-size: 28px;
+  font-family: "KimjungchulMyungjo-Regular";
+  color: white;
+  padding-bottom: 50px;
+}
+#review .review3 .review-txt3 .re-title {
+  font-size: 22px;
+  font-family: "Pretendard-Regular";
+  color: white;
+}
+#review .review3 .review-txt3 .time-plus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+#review .review3 .review-txt3 .time {
+  margin-right: auto;
+  font-size: 20px;
+  font-family: "Pretendard-Light";
+}
+#review .review3 .review-txt3 a {
+  margin-left: auto;
+  font-size: 20px;
+  font-family: "Pretendard-Medium";
+  color: white;
+}
+
+#video h3 {
+  font-size: 24px;
+  font-family: "Pretendard-Bold";
+  border-bottom: 3px solid #2f2411;
+  color: #2f2411;
+  width: 12%;
+  margin-bottom: 53px;
+}
+#video .main-video {
+  border-radius: 10px;
+}
+#video .main-video iframe {
+  width: 100%;
+  border-radius: 20px;
+}
+#video .main-video p {
+  margin: 17px 0;
+  font-size: 17px;
+  font-family: "KimjungchulGothic-regular";
+}
+#video .sub-video {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#video .sub-video .sub-video1, #video .sub-video .sub-video2, #video .sub-video .sub-video3 {
+  width: 100%;
+  margin-right: 24px;
+}
+#video .sub-video .sub-video1 iframe, #video .sub-video .sub-video2 iframe, #video .sub-video .sub-video3 iframe {
+  width: 100%;
+  border-radius: 10px;
+}
+#video .sub-video .sub-video3 {
+  margin-right: 0;
+}
+#video .sub-video p {
+  margin: 13px 0;
+  font-size: 17px;
+  font-family: "KimjungchulGothic-regular";
 }/*# sourceMappingURL=갤러리.css.map */
