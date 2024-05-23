@@ -220,6 +220,9 @@ footer {
 .notice .notice_box table tbody {
   width: 100%;
 }
+.notice .notice_box table tbody tr {
+  height: 100px;
+}
 .notice .notice_box table tbody tr:nth-of-type(1), .notice .notice_box table tbody tr:nth-of-type(2) {
   background-color: #fff2dd;
 }
@@ -288,7 +291,7 @@ footer {
 .notice .notice_box .number {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 60%;
   margin: 100px auto 60px;
   font: 24px "Pretendard";
 }/*# sourceMappingURL=notice.css.map */
