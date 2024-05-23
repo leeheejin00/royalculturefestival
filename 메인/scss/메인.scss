@@ -530,7 +530,6 @@ main {
             overflow: hidden;
             @include responsive(large-screens) {
                 overflow: visible;
-                justify-content: space-between;
                 position: none;
                 .slide-img1 {
                     display: none;
@@ -553,60 +552,71 @@ main {
                 position: none;
                 width: 33%;
             }
-            .notice-txt {
-                position: relative;
-                 // 텍스트가 이미지 위에 보이도록 설정
-                .border-box {
-                    width: 80%;
-                    height: auto;
-                    border-left: 5px solid #2f2411;
-                    padding-left: 21px;
-                    margin-top: 65px;
-                    margin-left: 62px;
-                    
-                    span {
-                        display: block;
-                        font-size: 14px;
-                        color: #aaaaaa;
-                        margin-bottom: 5px;
-                        font-family: $font-pre-regular;
+            a {
+                .notice-txt {
+                    position: relative;
+                     // 텍스트가 이미지 위에 보이도록 설정
+                    .border-box {
+                        width: 80%;
+                        height: auto;
+                        border-left: 5px solid #2f2411;
+                        padding-left: 21px;
+                        margin-top: 65px;
+                        margin-left: 62px;
+                        @include responsive(large-screens) {
+                            &:hover {
+                                border-left: 5px solid white;
+                            }
+                        }
+                        span {
+                            display: block;
+                            font-size: 14px;
+                            color: #aaaaaa;
+                            margin-bottom: 5px;
+                            font-family: $font-pre-regular;
+                        }
+        
+                        h3 {
+                            font-size: 26px;
+                            color: black;
+                            margin-bottom: 10px;
+                            font-family: $font-bold;
+                            @include responsive(large-screens) {
+                                &:hover {
+                                    color: white;
+                                }
+                            }
+                        }
                     }
-    
-                    h3 {
-                        font-size: 26px;
+        
+                    .main-info {
+                        margin-top: 56px;
+                        margin-left: 62px;
+                        font-size: 24px;
                         color: black;
-                        margin-bottom: 10px;
-                        font-family: $font-bold;
+                        line-height: 1.5;
+                        font-family: $font-pre-regular;
+        
+                        br {
+                            margin-bottom: 5px; // 줄바꿈 간격 조정
+                        }
                     }
-                }
-    
-                .main-info {
-                    margin-top: 56px;
-                    margin-left: 62px;
-                    font-size: 24px;
-                    color: black;
-                    line-height: 1.5;
-                    font-family: $font-pre-regular;
-    
-                    br {
-                        margin-bottom: 5px; // 줄바꿈 간격 조정
+                    .main-info2 {
+                        margin-top: 56px;
+                        margin-left: 62px;
+                        font-size: 20px;
+                        color: #555;
+                        line-height: 1.5;
+                        margin-bottom: 34px;
+                        font-family: $font-light;
                     }
-                }
-                .main-info2 {
-                    margin-top: 56px;
-                    margin-left: 62px;
-                    font-size: 20px;
-                    color: #555;
-                    line-height: 1.5;
-                    margin-bottom: 34px;
-                    font-family: $font-light;
-                }
-                .date {
-                    display: block;
-                    margin-left: 62px;
-                    padding-bottom: 60px;
-                    font-family: $font-semibold;
-                    color: #aaaaaa;
+                    .date {
+                        display: block;
+                        margin-left: 62px;
+                        padding-bottom: 60px;
+                        font-family: $font-semibold;
+                        color: #aaaaaa;
+                    }
                 }
             }
         }
@@ -625,10 +635,8 @@ main {
                     .main-info, .main-info2 {
                         visibility: hidden;
                     }
-                    h3 {
-                        color: white;
-                    }
-                    }
+                    
+                }
             }
         }
         .notice_box2 {
