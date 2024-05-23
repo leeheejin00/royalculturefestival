@@ -228,9 +228,9 @@ footer {
     }
 
     .footer-back {
-        background: url(../images/);
+        background: url(../images/footer-pattern-bg.png);
 
-        background-color: #2f2411;
+        
         @include responsive(large-screens) {
             background: url(../images/header_backpc.png);
             background-size: cover;
