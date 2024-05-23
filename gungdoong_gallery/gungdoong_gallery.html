@@ -1,28 +1,12 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/header_footer.css">
-    <link rel="stylesheet" href="">
-    <title>header_footer</title>
-    <script>
-        window.onload = function() {
-            const toggleBtn = document.querySelector('.menu-toggle-btn');
-            const sideMenu = document.getElementById('side-menu');
-
-            toggleBtn.addEventListener('click', function() {
-                 if (sideMenu.style.right === '0px') {
-                    sideMenu.style.right = '-250px'; 
-                    toggleBtn.classList.remove('open'); 
-                } else {
-                    sideMenu.style.right = '0'; 
-                    toggleBtn.classList.add('open'); 
-                }
-            });
-        };
-    </script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/gungdoong_gallery.css">
+    <title>궁이둥이 갤러리</title>
 </head>
 <body>
     <header>
@@ -145,7 +129,96 @@
     </header>
 
     <main>
-        
+        <section id="history">
+            <div class="container">
+                <div class="history-title">
+                    <h2>발자취</h2>
+                    <div class="go">
+                        <a href="#">지원하기</a>
+                        <a href="#">발자취</a>
+                    </div>
+                </div> <!-- history-title -->
+                <div class="history-img">
+                    <img src="./images/history1.jpg" alt="history1">
+                    <img src="./images/history2.jpg" alt="history">
+                    <img src="./images/history3.jpg" alt="history3">
+                    <img src="./images/history4.jpg" alt="history4">
+                    <img src="./images/history5.jpg" alt="history5">
+                    <img src="./images/history6.jpg" alt="history6">
+                    <img src="./images/history7.jpg"- alt="history7">
+                    <img src="./images/history8.png" alt="history8">
+                    <img src="./images/history9.jpg" alt="histor9">
+                    <img src="./images/history10.jpg" alt="history10">
+                </div>
+            </div> <!-- container -->
+        </section>
+
+        <section id="review">
+            <div class="container">
+                <h3>활동후기</h3>
+                <div class="review1">
+                    <img src="./images/review1.png" alt="">
+                    <div class="review-txt1">
+                        <p class="re-txt">궁궐을 좋아하는 다양한 연령대의 친구들을 만들어서 좋았고, 가을 날씨도 원없이 즐길 수 있어서 행복한 활동 기간이었습니다.</p>
+                        <p class="re-title">2023 가을 궁중문화축전 궁이둥이 후기...</p>
+                        <div class="time-plus">
+                            <span class="time">패피커 ・ 2023. 8. 31</span>
+                            <a href="#">더보기</a>
+                        </div>
+                    </div> <!-- review-txt1 -->
+                </div> <!-- review1 -->
+                <div class="review2">
+                    <div class="review-txt2">
+                        <p class="re-txt">도화원 옷을 입을 수 있어서 좋았어요! 개인적으로 참여하기 어려운 프로그램도 궁이둥이 활동을 통해 경험할 수 있고 다양한 궁의 모습을 볼 수 있어서 좋았답니다!</p>
+                        <p class="re-title"><2023 가을 궁이둥이> 궁이둥이 활동 후 ...</p>
+                        <div class="time-plus">
+                            <span class="time">유곤지 ・ 2023. 10. 29</span>
+                            <a href="#">더보기</a>
+                        </div>
+                    </div> <!-- review-txt2 -->
+                    <img src="./images/review2.png" alt="">
+                </div> <!-- review2 -->
+                <div class="review3">
+                    <img src="./images/review3.png" alt="">
+                    <div class="review-txt3">
+                        <p class="re-txt">현장에서 직접 프로그램을 진행하고 사람들을 만나는 대외활동이 처음이라 더 뜻깊은 시간이었어요. 특별하고 또 소중한 경험이었습니다.</p>
+                        <p class="re-title">2022년 가을 궁중문화축전 궁이둥이 후...</p>
+                        <div class="time-plus">
+                            <span class="time">은가비 ・ 2022. 10. 21</span>
+                            <a href="#">더보기</a>
+                        </div>
+                    </div> <!-- review-txt3 -->
+                </div> <!-- review3 -->
+            </div> <!-- container -->
+        </section>
+
+        <section id="video">
+            <div class="container">
+                <h3>활동영상</h3>
+                <div class="main-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5i1C5rGsJK4?si=yObwVZwFa4Ad5kdp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>[ENG SUB] 봄부터 가을까지, 궁에서 함께한 순간들 2022 궁중문화축전 몰아보기👀👀</p>
+                </div>
+                <div class="sub-video">
+                    <div class="sub-video1">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Wx49ajZCIeI?si=5Uml1gkzEx1plKu2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>15초안에 130자 말하기, 라임은 궁이라궁!! | 궁중문화축전</p>
+                    </div>
+                    <div class="sub-video2">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/MHIruVVaBow?si=ycdnD0i7wr9XTwpa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>[ENG SUB] [축전을 만드는 사람들] 
+                            궁에 나타난 도화서 화원?!👀 
+                            자원활동가 궁이둥이! | 2022 봄 궁중문화축전</p>
+                    </div>
+                    <div class="sub-video3">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iB5k11IAATc?si=SlsNzejo5TiDJnya" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <img src="" alt="">
+                        <p>[ENG SUB] 랜선 궁(宮)둥이가 궁금해? 
+                            궁(宮)둥이 축전 현장 공개!</p>
+                    </div>
+                </div> <!-- sub-video -->
+            </div>
+        </section>
     </main>
 
     <footer>
