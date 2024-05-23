@@ -1,0 +1,33 @@
+.container {
+  width: 100%;
+  max-width: 1416px;
+  margin: 32px auto;
+  padding: 0 32px;
+}
+
+.title-tag-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title-tag-btn .remaining {
+  display: flex;
+  align-items: center;
+}
+.title-tag-btn .remaining img {
+  width: 28px;
+  height: 28px;
+}
+
+.place-period {
+  display: flex;
+}
+.place-period p {
+  margin-right: 16px;
+}
+
+.booking-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}/*# sourceMappingURL=program_detail.css.map */

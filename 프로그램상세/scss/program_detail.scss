@@ -14,3 +14,31 @@
 }
 
 // ==== title ====
+.title-tag-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .remaining {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 28px;
+            height: 28px;
+        }
+    }
+}  // title-tag-btn
+
+.place-period {
+    display: flex;
+    p {
+        margin-right: 16px;
+    }
+}
+
+// ==== booking-btn ====
+.booking-btn {
+    position: absolute;
+    bottom: 0; right: 0;
+}
