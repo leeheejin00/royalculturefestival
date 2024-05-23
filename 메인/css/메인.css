@@ -625,6 +625,9 @@ main .intro-imgbox a:hover .overlay2 h1 {
   #notice .notice_box:hover .main-info, #notice .notice_box:hover .main-info2 {
     visibility: hidden;
   }
+  #notice .notice_box:hover h3 {
+    color: white;
+  }
 }
 #notice .notice_box2 {
   z-index: 2;
