@@ -166,7 +166,7 @@ main #intro h2 {
   padding-top: 10%;
   padding-bottom: 1%;
   color: #2f2411;
-  font-size: 28px;
+  font-size: 16px;
   font-family: "Pretendard-Bold";
   margin-bottom: 20px;
 }
@@ -179,7 +179,7 @@ main .intro-imgbox {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(200px, auto);
-  grid-gap: 24px;
+  grid-gap: 12px;
 }
 @media (min-width: 1024px) {
   main .intro-imgbox {
@@ -212,7 +212,7 @@ main .intro-imgbox a .overlay {
   align-items: center;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 8px;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.5);
   opacity: 1;
@@ -224,29 +224,21 @@ main .intro-imgbox a .overlay {
 }
 main .intro-imgbox a .overlay .palace2024 {
   margin-top: 17%;
-  font-size: 22px;
+  font-size: 16px;
   font-family: "Pretendard-Regular";
 }
-main .intro-imgbox a .overlay h1 {
-  font-size: 40px;
+main .intro-imgbox a .overlay h3 {
+  font-size: 16px;
   font-family: "Pretendard-Bold";
   margin-top: 1%;
 }
 main .intro-imgbox a .overlay .date-box {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   margin-top: 10%;
 }
 main .intro-imgbox a .overlay .date-box p {
-  font-size: 16px;
+  font-size: 12px;
   font-family: "Pretendard-Medium";
-}
-main .intro-imgbox a .overlay .date-box .date {
-  margin-left: 28px;
-}
-main .intro-imgbox a .overlay .date-box .location {
-  margin-right: 28px;
 }
 main .intro-imgbox a .overlay2 {
   display: none;
@@ -274,7 +266,7 @@ main .intro-imgbox a .overlay2 {
     font-size: 18px;
     font-family: "Pretendard-Regular";
   }
-  main .intro-imgbox a .overlay2 h1 {
+  main .intro-imgbox a .overlay2 h3 {
     display: none;
   }
   main .intro-imgbox a .overlay2 .date-box {
@@ -295,7 +287,7 @@ main .intro-imgbox a .overlay2 {
   main .intro-imgbox a .overlay {
     display: none;
   }
-  main .intro-imgbox a h1 {
+  main .intro-imgbox a h3 {
     font-size: 40px;
     font-family: "Pretendard-Bold";
     font-weight: bold;
@@ -308,7 +300,7 @@ main .intro-imgbox a:hover .overlay2 {
   height: 100%;
   border-radius: 10px;
 }
-main .intro-imgbox a:hover .overlay2 h1 {
+main .intro-imgbox a:hover .overlay2 h3 {
   display: block;
 }
 
@@ -364,27 +356,27 @@ main .intro-imgbox a:hover .overlay2 h1 {
 #palace .palace-txt1 .txt h2 {
   width: 100%;
   font-family: "Pretendard-Bold";
-  font-size: 28px;
+  font-size: 16px;
   padding-top: 41px;
-  padding-left: 32px;
+  padding-left: 16px;
 }
 #palace .palace-txt1 .txt p {
   width: 100%;
-  padding-left: 32px;
+  padding-left: 16px;
 }
 #palace .palace-txt1 .txt p .txt1 {
   width: 100%;
-  font-size: 38px;
+  font-size: 20px;
   font-family: "Pretendard-Thin";
 }
 #palace .palace-txt1 .txt p .txt2 {
   width: 100%;
-  font-size: 38px;
+  font-size: 20px;
   font-family: "KimjungchulMyungjo-Light";
 }
 #palace .palace-txt1 .txt p .txt3 {
   width: 100%;
-  font-size: 48px;
+  font-size: 20px;
   font-family: "Pretendard-SemiBold";
 }
 #palace .palace-txt2 {
@@ -411,16 +403,17 @@ main .intro-imgbox a:hover .overlay2 h1 {
   display: flex;
 }
 #palace .palace-txt2 .palace_title img {
-  width: 58px;
+  width: 28px;
   margin-bottom: 55px;
   margin-right: 20px;
 }
-#palace .palace-txt2 .palace_title h1 {
+#palace .palace-txt2 .palace_title h2 {
   font-family: "KimjungchulMyungjo-Bold";
-  font-size: 48px;
+  font-size: 24px;
 }
 #palace .palace-txt2 p {
   font-family: "KimjungchulMyungjo-Regular";
+  font-size: 14px;
 }
 #palace .palace-txt2 .text2 {
   padding: 30px 0;
@@ -503,7 +496,7 @@ main .intro-imgbox a:hover .overlay2 h1 {
 }
 #notice h2 {
   color: #2f2411;
-  font-size: 28px;
+  font-size: 16px;
   font-family: "Pretendard-Bold";
   margin-bottom: 15px;
 }
@@ -553,9 +546,9 @@ main .intro-imgbox a:hover .overlay2 h1 {
   width: 80%;
   height: auto;
   border-left: 5px solid #2f2411;
-  padding-left: 21px;
-  margin-top: 65px;
-  margin-left: 62px;
+  padding-left: 12px;
+  margin-top: 24px;
+  margin-left: 12px;
 }
 @media (min-width: 1024px) {
   #notice .notice_box a .notice-txt .border-box:hover, #notice .notice_box2 a .notice-txt .border-box:hover, #notice .notice_box3 a .notice-txt .border-box:hover {
@@ -564,13 +557,13 @@ main .intro-imgbox a:hover .overlay2 h1 {
 }
 #notice .notice_box a .notice-txt .border-box span, #notice .notice_box2 a .notice-txt .border-box span, #notice .notice_box3 a .notice-txt .border-box span {
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   color: #aaaaaa;
   margin-bottom: 5px;
   font-family: "Pretendard-Regular";
 }
 #notice .notice_box a .notice-txt .border-box h3, #notice .notice_box2 a .notice-txt .border-box h3, #notice .notice_box3 a .notice-txt .border-box h3 {
-  font-size: 26px;
+  font-size: 16px;
   color: black;
   margin-bottom: 10px;
   font-family: "KimjungchulMyungjo-Bold";
@@ -582,8 +575,8 @@ main .intro-imgbox a:hover .overlay2 h1 {
 }
 #notice .notice_box a .notice-txt .main-info, #notice .notice_box2 a .notice-txt .main-info, #notice .notice_box3 a .notice-txt .main-info {
   margin-top: 56px;
-  margin-left: 62px;
-  font-size: 24px;
+  margin-left: 12px;
+  font-size: 14px;
   color: black;
   line-height: 1.5;
   font-family: "Pretendard-Regular";
@@ -593,17 +586,18 @@ main .intro-imgbox a:hover .overlay2 h1 {
 }
 #notice .notice_box a .notice-txt .main-info2, #notice .notice_box2 a .notice-txt .main-info2, #notice .notice_box3 a .notice-txt .main-info2 {
   margin-top: 56px;
-  margin-left: 62px;
-  font-size: 20px;
+  margin-left: 12px;
+  font-size: 12px;
   color: #555;
   line-height: 1.5;
   margin-bottom: 34px;
   font-family: "KimjungchulMyungjo-Light";
 }
 #notice .notice_box a .notice-txt .date, #notice .notice_box2 a .notice-txt .date, #notice .notice_box3 a .notice-txt .date {
+  font-size: 12px;
   display: block;
   margin-left: 62px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
   font-family: "Pretendard-SemiBold";
   color: #aaaaaa;
 }
@@ -702,13 +696,11 @@ main .intro-imgbox a:hover .overlay2 h1 {
   padding-top: 110px;
 }
 #history .history-box {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 #history .history-box h2 {
   color: #2f2411;
-  font-size: 28px;
+  font-size: 16px;
   font-family: "Pretendard-Bold";
 }
 @media (min-width: 1024px) {
@@ -727,7 +719,7 @@ main .intro-imgbox a:hover .overlay2 h1 {
 }
 #history .history-box .menu-box .palace_gnb li a {
   color: black;
-  font-size: 24px;
+  font-size: 14px;
   font-family: "Pretendard-ExtraLight";
 }
 #history .history-box .menu-box .palace_gnb li a:hover {
@@ -766,7 +758,8 @@ main .intro-imgbox a:hover .overlay2 h1 {
 #history .palace-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 1024px) {
   #history .palace-img {

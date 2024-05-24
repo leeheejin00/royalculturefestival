@@ -270,15 +270,15 @@ footer {
         a {
             margin-top: 10px;
             margin-right: 42px;
-        a:last-child {
-            margin-right: 0;
-        }
+            @include responsive(large-screens) {
+                margin-right: 20px;
+                }
             img {
                 width: 48px;
             }
-        @include responsive(large-screens) {
-            margin-right: 20px;
-            }
+        }
+        a:last-child {
+            margin-right: 0;
         }
     }
 
@@ -307,7 +307,7 @@ footer {
                     border: 0;
                     color: white;
                     font-family: $font-pre-regular;
-                    font-size: 26px;
+                    font-size: 16px;
                     background: transparent;
                     width: 214px;
                     @include responsive(large-screens) {
@@ -320,7 +320,7 @@ footer {
  
     
         hr {
-            width: 411px;
+            width: 70%;
             height: 3px;
             background-color: #ffbe0f;
             margin: 60px auto;
@@ -329,7 +329,7 @@ footer {
             display: flex;
             justify-content: center;
             a {
-                font-size: 26px;
+                font-size: 16px;
                 font-family: $font-regular;
                 margin-right: 42px;
                 margin-bottom: 46px;
@@ -345,9 +345,10 @@ footer {
                 margin-right: 0;
             }
         }
-        .address {
-            font-size: 20px;
-            font-family: $font-light;
+        address {
+            font-size: 14px;
+            text-align: center;
+            font-family: $font-pre-light;
             @include responsive(large-screens) {
                 font-size: 18px;
             }
@@ -357,7 +358,7 @@ footer {
             justify-content: center;
             margin: 0 auto;
             address {
-                    font-size: 20px;
+                    font-size: 14px;
                     margin-right: 42px;
                     margin-bottom: 34px;
                     font-family: $font-extra;
@@ -370,7 +371,7 @@ footer {
         .copyright {
             p {
                 padding-bottom: 51px;
-                font-size: 18px;
+                font-size: 14px;
                 font-family: $font-extra;
                 @include responsive(large-screens) {
                     font-size: 16px;

@@ -375,16 +375,16 @@ footer .sns a {
   margin-top: 10px;
   margin-right: 42px;
 }
-footer .sns a a:last-child {
-  margin-right: 0;
-}
-footer .sns a img {
-  width: 48px;
-}
 @media (min-width: 1024px) {
   footer .sns a {
     margin-right: 20px;
   }
+}
+footer .sns a img {
+  width: 48px;
+}
+footer .sns a:last-child {
+  margin-right: 0;
 }
 footer .footer-back {
   background: url(../images/footer-pattern-bg.png);
@@ -409,7 +409,7 @@ footer .footer-back form label select {
   border: 0;
   color: white;
   font-family: "Pretendard-Regular";
-  font-size: 26px;
+  font-size: 16px;
   background: transparent;
   width: 214px;
 }
@@ -419,7 +419,7 @@ footer .footer-back form label select {
   }
 }
 footer hr {
-  width: 411px;
+  width: 70%;
   height: 3px;
   background-color: #ffbe0f;
   margin: 60px auto;
@@ -429,7 +429,7 @@ footer .public {
   justify-content: center;
 }
 footer .public a {
-  font-size: 26px;
+  font-size: 16px;
   font-family: "KimjungchulMyungjo-Regular";
   margin-right: 42px;
   margin-bottom: 46px;
@@ -446,12 +446,13 @@ footer .public a:hover {
 footer .public a:last-child {
   margin-right: 0;
 }
-footer .address {
-  font-size: 20px;
-  font-family: "KimjungchulMyungjo-Light";
+footer address {
+  font-size: 14px;
+  text-align: center;
+  font-family: "Pretendard-Light";
 }
 @media (min-width: 1024px) {
-  footer .address {
+  footer address {
     font-size: 18px;
   }
 }
@@ -461,7 +462,7 @@ footer .question {
   margin: 0 auto;
 }
 footer .question address {
-  font-size: 20px;
+  font-size: 14px;
   margin-right: 42px;
   margin-bottom: 34px;
   font-family: "Pretendard-ExtraLight";
@@ -474,7 +475,7 @@ footer .question address {
 }
 footer .copyright p {
   padding-bottom: 51px;
-  font-size: 18px;
+  font-size: 14px;
   font-family: "Pretendard-ExtraLight";
 }
 @media (min-width: 1024px) {
