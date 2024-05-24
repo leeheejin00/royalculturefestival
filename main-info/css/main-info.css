@@ -83,7 +83,7 @@
   .slide .slideRight {
     display: flex;
     justify-content: space-between;
-    animation: scroll 20s linear infinite;
+    animation: scroll 20s linear infinite reverse;
   }
   .slide .slideRight img {
     width: 631px;
@@ -114,7 +114,7 @@
   top: 280px;
   left: 32px;
   width: 400px;
-  height: 360px;
+  height: 300px;
   background-color: #f1ebde;
   opacity: 0.8;
 }
@@ -151,6 +151,7 @@
     color: white;
   }
   .festival .main-info2 p {
+    width: 600px;
     position: absolute;
     top: 633px;
     left: 253px;
@@ -293,6 +294,57 @@
     height: 50px;
   }
   .making_people .survice .survice_info small {
+    font: 13px "Pretendard";
+  }
+  .making_people .service2 {
+    display: none;
+  }
+  .making_people .service2 .service_info2 {
+    width: 916px;
+    height: 50px;
+    margin: 0 auto 10px;
+    background-color: rgba(150, 150, 150, 0.1);
+    display: flex;
+  }
+  .making_people .service2 .service_info2 h3 {
+    width: 150px;
+    height: 18px;
+    color: #ffbe0f;
+    font: 20px "Pretendard";
+    margin-right: 102px;
+  }
+  .making_people .service2 .service_info2 p {
+    font: 18px "Pretendard";
+    width: 500px;
+    height: 50px;
+  }
+  .making_people .service2 .service_info2 small {
+    font: 13px "Pretendard";
+  }
+  .making_people .service3 {
+    display: none;
+  }
+  .making_people .service3 .service_info3 {
+    display: none;
+    width: 916px;
+    height: 50px;
+    margin: 0 auto 10px;
+    background-color: rgba(150, 150, 150, 0.1);
+    display: flex;
+  }
+  .making_people .service3 .service_info3 h3 {
+    width: 150px;
+    height: 18px;
+    color: #ffbe0f;
+    font: 20px "Pretendard";
+    margin-right: 102px;
+  }
+  .making_people .service3 .service_info3 p {
+    font: 18px "Pretendard";
+    width: 500px;
+    height: 50px;
+  }
+  .making_people .service3 .service_info3 small {
     font: 13px "Pretendard";
   }
 }/*# sourceMappingURL=main-info.css.map */

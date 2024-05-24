@@ -66,8 +66,7 @@
                     position: absolute;
                     top: 62%; right: 20px;
                     color: white;
-                    font: 18px 'Kim jung chul Myungjo';
-                    
+                    font: 18px 'Kim jung chul Myungjo';                    
                 }
 
                 .more_arrow {
@@ -196,6 +195,7 @@
                 width: 100%;
                 height: 580px;
                 margin: 60px auto 200px;
+                
             }
 
             .press_info_box3 {
@@ -624,17 +624,18 @@
         @include responsive(large-screens) {
 
             display: flex; 
+            
 
             .press_release_box6 {
                 width: 336px; height: 401px;
+                margin-right: 50px;
                 .press_release_6 {
                     width: 313px; height: 256px;
-                    margin-right: 50px;
                 }
     
                 .press_info_box6 {
                     width: 297px; height: 194px;
-                    top: 280px; left: -1%;
+                    top: 280px; left: -2%;
     
                     h3 {
                         font: 24px 'Kim jung chul Myungjo';
@@ -656,14 +657,14 @@
 
             .press_release_box7 {
                 width: 336px; height: 401px;
+                margin-right: 50px;
                 .press_release_7 {
                     width: 313px; height: 256px;
-                    margin-right: 50px;
                 }
     
                 .press_info_box7 {
                     width: 297px; height: 194px;
-                    top: 280px; left: 23.5%;
+                    top: 280px; left: 25%;
     
                     h3 {
                         font: 24px 'Kim jung chul Myungjo';
@@ -685,14 +686,14 @@
 
             .press_release_box8 {
                 width: 336px; height: 401px;
+                margin-right: 50px;
                 .press_release_8 {
                     width: 313px; height: 256px;
-                    margin-right: 50px;
                 }
     
                 .press_info_box8 {
                     width: 297px; height: 194px;
-                    top: 280px; left: 48.5%;
+                    top: 280px; left: 52%;
     
                     h3 {
                         font: 24px 'Kim jung chul Myungjo';
@@ -712,14 +713,14 @@
 
             .press_release_box9 {
                 width: 336px; height: 401px;
+                margin-right: 50px;
                 .press_release_9 {
                     width: 313px; height: 256px;
-                    margin-right: 50px;
                 }
     
                 .press_info_box9 {
                     width: 297px; height: 194px;
-                    top: 280px; left: 73.5%;
+                    top: 280px; left: 79%;
     
                     h3 {
                         font: 24px 'Kim jung chul Myungjo';
