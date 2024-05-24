@@ -1,0 +1,317 @@
+@font-face {
+  font-family: "KimjungchulMyungjo-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KimjungchulMyungjo-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KimjungchulMyungjo-Light";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Thin";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-ExtraLight";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Medium";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 38px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+header,
+nav,
+main,
+aside,
+article,
+section,
+footer {
+  display: block;
+}
+
+.noticepg h2 {
+  font: 48px "Pretendard";
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 2px;
+}
+.noticepg .noticepg_box {
+  margin-top: 50px;
+  border: 1px solid black;
+}
+.noticepg .noticepg_box h2 {
+  font: 30px "Pretendard";
+  padding: 25px 30px;
+  text-decoration: none;
+}
+@media (min-width: 1024px) {
+  .noticepg .noticepg_box h2 {
+    font: 48px "Pretendard";
+    padding-left: 65px;
+  }
+}
+.noticepg .noticepg_box .sub_box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 52px;
+  background-color: #dedede;
+  border-top: 2px solid black;
+}
+.noticepg .noticepg_box .sub_box p {
+  font: 18px "Pretendard";
+  line-height: 52px;
+  padding: 0 66px;
+}
+.noticepg .noticepg_box .sub_box p:last-child {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .noticepg .noticepg_box .sub_box {
+    position: relative;
+  }
+  .noticepg .noticepg_box .sub_box p {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .noticepg .noticepg_box .sub_box p:nth-child(2) {
+    left: 382px;
+  }
+  .noticepg .noticepg_box .sub_box p:last-child {
+    position: absolute;
+    display: block;
+    left: 1100px;
+  }
+}
+.noticepg .noticepg_box .noticepg_info {
+  margin: 52px auto 0;
+  width: 90%;
+}
+@media (min-width: 1024px) {
+  .noticepg .noticepg_box .noticepg_info {
+    margin: 82px auto 0;
+  }
+}
+.noticepg .noticepg_box .noticepg_info h3 {
+  font: 24px "Pretendard";
+}
+@media (min-width: 1024px) {
+  .noticepg .noticepg_box .noticepg_info h3 {
+    font: 30px "Pretendard";
+  }
+}
+.noticepg .noticepg_box .noticepg_info .info1 {
+  margin-top: 67px;
+  font: 24px "Pretendard";
+}
+@media (min-width: 1024px) {
+  .noticepg .noticepg_box .noticepg_info .info1 {
+    margin-top: 124px;
+  }
+}
+.noticepg .noticepg_box .noticepg_info .info2 {
+  margin: 40px 0;
+  font: 24px "Pretendard";
+}
+.noticepg .noticepg_box .noticepg_info .info3 {
+  margin: 40px 20px;
+  font: 24px "Pretendard";
+}
+.noticepg .noticepg_box .noticepg_info .img1 {
+  margin-top: 136px;
+  width: 100%;
+  height: auto;
+}
+.noticepg .noticepg_box .noticepg_info .img2 {
+  margin: 10px 0 22px 0;
+  width: 100%;
+  height: auto;
+}
+.noticepg .pre_notice {
+  position: relative;
+  width: 90%;
+  height: 107px;
+  background-color: #f0f0f0;
+  margin: 50px auto 17px;
+  border-radius: 15px;
+}
+.noticepg .pre_notice img {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  width: 50px;
+  height: 50px;
+  rotate: 90deg;
+}
+.noticepg .pre_notice p {
+  position: absolute;
+  top: 30px;
+  left: 110px;
+  font: 24px "Pretendard";
+  width: 270px;
+}
+.noticepg .pre_notice date {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .noticepg .pre_notice {
+    margin: 60px auto 33px;
+  }
+  .noticepg .pre_notice img {
+    left: 50px;
+  }
+  .noticepg .pre_notice p {
+    width: 100%;
+    top: 40px;
+    left: 128px;
+  }
+  .noticepg .pre_notice date {
+    display: block;
+    font: 24px "Pretendard";
+    text-align: right;
+    line-height: 107px;
+    padding-right: 40px;
+  }
+}
+.noticepg .next_notice {
+  position: relative;
+  width: 90%;
+  height: 107px;
+  background-color: #f0f0f0;
+  margin: 0 auto 60px;
+  border-radius: 15px;
+}
+.noticepg .next_notice img {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  width: 50px;
+  height: 50px;
+  rotate: -90deg;
+}
+.noticepg .next_notice p {
+  position: absolute;
+  top: 35%;
+  left: 110px;
+  font: 24px "Pretendard";
+}
+@media (min-width: 1024px) {
+  .noticepg .next_notice {
+    margin: 0 auto 80px;
+  }
+  .noticepg .next_notice img {
+    left: 50px;
+  }
+  .noticepg .next_notice p {
+    top: 40px;
+    left: 128px;
+  }
+}
+.noticepg .list {
+  width: 114px;
+  height: 52px;
+  margin: 0 auto 60px;
+  font: 24px "Pretendard";
+  background-color: #2f2411;
+  color: white;
+  text-align: center;
+  line-height: 52px;
+  border-radius: 10px;
+}
+@media (min-width: 1024px) {
+  .noticepg .list {
+    margin: 0 auto 170px;
+  }
+}/*# sourceMappingURL=noticepg.css.map */
