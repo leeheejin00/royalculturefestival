@@ -392,7 +392,7 @@
 }
 @media (min-width: 1024px) {
   #run .run1 .run1-img img {
-    min-width: 30%;
+    min-width: 10%;
   }
 }
 #run .run1 .run1-img img:nth-child(1) {
@@ -414,6 +414,11 @@
   background-color: #f6f6f6;
   width: 85%;
   padding: 58px;
+}
+@media (min-width: 1024px) {
+  #run .run1 .run1-txt {
+    width: 50%;
+  }
 }
 #run .run1 .run1-txt h1 {
   font-size: 48px;

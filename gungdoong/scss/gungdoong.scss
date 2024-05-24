@@ -386,7 +386,7 @@
             height: 100%;
             position: relative;
             @include responsive(large-screens) {
-                min-width: 30%
+                min-width: 10%;
             }
         }
         img:nth-child(1) {
@@ -396,7 +396,9 @@
         img:nth-child(3) {
             transform: scale(0.9);
             z-index: 1;
-
+            @include responsive(large-screens) {
+                
+            }
         }
         img:nth-child(2) {
             z-index: 2;
@@ -410,6 +412,9 @@
             background-color: #f6f6f6;
             width: 85%;
             padding: 58px;
+            @include responsive(large-screens) {
+                width: 50%;
+            }
             h1 {
                 font-size: 48px;
                 font-family: $font-pre-bold;

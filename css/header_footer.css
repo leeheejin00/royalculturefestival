@@ -137,6 +137,7 @@ header {
   width: 100%;
   background: url(../images/header_back.png) no-repeat;
   background-size: cover;
+  z-index: 1000;
 }
 @media (min-width: 1024px) {
   header {
@@ -147,6 +148,7 @@ header .logo-icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 100;
 }
 header .logo-icon .search-menu {
   display: flex;
@@ -198,20 +200,64 @@ header .logo-icon .search-menu .menu-toggle-btn.open span:nth-child(3) {
   }
 }
 header .side-menu {
+  background: url(../images/header-sidemenu.png) no-repeat;
   position: fixed;
-  width: 250px;
+  width: 60%;
   height: 100%;
   top: 0;
-  right: -250px;
+  right: -60%;
   background-color: white;
-  z-index: 1000;
+  z-index: 1;
   transition: right 0.3s;
+}
+header .side-menu .language-login {
+  display: flex;
+  margin-top: 164px;
+}
+header .side-menu .language-login .language {
+  display: flex;
+  align-items: center;
+  background-color: #2f2411;
+  margin-top: 25px;
+  margin-right: 19px;
+  margin-bottom: 61px;
+  margin-left: 10%;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+header .side-menu .language-login .language a {
+  color: white;
+  font-size: 22px;
+  font-family: "Pretendard-Regular";
+}
+header .side-menu .language-login .language a img {
+  padding-left: 13px;
+}
+header .side-menu .language-login .login {
+  display: flex;
+  align-items: center;
+  background-color: #2f2411;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 61px;
+  margin-right: 10%;
+  padding: 5px 10px;
+}
+header .side-menu .language-login .login a {
+  color: white;
+  font-size: 22px;
+  font-family: "Pretendard-Regular";
+}
+header .side-menu .language-login .login a img {
+  padding-left: 13px;
 }
 header .side-menu .side-nav {
   padding: 20px;
+  z-index: 1;
 }
 header .side-menu .side-nav .gnb li a {
-  display: block;
+  display: flex;
+  align-items: baseline;
   color: #2f2411;
   padding: 10px;
   text-decoration: none;
@@ -221,10 +267,20 @@ header .side-menu .side-nav .gnb li a {
 header .side-menu .side-nav .gnb li a:hover {
   color: #ffbe0f;
 }
-header .side-menu .side-nav .gnb li .submenu li a {
+header .side-menu .side-nav .gnb li a img {
+  margin-right: 10px;
+}
+header .side-menu .side-nav .gnb li ul li a {
   font-size: 26px;
   color: #7e7e7e;
   font-family: "Pretendard-Regular";
+}
+header .side-menu .side-nav .gnb li ul li a:hover {
+  color: #ffbe0f;
+  text-decoration: underline;
+}
+header .side-menu .side-nav .gnb li .submenu2 {
+  display: flex;
 }
 header .menu_box {
   display: none;
