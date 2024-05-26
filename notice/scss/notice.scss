@@ -11,7 +11,8 @@
     position: relative;
 
     h2 {
-        font: 48px 'Pretendard';
+        font-size: 48px;
+        font-family: $font-medium;
         text-decoration: underline;
         text-underline-position: under;
         text-decoration-thickness: 2px;
@@ -28,7 +29,8 @@
     }
 
     p {
-        font: 24px 'Pretendard';
+        font-size: 24px;
+        font-family: $font-medium;
         margin-top: 50px;
         margin-bottom: 20px;
     }
@@ -62,7 +64,8 @@
                     
 
                     td {
-                        font: 24px 'Pretendard';
+                        font-size: 24px;
+                        font-family: $font-semibold;
                         text-align: center;
                         font-weight: bold;
                         
@@ -137,7 +140,8 @@
                         color: white;
                     }
                     .notice_war {
-                        font: 22px 'Pretendard';
+                        font-size: 22px;
+                        font-family: $font-pre-bold;
                         padding: 40px 0;
                         
                         span {
@@ -149,7 +153,8 @@
                     }
                     
                     td {
-                        font: 24px 'Pretendard';
+                        font-size: 24px;
+                        font-family: $font-medium;
                         
                         &:nth-child(1) {
                             text-align: center;
@@ -207,7 +212,8 @@
             width: 60%;
             margin: 100px auto 60px;
         
-            font: 24px 'Pretendard';
+            font-size: 24px;
+            font-family: $font-medium;
         }
     } // notice_box
 } // notice

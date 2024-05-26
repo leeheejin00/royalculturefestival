@@ -8,7 +8,8 @@
 
 .press_release_pg {
     h2 {
-        font: 48px 'Pretendard';
+        font-size: 48px;
+        font-family: $font-medium;
         text-decoration: underline;
         text-underline-position: under;
         text-decoration-thickness: 2px;
@@ -38,18 +39,21 @@
             justify-content: space-between;
 
             margin: 10px 0 0 0;
-            padding: 3px 15px;
+            padding: 0px 15px;
 
             p {
-                font: 18px 'Pretendard';
+                font-size: 18px;
+                font-family: $font-pre-regular;
             }
         }
 
         .sub_title {
-            font: 30px 'Pretendard';
+            font-size: 30px;
+            font-family: $font-semibold;
             padding-left: 28px;
             padding-top: 23px;
-            padding-right: 170px;
+            padding-right: 70px;
+            letter-spacing: -2px;
 
             margin-bottom: 5px;
 
@@ -58,7 +62,8 @@
             border-bottom: 1px solid black;
 
             @include responsive(large-screens) {
-                font: 40px 'Pretendard';
+                font-size: 40px;
+                font-family: $font-medium;
             }
         }
 
@@ -71,10 +76,12 @@
         .news_main {
 
             h3 {
-                font: 28px 'Pretendard';
+                font-size: 28px;
+                font-family: $font-pre-regular;
                 padding-top: 60px;
                 padding-left: 25px;
-                padding-right: 120px;
+                padding-right: 50px;
+                letter-spacing: -2px;
 
                 margin-bottom: 43px;
             }
@@ -98,16 +105,56 @@
                 }
             }
 
-            .sub_info {
+            .sub_info_box {
 
-                font: 24px 'Pretendard';
-                color: #110f44;
-                margin: 42px 0 42px 28px;
+
                 
+                .sub_info {
+    
+                    font-size: 24px;
+                    font-family: $font-pre-regular;
+                    color: #110f44;
+                    margin: 42px 0 0px 28px;
+                    padding-right: 170px;
+                    letter-spacing: -3px;
+                    
+    
+                    // @include responsive(large-screens) {
+                    //     font-size: 28px;
+                    //     font-family: $font-pre-regular; 
+                    //     text-align: center;
+                    // }
+                }
+                .sub_info2 {
+    
+                    font-size: 24px;
+                    font-family: $font-pre-regular;
+                    color: #110f44;
+                    margin: 0px 0 42px 28px;
+                    padding-right: 100px;
+                    letter-spacing: -3px;
+                    line-height: 1;
+                }
 
                 @include responsive(large-screens) {
-                    font: 28px 'Pretendard';
-                    text-align: center;
+                    display: flex;
+
+                    justify-content: center;
+                    margin: 42px 0;
+
+                    font-size: 28px;
+                    font-family: $font-pre-regular; 
+                    
+                    .sub_info {
+                        padding: 0;
+                        margin: 0;
+                        letter-spacing: 0px;
+                    }
+                    .sub_info2 {
+                        padding: 0;
+                        margin: 0;
+                        letter-spacing: 0px;
+                    }
                 }
             }
 
@@ -124,7 +171,10 @@
             }
 
             p {
-                font: 22px 'Pretendard';
+                font-size: 22px;
+                font-family: $font-pre-regular;
+                line-height: 1.2;
+
                 padding-left: 15px;
                 padding-right: 20px;
                 
@@ -136,7 +186,7 @@
 
                 @include responsive(large-screens) {
                     padding-left: 42px;
-                    padding-right: 0;
+                    padding-right: 25px;
                 }
             }
 
@@ -153,11 +203,24 @@
     }
 
     .list_box {
+        position: relative;
         display: flex;
         justify-content: space-between;
 
         width: 50%;
         margin: 0 auto;
+
+        img {
+            position: absolute;
+            top: 5px; left: -112px;
+            width: 56px; height: 56px;
+
+            &:last-of-type {
+                position: absolute;
+                top: 5px; left: 320px;
+                rotate: -180deg;
+            }
+        }
 
         .list {
             width: 218px;
@@ -167,18 +230,26 @@
 
             background-color: #2f2411;
 
-            font: 24px 'Pretendard';
+            font-size: 24px;
+            font-family: $font-pre-regular;
 
             line-height: 65px;
             text-align: center;
             color: white;
 
             border-radius: 15px;
+            margin: auto;
         }
 
         @include responsive(large-screens) {
             margin: 140px auto;
+
+            img {
+                left: 9%;
+                &:last-of-type {
+                    left: 80%;
+                }
+            }
         }
     }
-
 }

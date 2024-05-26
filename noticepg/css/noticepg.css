@@ -121,7 +121,8 @@ footer {
 }
 
 .noticepg h2 {
-  font: 48px "Pretendard";
+  font-size: 48px;
+  font-family: "Pretendard-Medium";
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 2px;
@@ -131,14 +132,16 @@ footer {
   border: 1px solid black;
 }
 .noticepg .noticepg_box h2 {
-  font: 30px "Pretendard";
+  font-size: 30px;
+  font-family: "Pretendard-Medium";
   padding: 25px 30px;
   text-decoration: none;
 }
 @media (min-width: 1024px) {
   .noticepg .noticepg_box h2 {
-    font: 48px "Pretendard";
-    padding-left: 65px;
+    font-size: 48px;
+    font-family: "Pretendard-Medium";
+    padding-left: 55px;
   }
 }
 .noticepg .noticepg_box .sub_box {
@@ -150,9 +153,10 @@ footer {
   border-top: 2px solid black;
 }
 .noticepg .noticepg_box .sub_box p {
-  font: 18px "Pretendard";
+  font-size: 18px;
+  font-family: "Pretendard-Medium";
   line-height: 52px;
-  padding: 0 66px;
+  padding: 0 26px;
 }
 .noticepg .noticepg_box .sub_box p:last-child {
   display: none;
@@ -165,6 +169,7 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
+    padding: 0 66px;
   }
   .noticepg .noticepg_box .sub_box p:nth-child(2) {
     left: 382px;
@@ -185,16 +190,19 @@ footer {
   }
 }
 .noticepg .noticepg_box .noticepg_info h3 {
-  font: 24px "Pretendard";
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
 }
 @media (min-width: 1024px) {
   .noticepg .noticepg_box .noticepg_info h3 {
-    font: 30px "Pretendard";
+    font-size: 30px;
+    font-family: "Pretendard-Medium";
   }
 }
 .noticepg .noticepg_box .noticepg_info .info1 {
   margin-top: 67px;
-  font: 24px "Pretendard";
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
 }
 @media (min-width: 1024px) {
   .noticepg .noticepg_box .noticepg_info .info1 {
@@ -203,11 +211,13 @@ footer {
 }
 .noticepg .noticepg_box .noticepg_info .info2 {
   margin: 40px 0;
-  font: 24px "Pretendard";
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
 }
 .noticepg .noticepg_box .noticepg_info .info3 {
   margin: 40px 20px;
-  font: 24px "Pretendard";
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
 }
 .noticepg .noticepg_box .noticepg_info .img1 {
   margin-top: 136px;
@@ -237,10 +247,12 @@ footer {
 }
 .noticepg .pre_notice p {
   position: absolute;
-  top: 30px;
+  top: 20px;
   left: 110px;
-  font: 24px "Pretendard";
-  width: 270px;
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
+  width: 300px;
+  line-height: 1.5;
 }
 .noticepg .pre_notice date {
   display: none;
@@ -254,12 +266,13 @@ footer {
   }
   .noticepg .pre_notice p {
     width: 100%;
-    top: 40px;
+    top: 35px;
     left: 128px;
   }
   .noticepg .pre_notice date {
     display: block;
-    font: 24px "Pretendard";
+    font-size: 24px;
+    font-family: "Pretendard-Medium";
     text-align: right;
     line-height: 107px;
     padding-right: 40px;
@@ -283,9 +296,10 @@ footer {
 }
 .noticepg .next_notice p {
   position: absolute;
-  top: 35%;
+  top: 30%;
   left: 110px;
-  font: 24px "Pretendard";
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
 }
 @media (min-width: 1024px) {
   .noticepg .next_notice {
@@ -295,7 +309,7 @@ footer {
     left: 50px;
   }
   .noticepg .next_notice p {
-    top: 40px;
+    top: 35px;
     left: 128px;
   }
 }
@@ -303,7 +317,8 @@ footer {
   width: 114px;
   height: 52px;
   margin: 0 auto 60px;
-  font: 24px "Pretendard";
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
   background-color: #2f2411;
   color: white;
   text-align: center;

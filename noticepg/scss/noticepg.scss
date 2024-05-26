@@ -8,7 +8,8 @@
 
 .noticepg {
     h2 {
-        font: 48px 'Pretendard';
+        font-size: 48px;
+        font-family: $font-medium;
         text-decoration: underline;
         text-underline-position: under;
         text-decoration-thickness: 2px;
@@ -20,13 +21,15 @@
         border: 1px solid black;
         
         h2 {
-            font: 30px 'Pretendard';
+            font-size: 30px;
+            font-family: $font-medium;
             padding: 25px 30px;
             text-decoration: none;
 
             @include responsive(large-screens) {
-                font: 48px 'Pretendard';
-                padding-left: 65px;
+                font-size: 48px;
+                font-family: $font-medium;
+                padding-left: 55px;
             }
         }
 
@@ -40,9 +43,10 @@
             border-top: 2px solid black;
 
             p {
-                font: 18px 'Pretendard';
+                font-size: 18px;
+                font-family: $font-medium;
                 line-height: 52px;
-                padding: 0 66px;
+                padding: 0 26px;
 
                 &:last-child {
                     display: none;
@@ -54,6 +58,7 @@
                 p {
                     position: absolute;
                     top: 0; left: 0;
+                    padding: 0 66px;
                     &:nth-child(2) {
                         left: 382px;
                     }
@@ -76,16 +81,19 @@
             }
 
             h3 {
-                font: 24px 'Pretendard';
+                font-size: 24px;
+                font-family: $font-medium;
 
                 @include responsive(large-screens) {
-                font: 30px 'Pretendard';
+                font-size: 30px;
+                font-family: $font-medium;
                 }
             }
 
             .info1 {
                 margin-top: 67px;
-                font: 24px 'Pretendard';
+                font-size: 24px;
+                font-family: $font-medium;
 
                 @include responsive(large-screens) {
                     margin-top: 124px;
@@ -93,11 +101,13 @@
             }
             .info2 {
                 margin: 40px 0;
-                font: 24px 'Pretendard';
+                font-size: 24px;
+                font-family: $font-medium;
             }
             .info3 {
                 margin: 40px 20px;
-                font: 24px 'Pretendard';
+                font-size: 24px;
+                font-family: $font-medium;
             }
 
             .img1 {
@@ -130,9 +140,11 @@
         }
         p {
             position: absolute;
-            top: 30px; left: 110px;
-            font: 24px 'Pretendard';
-            width: 270px;
+            top: 20px; left: 110px;
+            font-size: 24px;
+            font-family: $font-medium;
+            width: 300px;
+            line-height: 1.5;
         }
 
         date {
@@ -147,11 +159,12 @@
             }
             p {
                 width: 100%;
-                top: 40px; left: 128px;
+                top: 35px; left: 128px;
             }
             date {
                 display: block;
-                font: 24px 'Pretendard';
+                font-size: 24px;
+                font-family: $font-medium;
                 text-align: right;
                 line-height: 107px;
                 padding-right: 40px;
@@ -178,8 +191,9 @@
 
         p {
             position: absolute;
-            top: 35%; left: 110px;
-            font: 24px 'Pretendard';
+            top: 30%; left: 110px;
+            font-size: 24px;
+            font-family: $font-medium;
         }
 
         @include responsive(large-screens) {
@@ -188,7 +202,7 @@
                 left: 50px;
             }
             p {
-                top: 40px; left: 128px;
+                top: 35px; left: 128px;
             }
         }
     }
@@ -196,7 +210,8 @@
     .list {
         width: 114px; height: 52px;
         margin: 0 auto 60px;
-        font: 24px 'Pretendard';
+        font-size: 24px;
+        font-family: $font-medium;
         background-color: #2f2411;
         color: white;
         text-align: center;

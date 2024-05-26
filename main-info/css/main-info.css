@@ -17,13 +17,16 @@
   opacity: 0.8;
 }
 .start-section .main-info h2 {
-  font: 28px "Pretendard";
+  font-size: 28px;
+  font-family: "Pretendard-Regular";
   margin: 20px 0 20px 20px;
 }
 .start-section .main-info p {
-  font: 20px "Pretendard";
+  font-size: 20px;
+  font-family: "Pretendard-Light";
   margin: 0 20px;
   padding: 0 0 20px 0;
+  line-height: 1.2;
 }
 @media (min-width: 1024px) {
   .start-section img {
@@ -43,14 +46,16 @@
     position: absolute;
     top: 224px;
     left: 251px;
-    font: 88px "Pretendard";
+    font-size: 88px;
+    font-family: "Pretendard-Regular";
     color: white;
   }
   .start-section .main-info p {
     position: absolute;
     top: 628px;
     right: 353px;
-    font: 28px "Pretendard";
+    font-size: 28px;
+    font-family: "Pretendard-Light";
     color: white;
     text-align: right;
   }
@@ -67,15 +72,18 @@
   .slide .slideLeft {
     display: flex;
     justify-content: space-between;
-    animation: scroll 20s linear infinite;
+    animation: slideLeft 20s linear infinite;
+    overflow: hidden;
   }
   .slide .slideLeft img {
     width: 631px;
     height: 303px;
-    margin-right: 40px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .slide .slide-info {
-    font: 24px "Pretendard-Light";
+    font-size: 24px;
+    font-family: "Pretendard-Light";
     line-height: 36px;
     margin: 96px 0;
     text-align: center;
@@ -83,19 +91,27 @@
   .slide .slideRight {
     display: flex;
     justify-content: space-between;
-    animation: scroll 20s linear infinite reverse;
+    animation: slideRight 20s linear infinite;
   }
   .slide .slideRight img {
     width: 631px;
     height: 303px;
     margin-right: 40px;
   }
-  @keyframes scroll {
+  @keyframes slideLeft {
     0% {
-      transform: translateX(0);
+      transform: translateX(100%);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
     }
   }
 }
@@ -119,13 +135,16 @@
   opacity: 0.8;
 }
 .festival .main-info2 h2 {
-  font: 28px "Pretendard";
+  font-size: 28px;
+  font-family: "Pretendard-Regular";
   text-align: right;
   margin: 20px 20px 20px 0;
 }
 .festival .main-info2 p {
-  font: 20px "Pretendard";
+  font-size: 20px;
+  font-family: "Pretendard-Light";
   padding: 0 20px 20px 20px;
+  line-height: 1.3;
   text-align: right;
 }
 @media (min-width: 1024px) {
@@ -147,7 +166,8 @@
     position: absolute;
     top: 224px;
     right: 247px;
-    font: 88px "Pretendard";
+    font-size: 88px;
+    font-family: "Pretendard-Regular";
     color: white;
   }
   .festival .main-info2 p {
@@ -155,7 +175,8 @@
     position: absolute;
     top: 633px;
     left: 253px;
-    font: 28px "Pretendard";
+    font-size: 28px;
+    font-family: "Pretendard-Light";
     color: white;
     text-align: left;
   }
@@ -167,17 +188,23 @@
   margin-bottom: 80px;
 }
 .history .history-hour {
-  width: 196px;
+  width: 220px;
   height: 153px;
 }
 .history .history-hour h2 {
-  font: 36px "Pretendard";
+  font-size: 36px;
+  font-family: "Pretendard-Light";
+}
+.history .history-hour h2 strong {
+  font-family: "Pretendard-Bold";
+  letter-spacing: -4px;
 }
 .history .year-arr {
   margin-top: 95px;
 }
 .history .year-arr .year {
-  font: 20px "Pretendard";
+  font-size: 20px;
+  font-family: "Pretendard-Light";
   display: flex;
   line-height: 1.5;
 }
@@ -185,7 +212,7 @@
   text-decoration: line-through;
 }
 .history .num-festi {
-  width: 200px;
+  width: 220px;
   height: 160px;
   content: "";
   position: absolute;
@@ -197,7 +224,8 @@
   z-index: 1;
 }
 .history .num-festi strong {
-  font: 28px "Pretendard";
+  font-size: 28px;
+  font-family: "Pretendard-Regular";
 }
 .history .num-festi .more {
   position: absolute;
@@ -228,21 +256,25 @@
     margin-bottom: 195px;
   }
   .history .history-hour h2 {
-    font: 88px "Pretendard";
+    font-size: 88px;
+    font-family: "Pretendard-Regular";
   }
   .history .year-arr .year {
     cursor: pointer;
     margin-left: 120px;
   }
   .history .num-festi {
-    top: 90%;
+    width: 300px;
+    height: 160px;
+    top: 85%;
     right: 50%;
   }
   .history .num-festi strong {
-    font: 41px;
+    font-size: 41px;
+    font-family: "Pretendard-Regular";
   }
   .history .num-festi .more {
-    top: 100px;
+    top: 140px;
     right: 80px;
   }
   .history img {
@@ -265,86 +297,109 @@
   .making_people .logo_making {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 0 auto 50px;
     width: 900px;
     height: 100px;
   }
   .making_people .survice {
-    display: flex;
+    display: none;
     flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
     margin: 60px 0 210px 0;
   }
   .making_people .survice .survice_info {
-    width: 916px;
-    height: 50px;
-    margin: 0 auto 10px;
-    background-color: rgba(150, 150, 150, 0.1);
     display: flex;
+    width: 810px;
+    height: 80px;
+    margin: 0 auto 10px;
   }
   .making_people .survice .survice_info h3 {
-    width: 150px;
+    width: 200px;
     height: 18px;
     color: #ffbe0f;
-    font: 20px "Pretendard";
+    font-size: 20px;
+    font-family: "Pretendard-Bold";
     margin-right: 102px;
   }
   .making_people .survice .survice_info p {
-    font: 18px "Pretendard";
+    font-size: 18px;
+    font-family: "Pretendard-Regular";
     width: 500px;
     height: 50px;
   }
   .making_people .survice .survice_info small {
-    font: 13px "Pretendard";
+    font-size: 13px;
+    font-family: "Pretendard-Light";
   }
   .making_people .service2 {
     display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    margin: 60px 0 210px 0;
   }
-  .making_people .service2 .service_info2 {
+  .making_people .service2 .survice_info2 {
     width: 916px;
     height: 50px;
     margin: 0 auto 10px;
-    background-color: rgba(150, 150, 150, 0.1);
     display: flex;
   }
-  .making_people .service2 .service_info2 h3 {
-    width: 150px;
+  .making_people .service2 .survice_info2:first-of-type {
+    padding-left: 300px;
+  }
+  .making_people .service2 .survice_info2 h3 {
+    width: 200px;
     height: 18px;
     color: #ffbe0f;
-    font: 20px "Pretendard";
+    font-size: 20px;
+    font-family: "Pretendard-Bold";
     margin-right: 102px;
   }
-  .making_people .service2 .service_info2 p {
-    font: 18px "Pretendard";
+  .making_people .service2 .survice_info2 p {
+    font-size: 18px;
+    font-family: "Pretendard-Regular";
     width: 500px;
     height: 50px;
   }
-  .making_people .service2 .service_info2 small {
-    font: 13px "Pretendard";
+  .making_people .service2 .survice_info2 small {
+    font-size: 13px;
+    font-family: "Pretendard-Light";
   }
   .making_people .service3 {
     display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    margin: 60px 0 210px 0;
   }
-  .making_people .service3 .service_info3 {
-    display: none;
+  .making_people .service3 .survice_info3 {
     width: 916px;
     height: 50px;
     margin: 0 auto 10px;
-    background-color: rgba(150, 150, 150, 0.1);
     display: flex;
   }
-  .making_people .service3 .service_info3 h3 {
-    width: 150px;
+  .making_people .service3 .survice_info3 h3 {
+    width: 200px;
     height: 18px;
     color: #ffbe0f;
-    font: 20px "Pretendard";
+    font-size: 20px;
+    font-family: "Pretendard-Bold";
     margin-right: 102px;
   }
-  .making_people .service3 .service_info3 p {
-    font: 18px "Pretendard";
+  .making_people .service3 .survice_info3 p {
+    font-size: 18px;
+    font-family: "Pretendard-Regular";
     width: 500px;
     height: 50px;
   }
-  .making_people .service3 .service_info3 small {
-    font: 13px "Pretendard";
+  .making_people .service3 .survice_info3 small {
+    font-size: 13px;
+    font-family: "Pretendard-Light";
+  }
+  .making_people .visible {
+    display: block;
+    max-height: 1000px;
   }
 }/*# sourceMappingURL=main-info.css.map */

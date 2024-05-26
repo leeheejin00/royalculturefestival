@@ -124,7 +124,8 @@ footer {
   position: relative;
 }
 .notice h2 {
-  font: 48px "Pretendard";
+  font-size: 48px;
+  font-family: "Pretendard-Medium";
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 2px;
@@ -142,7 +143,8 @@ footer {
   }
 }
 .notice p {
-  font: 24px "Pretendard";
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
   margin-top: 50px;
   margin-bottom: 20px;
 }
@@ -171,7 +173,8 @@ footer {
   }
 }
 .notice .notice_box table thead tr td {
-  font: 24px "Pretendard";
+  font-size: 24px;
+  font-family: "Pretendard-SemiBold";
   text-align: center;
   font-weight: bold;
 }
@@ -231,7 +234,8 @@ footer {
   color: white;
 }
 .notice .notice_box table tbody tr .notice_war {
-  font: 22px "Pretendard";
+  font-size: 22px;
+  font-family: "Pretendard-Bold";
   padding: 40px 0;
 }
 .notice .notice_box table tbody tr .notice_war span {
@@ -241,7 +245,8 @@ footer {
   border-radius: 25%;
 }
 .notice .notice_box table tbody tr td {
-  font: 24px "Pretendard";
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
 }
 .notice .notice_box table tbody tr td:nth-child(1) {
   text-align: center;
@@ -293,5 +298,6 @@ footer {
   justify-content: space-between;
   width: 60%;
   margin: 100px auto 60px;
-  font: 24px "Pretendard";
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
 }/*# sourceMappingURL=notice.css.map */

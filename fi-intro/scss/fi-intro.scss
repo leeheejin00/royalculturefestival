@@ -25,7 +25,8 @@
 
         h3 {
             text-align: center;
-            font: 30px 'Pretendard';
+            font-size: 30px;
+            font-family: $font-pre-bold;
             
             text-decoration: underline;
             text-underline-position: under;
@@ -35,7 +36,8 @@
         }
 
         .subinfo {
-            font: 28px 'Kim jung chul Myungjo';
+            font-size: 28px;
+            font-family: $font-regular;
             margin: 40px 0;
             text-align: center;
         }
@@ -47,7 +49,8 @@
         
         .info1 {
             text-align: center;
-            font: 24px 'Kim jung chul Myungjo';
+            font-size: 24px;
+            font-family: $font-regular;
             line-height: 1.2;
 
             margin-bottom: 55px;
@@ -57,7 +60,9 @@
                 h2 {
                     display: block;
                     text-align: left;
-                    font: 48px 'Pretendard';
+                    font-size: 48px;
+                    font-family: $font-pre-bold;
+
                     text-decoration: underline;
                     text-underline-position: under;
                     text-decoration-thickness: 3px;
@@ -65,7 +70,8 @@
                 
                 h3 {
                     text-align: left;     
-                    font: 24px 'Pretendard' 'bold';
+                    font-size: 24px;
+                    font-family: $font-pre-bold;
 
                     text-decoration-thickness: 3px;
                     
@@ -94,7 +100,8 @@
         
         h3 {
             text-align: center;
-            font: 30px 'Pretendard';
+            font-size: 30px;
+            font-family: $font-pre-bold;
             
             text-decoration: underline;
             text-underline-position: under;
@@ -107,7 +114,8 @@
         
         .info2 {
             text-align: center;
-            font: 24px 'Kim jung chul Myungjo';
+            font-size: 24px;
+            font-family: $font-regular;
             line-height: 1.2;
         } 
         
@@ -117,7 +125,8 @@
                 padding: 0;
 
                 h3 {
-                    font: 24px 'Pretendard' 'bold';
+                    font: 24px;
+                    font-family: $font-pre-bold;
 
                     text-decoration-thickness: 3px;
                     
@@ -145,8 +154,9 @@
         
         h3 {
             text-align: center;
-            font: 30px 'Pretendard';
-            
+            font-size: 30px;
+            font-family: $font-pre-bold;
+
             text-decoration: underline;
             text-underline-position: under;
             text-decoration-thickness: 2px;
@@ -158,7 +168,8 @@
         
         .info3 {
             text-align: center;
-            font: 24px 'Kim jung chul Myungjo';
+            font-size: 24px;
+            font-family: $font-regular;
             line-height: 1.2;
         } 
         
@@ -199,7 +210,8 @@
         
         h3 {
             text-align: center;
-            font: 30px 'Pretendard';
+            font-size: 30px;
+            font-family: $font-pre-bold;
             
             text-decoration: underline;
             text-underline-position: under;
@@ -212,7 +224,8 @@
                 
         .info4 {
             text-align: center;
-            font: 24px 'Kim jung chul Myungjo';
+            font-size: 24px;
+            font-family: $font-regular;
             line-height: 1.2;
         } 
 
@@ -251,7 +264,8 @@
                 margin: 130px auto 100px;
 
                 h2 {
-                    font: 48px 'Pretendard'; 
+                    font-size: 48px;
+                    font-family: $font-medium; 
                     text-align: center;
                 }
             }
@@ -291,7 +305,8 @@
                 background-color: $color-hover;
                 color: white;
                 border: none;
-                font: 21px 'Pretendard';
+                font-size: 21px;
+                font-family: $font-medium;
                 cursor: pointer;
             }
         }
@@ -310,7 +325,9 @@
                     background-color: $color-hover;
                     color: white;
                     border: none;
-                    font: 28px 'Pretendard';
+                    font-size: 28px;
+                    font-family: $font-medium;
+
                     cursor: pointer;
                 }
             }
