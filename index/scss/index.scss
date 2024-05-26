@@ -311,7 +311,7 @@ main {
                         display: none;
                     }
                     h3 {
-                        font-size: 40px;
+                        font-size: 30px;
                         font-family: $font-pre-bold;
                         font-weight: bold;
                         margin: 10px 0;
@@ -363,6 +363,7 @@ main {
             top: 10%;
             left: 0;
             width: 80%;
+            padding-bottom: 5%;
             height: auto;
             background: rgba(255, 255, 255, 0.9);
             opacity: 65%;
@@ -382,8 +383,12 @@ main {
                     width: $width-wide;
                     font-family: $font-pre-bold;
                     font-size: 16px;
-                    padding-top: 41px;
+                    padding-top: 7%;
                     padding-left: 16px;
+                    @include responsive(large-screens) {
+                        font-size: 24px;
+                        padding-top: 3%;
+                    }
                 }
                 p {
                     width: $width-wide;
@@ -392,26 +397,34 @@ main {
                         width: $width-wide;
                         font-size: 20px;
                         font-family: $font-thin;
+                        @include responsive(large-screens) {
+                            font-size: 38px;
+                        }
                     }
                     .txt2 {
                         width: $width-wide;
                         font-size: 20px;
-                        font-family: $font-light;
+                        font-family: $font-pre-light;
+                        @include responsive(large-screens) {
+                            font-size: 38px;
+                        }
                     }
                     .txt3 {
                         width: $width-wide;
                         font-size: 20px;
                         font-family: $font-semibold;
+                        @include responsive(large-screens) {
+                            font-size: 38px;
+                        }
                     }
                 }
             }
             
         }
         .palace-txt2 {
-            margin-bottom: 97px;
             width: $width-wide;
             position: absolute;
-            top: 80%;
+            top: 70%;
             left: 10%;
             width: 90%;
             height: auto;
@@ -425,24 +438,36 @@ main {
                 width: 45%;
             }
             .palace_title {
-                display: flex;
-                
-                img {
-                    width: 28px;
-                    margin-bottom: 55px;
-                    margin-right: 20px;
-                }
                 h2 {
-                  font-family: $font-bold;
-                  font-size: 24px;
+                    display: flex;
+                    text-align: justify;
+                    align-items: top;
+                    font-family: $font-bold;
+                    font-size: 24px;
+                    @include responsive(large-screens) {
+                        font-size: 48px;
+                    }
+                    img {
+                        padding-top: 2px;
+                        width: 28px;
+                        margin-bottom: 8%;
+                        margin-right: 15px;
+                        @include responsive(large-screens) {
+                            padding-top: 18px;
+                        }
+                    }
                 }
             }
             p {
               font-family: $font-regular;
+              text-align: justify;
               font-size: 14px;
+              @include responsive(large-screens) {
+                font-size: 18px;
+            }
             }
             .text2 {
-              padding: 30px 0;
+              padding-top: 6%;
             }
         }
     }
@@ -472,11 +497,10 @@ main {
                     display: block;
                     flex: 1;
                     min-width: 80%;
-                    height: 100%;
                     position: relative;
                     img {
                         width: 100%;
-                        height: 100%;
+                        height: 500px;
                         display: block;
                     }
                     .baner-slide1, .baner-slide3 {
@@ -486,6 +510,9 @@ main {
                     }
                     .baner-slide2 {
                         z-index: 2;
+                        @include responsive(large-screens) {
+                            height: 500px;
+                        }
                     }
 
                     @keyframes slide {
@@ -508,18 +535,22 @@ main {
     #notice {
         margin: 110px 0;
         @include responsive(large-screens) {
-            margin: 162px 0;
+            width: 79%;
+            margin: 0 auto;
+            margin-top: 10%;
         }
         h2 {
             color: #2f2411;
+            text-align: justify;
             font-size: 16px;
             font-family: $font-pre-bold;
-            margin-bottom: 15px;
+            
             @include responsive(large-screens) {
                 display: none;
             }
         }
         .notice-flex-box {
+            position: relative;
             display: flex;
             justify-content: center;
             position: relative;
@@ -532,15 +563,50 @@ main {
                     display: none;
                 }
             }
+            .slide-img1, .slide-img2 {
+                width: 8%;
+                position: absolute;
+                opacity: 60%;
+                @include responsive(large-screens) {
+                    flex: none;
+                    display: none;
+                }
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+            
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            .slide-img1 {
+                top: 40%;
+                left: 7%;
+                @include responsive(large-screens) {
+                    display: none;
+                }
+            }
+            .slide-img2 {
+                top: 40%;
+                left: 85%;
+                @include responsive(large-screens) {
+                    display: none;
+                }
+            }
         }
     
         .notice_box, .notice_box2, .notice_box3 {
             flex: 1;
-            min-width: 50%;
+            min-width: 60%;
             position: relative;
             border: 1px solid black;
-            padding: 20px;
-            margin: 20px;
+            padding: 10px;
+            padding-right: 15px;
+            padding-top: 18px;
+            margin: 2px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // 가벼운 그림자 효과
             transition: background-image 0.3s, background-size 0.3s, background-position 0.3s;
             @include responsive(large-screens) {
@@ -569,16 +635,20 @@ main {
                             display: block;
                             font-size: 12px;
                             color: #aaaaaa;
-                            margin-bottom: 5px;
+                            padding-bottom: 5px;
                             font-family: $font-pre-regular;
+                            @include responsive(large-screens) {
+                                font-size: 14px;
+                            }
                         }
-        
                         h3 {
+                            text-align: justify;
                             font-size: 16px;
                             color: black;
-                            margin-bottom: 10px;
+                            padding-bottom: 10px;
                             font-family: $font-bold;
                             @include responsive(large-screens) {
+                                font-size: 24px;
                                 &:hover {
                                     color: white;
                                 }
@@ -587,33 +657,41 @@ main {
                     }
         
                     .main-info {
-                        margin-top: 56px;
-                        margin-left: 12px;
+                        text-align: justify;
+                        padding-top: 40px;
+                        padding-left: 12px;
                         font-size: 14px;
                         color: black;
-                        line-height: 1.5;
                         font-family: $font-pre-regular;
-        
+                        @include responsive(large-screens) {
+                            font-size: 20px;
+                        }
                         br {
                             margin-bottom: 5px; // 줄바꿈 간격 조정
                         }
                     }
                     .main-info2 {
-                        margin-top: 56px;
-                        margin-left: 12px;
+                        text-align: justify;
+                        padding-top: 35px;
+                        padding-left: 12px;
                         font-size: 12px;
                         color: #555;
-                        line-height: 1.5;
-                        margin-bottom: 34px;
+                        padding-bottom: 28px;
                         font-family: $font-light;
+                        @include responsive(large-screens) {
+                            font-size: 14px;
+                        }
                     }
                     .date {
                         font-size: 12px;
                         display: block;
-                        margin-left: 62px;
-                        padding-bottom: 30px;
+                        padding-left: 12px;
                         font-family: $font-semibold;
                         color: #aaaaaa;
+                        @include responsive(large-screens) {
+                            font-size: 14px;
+                            padding-bottom: 30px;
+                        }
                     }
                 }
             }
@@ -671,7 +749,7 @@ main {
                     .main-info, .main-info2 {
                         visibility: hidden;
                     }
-                    }
+                }
             }
         }
     
@@ -685,23 +763,10 @@ main {
             width: $width-wide;
         }
     }
-    .slide-img1, .slide-img2 {
-        flex: 0 0 40px; // 화살표 이미지 컨테이너 크기 고정
-        @include responsive(large-screens) {
-            flex: none;
-            display: none;
-        }
-        a {
-            display: block;
-            width: 100%;
-            height: 100%;
     
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
-    }    
+    
+
+    
 
     
     #history {
@@ -724,7 +789,8 @@ main {
                     width: $width-wide;
                     // background-color: aqua;
                     li {
-                        margin-right: 20px;
+                        margin-right: 10px;
+                        padding-top: 10px;
                         a {
                             color: black;
                             font-size: 14px;
@@ -734,6 +800,9 @@ main {
                                 font-weight: 600;
                             }
                         }
+                    }
+                    li:last-child {
+                        margin-right: 0;
                     }
                 }
                 @include responsive(large-screens) {
@@ -838,15 +907,15 @@ footer {
         a {
             margin-top: 10px;
             margin-right: 42px;
+            @include responsive(large-screens) {
+                margin-right: 20px;
+                }
+                img {
+                    width: 48px;
+                }
+            }
         a:last-child {
             margin-right: 0;
-        }
-            img {
-                width: 48px;
-            }
-        @include responsive(large-screens) {
-            margin-right: 20px;
-            }
         }
     }
 
@@ -875,7 +944,7 @@ footer {
                     border: 0;
                     color: white;
                     font-family: $font-pre-regular;
-                    font-size: 26px;
+                    font-size: 16px;
                     background: transparent;
                     width: 214px;
                     @include responsive(large-screens) {
@@ -888,7 +957,7 @@ footer {
  
     
         hr {
-            width: 411px;
+            width: 70%;
             height: 3px;
             background-color: #ffbe0f;
             margin: 60px auto;
@@ -897,7 +966,7 @@ footer {
             display: flex;
             justify-content: center;
             a {
-                font-size: 26px;
+                font-size: 16px;
                 font-family: $font-regular;
                 margin-right: 42px;
                 margin-bottom: 46px;
@@ -913,8 +982,8 @@ footer {
                 margin-right: 0;
             }
         }
-        .address {
-            font-size: 20px;
+        address {
+            font-size: 14px;
             font-family: $font-light;
             @include responsive(large-screens) {
                 font-size: 18px;
@@ -925,7 +994,7 @@ footer {
             justify-content: center;
             margin: 0 auto;
             address {
-                    font-size: 20px;
+                    font-size: 14px;
                     margin-right: 42px;
                     margin-bottom: 34px;
                     font-family: $font-extra;
@@ -938,7 +1007,7 @@ footer {
         .copyright {
             p {
                 padding-bottom: 51px;
-                font-size: 18px;
+                font-size: 14px;
                 font-family: $font-extra;
                 @include responsive(large-screens) {
                     font-size: 16px;

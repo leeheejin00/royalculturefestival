@@ -18,22 +18,29 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 35px;
         h2 {
-            font-size: 48px;
+            font-size: 20px;
             font-family: $font-medium;
             border-bottom: 1px solid black;
-            margin-bottom: 35px;
+            width: 22%;
+            @include responsive(large-screens) {
+                font-size: 48px;
+                width: 18%;
+            }
         }
         .go {
             display: flex;
             a {
-                font-size: 20px;
+                font-size: 16px;
                 font-family: $font-pre-light;
                 padding-left: 37px;
                 color: #2b2b2b;
                 &:hover {
                     font-family: $font-medium;
-
+                }
+                @include responsive(large-screens) {
+                    font-size: 20px;
                 }
             }
         }
@@ -48,7 +55,7 @@
         "e f f"
         "g g h"
         ;
-        gap: 24px;
+        gap: 12px;
         @include responsive(large-screens) {
             grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
@@ -93,35 +100,55 @@
     background-color: #f8efe0;
     padding: 50px 0;
     h3 {
-        font-size: 24px;
+        font-size: 16px;
         font-family: $font-pre-bold;
         border-bottom: 3px solid #2f2411;
         color: #2f2411;
-        width: 12%;
+        width: 19%;
         margin-bottom: 53px;
+        width: 22%;
+        @include responsive(large-screens) {
+            font-size: 24px;
+            width: 100px
+        }
     }
     .review1 {
         display: flex;
         justify-content: space-between;
         align-items: end;
+        @include responsive(large-screens) {
+            width: 80%;
+        }
         .review-txt1 {
             background-color: #2f2411;
             width: 90%;
             margin-left: 24px;
-            padding: 50px;
+            padding: 30px;
             border-radius: 50px 50px 50px 0;
+            @include responsive(large-screens) {
+                width: 100%;
+            }
             .re-txt {
-                font-size: 28px;
+                text-align: justify;
+                font-size: 18px;
                 font-family: $font-regular;
                 color: white;
                 padding-bottom: 50px;
+                @include responsive(large-screens) {
+                    font-size: 28px;
+                }
             }
             .re-title {
-                font-size: 22px;
+                text-align: justify;
+                font-size: 16px;
                 font-family: $font-pre-regular;
                 color: white;
+                @include responsive(large-screens) {
+                    font-size: 22px;
+                }
             }
             .time-plus {
+                text-align: justify;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -129,14 +156,21 @@
             }
             .time {
                 margin-right: auto;
-                font-size: 20px;
+                font-size: 12px;
                 font-family: $font-pre-light;
+                @include responsive(large-screens) {
+                    font-size: 20px;
+                }
             }
             a {
+                text-align: justify;
                 margin-left: auto;
-                font-size: 20px;
+                font-size: 12px;
                 font-family: $font-medium;
                 color: white;
+                @include responsive(large-screens) {
+                    font-size: 20px;
+                }
             }
         } 
     }
@@ -145,22 +179,35 @@
         display: flex;
         justify-content: space-between;
         align-items: end;
+        @include responsive(large-screens) {
+            width: 80%;
+            float: right;
+            margin-bottom: 114px;
+        }
         .review-txt2 {
             background-color: #57482f;
             width: 90%;
             margin-right: 24px;
-            padding: 50px;
+            padding: 30px;
             border-radius: 50px 50px 0 50px;
             .re-txt {
-                font-size: 28px;
+                text-align: justify;
+                font-size: 18px;
                 font-family: $font-regular;
                 color: white;
                 padding-bottom: 50px;
+                @include responsive(large-screens) {
+                    font-size: 28px;
+                }
             }
             .re-title {
-                font-size: 22px;
+                text-align: justify;
+                font-size: 16px;
                 font-family: $font-pre-regular;
                 color: white;
+                @include responsive(large-screens) {
+                    font-size: 22px;
+                }
             }
             .time-plus {
                 display: flex;
@@ -170,14 +217,20 @@
             }
             .time {
                 margin-right: auto;
-                font-size: 20px;
+                font-size: 12px;
                 font-family: $font-pre-light;
+                @include responsive(large-screens) {
+                    font-size: 20px;
+                }
             }
             a {
                 margin-left: auto;
-                font-size: 20px;
+                font-size: 12px;
                 font-family: $font-medium;
                 color: white;
+                @include responsive(large-screens) {
+                    font-size: 20px;
+                }
             }
         } 
     }
@@ -186,22 +239,34 @@
         display: flex;
         justify-content: space-between;
         align-items: end;
+        @include responsive(large-screens) {
+            width: 80%;
+            
+        }
         .review-txt3 {
             background-color: #2f2411;
             width: 90%;
             margin-left: 24px;
-            padding: 50px;
+            padding: 30px;
             border-radius: 50px 50px 50px 0;
             .re-txt {
-                font-size: 28px;
+                text-align: justify;
+                font-size: 18px;
                 font-family: $font-regular;
                 color: white;
                 padding-bottom: 50px;
+                @include responsive(large-screens) {
+                    font-size: 28px;
+                }
             }
             .re-title {
-                font-size: 22px;
+                text-align: justify;
+                font-size: 16px;
                 font-family: $font-pre-regular;
                 color: white;
+                @include responsive(large-screens) {
+                    font-size: 22px;
+                }
             }
             .time-plus {
                 display: flex;
@@ -211,14 +276,20 @@
             }
             .time {
                 margin-right: auto;
-                font-size: 20px;
+                font-size: 12px;
                 font-family: $font-pre-light;
+                @include responsive(large-screens) {
+                    font-size: 20px;
+                }
             }
             a {
                 margin-left: auto;
-                font-size: 20px;
+                font-size: 12px;
                 font-family: $font-medium;
                 color: white;
+                @include responsive(large-screens) {
+                    font-size: 20px;
+                }
             }
         } 
     }
@@ -226,23 +297,31 @@
 
 #video {
     h3 {
-        font-size: 24px;
+        font-size: 16px;
         font-family: $font-pre-bold;
         border-bottom: 3px solid #2f2411;
         color: #2f2411;
-        width: 12%;
+        width: 20%;
         margin-bottom: 53px;
+        @include responsive(large-screens) {
+            width: 100px;
+            font-size: 24px;
+        }
     }
     .main-video {
         border-radius: 10px;
         iframe {
             width: $width-wide;
             border-radius: 20px;
+            height: 500px;
         }
         p {
             margin: 17px 0;
-            font-size: 17px;
+            font-size: 16px;
             font-family: $font-gothic-regular;
+            @include responsive(large-screens) {
+                font-size: 36px;
+            }
         }
     }
     .sub-video {
@@ -251,7 +330,7 @@
         width: 100%;
         .sub-video1, .sub-video2, .sub-video3 {
             width: 100%;
-            margin-right: 24px;
+            margin-right: 12px;
             iframe {
                 width: 100%;
                 border-radius: 10px;
@@ -262,8 +341,12 @@
         }
         p {
             margin: 13px 0;
-            font-size: 17px;
+            font-size: 14px;
             font-family: $font-gothic-regular;
+            @include responsive(large-screens) {
+                font-size: 24px;
+                margin-bottom: 80px;
+            }
         }
     }
 }
