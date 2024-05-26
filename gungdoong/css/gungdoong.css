@@ -324,7 +324,7 @@
 @media (min-width: 1024px) {
   #explain .explain-box .schedule .schedule-txt .schedule-box .arrow-right-icon {
     display: block;
-    padding-top: 11%;
+    padding-top: 7%;
     margin: 0 27px;
   }
 }
@@ -425,7 +425,7 @@
 @media (min-width: 1024px) {
   #explain .explain-box .active .active-txt .arrow-right-icon {
     display: block;
-    padding-top: 11%;
+    padding-top: 7%;
     margin: 0 27px;
   }
 }

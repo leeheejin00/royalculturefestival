@@ -699,7 +699,11 @@ main .intro-imgbox a:hover .overlay2 h3 {
     font-size: 14px;
   }
 }
-#notice .notice_box a .notice-txt .date, #notice .notice_box2 a .notice-txt .date, #notice .notice_box3 a .notice-txt .date {
+#notice .notice_box a .notice-txt .date-more, #notice .notice_box2 a .notice-txt .date-more, #notice .notice_box3 a .notice-txt .date-more {
+  display: flex;
+  justify-content: space-between;
+}
+#notice .notice_box a .notice-txt .date-more .date, #notice .notice_box2 a .notice-txt .date-more .date, #notice .notice_box3 a .notice-txt .date-more .date {
   font-size: 12px;
   display: block;
   padding-left: 12px;
@@ -707,10 +711,39 @@ main .intro-imgbox a:hover .overlay2 h3 {
   color: #aaaaaa;
 }
 @media (min-width: 1024px) {
-  #notice .notice_box a .notice-txt .date, #notice .notice_box2 a .notice-txt .date, #notice .notice_box3 a .notice-txt .date {
+  #notice .notice_box a .notice-txt .date-more .date, #notice .notice_box2 a .notice-txt .date-more .date, #notice .notice_box3 a .notice-txt .date-more .date {
     font-size: 14px;
     padding-bottom: 30px;
   }
+}
+#notice .notice_box a .notice-txt .date-more .more-btn, #notice .notice_box2 a .notice-txt .date-more .more-btn, #notice .notice_box3 a .notice-txt .date-more .more-btn {
+  display: block;
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+}
+#notice .notice_box a .notice-txt .date-more .more-btn .square, #notice .notice_box2 a .notice-txt .date-more .more-btn .square, #notice .notice_box3 a .notice-txt .date-more .more-btn .square {
+  width: 70px;
+  height: 50px;
+  position: relative;
+  padding: 12px 24px;
+  border: 1px solid black;
+}
+#notice .notice_box a .notice-txt .date-more .more-btn .square p, #notice .notice_box2 a .notice-txt .date-more .more-btn .square p, #notice .notice_box3 a .notice-txt .date-more .more-btn .square p {
+  position: absolute;
+  top: 5px;
+  left: -18px;
+  background-color: transparent;
+  z-index: 3;
+  padding: -5px 0;
+  font-size: 13px;
+  line-height: 35px;
+}
+#notice .notice_box a .notice-txt .date-more .more-btn .square img, #notice .notice_box2 a .notice-txt .date-more .more-btn .square img, #notice .notice_box3 a .notice-txt .date-more .more-btn .square img {
+  position: absolute;
+  right: 0;
+  width: 25px;
+  height: 25px;
 }
 #notice .notice_box {
   opacity: 60%;

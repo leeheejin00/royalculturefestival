@@ -187,6 +187,12 @@
     font-size: 20px;
   }
 }
+#review .review1 .review-txt1 .more {
+  width: 15px;
+  height: 2px;
+  border: 1px solid #b1aa9e;
+  background-color: #b1aa9e;
+}
 #review .review1 .review-txt1 a {
   text-align: justify;
   margin-left: auto;
@@ -200,6 +206,7 @@
   }
 }
 #review .review2 {
+  position: relative;
   margin-top: 114px;
   display: flex;
   justify-content: space-between;
@@ -213,6 +220,7 @@
   }
 }
 #review .review2 .review-txt2 {
+  position: relative;
   background-color: #57482f;
   width: 90%;
   margin-right: 24px;
@@ -244,32 +252,38 @@
 }
 #review .review2 .review-txt2 .time-plus {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   color: white;
 }
-#review .review2 .review-txt2 .time {
+#review .review2 .review-txt2 .time-plus .time {
   margin-right: auto;
   font-size: 12px;
   font-family: "Pretendard-Light";
 }
 @media (min-width: 1024px) {
-  #review .review2 .review-txt2 .time {
+  #review .review2 .review-txt2 .time-plus .time {
     font-size: 20px;
   }
 }
-#review .review2 .review-txt2 a {
+#review .review2 .review-txt2 .time-plus .more {
+  width: 15px;
+  height: 2px;
+  border: 1px solid #b1aa9e;
+  background-color: #b1aa9e;
+}
+#review .review2 .review-txt2 .time-plus a {
   margin-left: auto;
   font-size: 12px;
   font-family: "Pretendard-Medium";
   color: white;
 }
 @media (min-width: 1024px) {
-  #review .review2 .review-txt2 a {
+  #review .review2 .review-txt2 .time-plus a {
     font-size: 20px;
   }
 }
 #review .review3 {
+  position: relative;
   margin-top: 114px;
   display: flex;
   justify-content: space-between;
@@ -300,7 +314,6 @@
   }
 }
 #review .review3 .review-txt3 .re-title {
-  text-align: justify;
   font-size: 16px;
   font-family: "Pretendard-Regular";
   color: white;
@@ -311,29 +324,36 @@
   }
 }
 #review .review3 .review-txt3 .time-plus {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
 }
-#review .review3 .review-txt3 .time {
+#review .review3 .review-txt3 .time-plus .time {
   margin-right: auto;
   font-size: 12px;
   font-family: "Pretendard-Light";
 }
 @media (min-width: 1024px) {
-  #review .review3 .review-txt3 .time {
+  #review .review3 .review-txt3 .time-plus .time {
     font-size: 20px;
   }
 }
-#review .review3 .review-txt3 a {
+#review .review3 .review-txt3 .time-plus .more {
+  width: 15px;
+  height: 2px;
+  border: 1px solid #b1aa9e;
+  background-color: #b1aa9e;
+}
+#review .review3 .review-txt3 .time-plus a {
   margin-left: auto;
   font-size: 12px;
   font-family: "Pretendard-Medium";
   color: white;
 }
 @media (min-width: 1024px) {
-  #review .review3 .review-txt3 a {
+  #review .review3 .review-txt3 .time-plus a {
     font-size: 20px;
   }
 }

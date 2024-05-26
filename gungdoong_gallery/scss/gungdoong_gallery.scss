@@ -162,6 +162,12 @@
                     font-size: 20px;
                 }
             }
+            .more {
+                width: 15px;
+                height: 2px;
+                border: 1px solid #b1aa9e;
+                background-color: #b1aa9e;
+            }
             a {
                 text-align: justify;
                 margin-left: auto;
@@ -175,6 +181,7 @@
         } 
     }
     .review2 {
+        position: relative;
         margin-top: 114px;
         display: flex;
         justify-content: space-between;
@@ -185,6 +192,7 @@
             margin-bottom: 114px;
         }
         .review-txt2 {
+            position: relative;
             background-color: #57482f;
             width: 90%;
             margin-right: 24px;
@@ -211,10 +219,9 @@
             }
             .time-plus {
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
                 color: white;
-            }
+            
             .time {
                 margin-right: auto;
                 font-size: 12px;
@@ -222,6 +229,12 @@
                 @include responsive(large-screens) {
                     font-size: 20px;
                 }
+            }
+            .more {
+                width: 15px;
+                height: 2px;
+                border: 1px solid #b1aa9e;
+                background-color: #b1aa9e;
             }
             a {
                 margin-left: auto;
@@ -232,9 +245,11 @@
                     font-size: 20px;
                 }
             }
+        }
         } 
     }
     .review3 {
+        position: relative;
         margin-top: 114px;
         display: flex;
         justify-content: space-between;
@@ -260,7 +275,6 @@
                 }
             }
             .re-title {
-                text-align: justify;
                 font-size: 16px;
                 font-family: $font-pre-regular;
                 color: white;
@@ -269,11 +283,12 @@
                 }
             }
             .time-plus {
+                position: relative;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 color: white;
-            }
+            
             .time {
                 margin-right: auto;
                 font-size: 12px;
@@ -281,6 +296,12 @@
                 @include responsive(large-screens) {
                     font-size: 20px;
                 }
+            }
+            .more {
+                width: 15px;
+                height: 2px;
+                border: 1px solid #b1aa9e;
+                background-color: #b1aa9e;
             }
             a {
                 margin-left: auto;
@@ -291,6 +312,8 @@
                     font-size: 20px;
                 }
             }
+        }
+        
         } 
     }
 }
