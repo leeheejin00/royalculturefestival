@@ -46,37 +46,7 @@
   startSlider();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  let currentIndex = 0;
-  const slides = document.querySelectorAll('.banner-box .baner-slide1, .banner-box .baner-slide2, .banner-box .baner-slide3');
-  const totalSlides = slides.length;
-  let interval;
 
-  function showSlide(index) {
-    const offset = index * -100;
-    slides.forEach((slide) => {
-      slide.style.transform = `translateX(${offset}%)`;
-    });
-  }
-
-  function startSlider() {
-    interval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      showSlide(currentIndex);
-    }, 1000);
-  }
-
-  function stopSlider() {
-    clearInterval(interval);
-  }
-
-  slides.forEach((slide) => {
-    slide.addEventListener('mouseenter', stopSlider);
-    slide.addEventListener('mouseleave', startSlider);
-  });
-
-  startSlider();
-});
     </script>
     <title>index</title>
 </head>
@@ -457,13 +427,43 @@ document.addEventListener("DOMContentLoaded", function () {
                         </ul>
                     </div>
                 </div>
-                <div class="palace-img">
+                <div class="palace-img1">
                     <img src="./images/palace-img1.png" alt="palace-img1">
                     <img src="./images/palace-img2.png" alt="palace-img2">
                     <img src="./images/palace-img3.png" alt="palace-img3">
                     <img src="./images/palace-img4.png" alt="palace-img4">
                 </div>
                 <div class="palace-img2">
+                    <img src="./images/chang1.jpg">
+                    <img src="./images/chang2.jpg" alt="palace-img2">
+                    <img src="./images/chang3.jpg" alt="palace-img3">
+                    <img src="./images/chang4.jpg" alt="palace-img4">
+                </div>
+                <div class="palace-img3">
+                    <img src="./images/duc1.jpg">
+                    <img src="./images/duc2.jpg" alt="palace-img2">
+                    <img src="./images/duc3.jpg" alt="palace-img3">
+                    <img src="./images/duc4.jpg" alt="palace-img4">
+                </div>
+                <div class="palace-img4">
+                    <img src="./images/changkyung1.jpg">
+                    <img src="./images/changkyung2.jpg" alt="palace-img2">
+                    <img src="./images/changkyung3.jpg" alt="palace-img3">
+                    <img src="./images/changkyung4.jpg" alt="palace-img4">
+                </div>
+                <div class="palace-img5">
+                    <img src="./images/kyung1.JPG">
+                    <img src="./images/kyung2.jpg" alt="palace-img2">
+                    <img src="./images/kyung3.jpg" alt="palace-img3">
+                    <img src="./images/kyung4.jpg" alt="palace-img4">
+                </div>
+                <div class="palace-img6">
+                    <img src="./images/jongmo1.jpg">
+                    <img src="./images/jongmo2.jpg" alt="palace-img2">
+                    <img src="./images/jongmo3.jpg" alt="palace-img3">
+                    <img src="./images/jongmo4.jpg" alt="palace-img4">
+                </div>
+                <div class="palace-img-pc">
                         <h2 class="palace-history">고 궁 발 자 취</h2>
                         <img src="./images/palace-img1.png" alt="palace-img1" class="img1">
                     <img src="./images/palace-img2.png" alt="palace-img2" class="img2">
@@ -473,6 +473,40 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </div>
         </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const palaceLinks = document.querySelectorAll('.palace_gnb li a');
+            const palaceSections = [
+                '.palace-img1',
+                '.palace-img2',
+                '.palace-img3',
+                '.palace-img4',
+                '.palace-img5',
+                '.palace-img6'
+            ];
+
+            function showPalace(index) {
+                palaceSections.forEach((selector, i) => {
+                    const section = document.querySelector(selector);
+                    if (i === index) {
+                        section.style.display = 'grid';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            }
+
+            palaceLinks.forEach((link, index) => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showPalace(index);
+                });
+            });
+
+            // Initialize the first palace section
+            showPalace(0);
+        });
+        </script>
     </main>
 
     <footer>

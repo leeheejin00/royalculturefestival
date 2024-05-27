@@ -305,79 +305,122 @@ main .intro-imgbox a:hover .overlay2 h3 {
 }
 
 #palace {
-  margin-top: 450px;
-  margin-bottom: 900px;
+  margin-top: 117px;
   position: relative;
 }
-#palace .mo-palace-box1,
-#palace .mo-palace-box2,
-#palace .mo-palace-box3,
-#palace .mo-palace-box4,
-#palace .mo-palace-box5,
-#palace .mo-palace-box6 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 1s;
+@media (min-width: 1024px) {
+  #palace {
+    background-color: #f8efe0;
+  }
 }
-#palace .mo-palace-box1 {
-  opacity: 1;
-}
-#palace .mo-palace {
+#palace .mo-palace-box .mo-palace {
   width: 88%;
+}
+@media (min-width: 1024px) {
+  #palace .mo-palace-box .mo-palace {
+    display: none;
+  }
 }
 #palace .palace-img-box .palace {
   display: none;
 }
+@media (min-width: 1024px) {
+  #palace .palace-img-box .palace {
+    display: block;
+  }
+}
 #palace .palace-txt1 {
   position: absolute;
-  bottom: 150%;
+  top: 10%;
   left: 0;
   width: 80%;
   padding-bottom: 5%;
   height: auto;
   background: rgba(255, 255, 255, 0.9);
   opacity: 65%;
+  /* img {
+    display: none;
+    @include responsive(large-screens) {
+      display: block;
+  }
+  } */
+}
+@media (min-width: 1024px) {
+  #palace .palace-txt1 {
+    background: transparent;
+    left: 52%;
+  }
 }
 #palace .palace-txt1 .txt {
   width: 100%;
 }
 #palace .palace-txt1 .txt h2 {
+  width: 100%;
+  font-family: "Pretendard-Bold";
   font-size: 16px;
   padding-top: 7%;
   padding-left: 16px;
 }
+@media (min-width: 1024px) {
+  #palace .palace-txt1 .txt h2 {
+    font-size: 24px;
+    padding-top: 3%;
+  }
+}
 #palace .palace-txt1 .txt p {
+  width: 100%;
   padding-left: 16px;
 }
 #palace .palace-txt1 .txt p .txt1 {
+  width: 100%;
   font-size: 20px;
+  font-family: "Pretendard-Thin";
+}
+@media (min-width: 1024px) {
+  #palace .palace-txt1 .txt p .txt1 {
+    font-size: 38px;
+  }
 }
 #palace .palace-txt1 .txt p .txt2 {
+  width: 100%;
   font-size: 20px;
+  font-family: "Pretendard-Light";
+}
+@media (min-width: 1024px) {
+  #palace .palace-txt1 .txt p .txt2 {
+    font-size: 38px;
+  }
 }
 #palace .palace-txt1 .txt p .txt3 {
+  width: 100%;
   font-size: 20px;
+  font-family: "Pretendard-SemiBold";
+}
+@media (min-width: 1024px) {
+  #palace .palace-txt1 .txt p .txt3 {
+    font-size: 38px;
+  }
 }
 #palace .palace-txt2 {
+  width: 100%;
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 10%;
   width: 90%;
+  height: auto;
   background-color: #2f2411;
   opacity: 80%;
   color: #fff;
-  padding: 20px;
-  box-sizing: border-box;
 }
-#palace .palace-txt2.active {
-  display: block;
+@media (min-width: 1024px) {
+  #palace .palace-txt2 {
+    opacity: 100%;
+    top: 60%;
+    left: 52%;
+    width: 45%;
+  }
 }
-#palace .palace-txt2 .palace-slide1 .palace_title h2 {
+#palace .palace-txt2 .palace_title h2 {
   display: flex;
   text-align: justify;
   align-items: top;
@@ -385,44 +428,18 @@ main .intro-imgbox a:hover .overlay2 h3 {
   font-size: 24px;
 }
 @media (min-width: 1024px) {
-  #palace .palace-txt2 .palace-slide1 .palace_title h2 {
+  #palace .palace-txt2 .palace_title h2 {
     font-size: 48px;
   }
 }
-#palace .palace-txt2 .palace-slide1 .palace_title h2 img {
+#palace .palace-txt2 .palace_title h2 img {
   padding-top: 2px;
   width: 28px;
   margin-bottom: 8%;
   margin-right: 15px;
 }
 @media (min-width: 1024px) {
-  #palace .palace-txt2 .palace-slide1 .palace_title h2 img {
-    padding-top: 18px;
-  }
-}
-#palace .palace-txt2 .palace-slide2, #palace .palace-txt2 .palace-slide3, #palace .palace-txt2 .palace-slide4, #palace .palace-txt2 .palace-slide5, #palace .palace-txt2 .palace-slide6 {
-  display: none;
-}
-#palace .palace-txt2 .palace-slide2 .palace_title h2, #palace .palace-txt2 .palace-slide3 .palace_title h2, #palace .palace-txt2 .palace-slide4 .palace_title h2, #palace .palace-txt2 .palace-slide5 .palace_title h2, #palace .palace-txt2 .palace-slide6 .palace_title h2 {
-  display: flex;
-  text-align: justify;
-  align-items: top;
-  font-family: "KimjungchulMyungjo-Bold";
-  font-size: 24px;
-}
-@media (min-width: 1024px) {
-  #palace .palace-txt2 .palace-slide2 .palace_title h2, #palace .palace-txt2 .palace-slide3 .palace_title h2, #palace .palace-txt2 .palace-slide4 .palace_title h2, #palace .palace-txt2 .palace-slide5 .palace_title h2, #palace .palace-txt2 .palace-slide6 .palace_title h2 {
-    font-size: 48px;
-  }
-}
-#palace .palace-txt2 .palace-slide2 .palace_title h2 img, #palace .palace-txt2 .palace-slide3 .palace_title h2 img, #palace .palace-txt2 .palace-slide4 .palace_title h2 img, #palace .palace-txt2 .palace-slide5 .palace_title h2 img, #palace .palace-txt2 .palace-slide6 .palace_title h2 img {
-  padding-top: 2px;
-  width: 28px;
-  margin-bottom: 8%;
-  margin-right: 15px;
-}
-@media (min-width: 1024px) {
-  #palace .palace-txt2 .palace-slide2 .palace_title h2 img, #palace .palace-txt2 .palace-slide3 .palace_title h2 img, #palace .palace-txt2 .palace-slide4 .palace_title h2 img, #palace .palace-txt2 .palace-slide5 .palace_title h2 img, #palace .palace-txt2 .palace-slide6 .palace_title h2 img {
+  #palace .palace-txt2 .palace_title h2 img {
     padding-top: 18px;
   }
 }
@@ -453,9 +470,6 @@ main .intro-imgbox a:hover .overlay2 h3 {
     display: none;
   }
 }
-#banner .banner-box {
-  transition: transform 0.5s ease-in-out;
-}
 @media (min-width: 1024px) {
   #banner .banner-box {
     display: flex;
@@ -470,10 +484,6 @@ main .intro-imgbox a:hover .overlay2 h3 {
 }
 @media (min-width: 1024px) {
   #banner .banner-box .baner-slide1, #banner .banner-box .baner-slide2, #banner .banner-box .baner-slide3 {
-    flex: 1;
-    min-width: 100%;
-    position: relative;
-    transition: transform 0.5s ease-in-out;
     display: block;
     flex: 1;
     min-width: 80%;
@@ -496,6 +506,27 @@ main .intro-imgbox a:hover .overlay2 h3 {
 @media (min-width: 1024px) and (min-width: 1024px) {
   #banner .banner-box .baner-slide1 .baner-slide2, #banner .banner-box .baner-slide2 .baner-slide2, #banner .banner-box .baner-slide3 .baner-slide2 {
     height: 500px;
+  }
+}
+@media (min-width: 1024px) {
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    33% {
+      transform: translateX(-33.33%);
+    }
+    66% {
+      transform: translateX(-66.66%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  #banner .banner-box .baner-slide1 .banner-box, #banner .banner-box .baner-slide2 .banner-box, #banner .banner-box .baner-slide3 .banner-box {
+    animation: slide 12s infinite;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
   }
 }
 
@@ -913,7 +944,7 @@ main .intro-imgbox a:hover .overlay2 h3 {
     display: none;
   }
 }
-#history .palace-img {
+#history .palace-img1 {
   margin-bottom: 47px;
   width: 100%;
   display: grid;
@@ -922,44 +953,114 @@ main .intro-imgbox a:hover .overlay2 h3 {
   gap: 10px;
   padding: 10px;
 }
-#history .palace-img h3 {
+#history .palace-img1 h3 {
   display: none;
 }
-#history .palace-img img:nth-child(1) {
+#history .palace-img1 img:nth-child(1) {
   grid-area: a;
 }
-#history .palace-img img:nth-child(2) {
+#history .palace-img1 img:nth-child(2) {
   grid-area: b;
 }
-#history .palace-img img:nth-child(3) {
+#history .palace-img1 img:nth-child(3) {
   grid-area: c;
 }
-#history .palace-img img:nth-child(4) {
+#history .palace-img1 img:nth-child(4) {
   grid-area: d;
 }
-#history .palace-img img {
+#history .palace-img1 img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (min-width: 1024px) {
-  #history .palace-img {
+  #history .palace-img1 {
     display: none;
   }
 }
 #history .palace-img2 {
+  margin-bottom: 47px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "a a" "b d" "c d";
+  gap: 10px;
+  padding: 10px;
+}
+#history .palace-img2 h3 {
   display: none;
+}
+#history .palace-img2 img:nth-child(1) {
+  grid-area: a;
+}
+#history .palace-img2 img:nth-child(2) {
+  grid-area: b;
+}
+#history .palace-img2 img:nth-child(3) {
+  grid-area: c;
+}
+#history .palace-img2 img:nth-child(4) {
+  grid-area: d;
+}
+#history .palace-img2 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 1024px) {
   #history .palace-img2 {
+    display: none;
+  }
+}
+#history .palace-img3 {
+  margin-bottom: 47px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "a a" "b d" "c d";
+  gap: 10px;
+  padding: 10px;
+}
+#history .palace-img3 h3 {
+  display: none;
+}
+#history .palace-img3 img:nth-child(1) {
+  grid-area: a;
+}
+#history .palace-img3 img:nth-child(2) {
+  grid-area: b;
+}
+#history .palace-img3 img:nth-child(3) {
+  grid-area: c;
+}
+#history .palace-img3 img:nth-child(4) {
+  grid-area: d;
+}
+#history .palace-img3 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 1024px) {
+  #history .palace-img3 {
+    display: none;
+  }
+}
+#history .palace-img-pc {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #history .palace-img-pc {
     margin-bottom: 155px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "a b b b" "c c d f" "c c e f";
     padding: 10px;
   }
-  #history .palace-img2 .palace-history {
+  #history .palace-img-pc .palace-history {
     background-color: #2f2411;
     color: white;
     font-size: 32px;
@@ -967,7 +1068,7 @@ main .intro-imgbox a:hover .overlay2 h3 {
     text-align: center;
     line-height: 700px;
   }
-  #history .palace-img2 .palace {
+  #history .palace-img-pc .palace {
     background-color: #2f2411;
     color: white;
     font-size: 32px;
@@ -975,25 +1076,25 @@ main .intro-imgbox a:hover .overlay2 h3 {
     text-align: center;
     line-height: 260px;
   }
-  #history .palace-img2 .palace-history {
+  #history .palace-img-pc .palace-history {
     grid-area: a;
   }
-  #history .palace-img2 .img1 {
+  #history .palace-img-pc .img1 {
     grid-area: b;
   }
-  #history .palace-img2 .img2 {
+  #history .palace-img-pc .img2 {
     grid-area: c;
   }
-  #history .palace-img2 .palace {
+  #history .palace-img-pc .palace {
     grid-area: d;
   }
-  #history .palace-img2 .img3 {
+  #history .palace-img-pc .img3 {
     grid-area: e;
   }
-  #history .palace-img2 .img4 {
+  #history .palace-img-pc .img4 {
     grid-area: f;
   }
-  #history .palace-img2 img {
+  #history .palace-img-pc img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;

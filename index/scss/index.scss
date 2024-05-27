@@ -336,142 +336,127 @@ main {
         
         
             #palace {
-                margin-top: 450px;
-                margin-bottom: 900px;
+                margin-top: 117px;
                 position: relative;
-              
-                .mo-palace-box1,
-                .mo-palace-box2,
-                .mo-palace-box3,
-                .mo-palace-box4,
-                .mo-palace-box5,
-                .mo-palace-box6 {
-                  position: absolute;
-                  width: 100%;
-                  height: 100%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  opacity: 0;
-                  transition: opacity 1s;
+                @include responsive(large-screens) {
+                    background-color: #f8efe0;
                 }
-              
-                .mo-palace-box1 {
-                  opacity: 1;
+                .mo-palace-box {
+                    .mo-palace {
+                        width: 88%;
+                    @include responsive(large-screens) {
+                      display: none;
+                    }
+                    }
                 }
-              
-                .mo-palace {
-                  width: 88%;
-                }
-              
                 .palace-img-box {
-                  .palace {
-                    display: none;
-                  }
-                }
-              
-                .palace-txt1 {
-                  position: absolute;
-                  bottom: 150%;
-                  left: 0;
-                  width: 80%;
-                  padding-bottom: 5%;
-                  height: auto;
-                  background: rgba(255, 255, 255, 0.9);
-                  opacity: 65%;
-              
-                  .txt {
-                    width: 100%;
-              
-                    h2 {
-                      font-size: 16px;
-                      padding-top: 7%;
-                      padding-left: 16px;
-                    }
-              
-                    p {
-                      padding-left: 16px;
-              
-                      .txt1 {
-                        font-size: 20px;
-                      }
-              
-                      .txt2 {
-                        font-size: 20px;
-                      }
-              
-                      .txt3 {
-                        font-size: 20px;
-                      }
-                    }
-                  }
-                }
-              
-                .palace-txt2 {
-                  position: absolute;
-                  top: 50%;
-                  left: 10%;
-                  width: 90%;
-                  background-color: #2f2411;
-                  opacity: 80%;
-                  color: #fff;
-                  padding: 20px;
-                  box-sizing: border-box;
-              
-                    &.active {
-                      display: block;
-                    }
-              
-                    .palace-slide1 {
-                        
-                        .palace_title {
-                            h2 {
-                                display: flex;
-                                text-align: justify;
-                                align-items: top;
-                                font-family: $font-bold;
-                                font-size: 24px;
-                                @include responsive(large-screens) {
-                                    font-size: 48px;
-                                }
-                                img {
-                                    padding-top: 2px;
-                                    width: 28px;
-                                    margin-bottom: 8%;
-                                    margin-right: 15px;
-                                    @include responsive(large-screens) {
-                                        padding-top: 18px;
-                                    }
-                                }
-                            }
-                        }
-                    } 
-                    
-                    .palace-slide2, .palace-slide3, .palace-slide4, .palace-slide5, .palace-slide6  {
+                    .palace {
                         display: none;
-                        .palace_title {
-                            h2 {
-                                display: flex;
-                                text-align: justify;
-                                align-items: top;
-                                font-family: $font-bold;
+                        @include responsive(large-screens) {
+                            display: block;
+                        }
+                    }
+                }
+                .palace-txt1 {
+                    position: absolute;
+                    top: 10%;
+                    left: 0;
+                    width: 80%;
+                    padding-bottom: 5%;
+                    height: auto;
+                    background: rgba(255, 255, 255, 0.9);
+                    opacity: 65%;
+                    @include responsive(large-screens) {
+                        background: transparent;
+                        left: 52%;
+                    }
+                    /* img {
+                      display: none;
+                      @include responsive(large-screens) {
+                        display: block;
+                    }
+                    } */
+                    .txt {
+                        width: $width-wide;
+                        h2 {
+                            width: $width-wide;
+                            font-family: $font-pre-bold;
+                            font-size: 16px;
+                            padding-top: 7%;
+                            padding-left: 16px;
+                            @include responsive(large-screens) {
                                 font-size: 24px;
+                                padding-top: 3%;
+                            }
+                        }
+                        p {
+                            width: $width-wide;
+                            padding-left: 16px;
+                            .txt1 {
+                                width: $width-wide;
+                                font-size: 20px;
+                                font-family: $font-thin;
                                 @include responsive(large-screens) {
-                                    font-size: 48px;
+                                    font-size: 38px;
                                 }
-                                img {
-                                    padding-top: 2px;
-                                    width: 28px;
-                                    margin-bottom: 8%;
-                                    margin-right: 15px;
-                                    @include responsive(large-screens) {
-                                        padding-top: 18px;
-                                    }
+                            }
+                            .txt2 {
+                                width: $width-wide;
+                                font-size: 20px;
+                                font-family: $font-pre-light;
+                                @include responsive(large-screens) {
+                                    font-size: 38px;
+                                }
+                            }
+                            .txt3 {
+                                width: $width-wide;
+                                font-size: 20px;
+                                font-family: $font-semibold;
+                                @include responsive(large-screens) {
+                                    font-size: 38px;
                                 }
                             }
                         }
-                    }  
-        
+                    }
+                    
+                }
+                .palace-txt2 {
+                    width: $width-wide;
+                    position: absolute;
+                    top: 70%;
+                    left: 10%;
+                    width: 90%;
+                    height: auto;
+                    background-color: #2f2411;
+                    opacity: 80%;
+                    color: #fff;
+                    @include responsive(large-screens) {
+                        opacity: 100%;
+                        top: 60%;
+                        left: 52%;
+                        width: 45%;
+                    }
+                    .palace_title {
+                        h2 {
+                            display: flex;
+                            text-align: justify;
+                            align-items: top;
+                            font-family: $font-bold;
+                            font-size: 24px;
+                            @include responsive(large-screens) {
+                                font-size: 48px;
+                            }
+                            img {
+                                padding-top: 2px;
+                                width: 28px;
+                                margin-bottom: 8%;
+                                margin-right: 15px;
+                                @include responsive(large-screens) {
+                                    padding-top: 18px;
+                                }
+                            }
+                        }
+                    }
                     p {
                       font-family: $font-regular;
                       text-align: justify;
@@ -488,58 +473,66 @@ main {
               
 
 
-    #banner {   
-        width: $width-wide;
-        margin-top: 229px;
-        .baner-slide {
-            img {
-              margin-top: 97px;
-              width: $width-wide;
-            }
-            @include responsive(large-screens) {
-                display: none;
-            }
-        }
-        .banner-box {
-            transition: transform 0.5s ease-in-out;
-            @include responsive(large-screens) {
-                display: flex;
-                justify-content: center;
-                position: relative;
+            #banner {   
                 width: $width-wide;
-                overflow: hidden;
-            }
-            .baner-slide1, .baner-slide2, .baner-slide3  {
-                display: none;
-                @include responsive(large-screens) {
-                    flex: 1;
-                    min-width: 100%;
-                    position: relative;
-                    transition: transform 0.5s ease-in-out;
-                    display: block;
-                    flex: 1;
-                    min-width: 80%;
-                    position: relative;
+                margin-top: 229px;
+                .baner-slide {
                     img {
-                        width: 100%;
-                        height: 500px;
-                        display: block;
+                      margin-top: 97px;
+                      width: $width-wide;
                     }
-                    .baner-slide1, .baner-slide3 {
-                        opacity: 60%;
-                        transform: scale(0.9);
-                        z-index: 1;
+                    @include responsive(large-screens) {
+                        display: none;
                     }
-                    .baner-slide2 {
-                        z-index: 2;
+                }
+                .banner-box {
+                    @include responsive(large-screens) {
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+                        width: $width-wide;
+                        overflow: hidden;
+                    }
+                    .baner-slide1, .baner-slide2, .baner-slide3  {
+                        display: none;
                         @include responsive(large-screens) {
-                            height: 500px;
+                            display: block;
+                            flex: 1;
+                            min-width: 80%;
+                            position: relative;
+                            img {
+                                width: 100%;
+                                height: 500px;
+                                display: block;
+                            }
+                            .baner-slide1, .baner-slide3 {
+                                opacity: 60%;
+                                transform: scale(0.9);
+                                z-index: 1;
+                            }
+                            .baner-slide2 {
+                                z-index: 2;
+                                @include responsive(large-screens) {
+                                    height: 500px;
+                                }
+                            }
+        
+                            @keyframes slide {
+                                0% { transform: translateX(0%); }
+                                33% { transform: translateX(-33.33%); }
+                                66% { transform: translateX(-66.66%); }
+                                100% { transform: translateX(0%); }
+                            }
+                            
+                            .banner-box {
+                                animation: slide 12s infinite;
+                                display: flex;
+                                transition: transform 0.5s ease-in-out;
+                            }
                         }
                     }
                 }
             }
-        }
-    }
 
     #notice {
         margin: 110px 0;
@@ -924,7 +917,7 @@ main {
             }
         }
 
-        .palace-img {
+        .palace-img1 {
             margin-bottom: 47px;
             h3 {
                 display: none;
@@ -954,6 +947,64 @@ main {
             }
           }
           .palace-img2 {
+            margin-bottom: 47px;
+            h3 {
+                display: none;
+            }
+            width: $width-wide;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "a a"
+            "b d"
+            "c d"
+            ;
+            gap: 10px;
+            padding: 10px;
+            img:nth-child(1) { grid-area: a; }
+            img:nth-child(2) { grid-area: b; }
+            img:nth-child(3) { grid-area: c; }
+            img:nth-child(4) { grid-area: d; }
+
+            img {
+                width: $width-wide;
+                height: 100%;
+                object-fit: cover;
+            }
+            @include responsive(large-screens) {
+                display: none;
+            }
+          }
+          .palace-img3 {
+            margin-bottom: 47px;
+            h3 {
+                display: none;
+            }
+            width: $width-wide;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "a a"
+            "b d"
+            "c d"
+            ;
+            gap: 10px;
+            padding: 10px;
+            img:nth-child(1) { grid-area: a; }
+            img:nth-child(2) { grid-area: b; }
+            img:nth-child(3) { grid-area: c; }
+            img:nth-child(4) { grid-area: d; }
+
+            img {
+                width: $width-wide;
+                height: 100%;
+                object-fit: cover;
+            }
+            @include responsive(large-screens) {
+                display: none;
+            }
+          }
+          .palace-img-pc {
             display: none;
             @include responsive(large-screens) {
                 margin-bottom: 155px;
