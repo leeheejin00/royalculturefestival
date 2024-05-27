@@ -971,7 +971,8 @@ main .intro-imgbox a:hover .overlay2 h3 {
 #history .palace-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 1024px) {
   #history .palace-img {
@@ -1026,7 +1027,8 @@ main .intro-imgbox a:hover .overlay2 h3 {
   #history .palace-img2 img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 

@@ -153,10 +153,9 @@ footer {
   border-top: 2px solid black;
 }
 .noticepg .noticepg_box .sub_box p {
-  font-size: 18px;
+  font-size: 11px;
   font-family: "Pretendard-Medium";
-  line-height: 52px;
-  padding: 0 26px;
+  padding: 2% 26px;
 }
 .noticepg .noticepg_box .sub_box p:last-child {
   display: none;
@@ -170,6 +169,7 @@ footer {
     top: 0;
     left: 0;
     padding: 0 66px;
+    font-size: 18px;
   }
   .noticepg .noticepg_box .sub_box p:nth-child(2) {
     left: 382px;
@@ -236,6 +236,7 @@ footer {
   background-color: #f0f0f0;
   margin: 50px auto 17px;
   border-radius: 15px;
+  overflow: hidden;
 }
 .noticepg .pre_notice img {
   position: absolute;
@@ -247,11 +248,11 @@ footer {
 }
 .noticepg .pre_notice p {
   position: absolute;
-  top: 20px;
+  top: 30%;
   left: 110px;
-  font-size: 24px;
+  font-size: 1em;
   font-family: "Pretendard-Medium";
-  width: 300px;
+  width: 150px;
   line-height: 1.5;
 }
 .noticepg .pre_notice date {
@@ -298,7 +299,7 @@ footer {
   position: absolute;
   top: 20%;
   left: 110px;
-  font-size: 24px;
+  font-size: 1em;
   font-family: "Pretendard-Medium";
   line-height: 1.2;
 }

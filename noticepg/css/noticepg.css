@@ -153,9 +153,9 @@ footer {
   border-top: 2px solid black;
 }
 .noticepg .noticepg_box .sub_box p {
-  font-size: 14px;
+  font-size: 11px;
   font-family: "Pretendard-Medium";
-  padding: 0 26px;
+  padding: 2% 10%;
 }
 .noticepg .noticepg_box .sub_box p:last-child {
   display: none;
@@ -168,7 +168,8 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0 66px;
+    font-size: 18px;
+    padding: 7px 66px;
   }
   .noticepg .noticepg_box .sub_box p:nth-child(2) {
     left: 382px;
@@ -235,6 +236,7 @@ footer {
   background-color: #f0f0f0;
   margin: 50px auto 17px;
   border-radius: 15px;
+  overflow: hidden;
 }
 .noticepg .pre_notice img {
   position: absolute;
@@ -246,9 +248,9 @@ footer {
 }
 .noticepg .pre_notice p {
   position: absolute;
-  top: 20px;
+  top: 30%;
   left: 110px;
-  font-size: 24px;
+  font-size: 1em;
   font-family: "Pretendard-Medium";
   width: 300px;
   line-height: 1.5;
@@ -284,6 +286,7 @@ footer {
   background-color: #f0f0f0;
   margin: 0 auto 60px;
   border-radius: 15px;
+  overflow: hidden;
 }
 .noticepg .next_notice img {
   position: absolute;
@@ -297,7 +300,7 @@ footer {
   position: absolute;
   top: 30%;
   left: 110px;
-  font-size: 24px;
+  font-size: 1em;
   font-family: "Pretendard-Medium";
 }
 @media (min-width: 1024px) {

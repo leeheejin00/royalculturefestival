@@ -43,9 +43,9 @@
             border-top: 2px solid black;
 
             p {
-                font-size: 14px;
+                font-size: 11px;
                 font-family: $font-medium;
-                padding: 0 26px;
+                padding: 2% 10%;
 
                 &:last-child {
                     display: none;
@@ -57,7 +57,8 @@
                 p {
                     position: absolute;
                     top: 0; left: 0;
-                    padding: 0 66px;
+                    font-size: 18px;
+                    padding: 7px 66px;
                     &:nth-child(2) {
                         left: 382px;
                     }
@@ -129,6 +130,7 @@
         background-color: #f0f0f0;
         margin: 50px auto 17px;
         border-radius: 15px;
+        overflow: hidden;
 
         img {
             position: absolute;
@@ -139,8 +141,8 @@
         }
         p {
             position: absolute;
-            top: 20px; left: 110px;
-            font-size: 24px;
+            top: 30%; left: 110px;
+            font-size: 1em;
             font-family: $font-medium;
             width: 300px;
             line-height: 1.5;
@@ -179,6 +181,7 @@
         background-color: #f0f0f0;
         margin: 0 auto 60px;
         border-radius: 15px;
+        overflow: hidden;
 
         img {
             position: absolute;
@@ -191,7 +194,7 @@
         p {
             position: absolute;
             top: 30%; left: 110px;
-            font-size: 24px;
+            font-size: 1em;
             font-family: $font-medium;
         }
 

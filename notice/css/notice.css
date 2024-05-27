@@ -234,6 +234,9 @@ footer {
   background-color: #2f2411;
   color: white;
 }
+.notice .notice_box table tbody tr:hover a {
+  color: white;
+}
 .notice .notice_box table tbody tr .notice_war {
   font-size: 22px;
   font-family: "Pretendard-Bold";
@@ -264,9 +267,6 @@ footer {
   .notice .notice_box table tbody tr td:nth-child(2) {
     width: 50%;
     padding: 25px 15px;
-  }
-  .notice .notice_box table tbody tr td:nth-child(2) a:hover {
-    color: white;
   }
 }
 .notice .notice_box table tbody tr td:nth-child(3) {
