@@ -15,14 +15,15 @@
 
 // ==== title ====
 section.title > h2 {
-    // font-size: 48px;
+    font-size: 20px;
     text-decoration: underline;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
 // ====details ====
 section.details > p {
-    margin-bottom: 48px;
+    font-size: 14px;
+    margin-bottom: 24px;
 }
 
 section.details > .booking-info {
@@ -46,9 +47,17 @@ section.details > .booking-info {
             .cancel { grid-area: d ;}
     }
 }
-section.details > .booking-info > a,
+section.details > .booking-info > a {
+    width: 40%;
+    margin-bottom: 40px;
+
+    @include responsive(large-screens) {
+        width: 95%; 
+    }
+}
+
 section.details > .booking-info > .info-1-2 {
-    width: 48%;
+    width: 58%;
     margin-bottom: 40px;
 
     @include responsive(large-screens) {
@@ -71,7 +80,8 @@ section.details > .booking-info > button {
 }
 
 .booking-info h3 {
-    margin-bottom: 48px;
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
 .booking-info .print {
@@ -93,9 +103,12 @@ section.details > .booking-info > button {
 
 .booking-info .info1 {
     margin-bottom: 16px;
+    td {
+        font-size: 12px;
+    }
 }
 .booking-info .sort {
-    width: 132px; height: 40px;
+    width: 92px; height: 40px;
     text-align: left;
 }
 .booking-info .box {

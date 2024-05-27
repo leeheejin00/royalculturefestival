@@ -15,52 +15,168 @@
 }
 
 // ==== title ====
-.title-tag-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+section.title {
+    margin-bottom: 32px;
 
-    .remaining {
+    .title-tag-btn {
+        position: relative;
         display: flex;
         align-items: center;
-
-        img {
-            width: 28px;
-            height: 28px;
+        // justify-content: space-between;
+    
+        h2 {
+            margin-right: 16px;
+            font-size: 22px;
         }
-    }
-}  // title-tag-btn
+        .tag {
+            font-size: 12px;
+            span {
+                padding: 4px 8px;
+                margin-right: 4px;
+                border-radius: 8px;
+                background-color: $background-lightgray;
+            }
+        }
+        .ongoing, .booking {
+            display: none;
 
-.place-period {
-    display: flex;
-    p {
-        margin-right: 16px;
+            @include responsive(large-screens) {
+                display: inline;
+            }
+        }
+        .remaining {
+            position: absolute;
+            right: 0; top: 0;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+    
+            margin-top: -3px;
+            padding: 4px 8px;
+            border-radius: 8px;
+            border: 1px solid $basic-brown;
+            font-size: 12px;
+            img {
+                width: 24px;
+                height: 24px;
+                margin-right: 8px;
+            }
+        }
+
+    @include responsive(large-screens) {
+        margin-bottom: 8px;
+    }
+    }  // title-tag-btn
+    
+    .place-period {
+        display: flex;
+        p {
+            font-size: 14px;
+            margin-right: 16px;
+        }
     }
 }
 
 // ==== booking-btn ====
-.booking-btn {
-    position: absolute;
-    bottom: 0; right: 0;
+.booking-btn {  // 플로팅
+    position: fixed;
+    bottom: 40px; right: 24px;
+    z-index: 99;
+    display: flex;
+    // width: 120px;
+    padding: 12px 24px;
+    background-color: $basic-brown;
+    border-radius: 36px;
+    
+    img {
+        width: 24px; height: 24px;
+        margin-right: 12px;
+
+        @include responsive(large-screens) {
+            margin-right: 0;
+        }
+    }  // img
+    .hover {
+        font-weight: bold;
+        color: #fff;
+        
+        @include responsive(large-screens) {
+            display: none;
+        }
+    }  // hover
+}
+
+.booking-btn:hover {  // 플로팅-호버
+    background-color: $basic-yellow;
+    img {
+        @include responsive(large-screens) {
+            margin-right: 12px;
+        }
+    }  // img
+
+    .hover {        
+        @include responsive(large-screens) {
+            color: $basic-brown;
+            display: block;
+        }
+    }  // hover
 }
 
 // ==== images ====
-.poster {
-    img {
-        width: 100%;
+section.images {
+    .poster {
+        img {
+            width: 100%;
+            margin-bottom: 32px;
+        }
+    }  // poster
+    .slide {
+        margin-bottom: 32px;
+        img {
+            width: 100%;
+        }
+        .sub { display: none; }
+    }  // slide
+
+    @include responsive(large-screens) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin-bottom: 56px;
+
+            .poster {
+                width: 30.5%;
+                img {
+                    width: 100%;
+                    margin-bottom: 0;
+                }
+            }
+            .slide {
+                width: 68%;
+                margin-bottom: 0;
+                img {
+                    height: 100%;
+                }
+            }
     }
 }
-.slide {
-    img {
-        width: 100%;
-    }
-}
+
 
 // ==== detail ====
 section.detail {
     position: relative;
     height: 600px;
     overflow: hidden;
+
+    div.title {
+        width: 66px;
+        padding-bottom: 4px;
+        margin-bottom: 24px;
+        border-bottom: 2px solid $basic-brown;
+        font-weight: bold;
+    }
+
     img {
         width: 100%;
     }
@@ -75,13 +191,18 @@ section.detail {
 
         p {
             margin-top: 30px;
+            font-size: 16px;
             text-align: center;
             color: white;
         }
         img {
             margin: 0 auto;
-            width: 32px;
+            width: 24px;
         }
+    }
+
+    @include responsive(large-screens) {
+        height: 1400px;
     }
 }
 
@@ -89,24 +210,27 @@ section.detail {
 section.additional {
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
 
     .info-box {
         width: 100%;
         margin-top: 32px;
-        padding: 48px;
+        padding: 32px;
         border: 1px solid $basic-brown;
 
         div.title {
-            width: 70px;
+            width: 66px;
             padding-top: 8px;
-            margin-bottom: 40px;
+            margin-bottom: 32px;
+            font-size: 16px;
+            font-weight: bold;
             text-align: center;
             border-top: 2px solid $basic-brown;
         }
         ul {
             .sub-title {
                 padding-left: 32px;
-                margin-bottom: 16px;
+                margin-bottom: 8px;
                 line-height: 20px;
                 background-image: url(../images/title_icon02.png);
                 background-size: 20px;
@@ -116,10 +240,11 @@ section.additional {
             .content {
                 padding-left: 32px;
                 margin-bottom: 24px;
+                font-size: 14px;
                 line-height: 1.3;
 
                 .small {
-                    font-size: 14px;
+                    font-size: 12px;
                 }
                 .space {
                     padding-left: 12px;
@@ -145,5 +270,18 @@ section.call {
     align-items: center;
     flex-wrap: nowrap;
     // justify-content: space-between;
+    
+    div.title {
+        width: 66px;
+        padding-bottom: 4px;
+        margin-right: 60px;
+        // margin-bottom: 24px;
+        border-bottom: 2px solid $basic-brown;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
 

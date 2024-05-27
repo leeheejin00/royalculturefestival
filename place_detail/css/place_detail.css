@@ -25,9 +25,13 @@ section.title .lnb a {
   margin-left: 6px;
 }
 @media (min-width: 1024px) {
-  section.title .lnb a:hover {
-    color: #ffbe0f;
+  section.title .lnb a {
+    margin-left: 16px;
+    font-size: 16px;
   }
+}
+section.title .lnb a:hover {
+  color: #ffbe0f;
 }
 section.title h2 > .english {
   display: none;
