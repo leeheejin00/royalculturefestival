@@ -697,38 +697,14 @@ main {
                             }
                         }
                         .more-btn {
-                            display: block;
-                            position: absolute;
-                            bottom: 32px; right: 32px;
-                            .square {
-                                width: 70px; height: 50px;
-                                position: relative;
-                                padding: 12px 24px;
-                                border: 1px solid black;
-                                p {
-                                    position: absolute;
-                                    top: 5px;
-                                    left: -18px;
-                                    background-color: transparent;
-                                    z-index: 3;
-                                    padding: -5px 0;
-                                    font-size: 13px;
-                                    line-height: 35px;
-                                    
-                                }
-                                img {  // 위치 찾기
-                                    position: absolute;
-                                    right: 0;
-                                    width: 25px; height: 25px;
-                                }
-                            }  // square
-                        }  // more-btn
-                        
+                            display: none;
+                        }      
                     }
                 }
             }
         }
-    
+    }
+
         .notice_box {
             opacity: 60%;
             transform: scale(0.9);
@@ -746,6 +722,36 @@ main {
                     h3 {
                         color: white;
                     }
+                    .more-btn {
+                        display: none;
+                        @include responsive(large-screens) {
+                            display: block;
+                            position: absolute;
+                            bottom: 32px; right: 32px;
+                            .square {
+                                width: 70px; height: 50px;
+                                position: relative;
+                                padding: 12px 24px;
+                                border: 1px solid black;
+                                p {
+                                        position: absolute;
+                                        top: 5px;
+                                        left: -18px;
+                                        background-color: transparent;
+                                        z-index: 3;
+                                        padding: -5px 0;
+                                        font-size: 13px;
+                                        line-height: 35px;
+                                    }
+                                    
+                                }
+                                img {  // 위치 찾기
+                                    position: absolute;
+                                    right: 0;
+                                    width: 25px; height: 25px;
+                                }
+                            }  // square
+                        }  // more-btn
                 }
             }
         }
@@ -761,10 +767,43 @@ main {
                         .main-info, .main-info2 {
                             visibility: hidden;
                         }
+                        h3 {
+                            color: white;
+                        }
+                        .more-btn {
+                            display: none;
+                            @include responsive(large-screens) {
+                                display: block;
+                                position: absolute;
+                                bottom: 32px; right: 32px;
+                                .square {
+                                    width: 70px; height: 50px;
+                                    position: relative;
+                                    padding: 12px 24px;
+                                    border: 1px solid black;
+                                    p {
+                                            position: absolute;
+                                            top: 5px;
+                                            left: -18px;
+                                            background-color: transparent;
+                                            z-index: 3;
+                                            padding: -5px 0;
+                                            font-size: 13px;
+                                            line-height: 35px;
+                                        }
+                                        
+                                    }
+                                    img {  // 위치 찾기
+                                        position: absolute;
+                                        right: 0;
+                                        width: 25px; height: 25px;
+                                    }
+                                }  // square
+                            }  // more-btn
                     }
                 }
             }
-        }
+        
     
         
         .notice_box3 {
@@ -781,6 +820,39 @@ main {
                     .main-info, .main-info2 {
                         visibility: hidden;
                     }
+                    h3 {
+                        color: white;
+                    }
+                    .more-btn {
+                        display: none;
+                        @include responsive(large-screens) {
+                            display: block;
+                            position: absolute;
+                            bottom: 32px; right: 32px;
+                            .square {
+                                width: 70px; height: 50px;
+                                position: relative;
+                                padding: 12px 24px;
+                                border: 1px solid black;
+                                p {
+                                        position: absolute;
+                                        top: 5px;
+                                        left: -18px;
+                                        background-color: transparent;
+                                        z-index: 3;
+                                        padding: -5px 0;
+                                        font-size: 13px;
+                                        line-height: 35px;
+                                    }
+                                    
+                                }
+                                img {  // 위치 찾기
+                                    position: absolute;
+                                    right: 0;
+                                    width: 25px; height: 25px;
+                                }
+                            }  // square
+                        }  // more-btn
                 }
             }
         }
