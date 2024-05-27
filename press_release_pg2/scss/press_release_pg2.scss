@@ -39,20 +39,20 @@
             justify-content: space-between;
 
             margin: 10px 0 0 0;
-            padding: 0px 15px;
+            padding: 4px 15px;
 
             p {
-                font-size: 18px;
+                font-size: 12px;
                 font-family: $font-pre-regular;
             }
         }
 
         .sub_title {
-            font-size: 30px;
+            font-size: 20px;
             font-family: $font-semibold;
             padding-left: 28px;
-            padding-top: 23px;
-            padding-right: 70px;
+            padding-top: 25px;
+            padding-right: 50px;
             letter-spacing: -2px;
 
             margin-bottom: 5px;
@@ -239,12 +239,12 @@
 
         img {
             position: absolute;
-            top: 5px; left: -112px;
+            top: 5px; left: -60%;
             width: 56px; height: 56px;
 
             &:last-of-type {
                 position: absolute;
-                top: 5px; left: 320px;
+                top: 5px; left: 120%;
                 rotate: -180deg;
             }
         }

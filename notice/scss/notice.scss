@@ -70,7 +70,7 @@
                         font-weight: bold;
                         
                         &:nth-child(1) {
-                            width: 15%;
+                            width: 20%;
                             @include responsive(large-screens) {
                                 width: 10%;
 
@@ -78,7 +78,7 @@
                             
                         }
                         &:nth-child(2) {
-                            width: 70%;
+                            width: 40%;
                             
                             
                             @include responsive(large-screens) {
@@ -100,7 +100,7 @@
                             }
                         }
                         &:nth-child(4) {
-                            width: 10%;
+                            width: 20%;
                             
                             @include responsive(large-screens) {
                                 width: 10%;
@@ -129,6 +129,7 @@
                 tr {
 
                     height: 100px;
+                    cursor: pointer;
 
                     &:nth-of-type(1), 
                     &:nth-of-type(2) {
@@ -155,6 +156,7 @@
                     td {
                         font-size: 24px;
                         font-family: $font-medium;
+
                         
                         &:nth-child(1) {
                             text-align: center;
@@ -169,6 +171,12 @@
                             @include responsive(large-screens) {
                                 width: 50%;
                                 padding: 25px 15px;
+
+                                a {
+                                    &:hover {
+                                        color: white;
+                                    }
+                                }
 
                             }
                             

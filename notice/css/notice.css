@@ -179,7 +179,7 @@ footer {
   font-weight: bold;
 }
 .notice .notice_box table thead tr td:nth-child(1) {
-  width: 15%;
+  width: 20%;
 }
 @media (min-width: 1024px) {
   .notice .notice_box table thead tr td:nth-child(1) {
@@ -187,7 +187,7 @@ footer {
   }
 }
 .notice .notice_box table thead tr td:nth-child(2) {
-  width: 70%;
+  width: 40%;
 }
 @media (min-width: 1024px) {
   .notice .notice_box table thead tr td:nth-child(2) {
@@ -204,7 +204,7 @@ footer {
   }
 }
 .notice .notice_box table thead tr td:nth-child(4) {
-  width: 10%;
+  width: 20%;
 }
 @media (min-width: 1024px) {
   .notice .notice_box table thead tr td:nth-child(4) {
@@ -225,6 +225,7 @@ footer {
 }
 .notice .notice_box table tbody tr {
   height: 100px;
+  cursor: pointer;
 }
 .notice .notice_box table tbody tr:nth-of-type(1), .notice .notice_box table tbody tr:nth-of-type(2) {
   background-color: #fff2dd;
@@ -263,6 +264,9 @@ footer {
   .notice .notice_box table tbody tr td:nth-child(2) {
     width: 50%;
     padding: 25px 15px;
+  }
+  .notice .notice_box table tbody tr td:nth-child(2) a:hover {
+    color: white;
   }
 }
 .notice .notice_box table tbody tr td:nth-child(3) {

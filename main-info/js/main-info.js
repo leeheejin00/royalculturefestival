@@ -1,28 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // 좌우 슬라이드
-
-    const slideLeftContainer = document.querySelector('.slideLeft');
-    const slideRightContainer = document.querySelector('.slideRight');
-
-    function createCloneAndAppend(container) {
-        const firstChild = container.children[0];
-        const clone = firstChild.cloneNode(true);
-        container.appendChild(clone);
-        firstChild.remove();
-    }
-
-    function startSlideAnimation(container, interval) {
-        setInterval(() => {
-            createCloneAndAppend(container);
-        }, interval);
-    }
-
-    const slideInterval = 5000; // 5 seconds
-
-    startSlideAnimation(slideLeftContainer, slideInterval);
-    startSlideAnimation(slideRightContainer, slideInterval);
-
     
     // 연혁 연도 클릭시 포스터 변경
     const yearElements = document.querySelectorAll('.year-arr .year');
@@ -52,3 +29,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function slideLeft() {
+    let slideLeft = document.getElementById('slideLeft');
+    slideLeft.style.transition = 'transform 1s';
+    slideLeft.style.transform = 'translateX(-500px)';
+    setTimeout(function() {
+        slideLeft.appendChild(slideLeft.querySelector('li:first-child'));
+        slideLeft.style.transition = 'none';
+        slideLeft.style.transform = 'translateX(0)';
+    }, 1000);
+}
+
+function slideRight() {
+    let slideRight = document.getElementById('slideRight');
+    slideRight.style.transition = 'transform 1s';
+    slideRight.style.transform = 'translateX(500px)';
+    setTimeout(function() {
+        slideRight.insertBefore(slideRight.querySelector('li:last-child'), slideRight.querySelector('li:first-child'));
+        slideRight.style.transition = 'none';
+        slideRight.style.transform = 'translateX(0)';
+    }, 1000);
+}
+
+// 자동 슬라이드 설정
+setInterval(slideLeft, 3000); // 3초마다 slideLeft 호출
+setInterval(slideRight, 3000); // 3초마다 slideRight 호출
