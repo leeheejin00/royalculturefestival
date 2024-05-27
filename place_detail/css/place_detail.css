@@ -206,6 +206,21 @@ section.programs {
   font-size: 12px;
   background-color: #eaeaea;
 }
+.program-list .program01 button.able {
+  position: absolute;
+  left: 50%;
+  bottom: -24px;
+  transform: translateX(-50%);
+  width: 50%;
+  max-width: 208px;
+  padding: 8px 0;
+  border: 0;
+  border-radius: 24px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #2f2411;
+  background-color: #ffbe0f;
+}
 @media (min-width: 1024px) {
   .program-list {
     justify-content: start;

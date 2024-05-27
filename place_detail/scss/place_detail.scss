@@ -231,6 +231,21 @@ section.programs {
             font-size: 12px;
             background-color: $background-lightgray;
         }
+        button.able {
+            position: absolute;
+            left: 50%; bottom: -24px;
+            transform: translateX(-50%);
+            // margin: 0 auto;
+            width: 50%;
+            max-width: 208px;
+            padding: 8px 0;
+            border: 0;
+            border-radius: 24px;
+            font-size: 12px;
+            cursor: pointer;
+            color: $basic-brown;
+            background-color: $basic-yellow;
+        }
     }  // program 01
 
     @include responsive(large-screens) {

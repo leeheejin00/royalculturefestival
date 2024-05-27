@@ -16,11 +16,16 @@ section.details > p {
   margin-bottom: 24px;
 }
 
+section.details > h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
 section.details > .booking-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 96px;
+  margin-bottom: 72px;
 }
 @media (min-width: 1024px) {
   section.details > .booking-info {
@@ -44,7 +49,6 @@ section.details > .booking-info {
 
 section.details > .booking-info > a {
   width: 40%;
-  margin-bottom: 40px;
 }
 @media (min-width: 1024px) {
   section.details > .booking-info > a {
@@ -54,7 +58,6 @@ section.details > .booking-info > a {
 
 section.details > .booking-info > .info-1-2 {
   width: 58%;
-  margin-bottom: 40px;
 }
 @media (min-width: 1024px) {
   section.details > .booking-info > .info-1-2 {
@@ -68,16 +71,12 @@ section.details > .booking-info > .info-1-2 {
 
 section.details > .booking-info > a > img {
   width: 100%;
+  margin-top: 8px;
 }
 
 section.details > .booking-info > .info3,
 section.details > .booking-info > button {
   width: 100%;
-}
-
-.booking-info h3 {
-  font-size: 20px;
-  margin-bottom: 12px;
 }
 
 .booking-info .print {
@@ -101,8 +100,14 @@ section.details > .booking-info > button {
   font-size: 12px;
 }
 
-.booking-info .sort {
-  width: 132px;
+.booking-info .info1 .sort {
+  width: 60px;
+  height: 40px;
+  text-align: left;
+}
+
+.booking-info .info2 .sort {
+  width: 112px;
   height: 40px;
   text-align: left;
 }
@@ -113,8 +118,18 @@ section.details > .booking-info > button {
   border-radius: 4px;
 }
 
+.booking-info .info2 {
+  margin-bottom: 16px;
+}
+
+.booking-info .info2 td {
+  font-size: 12px;
+}
+
 .booking-info > .info3 > p {
-  margin-bottom: 24px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .booking-info > .info3 > table {
@@ -127,15 +142,17 @@ section.details > .booking-info > button {
 
 .booking-info > .info3 > table th {
   padding: 16px 0;
+  font-size: 12px;
   background-color: #eaeaea;
 }
 
 .booking-info > .info3 > table td {
+  font-size: 14px;
   padding: 32px 0;
 }
 
 .booking-info button {
-  font-size: 24px;
+  font-size: 16px;
   padding: 8px 0;
   border-radius: 12px;
   color: white;
@@ -143,7 +160,19 @@ section.details > .booking-info > button {
 }
 
 .note {
-  margin-bottom: 56px;
-  padding: 40px 0 72px;
+  padding: 20px 0 40px;
   background-color: #f8efe0;
+}
+.note .title {
+  margin-bottom: 8px;
+  padding-left: 24px;
+  font-size: 16px;
+  background-image: url(../images/icon_brown.png);
+  background-size: 18px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.note .content {
+  font-size: 12px;
+  margin-bottom: 24px;
 }/*# sourceMappingURL=booking_detail.css.map */
