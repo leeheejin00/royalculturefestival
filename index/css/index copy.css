@@ -1,0 +1,192 @@
+#palace {
+  margin-top: 117px;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  #palace {
+    background-color: #f8efe0;
+  }
+}
+#palace .mo-palace-box1,
+#palace .mo-palace-box2,
+#palace .mo-palace-box3,
+#palace .mo-palace-box4,
+#palace .mo-palace-box5,
+#palace .mo-palace-box6 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s;
+}
+#palace .mo-palace-box1 {
+  opacity: 1;
+}
+#palace .mo-palace {
+  width: 88%;
+}
+@media (min-width: 1024px) {
+  #palace .mo-palace {
+    display: none;
+  }
+}
+#palace .palace-img-box .palace {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #palace .palace-img-box .palace {
+    display: block;
+  }
+}
+#palace .palace-txt1 {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 80%;
+  padding-bottom: 5%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 65%;
+}
+@media (min-width: 1024px) {
+  #palace .palace-txt1 {
+    background: transparent;
+    left: 52%;
+  }
+}
+#palace .palace-txt1 .txt {
+  width: 100%;
+}
+#palace .palace-txt1 .txt h2 {
+  width: 100%;
+  font-family: "Pretendard-Bold";
+  font-size: 16px;
+  padding-top: 7%;
+  padding-left: 16px;
+}
+@media (min-width: 1024px) {
+  #palace .palace-txt1 .txt h2 {
+    font-size: 24px;
+    padding-top: 3%;
+  }
+}
+#palace .palace-txt1 .txt p {
+  width: 100%;
+  padding-left: 16px;
+}
+#palace .palace-txt1 .txt p .txt1 {
+  width: 100%;
+  font-size: 20px;
+  font-family: "Pretendard-Thin";
+}
+@media (min-width: 1024px) {
+  #palace .palace-txt1 .txt p .txt1 {
+    font-size: 38px;
+  }
+}
+#palace .palace-txt1 .txt p .txt2 {
+  width: 100%;
+  font-size: 20px;
+  font-family: "Pretendard-Light";
+}
+@media (min-width: 1024px) {
+  #palace .palace-txt1 .txt p .txt2 {
+    font-size: 38px;
+  }
+}
+#palace .palace-txt1 .txt p .txt3 {
+  width: 100%;
+  font-size: 20px;
+  font-family: "Pretendard-SemiBold";
+}
+@media (min-width: 1024px) {
+  #palace .palace-txt1 .txt p .txt3 {
+    font-size: 38px;
+  }
+}
+#palace .palace-txt2 {
+  width: 100%;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  width: 90%;
+  height: auto;
+  background-color: #2f2411;
+  opacity: 80%;
+  color: #fff;
+}
+@media (min-width: 1024px) {
+  #palace .palace-txt2 {
+    opacity: 100%;
+    top: 60%;
+    left: 52%;
+    width: 45%;
+  }
+}
+#palace .palace-txt2 .palace-slide1,
+#palace .palace-txt2 .palace-slide2,
+#palace .palace-txt2 .palace-slide3,
+#palace .palace-txt2 .palace-slide4,
+#palace .palace-txt2 .palace-slide5,
+#palace .palace-txt2 .palace-slide6 {
+  display: none;
+}
+#palace .palace-txt2 .palace-slide1 .palace_title h2,
+#palace .palace-txt2 .palace-slide2 .palace_title h2,
+#palace .palace-txt2 .palace-slide3 .palace_title h2,
+#palace .palace-txt2 .palace-slide4 .palace_title h2,
+#palace .palace-txt2 .palace-slide5 .palace_title h2,
+#palace .palace-txt2 .palace-slide6 .palace_title h2 {
+  display: flex;
+  text-align: justify;
+  align-items: top;
+  font-family: "KimjungchulMyungjo-Bold";
+  font-size: 24px;
+}
+@media (min-width: 1024px) {
+  #palace .palace-txt2 .palace-slide1 .palace_title h2,
+  #palace .palace-txt2 .palace-slide2 .palace_title h2,
+  #palace .palace-txt2 .palace-slide3 .palace_title h2,
+  #palace .palace-txt2 .palace-slide4 .palace_title h2,
+  #palace .palace-txt2 .palace-slide5 .palace_title h2,
+  #palace .palace-txt2 .palace-slide6 .palace_title h2 {
+    font-size: 48px;
+  }
+}
+#palace .palace-txt2 .palace-slide1 .palace_title h2 img,
+#palace .palace-txt2 .palace-slide2 .palace_title h2 img,
+#palace .palace-txt2 .palace-slide3 .palace_title h2 img,
+#palace .palace-txt2 .palace-slide4 .palace_title h2 img,
+#palace .palace-txt2 .palace-slide5 .palace_title h2 img,
+#palace .palace-txt2 .palace-slide6 .palace_title h2 img {
+  padding-top: 2px;
+  width: 28px;
+  margin-bottom: 8%;
+  margin-right: 15px;
+}
+@media (min-width: 1024px) {
+  #palace .palace-txt2 .palace-slide1 .palace_title h2 img,
+  #palace .palace-txt2 .palace-slide2 .palace_title h2 img,
+  #palace .palace-txt2 .palace-slide3 .palace_title h2 img,
+  #palace .palace-txt2 .palace-slide4 .palace_title h2 img,
+  #palace .palace-txt2 .palace-slide5 .palace_title h2 img,
+  #palace .palace-txt2 .palace-slide6 .palace_title h2 img {
+    padding-top: 18px;
+  }
+}
+#palace .palace-txt2 p {
+  font-family: "KimjungchulMyungjo-Regular";
+  text-align: justify;
+  font-size: 14px;
+}
+@media (min-width: 1024px) {
+  #palace .palace-txt2 p {
+    font-size: 18px;
+  }
+}
+#palace .palace-txt2 .text2 {
+  padding-top: 6%;
+}/*# sourceMappingURL=index copy.css.map */
