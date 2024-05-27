@@ -82,12 +82,14 @@
         display: block;
 
         margin: 168px 0;
+
+        .slide-container, .slide-container2 {
+            
+        }
         
         .slideLeft {
             display: flex;
             justify-content: space-between;
-
-            animation: slideLeft 20s linear infinite;
 
             overflow: hidden;
 
@@ -115,33 +117,11 @@
             display: flex;
             justify-content: space-between;
 
-            animation: slideRight 20s linear infinite;
-
             img {
                 width: 631px;
                 height: 303px;
                 margin-right: 40px;
-            }
-            
-        }
-
-    @keyframes slideLeft {
-        0% {
-            transform: translateX(100%);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
-    }
-
-        
-    @keyframes slideRight {
-            0% {
-            transform: translateX(-100%);
-            }
-            100% {
-            transform: translateX(100%);
-            }
+            } 
         }
     }
 }
@@ -360,6 +340,7 @@
             display: flex;
             justify-content: space-between;
             margin: 0 auto 50px;
+            cursor: pointer;
 
             width: 900px; height: 100px;
         }
