@@ -125,6 +125,7 @@ header {
                   li {
                       position: relative;
                       .submenu {
+                        display: none;
                           margin-top: 27px;
                           li {
                               a {
@@ -138,6 +139,10 @@ header {
                               }   
                           }
                       }
+                      .submenu.open {
+                        display: block;
+                        transition: all 0.3s ease;
+                    }
                   }
                       a {
                           color: white;
@@ -153,6 +158,7 @@ header {
                       }
                   }
               }
+            
               form {
                   .search-box {
                       position: relative;
@@ -568,7 +574,7 @@ main {
                     display: none;
                 }
             }
-            .slide-img1, .slide-img2 {
+            .prev, .next {
                 width: 8%;
                 position: absolute;
                 opacity: 60%;
@@ -580,23 +586,22 @@ main {
                     display: block;
                     width: 100%;
                     height: 100%;
-            
                     img {
                         width: 100%;
                         height: auto;
                     }
                 }
             }
-            .slide-img1 {
+            .prev {
                 top: 40%;
-                left: 7%;
+                left: 3%;
                 @include responsive(large-screens) {
                     display: none;
                 }
             }
-            .slide-img2 {
+            .next {
                 top: 40%;
-                left: 85%;
+                left: 89%;
                 @include responsive(large-screens) {
                     display: none;
                 }
@@ -605,7 +610,7 @@ main {
     
         .notice_box, .notice_box2, .notice_box3 {
             flex: 1;
-            min-width: 60%;
+            min-width: 75%;
             position: relative;
             border: 1px solid black;
             padding: 10px;
@@ -711,6 +716,7 @@ main {
     }
 
         .notice_box {
+             transition: transform 0.5s ease-in-out;
             opacity: 60%;
             transform: scale(0.9);
             z-index: 1;
@@ -761,6 +767,7 @@ main {
             }
         }
         .notice_box2 {
+             transition: transform 0.5s ease-in-out;
             z-index: 2;
             @include responsive(large-screens) {
                 z-index: 1;
@@ -812,6 +819,7 @@ main {
     
         
         .notice_box3 {
+             transition: transform 0.5s ease-in-out;
             opacity: 60%;
             transform: scale(0.9);
             z-index: 1;
@@ -864,6 +872,7 @@ main {
     
     
     .notice-flex-box {
+        transform: transform 0.5s ease-in-out;
         scroll-behavior: smooth;
         overflow-x: hidden; /* 슬라이드 overflow 조정 */
         position: relative;

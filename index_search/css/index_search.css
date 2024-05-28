@@ -667,6 +667,7 @@ form .search-box .search img {
   height: 100%;
   min-width: 70%;
   flex: 1;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 @media (min-width: 1024px) {
   #gallery .gallery-box img {
@@ -700,4 +701,16 @@ form .search-box .search img {
     opacity: 1;
     z-index: 1;
   }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+#gallery .gallery-box .gallery-box {
+  display: flex;
+  animation: slide 20s linear infinite;
 }/*# sourceMappingURL=index_search.css.map */
