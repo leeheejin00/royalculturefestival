@@ -341,7 +341,7 @@ main {
                 @include responsive(large-screens) {
                     background-color: #f8efe0;
                 }
-                .mo-palace-box {
+                .mo-palace-box1, .mo-palace-box2, .mo-palace-box3, .mo-palace-box4, .mo-palace-box5, .mo-palace-box6 {
                     .mo-palace {
                         width: 88%;
                     @include responsive(large-screens) {
@@ -436,6 +436,7 @@ main {
                         left: 52%;
                         width: 45%;
                     }
+    
                     .palace_title {
                         h2 {
                             display: flex;
@@ -476,15 +477,19 @@ main {
             #banner {   
                 width: $width-wide;
                 margin-top: 229px;
-                .baner-slide {
-                    img {
-                      margin-top: 97px;
-                      width: $width-wide;
+                overflow: hidden;
+                .baner-slide-mo {
+                    display: flex;
+                    transition: transform 0.5s ease-in-out;
+                        img {
+                          width: $width-wide;
+                          height: auto;
+                        }
+                        @include responsive(large-screens) {
+                            display: none;
+                        }
                     }
-                    @include responsive(large-screens) {
-                        display: none;
-                    }
-                }
+
                 .banner-box {
                     @include responsive(large-screens) {
                         display: flex;
@@ -517,15 +522,8 @@ main {
                                 }
                             }
         
-                            @keyframes slide {
-                                0% { transform: translateX(0%); }
-                                33% { transform: translateX(-33.33%); }
-                                66% { transform: translateX(-66.66%); }
-                                100% { transform: translateX(0%); }
-                            }
                             
                             .banner-box {
-                                animation: slide 12s infinite;
                                 display: flex;
                                 transition: transform 0.5s ease-in-out;
                             }

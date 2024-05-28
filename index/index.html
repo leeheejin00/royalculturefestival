@@ -6,48 +6,6 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header_footer.css">
     <link rel="stylesheet" href="./css/index.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-  let currentIndex = 0;
-  let images = document.querySelectorAll("#palace .mo-palace-box1, #palace .mo-palace-box2, #palace .mo-palace-box3, #palace .mo-palace-box4, #palace .mo-palace-box5, #palace .mo-palace-box6");
-  let texts = document.querySelectorAll("#palace .palace-txt2 .container");
-  let interval;
-
-  function showSlide(index) {
-    images.forEach((img, i) => {
-      img.style.opacity = i === index ? "1" : "0";
-    });
-    texts.forEach((txt, i) => {
-      txt.style.display = i === index ? "block" : "none";
-    });
-  }
-
-  function startSlider() {
-    interval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % images.length;
-      showSlide(currentIndex);
-    }, 2000);
-  }
-
-  function stopSlider() {
-    clearInterval(interval);
-  }
-
-  images.forEach((img) => {
-    img.addEventListener("mouseenter", stopSlider);
-    img.addEventListener("mouseleave", startSlider);
-  });
-
-  texts.forEach((txt) => {
-    txt.addEventListener("mouseenter", stopSlider);
-    txt.addEventListener("mouseleave", startSlider);
-  });
-
-  startSlider();
-});
-
-
-    </script>
     <title>index</title>
 </head>
 <body>
@@ -293,11 +251,85 @@
                 </div>
               </div>
             </div>
+            
+            <script>
+                // 슬라이드 요소 선택
+                const images = document.querySelectorAll('.mo-palace-box1, .mo-palace-box2, .mo-palace-box3, .mo-palace-box4, .mo-palace-box5, .mo-palace-box6');
+                const texts = document.querySelectorAll('.palace-slide1, .palace-slide2, .palace-slide3, .palace-slide4, .palace-slide5, .palace-slide6');
+                
+                let currentSlide = 0;
+                const slideInterval1 = 2000; // 2초 간격
+                let interval;
+            
+                function showSlide(index) {
+                    // 모든 슬라이드 숨기기
+                    images.forEach(img => img.style.display = 'none');
+                    texts.forEach(text => text.style.display = 'none');
+            
+                    // 현재 슬라이드 보이기
+                    images[index].style.display = 'block';
+                    texts[index].style.display = 'block';
+                }
+            
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % images.length;
+                    showSlide(currentSlide);
+                }
+            
+                function prevSlide() {
+                    currentSlide = (currentSlide - 1 + images.length) % images.length;
+                    showSlide(currentSlide);
+                }
+            
+                function startSlideShow() {
+                    interval = setInterval(nextSlide, slideInterval1);
+                }
+            
+                function stopSlideShow() {
+                    clearInterval(interval);
+                }
+            
+                // 초기 슬라이드 설정
+                showSlide(currentSlide);
+                startSlideShow();
+            
+                // 마우스 호버 이벤트 설정
+                images.forEach(img => {
+                    img.addEventListener('mouseover', stopSlideShow);
+                    img.addEventListener('mouseout', startSlideShow);
+                });
+            
+                texts.forEach(text => {
+                    text.addEventListener('mouseover', stopSlideShow);
+                    text.addEventListener('mouseout', startSlideShow);
+                });
+            
+                // 슬라이드 버튼 이벤트 설정
+                document.getElementById('prevSlide').addEventListener('click', () => {
+                    stopSlideShow();
+                    prevSlide();
+                    startSlideShow();
+                });
+            
+                document.getElementById('nextSlide').addEventListener('click', () => {
+                    stopSlideShow();
+                    nextSlide();
+                    startSlideShow();
+                });
+            </script>
           </section>
 
           <section id="banner">
-            <div class="baner-slide">
-                <a href=""><img src="./images/banner1.jpg" alt=""></a>
+            <div class="baner-slide-mo">
+                <div class="baner-slide-mo1">
+                    <a href=""><img src="./images/banner2.png" alt=""></a>
+                </div>
+                <div class="baner-slide-mo2">
+                    <a href=""><img src="./images/banner1.jpg" alt=""></a>
+                </div>
+                <div class="baner-slide-mo3">
+                    <a href=""><img src="./images/banner3.png" alt=""></a>
+                </div>
             </div>
             <div class="banner-box">
                 <div class="baner-slide1">
@@ -310,6 +342,9 @@
                     <a href=""><img src="./images/banner3.png" alt=""></a>
                 </div>
             </div>
+            <script>
+                
+            </script>
         </section>
         
 

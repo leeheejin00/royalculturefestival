@@ -313,11 +313,11 @@ main .intro-imgbox a:hover .overlay2 h3 {
     background-color: #f8efe0;
   }
 }
-#palace .mo-palace-box .mo-palace {
+#palace .mo-palace-box1 .mo-palace, #palace .mo-palace-box2 .mo-palace, #palace .mo-palace-box3 .mo-palace, #palace .mo-palace-box4 .mo-palace, #palace .mo-palace-box5 .mo-palace, #palace .mo-palace-box6 .mo-palace {
   width: 88%;
 }
 @media (min-width: 1024px) {
-  #palace .mo-palace-box .mo-palace {
+  #palace .mo-palace-box1 .mo-palace, #palace .mo-palace-box2 .mo-palace, #palace .mo-palace-box3 .mo-palace, #palace .mo-palace-box4 .mo-palace, #palace .mo-palace-box5 .mo-palace, #palace .mo-palace-box6 .mo-palace {
     display: none;
   }
 }
@@ -460,13 +460,18 @@ main .intro-imgbox a:hover .overlay2 h3 {
 #banner {
   width: 100%;
   margin-top: 229px;
+  overflow: hidden;
 }
-#banner .baner-slide img {
-  margin-top: 97px;
+#banner .baner-slide-mo {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+#banner .baner-slide-mo img {
   width: 100%;
+  height: auto;
 }
 @media (min-width: 1024px) {
-  #banner .baner-slide {
+  #banner .baner-slide-mo {
     display: none;
   }
 }
@@ -509,22 +514,7 @@ main .intro-imgbox a:hover .overlay2 h3 {
   }
 }
 @media (min-width: 1024px) {
-  @keyframes slide {
-    0% {
-      transform: translateX(0%);
-    }
-    33% {
-      transform: translateX(-33.33%);
-    }
-    66% {
-      transform: translateX(-66.66%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
   #banner .banner-box .baner-slide1 .banner-box, #banner .banner-box .baner-slide2 .banner-box, #banner .banner-box .baner-slide3 .banner-box {
-    animation: slide 12s infinite;
     display: flex;
     transition: transform 0.5s ease-in-out;
   }
