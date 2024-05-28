@@ -343,7 +343,88 @@
                 </div>
             </div>
             <script>
-                
+                let currentSlide1 = 0;
+                const slides = document.querySelectorAll('.baner-slide-mo > div');
+                const totalSlides = slides.length;
+                const slideWidth = slides[0].clientWidth;
+                const slideContainer = document.querySelector('.baner-slide-mo');
+                let isDragging = false;
+                let startPos = 0;
+                let currentTranslate = 0;
+                let prevTranslate = 0;
+                let animationID;
+                let autoSlideInterval;
+
+                function setSliderPosition() {
+                    slideContainer.style.transform = `translateX(${-currentSlide1 * slideWidth}px)`;
+                }
+        
+                function startAutoSlide() {
+                    autoSlideInterval = setInterval(() => {
+                        currentSlide1 = (currentSlide1 + 1) % totalSlides;
+                        if (currentSlide1 === 0) {
+                            slideContainer.style.transition = 'none';
+                            currentTranslate = 0;
+                            setSliderPosition();
+                            requestAnimationFrame(() => {
+                                slideContainer.style.transition = 'transform 0.5s ease-in-out';
+                                currentSlide1++;
+                                currentTranslate = -currentSlide1 * slideWidth;
+                                setSliderPosition();
+                            });
+                        } else {
+                            currentTranslate = -currentSlide1 * slideWidth;
+                            setSliderPosition();
+                        }
+                    }, 3000);
+                }
+        
+                function stopAutoSlide() {
+                    clearInterval(autoSlideInterval);
+                }
+        
+                slideContainer.addEventListener('mouseenter', stopAutoSlide);
+                slideContainer.addEventListener('mouseleave', startAutoSlide);
+        
+                slideContainer.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    startPos = e.pageX;
+                    cancelAnimationFrame(animationID);
+                    slideContainer.style.transition = 'none';
+                    stopAutoSlide();
+                });
+        
+                slideContainer.addEventListener('mouseup', (e) => {
+                    isDragging = false;
+                    const movedBy = e.pageX - startPos;
+                    if (movedBy < -100 && currentSlide1 < totalSlides - 1) {
+                        currentSlide1++;
+                    }
+                    if (movedBy > 100 && currentSlide1 > 0) {
+                        currentSlide1--;
+                    }
+                    currentTranslate = -currentSlide1 * slideWidth;
+                    slideContainer.style.transition = 'transform 0.5s ease-in-out';
+                    setSliderPosition();
+                    startAutoSlide();
+                });
+        
+                slideContainer.addEventListener('mousemove', (e) => {
+                    if (isDragging) {
+                        const currentPosition = e.pageX;
+                        currentTranslate = prevTranslate + currentPosition - startPos;
+                        setSliderPosition();
+                    }
+                });
+        
+                slideContainer.addEventListener('mouseleave', () => {
+                    isDragging = false;
+                    slideContainer.style.transition = 'transform 0.5s ease-in-out';
+                    setSliderPosition();
+                    startAutoSlide();
+                });
+        
+                startAutoSlide();
             </script>
         </section>
         
@@ -354,7 +435,7 @@
             </div>
                 <div class="notice-flex-box">
                     <div class="slide-img1">
-                        <a href=""><img src="./images/left_arrow.png" alt=""></a>
+                        <a href="javascript:void(0)"><img src="./images/left_arrow.png" alt=""></a>
                     </div>
                         <div class="notice_box">
                             <a href="#">
@@ -429,11 +510,16 @@
                             </a>
                         </div> <!-- notice-box3 -->
                     <div class="slide-img2">
-                        <a href=""><img src="./images/right_arrow.png" alt=""></a>
+                        <a href="javascript:void(0)"><img src="./images/right_arrow.png" alt=""></a>
                     </div>
                 </div><!-- notice-flex-box -->
             </div>
         </section>
+        <script>
+
+        </script>
+        
+
 
         <section id="history">
             <div class="container">

@@ -479,8 +479,11 @@ main {
                 margin-top: 229px;
                 overflow: hidden;
                 .baner-slide-mo {
+                    width: 300%;
                     display: flex;
                     transition: transform 0.5s ease-in-out;
+                    .baner-slide-mo1, .baner-slide-mo2, .baner-slide-mo3 {
+                        width: 300%;
                         img {
                           width: $width-wide;
                           height: auto;
@@ -488,6 +491,7 @@ main {
                         @include responsive(large-screens) {
                             display: none;
                         }
+                    }
                     }
 
                 .banner-box {
@@ -556,6 +560,7 @@ main {
             position: relative;
             width: $width-wide;
             overflow: hidden;
+            transition: transform 0.5s ease-in-out;
             @include responsive(large-screens) {
                 overflow: visible;
                 position: none;
@@ -939,9 +944,9 @@ main {
                 width: $width-wide;
                 height: 100%;
                 object-fit: cover;
-            }
-            @include responsive(large-screens) {
-                display: none;
+                @include responsive(large-screens) {
+                    display: none;
+                }
             }
           }
           .palace-img2 {
@@ -974,6 +979,93 @@ main {
             }
           }
           .palace-img3 {
+            margin-bottom: 47px;
+            h3 {
+                display: none;
+            }
+            width: $width-wide;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "a a"
+            "b d"
+            "c d"
+            ;
+            gap: 10px;
+            padding: 10px;
+            img:nth-child(1) { grid-area: a; }
+            img:nth-child(2) { grid-area: b; }
+            img:nth-child(3) { grid-area: c; }
+            img:nth-child(4) { grid-area: d; }
+
+            img {
+                width: $width-wide;
+                height: 100%;
+                object-fit: cover;
+            }
+            @include responsive(large-screens) {
+                display: none;
+            }
+          }
+          .palace-img4 {
+            margin-bottom: 47px;
+            h3 {
+                display: none;
+            }
+            width: $width-wide;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "a a"
+            "b d"
+            "c d"
+            ;
+            gap: 10px;
+            padding: 10px;
+            img:nth-child(1) { grid-area: a; }
+            img:nth-child(2) { grid-area: b; }
+            img:nth-child(3) { grid-area: c; }
+            img:nth-child(4) { grid-area: d; }
+
+            img {
+                width: $width-wide;
+                height: 100%;
+                object-fit: cover;
+            }
+            @include responsive(large-screens) {
+                display: none;
+            }
+          }
+          .palace-img5 {
+            margin-bottom: 47px;
+            h3 {
+                display: none;
+            }
+            width: $width-wide;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "a a"
+            "b d"
+            "c d"
+            ;
+            gap: 10px;
+            padding: 10px;
+            img:nth-child(1) { grid-area: a; }
+            img:nth-child(2) { grid-area: b; }
+            img:nth-child(3) { grid-area: c; }
+            img:nth-child(4) { grid-area: d; }
+
+            img {
+                width: $width-wide;
+                height: 100%;
+                object-fit: cover;
+            }
+            @include responsive(large-screens) {
+                display: none;
+            }
+          }
+          .palace-img6 {
             margin-bottom: 47px;
             h3 {
                 display: none;
