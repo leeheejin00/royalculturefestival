@@ -21,68 +21,143 @@ section.title > h2 {
 }
 
 // ====details ====
-section.details > p {
-    font-size: 14px;
-    margin-bottom: 24px;
-}
+section.details {
 
-section.details > h3 {
-    font-size: 20px;
-    margin-bottom: 12px;
-}
+    p {
+        font-size: 14px;
+        margin-bottom: 24px;
+    } 
 
-section.details > .booking-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    margin-bottom: 72px;
-
-    @include responsive(large-screens) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-areas: 
-                "a b"
-                "a c"
-                "a d"
-            ;
-            .poster-image { grid-area: a; }
-            .info-1-2 { grid-area: b; }
-            .info3 { grid-area: c; }
-            .cancel { grid-area: d ;}
+    h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
     }
-}
-section.details > .booking-info > a {
-    width: 40%;
-    // margin-bottom: 24px;
 
-    @include responsive(large-screens) {
-        width: 95%; 
-    }
-}
+    .booking-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+        margin-bottom: 72px;
 
-section.details > .booking-info > .info-1-2 {
-    width: 58%;
-    // margin-bottom: 24px;
+        a {
+            width: 40%;
+            // margin-bottom: 24px;
 
-    @include responsive(large-screens) {
-        width: 95%; 
-    }
-}
+            img {
+                width: 100%;
+                margin-top: 8px;
+            }
+        
+            @include responsive(large-screens) {
+                width: 95%; 
+            }
+        }  // a
+    
+        .info-1-2 {
+            position: relative;
+            width: 58%;
+            // margin-bottom: 24px;
 
-section.details > .booking-info > .info-1-2 {
-    position: relative;
-}
-section.details > .booking-info > a > img {
-    width: 100%;
-    margin-top: 8px;
-}
-section.details > .booking-info > .info3,
-section.details > .booking-info > button {
-    width: 100%;
-    // @include responsive(large-screens) {
-    //     width: 90%;
-    // }
+            .print {
+                display: none;
+            
+                @include responsive(large-screens) {
+                    display: block;
+                    position: absolute;
+                    top:0; right: 0;
+                    color: $basic-gray;
+                    text-decoration: underline;
+                }
+            }  // print
+
+            .info1 {
+                margin-bottom: 16px;
+            
+                td {
+                    font-size: 12px;
+                }
+            
+                .sort {
+                    width: 60px; height: 40px;
+                    text-align: left;
+                }
+            }  // info1
+        
+            @include responsive(large-screens) {
+                width: 95%; 
+            }
+        }  // info-1-2
+
+        .info2 {
+            margin-bottom: 16px;
+            
+            td {
+                font-size: 12px;
+            }
+
+            .sort {
+                width: 112px; height: 40px;
+                text-align: left;
+            }
+        }  // info2
+
+        .info3 {
+            width: 100%;
+
+            p {
+                font-size: 14px;
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+
+            table {
+                width: 100%;
+                margin-bottom: 32px;
+                border-top: 1px solid #000;
+                border-bottom: 1px solid #000;
+                text-align: center;
+
+                th {
+                    padding: 16px 0;
+                    font-size: 12px;
+                    background-color: #eaeaea;
+                }
+
+                td {
+                    font-size: 14px;
+                    padding: 32px 0;
+                }
+            }
+        }  // info3
+        
+        button {
+            width: 100%;
+
+            font-size: 16px;
+            padding: 8px 0;
+            border-radius: 12px;
+            color: white;
+            background-color: #2f2411;
+            // @include responsive(large-screens) {
+            //     width: 90%;
+            // }
+        }
+
+        @include responsive(large-screens) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas: 
+                    "a b"
+                    "a c"
+                    "a d"
+                ;
+                .poster-image { grid-area: a; }
+                .info-1-2 { grid-area: b; }
+                .info3 { grid-area: c; }
+                .cancel { grid-area: d ;}
+        }
+    }  // booking-info
 }
 
 // .booking-info h3 {
@@ -90,75 +165,15 @@ section.details > .booking-info > button {
 //     margin-bottom: 12px;
 // }
 
-.booking-info .print {
-    display: none;
-
-    @include responsive(large-screens) {
-        display: block;
-        position: absolute;
-        top:0; right: 0;
-        color: $basic-gray;
-        text-decoration: underline;
-    }
-}
-
 // .booking-info > .info-1-2 > .info1 > p,
 // .booking-info > .info-1-2 > .info2 > p {
 //     margin: 20px 0;
 // }
 
-.booking-info .info1 {
-    margin-bottom: 16px;
-    td {
-        font-size: 12px;
-    }
-}
-.booking-info .info1 .sort {
-    width: 60px; height: 40px;
-    text-align: left;
-}
-.booking-info .info2 .sort {
-    width: 112px; height: 40px;
-    text-align: left;
-}
 .booking-info .box {
     padding: 4px 6px;
     background-color: #eaeaea;
     border-radius: 4px;   
-}
-.booking-info .info2 {
-    margin-bottom: 16px;
-}
-.booking-info .info2 td {
-    font-size: 12px;
-}
-.booking-info > .info3 > p {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-.booking-info > .info3 > table {
-    width: 100%;
-    margin-bottom: 32px;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-    text-align: center;
-}
-.booking-info > .info3 > table th {
-    padding: 16px 0;
-    font-size: 12px;
-    background-color: #eaeaea;
-}
-.booking-info > .info3 > table td {
-    font-size: 14px;
-    padding: 32px 0;
-}
-.booking-info button {
-    font-size: 16px;
-    padding: 8px 0;
-    border-radius: 12px;
-    color: white;
-    background-color: #2f2411;
 }
 
 // ==== note ====
@@ -166,21 +181,24 @@ section.details > .booking-info > button {
     // margin-bottom: 56px;
     padding: 20px 0 40px;
     background-color: #f8efe0;
+
     .title {
         margin-bottom: 8px;
         padding-left: 24px;
-        font-size: 16px;
+        font-size: 14px;
+        font-weight: bold;
         background-image: url(../images/icon_brown.png);
         background-size: 18px;
         background-position: left center;
         background-repeat: no-repeat;
     }
+
     .content {
         font-size: 12px;
         margin-bottom: 24px;
     }
 }
 
-@include responsive(large-screens) {
+// @include responsive(large-screens) {
 
-}
+// }
