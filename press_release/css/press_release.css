@@ -145,7 +145,7 @@ footer {
 .press_release .news_box1 .press_release_box .press_release_1 {
   width: 100%;
   height: 416px;
-  margin: 60px auto 200px;
+  margin: 30px auto 200px;
 }
 .press_release .news_box1 .press_release_box .press_info_box {
   position: absolute;
@@ -193,6 +193,7 @@ footer {
 }
 .press_release .news_box1 .press_release_box2 .press_info_box2 h3 a {
   color: white;
+  padding-right: 20px;
 }
 .press_release .news_box1 .press_release_box2 .press_info_box2 p {
   margin-top: 15px;
@@ -221,12 +222,21 @@ footer {
     height: 479px;
     margin-left: 36px;
     margin-bottom: 178px;
+    margin-top: 60px;
   }
   .press_release .news_box1 .press_release_box .press_info_box {
     width: 545px;
     height: 246px;
     top: 420px;
     left: 0;
+    cursor: pointer;
+  }
+  .press_release .news_box1 .press_release_box .press_info_box:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box1 .press_release_box .press_info_box:hover .more_arrow {
+    top: 70%;
+    right: 20%;
   }
   .press_release .news_box1 .press_release_box .press_info_box h3 {
     font-size: 24px;
@@ -268,9 +278,20 @@ footer {
     height: 246px;
     top: 420px;
     right: 50px;
+    cursor: pointer;
+  }
+  .press_release .news_box1 .press_release_box2 .press_info_box2:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box1 .press_release_box2 .press_info_box2:hover .more_arrow2 {
+    top: 70%;
+    right: 20%;
   }
   .press_release .news_box1 .press_release_box2 .press_info_box2 h3 {
     font-size: 24px;
+  }
+  .press_release .news_box1 .press_release_box2 .press_info_box2 h3 a {
+    padding-right: 0;
   }
   .press_release .news_box1 .press_release_box2 .press_info_box2 p {
     font-size: 18px;
@@ -405,6 +426,14 @@ footer {
     height: 211px;
     top: 568px;
     left: 59px;
+    cursor: pointer;
+  }
+  .press_release .news_box2 .press_release_box3 .press_info_box3:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box2 .press_release_box3 .press_info_box3:hover .more_arrow3 {
+    top: 70%;
+    right: 28%;
   }
   .press_release .news_box2 .press_release_box3 .press_info_box3 h3 {
     font-size: 24px;
@@ -441,6 +470,14 @@ footer {
     height: 211px;
     top: 568px;
     left: 40%;
+    cursor: pointer;
+  }
+  .press_release .news_box2 .press_release_box4 .press_info_box4:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box2 .press_release_box4 .press_info_box4:hover .more_arrow4 {
+    top: 70%;
+    right: 28%;
   }
   .press_release .news_box2 .press_release_box4 .press_info_box4 h3 {
     font-size: 24px;
@@ -476,6 +513,14 @@ footer {
     height: 211px;
     top: 568px;
     left: 76%;
+    cursor: pointer;
+  }
+  .press_release .news_box2 .press_release_box5 .press_info_box5:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box2 .press_release_box5 .press_info_box5:hover .more_arrow5 {
+    top: 70%;
+    right: 28%;
   }
   .press_release .news_box2 .press_release_box5 .press_info_box5 h3 {
     font-size: 24px;
@@ -644,6 +689,14 @@ footer {
     height: 194px;
     top: 280px;
     left: -2%;
+    cursor: pointer;
+  }
+  .press_release .news_box3 .press_release_box6 .press_info_box6:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box3 .press_release_box6 .press_info_box6:hover .more_arrow6 {
+    top: 71%;
+    right: 35%;
   }
   .press_release .news_box3 .press_release_box6 .press_info_box6 h3 {
     font-size: 24px;
@@ -685,6 +738,14 @@ footer {
     height: 194px;
     top: 280px;
     left: 25%;
+    cursor: pointer;
+  }
+  .press_release .news_box3 .press_release_box7 .press_info_box7:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box3 .press_release_box7 .press_info_box7:hover .more_arrow7 {
+    top: 71%;
+    right: 35%;
   }
   .press_release .news_box3 .press_release_box7 .press_info_box7 h3 {
     font-size: 24px;
@@ -726,6 +787,14 @@ footer {
     height: 194px;
     top: 280px;
     left: 52%;
+    cursor: pointer;
+  }
+  .press_release .news_box3 .press_release_box8 .press_info_box8:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box3 .press_release_box8 .press_info_box8:hover .more_arrow8 {
+    top: 71%;
+    right: 35%;
   }
   .press_release .news_box3 .press_release_box8 .press_info_box8 h3 {
     font-size: 24px;
@@ -767,6 +836,14 @@ footer {
     height: 194px;
     top: 280px;
     left: 79%;
+    cursor: pointer;
+  }
+  .press_release .news_box3 .press_release_box9 .press_info_box9:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box3 .press_release_box9 .press_info_box9:hover .more_arrow9 {
+    top: 71%;
+    right: 35%;
   }
   .press_release .news_box3 .press_release_box9 .press_info_box9 h3 {
     font-size: 24px;
