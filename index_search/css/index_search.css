@@ -357,8 +357,7 @@ form .search-box .search img {
 }
 #notice .notice .notice-box1 .notice-img img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #notice .notice .notice-box1 .notice_txt {
   padding: 10px 0;
@@ -456,8 +455,7 @@ form .search-box .search img {
 }
 #notice .notice .notice-box2 .notice-img img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #notice .notice .notice-box2 .notice_txt {
   width: 50%;
@@ -551,8 +549,7 @@ form .search-box .search img {
   }
   #notice .notice .notice-box3 .notice-img img {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   #notice .notice .notice-box3 .notice_txt {
     width: 50%;

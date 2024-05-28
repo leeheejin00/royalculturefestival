@@ -10,16 +10,16 @@
     position: relative;
     
     h2 {
-        font-size: 29px;
+        font-size: 24px;
         font-family: $font-medium;
         text-decoration: underline;
         text-underline-position: under;
         text-decoration-thickness: 1px;
     }
     .s_filter {
-        width: 27px; height: 25px;
+        width: 40px; height: 40px;
         position: absolute;
-        top: 0; right: 32px;
+        top: 0; right: 24px;
     }
 
     @include responsive(large-screens) {
@@ -27,7 +27,7 @@
             font-size: 48px;
         }
         .s_filter {
-            right: 600px; 
+            right: 300px; 
         }
     }
 
@@ -67,19 +67,11 @@
                 }
 
                 strong {
-                    position: absolute;
-                    top: 62%; right: 20px;
-                    color: white;
-                    font-size: 18px;                    
-                    font-family: $font-regular;
+                    display: none;
                 }
 
                 .more_arrow {
-                    position: absolute;
-                    top: 68%; right: 28%;
-                    width: 32px;
-                    height: 1px;
-                    border: 1px solid #cc980f;
+                    display: none;
                 }
             }
         }
@@ -103,6 +95,7 @@
                 padding: 20px;
 
                 h3 {
+                    width: 245px;
                     font-size: 20px;
                     font-family: $font-regular;
                     color: white;
@@ -120,20 +113,12 @@
                 }
 
                 strong {
-                    position: absolute;
-                    top: 62%; right: 20px;
-                    color: white;
-                    font-size: 18px;
-                    font-family: $font-regular;
+                    display: none;
                     
                 }
 
                 .more_arrow2 {
-                    position: absolute;
-                    top: 68%; right: 28%;
-                    width: 32px;
-                    height: 1px;
-                    border: 1px solid #cc980f;
+                    display: none;
                 }
             }
         }
@@ -165,8 +150,22 @@
 
                         margin-top: 40px;
                     }
+                    strong {
+                        display: block;
+                        position: absolute;
+                        top: 62%; right: 20px;
+                        color: white;
+                        font-size: 18px;
+                        font-family: $font-regular;
+                        
+                    }
                     .more_arrow {
+                        display: block;
+                        position: absolute;
                         top: 66.5%; right: 15%;
+                        width: 32px;
+                        height: 1px;
+                        border: 1px solid #cc980f;
                     }
 
                 }
@@ -191,8 +190,22 @@
                         font-size: 18px;
                         margin-top: 40px;
                     }
+                    strong {
+                        display: block;
+                        position: absolute;
+                        top: 62%; right: 20px;
+                        color: white;
+                        font-size: 18px;
+                        font-family: $font-regular;
+                        
+                    }
                     .more_arrow2 {
+                        display: block;
+                        position: absolute;
                         top: 66.5%; right: 15%;
+                        width: 32px;
+                        height: 1px;
+                        border: 1px solid #cc980f;
                     }
 
                 }
@@ -236,20 +249,12 @@
                 }
 
                 strong {
-                    position: absolute;
-                    top: 62%; right: 20px;
-                    color: white;
-                    font-size: 18px;
-                    font-family: $font-regular;
+                    display: none;
                     
                 }
 
                 .more_arrow3 {
-                    position: absolute;
-                    top: 68%; right: 28%;
-                    width: 32px;
-                    height: 1px;
-                    border: 1px solid #cc980f;
+                    display: none;
                 }
             }
         }
@@ -286,20 +291,12 @@
                 }
 
                 strong {
-                    position: absolute;
-                    top: 62%; right: 20px;
-                    color: white;
-                    font-size: 18px;
-                    font-family: $font-regular;
+                    display: none;
                     
                 }
 
                 .more_arrow4 {
-                    position: absolute;
-                    top: 68%; right: 28%;
-                    width: 32px;
-                    height: 1px;
-                    border: 1px solid #cc980f;
+                    display: none;
                 }
             }
         }
@@ -340,20 +337,12 @@
                 }
 
                 strong {
-                    position: absolute;
-                    top: 62%; right: 20px;
-                    color: white;
-                    font-size: 18px;
-                    font-family: $font-regular;
+                    display: none;
                     
                 }
 
                 .more_arrow5 {
-                    position: absolute;
-                    top: 68%; right: 28%;
-                    width: 32px;
-                    height: 1px;
-                    border: 1px solid #cc980f;
+                    display: none;
                 }
             }
         }
@@ -382,13 +371,23 @@
                     p {
                         font-size: 20px;
                     }
+                    strong {
+                        display: block;
+                        position: absolute;
+                        top: 62%; right: 20px;
+                        color: white;
+                        font-size: 18px;
+                        font-family: $font-regular;
+                        
+                    }
     
                     .more_arrow3 {
+                        display: block;
                         position: absolute;
                         top: 68%; right: 20%;
                         width: 32px;
                         height: 1px;
-                        background: #cc980f;
+                        border: 1px solid #cc980f;
                     }
                 }
             }
@@ -412,13 +411,23 @@
                     p {
                         font-size: 20px;
                     }
+                    strong {
+                        display: block;
+                        position: absolute;
+                        top: 62%; right: 20px;
+                        color: white;
+                        font-size: 18px;
+                        font-family: $font-regular;
+                        
+                    }
     
                     .more_arrow4 {
+                        display: block;
                         position: absolute;
                         top: 68%; right: 20%;
                         width: 32px;
                         height: 1px;
-                        background: #cc980f;
+                        border: 1px solid #cc980f;
                     }
                 }
             }
@@ -442,13 +451,23 @@
 
                         font-size: 20px;
                     }
+                    strong {
+                        display: block;
+                        position: absolute;
+                        top: 62%; right: 20px;
+                        color: white;
+                        font-size: 18px;
+                        font-family: $font-regular;
+                        
+                    }
     
                     .more_arrow5 {
+                        display: block;
                         position: absolute;
                         top: 68%; right: 20%;
                         width: 32px;
                         height: 1px;
-                        background: #cc980f;
+                        border: 1px solid #cc980f;
                     }
                 }
             }
@@ -490,20 +509,11 @@
                 }
 
                 strong {
-                    position: absolute;
-                    top: 62%; right: 20px;
-                    color: white;
-                    font-size: 18px;
-                    font-family: $font-regular;
-                    
+                    display: none;
                 }
 
                 .more_arrow6 {
-                    position: absolute;
-                    top: 68%; right: 28%;
-                    width: 32px;
-                    height: 1px;
-                    border: 1px solid #cc980f;
+                    display: none;
                 }
             }
         }
@@ -540,20 +550,11 @@
                 }
 
                 strong {
-                    position: absolute;
-                    top: 62%; right: 20px;
-                    color: white;
-                    font-size: 18px;
-                    font-family: $font-regular;
-                    
+                    display: none;
                 }
 
                 .more_arrow7 {
-                    position: absolute;
-                    top: 68%; right: 28%;
-                    width: 32px;
-                    height: 1px;
-                    border: 1px solid #cc980f;
+                    display: none;
                 }
             }
         }
@@ -590,20 +591,12 @@
                 }
 
                 strong {
-                    position: absolute;
-                    top: 62%; right: 20px;
-                    color: white;
-                    font-size: 18px;
-                    font-family: $font-regular;
+                    display: none;
                     
                 }
 
                 .more_arrow8 {
-                    position: absolute;
-                    top: 68%; right: 28%;
-                    width: 32px;
-                    height: 1px;
-                    border: 1px solid #cc980f;
+                    display: none;
                 }
             }
         }
@@ -640,20 +633,12 @@
                 }
 
                 strong {
-                    position: absolute;
-                    top: 62%; right: 20px;
-                    color: white;
-                    font-size: 18px;
-                    font-family: $font-regular;
+                    display: none;
                     
                 }
 
                 .more_arrow9 {
-                    position: absolute;
-                    top: 68%; right: 20%;
-                    width: 32px;
-                    height: 1px;
-                    border: 1px solid #cc980f;
+                    display: none;
                 }
             }
         }
@@ -683,11 +668,24 @@
                         color: white;
                         font-size: 18px;
                     }
+                    strong {
+                        display: block;
+                        position: absolute;
+                        top: 62%; right: 20px;
+                        color: white;
+                        font-size: 18px;
+                        font-family: $font-regular;
+                    }
     
 
     
                     .more_arrow6 {
+                        display: block;
+                        position: absolute;
                         top: 68%; right: 25%;
+                        width: 32px;
+                        height: 1px;
+                        border: 1px solid #cc980f;
                     }
                 }
             }
@@ -712,11 +710,24 @@
                         color: white;
                         font-size: 18px;
                     }
+                    strong {
+                        display: block;
+                        position: absolute;
+                        top: 62%; right: 20px;
+                        color: white;
+                        font-size: 18px;
+                        font-family: $font-regular;
+                    }
     
 
     
                     .more_arrow7 {
+                        display: block;
+                        position: absolute;
                         top: 68%; right: 25%;
+                        width: 32px;
+                        height: 1px;
+                        border: 1px solid #cc980f;
                     }
                 }
             }
@@ -741,9 +752,22 @@
                         color: white;
                         font-size: 18px;
                     }
+                    strong {
+                        display: block;
+                        position: absolute;
+                        top: 62%; right: 20px;
+                        color: white;
+                        font-size: 18px;
+                        font-family: $font-regular;
+                    }
     
                     .more_arrow8 {
+                        display: block;
+                        position: absolute;
                         top: 68%; right: 25%;
+                        width: 32px;
+                        height: 1px;
+                        border: 1px solid #cc980f;
                     }
                 }
             }
@@ -768,9 +792,22 @@
                         color: white;
                         font-size: 18px; 
                     }
+                    strong {
+                        display: block;
+                        position: absolute;
+                        top: 62%; right: 20px;
+                        color: white;
+                        font-size: 18px;
+                        font-family: $font-regular;
+                    }
     
                     .more_arrow9 {
+                        display: block;
+                        position: absolute;
                         top: 68%; right: 25%;
+                        width: 32px;
+                        height: 1px;
+                        border: 1px solid #cc980f;
                     }
                 }
             }
@@ -785,7 +822,7 @@
         margin: 0 auto 90px;
 
         p {
-            font-size: 13px;
+            font-size: 18px;
             font-family: $font-pre-regular;
         }
 
@@ -801,4 +838,68 @@
         }
     }
 
+}
+
+// 모달
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+
+    .modal-content {
+        position: absolute;
+        top: 195px;
+        left: 41px;
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+
+        input {
+            width: 230px;
+        }
+        
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            
+            &:hover,
+            &:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+    @include responsive(large-screens) {
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            width: 100%;
+            input {
+                width: 80%;
+                height: 30px;
+            }
+            #search-btn {
+                width: 50px;
+                height: 30px;
+            }
+        }
+    }
 }
