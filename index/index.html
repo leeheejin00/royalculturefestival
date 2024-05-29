@@ -277,7 +277,7 @@
                 const slideInterval1 = 2000; // 2초 간격
                 let interval;
             
-                function showSlide(index) {
+                function showSlide1(index) {
                     // 모든 슬라이드 숨기기
                     images.forEach(img => img.style.display = 'none');
                     texts.forEach(text => text.style.display = 'none');
@@ -287,18 +287,18 @@
                     texts[index].style.display = 'block';
                 }
             
-                function nextSlide() {
+                function nextSlide1() {
                     currentSlide = (currentSlide + 1) % images.length;
-                    showSlide(currentSlide);
+                    showSlide1(currentSlide);
                 }
             
-                function prevSlide() {
+                function prevSlide2() {
                     currentSlide = (currentSlide - 1 + images.length) % images.length;
-                    showSlide(currentSlide);
+                    showSlide1(currentSlide);
                 }
             
                 function startSlideShow() {
-                    interval = setInterval(nextSlide, slideInterval1);
+                    interval = setInterval(nextSlide1, slideInterval1);
                 }
             
                 function stopSlideShow() {
@@ -306,7 +306,7 @@
                 }
             
                 // 초기 슬라이드 설정
-                showSlide(currentSlide);
+                showSlide1(currentSlide);
                 startSlideShow();
             
                 // 마우스 호버 이벤트 설정
@@ -321,15 +321,15 @@
                 });
             
                 // 슬라이드 버튼 이벤트 설정
-                document.getElementById('prevSlide').addEventListener('click', () => {
+                document.getElementById('prevSlide2').addEventListener('click', () => {
                     stopSlideShow();
-                    prevSlide();
+                    prevSlide2();
                     startSlideShow();
                 });
             
-                document.getElementById('nextSlide').addEventListener('click', () => {
+                document.getElementById('nextSlide1').addEventListener('click', () => {
                     stopSlideShow();
-                    nextSlide();
+                    nextSlide1();
                     startSlideShow();
                 });
             </script>
@@ -450,8 +450,8 @@
                 <h2>고궁소식</h2>
             </div>
                 <div class="notice-flex-box">
-                    <div class="prev">
-                        <a href="javascript:void(0)"><img src="./images/left_arrow.png" alt=""></a>
+                    <div class="slide1">
+                        <a href="javascript:void(0)" onclick="slideLeft()"><img src="./images/left_arrow.png" alt=""></a>
                     </div>
                         <div class="notice_box">
                             <a href="#">
@@ -525,9 +525,9 @@
                                 </div>
                             </a>
                         </div> <!-- notice-box3 -->
-                    <div class="next">
-                        <a href="javascript:void(0)"><img src="./images/right_arrow.png" alt=""></a>
-                    </div>
+                        <div class="slide2">
+                            <a href="javascript:void(0)" onclick="slideRight()"><img src="./images/right_arrow.png" alt=""></a>
+                        </div>
                 </div><!-- notice-flex-box -->
             </div>
             

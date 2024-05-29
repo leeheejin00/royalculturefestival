@@ -66,16 +66,251 @@
         ;
         }
 
-        img:nth-child(1) { grid-area: a; }
-        img:nth-child(2) { grid-area: b; }
-        img:nth-child(3) { grid-area: c; }
-        img:nth-child(4) { grid-area: d; }
-        img:nth-child(5) { grid-area: e; }
-        img:nth-child(6) { grid-area: f; }
-        img:nth-child(7) { grid-area: g; }
-        img:nth-child(8) { grid-area: h; }
-        img:nth-child(9) { display: none; }
-        img:nth-child(10) { display: none; }
+        .history-img1 { 
+            grid-area: a;
+            position: relative;
+            .history-txt {
+                display: none;
+                @include responsive(large-screens) {
+                    display: block;
+                    display: flex;
+                    position: absolute;
+                    top: 75%;
+                    background-color: #000000;
+                    opacity: 60%;
+                    padding: 10px;
+                    a {
+                        font-size: 14px;
+                        font-family: $font-pre-regular;
+                        color: white; 
+                        width: 80%;
+                     }
+                     img {
+                        width: 20%;
+                     }
+                } 
+                }
+        }
+        .history-img2 { 
+            grid-area: b;
+            position: relative;
+            .history-txt {
+                display: none;
+                @include responsive(large-screens) {
+                    display: block;
+                    display: flex;
+                    position: absolute;
+                    top: 91%;
+                    background-color: #000000;
+                        opacity: 60%;
+                        padding: 10px;
+                    a {
+                        font-size: 14px;
+                        font-family: $font-pre-regular;
+                        color: white; 
+                        width: 80%;
+                     }
+                     img {
+                        width: 20%;
+                     }
+                } 
+                }
+        }
+        .history-img3 { 
+            grid-area: c; 
+            position: relative;
+            .history-txt {
+                display: none;
+                @include responsive(large-screens) {
+                    display: block;
+                    display: flex;
+                    position: absolute;
+                    top: 75%;
+                    background-color: #000000;
+                        opacity: 60%;
+                        padding: 10px;
+                    a {
+                        font-size: 14px;
+                        font-family: $font-pre-regular;
+                        color: white; 
+                        width: 80%;
+                     }
+                     img {
+                        width: 20%;
+                     }
+                } 
+                }
+        }
+        .history-img4 { 
+            grid-area: d; 
+            position: relative;
+            .history-txt {
+                display: none;
+                @include responsive(large-screens) {
+                    display: block;
+                    display: flex;
+                    position: absolute;
+                    top: 75%;
+                    background-color: #000000;
+                        opacity: 60%;
+                        padding: 10px;
+                    a {
+                        font-size: 14px;
+                        font-family: $font-pre-regular;
+                        color: white; 
+                        width: 80%;
+                     }
+                     img {
+                        width: 20%;
+                     }
+                } 
+                }
+        }
+        .history-img5 { 
+            grid-area: e; 
+            position: relative;
+            .history-txt {
+                display: none;
+                @include responsive(large-screens) {
+                    display: block;
+                    display: flex;
+                    position: absolute;
+                    top: 75%;
+                    background-color: #000000;
+                        opacity: 60%;
+                        padding: 10px;
+                    a {
+                        font-size: 14px;
+                        font-family: $font-pre-regular;
+                        color: white; 
+                        width: 80%;
+                     }
+                     img {
+                        width: 20%;
+                     }
+                } 
+                }
+        }
+        .history-img6 { 
+            grid-area: f;
+            position: relative; 
+            .history-txt {
+                display: none;
+                @include responsive(large-screens) {
+                    display: block;
+                    display: flex;
+                    position: absolute;
+                    top: 75%;
+                    background-color: #000000;
+                        opacity: 60%;
+                        padding: 10px;
+                    a {
+                        font-size: 14px;
+                        font-family: $font-pre-regular;
+                        color: white; 
+                        width: 80%;
+                     }
+                     img {
+                        width: 20%;
+                     }
+                } 
+                }
+        }
+        .history-img7 { 
+            grid-area: g;
+            position: relative; 
+            .history-txt {
+                display: none;
+                @include responsive(large-screens) {
+                    display: block;
+                    display: flex;
+                    position: absolute;
+                    top: 89%;
+                    background-color: #000000;
+                        opacity: 60%;
+                        padding: 10px;
+                    a {
+                        font-size: 14px;
+                        font-family: $font-pre-regular;
+                        color: white; 
+                        width: 80%;
+                     }
+                     img {
+                        width: 20%;
+                     }
+                } 
+                }}
+        .history-img8 { 
+            grid-area: h; 
+            position: relative;
+            .history-txt {
+                display: none;
+                @include responsive(large-screens) {
+                    display: block;
+                    display: flex;
+                    position: absolute;
+                    top: 67%;
+                    background-color: #000000;
+                        opacity: 60%;
+                        padding: 10px;
+                        a {
+                            font-size: 14px;
+                            font-family: $font-pre-regular;
+                            color: white; 
+                            width: 80%;
+                         }
+                         img {
+                            width: 20%;
+                         }
+                } 
+                }
+        }
+        .history-img9 { 
+            display: none; 
+            position: relative;
+            .history-txt {
+                display: none;
+                @include responsive(large-screens) {
+                    display: block;
+                    position: absolute;
+                    top: 65%;
+                    background-color: #000000;
+                        opacity: 60%;
+                        padding: 10px;
+                    a {
+                        font-size: 14px;
+                        font-family: $font-pre-regular;
+                        color: white; 
+                        width: 80%;
+                     }
+                     img {
+                        width: 20%;
+                     }
+                } 
+                }}
+        .history-img10 { 
+            display: none; 
+            position: relative;
+            .history-txt {
+                display: none;
+                @include responsive(large-screens) {
+                    display: block;
+                    position: absolute;
+                    top: 65%;
+                    background-color: #000000;
+                        opacity: 60%;
+                        padding: 10px;
+                    a {
+                        font-size: 14px;
+                        font-family: $font-pre-regular;
+                        color: white; 
+                        width: 80%;
+                     }
+                     img {
+                        width: 20%;
+                     }
+                } 
+                }}
         @include responsive(large-screens) {
             img:nth-child(9) { display: block; grid-area: i; }
             img:nth-child(10) { display: block; grid-area: j; }

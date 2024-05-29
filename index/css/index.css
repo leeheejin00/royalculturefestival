@@ -554,8 +554,6 @@ main .intro-imgbox a:hover .overlay2 h3 {
   position: relative;
   display: flex;
   justify-content: center;
-  position: relative;
-  width: 100%;
   overflow: hidden;
   transition: transform 0.5s ease-in-out;
 }
@@ -568,41 +566,41 @@ main .intro-imgbox a:hover .overlay2 h3 {
     display: none;
   }
 }
-#notice .notice-flex-box .prev, #notice .notice-flex-box .next {
+#notice .notice-flex-box .slide1, #notice .notice-flex-box .slide2 {
   width: 8%;
   position: absolute;
   opacity: 60%;
 }
 @media (min-width: 1024px) {
-  #notice .notice-flex-box .prev, #notice .notice-flex-box .next {
+  #notice .notice-flex-box .slide1, #notice .notice-flex-box .slide2 {
     flex: none;
     display: none;
   }
 }
-#notice .notice-flex-box .prev a, #notice .notice-flex-box .next a {
+#notice .notice-flex-box .slide1 a, #notice .notice-flex-box .slide2 a {
   display: block;
   width: 100%;
   height: 100%;
 }
-#notice .notice-flex-box .prev a img, #notice .notice-flex-box .next a img {
+#notice .notice-flex-box .slide1 a img, #notice .notice-flex-box .slide2 a img {
   width: 100%;
   height: auto;
 }
-#notice .notice-flex-box .prev {
+#notice .notice-flex-box .slide1 {
   top: 40%;
   left: 3%;
 }
 @media (min-width: 1024px) {
-  #notice .notice-flex-box .prev {
+  #notice .notice-flex-box .slide1 {
     display: none;
   }
 }
-#notice .notice-flex-box .next {
+#notice .notice-flex-box .slide2 {
   top: 40%;
   left: 89%;
 }
 @media (min-width: 1024px) {
-  #notice .notice-flex-box .next {
+  #notice .notice-flex-box .slide2 {
     display: none;
   }
 }
@@ -616,7 +614,9 @@ main .intro-imgbox a:hover .overlay2 h3 {
   padding-top: 18px;
   margin: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: background-image 0.3s, background-size 0.3s, background-position 0.3s;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0.6;
+  transform: scale(0.9);
 }
 @media (min-width: 1024px) {
   #notice .notice_box, #notice .notice_box2, #notice .notice_box3 {
@@ -719,48 +719,46 @@ main .intro-imgbox a:hover .overlay2 h3 {
 #notice .notice_box a .notice-txt .date-more .more-btn, #notice .notice_box2 a .notice-txt .date-more .more-btn, #notice .notice_box3 a .notice-txt .date-more .more-btn {
   display: none;
 }
-
-.notice_box {
-  transition: transform 0.5s ease-in-out;
+#notice .notice_box {
   opacity: 60%;
   transform: scale(0.9);
   z-index: 1;
 }
 @media (min-width: 1024px) {
-  .notice_box {
+  #notice .notice_box {
     opacity: 100%;
     transform: none;
   }
-  .notice_box:hover {
+  #notice .notice_box:hover {
     background-image: url("../images/notice1.jpg");
     background-size: cover;
     background-position: center;
   }
-  .notice_box:hover .main-info, .notice_box:hover .main-info2 {
+  #notice .notice_box:hover .main-info, #notice .notice_box:hover .main-info2 {
     visibility: hidden;
   }
-  .notice_box:hover h3 {
+  #notice .notice_box:hover h3 {
     color: white;
   }
-  .notice_box:hover .more-btn {
+  #notice .notice_box:hover .more-btn {
     display: none;
   }
 }
 @media (min-width: 1024px) and (min-width: 1024px) {
-  .notice_box:hover .more-btn {
+  #notice .notice_box:hover .more-btn {
     display: block;
     position: absolute;
     bottom: 32px;
     right: 32px;
   }
-  .notice_box:hover .more-btn .square {
+  #notice .notice_box:hover .more-btn .square {
     width: 70px;
     height: 50px;
     position: relative;
     padding: 12px 24px;
     border: 1px solid black;
   }
-  .notice_box:hover .more-btn .square p {
+  #notice .notice_box:hover .more-btn .square p {
     position: absolute;
     top: 5px;
     left: -18px;
@@ -770,53 +768,51 @@ main .intro-imgbox a:hover .overlay2 h3 {
     font-size: 13px;
     line-height: 35px;
   }
-  .notice_box:hover .more-btn img {
+  #notice .notice_box:hover .more-btn img {
     position: absolute;
     right: 0;
     width: 25px;
     height: 25px;
   }
 }
-
-.notice_box2 {
-  transition: transform 0.5s ease-in-out;
+#notice .notice_box2 {
   z-index: 2;
 }
 @media (min-width: 1024px) {
-  .notice_box2 {
+  #notice .notice_box2 {
     z-index: 1;
     width: 33%;
   }
-  .notice_box2:hover {
+  #notice .notice_box2:hover {
     background-image: url("../images/notice2.png");
     background-size: cover;
     background-position: center;
   }
-  .notice_box2:hover .main-info, .notice_box2:hover .main-info2 {
+  #notice .notice_box2:hover .main-info, #notice .notice_box2:hover .main-info2 {
     visibility: hidden;
   }
-  .notice_box2:hover h3 {
+  #notice .notice_box2:hover h3 {
     color: white;
   }
-  .notice_box2:hover .more-btn {
+  #notice .notice_box2:hover .more-btn {
     display: none;
   }
 }
 @media (min-width: 1024px) and (min-width: 1024px) {
-  .notice_box2:hover .more-btn {
+  #notice .notice_box2:hover .more-btn {
     display: block;
     position: absolute;
     bottom: 32px;
     right: 32px;
   }
-  .notice_box2:hover .more-btn .square {
+  #notice .notice_box2:hover .more-btn .square {
     width: 70px;
     height: 50px;
     position: relative;
     padding: 12px 24px;
     border: 1px solid black;
   }
-  .notice_box2:hover .more-btn .square p {
+  #notice .notice_box2:hover .more-btn .square p {
     position: absolute;
     top: 5px;
     left: -18px;
@@ -826,55 +822,58 @@ main .intro-imgbox a:hover .overlay2 h3 {
     font-size: 13px;
     line-height: 35px;
   }
-  .notice_box2:hover .more-btn img {
+  #notice .notice_box2:hover .more-btn img {
     position: absolute;
     right: 0;
     width: 25px;
     height: 25px;
   }
 }
-
-.notice_box3 {
-  transition: transform 0.5s ease-in-out;
+#notice .notice_box.active, #notice .notice_box2.active, #notice .notice_box3.active {
+  opacity: 1; /* 활성화된 박스는 불투명 */
+  transform: scale(1); /* 활성화된 박스는 원래 크기 */
+  z-index: 2; /* 활성화된 박스를 앞쪽으로 */
+}
+#notice .notice_box3 {
   opacity: 60%;
   transform: scale(0.9);
   z-index: 1;
 }
 @media (min-width: 1024px) {
-  .notice_box3 {
+  #notice .notice_box3 {
     opacity: 100%;
     transform: none;
   }
-  .notice_box3:hover {
+  #notice .notice_box3:hover {
     background-image: url("../images/notice3.jpg");
     background-size: cover;
     background-position: center;
   }
-  .notice_box3:hover .main-info, .notice_box3:hover .main-info2 {
+  #notice .notice_box3:hover .main-info, #notice .notice_box3:hover .main-info2 {
     visibility: hidden;
   }
-  .notice_box3:hover h3 {
+  #notice .notice_box3:hover h3 {
     color: white;
   }
-  .notice_box3:hover .more-btn {
+  #notice .notice_box3:hover .more-btn {
     display: none;
   }
 }
 @media (min-width: 1024px) and (min-width: 1024px) {
-  .notice_box3:hover .more-btn {
+  #notice .notice_box3:hover .more-btn {
     display: block;
     position: absolute;
     bottom: 32px;
     right: 32px;
   }
-  .notice_box3:hover .more-btn .square {
+  #notice .notice_box3:hover .more-btn .square {
     width: 70px;
     height: 50px;
     position: relative;
     padding: 12px 24px;
     border: 1px solid black;
   }
-  .notice_box3:hover .more-btn .square p {
+  #notice .notice_box3:hover .more-btn .square p {
     position: absolute;
     top: 5px;
     left: -18px;
@@ -884,24 +883,11 @@ main .intro-imgbox a:hover .overlay2 h3 {
     font-size: 13px;
     line-height: 35px;
   }
-  .notice_box3:hover .more-btn img {
+  #notice .notice_box3:hover .more-btn img {
     position: absolute;
     right: 0;
     width: 25px;
     height: 25px;
-  }
-}
-
-.notice-flex-box {
-  transform: transform 0.5s ease-in-out;
-  scroll-behavior: smooth;
-  overflow-x: hidden; /* 슬라이드 overflow 조정 */
-  position: relative;
-}
-@media (min-width: 1024px) {
-  .notice-flex-box {
-    position: none;
-    width: 100%;
   }
 }
 
