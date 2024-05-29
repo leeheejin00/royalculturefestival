@@ -13,10 +13,11 @@ section.title .title-tag-btn {
   position: relative;
   display: flex;
   align-items: center;
+  margin-bottom: 8px;
 }
 section.title .title-tag-btn h2 {
   margin-right: 16px;
-  font-size: 22px;
+  font-size: 20px;
 }
 section.title .title-tag-btn .tag {
   font-size: 12px;
@@ -32,7 +33,7 @@ section.title .title-tag-btn .ongoing, section.title .title-tag-btn .booking {
 }
 @media (min-width: 1024px) {
   section.title .title-tag-btn .ongoing, section.title .title-tag-btn .booking {
-    display: inline;
+    display: inline-block;
   }
 }
 section.title .title-tag-btn .remaining {
@@ -40,18 +41,17 @@ section.title .title-tag-btn .remaining {
   right: 0;
   top: 0;
   display: flex;
-  justify-content: end;
-  align-items: center;
+  flex-direction: column;
   margin-top: -3px;
-  padding: 4px 8px;
+  padding: 8px 8px;
   border-radius: 8px;
-  border: 1px solid #2f2411;
+  background-color: #ffbe0f;
   font-size: 12px;
 }
 section.title .title-tag-btn .remaining img {
   width: 24px;
   height: 24px;
-  margin-right: 8px;
+  margin: 0 auto 4px;
 }
 @media (min-width: 1024px) {
   section.title .title-tag-btn {
@@ -62,8 +62,9 @@ section.title .place-period {
   display: flex;
 }
 section.title .place-period p {
-  font-size: 14px;
-  margin-right: 16px;
+  color: #cccccc;
+  font-size: 12px;
+  margin-right: 8px;
 }
 
 .booking-btn {
