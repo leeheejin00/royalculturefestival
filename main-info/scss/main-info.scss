@@ -7,7 +7,7 @@
 
 .modal-overlay {
     display:none;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -19,13 +19,13 @@
     
     .form {
         position: fixed;
-        top: 0%;
-        left: 35%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: none;
         background: #251a06;
         padding: 40px;
         max-width: 600px;
-        margin: 100px auto;
         border-radius: 4px;
         box-shadow: 0 4px 10px 4px rgba(#251a06, 0.3);
         z-index: 101;
