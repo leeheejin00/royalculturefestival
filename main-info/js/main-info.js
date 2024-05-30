@@ -28,6 +28,57 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+
+    // 로그인 및 회원가입 창
+
+
+      var loginToggle = document.getElementById('login-toggle');
+      var modalOverlay = document.querySelector('.modal-overlay');
+      var modalForm = document.querySelector('.form');
+    
+      // 로그인 토글 버튼 클릭 이벤트
+      loginToggle.addEventListener('click', function(e) {
+        e.preventDefault(); // 기본 동작 방지
+        modalForm.style.display = 'block'; // 폼을 보이게 함
+        modalOverlay.style.display = 'block'; // 배경을 보이게 함
+      });
+    
+      // 모달 오버레이 클릭 이벤트
+      modalOverlay.addEventListener('click', function() {
+        this.style.display = 'none'; // 배경을 숨김
+        modalForm.style.display = 'none'; // 폼을 숨김
+      });
+    
+      // 탭 메커니즘 구현
+      document.querySelectorAll('.tab a').forEach(function(tab) {
+        tab.addEventListener('click', function(e) {
+          e.preventDefault();
+      
+          var parent = this.parentElement;
+          parent.classList.add('active');
+          Array.from(parent.parentElement.children).forEach(function(sibling) {
+            if (sibling !== parent) {
+              sibling.classList.remove('active');
+            }
+          });
+      
+          var target = this.getAttribute('href');
+          document.querySelectorAll('.tab-content > div').forEach(function(div) {
+            if (div !== document.querySelector(target)) {
+              div.style.display = 'none';
+            }
+          });
+      
+          document.querySelector(target).style.display = 'block';
+          modalOverlay.style.display = 'block'; // 배경을 보이게 함
+        });
+      });
+
+    
+  
+
+
 });
 
 function slideLeft() {

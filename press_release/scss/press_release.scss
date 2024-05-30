@@ -7,16 +7,30 @@
 @import "../../scss/footer.scss";
 
 .tab_menu {
-    display: none;
+    // display: none;
     position: relative;
     z-index: 1000;
+    padding: 20px;
+    margin: 40px auto;
+
+    max-width: 600px;
+    background-color: #cc980f;
+    box-shadow:0 4px 10px 4px rgba(black,.3);
   
     .list {
       overflow: hidden;
+      background-color: aqua;
   
       li {
         float: left;
         margin-right: 14px;
+        float: left;
+        width: 50%;
+
+        a {
+            font-size: 20px;
+            font-family: $font-medium;
+        }
   
         &.is_on {
           .btn {
@@ -33,6 +47,14 @@
   
     .cont_area {
       margin-top: 10px;
+
+      h1 {
+        text-align:center;
+        // color:white;
+        font-size: 30px;
+        font-family: $font-pre-bold;
+        margin: 0 0 40px;
+      }
   
       .cont {
         display: none;
