@@ -511,42 +511,6 @@
     display: flex;
   }
 }
-#run .run1 .run1-img {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-@media (min-width: 1024px) {
-  #run .run1 .run1-img {
-    width: 50%;
-    overflow: visible;
-  }
-}
-#run .run1 .run1-img img {
-  flex: 1;
-  min-width: 60%;
-  height: 100%;
-  position: relative;
-}
-@media (min-width: 1024px) {
-  #run .run1 .run1-img img {
-    min-width: 60%;
-  }
-}
-#run .run1 .run1-img img:nth-child(1) {
-  transform: scale(0.9);
-  z-index: 1;
-}
-#run .run1 .run1-img img:nth-child(3) {
-  transform: scale(0.9);
-  z-index: 1;
-}
-#run .run1 .run1-img img:nth-child(2) {
-  z-index: 1;
-}
 #run .run1 .run1-txt {
   position: absolute;
   top: 65%;
@@ -600,37 +564,86 @@
     text-align: right;
   }
 }
+#run .run1 .run1-allimg {
+  overflow: hidden;
+  position: relative;
+}
+#run .run1 .run1-allimg .run1-img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  width: 300%;
+  animation: slide-right 15s infinite linear;
+}
+@media (min-width: 1024px) {
+  #run .run1 .run1-allimg .run1-img {
+    width: 50%;
+    overflow: visible;
+  }
+}
+#run .run1 .run1-allimg .run1-img img {
+  flex: 1;
+  min-width: 33.3333333333%;
+  height: 100%;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  #run .run1 .run1-allimg .run1-img img {
+    min-width: 60%;
+  }
+}
+#run .run1 .run1-allimg .run1-img img:nth-child(1) {
+  transform: scale(0.9);
+  min-width: 33.3333333333%;
+  z-index: 1;
+}
+#run .run1 .run1-allimg .run1-img img:nth-child(3) {
+  transform: scale(0.9);
+  z-index: 1;
+}
+#run .run1 .run1-allimg .run1-img img:nth-child(2) {
+  z-index: 1;
+}
 #run .run2 {
   position: relative;
 }
-#run .run2 .run2-img-pc {
+#run .run2 .run2-allimg-pc {
+  overflow: hidden;
+}
+#run .run2 .run2-allimg-pc .run2-img-pc {
   display: none;
 }
 @media (min-width: 1024px) {
-  #run .run2 .run2-img-pc {
+  #run .run2 .run2-allimg-pc .run2-img-pc {
     margin-top: 20%;
     display: flex;
     width: 100%;
     overflow: hidden;
     opacity: 50%;
   }
-  #run .run2 .run2-img-pc img {
+  #run .run2 .run2-allimg-pc .run2-img-pc img {
     width: 20%;
     padding-right: 15px;
   }
 }
-#run .run2 .run2-img {
+#run .run2 .run2-allimg {
+  overflow: hidden;
+  position: relative;
+}
+#run .run2 .run2-allimg .run2-img {
   margin-top: 7%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   position: relative;
   width: 100%;
-  overflow: hidden;
+  animation: slide-left 15s infinite linear;
   margin-bottom: 50%;
 }
 @media (min-width: 1024px) {
-  #run .run2 .run2-img {
+  #run .run2 .run2-allimg .run2-img {
     overflow: hidden;
     padding: 0;
     width: 70%;
@@ -638,27 +651,28 @@
     margin-bottom: 25%;
   }
 }
-#run .run2 .run2-img img {
+#run .run2 .run2-allimg .run2-img img {
   flex: 1;
-  min-width: 45%;
-  position: relative;
-  margin-top: 30%;
+  min-width: 100%;
+  height: 100%;
+  margin-top: 20%;
 }
 @media (min-width: 1024px) {
-  #run .run2 .run2-img img {
+  #run .run2 .run2-allimg .run2-img img {
     margin-top: 5%;
   }
 }
-#run .run2 .run2-img img:nth-child(1), #run .run2 .run2-img img:nth-child(4) {
+#run .run2 .run2-allimg .run2-img img:nth-child(1), #run .run2 .run2-allimg .run2-img img:nth-child(4) {
   transform: scale(0.9);
   z-index: 1;
 }
-#run .run2 .run2-img img:nth-child(2), #run .run2 .run2-img img:nth-child(3) {
+#run .run2 .run2-allimg .run2-img img:nth-child(2), #run .run2 .run2-allimg .run2-img img:nth-child(3) {
+  transform: scale(0.9);
   z-index: 2;
 }
 #run .run2 .run2-txt {
   position: absolute;
-  top: 80%;
+  top: 53%;
   background-color: #f6f6f6;
   z-index: 5;
   background-color: #f6f6f6;
@@ -705,5 +719,21 @@
     font-size: 24px;
     font-family: "Pretendard-Light";
     text-align: left;
+  }
+}
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }/*# sourceMappingURL=gungdoong.css.map */
