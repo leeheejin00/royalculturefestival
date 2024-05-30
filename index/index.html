@@ -207,9 +207,6 @@
               <a href="#"><img src="./images/main_06.jpg" alt="palace" class="mo-palace"></a>
             </div>
             <div class="container">
-              <div class="palace-img-box">
-                <a href="#"><img src="./images/palace.png" alt="palace" class="palace"></a>
-              </div>
               <div class="palace-txt1">
                 <div class="txt">
                   <h2>서울 5대 고궁과 종묘</h2>
@@ -267,7 +264,6 @@
                 </div>
               </div>
             </div>
-            
             <script>
                 // 슬라이드 요소 선택
                 const images = document.querySelectorAll('.mo-palace-box1, .mo-palace-box2, .mo-palace-box3, .mo-palace-box4, .mo-palace-box5, .mo-palace-box6');
@@ -332,6 +328,31 @@
                     nextSlide1();
                     startSlideShow();
                 });
+            </script>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                const palaceTxt1 = document.querySelector('.palace-txt1');
+                const moPalaceBoxes = document.querySelectorAll('.mo-palace-box1, .mo-palace-box2, .mo-palace-box3, .mo-palace-box4, .mo-palace-box5, .mo-palace-box6');
+                const palaceTxt2 = document.querySelector('.palace-txt2');
+
+                const observerOptions = {
+                    threshold: 0.1
+                };
+
+                const fadeInObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('fade-in-up');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                fadeInObserver.observe(palaceTxt1);
+                moPalaceBoxes.forEach(box => fadeInObserver.observe(box));
+                fadeInObserver.observe(palaceTxt2);
+            });
             </script>
           </section>
 
@@ -451,9 +472,9 @@
             </div>
                 <div class="notice-flex-box">
                     <div class="slide1">
-                        <a href="javascript:void(0)" onclick="slideLeft()"><img src="./images/left_arrow.png" alt=""></a>
+                        <a href=""><img src="./images/left_arrow.png" alt=""></a>
                     </div>
-                        <div class="notice_box">
+                        <div class="notice_box active">
                             <a href="#">
                                 <div class="notice-txt">
                                     <div class="border-box">
@@ -526,7 +547,7 @@
                             </a>
                         </div> <!-- notice-box3 -->
                         <div class="slide2">
-                            <a href="javascript:void(0)" onclick="slideRight()"><img src="./images/right_arrow.png" alt=""></a>
+                            <a href=""><img src="./images/right_arrow.png" alt=""></a>
                         </div>
                 </div><!-- notice-flex-box -->
             </div>

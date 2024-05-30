@@ -313,9 +313,34 @@ main .intro-imgbox a:hover .overlay2 h3 {
   margin-top: 117px;
   position: relative;
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#palace .fade-in-up {
+  opacity: 0;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 @media (min-width: 1024px) {
   #palace {
     background-color: #f8efe0;
+  }
+}
+#palace .mo-palace-box1, #palace .mo-palace-box2, #palace .mo-palace-box3, #palace .mo-palace-box4, #palace .mo-palace-box5, #palace .mo-palace-box6 {
+  opacity: 0;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  #palace .mo-palace-box1, #palace .mo-palace-box2, #palace .mo-palace-box3, #palace .mo-palace-box4, #palace .mo-palace-box5, #palace .mo-palace-box6 {
+    width: 100%;
   }
 }
 #palace .mo-palace-box1 .mo-palace, #palace .mo-palace-box2 .mo-palace, #palace .mo-palace-box3 .mo-palace, #palace .mo-palace-box4 .mo-palace, #palace .mo-palace-box5 .mo-palace, #palace .mo-palace-box6 .mo-palace {
@@ -323,7 +348,8 @@ main .intro-imgbox a:hover .overlay2 h3 {
 }
 @media (min-width: 1024px) {
   #palace .mo-palace-box1 .mo-palace, #palace .mo-palace-box2 .mo-palace, #palace .mo-palace-box3 .mo-palace, #palace .mo-palace-box4 .mo-palace, #palace .mo-palace-box5 .mo-palace, #palace .mo-palace-box6 .mo-palace {
-    display: none;
+    width: 35%;
+    margin-left: 280px;
   }
 }
 #palace .palace-img-box .palace {
@@ -335,6 +361,7 @@ main .intro-imgbox a:hover .overlay2 h3 {
   }
 }
 #palace .palace-txt1 {
+  opacity: 0;
   position: absolute;
   top: 10%;
   left: 0;
@@ -407,6 +434,7 @@ main .intro-imgbox a:hover .overlay2 h3 {
   }
 }
 #palace .palace-txt2 {
+  opacity: 0;
   width: 100%;
   position: absolute;
   top: 70%;
@@ -913,6 +941,11 @@ main .intro-imgbox a:hover .overlay2 h3 {
   align-items: center;
   width: 100%;
 }
+@media (min-width: 1024px) {
+  #history .history-box .menu-box .palace_gnb {
+    display: none;
+  }
+}
 #history .history-box .menu-box .palace_gnb li {
   margin-right: 10px;
   padding-top: 10px;
@@ -928,11 +961,6 @@ main .intro-imgbox a:hover .overlay2 h3 {
 }
 #history .history-box .menu-box .palace_gnb li:last-child {
   margin-right: 0;
-}
-@media (min-width: 1024px) {
-  #history .history-box .menu-box {
-    display: none;
-  }
 }
 #history .palace-img1 {
   margin-bottom: 47px;
@@ -1000,6 +1028,11 @@ main .intro-imgbox a:hover .overlay2 h3 {
      object-fit: cover;
 }
 @media (min-width: 1024px) {
+  #history .palace-img2 img {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
   #history .palace-img2 {
     display: none;
   }
@@ -1033,6 +1066,11 @@ main .intro-imgbox a:hover .overlay2 h3 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 1024px) {
+  #history .palace-img3 img {
+    display: none;
+  }
 }
 @media (min-width: 1024px) {
   #history .palace-img3 {
@@ -1070,6 +1108,11 @@ main .intro-imgbox a:hover .overlay2 h3 {
      object-fit: cover;
 }
 @media (min-width: 1024px) {
+  #history .palace-img4 img {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
   #history .palace-img4 {
     display: none;
   }
@@ -1105,6 +1148,11 @@ main .intro-imgbox a:hover .overlay2 h3 {
      object-fit: cover;
 }
 @media (min-width: 1024px) {
+  #history .palace-img5 img {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
   #history .palace-img5 {
     display: none;
   }
@@ -1117,6 +1165,11 @@ main .intro-imgbox a:hover .overlay2 h3 {
   grid-template-areas: "a a" "b d" "c d";
   gap: 10px;
   padding: 10px;
+}
+@media (min-width: 1024px) {
+  #history .palace-img6 {
+    display: none;
+  }
 }
 #history .palace-img6 h3 {
   display: none;
@@ -1140,7 +1193,7 @@ main .intro-imgbox a:hover .overlay2 h3 {
      object-fit: cover;
 }
 @media (min-width: 1024px) {
-  #history .palace-img6 {
+  #history .palace-img6 img {
     display: none;
   }
 }

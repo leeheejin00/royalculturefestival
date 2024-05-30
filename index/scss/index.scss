@@ -342,17 +342,41 @@ main {
         
         
             #palace {
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                
+                .fade-in-up {
+                    opacity: 0;
+                    animation-name: fadeInUp;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
                 margin-top: 117px;
                 position: relative;
                 @include responsive(large-screens) {
                     background-color: #f8efe0;
                 }
                 .mo-palace-box1, .mo-palace-box2, .mo-palace-box3, .mo-palace-box4, .mo-palace-box5, .mo-palace-box6 {
+                    opacity: 0;
+                    width: 100%;
+                    @include responsive(large-screens) {
+                        width: 100%;
+                        
+                    }
                     .mo-palace {
                         width: 88%;
-                    @include responsive(large-screens) {
-                      display: none;
-                    }
+                        @include responsive(large-screens) {
+                            width: 35%;
+                            margin-left: 280px;
+                        }
                     }
                 }
                 .palace-img-box {
@@ -364,6 +388,7 @@ main {
                     }
                 }
                 .palace-txt1 {
+                    opacity: 0;
                     position: absolute;
                     top: 10%;
                     left: 0;
@@ -427,6 +452,7 @@ main {
                     
                 }
                 .palace-txt2 {
+                    opacity: 0;
                     width: $width-wide;
                     position: absolute;
                     top: 70%;
@@ -870,11 +896,6 @@ main {
                 }
             }
     
-    
-
-    
-
-    
     #history {
         padding-top: 110px;
         .history-box {
@@ -889,6 +910,9 @@ main {
             }
             .menu-box {
                 .palace_gnb {
+                    @include responsive(large-screens) {
+                        display: none;
+                    }
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -911,12 +935,9 @@ main {
                         margin-right: 0;
                     }
                 }
-                @include responsive(large-screens) {
-                    display: none;
-                }
             }
         }
-
+        
         .palace-img1 {
             margin-bottom: 47px;
             h3 {
@@ -970,6 +991,9 @@ main {
                 width: $width-wide;
                 height: 100%;
                 object-fit: cover;
+                @include responsive(large-screens) {
+                    display: none;
+                }
             }
             @include responsive(large-screens) {
                 display: none;
@@ -999,6 +1023,9 @@ main {
                 width: $width-wide;
                 height: 100%;
                 object-fit: cover;
+                @include responsive(large-screens) {
+                    display: none;
+                }
             }
             @include responsive(large-screens) {
                 display: none;
@@ -1028,6 +1055,9 @@ main {
                 width: $width-wide;
                 height: 100%;
                 object-fit: cover;
+                @include responsive(large-screens) {
+                    display: none;
+                }
             }
             @include responsive(large-screens) {
                 display: none;
@@ -1057,12 +1087,18 @@ main {
                 width: $width-wide;
                 height: 100%;
                 object-fit: cover;
+                @include responsive(large-screens) {
+                    display: none;
+                }
             }
             @include responsive(large-screens) {
                 display: none;
             }
           }
           .palace-img6 {
+              @include responsive(large-screens) {
+                  display: none;
+              }
             margin-bottom: 47px;
             h3 {
                 display: none;
@@ -1081,14 +1117,13 @@ main {
             img:nth-child(2) { grid-area: b; }
             img:nth-child(3) { grid-area: c; }
             img:nth-child(4) { grid-area: d; }
-
             img {
                 width: $width-wide;
                 height: 100%;
                 object-fit: cover;
-            }
-            @include responsive(large-screens) {
-                display: none;
+                @include responsive(large-screens) {
+                    display: none;
+                }
             }
           }
           .palace-img-pc {

@@ -7,47 +7,9 @@
     <link rel="stylesheet" href="../css/header_footer.css">
     <link rel="stylesheet" href="./css/index.css">
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-  let currentIndex = 0;
-  let images = document.querySelectorAll("#palace .mo-palace-box1, #palace .mo-palace-box2, #palace .mo-palace-box3, #palace .mo-palace-box4, #palace .mo-palace-box5, #palace .mo-palace-box6");
-  let texts = document.querySelectorAll("#palace .palace-txt2 .container");
-  let interval;
-
-  function showSlide(index) {
-    images.forEach((img, i) => {
-      img.style.opacity = i === index ? "1" : "0";
-    });
-    texts.forEach((txt, i) => {
-      txt.style.display = i === index ? "block" : "none";
-    });
-  }
-
-  function startSlider() {
-    interval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % images.length;
-      showSlide(currentIndex);
-    }, 2000);
-  }
-
-  function stopSlider() {
-    clearInterval(interval);
-  }
-
-  images.forEach((img) => {
-    img.addEventListener("mouseenter", stopSlider);
-    img.addEventListener("mouseleave", startSlider);
-  });
-
-  texts.forEach((txt) => {
-    txt.addEventListener("mouseenter", stopSlider);
-    txt.addEventListener("mouseleave", startSlider);
-  });
-
-  startSlider();
-});
-
-
+        
     </script>
+        
     <title>index</title>
 </head>
 <body>
