@@ -494,7 +494,7 @@ footer .copyright p {
 
 .modal-overlay {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -511,10 +511,16 @@ footer .copyright p {
   display: none;
   background: #251a06;
   padding: 40px;
-  max-width: 600px;
+  width: 300px;
+  margin: 0 auto;
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(37, 26, 6, 0.3);
   z-index: 101;
+}
+@media (min-width: 1024px) {
+  .form {
+    width: 600px;
+  }
 }
 .form .tab-group {
   list-style: none;
@@ -554,9 +560,14 @@ footer .copyright p {
 .form h1 {
   text-align: center;
   color: white;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 300;
   margin: 0 0 40px;
+}
+@media (min-width: 1024px) {
+  .form h1 {
+    font-size: 36px;
+  }
 }
 .form label {
   position: absolute;
@@ -584,11 +595,11 @@ footer .copyright p {
   color: white;
 }
 .form input, .form textarea {
-  font-size: 22px;
+  font-size: 16px;
   display: block;
   width: 100%;
   height: 100%;
-  padding: 5px 10px;
+  padding: 10px 10px;
   background: none;
   background-image: none;
   border: 1px solid #333;
@@ -599,6 +610,12 @@ footer .copyright p {
 .form input:focus, .form textarea:focus {
   outline: 0;
   border-color: #f1ebde;
+}
+@media (min-width: 1024px) {
+  .form input, .form textarea {
+    font-size: 22px;
+    padding: 5px 10px;
+  }
 }
 .form textarea {
   border: 2px solid #333;
@@ -648,6 +665,12 @@ footer .copyright p {
 }
 .form .forgot a {
   color: white;
+  font-size: 16px;
+}
+@media (min-width: 1024px) {
+  .form .forgot a {
+    font-size: 24px;
+  }
 }
 
 .start-section {
