@@ -121,18 +121,23 @@ footer {
 }
 
 .noticepg h2 {
-  font-size: 48px;
+  font-size: 24px;
   font-family: "Pretendard-Medium";
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 2px;
+}
+@media (min-width: 1024px) {
+  .noticepg h2 {
+    font-size: 48px;
+  }
 }
 .noticepg .noticepg_box {
   margin-top: 50px;
   border: 1px solid black;
 }
 .noticepg .noticepg_box h2 {
-  font-size: 30px;
+  font-size: 24px;
   font-family: "Pretendard-Medium";
   padding: 25px 30px;
   text-decoration: none;
@@ -201,23 +206,34 @@ footer {
 }
 .noticepg .noticepg_box .noticepg_info .info1 {
   margin-top: 67px;
-  font-size: 24px;
+  font-size: 20px;
   font-family: "Pretendard-Medium";
 }
 @media (min-width: 1024px) {
   .noticepg .noticepg_box .noticepg_info .info1 {
     margin-top: 124px;
+    font-size: 24px;
   }
 }
 .noticepg .noticepg_box .noticepg_info .info2 {
   margin: 40px 0;
-  font-size: 24px;
+  font-size: 20px;
   font-family: "Pretendard-Medium";
+}
+@media (min-width: 1024px) {
+  .noticepg .noticepg_box .noticepg_info .info2 {
+    font-size: 24px;
+  }
 }
 .noticepg .noticepg_box .noticepg_info .info3 {
   margin: 40px 20px;
-  font-size: 24px;
+  font-size: 18px;
   font-family: "Pretendard-Medium";
+}
+@media (min-width: 1024px) {
+  .noticepg .noticepg_box .noticepg_info .info3 {
+    font-size: 24px;
+  }
 }
 .noticepg .noticepg_box .noticepg_info .img1 {
   margin-top: 136px;
@@ -231,8 +247,8 @@ footer {
 }
 .noticepg .pre_notice {
   position: relative;
-  width: 90%;
-  height: 107px;
+  width: 100%;
+  height: 80px;
   background-color: #f0f0f0;
   margin: 50px auto 17px;
   border-radius: 15px;
@@ -241,18 +257,18 @@ footer {
 .noticepg .pre_notice img {
   position: absolute;
   left: 20px;
-  top: 30px;
+  top: 15px;
   width: 50px;
   height: 50px;
   rotate: 90deg;
 }
 .noticepg .pre_notice p {
   position: absolute;
-  top: 30%;
+  top: 7%;
   left: 110px;
   font-size: 1em;
   font-family: "Pretendard-Medium";
-  width: 300px;
+  width: 180px;
   line-height: 1.5;
 }
 .noticepg .pre_notice date {
@@ -261,18 +277,21 @@ footer {
 @media (min-width: 1024px) {
   .noticepg .pre_notice {
     margin: 60px auto 33px;
+    height: 107px;
   }
   .noticepg .pre_notice img {
     left: 50px;
+    top: 30px;
   }
   .noticepg .pre_notice p {
     width: 100%;
-    top: 35px;
+    top: 40px;
     left: 128px;
+    font-size: 18px;
   }
   .noticepg .pre_notice date {
     display: block;
-    font-size: 24px;
+    font-size: 18px;
     font-family: "Pretendard-Medium";
     text-align: right;
     line-height: 107px;
@@ -281,8 +300,8 @@ footer {
 }
 .noticepg .next_notice {
   position: relative;
-  width: 90%;
-  height: 107px;
+  width: 100%;
+  height: 80px;
   background-color: #f0f0f0;
   margin: 0 auto 60px;
   border-radius: 15px;
@@ -291,7 +310,7 @@ footer {
 .noticepg .next_notice img {
   position: absolute;
   left: 20px;
-  top: 30px;
+  top: 15px;
   width: 50px;
   height: 50px;
   rotate: -90deg;
@@ -306,26 +325,31 @@ footer {
 @media (min-width: 1024px) {
   .noticepg .next_notice {
     margin: 0 auto 80px;
+    height: 107px;
   }
   .noticepg .next_notice img {
     left: 50px;
+    top: 30px;
   }
   .noticepg .next_notice p {
-    top: 35px;
+    top: 40px;
     left: 128px;
+    font-size: 18px;
   }
 }
 .noticepg .list {
   width: 114px;
   height: 52px;
   margin: 0 auto 60px;
-  font-size: 24px;
-  font-family: "Pretendard-Medium";
   background-color: #2f2411;
-  color: white;
   text-align: center;
   line-height: 52px;
   border-radius: 10px;
+}
+.noticepg .list a {
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
+  color: white;
 }
 @media (min-width: 1024px) {
   .noticepg .list {

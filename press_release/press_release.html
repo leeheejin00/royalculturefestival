@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header_footer.css">
     <link rel="stylesheet" href="./css/press_release.css">
+    <script src="./js/press_release.js"></script>
     <title>보도자료</title>
 </head>
 <body>
@@ -14,8 +15,8 @@
             <div class="logo-icon">
                 <a href=""><img src="./images/header_logo.png" alt="header_logo"></a>
                 <div class="search-menu">
-                    <a href=""><img src="./images/internet.png" alt=""></a>
-                    <a href=""><img src="./images/korean-hat.png" alt=""></a>
+                    <a href="" ><img src="./images/internet.png" alt=""></a>
+                    <a href="" id="tab-trigger"><img src="./images/korean-hat.png" alt=""></a>
                     <a href=""><img src="./images/search.png" alt="search"></a>
                     <div class="menu-toggle-btn">
                         <span>&nbsp</span>
@@ -77,6 +78,29 @@
             </div>
         </div>
     </header>
+
+    <!--로그인/회원가입-->
+    
+    <div class="tab_menu">
+        <ul class="list">
+          <li class="is_on">
+            <a href="#tab1" class="btn">로그인</a>
+          </li>
+          <li>
+            <a href="#tab2" class="btn">회원가입</a>
+          </li>
+        </ul>
+        
+        <div class="cont_area">
+        <h1>Sign Up for Free</h1>
+          <div id="tab1" class="cont">
+            Tab Content1
+          </div>
+          <div id="tab2" class="cont">
+            Tab Content2
+          </div>
+        </div>
+      </div><!--tab_menu-->
 
     <main>
 
@@ -193,6 +217,15 @@
 
         </div><!--container-->
     </div><!--press_release-->
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="text" id="search" placeholder="검색어를 입력하세요">
+            <button id="search-btn">검색</button>
+        </div>
+    </div>
             
             
 

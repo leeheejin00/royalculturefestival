@@ -114,29 +114,78 @@ footer {
   display: block;
 }
 
+.tab_menu {
+  position: relative;
+  z-index: 1000;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  background-color: #cc980f;
+  box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.3);
+}
+.tab_menu .list {
+  overflow: hidden;
+  background-color: aqua;
+}
+.tab_menu .list li {
+  float: left;
+  margin-right: 14px;
+  float: left;
+  width: 50%;
+}
+.tab_menu .list li a {
+  font-size: 20px;
+  font-family: "Pretendard-Medium";
+}
+.tab_menu .list li.is_on .btn {
+  font-weight: bold;
+  color: green;
+}
+.tab_menu .list li .btn {
+  font-size: 13px;
+}
+.tab_menu .cont_area {
+  margin-top: 10px;
+}
+.tab_menu .cont_area h1 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Pretendard-Bold";
+  margin: 0 0 40px;
+}
+.tab_menu .cont_area .cont {
+  display: none;
+  background: #555;
+  color: #fff;
+  text-align: center;
+  width: 250px;
+  height: 100px;
+  line-height: 100px;
+}
+
 .press_release {
   position: relative;
 }
 .press_release h2 {
-  font-size: 29px;
+  font-size: 24px;
   font-family: "Pretendard-Medium";
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 1px;
 }
 .press_release .s_filter {
-  width: 27px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   top: 0;
-  right: 32px;
+  right: 24px;
 }
 @media (min-width: 1024px) {
   .press_release h2 {
     font-size: 48px;
   }
   .press_release .s_filter {
-    right: 600px;
+    right: 300px;
   }
 }
 .press_release .news_box1 {
@@ -145,7 +194,7 @@ footer {
 .press_release .news_box1 .press_release_box .press_release_1 {
   width: 100%;
   height: 416px;
-  margin: 60px auto 200px;
+  margin: 30px auto 200px;
 }
 .press_release .news_box1 .press_release_box .press_info_box {
   position: absolute;
@@ -167,20 +216,10 @@ footer {
   font-family: "KimjungchulMyungjo-Regular";
 }
 .press_release .news_box1 .press_release_box .press_info_box strong {
-  position: absolute;
-  top: 62%;
-  right: 20px;
-  color: white;
-  font-size: 18px;
-  font-family: "KimjungchulMyungjo-Regular";
+  display: none;
 }
 .press_release .news_box1 .press_release_box .press_info_box .more_arrow {
-  position: absolute;
-  top: 68%;
-  right: 28%;
-  width: 32px;
-  height: 1px;
-  border: 1px solid #cc980f;
+  display: none;
 }
 .press_release .news_box1 .press_release_box2 .press_release_2 {
   width: 100%;
@@ -196,12 +235,14 @@ footer {
   padding: 20px;
 }
 .press_release .news_box1 .press_release_box2 .press_info_box2 h3 {
+  width: 245px;
   font-size: 20px;
   font-family: "KimjungchulMyungjo-Regular";
   color: white;
 }
 .press_release .news_box1 .press_release_box2 .press_info_box2 h3 a {
   color: white;
+  padding-right: 20px;
 }
 .press_release .news_box1 .press_release_box2 .press_info_box2 p {
   margin-top: 15px;
@@ -210,20 +251,10 @@ footer {
   font-family: "KimjungchulMyungjo-Regular";
 }
 .press_release .news_box1 .press_release_box2 .press_info_box2 strong {
-  position: absolute;
-  top: 62%;
-  right: 20px;
-  color: white;
-  font-size: 18px;
-  font-family: "KimjungchulMyungjo-Regular";
+  display: none;
 }
 .press_release .news_box1 .press_release_box2 .press_info_box2 .more_arrow2 {
-  position: absolute;
-  top: 68%;
-  right: 28%;
-  width: 32px;
-  height: 1px;
-  border: 1px solid #cc980f;
+  display: none;
 }
 @media (min-width: 1024px) {
   .press_release .news_box1 {
@@ -240,12 +271,21 @@ footer {
     height: 479px;
     margin-left: 36px;
     margin-bottom: 178px;
+    margin-top: 60px;
   }
   .press_release .news_box1 .press_release_box .press_info_box {
     width: 545px;
     height: 246px;
     top: 420px;
     left: 0;
+    cursor: pointer;
+  }
+  .press_release .news_box1 .press_release_box .press_info_box:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box1 .press_release_box .press_info_box:hover .more_arrow {
+    top: 70%;
+    right: 20%;
   }
   .press_release .news_box1 .press_release_box .press_info_box h3 {
     font-size: 24px;
@@ -254,9 +294,23 @@ footer {
     font-size: 18px;
     margin-top: 40px;
   }
+  .press_release .news_box1 .press_release_box .press_info_box strong {
+    display: block;
+    position: absolute;
+    top: 62%;
+    right: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: "KimjungchulMyungjo-Regular";
+  }
   .press_release .news_box1 .press_release_box .press_info_box .more_arrow {
+    display: block;
+    position: absolute;
     top: 66.5%;
     right: 15%;
+    width: 32px;
+    height: 1px;
+    border: 1px solid #cc980f;
   }
   .press_release .news_box1 .press_release_box2 {
     width: 696px;
@@ -273,17 +327,42 @@ footer {
     height: 246px;
     top: 420px;
     right: 50px;
+    cursor: pointer;
+  }
+  .press_release .news_box1 .press_release_box2 .press_info_box2:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box1 .press_release_box2 .press_info_box2:hover .more_arrow2 {
+    top: 70%;
+    right: 20%;
   }
   .press_release .news_box1 .press_release_box2 .press_info_box2 h3 {
     font-size: 24px;
+  }
+  .press_release .news_box1 .press_release_box2 .press_info_box2 h3 a {
+    padding-right: 0;
   }
   .press_release .news_box1 .press_release_box2 .press_info_box2 p {
     font-size: 18px;
     margin-top: 40px;
   }
+  .press_release .news_box1 .press_release_box2 .press_info_box2 strong {
+    display: block;
+    position: absolute;
+    top: 62%;
+    right: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: "KimjungchulMyungjo-Regular";
+  }
   .press_release .news_box1 .press_release_box2 .press_info_box2 .more_arrow2 {
+    display: block;
+    position: absolute;
     top: 66.5%;
     right: 15%;
+    width: 32px;
+    height: 1px;
+    border: 1px solid #cc980f;
   }
 }
 .press_release .news_box2 {
@@ -314,20 +393,10 @@ footer {
   font-family: "KimjungchulMyungjo-Regular";
 }
 .press_release .news_box2 .press_release_box3 .press_info_box3 strong {
-  position: absolute;
-  top: 62%;
-  right: 20px;
-  color: white;
-  font-size: 18px;
-  font-family: "KimjungchulMyungjo-Regular";
+  display: none;
 }
 .press_release .news_box2 .press_release_box3 .press_info_box3 .more_arrow3 {
-  position: absolute;
-  top: 68%;
-  right: 28%;
-  width: 32px;
-  height: 1px;
-  border: 1px solid #cc980f;
+  display: none;
 }
 .press_release .news_box2 .press_release_box4 .press_release_4 {
   width: 100%;
@@ -354,20 +423,10 @@ footer {
   font-family: "KimjungchulMyungjo-Regular";
 }
 .press_release .news_box2 .press_release_box4 .press_info_box4 strong {
-  position: absolute;
-  top: 62%;
-  right: 20px;
-  color: white;
-  font-size: 18px;
-  font-family: "KimjungchulMyungjo-Regular";
+  display: none;
 }
 .press_release .news_box2 .press_release_box4 .press_info_box4 .more_arrow4 {
-  position: absolute;
-  top: 68%;
-  right: 28%;
-  width: 32px;
-  height: 1px;
-  border: 1px solid #cc980f;
+  display: none;
 }
 .press_release .news_box2 .press_release_box5 .press_release_5 {
   width: 100%;
@@ -397,20 +456,10 @@ footer {
   font-family: "KimjungchulMyungjo-Regular";
 }
 .press_release .news_box2 .press_release_box5 .press_info_box5 strong {
-  position: absolute;
-  top: 62%;
-  right: 20px;
-  color: white;
-  font-size: 18px;
-  font-family: "KimjungchulMyungjo-Regular";
+  display: none;
 }
 .press_release .news_box2 .press_release_box5 .press_info_box5 .more_arrow5 {
-  position: absolute;
-  top: 68%;
-  right: 28%;
-  width: 32px;
-  height: 1px;
-  border: 1px solid #cc980f;
+  display: none;
 }
 @media (min-width: 1024px) {
   .press_release .news_box2 {
@@ -426,6 +475,14 @@ footer {
     height: 211px;
     top: 568px;
     left: 59px;
+    cursor: pointer;
+  }
+  .press_release .news_box2 .press_release_box3 .press_info_box3:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box2 .press_release_box3 .press_info_box3:hover .more_arrow3 {
+    top: 70%;
+    right: 28%;
   }
   .press_release .news_box2 .press_release_box3 .press_info_box3 h3 {
     font-size: 24px;
@@ -434,13 +491,23 @@ footer {
   .press_release .news_box2 .press_release_box3 .press_info_box3 p {
     font-size: 20px;
   }
+  .press_release .news_box2 .press_release_box3 .press_info_box3 strong {
+    display: block;
+    position: absolute;
+    top: 62%;
+    right: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: "KimjungchulMyungjo-Regular";
+  }
   .press_release .news_box2 .press_release_box3 .press_info_box3 .more_arrow3 {
+    display: block;
     position: absolute;
     top: 68%;
     right: 20%;
     width: 32px;
     height: 1px;
-    background: #cc980f;
+    border: 1px solid #cc980f;
   }
   .press_release .news_box2 .press_release_box4 .press_release_4 {
     width: 435px;
@@ -452,6 +519,14 @@ footer {
     height: 211px;
     top: 568px;
     left: 40%;
+    cursor: pointer;
+  }
+  .press_release .news_box2 .press_release_box4 .press_info_box4:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box2 .press_release_box4 .press_info_box4:hover .more_arrow4 {
+    top: 70%;
+    right: 28%;
   }
   .press_release .news_box2 .press_release_box4 .press_info_box4 h3 {
     font-size: 24px;
@@ -460,13 +535,23 @@ footer {
   .press_release .news_box2 .press_release_box4 .press_info_box4 p {
     font-size: 20px;
   }
+  .press_release .news_box2 .press_release_box4 .press_info_box4 strong {
+    display: block;
+    position: absolute;
+    top: 62%;
+    right: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: "KimjungchulMyungjo-Regular";
+  }
   .press_release .news_box2 .press_release_box4 .press_info_box4 .more_arrow4 {
+    display: block;
     position: absolute;
     top: 68%;
     right: 20%;
     width: 32px;
     height: 1px;
-    background: #cc980f;
+    border: 1px solid #cc980f;
   }
   .press_release .news_box2 .press_release_box5 .press_release_5 {
     width: 435px;
@@ -477,6 +562,14 @@ footer {
     height: 211px;
     top: 568px;
     left: 76%;
+    cursor: pointer;
+  }
+  .press_release .news_box2 .press_release_box5 .press_info_box5:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box2 .press_release_box5 .press_info_box5:hover .more_arrow5 {
+    top: 70%;
+    right: 28%;
   }
   .press_release .news_box2 .press_release_box5 .press_info_box5 h3 {
     font-size: 24px;
@@ -485,13 +578,23 @@ footer {
   .press_release .news_box2 .press_release_box5 .press_info_box5 p {
     font-size: 20px;
   }
+  .press_release .news_box2 .press_release_box5 .press_info_box5 strong {
+    display: block;
+    position: absolute;
+    top: 62%;
+    right: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: "KimjungchulMyungjo-Regular";
+  }
   .press_release .news_box2 .press_release_box5 .press_info_box5 .more_arrow5 {
+    display: block;
     position: absolute;
     top: 68%;
     right: 20%;
     width: 32px;
     height: 1px;
-    background: #cc980f;
+    border: 1px solid #cc980f;
   }
 }
 .press_release .news_box3 {
@@ -522,20 +625,10 @@ footer {
   font-family: "KimjungchulMyungjo-Regular";
 }
 .press_release .news_box3 .press_release_box6 .press_info_box6 strong {
-  position: absolute;
-  top: 62%;
-  right: 20px;
-  color: white;
-  font-size: 18px;
-  font-family: "KimjungchulMyungjo-Regular";
+  display: none;
 }
 .press_release .news_box3 .press_release_box6 .press_info_box6 .more_arrow6 {
-  position: absolute;
-  top: 68%;
-  right: 28%;
-  width: 32px;
-  height: 1px;
-  border: 1px solid #cc980f;
+  display: none;
 }
 .press_release .news_box3 .press_release_box7 .press_release_7 {
   width: 100%;
@@ -562,20 +655,10 @@ footer {
   font-family: "KimjungchulMyungjo-Regular";
 }
 .press_release .news_box3 .press_release_box7 .press_info_box7 strong {
-  position: absolute;
-  top: 62%;
-  right: 20px;
-  color: white;
-  font-size: 18px;
-  font-family: "KimjungchulMyungjo-Regular";
+  display: none;
 }
 .press_release .news_box3 .press_release_box7 .press_info_box7 .more_arrow7 {
-  position: absolute;
-  top: 68%;
-  right: 28%;
-  width: 32px;
-  height: 1px;
-  border: 1px solid #cc980f;
+  display: none;
 }
 .press_release .news_box3 .press_release_box8 .press_release_8 {
   width: 100%;
@@ -602,20 +685,10 @@ footer {
   font-family: "KimjungchulMyungjo-Regular";
 }
 .press_release .news_box3 .press_release_box8 .press_info_box8 strong {
-  position: absolute;
-  top: 62%;
-  right: 20px;
-  color: white;
-  font-size: 18px;
-  font-family: "KimjungchulMyungjo-Regular";
+  display: none;
 }
 .press_release .news_box3 .press_release_box8 .press_info_box8 .more_arrow8 {
-  position: absolute;
-  top: 68%;
-  right: 28%;
-  width: 32px;
-  height: 1px;
-  border: 1px solid #cc980f;
+  display: none;
 }
 .press_release .news_box3 .press_release_box9 .press_release_9 {
   width: 100%;
@@ -642,20 +715,10 @@ footer {
   font-family: "KimjungchulMyungjo-Regular";
 }
 .press_release .news_box3 .press_release_box9 .press_info_box9 strong {
-  position: absolute;
-  top: 62%;
-  right: 20px;
-  color: white;
-  font-size: 18px;
-  font-family: "KimjungchulMyungjo-Regular";
+  display: none;
 }
 .press_release .news_box3 .press_release_box9 .press_info_box9 .more_arrow9 {
-  position: absolute;
-  top: 68%;
-  right: 20%;
-  width: 32px;
-  height: 1px;
-  border: 1px solid #cc980f;
+  display: none;
 }
 @media (min-width: 1024px) {
   .press_release .news_box3 {
@@ -675,6 +738,14 @@ footer {
     height: 194px;
     top: 280px;
     left: -2%;
+    cursor: pointer;
+  }
+  .press_release .news_box3 .press_release_box6 .press_info_box6:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box3 .press_release_box6 .press_info_box6:hover .more_arrow6 {
+    top: 71%;
+    right: 35%;
   }
   .press_release .news_box3 .press_release_box6 .press_info_box6 h3 {
     font-size: 24px;
@@ -684,9 +755,23 @@ footer {
     color: white;
     font-size: 18px;
   }
+  .press_release .news_box3 .press_release_box6 .press_info_box6 strong {
+    display: block;
+    position: absolute;
+    top: 62%;
+    right: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: "KimjungchulMyungjo-Regular";
+  }
   .press_release .news_box3 .press_release_box6 .press_info_box6 .more_arrow6 {
+    display: block;
+    position: absolute;
     top: 68%;
     right: 25%;
+    width: 32px;
+    height: 1px;
+    border: 1px solid #cc980f;
   }
   .press_release .news_box3 .press_release_box7 {
     width: 336px;
@@ -702,6 +787,14 @@ footer {
     height: 194px;
     top: 280px;
     left: 25%;
+    cursor: pointer;
+  }
+  .press_release .news_box3 .press_release_box7 .press_info_box7:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box3 .press_release_box7 .press_info_box7:hover .more_arrow7 {
+    top: 71%;
+    right: 35%;
   }
   .press_release .news_box3 .press_release_box7 .press_info_box7 h3 {
     font-size: 24px;
@@ -711,9 +804,23 @@ footer {
     color: white;
     font-size: 18px;
   }
+  .press_release .news_box3 .press_release_box7 .press_info_box7 strong {
+    display: block;
+    position: absolute;
+    top: 62%;
+    right: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: "KimjungchulMyungjo-Regular";
+  }
   .press_release .news_box3 .press_release_box7 .press_info_box7 .more_arrow7 {
+    display: block;
+    position: absolute;
     top: 68%;
     right: 25%;
+    width: 32px;
+    height: 1px;
+    border: 1px solid #cc980f;
   }
   .press_release .news_box3 .press_release_box8 {
     width: 336px;
@@ -729,6 +836,14 @@ footer {
     height: 194px;
     top: 280px;
     left: 52%;
+    cursor: pointer;
+  }
+  .press_release .news_box3 .press_release_box8 .press_info_box8:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box3 .press_release_box8 .press_info_box8:hover .more_arrow8 {
+    top: 71%;
+    right: 35%;
   }
   .press_release .news_box3 .press_release_box8 .press_info_box8 h3 {
     font-size: 24px;
@@ -738,9 +853,23 @@ footer {
     color: white;
     font-size: 18px;
   }
+  .press_release .news_box3 .press_release_box8 .press_info_box8 strong {
+    display: block;
+    position: absolute;
+    top: 62%;
+    right: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: "KimjungchulMyungjo-Regular";
+  }
   .press_release .news_box3 .press_release_box8 .press_info_box8 .more_arrow8 {
+    display: block;
+    position: absolute;
     top: 68%;
     right: 25%;
+    width: 32px;
+    height: 1px;
+    border: 1px solid #cc980f;
   }
   .press_release .news_box3 .press_release_box9 {
     width: 336px;
@@ -756,6 +885,14 @@ footer {
     height: 194px;
     top: 280px;
     left: 79%;
+    cursor: pointer;
+  }
+  .press_release .news_box3 .press_release_box9 .press_info_box9:hover strong {
+    font-size: 30px;
+  }
+  .press_release .news_box3 .press_release_box9 .press_info_box9:hover .more_arrow9 {
+    top: 71%;
+    right: 35%;
   }
   .press_release .news_box3 .press_release_box9 .press_info_box9 h3 {
     font-size: 24px;
@@ -765,9 +902,23 @@ footer {
     color: white;
     font-size: 18px;
   }
+  .press_release .news_box3 .press_release_box9 .press_info_box9 strong {
+    display: block;
+    position: absolute;
+    top: 62%;
+    right: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: "KimjungchulMyungjo-Regular";
+  }
   .press_release .news_box3 .press_release_box9 .press_info_box9 .more_arrow9 {
+    display: block;
+    position: absolute;
     top: 68%;
     right: 25%;
+    width: 32px;
+    height: 1px;
+    border: 1px solid #cc980f;
   }
 }
 .press_release .num_arr {
@@ -777,7 +928,7 @@ footer {
   margin: 0 auto 90px;
 }
 .press_release .num_arr p {
-  font-size: 13px;
+  font-size: 18px;
   font-family: "Pretendard-Regular";
 }
 @media (min-width: 1024px) {
@@ -788,5 +939,62 @@ footer {
   }
   .press_release .num_arr p {
     font-size: 24px;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 60px;
+}
+.modal .modal-content {
+  position: absolute;
+  top: 195px;
+  left: 41px;
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+.modal .modal-content input {
+  width: 230px;
+}
+.modal .modal-content .close {
+  color: #aaa;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modal .modal-content .close:hover, .modal .modal-content .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .modal .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    width: 100%;
+  }
+  .modal .modal-content input {
+    width: 80%;
+    height: 30px;
+    padding-left: 15px;
+  }
+  .modal .modal-content #search-btn {
+    width: 50px;
+    height: 30px;
   }
 }/*# sourceMappingURL=press_release.css.map */
