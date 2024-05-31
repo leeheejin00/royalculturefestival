@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header_footer.css">
     <link rel="stylesheet" href="./css/index.css">
-    <script>
-        
-    </script>
     <title>index</title>
 </head>
 <body>
@@ -87,6 +84,22 @@
                 </form>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuItems = document.querySelectorAll('.gnb > li > a');
+        
+                menuItems.forEach(item => {
+                    item.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const submenu = this.nextElementSibling;
+        
+                        if (submenu && submenu.classList.contains('submenu')) {
+                            submenu.classList.toggle('open');
+                        }
+                    });
+                });
+            });
+        </script>
     </header>
 
     <main>
@@ -175,66 +188,293 @@
         </section>
 
         <section id="palace">
-            <div class="mo-palace-box">
-                <a href=""><img src="./images/palace.png" alt="palace" class="mo-palace"></a>
+            <div class="mo-palace-box1">
+              <a href="#"><img src="./images/palace.png" alt="palace" class="mo-palace"></a>
+            </div>
+            <div class="mo-palace-box2">
+              <a href="#"><img src="./images/main_02.jpg" alt="palace" class="mo-palace"></a>
+            </div>
+            <div class="mo-palace-box3">
+              <a href="#"><img src="./images/main_03.jpg" alt="palace" class="mo-palace"></a>
+            </div>
+            <div class="mo-palace-box4">
+              <a href="#"><img src="./images/main_04.jpg" alt="palace" class="mo-palace"></a>
+            </div>
+            <div class="mo-palace-box5">
+              <a href="#"><img src="./images/main_05.jpg" alt="palace" class="mo-palace"></a>
+            </div>
+            <div class="mo-palace-box6">
+              <a href="#"><img src="./images/main_06.jpg" alt="palace" class="mo-palace"></a>
             </div>
             <div class="container">
-                <div class="palace-img-box">
-                    <a href=""><img src="./images/palace.png" alt="palace" class="palace"></a>
+              <div class="palace-txt1">
+                <div class="txt">
+                  <h2>서울 5대 고궁과 종묘</h2>
+                  <p>
+                    <span class="txt1">우두커니 자리를 지키며<br></span>
+                    <span class="txt2">수백 년의 역사와 아름다움을 간직한<br></span>
+                    <span class="txt3">우리 고궁을 직접 느껴보세요</span>
+                  </p>
                 </div>
-                <div class="palace-txt1">
-                    <div class="txt">
-                        <h2>서울 5대 고궁과 종묘</h2>
-                        <p>
-                            <span class="txt1">우두커니 자리를 지키며<br></span>
-                            <span class="txt2">수백 년의 역사와 아름다움을 간직한<br></span>
-                            <span class="txt3">우리 고궁을 직접 느껴보세요</span>
-                        </p>
-                    </div>
-                </div>
+              </div>
             </div>
-                <div class="palace-txt2">
-                    <div class="container">
-                        <div class="palace_title">
-                            <h2><img src="./images/palace_icon.png" alt="">
-                            경복궁</h2>
-                        </div>
-                        <p class="text1">
-                            경복궁은 조선 건국 후 가장 먼저 지어진 조선왕조의 법궁으로, 조선왕조 정궁의 면모를 확인할 수 있는 중요한 유적입니다.
-                        </p>
-                        <p class="text2">
-                            '경복'의 이름에 '새 왕조가 큰 복을 누려 변명할 것'이라는 의미가 담겨있으며, 이곳에서 세종 대에 훈민정음이 창제되어 반포되기도 하였답니다.
-                        </p>
-                    </div>
+            <div class="palace-txt2">
+              <div class="container">
+                <div class="palace-slide1">
+                  <div class="palace_title">
+                    <h2><img src="./images/palace_icon.png" alt="">경복궁</h2>
+                  </div>
+                  <p class="text1">경복궁은 조선 건국 후 가장 먼저 지어진 조선왕조의 법궁으로, 조선왕조 정궁의 면모를 확인할 수 있는 중요한 유적입니다.</p>
+                  <p class="text2">'경복'의 이름에 '새 왕조가 큰 복을 누려 변명할 것'이라는 의미가 담겨있으며, 이곳에서 세종 대에 훈민정음이 창제되어 반포되기도 하였답니다.</p>
                 </div>
-        </section>
+                <div class="palace-slide2">
+                  <div class="palace_title">
+                    <h2><img src="./images/palace_icon.png" alt="">창덕궁</h2>
+                  </div>
+                  <p class="text1">1405년 법궁인 경복궁의 이궁으로 창건된 창덕궁은 주변 지형과 조화를 이루도록 자연스럽게 건축된 가장 한국적인 궁입니다.</p>
+                  <p class="text2">경복궁을 대신해 실질적인 법궁의 역할을 하기도 하였고, 한국의 유일한 궁궐후원이 조성된 휴식과 생활의 공간이 조화롭게 이루어진 궁이랍니다.</p>
+                </div>
+                <div class="palace-slide3">
+                  <div class="palace_title">
+                    <h2><img src="./images/palace_icon.png" alt="">덕수궁</h2>
+                  </div>
+                  <p class="text1">조선 제9대 성종의 형인 월산대군의 사저로 쓰이던 덕수궁은, 1897년 고종이 대한제국을 선포하며 대한제국의 황궁으로 사용한 궁입니다.</p>
+                  <p class="text2">황궁에 맞게 규모를 확장하고 격식을 높였으며, 궁궐 내 서양식 건물을 짓기 시작하여 전통 건축물과 서양식 건축물이 조화를 이루고 있답니다.</p>
+                </div>
+                <div class="palace-slide4">
+                  <div class="palace_title">
+                    <h2><img src="./images/palace_icon.png" alt="">창경궁</h2>
+                  </div>
+                  <p class="text1">창경궁은 성종이 세 명의 대비를 위해 옛 수강궁에 창건한 별궁으로, 주로 왕실 가족들이 생활 공간으로 지냈던 곳입니다.</p>
+                  <p class="text2">순종 시절 궁 내에 동물원과 식물원을 조성하고, 일제에 의해 궁의 이름마저 창경원(昌慶苑)으로 격하되는 등 아픈 역사가 남아있는 곳이기도 합니다.</p>
+                </div>
+                <div class="palace-slide5">
+                  <div class="palace_title">
+                    <h2><img src="./images/palace_icon.png" alt="">경희궁</h2>
+                  </div>
+                  <p class="text1">경희궁은 왕이 본궁을 떠나 피우하는 이궁으로 지어졌지만, 동궐인 창덕궁에 대하여 서궐이라 불리고 중요시되었던 곳입니다.</p>
+                  <p class="text2">일제강점기에 건물 대부분이 철거되고, 일본인들의 학교로 사용되어 완전히 궁궐의 자취를 잃었지만, 이후 궁터 일부를 복원하고 역사박물관을 조성하였습니다.</p>
+                </div>
+                <div class="palace-slide6">
+                  <div class="palace_title">
+                    <h2><img src="./images/palace_icon.png" alt="">종묘</h2>
+                  </div>
+                  <p class="text1">종묘(宗廟)는 조선과 대한제국의 역대 왕과 왕비, 황제와 황후의 신주를 모시고 제사를 지내는 국가 사당입니다.</p>
+                  <p class="text2">조상에 대한 예절을 매우 중요하게 생각했던 조선의 정신을 보여주는 종묘제례는 매년 5월 첫째주 일요일에 어가행렬과 함께 진행되고 있습니다.</p>
+                </div>
+              </div>
+            </div>
+            <script>
+                // 슬라이드 요소 선택
+                const images = document.querySelectorAll('.mo-palace-box1, .mo-palace-box2, .mo-palace-box3, .mo-palace-box4, .mo-palace-box5, .mo-palace-box6');
+                const texts = document.querySelectorAll('.palace-slide1, .palace-slide2, .palace-slide3, .palace-slide4, .palace-slide5, .palace-slide6');
+                
+                let currentSlide = 0;
+                const slideInterval1 = 2000; // 2초 간격
+                let interval;
+            
+                function showSlide1(index) {
+                    // 모든 슬라이드 숨기기
+                    images.forEach(img => img.style.display = 'none');
+                    texts.forEach(text => text.style.display = 'none');
+            
+                    // 현재 슬라이드 보이기
+                    images[index].style.display = 'block';
+                    texts[index].style.display = 'block';
+                }
+            
+                function nextSlide1() {
+                    currentSlide = (currentSlide + 1) % images.length;
+                    showSlide1(currentSlide);
+                }
+            
+                function prevSlide2() {
+                    currentSlide = (currentSlide - 1 + images.length) % images.length;
+                    showSlide1(currentSlide);
+                }
+            
+                function startSlideShow() {
+                    interval = setInterval(nextSlide1, slideInterval1);
+                }
+            
+                function stopSlideShow() {
+                    clearInterval(interval);
+                }
+            
+                // 초기 슬라이드 설정
+                showSlide1(currentSlide);
+                startSlideShow();
+            
+                // 마우스 호버 이벤트 설정
+                images.forEach(img => {
+                    img.addEventListener('mouseover', stopSlideShow);
+                    img.addEventListener('mouseout', startSlideShow);
+                });
+            
+                texts.forEach(text => {
+                    text.addEventListener('mouseover', stopSlideShow);
+                    text.addEventListener('mouseout', startSlideShow);
+                });
+            
+                // 슬라이드 버튼 이벤트 설정
+                document.getElementById('prevSlide2').addEventListener('click', () => {
+                    stopSlideShow();
+                    prevSlide2();
+                    startSlideShow();
+                });
+            
+                document.getElementById('nextSlide1').addEventListener('click', () => {
+                    stopSlideShow();
+                    nextSlide1();
+                    startSlideShow();
+                });
+            </script>
 
-        <section id="banner">
-            <div class="baner-slide">
-                <a href=""><img src="./images/banner1.jpg" alt=""></a>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                const palaceTxt1 = document.querySelector('.palace-txt1');
+                const moPalaceBoxes = document.querySelectorAll('.mo-palace-box1, .mo-palace-box2, .mo-palace-box3, .mo-palace-box4, .mo-palace-box5, .mo-palace-box6');
+                const palaceTxt2 = document.querySelector('.palace-txt2');
+
+                const observerOptions = {
+                    threshold: 0.1
+                };
+
+                const fadeInObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('fade-in-up');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                fadeInObserver.observe(palaceTxt1);
+                moPalaceBoxes.forEach(box => fadeInObserver.observe(box));
+                fadeInObserver.observe(palaceTxt2);
+            });
+            </script>
+          </section>
+
+          <section id="banner">
+            <div class="baner-slide-mo">
+                <div class="baner-slide-mo1">
+                    <a href=""><img src="./images/banner2.png" alt=""></a>
+                </div>
+                <div class="baner-slide-mo2">
+                    <a href=""><img src="./images/banner1.jpg" alt=""></a>
+                </div>
+                <div class="baner-slide-mo3">
+                    <a href=""><img src="./images/banner3.png" alt=""></a>
+                </div>
             </div>
             <div class="banner-box">
                 <div class="baner-slide1">
                     <a href=""><img src="./images/banner2.png" alt=""></a>
                 </div>
-                    <div class="baner-slide2">
+                <div class="baner-slide2">
                         <a href=""><img src="./images/banner1.jpg" alt=""></a>
                     </div>
                 <div class="baner-slide3">
                     <a href=""><img src="./images/banner3.png" alt=""></a>
                 </div>
             </div>
+            <script>
+                let currentSlide1 = 0;
+                const slides = document.querySelectorAll('.baner-slide-mo > div');
+                const totalSlides = slides.length;
+                const slideWidth = slides[0].clientWidth;
+                const slideContainer = document.querySelector('.baner-slide-mo');
+                let isDragging = false;
+                let startPos = 0;
+                let currentTranslate = 0;
+                let prevTranslate = 0;
+                let animationID;
+                let autoSlideInterval;
+
+                function setSliderPosition() {
+                    slideContainer.style.transform = `translateX(${-currentSlide1 * slideWidth}px)`;
+                }
+        
+                function startAutoSlide() {
+                    autoSlideInterval = setInterval(() => {
+                        currentSlide1 = (currentSlide1 + 1) % totalSlides;
+                        if (currentSlide1 === 0) {
+                            slideContainer.style.transition = 'none';
+                            currentTranslate = 0;
+                            setSliderPosition();
+                            requestAnimationFrame(() => {
+                                slideContainer.style.transition = 'transform 0.5s ease-in-out';
+                                currentSlide1++;
+                                currentTranslate = -currentSlide1 * slideWidth;
+                                setSliderPosition();
+                            });
+                        } else {
+                            currentTranslate = -currentSlide1 * slideWidth;
+                            setSliderPosition();
+                        }
+                    }, 3000);
+                }
+        
+                function stopAutoSlide() {
+                    clearInterval(autoSlideInterval);
+                }
+        
+                slideContainer.addEventListener('mouseenter', stopAutoSlide);
+                slideContainer.addEventListener('mouseleave', startAutoSlide);
+        
+                slideContainer.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    startPos = e.pageX;
+                    cancelAnimationFrame(animationID);
+                    slideContainer.style.transition = 'none';
+                    stopAutoSlide();
+                });
+        
+                slideContainer.addEventListener('mouseup', (e) => {
+                    isDragging = false;
+                    const movedBy = e.pageX - startPos;
+                    if (movedBy < -100 && currentSlide1 < totalSlides - 1) {
+                        currentSlide1++;
+                    }
+                    if (movedBy > 100 && currentSlide1 > 0) {
+                        currentSlide1--;
+                    }
+                    currentTranslate = -currentSlide1 * slideWidth;
+                    slideContainer.style.transition = 'transform 0.5s ease-in-out';
+                    setSliderPosition();
+                    startAutoSlide();
+                });
+        
+                slideContainer.addEventListener('mousemove', (e) => {
+                    if (isDragging) {
+                        const currentPosition = e.pageX;
+                        currentTranslate = prevTranslate + currentPosition - startPos;
+                        setSliderPosition();
+                    }
+                });
+        
+                slideContainer.addEventListener('mouseleave', () => {
+                    isDragging = false;
+                    slideContainer.style.transition = 'transform 0.5s ease-in-out';
+                    setSliderPosition();
+                    startAutoSlide();
+                });
+        
+                startAutoSlide();
+            </script>
         </section>
+        
 
         <section id="notice">
             <div class="container">
                 <h2>고궁소식</h2>
             </div>
                 <div class="notice-flex-box">
-                    <div class="slide-img1">
+                    <div class="slide1">
                         <a href=""><img src="./images/left_arrow.png" alt=""></a>
                     </div>
-                        <div class="notice_box">
+                        <div class="notice_box active">
                             <a href="#">
                                 <div class="notice-txt">
                                     <div class="border-box">
@@ -306,13 +546,14 @@
                                 </div>
                             </a>
                         </div> <!-- notice-box3 -->
-                    <div class="slide-img2">
-                        <a href=""><img src="./images/right_arrow.png" alt=""></a>
-                    </div>
+                        <div class="slide2">
+                            <a href=""><img src="./images/right_arrow.png" alt=""></a>
+                        </div>
                 </div><!-- notice-flex-box -->
             </div>
+            
         </section>
-
+        
         <section id="history">
             <div class="container">
                 <div class="history-box">
@@ -340,13 +581,43 @@
                         </ul>
                     </div>
                 </div>
-                <div class="palace-img">
+                <div class="palace-img1">
                     <img src="./images/palace-img1.png" alt="palace-img1">
                     <img src="./images/palace-img2.png" alt="palace-img2">
                     <img src="./images/palace-img3.png" alt="palace-img3">
                     <img src="./images/palace-img4.png" alt="palace-img4">
                 </div>
                 <div class="palace-img2">
+                    <img src="./images/chang1.jpg">
+                    <img src="./images/chang2.jpg" alt="palace-img2">
+                    <img src="./images/chang3.jpg" alt="palace-img3">
+                    <img src="./images/chang4.jpg" alt="palace-img4">
+                </div>
+                <div class="palace-img3">
+                    <img src="./images/duc1.jpg">
+                    <img src="./images/duc2.jpg" alt="palace-img2">
+                    <img src="./images/duc3.jpg" alt="palace-img3">
+                    <img src="./images/duc4.jpg" alt="palace-img4">
+                </div>
+                <div class="palace-img4">
+                    <img src="./images/changkyung1.jpg">
+                    <img src="./images/changkyung2.jpg" alt="palace-img2">
+                    <img src="./images/changkyung3.jpg" alt="palace-img3">
+                    <img src="./images/changkyung4.jpg" alt="palace-img4">
+                </div>
+                <div class="palace-img5">
+                    <img src="./images/kyung1.JPG">
+                    <img src="./images/kyung2.jpg" alt="palace-img2">
+                    <img src="./images/kyung3.jpg" alt="palace-img3">
+                    <img src="./images/kyung4.jpg" alt="palace-img4">
+                </div>
+                <div class="palace-img6">
+                    <img src="./images/jongmo1.jpg">
+                    <img src="./images/jongmo2.jpg" alt="palace-img2">
+                    <img src="./images/jongmo3.jpg" alt="palace-img3">
+                    <img src="./images/jongmo4.jpg" alt="palace-img4">
+                </div>
+                <div class="palace-img-pc">
                         <h2 class="palace-history">고 궁 발 자 취</h2>
                         <img src="./images/palace-img1.png" alt="palace-img1" class="img1">
                     <img src="./images/palace-img2.png" alt="palace-img2" class="img2">
@@ -356,6 +627,40 @@
                 </div>
             </div>
         </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const palaceLinks = document.querySelectorAll('.palace_gnb li a');
+            const palaceSections = [
+                '.palace-img1',
+                '.palace-img2',
+                '.palace-img3',
+                '.palace-img4',
+                '.palace-img5',
+                '.palace-img6'
+            ];
+
+            function showPalace(index) {
+                palaceSections.forEach((selector, i) => {
+                    const section = document.querySelector(selector);
+                    if (i === index) {
+                        section.style.display = 'grid';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            }
+
+            palaceLinks.forEach((link, index) => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showPalace(index);
+                });
+            });
+
+            // Initialize the first palace section
+            showPalace(0);
+        });
+        </script>
     </main>
 
     <footer>

@@ -115,16 +115,27 @@ footer {
 }
 
 .tab_menu {
-  display: none;
   position: relative;
   z-index: 1000;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  background-color: #cc980f;
+  box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.3);
 }
 .tab_menu .list {
   overflow: hidden;
+  background-color: aqua;
 }
 .tab_menu .list li {
   float: left;
   margin-right: 14px;
+  float: left;
+  width: 50%;
+}
+.tab_menu .list li a {
+  font-size: 20px;
+  font-family: "Pretendard-Medium";
 }
 .tab_menu .list li.is_on .btn {
   font-weight: bold;
@@ -135,6 +146,12 @@ footer {
 }
 .tab_menu .cont_area {
   margin-top: 10px;
+}
+.tab_menu .cont_area h1 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Pretendard-Bold";
+  margin: 0 0 40px;
 }
 .tab_menu .cont_area .cont {
   display: none;

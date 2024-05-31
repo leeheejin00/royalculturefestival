@@ -125,6 +125,7 @@ header {
                   li {
                       position: relative;
                       .submenu {
+                        display: none;
                           margin-top: 27px;
                           li {
                               a {
@@ -138,6 +139,10 @@ header {
                               }   
                           }
                       }
+                      .submenu.open {
+                        display: block;
+                        transition: all 0.3s ease;
+                    }
                   }
                       a {
                           color: white;
@@ -153,6 +158,7 @@ header {
                       }
                   }
               }
+            
               form {
                   .search-box {
                       position: relative;
@@ -335,453 +341,433 @@ main {
             }
         
         
-    
-    #palace {
-        margin-top: 117px;
-        position: relative;
-        @include responsive(large-screens) {
-            background-color: #f8efe0;
-        }
-        .mo-palace-box {
-            .mo-palace {
-                width: 88%;
-            @include responsive(large-screens) {
-              display: none;
-            }
-            }
-        }
-        .palace-img-box {
-            .palace {
-                display: none;
-                @include responsive(large-screens) {
-                    display: block;
-                }
-            }
-        }
-        .palace-txt1 {
-            position: absolute;
-            top: 10%;
-            left: 0;
-            width: 80%;
-            padding-bottom: 5%;
-            height: auto;
-            background: rgba(255, 255, 255, 0.9);
-            opacity: 65%;
-            @include responsive(large-screens) {
-                background: transparent;
-                left: 52%;
-            }
-            /* img {
-              display: none;
-              @include responsive(large-screens) {
-                display: block;
-            }
-            } */
-            .txt {
-                width: $width-wide;
-                h2 {
-                    width: $width-wide;
-                    font-family: $font-pre-bold;
-                    font-size: 16px;
-                    padding-top: 7%;
-                    padding-left: 16px;
-                    @include responsive(large-screens) {
-                        font-size: 24px;
-                        padding-top: 3%;
+            #palace {
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
                     }
                 }
-                p {
-                    width: $width-wide;
-                    padding-left: 16px;
-                    .txt1 {
-                        width: $width-wide;
-                        font-size: 20px;
-                        font-family: $font-thin;
-                        @include responsive(large-screens) {
-                            font-size: 38px;
-                        }
-                    }
-                    .txt2 {
-                        width: $width-wide;
-                        font-size: 20px;
-                        font-family: $font-pre-light;
-                        @include responsive(large-screens) {
-                            font-size: 38px;
-                        }
-                    }
-                    .txt3 {
-                        width: $width-wide;
-                        font-size: 20px;
-                        font-family: $font-semibold;
-                        @include responsive(large-screens) {
-                            font-size: 38px;
-                        }
-                    }
+                
+                .fade-in-up {
+                    opacity: 0;
+                    animation-name: fadeInUp;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
                 }
-            }
-            
-        }
-        .palace-txt2 {
-            width: $width-wide;
-            position: absolute;
-            top: 70%;
-            left: 10%;
-            width: 90%;
-            height: auto;
-            background-color: #2f2411;
-            opacity: 80%;
-            color: #fff;
-            @include responsive(large-screens) {
-                opacity: 100%;
-                top: 60%;
-                left: 52%;
-                width: 45%;
-            }
-            .palace_title {
-                h2 {
-                    display: flex;
-                    text-align: justify;
-                    align-items: top;
-                    font-family: $font-bold;
-                    font-size: 24px;
-                    @include responsive(large-screens) {
-                        font-size: 48px;
-                    }
-                    img {
-                        padding-top: 2px;
-                        width: 28px;
-                        margin-bottom: 8%;
-                        margin-right: 15px;
-                        @include responsive(large-screens) {
-                            padding-top: 18px;
-                        }
-                    }
-                }
-            }
-            p {
-              font-family: $font-regular;
-              text-align: justify;
-              font-size: 14px;
-              @include responsive(large-screens) {
-                font-size: 18px;
-            }
-            }
-            .text2 {
-              padding-top: 6%;
-            }
-        }
-    }
-    #banner {   
-        width: $width-wide;
-        margin-top: 229px;
-        .baner-slide {
-            img {
-              margin-top: 97px;
-              width: $width-wide;
-            }
-            @include responsive(large-screens) {
-                display: none;
-            }
-        }
-        .banner-box {
-            @include responsive(large-screens) {
-                display: flex;
-                justify-content: center;
+                margin-top: 117px;
                 position: relative;
-                width: $width-wide;
-                overflow: hidden;
-            }
-            .baner-slide1, .baner-slide2, .baner-slide3  {
-                display: none;
                 @include responsive(large-screens) {
-                    display: block;
-                    flex: 1;
-                    min-width: 80%;
-                    position: relative;
-                    img {
-                        width: 100%;
-                        height: 500px;
-                        display: block;
-                    }
-                    .baner-slide1, .baner-slide3 {
-                        opacity: 60%;
-                        transform: scale(0.9);
-                        z-index: 1;
-                    }
-                    .baner-slide2 {
-                        z-index: 2;
-                        @include responsive(large-screens) {
-                            height: 500px;
-                        }
-                    }
-
-                    @keyframes slide {
-                        0% { transform: translateX(0%); }
-                        33% { transform: translateX(-33.33%); }
-                        66% { transform: translateX(-66.66%); }
-                        100% { transform: translateX(0%); }
-                    }
-                    
-                    .banner-box {
-                        animation: slide 12s infinite;
-                        display: flex;
-                        transition: transform 0.5s ease-in-out;
-                    }
+                    background-color: #f8efe0;
                 }
-            }
-        }
-    }
-
-    #notice {
-        margin: 110px 0;
-        @include responsive(large-screens) {
-            width: 79%;
-            margin: 0 auto;
-            margin-top: 10%;
-        }
-        h2 {
-            color: #2f2411;
-            text-align: justify;
-            font-size: 16px;
-            font-family: $font-pre-bold;
-            
-            @include responsive(large-screens) {
-                display: none;
-            }
-        }
-        .notice-flex-box {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            width: $width-wide;
-            overflow: hidden;
-            @include responsive(large-screens) {
-                overflow: visible;
-                position: none;
-                .slide-img1 {
-                    display: none;
-                }
-            }
-            .slide-img1, .slide-img2 {
-                width: 8%;
-                position: absolute;
-                opacity: 60%;
-                @include responsive(large-screens) {
-                    flex: none;
-                    display: none;
-                }
-                a {
-                    display: block;
+                .mo-palace-box1, .mo-palace-box2, .mo-palace-box3, .mo-palace-box4, .mo-palace-box5, .mo-palace-box6 {
+                    opacity: 0;
                     width: 100%;
-                    height: 100%;
-            
-                    img {
+                    @include responsive(large-screens) {
                         width: 100%;
-                        height: auto;
+                        
                     }
-                }
-            }
-            .slide-img1 {
-                top: 40%;
-                left: 7%;
-                @include responsive(large-screens) {
-                    display: none;
-                }
-            }
-            .slide-img2 {
-                top: 40%;
-                left: 85%;
-                @include responsive(large-screens) {
-                    display: none;
-                }
-            }
-        }
-    
-        .notice_box, .notice_box2, .notice_box3 {
-            flex: 1;
-            min-width: 60%;
-            position: relative;
-            border: 1px solid black;
-            padding: 10px;
-            padding-right: 15px;
-            padding-top: 18px;
-            margin: 2px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // 가벼운 그림자 효과
-            transition: background-image 0.3s, background-size 0.3s, background-position 0.3s;
-            @include responsive(large-screens) {
-                flex: none;
-                min-width: 20%;
-                position: none;
-                width: 33%;
-            }
-            a {
-                .notice-txt {
-                    position: relative;
-                     // 텍스트가 이미지 위에 보이도록 설정
-                    .border-box {
-                        width: 80%;
-                        height: auto;
-                        border-left: 5px solid #2f2411;
-                        padding-left: 12px;
-                        margin-top: 24px;
-                        margin-left: 12px;
+                    .mo-palace {
+                        width: 88%;
                         @include responsive(large-screens) {
-                            &:hover {
-                                border-left: 5px solid white;
-                            }
+                            width: 35%;
+                            margin-left: 280px;
                         }
-                        span {
-                            display: block;
-                            font-size: 12px;
-                            color: #aaaaaa;
-                            padding-bottom: 5px;
-                            font-family: $font-pre-regular;
-                            @include responsive(large-screens) {
-                                font-size: 14px;
-                            }
-                        }
-                        h3 {
-                            text-align: justify;
-                            font-size: 16px;
-                            color: black;
-                            padding-bottom: 10px;
-                            font-family: $font-bold;
-                            @include responsive(large-screens) {
-                                font-size: 24px;
-                                &:hover {
-                                    color: white;
-                                }
-                            }
-                        }
-                    }
-        
-                    .main-info {
-                        text-align: justify;
-                        padding-top: 40px;
-                        padding-left: 12px;
-                        font-size: 14px;
-                        color: black;
-                        font-family: $font-pre-regular;
-                        @include responsive(large-screens) {
-                            font-size: 20px;
-                        }
-                        br {
-                            margin-bottom: 5px; // 줄바꿈 간격 조정
-                        }
-                    }
-                    .main-info2 {
-                        text-align: justify;
-                        padding-top: 35px;
-                        padding-left: 12px;
-                        font-size: 12px;
-                        color: #555;
-                        padding-bottom: 28px;
-                        font-family: $font-light;
-                        @include responsive(large-screens) {
-                            font-size: 14px;
-                        }
-                    }
-                    .date-more {
-                        display: flex;
-                        justify-content: space-between;
-                        .date {
-                            font-size: 12px;
-                            display: block;
-                            padding-left: 12px;
-                            font-family: $font-semibold;
-                            color: #aaaaaa;
-                            @include responsive(large-screens) {
-                                font-size: 14px;
-                                padding-bottom: 30px;
-                            }
-                        }
-                        .more-btn {
-                            display: none;
-                        }      
                     }
                 }
-            }
-        }
-    }
-
-        .notice_box {
-            opacity: 60%;
-            transform: scale(0.9);
-            z-index: 1;
-            @include responsive(large-screens) {
-                opacity: 100%;
-                transform: none;
-                &:hover {
-                    background-image: url('../images/notice1.jpg'); // 변경할 이미지 경로
-                    background-size: cover;
-                    background-position: center;
-                    .main-info, .main-info2 {
-                        visibility: hidden;
-                    }
-                    h3 {
-                        color: white;
-                    }
-                    .more-btn {
+                .palace-img-box {
+                    .palace {
                         display: none;
                         @include responsive(large-screens) {
                             display: block;
-                            position: absolute;
-                            bottom: 32px; right: 32px;
-                            .square {
-                                width: 70px; height: 50px;
-                                position: relative;
-                                padding: 12px 24px;
-                                border: 1px solid black;
-                                p {
-                                        position: absolute;
-                                        top: 5px;
-                                        left: -18px;
-                                        background-color: transparent;
-                                        z-index: 3;
-                                        padding: -5px 0;
-                                        font-size: 13px;
-                                        line-height: 35px;
-                                    }
-                                    
+                        }
+                    }
+                }
+                .palace-txt1 {
+                    opacity: 0;
+                    position: absolute;
+                    top: 10%;
+                    left: 0;
+                    width: 80%;
+                    padding-bottom: 5%;
+                    height: auto;
+                    background: rgba(255, 255, 255, 0.9);
+                    opacity: 65%;
+                    @include responsive(large-screens) {
+                        background: transparent;
+                        left: 52%;
+                    }
+                    /* img {
+                      display: none;
+                      @include responsive(large-screens) {
+                        display: block;
+                    }
+                    } */
+                    .txt {
+                        width: $width-wide;
+                        h2 {
+                            width: $width-wide;
+                            font-family: $font-pre-bold;
+                            font-size: 16px;
+                            padding-top: 7%;
+                            padding-left: 16px;
+                            @include responsive(large-screens) {
+                                font-size: 24px;
+                                padding-top: 3%;
+                            }
+                        }
+                        p {
+                            width: $width-wide;
+                            padding-left: 16px;
+                            .txt1 {
+                                width: $width-wide;
+                                font-size: 20px;
+                                font-family: $font-thin;
+                                @include responsive(large-screens) {
+                                    font-size: 38px;
                                 }
-                                img {  // 위치 찾기
-                                    position: absolute;
-                                    right: 0;
-                                    width: 25px; height: 25px;
+                            }
+                            .txt2 {
+                                width: $width-wide;
+                                font-size: 20px;
+                                font-family: $font-pre-light;
+                                @include responsive(large-screens) {
+                                    font-size: 38px;
                                 }
-                            }  // square
-                        }  // more-btn
+                            }
+                            .txt3 {
+                                width: $width-wide;
+                                font-size: 20px;
+                                font-family: $font-semibold;
+                                @include responsive(large-screens) {
+                                    font-size: 38px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                .palace-txt2 {
+                    opacity: 0;
+                    width: $width-wide;
+                    position: absolute;
+                    top: 70%;
+                    left: 10%;
+                    width: 90%;
+                    height: auto;
+                    background-color: #2f2411;
+                    opacity: 80%;
+                    color: #fff;
+                    @include responsive(large-screens) {
+                        opacity: 100%;
+                        top: 60%;
+                        left: 52%;
+                        width: 45%;
+                    }
+    
+                    .palace_title {
+                        h2 {
+                            display: flex;
+                            text-align: justify;
+                            align-items: top;
+                            font-family: $font-bold;
+                            font-size: 24px;
+                            @include responsive(large-screens) {
+                                font-size: 48px;
+                            }
+                            img {
+                                padding-top: 2px;
+                                width: 28px;
+                                margin-bottom: 8%;
+                                margin-right: 15px;
+                                @include responsive(large-screens) {
+                                    padding-top: 18px;
+                                }
+                            }
+                        }
+                    }
+                    p {
+                      font-family: $font-regular;
+                      text-align: justify;
+                      font-size: 14px;
+                      @include responsive(large-screens) {
+                        font-size: 18px;
+                    }
+                    }
+                    .text2 {
+                      padding-top: 6%;
+                    }
                 }
             }
-        }
-        .notice_box2 {
-            z-index: 2;
-            @include responsive(large-screens) {
-                z-index: 1;
-                width: 33%;
-                &:hover {
-                    background-image: url('../images/notice2.png'); // 변경할 이미지 경로
-                    background-size: cover;
-                    background-position: center;
-                        .main-info, .main-info2 {
-                            visibility: hidden;
+              
+
+
+            #banner {   
+                width: $width-wide;
+                margin-top: 229px;
+                overflow: hidden;
+                .baner-slide-mo {
+                    width: 300%;
+                    display: flex;
+                    transition: transform 0.5s ease-in-out;
+                    .baner-slide-mo1, .baner-slide-mo2, .baner-slide-mo3 {
+                        width: 300%;
+                        img {
+                          width: $width-wide;
+                          height: auto;
                         }
-                        h3 {
-                            color: white;
-                        }
-                        .more-btn {
+                        @include responsive(large-screens) {
                             display: none;
-                            @include responsive(large-screens) {
+                        }
+                    }
+                    }
+
+                .banner-box {
+                    @include responsive(large-screens) {
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+                        width: $width-wide;
+                        overflow: hidden;
+                    }
+                    .baner-slide1, .baner-slide2, .baner-slide3  {
+                        display: none;
+                        @include responsive(large-screens) {
+                            display: block;
+                            flex: 1;
+                            min-width: 80%;
+                            position: relative;
+                            img {
+                                width: 100%;
+                                height: 500px;
                                 display: block;
-                                position: absolute;
-                                bottom: 32px; right: 32px;
-                                .square {
-                                    width: 70px; height: 50px;
-                                    position: relative;
-                                    padding: 12px 24px;
-                                    border: 1px solid black;
-                                    p {
+                            }
+                            .baner-slide1, .baner-slide3 {
+                                opacity: 60%;
+                                transform: scale(0.9);
+                                z-index: 1;
+                            }
+                            .baner-slide2 {
+                                z-index: 2;
+                                @include responsive(large-screens) {
+                                    height: 500px;
+                                }
+                            }
+        
+                            
+                            .banner-box {
+                                display: flex;
+                                transition: transform 0.5s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #notice {
+                margin: 110px 0;
+                @include responsive(large-screens) {
+                    width: 79%;
+                    margin: 0 auto;
+                    margin-top: 10%;
+                }
+                h2 {
+                    color: #2f2411;
+                    text-align: justify;
+                    font-size: 16px;
+                    font-family: $font-pre-bold;
+            
+                    @include responsive(large-screens) {
+                        display: none;
+                    }
+                }
+                .notice-flex-box {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    overflow: hidden;
+                    transition: transform 0.5s ease-in-out;
+                    @include responsive(large-screens) {
+                        overflow: visible;
+                        position: none;
+                        .slide-img1 {
+                            display: none;
+                        }
+                    }
+                    .slide1, .slide2 {
+                        width: 8%;
+                        position: absolute;
+                        opacity: 60%;
+                        @include responsive(large-screens) {
+                            flex: none;
+                            display: none;
+                        }
+                        a {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                    .slide1 {
+                        top: 40%;
+                        left: 3%;
+                        @include responsive(large-screens) {
+                            display: none;
+                        }
+                    }
+                    .slide2 {
+                        top: 40%;
+                        left: 89%;
+                        @include responsive(large-screens) {
+                            display: none;
+                        }
+                    }
+                }
+            
+                .notice_box, .notice_box2, .notice_box3 {
+                    flex: 1;
+                    min-width: 75%;
+                    position: relative;
+                    border: 1px solid black;
+                    padding: 10px;
+                    padding-right: 15px;
+                    padding-top: 18px;
+                    margin: 2px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // 가벼운 그림자 효과
+                    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+                    opacity: 0.6;
+                    transform: scale(0.9);
+                    @include responsive(large-screens) {
+                        flex: none;
+                        min-width: 20%;
+                        position: none;
+                        width: 33%;
+                    }
+                    a {
+                        .notice-txt {
+                            position: relative;
+                            .border-box {
+                                width: 80%;
+                                height: auto;
+                                border-left: 5px solid #2f2411;
+                                padding-left: 12px;
+                                margin-top: 24px;
+                                margin-left: 12px;
+                                @include responsive(large-screens) {
+                                    &:hover {
+                                        border-left: 5px solid white;
+                                    }
+                                }
+                                span {
+                                    display: block;
+                                    font-size: 12px;
+                                    color: #aaaaaa;
+                                    padding-bottom: 5px;
+                                    font-family: $font-pre-regular;
+                                    @include responsive(large-screens) {
+                                        font-size: 14px;
+                                    }
+                                }
+                                h3 {
+                                    text-align: justify;
+                                    font-size: 16px;
+                                    color: black;
+                                    padding-bottom: 10px;
+                                    font-family: $font-bold;
+                                    @include responsive(large-screens) {
+                                        font-size: 24px;
+                                        &:hover {
+                                            color: white;
+                                        }
+                                    }
+                                }
+                            }
+            
+                            .main-info {
+                                text-align: justify;
+                                padding-top: 40px;
+                                padding-left: 12px;
+                                font-size: 14px;
+                                color: black;
+                                font-family: $font-pre-regular;
+                                @include responsive(large-screens) {
+                                    font-size: 20px;
+                                }
+                                br {
+                                    margin-bottom: 5px; // 줄바꿈 간격 조정
+                                }
+                            }
+                            .main-info2 {
+                                text-align: justify;
+                                padding-top: 35px;
+                                padding-left: 12px;
+                                font-size: 12px;
+                                color: #555;
+                                padding-bottom: 28px;
+                                font-family: $font-light;
+                                @include responsive(large-screens) {
+                                    font-size: 14px;
+                                }
+                            }
+                            .date-more {
+                                display: flex;
+                                justify-content: space-between;
+                                .date {
+                                    font-size: 12px;
+                                    display: block;
+                                    padding-left: 12px;
+                                    font-family: $font-semibold;
+                                    color: #aaaaaa;
+                                    @include responsive(large-screens) {
+                                        font-size: 14px;
+                                        padding-bottom: 30px;
+                                    }
+                                }
+                                .more-btn {
+                                    display: none;
+                                }      
+                            }
+                        }
+                    }
+                }
+            
+                .notice_box {
+                    opacity: 60%;
+                    transform: scale(0.9);
+                    z-index: 1;
+                    @include responsive(large-screens) {
+                        opacity: 100%;
+                        transform: none;
+                        &:hover {
+                            background-image: url('../images/notice1.jpg'); // 변경할 이미지 경로
+                            background-size: cover;
+                            background-position: center;
+                            .main-info, .main-info2 {
+                                visibility: hidden;
+                            }
+                            h3 {
+                                color: white;
+                            }
+                            .more-btn {
+                                display: none;
+                                @include responsive(large-screens) {
+                                    display: block;
+                                    position: absolute;
+                                    bottom: 32px; right: 32px;
+                                    .square {
+                                        width: 70px; height: 50px;
+                                        position: relative;
+                                        padding: 12px 24px;
+                                        border: 1px solid black;
+                                        p {
                                             position: absolute;
                                             top: 5px;
                                             left: -18px;
@@ -791,87 +777,124 @@ main {
                                             font-size: 13px;
                                             line-height: 35px;
                                         }
-                                        
+                                                
                                     }
-                                    img {  // 위치 찾기
+                                    img {
                                         position: absolute;
                                         right: 0;
                                         width: 25px; height: 25px;
                                     }
-                                }  // square
-                            }  // more-btn
+                                }
+                            }
+                        }
                     }
                 }
-            }
-        
-    
-        
-        .notice_box3 {
-            opacity: 60%;
-            transform: scale(0.9);
-            z-index: 1;
-            @include responsive(large-screens) {
-                opacity: 100%;
-                transform: none;
-                &:hover {
-                    background-image: url('../images/notice3.jpg'); // 변경할 이미지 경로
-                    background-size: cover;
-                    background-position: center;
-                    .main-info, .main-info2 {
-                        visibility: hidden;
-                    }
-                    h3 {
-                        color: white;
-                    }
-                    .more-btn {
-                        display: none;
-                        @include responsive(large-screens) {
-                            display: block;
-                            position: absolute;
-                            bottom: 32px; right: 32px;
-                            .square {
-                                width: 70px; height: 50px;
-                                position: relative;
-                                padding: 12px 24px;
-                                border: 1px solid black;
-                                p {
-                                        position: absolute;
-                                        top: 5px;
-                                        left: -18px;
-                                        background-color: transparent;
-                                        z-index: 3;
-                                        padding: -5px 0;
-                                        font-size: 13px;
-                                        line-height: 35px;
-                                    }
-                                    
-                                }
-                                img {  // 위치 찾기
+                .notice_box2 {
+                    z-index: 2;
+                    @include responsive(large-screens) {
+                        z-index: 1;
+                        width: 33%;
+                        &:hover {
+                            background-image: url('../images/notice2.png'); // 변경할 이미지 경로
+                            background-size: cover;
+                            background-position: center;
+                            .main-info, .main-info2 {
+                                visibility: hidden;
+                            }
+                            h3 {
+                                color: white;
+                            }
+                            .more-btn {
+                                display: none;
+                                @include responsive(large-screens) {
+                                    display: block;
                                     position: absolute;
-                                    right: 0;
-                                    width: 25px; height: 25px;
+                                    bottom: 32px; right: 32px;
+                                    .square {
+                                        width: 70px; height: 50px;
+                                        position: relative;
+                                        padding: 12px 24px;
+                                        border: 1px solid black;
+                                        p {
+                                            position: absolute;
+                                            top: 5px;
+                                            left: -18px;
+                                            background-color: transparent;
+                                            z-index: 3;
+                                            padding: -5px 0;
+                                            font-size: 13px;
+                                            line-height: 35px;
+                                        }
+                                                    
+                                    }
+                                    img {
+                                        position: absolute;
+                                        right: 0;
+                                        width: 25px; height: 25px;
+                                    }
                                 }
-                            }  // square
-                        }  // more-btn
+                            }
+                        }
+                    }
+                }
+            
+                .notice_box.active, .notice_box2.active, .notice_box3.active {
+                    opacity: 1; /* 활성화된 박스는 불투명 */
+                    transform: scale(1); /* 활성화된 박스는 원래 크기 */
+                    z-index: 2; /* 활성화된 박스를 앞쪽으로 */
+                }
+            
+                .notice_box3 {
+                    opacity: 60%;
+                    transform: scale(0.9);
+                    z-index: 1;
+                    @include responsive(large-screens) {
+                        opacity: 100%;
+                        transform: none;
+                        &:hover {
+                            background-image: url('../images/notice3.jpg'); // 변경할 이미지 경로
+                            background-size: cover;
+                            background-position: center;
+                            .main-info, .main-info2 {
+                                visibility: hidden;
+                            }
+                            h3 {
+                                color: white;
+                            }
+                            .more-btn {
+                                display: none;
+                                @include responsive(large-screens) {
+                                    display: block;
+                                    position: absolute;
+                                    bottom: 32px; right: 32px;
+                                    .square {
+                                        width: 70px; height: 50px;
+                                        position: relative;
+                                        padding: 12px 24px;
+                                        border: 1px solid black;
+                                        p {
+                                            position: absolute;
+                                            top: 5px;
+                                            left: -18px;
+                                            background-color: transparent;
+                                            z-index: 3;
+                                            padding: -5px 0;
+                                            font-size: 13px;
+                                            line-height: 35px;
+                                        }
+                                                
+                                    }
+                                    img {
+                                        position: absolute;
+                                        right: 0;
+                                        width: 25px; height: 25px;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
-        }
-    
-    
-    .notice-flex-box {
-        scroll-behavior: smooth;
-        overflow-x: hidden; /* 슬라이드 overflow 조정 */
-        position: relative;
-        @include responsive(large-screens) {
-            position: none;
-            width: $width-wide;
-        }
-    }
-    
-    
-
-    
-
     
     #history {
         padding-top: 110px;
@@ -887,6 +910,9 @@ main {
             }
             .menu-box {
                 .palace_gnb {
+                    @include responsive(large-screens) {
+                        display: none;
+                    }
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -909,13 +935,10 @@ main {
                         margin-right: 0;
                     }
                 }
-                @include responsive(large-screens) {
-                    display: none;
-                }
             }
         }
-
-        .palace-img {
+        
+        .palace-img1 {
             margin-bottom: 47px;
             h3 {
                 display: none;
@@ -939,12 +962,171 @@ main {
                 width: $width-wide;
                 height: 100%;
                 object-fit: cover;
+                @include responsive(large-screens) {
+                    display: none;
+                }
+            }
+          }
+          .palace-img2 {
+            margin-bottom: 47px;
+            h3 {
+                display: none;
+            }
+            width: $width-wide;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "a a"
+            "b d"
+            "c d"
+            ;
+            gap: 10px;
+            padding: 10px;
+            img:nth-child(1) { grid-area: a; }
+            img:nth-child(2) { grid-area: b; }
+            img:nth-child(3) { grid-area: c; }
+            img:nth-child(4) { grid-area: d; }
+
+            img {
+                width: $width-wide;
+                height: 100%;
+                object-fit: cover;
+                @include responsive(large-screens) {
+                    display: none;
+                }
             }
             @include responsive(large-screens) {
                 display: none;
             }
           }
-          .palace-img2 {
+          .palace-img3 {
+            margin-bottom: 47px;
+            h3 {
+                display: none;
+            }
+            width: $width-wide;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "a a"
+            "b d"
+            "c d"
+            ;
+            gap: 10px;
+            padding: 10px;
+            img:nth-child(1) { grid-area: a; }
+            img:nth-child(2) { grid-area: b; }
+            img:nth-child(3) { grid-area: c; }
+            img:nth-child(4) { grid-area: d; }
+
+            img {
+                width: $width-wide;
+                height: 100%;
+                object-fit: cover;
+                @include responsive(large-screens) {
+                    display: none;
+                }
+            }
+            @include responsive(large-screens) {
+                display: none;
+            }
+          }
+          .palace-img4 {
+            margin-bottom: 47px;
+            h3 {
+                display: none;
+            }
+            width: $width-wide;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "a a"
+            "b d"
+            "c d"
+            ;
+            gap: 10px;
+            padding: 10px;
+            img:nth-child(1) { grid-area: a; }
+            img:nth-child(2) { grid-area: b; }
+            img:nth-child(3) { grid-area: c; }
+            img:nth-child(4) { grid-area: d; }
+
+            img {
+                width: $width-wide;
+                height: 100%;
+                object-fit: cover;
+                @include responsive(large-screens) {
+                    display: none;
+                }
+            }
+            @include responsive(large-screens) {
+                display: none;
+            }
+          }
+          .palace-img5 {
+            margin-bottom: 47px;
+            h3 {
+                display: none;
+            }
+            width: $width-wide;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "a a"
+            "b d"
+            "c d"
+            ;
+            gap: 10px;
+            padding: 10px;
+            img:nth-child(1) { grid-area: a; }
+            img:nth-child(2) { grid-area: b; }
+            img:nth-child(3) { grid-area: c; }
+            img:nth-child(4) { grid-area: d; }
+
+            img {
+                width: $width-wide;
+                height: 100%;
+                object-fit: cover;
+                @include responsive(large-screens) {
+                    display: none;
+                }
+            }
+            @include responsive(large-screens) {
+                display: none;
+            }
+          }
+          .palace-img6 {
+              @include responsive(large-screens) {
+                  display: none;
+              }
+            margin-bottom: 47px;
+            h3 {
+                display: none;
+            }
+            width: $width-wide;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "a a"
+            "b d"
+            "c d"
+            ;
+            gap: 10px;
+            padding: 10px;
+            img:nth-child(1) { grid-area: a; }
+            img:nth-child(2) { grid-area: b; }
+            img:nth-child(3) { grid-area: c; }
+            img:nth-child(4) { grid-area: d; }
+            img {
+                width: $width-wide;
+                height: 100%;
+                object-fit: cover;
+                @include responsive(large-screens) {
+                    display: none;
+                }
+            }
+          }
+          .palace-img-pc {
             display: none;
             @include responsive(large-screens) {
                 margin-bottom: 155px;

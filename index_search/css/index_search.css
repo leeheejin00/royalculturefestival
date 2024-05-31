@@ -167,19 +167,22 @@ form .search-box .search img {
 }
 #program .program-box .program01, #program .program-box .program02, #program .program-box .program03, #program .program-box .program04 {
   width: 100%;
+}
+#program .program-box .program01 .program-img1, #program .program-box .program01 .program-img2, #program .program-box .program01 .program-img3, #program .program-box .program01 .program-img4, #program .program-box .program02 .program-img1, #program .program-box .program02 .program-img2, #program .program-box .program02 .program-img3, #program .program-box .program02 .program-img4, #program .program-box .program03 .program-img1, #program .program-box .program03 .program-img2, #program .program-box .program03 .program-img3, #program .program-box .program03 .program-img4, #program .program-box .program04 .program-img1, #program .program-box .program04 .program-img2, #program .program-box .program04 .program-img3, #program .program-box .program04 .program-img4 {
   position: relative;
 }
-#program .program-box .program01 img, #program .program-box .program02 img, #program .program-box .program03 img, #program .program-box .program04 img {
+#program .program-box .program01 .program-img1 img, #program .program-box .program01 .program-img2 img, #program .program-box .program01 .program-img3 img, #program .program-box .program01 .program-img4 img, #program .program-box .program02 .program-img1 img, #program .program-box .program02 .program-img2 img, #program .program-box .program02 .program-img3 img, #program .program-box .program02 .program-img4 img, #program .program-box .program03 .program-img1 img, #program .program-box .program03 .program-img2 img, #program .program-box .program03 .program-img3 img, #program .program-box .program03 .program-img4 img, #program .program-box .program04 .program-img1 img, #program .program-box .program04 .program-img2 img, #program .program-box .program04 .program-img3 img, #program .program-box .program04 .program-img4 img {
+  position: relative;
   width: 100%;
   border-radius: 10px;
 }
-#program .program-box .program01 .desc, #program .program-box .program02 .desc, #program .program-box .program03 .desc, #program .program-box .program04 .desc {
+#program .program-box .program01 .program-img1 .desc, #program .program-box .program01 .program-img2 .desc, #program .program-box .program01 .program-img3 .desc, #program .program-box .program01 .program-img4 .desc, #program .program-box .program02 .program-img1 .desc, #program .program-box .program02 .program-img2 .desc, #program .program-box .program02 .program-img3 .desc, #program .program-box .program02 .program-img4 .desc, #program .program-box .program03 .program-img1 .desc, #program .program-box .program03 .program-img2 .desc, #program .program-box .program03 .program-img3 .desc, #program .program-box .program03 .program-img4 .desc, #program .program-box .program04 .program-img1 .desc, #program .program-box .program04 .program-img2 .desc, #program .program-box .program04 .program-img3 .desc, #program .program-box .program04 .program-img4 .desc {
   line-height: 0.9;
   width: 100%;
   border-radius: 0 0 10px 10px;
   background-color: #2f2411;
   position: absolute;
-  bottom: 40%;
+  bottom: 0;
   opacity: 70%;
   color: white;
   padding: 7px;
@@ -187,30 +190,30 @@ form .search-box .search img {
   transition: transform 0.3s ease;
 }
 @media (min-width: 1024px) {
-  #program .program-box .program01 .desc, #program .program-box .program02 .desc, #program .program-box .program03 .desc, #program .program-box .program04 .desc {
-    bottom: 98px;
+  #program .program-box .program01 .program-img1 .desc, #program .program-box .program01 .program-img2 .desc, #program .program-box .program01 .program-img3 .desc, #program .program-box .program01 .program-img4 .desc, #program .program-box .program02 .program-img1 .desc, #program .program-box .program02 .program-img2 .desc, #program .program-box .program02 .program-img3 .desc, #program .program-box .program02 .program-img4 .desc, #program .program-box .program03 .program-img1 .desc, #program .program-box .program03 .program-img2 .desc, #program .program-box .program03 .program-img3 .desc, #program .program-box .program03 .program-img4 .desc, #program .program-box .program04 .program-img1 .desc, #program .program-box .program04 .program-img2 .desc, #program .program-box .program04 .program-img3 .desc, #program .program-box .program04 .program-img4 .desc {
+    bottom: 0;
   }
 }
-#program .program-box .program01 .desc .title, #program .program-box .program02 .desc .title, #program .program-box .program03 .desc .title, #program .program-box .program04 .desc .title {
+#program .program-box .program01 .program-img1 .desc .title, #program .program-box .program01 .program-img2 .desc .title, #program .program-box .program01 .program-img3 .desc .title, #program .program-box .program01 .program-img4 .desc .title, #program .program-box .program02 .program-img1 .desc .title, #program .program-box .program02 .program-img2 .desc .title, #program .program-box .program02 .program-img3 .desc .title, #program .program-box .program02 .program-img4 .desc .title, #program .program-box .program03 .program-img1 .desc .title, #program .program-box .program03 .program-img2 .desc .title, #program .program-box .program03 .program-img3 .desc .title, #program .program-box .program03 .program-img4 .desc .title, #program .program-box .program04 .program-img1 .desc .title, #program .program-box .program04 .program-img2 .desc .title, #program .program-box .program04 .program-img3 .desc .title, #program .program-box .program04 .program-img4 .desc .title {
   font-size: 12px;
 }
 @media (min-width: 1024px) {
-  #program .program-box .program01 .desc .title, #program .program-box .program02 .desc .title, #program .program-box .program03 .desc .title, #program .program-box .program04 .desc .title {
+  #program .program-box .program01 .program-img1 .desc .title, #program .program-box .program01 .program-img2 .desc .title, #program .program-box .program01 .program-img3 .desc .title, #program .program-box .program01 .program-img4 .desc .title, #program .program-box .program02 .program-img1 .desc .title, #program .program-box .program02 .program-img2 .desc .title, #program .program-box .program02 .program-img3 .desc .title, #program .program-box .program02 .program-img4 .desc .title, #program .program-box .program03 .program-img1 .desc .title, #program .program-box .program03 .program-img2 .desc .title, #program .program-box .program03 .program-img3 .desc .title, #program .program-box .program03 .program-img4 .desc .title, #program .program-box .program04 .program-img1 .desc .title, #program .program-box .program04 .program-img2 .desc .title, #program .program-box .program04 .program-img3 .desc .title, #program .program-box .program04 .program-img4 .desc .title {
     font-size: 18px;
   }
 }
-#program .program-box .program01 .desc .period-time .period, #program .program-box .program01 .desc .period-time .time, #program .program-box .program02 .desc .period-time .period, #program .program-box .program02 .desc .period-time .time, #program .program-box .program03 .desc .period-time .period, #program .program-box .program03 .desc .period-time .time, #program .program-box .program04 .desc .period-time .period, #program .program-box .program04 .desc .period-time .time {
+#program .program-box .program01 .program-img1 .desc .period-time .period, #program .program-box .program01 .program-img1 .desc .period-time .time, #program .program-box .program01 .program-img2 .desc .period-time .period, #program .program-box .program01 .program-img2 .desc .period-time .time, #program .program-box .program01 .program-img3 .desc .period-time .period, #program .program-box .program01 .program-img3 .desc .period-time .time, #program .program-box .program01 .program-img4 .desc .period-time .period, #program .program-box .program01 .program-img4 .desc .period-time .time, #program .program-box .program02 .program-img1 .desc .period-time .period, #program .program-box .program02 .program-img1 .desc .period-time .time, #program .program-box .program02 .program-img2 .desc .period-time .period, #program .program-box .program02 .program-img2 .desc .period-time .time, #program .program-box .program02 .program-img3 .desc .period-time .period, #program .program-box .program02 .program-img3 .desc .period-time .time, #program .program-box .program02 .program-img4 .desc .period-time .period, #program .program-box .program02 .program-img4 .desc .period-time .time, #program .program-box .program03 .program-img1 .desc .period-time .period, #program .program-box .program03 .program-img1 .desc .period-time .time, #program .program-box .program03 .program-img2 .desc .period-time .period, #program .program-box .program03 .program-img2 .desc .period-time .time, #program .program-box .program03 .program-img3 .desc .period-time .period, #program .program-box .program03 .program-img3 .desc .period-time .time, #program .program-box .program03 .program-img4 .desc .period-time .period, #program .program-box .program03 .program-img4 .desc .period-time .time, #program .program-box .program04 .program-img1 .desc .period-time .period, #program .program-box .program04 .program-img1 .desc .period-time .time, #program .program-box .program04 .program-img2 .desc .period-time .period, #program .program-box .program04 .program-img2 .desc .period-time .time, #program .program-box .program04 .program-img3 .desc .period-time .period, #program .program-box .program04 .program-img3 .desc .period-time .time, #program .program-box .program04 .program-img4 .desc .period-time .period, #program .program-box .program04 .program-img4 .desc .period-time .time {
   font-size: 12px;
 }
 @media (min-width: 1024px) {
-  #program .program-box .program01 .desc .period-time .period, #program .program-box .program01 .desc .period-time .time, #program .program-box .program02 .desc .period-time .period, #program .program-box .program02 .desc .period-time .time, #program .program-box .program03 .desc .period-time .period, #program .program-box .program03 .desc .period-time .time, #program .program-box .program04 .desc .period-time .period, #program .program-box .program04 .desc .period-time .time {
+  #program .program-box .program01 .program-img1 .desc .period-time .period, #program .program-box .program01 .program-img1 .desc .period-time .time, #program .program-box .program01 .program-img2 .desc .period-time .period, #program .program-box .program01 .program-img2 .desc .period-time .time, #program .program-box .program01 .program-img3 .desc .period-time .period, #program .program-box .program01 .program-img3 .desc .period-time .time, #program .program-box .program01 .program-img4 .desc .period-time .period, #program .program-box .program01 .program-img4 .desc .period-time .time, #program .program-box .program02 .program-img1 .desc .period-time .period, #program .program-box .program02 .program-img1 .desc .period-time .time, #program .program-box .program02 .program-img2 .desc .period-time .period, #program .program-box .program02 .program-img2 .desc .period-time .time, #program .program-box .program02 .program-img3 .desc .period-time .period, #program .program-box .program02 .program-img3 .desc .period-time .time, #program .program-box .program02 .program-img4 .desc .period-time .period, #program .program-box .program02 .program-img4 .desc .period-time .time, #program .program-box .program03 .program-img1 .desc .period-time .period, #program .program-box .program03 .program-img1 .desc .period-time .time, #program .program-box .program03 .program-img2 .desc .period-time .period, #program .program-box .program03 .program-img2 .desc .period-time .time, #program .program-box .program03 .program-img3 .desc .period-time .period, #program .program-box .program03 .program-img3 .desc .period-time .time, #program .program-box .program03 .program-img4 .desc .period-time .period, #program .program-box .program03 .program-img4 .desc .period-time .time, #program .program-box .program04 .program-img1 .desc .period-time .period, #program .program-box .program04 .program-img1 .desc .period-time .time, #program .program-box .program04 .program-img2 .desc .period-time .period, #program .program-box .program04 .program-img2 .desc .period-time .time, #program .program-box .program04 .program-img3 .desc .period-time .period, #program .program-box .program04 .program-img3 .desc .period-time .time, #program .program-box .program04 .program-img4 .desc .period-time .period, #program .program-box .program04 .program-img4 .desc .period-time .time {
     font-size: 16px;
   }
 }
-#program .program-box .program01 .desc .red-green, #program .program-box .program02 .desc .red-green, #program .program-box .program03 .desc .red-green, #program .program-box .program04 .desc .red-green {
+#program .program-box .program01 .program-img1 .desc .red-green, #program .program-box .program01 .program-img2 .desc .red-green, #program .program-box .program01 .program-img3 .desc .red-green, #program .program-box .program01 .program-img4 .desc .red-green, #program .program-box .program02 .program-img1 .desc .red-green, #program .program-box .program02 .program-img2 .desc .red-green, #program .program-box .program02 .program-img3 .desc .red-green, #program .program-box .program02 .program-img4 .desc .red-green, #program .program-box .program03 .program-img1 .desc .red-green, #program .program-box .program03 .program-img2 .desc .red-green, #program .program-box .program03 .program-img3 .desc .red-green, #program .program-box .program03 .program-img4 .desc .red-green, #program .program-box .program04 .program-img1 .desc .red-green, #program .program-box .program04 .program-img2 .desc .red-green, #program .program-box .program04 .program-img3 .desc .red-green, #program .program-box .program04 .program-img4 .desc .red-green {
   display: none;
 }
-#program .program-box .program01 .desc .red-green .red, #program .program-box .program02 .desc .red-green .red, #program .program-box .program03 .desc .red-green .red, #program .program-box .program04 .desc .red-green .red {
+#program .program-box .program01 .program-img1 .desc .red-green .red, #program .program-box .program01 .program-img2 .desc .red-green .red, #program .program-box .program01 .program-img3 .desc .red-green .red, #program .program-box .program01 .program-img4 .desc .red-green .red, #program .program-box .program02 .program-img1 .desc .red-green .red, #program .program-box .program02 .program-img2 .desc .red-green .red, #program .program-box .program02 .program-img3 .desc .red-green .red, #program .program-box .program02 .program-img4 .desc .red-green .red, #program .program-box .program03 .program-img1 .desc .red-green .red, #program .program-box .program03 .program-img2 .desc .red-green .red, #program .program-box .program03 .program-img3 .desc .red-green .red, #program .program-box .program03 .program-img4 .desc .red-green .red, #program .program-box .program04 .program-img1 .desc .red-green .red, #program .program-box .program04 .program-img2 .desc .red-green .red, #program .program-box .program04 .program-img3 .desc .red-green .red, #program .program-box .program04 .program-img4 .desc .red-green .red {
   background-color: #a5161a;
   font-size: 10px;
   font-family: "Pretendard-Regular";
@@ -218,11 +221,11 @@ form .search-box .search img {
   padding: 1px 7px;
 }
 @media (min-width: 1024px) {
-  #program .program-box .program01 .desc .red-green .red, #program .program-box .program02 .desc .red-green .red, #program .program-box .program03 .desc .red-green .red, #program .program-box .program04 .desc .red-green .red {
+  #program .program-box .program01 .program-img1 .desc .red-green .red, #program .program-box .program01 .program-img2 .desc .red-green .red, #program .program-box .program01 .program-img3 .desc .red-green .red, #program .program-box .program01 .program-img4 .desc .red-green .red, #program .program-box .program02 .program-img1 .desc .red-green .red, #program .program-box .program02 .program-img2 .desc .red-green .red, #program .program-box .program02 .program-img3 .desc .red-green .red, #program .program-box .program02 .program-img4 .desc .red-green .red, #program .program-box .program03 .program-img1 .desc .red-green .red, #program .program-box .program03 .program-img2 .desc .red-green .red, #program .program-box .program03 .program-img3 .desc .red-green .red, #program .program-box .program03 .program-img4 .desc .red-green .red, #program .program-box .program04 .program-img1 .desc .red-green .red, #program .program-box .program04 .program-img2 .desc .red-green .red, #program .program-box .program04 .program-img3 .desc .red-green .red, #program .program-box .program04 .program-img4 .desc .red-green .red {
     font-size: 15px;
   }
 }
-#program .program-box .program01 .desc .red-green .green, #program .program-box .program02 .desc .red-green .green, #program .program-box .program03 .desc .red-green .green, #program .program-box .program04 .desc .red-green .green {
+#program .program-box .program01 .program-img1 .desc .red-green .green, #program .program-box .program01 .program-img2 .desc .red-green .green, #program .program-box .program01 .program-img3 .desc .red-green .green, #program .program-box .program01 .program-img4 .desc .red-green .green, #program .program-box .program02 .program-img1 .desc .red-green .green, #program .program-box .program02 .program-img2 .desc .red-green .green, #program .program-box .program02 .program-img3 .desc .red-green .green, #program .program-box .program02 .program-img4 .desc .red-green .green, #program .program-box .program03 .program-img1 .desc .red-green .green, #program .program-box .program03 .program-img2 .desc .red-green .green, #program .program-box .program03 .program-img3 .desc .red-green .green, #program .program-box .program03 .program-img4 .desc .red-green .green, #program .program-box .program04 .program-img1 .desc .red-green .green, #program .program-box .program04 .program-img2 .desc .red-green .green, #program .program-box .program04 .program-img3 .desc .red-green .green, #program .program-box .program04 .program-img4 .desc .red-green .green {
   background-color: #20783c;
   font-size: 10px;
   font-family: "Pretendard-Regular";
@@ -230,7 +233,7 @@ form .search-box .search img {
   padding: 1px 7px;
 }
 @media (min-width: 1024px) {
-  #program .program-box .program01 .desc .red-green .green, #program .program-box .program02 .desc .red-green .green, #program .program-box .program03 .desc .red-green .green, #program .program-box .program04 .desc .red-green .green {
+  #program .program-box .program01 .program-img1 .desc .red-green .green, #program .program-box .program01 .program-img2 .desc .red-green .green, #program .program-box .program01 .program-img3 .desc .red-green .green, #program .program-box .program01 .program-img4 .desc .red-green .green, #program .program-box .program02 .program-img1 .desc .red-green .green, #program .program-box .program02 .program-img2 .desc .red-green .green, #program .program-box .program02 .program-img3 .desc .red-green .green, #program .program-box .program02 .program-img4 .desc .red-green .green, #program .program-box .program03 .program-img1 .desc .red-green .green, #program .program-box .program03 .program-img2 .desc .red-green .green, #program .program-box .program03 .program-img3 .desc .red-green .green, #program .program-box .program03 .program-img4 .desc .red-green .green, #program .program-box .program04 .program-img1 .desc .red-green .green, #program .program-box .program04 .program-img2 .desc .red-green .green, #program .program-box .program04 .program-img3 .desc .red-green .green, #program .program-box .program04 .program-img4 .desc .red-green .green {
     font-size: 15px;
   }
 }
@@ -317,24 +320,28 @@ form .search-box .search img {
     width: 100px;
   }
 }
-#notice .notice {
+#notice .notice-allbox {
+  overflow: hidden;
+}
+#notice .notice-allbox .notice {
   display: flex;
   flex-direction: row;
   position: relative;
   width: 100%;
-  overflow: hidden;
+  transition: transform 0.5s ease;
 }
 @media (min-width: 1024px) {
-  #notice .notice {
+  #notice .notice-allbox .notice {
     flex-direction: column;
+    transition: none;
   }
 }
-#notice .notice .notice-box1, #notice .notice .notice-box2 {
+#notice .notice-allbox .notice .notice-box1, #notice .notice-allbox .notice .notice-box2, #notice .notice-allbox .notice .notice-box3 {
   flex: 1;
-  min-width: 75%;
+  min-width: 88%;
   position: relative;
 }
-#notice .notice .notice-box1 {
+#notice .notice-allbox .notice .notice-box1, #notice .notice-allbox .notice .notice-box3 {
   width: 100%;
   height: 100%;
   border-top: 3px solid #eeeeee;
@@ -345,42 +352,41 @@ form .search-box .search img {
   padding: 0;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box1 {
+  #notice .notice-allbox .notice .notice-box1, #notice .notice-allbox .notice .notice-box3 {
     padding: 38px 0;
     border-bottom: 0;
     width: 94%;
     margin: 0 auto;
   }
 }
-#notice .notice .notice-box1 .notice-img {
+#notice .notice-allbox .notice .notice-box1 .notice-img, #notice .notice-allbox .notice .notice-box3 .notice-img {
   width: 50%;
 }
-#notice .notice .notice-box1 .notice-img img {
+#notice .notice-allbox .notice .notice-box1 .notice-img img, #notice .notice-allbox .notice .notice-box3 .notice-img img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-#notice .notice .notice-box1 .notice_txt {
+#notice .notice-allbox .notice .notice-box1 .notice_txt, #notice .notice-allbox .notice .notice-box3 .notice_txt {
   padding: 10px 0;
   width: 50%;
   padding-left: 24px;
 }
-#notice .notice .notice-box1 .notice_txt h3 {
+#notice .notice-allbox .notice .notice-box1 .notice_txt h3, #notice .notice-allbox .notice .notice-box3 .notice_txt h3 {
   font-size: 16px;
   font-family: "Pretendard-Medium";
   padding-bottom: 15px;
   text-align: justify;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box1 .notice_txt h3 {
+  #notice .notice-allbox .notice .notice-box1 .notice_txt h3, #notice .notice-allbox .notice .notice-box3 .notice_txt h3 {
     font-size: 24px;
   }
 }
-#notice .notice .notice-box1 .notice_txt h4 {
+#notice .notice-allbox .notice .notice-box1 .notice_txt h4, #notice .notice-allbox .notice .notice-box3 .notice_txt h4 {
   display: none;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box1 .notice_txt h4 {
+  #notice .notice-allbox .notice .notice-box1 .notice_txt h4, #notice .notice-allbox .notice .notice-box3 .notice_txt h4 {
     text-align: justify;
     display: block;
     font-size: 20px;
@@ -388,18 +394,18 @@ form .search-box .search img {
     padding-bottom: 26px;
   }
 }
-#notice .notice .notice-box1 .notice_txt .notice-txt-mo {
+#notice .notice-allbox .notice .notice-box1 .notice_txt .notice-txt-mo, #notice .notice-allbox .notice .notice-box3 .notice_txt .notice-txt-mo {
   text-align: justify;
   font-size: 12px;
   font-family: "Pretendard-Light";
   color: #aaaaaa;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box1 .notice_txt .notice-txt-mo {
+  #notice .notice-allbox .notice .notice-box1 .notice_txt .notice-txt-mo, #notice .notice-allbox .notice .notice-box3 .notice_txt .notice-txt-mo {
     display: none;
   }
 }
-#notice .notice .notice-box1 .notice_txt .notice-txt1, #notice .notice .notice-box1 .notice_txt .notice-txt2 {
+#notice .notice-allbox .notice .notice-box1 .notice_txt .notice-txt1, #notice .notice-allbox .notice .notice-box1 .notice_txt .notice-txt2, #notice .notice-allbox .notice .notice-box3 .notice_txt .notice-txt1, #notice .notice-allbox .notice .notice-box3 .notice_txt .notice-txt2 {
   display: none;
   text-align: justify;
   font-size: 12px;
@@ -407,33 +413,33 @@ form .search-box .search img {
   color: #aaaaaa;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box1 .notice_txt .notice-txt1, #notice .notice .notice-box1 .notice_txt .notice-txt2 {
+  #notice .notice-allbox .notice .notice-box1 .notice_txt .notice-txt1, #notice .notice-allbox .notice .notice-box1 .notice_txt .notice-txt2, #notice .notice-allbox .notice .notice-box3 .notice_txt .notice-txt1, #notice .notice-allbox .notice .notice-box3 .notice_txt .notice-txt2 {
     display: block;
     font-size: 16px;
   }
 }
-#notice .notice .notice-box1 .notice_txt .notice-txt2 {
+#notice .notice-allbox .notice .notice-box1 .notice_txt .notice-txt2, #notice .notice-allbox .notice .notice-box3 .notice_txt .notice-txt2 {
   display: none;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box1 .notice_txt .notice-txt2 {
+  #notice .notice-allbox .notice .notice-box1 .notice_txt .notice-txt2, #notice .notice-allbox .notice .notice-box3 .notice_txt .notice-txt2 {
     display: block;
     padding-top: 24px;
   }
 }
-#notice .notice .notice-box1 .notice_txt .date {
+#notice .notice-allbox .notice .notice-box1 .notice_txt .date, #notice .notice-allbox .notice .notice-box3 .notice_txt .date {
   font-size: 12px;
   font-family: "Pretendard-Light";
   float: right;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box1 .notice_txt .date {
+  #notice .notice-allbox .notice .notice-box1 .notice_txt .date, #notice .notice-allbox .notice .notice-box3 .notice_txt .date {
     float: left;
     font-size: 16px;
     padding-top: 29px;
   }
 }
-#notice .notice .notice-box2 {
+#notice .notice-allbox .notice .notice-box2 {
   margin-left: 24px;
   width: 100%;
   padding: 0;
@@ -444,41 +450,40 @@ form .search-box .search img {
   z-index: 2;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box2 {
+  #notice .notice-allbox .notice .notice-box2 {
     padding: 38px 0;
     border-bottom: 0;
     width: 94%;
     margin: 0 auto;
   }
 }
-#notice .notice .notice-box2 .notice-img {
+#notice .notice-allbox .notice .notice-box2 .notice-img {
   width: 50%;
 }
-#notice .notice .notice-box2 .notice-img img {
+#notice .notice-allbox .notice .notice-box2 .notice-img img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-#notice .notice .notice-box2 .notice_txt {
+#notice .notice-allbox .notice .notice-box2 .notice_txt {
   width: 50%;
   padding-left: 24px;
 }
-#notice .notice .notice-box2 .notice_txt h3 {
+#notice .notice-allbox .notice .notice-box2 .notice_txt h3 {
   font-size: 16px;
   font-family: "Pretendard-Medium";
   padding-bottom: 15px;
   text-align: justify;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box2 .notice_txt h3 {
+  #notice .notice-allbox .notice .notice-box2 .notice_txt h3 {
     font-size: 24px;
   }
 }
-#notice .notice .notice-box2 .notice_txt h4 {
+#notice .notice-allbox .notice .notice-box2 .notice_txt h4 {
   display: none;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box2 .notice_txt h4 {
+  #notice .notice-allbox .notice .notice-box2 .notice_txt h4 {
     text-align: justify;
     display: block;
     font-size: 20px;
@@ -486,18 +491,18 @@ form .search-box .search img {
     padding-bottom: 26px;
   }
 }
-#notice .notice .notice-box2 .notice_txt .notice-txt-mo {
+#notice .notice-allbox .notice .notice-box2 .notice_txt .notice-txt-mo {
   text-align: justify;
   font-size: 12px;
   font-family: "Pretendard-Light";
   color: #aaaaaa;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box2 .notice_txt .notice-txt-mo {
+  #notice .notice-allbox .notice .notice-box2 .notice_txt .notice-txt-mo {
     display: none;
   }
 }
-#notice .notice .notice-box2 .notice_txt .notice-txt1, #notice .notice .notice-box2 .notice_txt .notice-txt2 {
+#notice .notice-allbox .notice .notice-box2 .notice_txt .notice-txt1, #notice .notice-allbox .notice .notice-box2 .notice_txt .notice-txt2 {
   display: none;
   text-align: justify;
   font-size: 12px;
@@ -505,37 +510,37 @@ form .search-box .search img {
   color: #aaaaaa;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box2 .notice_txt .notice-txt1, #notice .notice .notice-box2 .notice_txt .notice-txt2 {
+  #notice .notice-allbox .notice .notice-box2 .notice_txt .notice-txt1, #notice .notice-allbox .notice .notice-box2 .notice_txt .notice-txt2 {
     display: block;
     font-size: 16px;
   }
 }
-#notice .notice .notice-box2 .notice_txt .notice-txt2 {
+#notice .notice-allbox .notice .notice-box2 .notice_txt .notice-txt2 {
   display: none;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box2 .notice_txt .notice-txt2 {
+  #notice .notice-allbox .notice .notice-box2 .notice_txt .notice-txt2 {
     display: block;
     padding-top: 24px;
   }
 }
-#notice .notice .notice-box2 .notice_txt .date {
+#notice .notice-allbox .notice .notice-box2 .notice_txt .date {
   font-size: 12px;
   font-family: "Pretendard-Light";
   float: right;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box2 .notice_txt .date {
+  #notice .notice-allbox .notice .notice-box2 .notice_txt .date {
     float: left;
     font-size: 16px;
     padding-top: 29px;
   }
 }
-#notice .notice .notice-box3 {
-  display: none;
+#notice .notice-allbox .notice .notice-box3 {
+  margin-left: 20px;
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box3 {
+  #notice .notice-allbox .notice .notice-box3 {
     width: 100%;
     padding: 38px 0;
     border-top: 3px solid #eeeeee;
@@ -546,19 +551,18 @@ form .search-box .search img {
     width: 94%;
     margin: 0 auto;
   }
-  #notice .notice .notice-box3 .notice-img {
+  #notice .notice-allbox .notice .notice-box3 .notice-img {
     width: 50%;
   }
-  #notice .notice .notice-box3 .notice-img img {
+  #notice .notice-allbox .notice .notice-box3 .notice-img img {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
-  #notice .notice .notice-box3 .notice_txt {
+  #notice .notice-allbox .notice .notice-box3 .notice_txt {
     width: 50%;
     padding-left: 24px;
   }
-  #notice .notice .notice-box3 .notice_txt h3 {
+  #notice .notice-allbox .notice .notice-box3 .notice_txt h3 {
     text-align: justify;
     font-size: 20px;
     font-family: "Pretendard-Medium";
@@ -566,17 +570,17 @@ form .search-box .search img {
   }
 }
 @media (min-width: 1024px) and (min-width: 1024px) {
-  #notice .notice .notice-box3 .notice_txt h3 {
+  #notice .notice-allbox .notice .notice-box3 .notice_txt h3 {
     font-size: 24px;
   }
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box3 .notice_txt h4 {
+  #notice .notice-allbox .notice .notice-box3 .notice_txt h4 {
     display: none;
   }
 }
 @media (min-width: 1024px) and (min-width: 1024px) {
-  #notice .notice .notice-box3 .notice_txt h4 {
+  #notice .notice-allbox .notice .notice-box3 .notice_txt h4 {
     text-align: justify;
     display: block;
     font-size: 20px;
@@ -585,7 +589,7 @@ form .search-box .search img {
   }
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box3 .notice_txt .notice-txt1, #notice .notice .notice-box3 .notice_txt .notice-txt2 {
+  #notice .notice-allbox .notice .notice-box3 .notice_txt .notice-txt1, #notice .notice-allbox .notice .notice-box3 .notice_txt .notice-txt2 {
     text-align: justify;
     font-size: 12px;
     font-family: "Pretendard-Light";
@@ -593,24 +597,24 @@ form .search-box .search img {
   }
 }
 @media (min-width: 1024px) and (min-width: 1024px) {
-  #notice .notice .notice-box3 .notice_txt .notice-txt1, #notice .notice .notice-box3 .notice_txt .notice-txt2 {
+  #notice .notice-allbox .notice .notice-box3 .notice_txt .notice-txt1, #notice .notice-allbox .notice .notice-box3 .notice_txt .notice-txt2 {
     font-size: 16px;
   }
 }
 @media (min-width: 1024px) and (min-width: 1024px) {
-  #notice .notice .notice-box3 .notice_txt .notice-txt2 {
+  #notice .notice-allbox .notice .notice-box3 .notice_txt .notice-txt2 {
     padding-top: 24px;
   }
 }
 @media (min-width: 1024px) {
-  #notice .notice .notice-box3 .notice_txt .date {
+  #notice .notice-allbox .notice .notice-box3 .notice_txt .date {
     font-size: 12px;
     font-family: "Pretendard-Light";
     float: right;
   }
 }
 @media (min-width: 1024px) and (min-width: 1024px) {
-  #notice .notice .notice-box3 .notice_txt .date {
+  #notice .notice-allbox .notice .notice-box3 .notice_txt .date {
     float: left;
     font-size: 16px;
     padding-top: 29px;
@@ -632,6 +636,7 @@ form .search-box .search img {
 }
 
 #gallery {
+  width: 100%;
   margin-bottom: 100px;
 }
 @media (min-width: 1024px) {
@@ -654,50 +659,46 @@ form .search-box .search img {
     width: 100px;
   }
 }
-#gallery .gallery-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  position: relative;
+#gallery .gallery-allbox {
   overflow: hidden;
 }
-#gallery .gallery-box img {
+#gallery .gallery-allbox .gallery-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
-  height: 100%;
-  min-width: 70%;
-  flex: 1;
+  width: 200%; /* 2배 크기 */
+  animation: slide 20s linear infinite;
 }
 @media (min-width: 1024px) {
-  #gallery .gallery-box img {
-    min-width: 20%;
+  #gallery .gallery-allbox .gallery-box {
+    overflow: hidden;
   }
 }
-#gallery .gallery-box img:nth-child(1), #gallery .gallery-box img:nth-child(3) {
+#gallery .gallery-allbox .gallery-box .img-box1, #gallery .gallery-allbox .gallery-box .img-box2, #gallery .gallery-allbox .gallery-box .img-box3, #gallery .gallery-allbox .gallery-box .img-box4, #gallery .gallery-allbox .gallery-box .img-box5, #gallery .gallery-allbox .gallery-box .img-box6 {
+  width: 16.66%; /* 6개의 이미지를 균등하게 분할 */
+  flex: none;
+}
+#gallery .gallery-allbox .gallery-box .img-box1 img, #gallery .gallery-allbox .gallery-box .img-box2 img, #gallery .gallery-allbox .gallery-box .img-box3 img, #gallery .gallery-allbox .gallery-box .img-box4 img, #gallery .gallery-allbox .gallery-box .img-box5 img, #gallery .gallery-allbox .gallery-box .img-box6 img {
+  width: 100%;
+  min-width: 100%;
+  position: relative;
+  height: 100%;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+#gallery .gallery-allbox .gallery-box .img-box1 img, #gallery .gallery-allbox .gallery-box .img-box3 img, #gallery .gallery-allbox .gallery-box .img-box4 img, #gallery .gallery-allbox .gallery-box .img-box5 img, #gallery .gallery-allbox .gallery-box .img-box6 img {
   transform: scale(0.9);
   opacity: 0.5;
   z-index: 1;
 }
-@media (min-width: 1024px) {
-  #gallery .gallery-box img:nth-child(1), #gallery .gallery-box img:nth-child(3) {
-    opacity: 1;
-  }
-}
-#gallery .gallery-box img:nth-child(2) {
+#gallery .gallery-allbox .gallery-box .img-box2 img {
   z-index: 2;
 }
-#gallery .gallery-box img:nth-child(4),
-#gallery .gallery-box img:nth-child(5),
-#gallery .gallery-box img:nth-child(6) {
-  display: none;
-}
-@media (min-width: 1024px) {
-  #gallery .gallery-box img:nth-child(4),
-  #gallery .gallery-box img:nth-child(5),
-  #gallery .gallery-box img:nth-child(6) {
-    display: flex;
-    transform: scale(0.94);
-    opacity: 1;
-    z-index: 1;
+@keyframes slide {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(-50%);
+  } /* 6개의 이미지의 반을 슬라이드 */
 }/*# sourceMappingURL=index_search.css.map */

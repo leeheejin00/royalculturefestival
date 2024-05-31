@@ -162,60 +162,63 @@ form {
         }
         .program01, .program02, .program03, .program04 {
             width: 100%;
-            position: relative;
-            img {
-                width: 100%;
-                border-radius: 10px;
-            }
-            .desc {
-                line-height: 0.9;
-                width: $width-wide;
-                border-radius: 0 0 10px 10px;
-                background-color: #2f2411;
-                position: absolute;
-                bottom: 40%;
-                opacity: 70%;
-                color: white;
-                padding: 7px;
-                transform: translateY(0); /* 초기 위치 */
-                transition: transform 0.3s ease;
-                @include responsive(large-screens) {
-                    bottom: 98px;
+            .program-img1, .program-img2, .program-img3, .program-img4 {
+                position: relative;
+                img {
+                    position: relative;
+                    width: 100%;
+                    border-radius: 10px;
                 }
-                .title {
-                    font-size: 12px;
+                .desc {
+                    line-height: 0.9;
+                    width: $width-wide;
+                    border-radius: 0 0 10px 10px;
+                    background-color: #2f2411;
+                    position: absolute;
+                    bottom: 0;
+                    opacity: 70%;
+                    color: white;
+                    padding: 7px;
+                    transform: translateY(0); /* 초기 위치 */
+                    transition: transform 0.3s ease;
                     @include responsive(large-screens) {
-                        font-size: 18px;
+                        bottom: 0;
                     }
-                }
-                .period-time {
-                    .period, .time {
+                    .title {
                         font-size: 12px;
                         @include responsive(large-screens) {
-                            font-size: 16px; 
+                            font-size: 18px;
                         }
                     }
-                }
-                .red-green {
-                    display: none;
-                    .red {
-                        background-color: #a5161a;
-                        font-size: 10px;
-                        font-family: $font-pre-regular;
-                        border-radius: 5px;
-                        padding: 1px 7px;
-                        @include responsive(large-screens) {
-                            font-size: 15px; 
+                    .period-time {
+                        .period, .time {
+                            font-size: 12px;
+                            @include responsive(large-screens) {
+                                font-size: 16px; 
+                            }
                         }
                     }
-                    .green {
-                        background-color: #20783c;
-                        font-size: 10px;
-                        font-family: $font-pre-regular;
-                        border-radius: 5px;
-                        padding: 1px 7px;
-                        @include responsive(large-screens) {
-                            font-size: 15px; 
+                    .red-green {
+                        display: none;
+                        .red {
+                            background-color: #a5161a;
+                            font-size: 10px;
+                            font-family: $font-pre-regular;
+                            border-radius: 5px;
+                            padding: 1px 7px;
+                            @include responsive(large-screens) {
+                                font-size: 15px; 
+                            }
+                        }
+                        .green {
+                            background-color: #20783c;
+                            font-size: 10px;
+                            font-family: $font-pre-regular;
+                            border-radius: 5px;
+                            padding: 1px 7px;
+                            @include responsive(large-screens) {
+                                font-size: 15px; 
+                            }
                         }
                     }
                 }
@@ -294,253 +297,259 @@ form {
             width: 100px;
         }
     }
-    .notice {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        width: $width-wide;
-        overflow: hidden; 
-        @include responsive(large-screens) {
-            flex-direction: column;
-        }
-        .notice-box1, .notice-box2 {
-            flex: 1;
-            min-width: 75%;
+
+    .notice-allbox {
+        overflow: hidden;
+        .notice {
+            display: flex;
+            flex-direction: row;
             position: relative;
-        }
-        .notice-box1 {
-            width: 100%;
-            height: 100%;
-            border-top: 3px solid #eeeeee;
-            border-bottom: 3px solid #eeeeee;
-            display: flex;
-            align-items: center;
-            z-index: 2;
-            padding: 0;
+            width: $width-wide;
+            transition: transform 0.5s ease; 
             @include responsive(large-screens) {
-                padding: 38px 0;
-                border-bottom: 0;
-                width: 94%;
-                margin: 0 auto;
+                flex-direction: column;
+                transition: none;
             }
-            .notice-img {
-                width: 50%;
-                img {
-                    width: 100%;
-                    object-fit: cover;
-                }
+            .notice-box1, .notice-box2, .notice-box3 {
+                flex: 1;
+                min-width: 88%;
+                position: relative;
             }
-            .notice_txt {
-                padding: 10px 0;
-                width: 50%;
-                padding-left: 24px;
-                h3 {
-                    font-size: 16px;
-                    font-family: $font-medium;
-                    padding-bottom: 15px;
-                    text-align: justify;
-                    @include responsive(large-screens) {
-                        font-size: 24px;   
-                    }
-                }
-                h4 {
-                    display: none;
-                    @include responsive(large-screens) {
-                        text-align: justify;
-                        display: block;
-                        font-size: 20px;
-                        font-family: $font-pre-regular;
-                        padding-bottom: 26px;
-                    }
-                }
-                .notice-txt-mo {
-                    text-align: justify;
-                    font-size: 12px;
-                    font-family: $font-pre-light;
-                    color: #aaaaaa;
-                    @include responsive(large-screens) {
-                        display: none;
-                    }
-                }
-                .notice-txt1, .notice-txt2 {
-                    display: none;
-                    text-align: justify;
-                    font-size: 12px;
-                    font-family: $font-pre-light;
-                    color: #aaaaaa;
-                    @include responsive(large-screens) {
-                        display: block;
-                        font-size: 16px;
-                    }
-                }
-                .notice-txt2 {
-                    display: none;
-                    @include responsive(large-screens) {
-                        display: block;
-                        padding-top: 24px;
-                    }
-                }
-                .date {
-                    font-size: 12px;
-                    font-family: $font-pre-light;
-                    float: right;
-                    @include responsive(large-screens) {
-                        float: left;
-                        font-size: 16px;
-                        padding-top: 29px;
-                    }
-                }
-            }
-        }
-        .notice-box2 {
-            margin-left: 24px;
-            width: 100%;
-            padding: 0;
-            border-top: 3px solid #eeeeee;
-            border-bottom: 3px solid #eeeeee;
-            display: flex;
-            align-items: center;
-            z-index: 2;
-            @include responsive(large-screens) {
-                padding: 38px 0;
-                border-bottom: 0;
-                width: 94%;
-                margin: 0 auto;
-            }
-            .notice-img {
-                width: 50%;
-                img {
-                    width: 100%;
-                    object-fit: cover;
-                }
-            }
-            .notice_txt {
-                width: 50%;
-                padding-left: 24px;
-                h3 {
-                    font-size: 16px;
-                    font-family: $font-medium;
-                    padding-bottom: 15px;
-                    text-align: justify;
-                    @include responsive(large-screens) {
-                        font-size: 24px;   
-                    }
-                }
-                h4 {
-                    display: none;
-                    @include responsive(large-screens) {
-                        text-align: justify;
-                        display: block;
-                        font-size: 20px;
-                        font-family: $font-pre-regular;
-                        padding-bottom: 26px;
-                    }
-                }
-                .notice-txt-mo {
-                    text-align: justify;
-                    font-size: 12px;
-                    font-family: $font-pre-light;
-                    color: #aaaaaa;
-                    @include responsive(large-screens) {
-                        display: none;
-                    }
-                }
-                .notice-txt1, .notice-txt2 {
-                    display: none;
-                    text-align: justify;
-                    font-size: 12px;
-                    font-family: $font-pre-light;
-                    color: #aaaaaa;
-                    @include responsive(large-screens) {
-                        display: block;
-                        font-size: 16px;
-                    }
-                }
-                .notice-txt2 {
-                    display: none;
-                    @include responsive(large-screens) {
-                        display: block;
-                        padding-top: 24px;
-                    }
-                }
-                .date {
-                    font-size: 12px;
-                    font-family: $font-pre-light;
-                    float: right;
-                    @include responsive(large-screens) {
-                        float: left;
-                        font-size: 16px;
-                        padding-top: 29px;
-                    }
-                }
-            }
-        }
-        .notice-box3 {
-            display: none;
-            @include responsive(large-screens) {
+            .notice-box1, .notice-box3 {
                 width: 100%;
-            padding: 38px 0;
-            border-top: 3px solid #eeeeee;
-            border-bottom: 3px solid #eeeeee;
-            display: flex;
-            align-items: center;
-            z-index: 2;
-            width: 94%;
-                margin: 0 auto;
-            .notice-img {
-                width: 50%;
-                img {
-                    width: 100%;
-                    object-fit: cover;
+                height: 100%;
+                border-top: 3px solid #eeeeee;
+                border-bottom: 3px solid #eeeeee;
+                display: flex;
+                align-items: center;
+                z-index: 2;
+                padding: 0;
+                @include responsive(large-screens) {
+                    padding: 38px 0;
+                    border-bottom: 0;
+                    width: 94%;
+                    margin: 0 auto;
                 }
-            }
-            .notice_txt {
-                width: 50%;
-                padding-left: 24px;
-                h3 {
-                    text-align: justify;
-                    font-size: 20px;
-                    font-family: $font-medium;
-                    padding-bottom: 15px;
-                    @include responsive(large-screens) {
-                        font-size: 24px;   
+                .notice-img {
+                    width: 50%;
+                    img {
+                        width: 100%;
+                        object-fit: cover;
                     }
+                    
                 }
-                h4 {
-                    display: none;
-                    @include responsive(large-screens) {
+                .notice_txt {
+                    padding: 10px 0;
+                    width: 50%;
+                    padding-left: 24px;
+                    h3 {
+                        font-size: 16px;
+                        font-family: $font-medium;
+                        padding-bottom: 15px;
                         text-align: justify;
-                        display: block;
-                        font-size: 20px;
-                        font-family: $font-pre-regular;
-                        padding-bottom: 26px;
+                        @include responsive(large-screens) {
+                            font-size: 24px;   
+                        }
                     }
-                }
-                .notice-txt1, .notice-txt2 {
-                    text-align: justify;
-                    font-size: 12px;
-                    font-family: $font-pre-light;
-                    color: #aaaaaa;
-                    @include responsive(large-screens) {
-                        font-size: 16px;
+                    h4 {
+                        display: none;
+                        @include responsive(large-screens) {
+                            text-align: justify;
+                            display: block;
+                            font-size: 20px;
+                            font-family: $font-pre-regular;
+                            padding-bottom: 26px;
+                        }
                     }
-                }
-                .notice-txt2 {
-                    @include responsive(large-screens) {
-                        padding-top: 24px;
+                    .notice-txt-mo {
+                        text-align: justify;
+                        font-size: 12px;
+                        font-family: $font-pre-light;
+                        color: #aaaaaa;
+                        @include responsive(large-screens) {
+                            display: none;
+                        }
                     }
-                }
-                .date {
-                    font-size: 12px;
-                    font-family: $font-pre-light;
-                    float: right;
-                    @include responsive(large-screens) {
-                        float: left;
-                        font-size: 16px;
-                        padding-top: 29px;
+                    .notice-txt1, .notice-txt2 {
+                        display: none;
+                        text-align: justify;
+                        font-size: 12px;
+                        font-family: $font-pre-light;
+                        color: #aaaaaa;
+                        @include responsive(large-screens) {
+                            display: block;
+                            font-size: 16px;
+                        }
+                    }
+                    .notice-txt2 {
+                        display: none;
+                        @include responsive(large-screens) {
+                            display: block;
+                            padding-top: 24px;
+                        }
+                    }
+                    .date {
+                        font-size: 12px;
+                        font-family: $font-pre-light;
+                        float: right;
+                        @include responsive(large-screens) {
+                            float: left;
+                            font-size: 16px;
+                            padding-top: 29px;
+                        }
                     }
                 }
             }
+            .notice-box2 {
+                margin-left: 24px;
+                width: 100%;
+                padding: 0;
+                border-top: 3px solid #eeeeee;
+                border-bottom: 3px solid #eeeeee;
+                display: flex;
+                align-items: center;
+                z-index: 2;
+                @include responsive(large-screens) {
+                    padding: 38px 0;
+                    border-bottom: 0;
+                    width: 94%;
+                    margin: 0 auto;
+                }
+                .notice-img {
+                    width: 50%;
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .notice_txt {
+                    width: 50%;
+                    padding-left: 24px;
+                    h3 {
+                        font-size: 16px;
+                        font-family: $font-medium;
+                        padding-bottom: 15px;
+                        text-align: justify;
+                        @include responsive(large-screens) {
+                            font-size: 24px;   
+                        }
+                    }
+                    h4 {
+                        display: none;
+                        @include responsive(large-screens) {
+                            text-align: justify;
+                            display: block;
+                            font-size: 20px;
+                            font-family: $font-pre-regular;
+                            padding-bottom: 26px;
+                        }
+                    }
+                    .notice-txt-mo {
+                        text-align: justify;
+                        font-size: 12px;
+                        font-family: $font-pre-light;
+                        color: #aaaaaa;
+                        @include responsive(large-screens) {
+                            display: none;
+                        }
+                    }
+                    .notice-txt1, .notice-txt2 {
+                        display: none;
+                        text-align: justify;
+                        font-size: 12px;
+                        font-family: $font-pre-light;
+                        color: #aaaaaa;
+                        @include responsive(large-screens) {
+                            display: block;
+                            font-size: 16px;
+                        }
+                    }
+                    .notice-txt2 {
+                        display: none;
+                        @include responsive(large-screens) {
+                            display: block;
+                            padding-top: 24px;
+                        }
+                    }
+                    .date {
+                        font-size: 12px;
+                        font-family: $font-pre-light;
+                        float: right;
+                        @include responsive(large-screens) {
+                            float: left;
+                            font-size: 16px;
+                            padding-top: 29px;
+                        }
+                    }
+                }
+            }
+            .notice-box3 {
+                margin-left: 20px;
+                @include responsive(large-screens) {
+                width: 100%;
+                padding: 38px 0;
+                border-top: 3px solid #eeeeee;
+                border-bottom: 3px solid #eeeeee;
+                display: flex;
+                align-items: center;
+                z-index: 2;
+                width: 94%;
+                    margin: 0 auto;
+                .notice-img {
+                    width: 50%;
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .notice_txt {
+                    width: 50%;
+                    padding-left: 24px;
+                    h3 {
+                        text-align: justify;
+                        font-size: 20px;
+                        font-family: $font-medium;
+                        padding-bottom: 15px;
+                        @include responsive(large-screens) {
+                            font-size: 24px;   
+                        }
+                    }
+                    h4 {
+                        display: none;
+                        @include responsive(large-screens) {
+                            text-align: justify;
+                            display: block;
+                            font-size: 20px;
+                            font-family: $font-pre-regular;
+                            padding-bottom: 26px;
+                        }
+                    }
+                    .notice-txt1, .notice-txt2 {
+                        text-align: justify;
+                        font-size: 12px;
+                        font-family: $font-pre-light;
+                        color: #aaaaaa;
+                        @include responsive(large-screens) {
+                            font-size: 16px;
+                        }
+                    }
+                    .notice-txt2 {
+                        @include responsive(large-screens) {
+                            padding-top: 24px;
+                        }
+                    }
+                    .date {
+                        font-size: 12px;
+                        font-family: $font-pre-light;
+                        float: right;
+                        @include responsive(large-screens) {
+                            float: left;
+                            font-size: 16px;
+                            padding-top: 29px;
+                        }
+                    }
+                }
+                }
             }
         }
     }
@@ -561,6 +570,7 @@ form {
 }
 
 #gallery {
+    width: 100%;
     margin-bottom: 100px;
     @include responsive(large-screens) {
         padding-top: 169px;
@@ -578,47 +588,45 @@ form {
             width: 100px;
         }
     }
-    .gallery-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: $width-wide;
-        position: relative;
+    .gallery-allbox {
         overflow: hidden;
-        
-        img {
+    
+        .gallery-box {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
             position: relative;
-            height: 100%;
-            min-width: 70%;
-            flex: 1;
+            width: 200%; /* 2배 크기 */
+            animation: slide 20s linear infinite;
             @include responsive(large-screens) {
-                min-width: 20%;
+                overflow: hidden;
+            }
+            .img-box1, .img-box2, .img-box3, .img-box4, .img-box5, .img-box6 {
+                width: 16.66%; /* 6개의 이미지를 균등하게 분할 */
+                flex: none;
+                img {
+                    width: 100%;
+                    min-width: 100%;
+                    position: relative;
+                    height: 100%;
+                    transition: transform 0.5s ease, opacity 0.5s ease;
+                }
+            }
+    
+            .img-box1 img, .img-box3 img, .img-box4 img, .img-box5 img, .img-box6 img {
+                transform: scale(0.9);
+                opacity: 0.5;
+                z-index: 1;
+            }
+    
+            .img-box2 img {
+                z-index: 2;
+            }
+    
+            @keyframes slide {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); } /* 6개의 이미지의 반을 슬라이드 */
             }
         }
-        
-        img:nth-child(1), img:nth-child(3) {
-            transform: scale(0.9);
-            opacity: 0.5;
-            z-index: 1;
-            @include responsive(large-screens) {
-                opacity: 1;
-            }
-        }
-        
-        img:nth-child(2) {
-            z-index: 2;
-        }
-        
-        img:nth-child(4),
-        img:nth-child(5),
-        img:nth-child(6) {
-            display: none;
-            @include responsive(large-screens) {
-                display: flex;
-                transform: scale(0.94);
-                    opacity: 1;
-                    z-index: 1;
-            }
-        }
-    } 
+    }
 }
