@@ -570,11 +570,13 @@ main {
 
             #notice {
                 margin: 110px 0;
+            
                 @include responsive(large-screens) {
                     width: 79%;
                     margin: 0 auto;
                     margin-top: 10%;
                 }
+            
                 h2 {
                     color: #2f2411;
                     text-align: justify;
@@ -585,75 +587,78 @@ main {
                         display: none;
                     }
                 }
-                .notice-flex-box {
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    overflow: hidden;
-                    transition: transform 0.5s ease-in-out;
+            .notice-slide-flex {
+                position: relative;
+                display: flex;
+                overflow: hidden;
+                #left, #right {
+                    width: 8%;
+                    position: absolute;
+                    opacity: 60%;
                     @include responsive(large-screens) {
-                        overflow: visible;
-                        position: none;
-                        .slide-img1 {
-                            display: none;
-                        }
+                        flex: none;
+                        display: none;
                     }
-                    .slide1, .slide2 {
-                        width: 8%;
-                        position: absolute;
-                        opacity: 60%;
-                        @include responsive(large-screens) {
-                            flex: none;
-                            display: none;
-                        }
-                        a {
-                            display: block;
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        img {
                             width: 100%;
-                            height: 100%;
-                            img {
-                                width: 100%;
-                                height: auto;
-                            }
-                        }
-                    }
-                    .slide1 {
-                        top: 40%;
-                        left: 3%;
-                        @include responsive(large-screens) {
-                            display: none;
-                        }
-                    }
-                    .slide2 {
-                        top: 40%;
-                        left: 89%;
-                        @include responsive(large-screens) {
-                            display: none;
+                            height: auto;
                         }
                     }
                 }
+                #left {
+                    top: 40%;
+                    left: 3%;
+                    @include responsive(large-screens) {
+                        display: none;
+                    }
+                }
+                #right {
+                    top: 40%;
+                    left: 89%;
+                    @include responsive(large-screens) {
+                        display: none;
+                    }
+                }
+                .notice-flex-box {
+                    display: flex;
+                    justify-content: center;
+                    width: 300%; /* 수정된 부분 */
+            transition: left 0.5s ease;
+                    @include responsive(large-screens) {
+                        overflow: visible;
+                        position: none;
+                    }
+                }
             
-                .notice_box, .notice_box2, .notice_box3 {
+                .notice_box1, .notice_box2, .notice_box3 {
                     flex: 1;
-                    min-width: 75%;
+                    min-width: 80%;
                     position: relative;
                     border: 1px solid black;
                     padding: 10px;
                     padding-right: 15px;
                     padding-top: 18px;
                     margin: 2px;
-                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // 가벼운 그림자 효과
                     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // 가벼운 그림자 효과
                     opacity: 0.6;
                     transform: scale(0.9);
+                    
                     @include responsive(large-screens) {
                         flex: none;
                         min-width: 20%;
                         position: none;
                         width: 33%;
                     }
+            
                     a {
                         .notice-txt {
                             position: relative;
+            
                             .border-box {
                                 width: 80%;
                                 height: auto;
@@ -661,27 +666,32 @@ main {
                                 padding-left: 12px;
                                 margin-top: 24px;
                                 margin-left: 12px;
+            
                                 @include responsive(large-screens) {
                                     &:hover {
                                         border-left: 5px solid white;
                                     }
                                 }
+            
                                 span {
                                     display: block;
                                     font-size: 12px;
                                     color: #aaaaaa;
                                     padding-bottom: 5px;
                                     font-family: $font-pre-regular;
+            
                                     @include responsive(large-screens) {
                                         font-size: 14px;
                                     }
                                 }
+            
                                 h3 {
                                     text-align: justify;
                                     font-size: 16px;
                                     color: black;
                                     padding-bottom: 10px;
                                     font-family: $font-bold;
+            
                                     @include responsive(large-screens) {
                                         font-size: 24px;
                                         &:hover {
@@ -698,13 +708,16 @@ main {
                                 font-size: 14px;
                                 color: black;
                                 font-family: $font-pre-regular;
+            
                                 @include responsive(large-screens) {
                                     font-size: 20px;
                                 }
+            
                                 br {
                                     margin-bottom: 5px; // 줄바꿈 간격 조정
                                 }
                             }
+            
                             .main-info2 {
                                 text-align: justify;
                                 padding-top: 35px;
@@ -713,24 +726,29 @@ main {
                                 color: #555;
                                 padding-bottom: 28px;
                                 font-family: $font-light;
+            
                                 @include responsive(large-screens) {
                                     font-size: 14px;
                                 }
                             }
+            
                             .date-more {
                                 display: flex;
                                 justify-content: space-between;
+            
                                 .date {
                                     font-size: 12px;
                                     display: block;
                                     padding-left: 12px;
                                     font-family: $font-semibold;
                                     color: #aaaaaa;
+            
                                     @include responsive(large-screens) {
                                         font-size: 14px;
                                         padding-bottom: 30px;
                                     }
                                 }
+            
                                 .more-btn {
                                     display: none;
                                 }      
@@ -738,8 +756,8 @@ main {
                         }
                     }
                 }
-            
-                .notice_box {
+                
+                .notice_box1 {
                     opacity: 60%;
                     transform: scale(0.9);
                     z-index: 1;
@@ -837,41 +855,54 @@ main {
                         }
                     }
                 }
-            
-                .notice_box.active, .notice_box2.active, .notice_box3.active {
+
+                .notice_box1.active, .notice_box2.active, .notice_box3.active {
                     opacity: 1; /* 활성화된 박스는 불투명 */
-                    transform: scale(1); /* 활성화된 박스는 원래 크기 */
+                    transform: scale(1);
                     z-index: 2; /* 활성화된 박스를 앞쪽으로 */
+                }
+            
+                .notice_box1:hover, .notice_box2:hover, .notice_box3:hover {
+                    background-size: cover;
+                    background-position: center;
                 }
             
                 .notice_box3 {
                     opacity: 60%;
                     transform: scale(0.9);
                     z-index: 1;
+            
                     @include responsive(large-screens) {
                         opacity: 100%;
                         transform: none;
+            
                         &:hover {
                             background-image: url('../images/notice3.jpg'); // 변경할 이미지 경로
                             background-size: cover;
                             background-position: center;
+            
                             .main-info, .main-info2 {
                                 visibility: hidden;
                             }
+            
                             h3 {
                                 color: white;
                             }
+            
                             .more-btn {
                                 display: none;
+            
                                 @include responsive(large-screens) {
                                     display: block;
                                     position: absolute;
                                     bottom: 32px; right: 32px;
+            
                                     .square {
                                         width: 70px; height: 50px;
                                         position: relative;
                                         padding: 12px 24px;
                                         border: 1px solid black;
+            
                                         p {
                                             position: absolute;
                                             top: 5px;
@@ -882,8 +913,8 @@ main {
                                             font-size: 13px;
                                             line-height: 35px;
                                         }
-                                                
                                     }
+            
                                     img {
                                         position: absolute;
                                         right: 0;
@@ -895,6 +926,8 @@ main {
                     }
                 }
             }
+        }
+            
     
     #history {
         padding-top: 110px;

@@ -470,11 +470,10 @@
             <div class="container">
                 <h2>고궁소식</h2>
             </div>
+            <div class="notice-slide-flex">
+                    <a href="#" id="left"><img src="./images/left_arrow.png" alt="left arrow"></a>
                 <div class="notice-flex-box">
-                    <div class="slide1">
-                        <a href=""><img src="./images/left_arrow.png" alt=""></a>
-                    </div>
-                        <div class="notice_box active">
+                        <div class="notice_box1 active">
                             <a href="#">
                                 <div class="notice-txt">
                                     <div class="border-box">
@@ -546,12 +545,48 @@
                                 </div>
                             </a>
                         </div> <!-- notice-box3 -->
-                        <div class="slide2">
-                            <a href=""><img src="./images/right_arrow.png" alt=""></a>
-                        </div>
                 </div><!-- notice-flex-box -->
+                    <a href="#" id="right"><img src="./images/right_arrow.png" alt="right arrow"></a>
             </div>
+            </div>
+            <script src="js/jquery.js"></script>
+            <script>
+                function moveRight() {
+                    $('.notice-flex-box').stop().animate({left: '-100%'}, 500, function() {
+                        $(this).css({left: 0}).append($('.notice-flex-box .notice_box1').removeClass('active').next().addClass('active'));
+                    });
+                }
             
+                function moveLeft() {
+                    $('.notice-flex-box').stop().animate({left: '100%'}, 500, function() {
+                        $(this).css({left: 0}).prepend($('.notice-flex-box .notice_box3').removeClass('active').prev().addClass('active'));
+                    });
+                }
+            
+                $('#left').click(function(e) {
+                    e.preventDefault();
+                    moveLeft();
+                });
+            
+                $('#right').click(function(e) {
+                    e.preventDefault();
+                    moveRight();
+                });
+            
+                function auto() {
+                    moveRight();
+                }
+            
+                let timer = setInterval(auto, 3000);
+            
+                $('.notice-slide-flex').on('mouseover', function() {
+                    clearInterval(timer);
+                });
+            
+                $('.notice-slide-flex').on('mouseleave', function() {
+                    timer = setInterval(auto, 3000);
+                });
+            </script>
         </section>
         
         <section id="history">
