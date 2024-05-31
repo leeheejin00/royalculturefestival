@@ -319,29 +319,12 @@ main .intro-imgbox a:hover .overlay2 h3 {
   margin-top: 117px;
   position: relative;
 }
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-#palace .fade-in-up {
-  opacity: 0;
-  animation-name: fadeInUp;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
 @media (min-width: 1024px) {
   #palace {
     background-color: #f8efe0;
   }
 }
 #palace .mo-palace-box1, #palace .mo-palace-box2, #palace .mo-palace-box3, #palace .mo-palace-box4, #palace .mo-palace-box5, #palace .mo-palace-box6 {
-  opacity: 0;
   width: 100%;
 }
 @media (min-width: 1024px) {
@@ -518,46 +501,50 @@ main .intro-imgbox a:hover .overlay2 h3 {
     display: none;
   }
 }
+#banner .baner-allbox {
+  overflow: hidden;
+  width: 100%;
+}
 @media (min-width: 1024px) {
-  #banner .banner-box {
+  #banner .baner-allbox .banner-box {
+    transition: transform 0.5s ease-in-out;
     display: flex;
     justify-content: center;
     position: relative;
     width: 100%;
-    overflow: hidden;
   }
 }
-#banner .banner-box .baner-slide1, #banner .banner-box .baner-slide2, #banner .banner-box .baner-slide3 {
+#banner .baner-allbox .banner-box .baner-slide1, #banner .baner-allbox .banner-box .baner-slide2, #banner .baner-allbox .banner-box .baner-slide3 {
   display: none;
 }
 @media (min-width: 1024px) {
-  #banner .banner-box .baner-slide1, #banner .banner-box .baner-slide2, #banner .banner-box .baner-slide3 {
+  #banner .baner-allbox .banner-box .baner-slide1, #banner .baner-allbox .banner-box .baner-slide2, #banner .baner-allbox .banner-box .baner-slide3 {
     display: block;
     flex: 1;
     min-width: 80%;
     position: relative;
   }
-  #banner .banner-box .baner-slide1 img, #banner .banner-box .baner-slide2 img, #banner .banner-box .baner-slide3 img {
+  #banner .baner-allbox .banner-box .baner-slide1 img, #banner .baner-allbox .banner-box .baner-slide2 img, #banner .baner-allbox .banner-box .baner-slide3 img {
     width: 100%;
-    height: 500px;
+    height: 100%;
     display: block;
   }
-  #banner .banner-box .baner-slide1 .baner-slide1, #banner .banner-box .baner-slide1 .baner-slide3, #banner .banner-box .baner-slide2 .baner-slide1, #banner .banner-box .baner-slide2 .baner-slide3, #banner .banner-box .baner-slide3 .baner-slide1, #banner .banner-box .baner-slide3 .baner-slide3 {
+  #banner .baner-allbox .banner-box .baner-slide1 .baner-slide1, #banner .baner-allbox .banner-box .baner-slide1 .baner-slide3, #banner .baner-allbox .banner-box .baner-slide2 .baner-slide1, #banner .baner-allbox .banner-box .baner-slide2 .baner-slide3, #banner .baner-allbox .banner-box .baner-slide3 .baner-slide1, #banner .baner-allbox .banner-box .baner-slide3 .baner-slide3 {
     opacity: 60%;
     transform: scale(0.9);
     z-index: 1;
   }
-  #banner .banner-box .baner-slide1 .baner-slide2, #banner .banner-box .baner-slide2 .baner-slide2, #banner .banner-box .baner-slide3 .baner-slide2 {
+  #banner .baner-allbox .banner-box .baner-slide1 .baner-slide2, #banner .baner-allbox .banner-box .baner-slide2 .baner-slide2, #banner .baner-allbox .banner-box .baner-slide3 .baner-slide2 {
     z-index: 2;
   }
 }
 @media (min-width: 1024px) and (min-width: 1024px) {
-  #banner .banner-box .baner-slide1 .baner-slide2, #banner .banner-box .baner-slide2 .baner-slide2, #banner .banner-box .baner-slide3 .baner-slide2 {
+  #banner .baner-allbox .banner-box .baner-slide1 .baner-slide2, #banner .baner-allbox .banner-box .baner-slide2 .baner-slide2, #banner .baner-allbox .banner-box .baner-slide3 .baner-slide2 {
     height: 500px;
   }
 }
 @media (min-width: 1024px) {
-  #banner .banner-box .baner-slide1 .banner-box, #banner .banner-box .baner-slide2 .banner-box, #banner .banner-box .baner-slide3 .banner-box {
+  #banner .baner-allbox .banner-box .baner-slide1 .banner-box, #banner .baner-allbox .banner-box .baner-slide2 .banner-box, #banner .baner-allbox .banner-box .baner-slide3 .banner-box {
     display: flex;
     transition: transform 0.5s ease-in-out;
   }
@@ -589,41 +576,41 @@ main .intro-imgbox a:hover .overlay2 h3 {
   display: flex;
   overflow: hidden;
 }
-#notice .notice-slide-flex #left, #notice .notice-slide-flex #right {
-  width: 8%;
+#notice .notice-slide-flex .slide1, #notice .notice-slide-flex .slide2 {
+  width: 7%;
   position: absolute;
   opacity: 60%;
 }
 @media (min-width: 1024px) {
-  #notice .notice-slide-flex #left, #notice .notice-slide-flex #right {
+  #notice .notice-slide-flex .slide1, #notice .notice-slide-flex .slide2 {
     flex: none;
     display: none;
   }
 }
-#notice .notice-slide-flex #left a, #notice .notice-slide-flex #right a {
+#notice .notice-slide-flex .slide1 a, #notice .notice-slide-flex .slide2 a {
   display: block;
   width: 100%;
   height: 100%;
 }
-#notice .notice-slide-flex #left a img, #notice .notice-slide-flex #right a img {
+#notice .notice-slide-flex .slide1 a img, #notice .notice-slide-flex .slide2 a img {
   width: 100%;
   height: auto;
 }
-#notice .notice-slide-flex #left {
+#notice .notice-slide-flex .slide1 {
   top: 40%;
-  left: 3%;
+  left: 2%;
 }
 @media (min-width: 1024px) {
-  #notice .notice-slide-flex #left {
+  #notice .notice-slide-flex .slide1 {
     display: none;
   }
 }
-#notice .notice-slide-flex #right {
+#notice .notice-slide-flex .slide2 {
   top: 40%;
-  left: 89%;
+  left: 91%;
 }
 @media (min-width: 1024px) {
-  #notice .notice-slide-flex #right {
+  #notice .notice-slide-flex .slide2 {
     display: none;
   }
 }
@@ -865,18 +852,13 @@ main .intro-imgbox a:hover .overlay2 h3 {
   }
 }
 #notice .notice-slide-flex .notice_box1.active, #notice .notice-slide-flex .notice_box2.active, #notice .notice-slide-flex .notice_box3.active {
-  opacity: 1; /* 활성화된 박스는 불투명 */
+  opacity: 1;
   transform: scale(1);
-  z-index: 2; /* 활성화된 박스를 앞쪽으로 */
+  z-index: 2;
 }
 #notice .notice-slide-flex .notice_box1:hover, #notice .notice-slide-flex .notice_box2:hover, #notice .notice-slide-flex .notice_box3:hover {
   background-size: cover;
   background-position: center;
-}
-#notice .notice-slide-flex .notice_box3 {
-  opacity: 60%;
-  transform: scale(0.9);
-  z-index: 1;
 }
 @media (min-width: 1024px) {
   #notice .notice-slide-flex .notice_box3 {

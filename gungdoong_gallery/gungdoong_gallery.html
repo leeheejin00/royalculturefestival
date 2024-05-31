@@ -262,22 +262,22 @@
             </div> <!-- container -->
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
-                    const reviews = document.querySelectorAll('.review1, .review2, .review3');
-            
-                    function checkScroll() {
-                        reviews.forEach((review, index) => {
-                            const rect = review.getBoundingClientRect();
-                            if (rect.top < window.innerHeight) {
-                                setTimeout(() => {
-                                    review.style.opacity = 1;
-                                }, index * 500); // Each review fades in 500ms after the previous one
-                            }
-                        });
-                    }
-            
-                    window.addEventListener('scroll', checkScroll);
-                    checkScroll(); // Initial check in case elements are already in view
-                });
+    const reviewTexts = document.querySelectorAll('.review-txt1, .review-txt2, .review-txt3');
+    
+    function checkScroll() {
+        reviewTexts.forEach((reviewTxt, index) => {
+            const rect = reviewTxt.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                setTimeout(() => {
+                    reviewTxt.style.opacity = 1;
+                }, index * 500); // Each review fades in 500ms after the previous one
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Initial check in case elements are already in view
+});
             </script>
         </section>
 

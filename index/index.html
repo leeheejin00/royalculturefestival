@@ -345,28 +345,7 @@
             </script>
 
             <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                const palaceTxt1 = document.querySelector('.palace-txt1');
-                const moPalaceBoxes = document.querySelectorAll('.mo-palace-box1, .mo-palace-box2, .mo-palace-box3, .mo-palace-box4, .mo-palace-box5, .mo-palace-box6');
-                const palaceTxt2 = document.querySelector('.palace-txt2');
-
-                const observerOptions = {
-                    threshold: 0.1
-                };
-
-                const fadeInObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('fade-in-up');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, observerOptions);
-
-                fadeInObserver.observe(palaceTxt1);
-                moPalaceBoxes.forEach(box => fadeInObserver.observe(box));
-                fadeInObserver.observe(palaceTxt2);
-            });
+                
             </script>
           </section>
 
@@ -382,101 +361,38 @@
                     <a href=""><img src="./images/banner3.png" alt=""></a>
                 </div>
             </div>
-            <div class="banner-box">
-                <div class="baner-slide1">
-                    <a href=""><img src="./images/banner2.png" alt=""></a>
-                </div>
-                <div class="baner-slide2">
+            <div class="baner-allbox">
+                <div class="banner-box">
+                    <div class="baner-slide1">
                         <a href=""><img src="./images/banner1.jpg" alt=""></a>
                     </div>
-                <div class="baner-slide3">
-                    <a href=""><img src="./images/banner3.png" alt=""></a>
+                    <div class="baner-slide2">
+                            <a href=""><img src="./images/banner2.png" alt=""></a>
+                        </div>
+                    <div class="baner-slide3">
+                        <a href=""><img src="./images/banner3.png" alt=""></a>
+                    </div>
                 </div>
             </div>
+            <script src="js/jquery.js"></script>
             <script>
-                let currentSlide1 = 0;
-                const slides = document.querySelectorAll('.baner-slide-mo > div');
-                const totalSlides = slides.length;
-                const slideWidth = slides[0].clientWidth;
-                const slideContainer = document.querySelector('.baner-slide-mo');
-                let isDragging = false;
-                let startPos = 0;
-                let currentTranslate = 0;
-                let prevTranslate = 0;
-                let animationID;
-                let autoSlideInterval;
-
-                function setSliderPosition() {
-                    slideContainer.style.transform = `translateX(${-currentSlide1 * slideWidth}px)`;
+                function auto() {
+                    $('.banner-box').animate({left: '-80%'}, 500, function() {
+                        $('.banner-box').append($('.banner-box > div').first()).css({left: '0%'});
+                    });
                 }
-        
-                function startAutoSlide() {
-                    autoSlideInterval = setInterval(() => {
-                        currentSlide1 = (currentSlide1 + 1) % totalSlides;
-                        if (currentSlide1 === 0) {
-                            slideContainer.style.transition = 'none';
-                            currentTranslate = 0;
-                            setSliderPosition();
-                            requestAnimationFrame(() => {
-                                slideContainer.style.transition = 'transform 0.5s ease-in-out';
-                                currentSlide1++;
-                                currentTranslate = -currentSlide1 * slideWidth;
-                                setSliderPosition();
-                            });
-                        } else {
-                            currentTranslate = -currentSlide1 * slideWidth;
-                            setSliderPosition();
-                        }
-                    }, 3000);
-                }
-        
-                function stopAutoSlide() {
-                    clearInterval(autoSlideInterval);
-                }
-        
-                slideContainer.addEventListener('mouseenter', stopAutoSlide);
-                slideContainer.addEventListener('mouseleave', startAutoSlide);
-        
-                slideContainer.addEventListener('mousedown', (e) => {
-                    isDragging = true;
-                    startPos = e.pageX;
-                    cancelAnimationFrame(animationID);
-                    slideContainer.style.transition = 'none';
-                    stopAutoSlide();
-                });
-        
-                slideContainer.addEventListener('mouseup', (e) => {
-                    isDragging = false;
-                    const movedBy = e.pageX - startPos;
-                    if (movedBy < -100 && currentSlide1 < totalSlides - 1) {
-                        currentSlide1++;
-                    }
-                    if (movedBy > 100 && currentSlide1 > 0) {
-                        currentSlide1--;
-                    }
-                    currentTranslate = -currentSlide1 * slideWidth;
-                    slideContainer.style.transition = 'transform 0.5s ease-in-out';
-                    setSliderPosition();
-                    startAutoSlide();
-                });
-        
-                slideContainer.addEventListener('mousemove', (e) => {
-                    if (isDragging) {
-                        const currentPosition = e.pageX;
-                        currentTranslate = prevTranslate + currentPosition - startPos;
-                        setSliderPosition();
-                    }
-                });
-        
-                slideContainer.addEventListener('mouseleave', () => {
-                    isDragging = false;
-                    slideContainer.style.transition = 'transform 0.5s ease-in-out';
-                    setSliderPosition();
-                    startAutoSlide();
-                });
-        
-                startAutoSlide();
+                let timer2 = setInterval(auto, 3000);
             </script>
+
+            <script>
+                function auto2() {
+                    $('.baner-slide-mo').animate({left: '-80%'}, 500, function() {
+                        $('.baner-slide-mo').append($('.baner-slide-mo > div').first()).css({left: '0%'});
+                    });
+                }
+                let timer4 = setInterval(auto2, 3000);
+            </script>
+
         </section>
         
 
@@ -485,7 +401,9 @@
                 <h2>고궁소식</h2>
             </div>
             <div class="notice-slide-flex">
+                <div class="slide1">
                     <a href="#" id="left"><img src="./images/left_arrow.png" alt="left arrow"></a>
+                </div>
                 <div class="notice-flex-box">
                         <div class="notice_box1 active">
                             <a href="#">
@@ -560,45 +478,62 @@
                             </a>
                         </div> <!-- notice-box3 -->
                 </div><!-- notice-flex-box -->
+                <div class="slide2">
                     <a href="#" id="right"><img src="./images/right_arrow.png" alt="right arrow"></a>
-            </div>
+                </div>
+                </div>
             </div>
             <script src="js/jquery.js"></script>
             <script>
                 function moveRight() {
-                    $('.notice-flex-box').stop().animate({left: '-100%'}, 500, function() {
-                        $(this).css({left: 0}).append($('.notice-flex-box .notice_box1').removeClass('active').next().addClass('active'));
-                    });
+                    if ($(window).width() <= 768) {
+                        $('.notice-flex-box').stop().animate({ left: '-100%' }, 500, function() {
+                            $(this).css({ left: '0' }).append($('.notice_box1').removeClass('active').next().addClass('active'));
+                            resetActiveClass();
+                        });
+                    }
                 }
-            
+
                 function moveLeft() {
-                    $('.notice-flex-box').stop().animate({left: '100%'}, 500, function() {
-                        $(this).css({left: 0}).prepend($('.notice-flex-box .notice_box3').removeClass('active').prev().addClass('active'));
-                    });
+                    if ($(window).width() <= 768) {
+                        $('.notice-flex-box').stop().animate({ left: '100%' }, 500, function() {
+                            $(this).css({ left: '0' }).prepend($('.notice_box3').removeClass('active').prev().addClass('active'));
+                            resetActiveClass();
+                        });
+                    }
                 }
-            
+
+                function resetActiveClass() {
+                    $('.notice_box1, .notice_box2, .notice_box3').removeClass('active');
+                    $('.notice_box1').next().addClass('active');
+                }
+
                 $('#left').click(function(e) {
                     e.preventDefault();
                     moveLeft();
                 });
-            
+
                 $('#right').click(function(e) {
                     e.preventDefault();
                     moveRight();
                 });
-            
+
                 function auto() {
                     moveRight();
                 }
-            
+
                 let timer = setInterval(auto, 3000);
-            
+
                 $('.notice-slide-flex').on('mouseover', function() {
                     clearInterval(timer);
                 });
-            
+
                 $('.notice-slide-flex').on('mouseleave', function() {
                     timer = setInterval(auto, 3000);
+                });
+
+                $(document).ready(function() {
+                    resetActiveClass(); // 초기 활성화 클래스 설정
                 });
             </script>
         </section>
