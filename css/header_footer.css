@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "KimjungchulMyungjo-Bold";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Bold.woff2") format("woff2");
@@ -144,10 +145,11 @@ header {
   width: 100%;
   background: url(../images/header_back.png) no-repeat;
   background-size: cover;
+  transition: height 0.5s ease-out;
 }
 @media (min-width: 1024px) {
   header {
-    height: 340px;
+    height: 180px;
   }
 }
 header .logo-icon {
@@ -161,7 +163,7 @@ header .logo-icon .search-menu {
   z-index: 100;
 }
 header .logo-icon .search-menu a {
-  margin-right: 30px;
+  margin-right: 15px;
 }
 header .logo-icon .search-menu a img {
   width: 36px;
@@ -174,6 +176,7 @@ header .logo-icon .search-menu a:nth-child(2) {
   display: none;
 }
 header .logo-icon .search-menu .menu-toggle-btn {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -193,13 +196,12 @@ header .logo-icon .search-menu .menu-toggle-btn.open span:nth-child(2) {
 header .logo-icon .search-menu .menu-toggle-btn.open span:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -6px);
 }
-header .logo-icon .search-menu #languageSelect {
-  display: none;
+header .logo-icon .search-menu .close-btn {
   position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(-50%);
-  z-index: 200;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
 }
 header .logo-icon .search-menu .search-input {
   display: none;
@@ -237,7 +239,7 @@ header .side-menu {
   background-color: white;
   height: 100%;
   z-index: 1;
-  transition: right 0.3s;
+  transition: right 0.3s ease-in-out;
 }
 header .side-menu .language-login {
   display: flex;
@@ -246,6 +248,7 @@ header .side-menu .language-login {
   margin-bottom: 10px;
 }
 header .side-menu .language-login .language {
+  cursor: pointer;
   padding: 2px;
   display: flex;
   align-items: center;
@@ -254,17 +257,27 @@ header .side-menu .language-login .language {
   border-radius: 5px;
   margin-left: 15px;
 }
+header .side-menu .language-login .language #languageToggle2 {
+  display: none;
+}
+header .side-menu .language-login .language:hover #languageToggle {
+  display: none;
+}
+header .side-menu .language-login .language:hover #languageToggle2 {
+  display: block;
+}
 header .side-menu .language-login .language a {
   color: white;
-  font-size: 12px;
+  font-size: 10px;
   font-family: "Pretendard-Regular";
+  text-align: center;
 }
 header .side-menu .language-login .language a img {
   padding-left: 5px;
-  width: 60%;
+  width: 55%;
 }
 header .side-menu .language-login .login {
-  padding: 2px;
+  cursor: pointer;
   display: flex;
   align-items: center;
   background-color: #2f2411;
@@ -273,12 +286,12 @@ header .side-menu .language-login .login {
 }
 header .side-menu .language-login .login a {
   color: white;
-  font-size: 12px;
+  font-size: 10px;
   font-family: "Pretendard-Regular";
 }
 header .side-menu .language-login .login a img {
   padding-left: 5px;
-  width: 60%;
+  width: 55%;
 }
 header .side-menu .side-nav {
   padding-left: 10px;
@@ -309,7 +322,7 @@ header .side-menu .side-nav .gnb li ul li a:hover {
   color: #ffbe0f;
   text-decoration: underline;
 }
-header .side-menu .side-nav .gnb li .submenu2 {
+header .side-menu .side-nav .gnb li .submenu {
   display: flex;
 }
 header .menu_box {
@@ -337,7 +350,11 @@ header .menu_box {
     position: relative;
   }
   header .menu_box .mainmenu .gnb li .submenu {
+    display: none;
     margin-top: 27px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
   }
   header .menu_box .mainmenu .gnb li .submenu li a {
     font-family: "Pretendard-Regular";
@@ -347,6 +364,11 @@ header .menu_box {
   }
   header .menu_box .mainmenu .gnb li .submenu li a:hover {
     color: #ffbe0f;
+  }
+  header .menu_box .mainmenu .gnb li .submenu.open {
+    display: block;
+    max-height: 1000px; /* 적절한 최대 높이로 설정 */
+    transition: max-height 0.3s ease-in;
   }
   header .menu_box .mainmenu .gnb a {
     color: #171717;
@@ -449,6 +471,7 @@ footer .footer-back form label select option {
 @media (min-width: 1024px) {
   footer .footer-back form label select {
     font-size: 21px;
+    width: 10%;
   }
 }
 footer hr {
@@ -494,15 +517,27 @@ footer .question {
   justify-content: center;
   margin: 0 auto;
 }
-footer .question address {
+footer .question .tel1 {
   font-size: 14px;
-  margin-right: 42px;
+  margin-right: 10px;
   margin-bottom: 34px;
   font-family: "Pretendard-ExtraLight";
   text-align: center;
 }
 @media (min-width: 1024px) {
-  footer .question address {
+  footer .question .tel1 {
+    font-size: 18px;
+  }
+}
+footer .question .tel2 {
+  font-size: 14px;
+  margin-left: 10px;
+  margin-bottom: 34px;
+  font-family: "Pretendard-ExtraLight";
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  footer .question .tel2 {
     font-size: 18px;
   }
 }

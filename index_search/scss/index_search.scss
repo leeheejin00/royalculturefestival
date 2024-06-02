@@ -26,7 +26,10 @@ form {
         .search{
             position: absolute;
             top: -18px;
-            left: 0;
+            left: 93%;
+            @include responsive(large-screens) {
+                left: 97%;
+            }
             img {
                 width: 30px;
             }
@@ -143,11 +146,10 @@ form {
                 width: 100px;
             }
         }
-        a {
             img {
-                width: 30px;
+                width: 30px; height: 30px;
+                cursor: pointer;
             }
-        }
     }
     .program-box {
         width: $width-wide;
@@ -207,7 +209,7 @@ form {
                             border-radius: 5px;
                             padding: 1px 7px;
                             @include responsive(large-screens) {
-                                font-size: 15px; 
+                                font-size: 12px; 
                             }
                         }
                         .green {
@@ -217,7 +219,7 @@ form {
                             border-radius: 5px;
                             padding: 1px 7px;
                             @include responsive(large-screens) {
-                                font-size: 15px; 
+                                font-size: 12px;  
                             }
                         }
                     }
@@ -278,6 +280,69 @@ form {
             }
         }    
     }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-top: 60px;
+    
+        .modal-content {
+            position: absolute;
+            top: 195px;
+            left: 41px;
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+    
+            input {
+                width: 230px;
+            }
+            
+            .close {
+                color: #aaa;
+                position: absolute;
+                top: 0;
+                right: 10px;
+                font-size: 28px;
+                font-weight: bold;
+                
+                &:hover,
+                &:focus {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    
+        @include responsive(large-screens) {
+    
+            .modal-content {
+                position: absolute;
+                top: 50%;
+                left: 35%;
+                width: 100%;
+                input {
+                    width: 80%;
+                    height: 30px;
+                }
+                #search-btn {
+                    width: 50px;
+                    height: 30px;
+                }
+            }
+        }
+    
+    }
 }
 
 #notice {
@@ -311,6 +376,7 @@ form {
                 transition: none;
             }
             .notice-box1, .notice-box2, .notice-box3 {
+                cursor: pointer;
                 flex: 1;
                 min-width: 88%;
                 position: relative;
@@ -567,6 +633,7 @@ form {
             }
         }
     }
+    
 }
 
 #gallery {
@@ -602,26 +669,32 @@ form {
                 overflow: hidden;
             }
             .img-box1, .img-box2, .img-box3, .img-box4, .img-box5, .img-box6 {
-                width: 16.66%; /* 6개의 이미지를 균등하게 분할 */
+                cursor: pointer;
+                width: 15%; /* 6개의 이미지를 균등하게 분할 */
                 flex: none;
+                @include responsive(large-screens) {
+                    width: 13%;
+                }
                 img {
                     width: 100%;
                     min-width: 100%;
                     position: relative;
                     height: 100%;
                     transition: transform 0.5s ease, opacity 0.5s ease;
+                    &:hover {
+                        opacity: 1;
+                        transform: scale(1)
+                    }
                 }
             }
     
-            .img-box1 img, .img-box3 img, .img-box4 img, .img-box5 img, .img-box6 img {
+            .img-box1 img, .img-box2 img, .img-box3 img, .img-box4 img, .img-box5 img, .img-box6 img {
                 transform: scale(0.9);
-                opacity: 0.5;
+                opacity: 0.7;
                 z-index: 1;
             }
     
-            .img-box2 img {
-                z-index: 2;
-            }
+            
     
             @keyframes slide {
                 0% { transform: translateX(0); }
