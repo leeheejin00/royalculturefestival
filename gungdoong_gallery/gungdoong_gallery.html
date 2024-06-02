@@ -9,14 +9,32 @@
     <title>궁이둥이 갤러리</title>
 </head>
 <body>
+    <script>
+        window.onload = function() {
+            const toggleBtn = document.querySelector('.menu-toggle-btn');
+            const sideMenu = document.getElementById('side-menu');
+
+            toggleBtn.addEventListener('click', function() {
+                 if (sideMenu.style.right === '0px') {
+                    sideMenu.style.right = '-250px'; 
+                    toggleBtn.classList.remove('open'); 
+                } else {
+                    sideMenu.style.right = '0'; 
+                    toggleBtn.classList.add('open'); 
+                }
+            });
+        };
+    </script>
+</head>
+<body>
     <header>
         <div class="container">
             <div class="logo-icon">
                 <a href=""><img src="./images/header_logo.png" alt="header_logo"></a>
                 <div class="search-menu">
-                    <a href=""><img src="./images/internet.png" alt=""></a>
-                    <a href=""><img src="./images/korean-hat.png" alt=""></a>
-                    <a href=""><img src="./images/search.png" alt="search"></a>
+                    <a href="#"><img src="./images/internet.png" alt=""></a>
+                    <a href="#"><img src="./images/korean-hat.png" alt=""></a>
+                    <a href="#"><img src="./images/search.png" alt="search"></a>
                     <div class="menu-toggle-btn">
                         <span>&nbsp</span>
                         <span>&nbsp</span>
@@ -25,35 +43,49 @@
                 </div> <!-- search-menu -->
             </div> <!-- logo-icon -->
             <div id="side-menu" class="side-menu">
+                <div class="language-login">
+                    <div class="language">
+                        <a href="#">Language</a>
+                        <a href=""><img src="./images/language-white.png" alt="language"></a>    
+                    </div>
+                    <div class="login">
+                        <a href="#">로그인</a>
+                        <a href="#"><img src="./images/login-white.png" alt="login"></a>
+                    </div>
+                </div>
                 <nav class="side-nav">
                     <ul class="gnb">
                         <li>
-                            <a href="">궁중문화축전</a>
+                            <a href=""><img src="./images/side-menu-icon.png" alt="">궁중문화축전</a>
                             <ul class="submenu">
-                                <li><a href="">소개.연혁</a></li>
+                                <li><a href="">소개·연혁</a></li>
                                 <li><a href="">FI</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="">서울 속 고궁</a>
-                            <ul class="submenu">
-                                <li><a href="">경복궁</a></li>
-                                <li><a href="">창덕궁</a></li>
-                                <li><a href="">덕수궁</a></li>
-                                <li><a href="">창경궁</a></li>
-                                <li><a href="">경희궁</a></li>
-                                <li><a href="">종묘</a></li>
+                        <li class="palace-menu">
+                            <a href=""><img src="./images/side-menu-icon.png" alt="">서울 속 고궁</a>
+                            <ul class="submenu2">
+                                <div class="palace1">
+                                    <li><a href="">경복궁</a></li>
+                                    <li><a href="">창덕궁</a></li>
+                                    <li><a href="">덕수궁</a></li>
+                                </div>
+                                <div class="palace2">
+                                    <li><a href="">창경궁</a></li>
+                                    <li><a href="">경희궁</a></li>
+                                    <li><a href="">종묘</a></li>
+                                </div>
                             </ul>
                         </li>
                         <li>
-                            <a href="">궁이둥이</a>
+                            <a href=""><img src="./images/side-menu-icon.png" alt="">궁이둥이</a>
                             <ul class="submenu">
                                 <li><a href="">지원하기</a></li>
                                 <li><a href="">발자취</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="">알림마당</a>
+                            <a href=""><img src="./images/side-menu-icon.png" alt="">알림마당</a>
                             <ul class="submenu">
                                 <li><a href="">공지사항</a></li>
                                 <li><a href="">보도자료</a></li>
@@ -61,7 +93,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="">예매하기</a>
+                            <a href=""><img src="./images/side-menu-icon.png" alt="">예매하기</a>
                             <ul class="submenu">
                                 <li><a href="">예매하기</a></li>
                                 <li><a href="">예매확인</a></li>
@@ -262,22 +294,22 @@
             </div> <!-- container -->
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
-    const reviewTexts = document.querySelectorAll('.review-txt1, .review-txt2, .review-txt3');
-    
-    function checkScroll() {
-        reviewTexts.forEach((reviewTxt, index) => {
-            const rect = reviewTxt.getBoundingClientRect();
-            if (rect.top < window.innerHeight) {
-                setTimeout(() => {
-                    reviewTxt.style.opacity = 1;
-                }, index * 500); // Each review fades in 500ms after the previous one
-            }
-        });
-    }
+                const reviewTexts = document.querySelectorAll('.review-txt1, .review-txt2, .review-txt3');
+                
+                function checkScroll() {
+                    reviewTexts.forEach((reviewTxt, index) => {
+                        const rect = reviewTxt.getBoundingClientRect();
+                        if (rect.top < window.innerHeight) {
+                            setTimeout(() => {
+                                reviewTxt.style.opacity = 1;
+                            }, index * 500); // Each review fades in 500ms after the previous one
+                        }
+                    });
+                }
 
-    window.addEventListener('scroll', checkScroll);
-    checkScroll(); // Initial check in case elements are already in view
-});
+                window.addEventListener('scroll', checkScroll);
+                checkScroll(); // Initial check in case elements are already in view
+                });
             </script>
         </section>
 

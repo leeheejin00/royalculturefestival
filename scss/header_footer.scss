@@ -25,6 +25,7 @@ header {
         justify-content: space-between;
         align-items: center;
         .search-menu {
+            position: relative;
             display: flex;
             z-index: 100;
             a {
@@ -62,6 +63,28 @@ header {
                     transform: rotate(-45deg) translate(7px, -6px);
                 }
             }
+            #languageSelect {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateY(-50%);
+                z-index: 200;
+            }
+            .search-input {
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 100%;
+                width: 100px;
+                padding: 5px;
+                font-size: 16px;
+                border-bottom: 3px solid black;
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+                
+            }
         }
     }
 
@@ -80,7 +103,7 @@ header {
                 .menu-toggle-btn {
                     display: none;
                 }
-            }    
+            }   
         }
     }
     .side-menu {
@@ -90,6 +113,7 @@ header {
         top: 0;
         right: -45%; 
         background-color: white; 
+        height: 100%;
         z-index: 1;
         transition: right 0.3s;
         .language-login {
@@ -311,7 +335,10 @@ footer {
                     font-family: $font-pre-regular;
                     font-size: 16px;
                     background: transparent;
-                    width: 214px;
+                    width: 25%;
+                    option {
+                        color: black;
+                    }
                     @include responsive(large-screens) {
                         font-size: 21px;
                     }

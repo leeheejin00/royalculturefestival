@@ -156,6 +156,7 @@ header .logo-icon {
   align-items: center;
 }
 header .logo-icon .search-menu {
+  position: relative;
   display: flex;
   z-index: 100;
 }
@@ -192,6 +193,27 @@ header .logo-icon .search-menu .menu-toggle-btn.open span:nth-child(2) {
 header .logo-icon .search-menu .menu-toggle-btn.open span:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -6px);
 }
+header .logo-icon .search-menu #languageSelect {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 200;
+}
+header .logo-icon .search-menu .search-input {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 100px;
+  padding: 5px;
+  font-size: 16px;
+  border-bottom: 3px solid black;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
 @media (min-width: 1024px) {
   header .logo-icon .search-menu a:first-child {
     display: block;
@@ -213,6 +235,7 @@ header .side-menu {
   top: 0;
   right: -45%;
   background-color: white;
+  height: 100%;
   z-index: 1;
   transition: right 0.3s;
 }
@@ -418,7 +441,10 @@ footer .footer-back form label select {
   font-family: "Pretendard-Regular";
   font-size: 16px;
   background: transparent;
-  width: 214px;
+  width: 25%;
+}
+footer .footer-back form label select option {
+  color: black;
 }
 @media (min-width: 1024px) {
   footer .footer-back form label select {

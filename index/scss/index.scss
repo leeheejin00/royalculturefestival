@@ -1,6 +1,7 @@
 @import "./style.scss";
 @import "./reset.scss";
 @import "./mixin.scss";
+@import "../../scss/header_footer.scss";
 @import "../../scss/mixin.scss";
 @import "../../scss/style.scss";
 
@@ -347,36 +348,45 @@ main {
             }
         
         
-            #palace {     
+            #palace {    
                 margin-top: 117px;
                 position: relative;
                 @include responsive(large-screens) {
                     background-color: #f8efe0;
+                    
+                    // overflow: hidden; 
                 }
-                .mo-palace-box1, .mo-palace-box2, .mo-palace-box3, .mo-palace-box4, .mo-palace-box5, .mo-palace-box6 {
-                    width: 100%;
-                    @include responsive(large-screens) {
+                .palace-box {
+                   
+                    .mo-palace-box1, .mo-palace-box2, .mo-palace-box3, .mo-palace-box4, .mo-palace-box5, .mo-palace-box6 {
                         width: 100%;
-                        
-                    }
-                    .mo-palace {
-                        width: 88%;
                         @include responsive(large-screens) {
                             width: 35%;
-                            margin-left: 280px;
+                            height: 100%;
+                            
+                        }
+                        .mo-palace {
+                            width: 88%;
+                            @include responsive(large-screens) {
+                                width: 100%;
+                                margin-left: 170px;
+                                
+                            }
                         }
                     }
-                }
-                .palace-img-box {
-                    .palace {
-                        display: none;
-                        @include responsive(large-screens) {
-                            display: block;
+                    .palace-img-box {
+                        .palace {
+                            display: none;
+                            @include responsive(large-screens) {
+                                display: block;
+                                
+                            }
                         }
                     }
                 }
                 .palace-txt1 {
                     opacity: 0;
+                    transition: transform 1s, opacity 1s;
                     position: absolute;
                     top: 10%;
                     left: 0;
@@ -385,9 +395,11 @@ main {
                     height: auto;
                     background: rgba(255, 255, 255, 0.9);
                     opacity: 65%;
+                    
                     @include responsive(large-screens) {
                         background: transparent;
                         left: 52%;
+                        width: 40%;
                     }
                     /* img {
                       display: none;
@@ -441,6 +453,7 @@ main {
                 }
                 .palace-txt2 {
                     opacity: 0;
+                    transition: transform 1s, opacity 1s;
                     width: $width-wide;
                     position: absolute;
                     top: 70%;
@@ -490,6 +503,27 @@ main {
                       padding-top: 6%;
                     }
                 }
+                .visible {
+                    opacity: 1;
+                  }
+                  .slide-in-left { transform: translateX(-100%); }
+                .slide-in-right { transform: translateX(100%); }
+                .slide-in-top { transform: translateY(-100%); }
+                .slide-in-bottom { transform: translateY(100%); }
+                .visible { transform: translateX(0) translateY(0); opacity: 1; }
+
+                // .slide-in-top {
+                //     transform: translateY(-20px);
+                // }
+                
+                // .slide-in-left {
+                //     transform: translateX(-20px);
+                // }
+                
+                // .visible {
+                //     opacity: 1;
+                //     transform: translateY(0) translateX(0);
+                // }
             }
               
 
@@ -645,7 +679,7 @@ main {
                         width: 33%;
                     }
             
-                    a {
+            
                         .notice-txt {
                             position: relative;
             
@@ -656,12 +690,6 @@ main {
                                 padding-left: 12px;
                                 margin-top: 24px;
                                 margin-left: 12px;
-            
-                                @include responsive(large-screens) {
-                                    &:hover {
-                                        border-left: 5px solid white;
-                                    }
-                                }
             
                                 span {
                                     display: block;
@@ -684,9 +712,9 @@ main {
             
                                     @include responsive(large-screens) {
                                         font-size: 24px;
-                                        &:hover {
-                                            color: white;
-                                        }
+                                        // &:hover {
+                                        //     color: white;
+                                        // }
                                     }
                                 }
                             }
@@ -741,10 +769,43 @@ main {
             
                                 .more-btn {
                                     display: none;
+                                    @include responsive(large-screens) {
+                                        display: block;
+                                        position: absolute;
+                                        bottom: 32px;
+                                        right: 32px;
+                                        .square {
+                                            width: 60px;
+                                            height: 40px;
+                                            position: relative;
+                                            padding: 12px 24px;
+                                            border: 1px solid white;
+                                            border-left: 0;
+                                            p {
+                                                position: absolute;
+                                                top: 4px;
+                                                left: -25px;
+                                                background-color: transparent;
+                                                z-index: 3;
+                                                padding: -5px 0;
+                                                font-size: 13px;
+                                                line-height: 35px;
+                                                font-family: $font-pre-regular;
+                                                color: white;
+                                                background: transparent;
+                                            }
+                                            img {
+                                                position: absolute;
+                                                top: 8px;
+                                                left: 30px;
+                                                width: 25px;
+                                            }
+                                        }
+                                    }
                                 }      
                             }
                         }
-                    }
+                    
                 }
                 
                 .notice_box1 {
@@ -761,37 +822,10 @@ main {
                             .main-info, .main-info2 {
                                 visibility: hidden;
                             }
-                            h3 {
-                                color: white;
-                            }
-                            .more-btn {
-                                display: none;
-                                @include responsive(large-screens) {
-                                    display: block;
-                                    position: absolute;
-                                    bottom: 32px; right: 32px;
-                                    .square {
-                                        width: 70px; height: 50px;
-                                        position: relative;
-                                        padding: 12px 24px;
-                                        border: 1px solid black;
-                                        p {
-                                            position: absolute;
-                                            top: 5px;
-                                            left: -18px;
-                                            background-color: transparent;
-                                            z-index: 3;
-                                            padding: -5px 0;
-                                            font-size: 13px;
-                                            line-height: 35px;
-                                        }
-                                                
-                                    }
-                                    img {
-                                        position: absolute;
-                                        right: 0;
-                                        width: 25px; height: 25px;
-                                    }
+                            .border-box {
+                                border-left: 5px solid white;
+                                h3 {
+                                    color: white;
                                 }
                             }
                         }
@@ -809,37 +843,10 @@ main {
                             .main-info, .main-info2 {
                                 visibility: hidden;
                             }
-                            h3 {
-                                color: white;
-                            }
-                            .more-btn {
-                                display: none;
-                                @include responsive(large-screens) {
-                                    display: block;
-                                    position: absolute;
-                                    bottom: 32px; right: 32px;
-                                    .square {
-                                        width: 70px; height: 50px;
-                                        position: relative;
-                                        padding: 12px 24px;
-                                        border: 1px solid black;
-                                        p {
-                                            position: absolute;
-                                            top: 5px;
-                                            left: -18px;
-                                            background-color: transparent;
-                                            z-index: 3;
-                                            padding: -5px 0;
-                                            font-size: 13px;
-                                            line-height: 35px;
-                                        }
-                                                    
-                                    }
-                                    img {
-                                        position: absolute;
-                                        right: 0;
-                                        width: 25px; height: 25px;
-                                    }
+                            .border-box {
+                                border-left: 5px solid white;
+                                h3 {
+                                    color: white;
                                 }
                             }
                         }
@@ -871,50 +878,18 @@ main {
                             .main-info, .main-info2 {
                                 visibility: hidden;
                             }
-            
-                            h3 {
-                                color: white;
-                            }
-            
-                            .more-btn {
-                                display: none;
-            
-                                @include responsive(large-screens) {
-                                    display: block;
-                                    position: absolute;
-                                    bottom: 32px; right: 32px;
-            
-                                    .square {
-                                        width: 70px; height: 50px;
-                                        position: relative;
-                                        padding: 12px 24px;
-                                        border: 1px solid black;
-            
-                                        p {
-                                            position: absolute;
-                                            top: 5px;
-                                            left: -18px;
-                                            background-color: transparent;
-                                            z-index: 3;
-                                            padding: -5px 0;
-                                            font-size: 13px;
-                                            line-height: 35px;
-                                        }
-                                    }
-            
-                                    img {
-                                        position: absolute;
-                                        right: 0;
-                                        width: 25px; height: 25px;
-                                    }
+                            .border-box {
+                                border-left: 5px solid white;
+                                h3 {
+                                    color: white;
                                 }
                             }
+                            
                         }
                     }
                 }
             }
         }
-            
     
     #history {
         padding-top: 110px;
@@ -1150,6 +1125,34 @@ main {
             display: none;
             @include responsive(large-screens) {
                 margin-bottom: 155px;
+                // &:hover {
+                //     .palace-history { 
+                //             background: url(../images/changkyung4.jpg) no-repeat;
+                //             background-image: cover;
+                //     }
+                //     .img-container1 { 
+                //         position: relative;
+                //         .overlay-text {
+                //             display: none;
+                //         }
+                   
+                //             background-color: #2f2411;
+                //             img {
+                //                 display: none;
+                //             }
+                //             .overlay-text {
+                //                 display: block;
+                //                 color: white;
+                //                 text-align: center;
+                //                 position: absolute;
+                //                 top: 50%;
+                //                 left: 50%;
+                //                 transform: translate(-50%, -50%);
+                //                 font-size: 32px;
+                //                 font-family: $font-extra;
+                //             }
+                //     }
+                // }
                 .palace-history {
                     background-color: #2f2411;
                     color: white;
@@ -1157,6 +1160,10 @@ main {
                     font-family: $font-extra;
                     text-align: center;
                     line-height: 700px;
+                    &:hover {
+                        background: url(../images/jongmo4.jpg) no-repeat;
+                        background-size: cover;
+                    }
                 }
                 .palace {
                     background-color: #2f2411;
@@ -1165,6 +1172,10 @@ main {
                     font-family: $font-extra;
                     text-align: center;
                     line-height: 260px;
+                    &:hover {
+                        background: url(../images/changkyung4.jpg) no-repeat;
+                        background-size: cover;
+                    }
                 }
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
@@ -1174,20 +1185,132 @@ main {
                 "c c e f"
                 ;
             padding: 10px;
-                .palace-history { grid-area: a; }
-                .img1 { grid-area: b; }
-                .img2 { grid-area: c; }
-                .palace { grid-area: d; }
-                .img3 { grid-area: e; }
-                .img4 { grid-area: f; }
+                .palace-history { 
+                    grid-area: a; 
+                    &:hover {
+                        background-image: url(../images/changkyung4.jpg) no-repeat;
+                        background-image: cover;
+                    }
+                }
+                .img-container1 { 
+                    grid-area: b; 
+                    position: relative;
+                    .overlay-text {
+                        display: none;
+                    }
+                    &:hover {
+                        background-color: #2f2411;
+                        img {
+                            display: none;
+                        }
+                        .overlay-text {
+                            display: block;
+                            color: white;
+                            text-align: center;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 32px;
+                            font-family: $font-extra;
+                        }
+                    }
+                }
+                .img-container2 {   
+                    grid-area: c; 
+                    position: relative;
+                    .overlay-text {
+                        display: none;
+                    }
+                    &:hover {
+                        background-color: #2f2411;
+                        img {
+                            display: none;
+                        }
+                        .overlay-text {
+                            display: block;
+                            color: white;
+                            text-align: center;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 32px;
+                            font-family: $font-extra;
+                        }
+                    }
+                }
+                .palace { 
+                    grid-area: d; 
+                    &:hover {
+                        background-image: url(../images/jongmo3.jpg) no-repeat;
+                        background-image: cover;
+                    }
+                }
+                .img-container3 { 
+                    grid-area: e; 
+                    position: relative;
+                    .overlay-text {
+                        display: none;
+                    }
+                    &:hover {
+                        background-color: #2f2411;
+                        img {
+                            display: none;
+                        }
+                        .overlay-text {
+                            display: block;
+                            color: white;
+                            text-align: center;
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 32px;
+                            font-family: $font-extra;
+                        }
+                    }
+                    
+                }
+                .img-container4 { 
+                    grid-area: f; 
+                    position: relative;
+                    .overlay-text {
+                        display: none;
+                    }
+                    &:hover {
+                        background-color: #2f2411;
+                        img {
+                            display: none;
+                        }
+                        .overlay-text {
+                            display: block;
+                            color: white;
+                            text-align: center;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 32px;
+                            font-family: $font-extra;
+                        }
+                    }
+                }
 
                 img {
                     width: $width-wide;
                     height: 100%;
                     object-fit: cover;
+                    opacity: 0;
+                    transition: transform 1s, opacity 1s;
+                }
+                .slide-in-left { transform: translateX(-100%); }
+                .slide-in-right { transform: translateX(100%); }
+                .slide-in-top { transform: translateY(-100%); }
+                .slide-in-bottom { transform: translateY(100%); }
+                .visible { transform: translateX(0) translateY(0); opacity: 1; }
                 }
             }
-          }
         }
       
 

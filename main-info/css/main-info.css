@@ -214,6 +214,7 @@ header .side-menu {
   top: 0;
   right: -45%;
   background-color: white;
+  height: 100%;
   z-index: 1;
   transition: right 0.3s;
 }
