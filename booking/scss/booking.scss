@@ -14,6 +14,9 @@
 }
 ul, ol, li { list-style: none; }
 
+// ***타이틀 밑줄
+// ***PC버전 인기프로그램
+
 // ==== title ====
 section.title {
     display: flex;
@@ -24,6 +27,10 @@ section.title {
 
     h2 {
         font-size: 20px;
+
+        @include responsive(large-screens) {
+            font-size: 48px;
+        }
     }
     .filter {
         display: flex;
@@ -31,6 +38,10 @@ section.title {
         img {
             width: 20px; height: 20px;
             margin-left: 12px;
+
+            @include responsive(large-screens) {
+                width: 32px; height: 32px;
+            }
         }
     }  // filter
 }  // section.title
@@ -48,91 +59,138 @@ section.popular {
 
     .poster {
         position: relative;
+        overflow: hidden;
 
         .selected {
+            position: relative;
             width: 80%;
             margin: 0 auto;
             
-            img {
-                width: 100%;
-                margin: 0 auto 16px;
-            }
 
-            .program-desc {
-                margin: 0 -16px;
-                border-radius: 8px;
-                background-color: #eaeaea;
-
-                .title {
-                    margin: 0 auto;
-                    padding: 24px 24px 8px;
-                    display: flex;
-                    justify-content: space-between;
-                    // align-items: center;
-                    
-                    .name {
-                        font-size: 16px;
-                        font-weight: bold;
-                    }
-
-                    .tag { 
-                        margin-top: -6px;
-                        // margin-left: 16px;
-                        span {
-                            padding: 4px 8px;
-                            border-radius: 4px;
-                            font-size: 10px;
-                            background-color: $basic-yellow;
-                        }
-                    }
-                }  // title
-
-                .place-period {
-                    padding: 0 0 24px 24px;
-                    display: flex;
-                
-                    color: #333333;
-
-                    p {
-                        margin-right: 16px;
-                        font-size: 13px;
-                        color: $basic-gray;
-                    }
-                }
-
-                .detail {
-                    padding: 0 24px 40px;
-
-                    p {
-                        font-size: 14px;
-                    }
-                }
-
-                .button {
-                    padding-bottom: 40px;
-                    margin: 0 24px;
-                    display: flex;
-                    justify-content: space-between;
-
-                    button {
-                        display: inline-block;
-                        // width: 112px;
-                        width: 48%;
-                        padding: 8px;
-                        border: 0;
-                        border-radius: 8px;
-                        font-size: 12px;
-                        color: white;
-                        background-color: $basic-brown;
-                    }
-                }  // button
-            }  // program-desc
+            
         }  // selected
 
         img {
             width: 100%;
+            margin: 0 auto 16px;
+        }
+
+        .program1 {
+            position: absolute;
+            left: -260px; top: 50%;
+            transform: translateY(-50%);
+            // background-color: aqua;
+
+            img {
+                width: 280px;
+                opacity: 0.5;
+            }
+            .program-desc {
+                display: none;
+            }
+        }  // program1
+
+        .program3 {
+            position: absolute;
+            right: -260px;  top: 50%;
+            transform: translateY(-50%);
+
+            img {
+                width: 280px;
+                opacity: 0.5;
+            }
+            .program-desc {
+                display: none;
+            }
         }
     }  // poster
+
+    .slide-box {
+        margin: 0 35% 16px;
+        justify-content: space-between;
+        display: flex;
+
+        div {
+            width: 8px; height: 8px;
+            // margin: 0 2px;
+            border-radius: 4px;
+            background-color: $background-lightgray;
+        }
+
+        .selected {
+            width: 32px;
+        }
+    }
+
+    .program-desc {
+        margin: 0 16px;
+        border-radius: 8px;
+        background-color: #eaeaea;
+
+        .title {
+            margin: 0 auto;
+            padding: 24px 24px 8px;
+            display: flex;
+            justify-content: space-between;
+            // align-items: center;
+            
+            .name {
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            .tag { 
+                margin-top: -6px;
+                // margin-left: 16px;
+                span {
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    font-size: 10px;
+                    background-color: $basic-yellow;
+                }
+            }
+        }  // title
+
+        .place-period {
+            padding: 0 0 24px 24px;
+            display: flex;
+        
+            color: #333333;
+
+            p {
+                margin-right: 16px;
+                font-size: 13px;
+                color: $basic-gray;
+            }
+        }
+
+        .detail {
+            padding: 0 24px 40px;
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .button {
+            padding-bottom: 40px;
+            margin: 0 24px;
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                display: inline-block;
+                // width: 112px;
+                width: 48%;
+                padding: 8px;
+                border: 0;
+                border-radius: 8px;
+                font-size: 12px;
+                color: white;
+                background-color: $basic-brown;
+            }
+        }  // button
+    }  // program-desc
 } 
 
 // section.popular > .poster > .program5,
@@ -150,10 +208,10 @@ section.popular {
 //     left: -50%;
 // }
 
-section.popular > .poster > .program5,
-section.popular > .poster > .program2,
-section.popular > .poster > .program3,
-section.popular > .poster > .program4 {
+// section.popular > .poster > .program1,
+// section.popular > .poster > .program3,
+section.popular > .poster > .program4,
+section.popular > .poster > .program5 {
     display: none;
 }
 
@@ -166,15 +224,26 @@ section.keyword > .hashtag {
     grid-gap: 8px;
     width: 100%;
 
+    @include responsive(large-screens) {
+        padding: 0 0 0 20%;
+        display: flex;
+        justify-content: space-between;
+    }
+
     div {
         padding: 8px;
         font-size: 12px;
         letter-spacing: -1px;
-        cursor: pointer;;
+        cursor: pointer;
         text-align: center;
         border: 1px solid $basic-gray;
         border-radius:24px;
         background-color: $color-white;
+
+        @include responsive(large-screens) {
+            padding: 8px 24px;
+            font-size: 16px;
+        }
     }
 
     .selected {
@@ -212,32 +281,55 @@ section.keyword > .program {
             color: #fff;
             background-color: #00000080;
 
+            @include responsive(large-screens) {
+                background-color: #00000098;
+                height: 35%;
+            }
+
             .title {
                 margin-top: 8px;
                 font-size: 14px;
                 text-align: center;
                 letter-spacing: -1px;
-            }
+
+                @include responsive(large-screens) {
+                    font-size: 18px;
+                }
+            }  // title
 
             .booking {
                 display: none;
             }
 
             .period {
-                // position: absolute;
-                // bottom: 4px; left: 16px;
-                margin-top: -4px;
                 font-size: 12px;
                 text-align: center;
-            }
+                
+                @include responsive(large-screens) {
+                    position: absolute;
+                    bottom: 16px; left: 16px;
+                    margin-top: -4px;
+                    font-size: 16px;
+                }
+            }  // period
 
             .place {
-                // position: absolute;
-                // bottom: 4px; right: 16px;
-                margin-top: -6px;
-                font-size: 12px;
-                text-align: center;
-            }
+                display: none;
+                // margin-top: -6px;
+                // font-size: 12px;
+                // text-align: center;
+                
+                @include responsive(large-screens) {
+                    display: block;
+                    position: absolute;
+                    bottom: 16px; right: 16px;
+                    font-size: 16px;
+                }
+            }  // place
+        }
+
+        @include responsive(large-screens) {
+            width: 24%;
         }
     }  // div
 }  // program
@@ -258,5 +350,19 @@ section.place > .place-button {
         text-align: center;
         line-height: 80px;
         background-color: $background-lightgray;
+
+        @include responsive(large-screens) {
+            font-size: 16px;
+        }
+    }
+
+    @include responsive(large-screens) {
+        grid-gap: 24px;
+        
+        .btn-big:hover {
+            font-weight: bold;
+            color: $basic-brown;
+            background-color: $basic-yellow;
+        }
     }
 }

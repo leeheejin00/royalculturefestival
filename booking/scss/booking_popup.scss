@@ -1,0 +1,273 @@
+@import "./style.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+@import "../../scss/mixin.scss";
+@import "../../scss/style.scss";
+@import "../../scss/header.scss";
+@import "../../scss/footer.scss";
+
+.container {
+    // width: $width-wide;
+    max-width: 1416px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+ul, ol, li { list-style: none; }
+
+.disable {
+    color: $basic-gray;
+}
+
+// ==== title ====
+h1 { 
+    margin-bottom: 16px;
+    font-size: 24px; 
+}
+
+// ==== info-calendar ====
+section.info-calendar {
+    .mobile-title {
+        margin-bottom: 24px;
+
+        .name {
+            margin: 0 0 8px 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .period, .time {
+            margin: 0;
+            font-size: 12px;
+        }
+        .small {
+            color: $basic-gray;
+        }
+
+        @include responsive(large-screens) {
+            display: none;
+        }
+    }  // mobile-title
+
+    img {
+        width: 70%;
+        margin: 0 15% 16px;
+    }
+
+    .info {
+        .title {
+            display: none;
+            
+            @include responsive(large-screens) {
+                display: block;
+            }
+        }  // title
+
+        .calendar {
+            width: 100%;height: 200px;
+            background-color: paleturquoise;
+        }  // calendar
+    }  // info
+}  // info-calendar
+
+// ==== booking-info ====
+section.booking-info {
+    div.time-num {
+        div {
+            margin: 24px 0;
+            display: flex;
+            flex-wrap: wrap;
+
+            p.title {
+                width: 20%;
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            ul {
+                width: 78%;
+                display: flex;
+
+                li {
+                    font-size: 14px;
+
+                    .bg {
+                        margin-right: 8px;
+                        padding: 8px;
+                        border-radius: 6px;
+                        background-color: $background-lightgray;
+                    }
+                }  // li
+            }  // ul
+
+            .small {
+                font-size: 10px;
+                color: $basic-gray;
+            }
+        }  // div
+
+        .time {
+            li {
+                position: relative;
+
+                .bg {
+                    display: inline-block;
+                    width: 120px;
+                    text-align: center;
+                } // bg
+                .small {
+                    position: absolute;
+                    bottom: -2px; right: 8px;
+                } // small
+            }  // li
+        }  // time
+
+        .num {
+            li:first-child,
+            li:nth-child(2),
+            li:nth-child(3) {
+                .bg {
+                    display: inline-block;
+                    width: 32px;
+                    border-radius: 16px;
+                    text-align: center;
+                }
+            }
+            li:last-child {
+                margin-top: 16px;
+            }
+        }  // num
+
+        @include responsive(large-screens) {
+            display: flex;
+        }
+    }  // time-num
+    
+    div.price, 
+    div.pay {
+        margin: 24px 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        p.title {
+            width: 20%;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        ul {
+            width: 78%;
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                margin-right: 8px;
+                padding: 8px 12px;
+                border-radius: 6px;
+                
+                font-size: 13px;
+                text-align: center;
+                background-color: $background-lightgray;
+            }  // li
+
+            li:last-child {
+                margin-right: 0;
+            }
+
+            .selected {
+                font-weight: bold;
+                color: $basic-brown;
+                background-color: $basic-yellow;
+            }
+        }  // ul
+
+        .small {
+            margin-top: 8px;
+            font-size: 10px;
+            color: $basic-gray;
+        }
+    }  // price, pay
+
+    div.price {
+        li:first-child {
+            width: 40%;
+        }
+        li:last-child {
+            width: 58%;
+        }
+    }
+
+    div.pay {
+        li {
+            width: 33%;
+        }
+    }
+
+    div.info {
+        margin: 24px 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        p.title {
+            width: 20%;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .info-box {
+            position: relative;
+            width: 78%;
+            padding: 16px;
+            border-radius: 8px;
+            background-color: $background-lightgray;
+            
+            p {
+                font-size: 12px;
+                .bold {
+                    margin-right: 4px;
+                    font-weight: bold;
+                }
+            }
+            .modify {
+                position: absolute;
+                top: 8px; right: 8px;
+                font-size: 11px;
+                text-decoration: underline;
+                color: $basic-gray;
+            }
+        }  // info-box
+    }
+}
+
+// ==== note ====
+.note {
+    // margin-bottom: 56px;
+    padding: 8px 0 8px;
+    background-color: #f8efe0;
+
+    .title {
+        margin-bottom: 8px;
+        padding-left: 24px;
+        font-size: 14px;
+        font-weight: bold;
+        background-image: url(../images/icon_brown.png);
+        background-size: 18px;
+        background-position: left center;
+        background-repeat: no-repeat;
+    }
+
+    .content {
+        font-size: 12px;
+        margin-bottom: 24px;
+    }
+}  // note
+
+// ==== book ====
+button.book {
+    width: 90%;
+    margin: 16px 5%;
+    padding: 8px 20px;
+    // transform: translateX(50%);
+    border: 0;
+    border-radius: 8px;
+    background-color: $basic-yellow;
+}

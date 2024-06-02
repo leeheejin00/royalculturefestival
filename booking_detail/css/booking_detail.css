@@ -10,14 +10,29 @@ section.title > h2 {
   text-decoration: underline;
   margin-bottom: 32px;
 }
+@media (min-width: 1024px) {
+  section.title > h2 {
+    font-size: 48px;
+  }
+}
 
 section.details p {
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 24px;
+}
+@media (min-width: 1024px) {
+  section.details p {
+    font-size: 16px;
+  }
 }
 section.details h3 {
   font-size: 20px;
   margin-bottom: 12px;
+}
+@media (min-width: 1024px) {
+  section.details h3 {
+    font-size: 32px;
+  }
 }
 section.details .booking-info {
   display: flex;
@@ -39,7 +54,7 @@ section.details .booking-info a img {
 }
 section.details .booking-info .info-1-2 {
   position: relative;
-  width: 58%;
+  width: 55%;
 }
 section.details .booking-info .info-1-2 .print {
   display: none;
@@ -52,6 +67,7 @@ section.details .booking-info .info-1-2 .print {
     right: 0;
     color: #cccccc;
     text-decoration: underline;
+    cursor: pointer;
   }
 }
 section.details .booking-info .info-1-2 .info1 {
@@ -60,26 +76,77 @@ section.details .booking-info .info-1-2 .info1 {
 section.details .booking-info .info-1-2 .info1 td {
   font-size: 12px;
 }
+@media (min-width: 1024px) {
+  section.details .booking-info .info-1-2 .info1 td {
+    font-size: 16px;
+  }
+}
 section.details .booking-info .info-1-2 .info1 .sort {
   width: 60px;
   height: 40px;
   text-align: left;
 }
 @media (min-width: 1024px) {
+  section.details .booking-info .info-1-2 .info1 .sort {
+    width: 96px;
+  }
+}
+section.details .booking-info .info-1-2 .info2 {
+  display: none;
+}
+@media (min-width: 1024px) {
+  section.details .booking-info .info-1-2 .info2 {
+    display: block;
+  }
+  section.details .booking-info .info-1-2 .info2 td {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  section.details .booking-info .info-1-2 .info2 td {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  section.details .booking-info .info-1-2 .info2 .sort {
+    width: 60px;
+    height: 40px;
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  section.details .booking-info .info-1-2 .info2 .sort {
+    width: 120px;
+  }
+}
+@media (min-width: 1024px) {
   section.details .booking-info .info-1-2 {
     width: 95%;
   }
 }
-section.details .booking-info .info2 {
+section.details .booking-info .mobile-info2 {
+  width: 100%;
+  margin: 32px 0;
+}
+section.details .booking-info .mobile-info2 p {
+  font-size: 14px;
+  font-weight: bold;
   margin-bottom: 16px;
 }
-section.details .booking-info .info2 td {
+section.details .booking-info .mobile-info2 ul {
+  display: flex;
+}
+section.details .booking-info .mobile-info2 ul .sort {
+  margin-right: 16px;
   font-size: 12px;
 }
-section.details .booking-info .info2 .sort {
-  width: 112px;
-  height: 40px;
-  text-align: left;
+section.details .booking-info .mobile-info2 ul .sort .box {
+  margin-right: 8px;
+}
+@media (min-width: 1024px) {
+  section.details .booking-info .mobile-info2 {
+    display: none;
+  }
 }
 section.details .booking-info .info3 {
   width: 100%;
@@ -88,6 +155,12 @@ section.details .booking-info .info3 p {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 8px;
+}
+@media (min-width: 1024px) {
+  section.details .booking-info .info3 p {
+    margin-top: 24px;
+    font-size: 16px;
+  }
 }
 section.details .booking-info .info3 table {
   width: 100%;
@@ -101,9 +174,20 @@ section.details .booking-info .info3 table th {
   font-size: 12px;
   background-color: #eaeaea;
 }
+@media (min-width: 1024px) {
+  section.details .booking-info .info3 table th {
+    padding: 8px 0;
+    font-size: 14px;
+  }
+}
 section.details .booking-info .info3 table td {
   font-size: 14px;
   padding: 32px 0;
+}
+@media (min-width: 1024px) {
+  section.details .booking-info .info3 table td {
+    padding: 16px 0;
+  }
 }
 section.details .booking-info button {
   width: 100%;
@@ -112,6 +196,11 @@ section.details .booking-info button {
   border-radius: 12px;
   color: white;
   background-color: #2f2411;
+}
+@media (min-width: 1024px) {
+  section.details .booking-info button {
+    font-size: 16px;
+  }
 }
 @media (min-width: 1024px) {
   section.details .booking-info {
