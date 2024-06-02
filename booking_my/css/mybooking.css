@@ -1,0 +1,230 @@
+.container {
+  width: 100%;
+  max-width: 1416px;
+  margin: 32px auto;
+  padding: 0 32px;
+}
+
+section.title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+section.title h2 {
+  margin-right: 10px;
+  font-size: 20px;
+  border-bottom: 1px solid #111;
+}
+section.title .filter {
+  display: flex;
+  align-items: center;
+}
+section.title .filter p {
+  margin-right: 12px;
+  font-size: 14px;
+}
+
+section.booking-list .desc {
+  margin-bottom: 32px;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #333333;
+}
+@media (min-width: 1024px) {
+  section.booking-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  section.booking-list p {
+    width: 100%;
+  }
+  section.booking-list .booking01, section.booking-list .booking02 {
+    width: 49%;
+  }
+}
+
+section.booking-list > div {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 24px;
+  padding: 24px;
+  border: 1px solid #2f2411;
+}
+section.booking-list > div .num-name {
+  display: flex;
+}
+section.booking-list > div .num-name .line {
+  width: 5px;
+  height: 72px;
+  margin-right: 16px;
+  background-color: #2f2411;
+}
+section.booking-list > div .num-name .booking-num {
+  font-size: 12px;
+}
+section.booking-list > div .num-name .booking-name {
+  font-size: 18px;
+  line-height: 1.2;
+}
+section.booking-list > div .date-place-count {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 24px;
+}
+section.booking-list > div .date-place-count p > span {
+  display: none;
+}
+section.booking-list > div .date-place-count .date {
+  width: 70%;
+  margin-right: 24px;
+  font-size: 10px;
+}
+section.booking-list > div .date-place-count .place {
+  display: none;
+}
+section.booking-list > div .date-place-count .count {
+  font-size: 10px;
+}
+section.booking-list > div img {
+  width: 33%;
+}
+section.booking-list > div .more-btn {
+  display: none;
+}
+section.booking-list > div .more-btn img {
+  width: 24px;
+}
+
+@media (min-width: 1024px) {
+  section.booking-list > div:hover {
+    color: #fff;
+    background-color: #2f2411;
+  }
+  section.booking-list > div:hover .line {
+    background-color: #fff;
+  }
+  section.booking-list > div:hover .date-place-count {
+    display: inline-block;
+  }
+  section.booking-list > div:hover .date, section.booking-list > div:hover .place, section.booking-list > div:hover .count .bold {
+    display: inline-block;
+    font-size: 14px;
+  }
+  section.booking-list > div:hover img {
+    display: none;
+  }
+  section.booking-list > div:hover .more-btn {
+    display: block;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+  }
+  section.booking-list > div:hover .more-btn .square {
+    width: 90px;
+    height: 60px;
+    position: relative;
+    padding: 12px 24px;
+    border: 1px solid #fff;
+  }
+  section.booking-list > div:hover .more-btn .square p {
+    position: absolute;
+    left: -3px;
+    padding: -5px 0;
+    font-size: 13px;
+    line-height: 35px;
+    background-color: #2f2411;
+  }
+  section.booking-list > div:hover .more-btn .square img {
+    position: absolute;
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+section.booking-list > .page-num {
+  display: none;
+}
+@media (min-width: 1024px) {
+  section.booking-list > .page-num {
+    display: flex;
+    margin: 0 auto;
+    border: 0;
+  }
+  section.booking-list > .page-num a {
+    margin: 0 72px;
+  }
+}
+
+section.booking-list > button.more {
+  width: 100%;
+  margin: 20px auto 96px;
+  border: 0;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  section.booking-list > button.more {
+    display: none;
+  }
+}
+
+h4.title {
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+section.recommend-lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section.recommend-lists div {
+  position: relative;
+  width: 48%;
+  margin-bottom: 32px;
+  border-radius: 8px;
+  background-color: aqua;
+}
+@media (min-width: 1024px) {
+  section.recommend-lists div {
+    width: 24%;
+  }
+}
+section.recommend-lists div img {
+  width: 100%;
+  border-radius: 8px;
+}
+section.recommend-lists div .desc {
+  position: absolute;
+  bottom: -32px;
+  width: 100%;
+  height: 45%;
+  border-radius: 0 0 8px 8px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+}
+section.recommend-lists div .desc .title {
+  margin-top: 4px;
+  font-size: 14px;
+  letter-spacing: -1px;
+  text-align: center;
+}
+section.recommend-lists div .desc .booking {
+  display: none;
+}
+section.recommend-lists div .desc .period {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  font-size: 10px;
+}
+section.recommend-lists div .desc .place {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 10px;
+}/*# sourceMappingURL=mybooking.css.map */

@@ -13,196 +13,185 @@ section.title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 48px 0;
+  margin: 24px 0;
 }
-
-section.title > .filter {
+section.title h2 {
+  font-size: 20px;
+}
+section.title .filter {
   display: flex;
 }
-
-section.title > .filter > img {
-  width: 24px;
-  height: 24px;
+section.title .filter img {
+  width: 20px;
+  height: 20px;
   margin-left: 12px;
 }
 
-section.popular > .section-name {
+section.popular {
+  margin-bottom: 72px;
+}
+section.popular .section-name {
+  display: none;
+  font-size: 16px;
   margin-bottom: 40px;
 }
-
-section.popular > .poster {
+section.popular .poster {
   position: relative;
 }
-
-section.popular > .poster > .selected {
-  width: 70%;
+section.popular .poster .selected {
+  width: 80%;
   margin: 0 auto;
 }
-
-section.popular > .poster img {
+section.popular .poster .selected img {
+  width: 100%;
+  margin: 0 auto 16px;
+}
+section.popular .poster .selected .program-desc {
+  margin: 0 -16px;
+  border-radius: 8px;
+  background-color: #eaeaea;
+}
+section.popular .poster .selected .program-desc .title {
+  margin: 0 auto;
+  padding: 24px 24px 8px;
+  display: flex;
+  justify-content: space-between;
+}
+section.popular .poster .selected .program-desc .title .name {
+  font-size: 16px;
+  font-weight: bold;
+}
+section.popular .poster .selected .program-desc .title .tag {
+  margin-top: -6px;
+}
+section.popular .poster .selected .program-desc .title .tag span {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  background-color: #ffbe0f;
+}
+section.popular .poster .selected .program-desc .place-period {
+  padding: 0 0 24px 24px;
+  display: flex;
+  color: #333333;
+}
+section.popular .poster .selected .program-desc .place-period p {
+  margin-right: 16px;
+  font-size: 13px;
+  color: #cccccc;
+}
+section.popular .poster .selected .program-desc .detail {
+  padding: 0 24px 40px;
+}
+section.popular .poster .selected .program-desc .detail p {
+  font-size: 14px;
+}
+section.popular .poster .selected .program-desc .button {
+  padding-bottom: 40px;
+  margin: 0 24px;
+  display: flex;
+  justify-content: space-between;
+}
+section.popular .poster .selected .program-desc .button button {
+  display: inline-block;
+  width: 48%;
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 12px;
+  color: white;
+  background-color: #2f2411;
+}
+section.popular .poster img {
   width: 100%;
 }
 
 section.popular > .poster > .program5,
-section.popular > .poster > .selected + li {
-  position: absolute;
-  top: 5%;
-  width: 55%;
-  opacity: 0.3;
-}
-
-section.popular > .poster > .selected + li {
-  right: -50%;
-}
-
-section.popular > .poster > .program5 {
-  left: -50%;
-}
-
+section.popular > .poster > .program2,
 section.popular > .poster > .program3,
 section.popular > .poster > .program4 {
   display: none;
 }
 
-section.popular > .poster > .selected > .program-desc {
-  margin: 32px -72px;
-  border-radius: 16px;
-  background-color: #eaeaea;
-}
-
-section.popular > .poster > .selected > .program-desc > .title {
-  padding: 40px 0 24px 40px;
-  font-weight: bold;
-  display: flex;
-}
-
-section.popular > .poster > .selected > .program-desc > .title > .tag > span {
-  margin-left: 4px;
-  padding: 4px 16px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: normal;
-  background-color: aqua;
-}
-
-section.popular > .poster > .selected > .program-desc > .place-period {
-  padding: 0 0 56px 40px;
-  display: flex;
-  color: #333333;
-}
-
-section.popular > .poster > .selected > .program-desc > .place-period > p {
-  margin-right: 24px;
-  font-size: 13px;
-  color: #cccccc;
-}
-
-section.popular > .poster > .selected > .program-desc > .detail {
-  padding: 0 48px 40px;
-}
-
-section.popular > .poster > .selected > .program-desc > .button {
-  padding: 0 96px 32px;
-  display: flex;
-  justify-content: space-between;
-}
-
-section.popular > .poster > .selected > .program-desc > .button > button {
-  width: 120px;
-  padding: 8px;
-  border-radius: 8px;
-  color: white;
-  background-color: #2f2411;
-}
-
 section.keyword > .hashtag {
-  margin: 40px auto;
-  height: 48px;
+  margin: 24px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 8px;
   width: 100%;
 }
-
-section.keyword > .hashtag > div {
+section.keyword > .hashtag div {
   padding: 8px;
   font-size: 12px;
+  letter-spacing: -1px;
   cursor: pointer;
   text-align: center;
   border: 1px solid #cccccc;
   border-radius: 24px;
   background-color: #fff;
 }
-
-section.keyword > .hashtag > .selected {
+section.keyword > .hashtag .selected {
+  font-weight: bold;
   color: #ffbe0f;
   background-color: #2f2411;
 }
 
 section.keyword > .program {
-  padding-top: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 72px;
 }
-
-section.keyword > .program > div {
+section.keyword > .program div {
   position: relative;
   width: 48%;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   border-radius: 8px;
-  background-color: aqua;
 }
-
-section.keyword > .program > div > img {
+section.keyword > .program div img {
   width: 100%;
   border-radius: 8px;
 }
-
-section.keyword > .program > div > .desc {
+section.keyword > .program div .desc {
+  margin-bottom: 0;
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 30%;
+  height: 50%;
   border-radius: 0 0 8px 8px;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5019607843);
 }
-
-section.keyword > .program > div > .desc > .title {
-  margin-top: 12px;
+section.keyword > .program div .desc .title {
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+section.keyword > .program div .desc .booking {
+  display: none;
+}
+section.keyword > .program div .desc .period {
+  margin-top: -4px;
+  font-size: 12px;
+  text-align: center;
+}
+section.keyword > .program div .desc .place {
+  margin-top: -6px;
+  font-size: 12px;
   text-align: center;
 }
 
-section.keyword > .program > div > .desc > .booking {
-  display: none;
-}
-
-section.keyword > .program > div > .desc > .period {
-  position: absolute;
-  bottom: 16px;
-  left: 24px;
-  font-size: 14px;
-}
-
-section.keyword > .program > div > .desc > .place {
-  position: absolute;
-  bottom: 16px;
-  right: 24px;
-  font-size: 14px;
-}
-
 section.place > .place-button {
-  margin: 40px auto;
-  height: 172px;
+  margin: 24px auto 56px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 12px;
   width: 100%;
 }
-
-section.place > .place-button > .btn-big {
+section.place > .place-button .btn-big {
   border-radius: 8px;
+  font-size: 14px;
   text-align: center;
   line-height: 80px;
   background-color: #eaeaea;
