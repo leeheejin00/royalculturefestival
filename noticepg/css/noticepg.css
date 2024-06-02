@@ -121,24 +121,32 @@ footer {
 }
 
 .noticepg h2 {
-  font: 48px "Pretendard";
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
   text-decoration: underline;
   text-underline-position: under;
   text-decoration-thickness: 2px;
+}
+@media (min-width: 1024px) {
+  .noticepg h2 {
+    font-size: 48px;
+  }
 }
 .noticepg .noticepg_box {
   margin-top: 50px;
   border: 1px solid black;
 }
 .noticepg .noticepg_box h2 {
-  font: 30px "Pretendard";
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
   padding: 25px 30px;
   text-decoration: none;
 }
 @media (min-width: 1024px) {
   .noticepg .noticepg_box h2 {
-    font: 48px "Pretendard";
-    padding-left: 65px;
+    font-size: 48px;
+    font-family: "Pretendard-Medium";
+    padding-left: 55px;
   }
 }
 .noticepg .noticepg_box .sub_box {
@@ -150,9 +158,9 @@ footer {
   border-top: 2px solid black;
 }
 .noticepg .noticepg_box .sub_box p {
-  font: 18px "Pretendard";
-  line-height: 52px;
-  padding: 0 66px;
+  font-size: 11px;
+  font-family: "Pretendard-Medium";
+  padding: 2% 10%;
 }
 .noticepg .noticepg_box .sub_box p:last-child {
   display: none;
@@ -165,6 +173,8 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
+    font-size: 18px;
+    padding: 7px 66px;
   }
   .noticepg .noticepg_box .sub_box p:nth-child(2) {
     left: 382px;
@@ -185,29 +195,45 @@ footer {
   }
 }
 .noticepg .noticepg_box .noticepg_info h3 {
-  font: 24px "Pretendard";
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
 }
 @media (min-width: 1024px) {
   .noticepg .noticepg_box .noticepg_info h3 {
-    font: 30px "Pretendard";
+    font-size: 30px;
+    font-family: "Pretendard-Medium";
   }
 }
 .noticepg .noticepg_box .noticepg_info .info1 {
   margin-top: 67px;
-  font: 24px "Pretendard";
+  font-size: 20px;
+  font-family: "Pretendard-Medium";
 }
 @media (min-width: 1024px) {
   .noticepg .noticepg_box .noticepg_info .info1 {
     margin-top: 124px;
+    font-size: 24px;
   }
 }
 .noticepg .noticepg_box .noticepg_info .info2 {
   margin: 40px 0;
-  font: 24px "Pretendard";
+  font-size: 20px;
+  font-family: "Pretendard-Medium";
+}
+@media (min-width: 1024px) {
+  .noticepg .noticepg_box .noticepg_info .info2 {
+    font-size: 24px;
+  }
 }
 .noticepg .noticepg_box .noticepg_info .info3 {
   margin: 40px 20px;
-  font: 24px "Pretendard";
+  font-size: 18px;
+  font-family: "Pretendard-Medium";
+}
+@media (min-width: 1024px) {
+  .noticepg .noticepg_box .noticepg_info .info3 {
+    font-size: 24px;
+  }
 }
 .noticepg .noticepg_box .noticepg_info .img1 {
   margin-top: 136px;
@@ -221,26 +247,29 @@ footer {
 }
 .noticepg .pre_notice {
   position: relative;
-  width: 90%;
-  height: 107px;
+  width: 100%;
+  height: 80px;
   background-color: #f0f0f0;
   margin: 50px auto 17px;
   border-radius: 15px;
+  overflow: hidden;
 }
 .noticepg .pre_notice img {
   position: absolute;
   left: 20px;
-  top: 30px;
+  top: 15px;
   width: 50px;
   height: 50px;
   rotate: 90deg;
 }
 .noticepg .pre_notice p {
   position: absolute;
-  top: 30px;
+  top: 7%;
   left: 110px;
-  font: 24px "Pretendard";
-  width: 270px;
+  font-size: 1em;
+  font-family: "Pretendard-Medium";
+  width: 180px;
+  line-height: 1.5;
 }
 .noticepg .pre_notice date {
   display: none;
@@ -248,18 +277,22 @@ footer {
 @media (min-width: 1024px) {
   .noticepg .pre_notice {
     margin: 60px auto 33px;
+    height: 107px;
   }
   .noticepg .pre_notice img {
     left: 50px;
+    top: 30px;
   }
   .noticepg .pre_notice p {
     width: 100%;
     top: 40px;
     left: 128px;
+    font-size: 18px;
   }
   .noticepg .pre_notice date {
     display: block;
-    font: 24px "Pretendard";
+    font-size: 18px;
+    font-family: "Pretendard-Medium";
     text-align: right;
     line-height: 107px;
     padding-right: 40px;
@@ -267,48 +300,56 @@ footer {
 }
 .noticepg .next_notice {
   position: relative;
-  width: 90%;
-  height: 107px;
+  width: 100%;
+  height: 80px;
   background-color: #f0f0f0;
   margin: 0 auto 60px;
   border-radius: 15px;
+  overflow: hidden;
 }
 .noticepg .next_notice img {
   position: absolute;
   left: 20px;
-  top: 30px;
+  top: 15px;
   width: 50px;
   height: 50px;
   rotate: -90deg;
 }
 .noticepg .next_notice p {
   position: absolute;
-  top: 35%;
+  top: 30%;
   left: 110px;
-  font: 24px "Pretendard";
+  font-size: 1em;
+  font-family: "Pretendard-Medium";
 }
 @media (min-width: 1024px) {
   .noticepg .next_notice {
     margin: 0 auto 80px;
+    height: 107px;
   }
   .noticepg .next_notice img {
     left: 50px;
+    top: 30px;
   }
   .noticepg .next_notice p {
     top: 40px;
     left: 128px;
+    font-size: 18px;
   }
 }
 .noticepg .list {
   width: 114px;
   height: 52px;
   margin: 0 auto 60px;
-  font: 24px "Pretendard";
   background-color: #2f2411;
-  color: white;
   text-align: center;
   line-height: 52px;
   border-radius: 10px;
+}
+.noticepg .list a {
+  font-size: 24px;
+  font-family: "Pretendard-Medium";
+  color: white;
 }
 @media (min-width: 1024px) {
   .noticepg .list {

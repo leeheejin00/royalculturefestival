@@ -18,22 +18,29 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 35px;
         h2 {
-            font-size: 48px;
+            font-size: 20px;
             font-family: $font-medium;
             border-bottom: 1px solid black;
-            margin-bottom: 35px;
+            width: 22%;
+            @include responsive(large-screens) {
+                font-size: 48px;
+                width: 18%;
+            }
         }
         .go {
             display: flex;
             a {
-                font-size: 20px;
+                font-size: 16px;
                 font-family: $font-pre-light;
                 padding-left: 37px;
                 color: #2b2b2b;
                 &:hover {
                     font-family: $font-medium;
-
+                }
+                @include responsive(large-screens) {
+                    font-size: 20px;
                 }
             }
         }
@@ -48,7 +55,7 @@
         "e f f"
         "g g h"
         ;
-        gap: 24px;
+        gap: 12px;
         @include responsive(large-screens) {
             grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
@@ -59,16 +66,57 @@
         ;
         }
 
-        img:nth-child(1) { grid-area: a; }
-        img:nth-child(2) { grid-area: b; }
-        img:nth-child(3) { grid-area: c; }
-        img:nth-child(4) { grid-area: d; }
-        img:nth-child(5) { grid-area: e; }
-        img:nth-child(6) { grid-area: f; }
-        img:nth-child(7) { grid-area: g; }
-        img:nth-child(8) { grid-area: h; }
-        img:nth-child(9) { display: none; }
-        img:nth-child(10) { display: none; }
+        .history-img1 { grid-area: a; }
+        .history-img2 { grid-area: b; }
+        .history-img3 { grid-area: c; }
+        .history-img4 { grid-area: d; }
+        .history-img5 { grid-area: e; }
+        .history-img6 { grid-area: f; }
+        .history-img7 { grid-area: g; }
+        .history-img8 { grid-area: h; }
+        .history-img9 { grid-area: i; display: none; }
+        .history-img10 { grid-area: j; display: none; }
+
+        
+
+        .history-img1, .history-img2, .history-img3, .history-img4, .history-img5, .history-img6, .history-img7, .history-img8, .history-img9, .history-img10 { 
+            position: relative;
+            .history-txt {
+                display: none;
+                @include responsive(large-screens) {
+                    display: none;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    bottom: 0;
+                    background-color: #000000;
+                    width: $width-wide;
+                    opacity: 60%;
+                    padding: 10px;
+                    transform: translateY(100%);
+                    transition: transform 0.3s ease-in-out;
+                    a {
+                        font-size: 15px;
+                        font-family: $font-pre-regular;
+                        color: white; 
+                        width: 80%;
+                        text-align: justify;
+                     }
+                     img {
+                        width: 12%;
+                        margin-left: 20px;
+                     }
+                    } 
+                }
+                &:hover .history-txt {
+                    display: none;
+                    @include responsive(large-screens) {
+                    display: flex;
+                    transform: translateY(0);
+                    }
+                }
+            }
+        
         @include responsive(large-screens) {
             img:nth-child(9) { display: block; grid-area: i; }
             img:nth-child(10) { display: block; grid-area: j; }
@@ -93,35 +141,59 @@
     background-color: #f8efe0;
     padding: 50px 0;
     h3 {
-        font-size: 24px;
+        font-size: 16px;
         font-family: $font-pre-bold;
         border-bottom: 3px solid #2f2411;
         color: #2f2411;
-        width: 12%;
+        width: 19%;
         margin-bottom: 53px;
+        width: 22%;
+        @include responsive(large-screens) {
+            font-size: 24px;
+            width: 100px
+        }
     }
+   
     .review1 {
+        opacity: 0;
         display: flex;
         justify-content: space-between;
         align-items: end;
+        transition: opacity 0.7s ease-in-out;
+        @include responsive(large-screens) {
+            width: 80%;
+        }
         .review-txt1 {
             background-color: #2f2411;
             width: 90%;
             margin-left: 24px;
-            padding: 50px;
+            padding: 30px;
             border-radius: 50px 50px 50px 0;
+            @include responsive(large-screens) {
+                width: 100%;
+            }
             .re-txt {
-                font-size: 28px;
+                
+                text-align: justify;
+                font-size: 18px;
                 font-family: $font-regular;
                 color: white;
                 padding-bottom: 50px;
+                @include responsive(large-screens) {
+                    font-size: 28px;
+                }
             }
             .re-title {
-                font-size: 22px;
+                text-align: justify;
+                font-size: 16px;
                 font-family: $font-pre-regular;
                 color: white;
+                @include responsive(large-screens) {
+                    font-size: 22px;
+                }
             }
             .time-plus {
+                text-align: justify;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -129,120 +201,213 @@
             }
             .time {
                 margin-right: auto;
-                font-size: 20px;
+                font-size: 12px;
                 font-family: $font-pre-light;
+                @include responsive(large-screens) {
+                    font-size: 20px;
+                }
             }
-            a {
-                margin-left: auto;
-                font-size: 20px;
-                font-family: $font-medium;
-                color: white;
+            .hr-more {
+                display: flex;
+                align-items: center;
+                .more {
+                    width: 20px;
+                    height: 2px;
+                    border: 1px solid #b1aa9e;
+                    background-color: #b1aa9e;
+                }
+                a {
+                    text-align: justify;
+                    margin-left: 10px;
+                    font-size: 12px;
+                    font-family: $font-medium;
+                    color: white;
+                    @include responsive(large-screens) {
+                        font-size: 20px;
+                    }
+                }
             }
         } 
     }
     .review2 {
+        opacity: 0;
+        position: relative;
         margin-top: 114px;
         display: flex;
         justify-content: space-between;
         align-items: end;
+        transition: opacity 0.7s ease-in-out;
+        @include responsive(large-screens) {
+            width: 80%;
+            float: right;
+            margin-bottom: 114px;
+        }
         .review-txt2 {
+            position: relative;
             background-color: #57482f;
             width: 90%;
             margin-right: 24px;
-            padding: 50px;
+            padding: 30px;
             border-radius: 50px 50px 0 50px;
             .re-txt {
-                font-size: 28px;
+                text-align: justify;
+                font-size: 18px;
                 font-family: $font-regular;
                 color: white;
                 padding-bottom: 50px;
+                @include responsive(large-screens) {
+                    font-size: 28px;
+                }
             }
             .re-title {
-                font-size: 22px;
+                text-align: justify;
+                font-size: 16px;
                 font-family: $font-pre-regular;
                 color: white;
+                @include responsive(large-screens) {
+                    font-size: 22px;
+                }
             }
             .time-plus {
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
                 color: white;
-            }
+            
             .time {
                 margin-right: auto;
-                font-size: 20px;
+                font-size: 12px;
                 font-family: $font-pre-light;
+                @include responsive(large-screens) {
+                    font-size: 20px;
+                }
             }
-            a {
-                margin-left: auto;
-                font-size: 20px;
-                font-family: $font-medium;
-                color: white;
+            .hr-more {
+                display: flex;
+                align-items: center;
+                .more {
+                    width: 20px;
+                    height: 2px;
+                    border: 1px solid #b1aa9e;
+                    background-color: #b1aa9e;
+                }
+                a {
+                    text-align: justify;
+                    margin-left: 10px;
+                    font-size: 12px;
+                    font-family: $font-medium;
+                    color: white;
+                    @include responsive(large-screens) {
+                        font-size: 20px;
+                    }
+                }
             }
+        }
         } 
     }
     .review3 {
+        opacity: 0;
+        position: relative;
         margin-top: 114px;
         display: flex;
         justify-content: space-between;
         align-items: end;
+        transition: opacity 0.7s ease-in-out;
+        @include responsive(large-screens) {
+            width: 80%;
+            
+        }
         .review-txt3 {
             background-color: #2f2411;
             width: 90%;
             margin-left: 24px;
-            padding: 50px;
+            padding: 30px;
             border-radius: 50px 50px 50px 0;
             .re-txt {
-                font-size: 28px;
+                text-align: justify;
+                font-size: 18px;
                 font-family: $font-regular;
                 color: white;
                 padding-bottom: 50px;
+                @include responsive(large-screens) {
+                    font-size: 28px;
+                }
             }
             .re-title {
-                font-size: 22px;
+                font-size: 16px;
                 font-family: $font-pre-regular;
                 color: white;
+                @include responsive(large-screens) {
+                    font-size: 22px;
+                }
             }
             .time-plus {
+                position: relative;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 color: white;
-            }
+            
             .time {
                 margin-right: auto;
-                font-size: 20px;
+                font-size: 12px;
                 font-family: $font-pre-light;
+                @include responsive(large-screens) {
+                    font-size: 20px;
+                }
             }
-            a {
-                margin-left: auto;
-                font-size: 20px;
-                font-family: $font-medium;
-                color: white;
+            .hr-more {
+                display: flex;
+                align-items: center;
+                .more {
+                    width: 20px;
+                    height: 2px;
+                    border: 1px solid #b1aa9e;
+                    background-color: #b1aa9e;
+                }
+                a {
+                    text-align: justify;
+                    margin-left: 10px;
+                    font-size: 12px;
+                    font-family: $font-medium;
+                    color: white;
+                    @include responsive(large-screens) {
+                        font-size: 20px;
+                    }
+                }
             }
+        }
+        
         } 
     }
 }
 
 #video {
     h3 {
-        font-size: 24px;
+        font-size: 16px;
         font-family: $font-pre-bold;
         border-bottom: 3px solid #2f2411;
         color: #2f2411;
-        width: 12%;
+        width: 20%;
         margin-bottom: 53px;
+        @include responsive(large-screens) {
+            width: 100px;
+            font-size: 24px;
+        }
     }
     .main-video {
         border-radius: 10px;
         iframe {
             width: $width-wide;
             border-radius: 20px;
+            height: 500px;
         }
         p {
             margin: 17px 0;
-            font-size: 17px;
+            font-size: 16px;
             font-family: $font-gothic-regular;
+            @include responsive(large-screens) {
+                font-size: 36px;
+            }
         }
     }
     .sub-video {
@@ -251,7 +416,7 @@
         width: 100%;
         .sub-video1, .sub-video2, .sub-video3 {
             width: 100%;
-            margin-right: 24px;
+            margin-right: 12px;
             iframe {
                 width: 100%;
                 border-radius: 10px;
@@ -262,8 +427,12 @@
         }
         p {
             margin: 13px 0;
-            font-size: 17px;
+            font-size: 14px;
             font-family: $font-gothic-regular;
+            @include responsive(large-screens) {
+                font-size: 24px;
+                margin-bottom: 80px;
+            }
         }
     }
 }

@@ -11,22 +11,33 @@
   align-items: center;
 }
 #intro .title-box h2 {
-  font-size: 48px;
+  font-size: 20px;
   font-family: "Pretendard-Medium";
   border-bottom: 1px solid black;
   width: 26%;
+}
+@media (min-width: 1024px) {
+  #intro .title-box h2 {
+    font-size: 48px;
+    width: 18%;
+  }
 }
 #intro .title-box .go {
   display: flex;
 }
 #intro .title-box .go a {
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Pretendard-Light";
   padding-left: 37px;
   color: #2b2b2b;
 }
 #intro .title-box .go a:hover {
   font-family: "Pretendard-Medium";
+}
+@media (min-width: 1024px) {
+  #intro .title-box .go a {
+    font-size: 20px;
+  }
 }
 #intro .background {
   background: url(../images/ｉｎｔｒｏ－ｂａｃｋ.png) no-repeat;
@@ -37,15 +48,17 @@
   padding: 130px 0;
   text-align: center;
   color: white;
-  font-size: 40px;
+  font-size: 36px;
   font-family: "Pretendard-Medium";
 }
 @media (min-width: 1024px) {
   #intro .background h3 {
     text-align: left;
+    font-size: 48px;
   }
 }
 #intro .background .back-txt1 {
+  text-align: justify;
   font-size: 14px;
   font-family: "Pretendard-Light";
   padding-bottom: 30px;
@@ -55,10 +68,11 @@
 @media (min-width: 1024px) {
   #intro .background .back-txt1 {
     text-align: right;
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 #intro .background .back-txt2 {
+  text-align: justify;
   font-size: 14px;
   font-family: "Pretendard-Light";
   padding-bottom: 88px;
@@ -84,6 +98,7 @@
 }
 #explain .explain-box .explain-title {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-top: 2px solid #422b2b;
   border-bottom: 1px solid #422b2b;
@@ -91,37 +106,91 @@
   background-color: #e0e0e0;
 }
 #explain .explain-box .explain-title h2 {
-  font-size: 28px;
+  text-align: justify;
+  width: 80%;
+  font-size: 20px;
   font-family: "KimjungchulMyungjo-Light";
   padding-left: 1.5%;
 }
+@media (min-width: 1024px) {
+  #explain .explain-box .explain-title h2 {
+    font-size: 36px;
+  }
+}
 #explain .explain-box .explain-title img {
-  width: 4%;
+  width: 10%;
+  height: 10%;
   padding-right: 1.5%;
+}
+@media (min-width: 1024px) {
+  #explain .explain-box .explain-title img {
+    width: 4%;
+  }
 }
 #explain .explain-box .right {
   display: flex;
-  padding-top: 76px;
+  align-items: baseline;
+  padding-top: 20%;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  #explain .explain-box .right {
+    padding-top: 5%;
+  }
 }
 #explain .explain-box .right .right-title {
-  padding-right: 24px;
+  padding-right: 20px;
+  width: 30%;
+}
+@media (min-width: 1024px) {
+  #explain .explain-box .right .right-title {
+    width: 15%;
+    padding-right: 0;
+  }
 }
 #explain .explain-box .right .right-title h3 {
-  width: 100%;
-  font-size: 24px;
+  text-align: justify;
+  width: 70px;
+  font-size: 16px;
   font-family: "Pretendard-Bold";
   border-bottom: 3px solid #2f2411;
   color: #2f2411;
 }
+@media (min-width: 1024px) {
+  #explain .explain-box .right .right-title h3 {
+    font-size: 24px;
+    width: 100px;
+  }
+}
+#explain .explain-box .right .right-txt {
+  width: 70%;
+}
+@media (min-width: 1024px) {
+  #explain .explain-box .right .right-txt {
+    width: 100%;
+  }
+}
 #explain .explain-box .right .right-txt .strong-span strong {
-  font-size: 32px;
+  text-align: justify;
+  font-size: 18px;
   font-family: "Pretendard-ExtraBold";
   color: #422b2b;
 }
+@media (min-width: 1024px) {
+  #explain .explain-box .right .right-txt .strong-span strong {
+    font-size: 32px;
+  }
+}
 #explain .explain-box .right .right-txt .strong-span .decs {
+  text-align: justify;
   display: block;
   font-family: "Pretendard-Light";
-  font-size: 24px;
+  font-size: 16px;
+}
+@media (min-width: 1024px) {
+  #explain .explain-box .right .right-txt .strong-span .decs {
+    font-size: 32px;
+  }
 }
 @media (min-width: 1024px) {
   #explain .explain-box .right .right-txt .strong-span {
@@ -133,20 +202,32 @@
   }
 }
 #explain .explain-box .right .right-txt p {
+  text-align: justify;
   display: flex;
   align-items: baseline;
-  font-size: 22px;
+  font-size: 14px;
   font-family: "Pretendard-Medium";
   padding-top: 15px;
+}
+@media (min-width: 1024px) {
+  #explain .explain-box .right .right-txt p {
+    font-size: 22px;
+  }
 }
 #explain .explain-box .right .right-txt p img {
   margin-right: 10px;
 }
 #explain .explain-box .right .right-txt .desc2 {
   color: #2f2411;
-  font-size: 20px;
+  text-align: justify;
+  font-size: 13px;
   font-family: "Pretendard-ExtraLight";
   padding-left: 30px;
+}
+@media (min-width: 1024px) {
+  #explain .explain-box .right .right-txt .desc2 {
+    font-size: 20px;
+  }
 }
 #explain .explain-box .schedule {
   display: flex;
@@ -155,12 +236,23 @@
 #explain .explain-box .schedule .schedule-title {
   padding-right: 24px;
 }
+@media (min-width: 1024px) {
+  #explain .explain-box .schedule .schedule-title {
+    width: 15%;
+  }
+}
 #explain .explain-box .schedule .schedule-title h3 {
-  width: 100%;
-  font-size: 24px;
+  width: 70px;
+  font-size: 16px;
   font-family: "Pretendard-Bold";
   border-bottom: 3px solid #2f2411;
   color: #2f2411;
+}
+@media (min-width: 1024px) {
+  #explain .explain-box .schedule .schedule-title h3 {
+    font-size: 24px;
+    width: 100px;
+  }
 }
 #explain .explain-box .schedule .schedule-txt {
   width: 100%;
@@ -184,32 +276,35 @@
   }
 }
 #explain .explain-box .schedule .schedule-txt .schedule-box .sch h2 {
-  font-size: 28px;
+  font-size: 18px;
   font-family: "Pretendard-SemiBold";
   padding: 25px;
   padding-left: 31px;
 }
+@media (min-width: 1024px) {
+  #explain .explain-box .schedule .schedule-txt .schedule-box .sch h2 {
+    font-size: 28px;
+  }
+}
 #explain .explain-box .schedule .schedule-txt .schedule-box .sch p {
-  font-size: 22px;
+  font-size: 14px;
   font-family: "Pretendard-Light";
 }
-#explain .explain-box .schedule .schedule-txt .schedule-box .sch .date1 {
-  padding-left: 10%;
-}
-#explain .explain-box .schedule .schedule-txt .schedule-box .sch .date2 {
-  padding-left: 3%;
-}
-#explain .explain-box .schedule .schedule-txt .schedule-box .sch .date3 {
-  padding-left: 16%;
-}
-#explain .explain-box .schedule .schedule-txt .schedule-box .sch .date4 {
-  padding-left: 3%;
+@media (min-width: 1024px) {
+  #explain .explain-box .schedule .schedule-txt .schedule-box .sch p {
+    font-size: 22px;
+  }
 }
 #explain .explain-box .schedule .schedule-txt .schedule-box .sch small {
   color: #737373;
-  font-size: 16px;
+  font-size: 12px;
   font-family: "Pretendard-Light";
   margin-left: 13px;
+}
+@media (min-width: 1024px) {
+  #explain .explain-box .schedule .schedule-txt .schedule-box .sch small {
+    font-size: 16px;
+  }
 }
 #explain .explain-box .schedule .schedule-txt .schedule-box .sch:nth-child(4) {
   margin-bottom: 17px;
@@ -229,15 +324,20 @@
 @media (min-width: 1024px) {
   #explain .explain-box .schedule .schedule-txt .schedule-box .arrow-right-icon {
     display: block;
-    padding-top: 11%;
+    padding-top: 7%;
     margin: 0 27px;
   }
 }
 #explain .explain-box .schedule .schedule-txt .sch-dsce {
-  font-size: 20px;
+  font-size: 14px;
   font-family: "Pretendard-ExtraLight";
   color: #2f2411;
   padding-top: 17px;
+}
+@media (min-width: 1024px) {
+  #explain .explain-box .schedule .schedule-txt .sch-dsce {
+    font-size: 20px;
+  }
 }
 #explain .explain-box .active {
   display: flex;
@@ -246,12 +346,23 @@
 #explain .explain-box .active .active-title {
   padding-right: 24px;
 }
+@media (min-width: 1024px) {
+  #explain .explain-box .active .active-title {
+    width: 15%;
+  }
+}
 #explain .explain-box .active .active-title h3 {
-  width: 100%;
-  font-size: 24px;
+  width: 70px;
+  font-size: 16px;
   font-family: "Pretendard-Bold";
   border-bottom: 3px solid #2f2411;
   color: #2f2411;
+}
+@media (min-width: 1024px) {
+  #explain .explain-box .active .active-title h3 {
+    font-size: 24px;
+    width: 100px;
+  }
 }
 #explain .explain-box .active .active-txt {
   width: 100%;
@@ -276,24 +387,25 @@
   }
 }
 #explain .explain-box .active .active-txt .active-box .act h2 {
-  font-size: 28px;
+  font-size: 18px;
   font-family: "Pretendard-SemiBold";
   padding: 25px;
   padding-left: 31px;
 }
+@media (min-width: 1024px) {
+  #explain .explain-box .active .active-txt .active-box .act h2 {
+    font-size: 28px;
+  }
+}
 #explain .explain-box .active .active-txt .active-box .act p {
-  font-size: 22px;
+  font-size: 14px;
   font-family: "Pretendard-Light";
   text-align: left;
 }
-#explain .explain-box .active .active-txt .active-box .act .date5 {
-  padding-left: 19%;
-}
-#explain .explain-box .active .active-txt .active-box .act .date6 {
-  padding-left: 8.8%;
-}
-#explain .explain-box .active .active-txt .active-box .act .date7 {
-  padding-left: 16%;
+@media (min-width: 1024px) {
+  #explain .explain-box .active .active-txt .active-box .act p {
+    font-size: 22px;
+  }
 }
 #explain .explain-box .active .active-txt .active-box .act:nth-child(4) {
   margin-bottom: 0;
@@ -313,15 +425,20 @@
 @media (min-width: 1024px) {
   #explain .explain-box .active .active-txt .arrow-right-icon {
     display: block;
-    padding-top: 11%;
+    padding-top: 7%;
     margin: 0 27px;
   }
 }
 #explain .explain-box .active .active-txt .where {
-  font-size: 20px;
+  font-size: 14px;
   font-family: "Pretendard-ExtraLight";
   color: #2f2411;
   padding-top: 17px;
+}
+@media (min-width: 1024px) {
+  #explain .explain-box .active .active-txt .where {
+    font-size: 20px;
+  }
 }
 #explain .explain-box .benefit {
   display: flex;
@@ -330,19 +447,37 @@
 #explain .explain-box .benefit .benefit-title {
   padding-right: 24px;
 }
+@media (min-width: 1024px) {
+  #explain .explain-box .benefit .benefit-title {
+    width: 15%;
+    padding-right: 0;
+  }
+}
 #explain .explain-box .benefit .benefit-title h3 {
-  width: 100%;
-  font-size: 24px;
+  width: 70px;
+  font-size: 16px;
   font-family: "Pretendard-Bold";
   border-bottom: 3px solid #2f2411;
   color: #2f2411;
 }
+@media (min-width: 1024px) {
+  #explain .explain-box .benefit .benefit-title h3 {
+    font-size: 24px;
+    width: 100px;
+  }
+}
 #explain .explain-box .benefit .benefit-txt p {
+  text-align: justify;
   display: flex;
   align-items: baseline;
-  font-size: 22px;
+  font-size: 16px;
   font-family: "Pretendard-Medium";
   padding-top: 15px;
+}
+@media (min-width: 1024px) {
+  #explain .explain-box .benefit .benefit-txt p {
+    font-size: 22px;
+  }
 }
 #explain .explain-box .benefit .benefit-txt p img {
   margin-right: 10px;
@@ -351,10 +486,16 @@
   padding-top: 0;
 }
 #explain .explain-box .benefit .benefit-txt .serve {
-  font-size: 20px;
+  text-align: justify;
+  font-size: 14px;
   font-family: "Pretendard-ExtraLight";
   color: #2f2411;
   margin-bottom: 74px;
+}
+@media (min-width: 1024px) {
+  #explain .explain-box .benefit .benefit-txt .serve {
+    font-size: 20px;
+  }
 }
 #explain .explain-box hr {
   margin-bottom: 8px;
@@ -368,43 +509,7 @@
 @media (min-width: 1024px) {
   #run .run1 {
     display: flex;
-    position: none;
   }
-}
-#run .run1 .run1-img {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-@media (min-width: 1024px) {
-  #run .run1 .run1-img {
-    position: none;
-  }
-}
-#run .run1 .run1-img img {
-  flex: 1;
-  min-width: 60%;
-  height: 100%;
-  position: relative;
-}
-@media (min-width: 1024px) {
-  #run .run1 .run1-img img {
-    min-width: 10%;
-  }
-}
-#run .run1 .run1-img img:nth-child(1) {
-  transform: scale(0.9);
-  z-index: 1;
-}
-#run .run1 .run1-img img:nth-child(3) {
-  transform: scale(0.9);
-  z-index: 1;
-}
-#run .run1 .run1-img img:nth-child(2) {
-  z-index: 2;
 }
 #run .run1 .run1-txt {
   position: absolute;
@@ -413,68 +518,222 @@
   z-index: 5;
   background-color: #f6f6f6;
   width: 85%;
-  padding: 58px;
+  padding: 30px;
 }
 @media (min-width: 1024px) {
   #run .run1 .run1-txt {
-    width: 50%;
+    width: 40%;
+    left: 50%;
+    top: 70%;
   }
 }
-#run .run1 .run1-txt h1 {
-  font-size: 48px;
+#run .run1 .run1-txt h2 {
+  text-align: justify;
+  font-size: 28px;
   font-family: "Pretendard-Bold";
   color: #422b2b;
   text-align: right;
   margin-bottom: 31px;
 }
-#run .run1 .run1-txt p {
-  font-size: 24px;
+@media (min-width: 1024px) {
+  #run .run1 .run1-txt h2 {
+    font-size: 48px;
+  }
+}
+#run .run1 .run1-txt .run-mo {
+  text-align: justify;
+  font-size: 16px;
   font-family: "Pretendard-Light";
   text-align: right;
 }
-#run .run2 {
+@media (min-width: 1024px) {
+  #run .run1 .run1-txt .run-mo {
+    font-size: 24px;
+  }
+}
+#run .run1 .run1-txt .run-pc {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #run .run1 .run1-txt .run-pc {
+    padding-top: 20px;
+    display: block;
+    font-size: 24px;
+    text-align: justify;
+    font-family: "Pretendard-Light";
+    text-align: right;
+  }
+}
+#run .run1 .run1-allimg {
+  overflow: hidden;
   position: relative;
 }
-#run .run2 .run2-img {
+#run .run1 .run1-allimg .run1-img {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   position: relative;
   width: 100%;
-  overflow: hidden;
-  margin-bottom: 280px;
+  width: 300%;
+  animation: slide-right 15s infinite linear;
 }
-#run .run2 .run2-img img {
+@media (min-width: 1024px) {
+  #run .run1 .run1-allimg .run1-img {
+    width: 50%;
+    overflow: visible;
+  }
+}
+#run .run1 .run1-allimg .run1-img img {
   flex: 1;
-  min-width: 33%;
+  min-width: 33.3333333333%;
   height: 100%;
   position: relative;
-  margin-top: 30%;
 }
-#run .run2 .run2-img img:nth-child(1), #run .run2 .run2-img img:nth-child(4) {
+@media (min-width: 1024px) {
+  #run .run1 .run1-allimg .run1-img img {
+    min-width: 60%;
+  }
+}
+#run .run1 .run1-allimg .run1-img img:nth-child(1) {
+  transform: scale(0.9);
+  min-width: 33.3333333333%;
+  z-index: 1;
+}
+#run .run1 .run1-allimg .run1-img img:nth-child(3) {
   transform: scale(0.9);
   z-index: 1;
 }
-#run .run2 .run2-img img:nth-child(2), #run .run2 .run2-img img:nth-child(3) {
+#run .run1 .run1-allimg .run1-img img:nth-child(2) {
+  z-index: 1;
+}
+#run .run2 {
+  position: relative;
+}
+#run .run2 .run2-allimg-pc {
+  overflow: hidden;
+}
+#run .run2 .run2-allimg-pc .run2-img-pc {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #run .run2 .run2-allimg-pc .run2-img-pc {
+    margin-top: 20%;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    opacity: 50%;
+  }
+  #run .run2 .run2-allimg-pc .run2-img-pc img {
+    width: 20%;
+    padding-right: 15px;
+  }
+}
+#run .run2 .run2-allimg {
+  overflow: hidden;
+  position: relative;
+}
+#run .run2 .run2-allimg .run2-img {
+  margin-top: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  animation: slide-left 15s infinite linear;
+  margin-bottom: 50%;
+}
+@media (min-width: 1024px) {
+  #run .run2 .run2-allimg .run2-img {
+    overflow: hidden;
+    padding: 0;
+    width: 70%;
+    float: right;
+    margin-bottom: 25%;
+  }
+}
+#run .run2 .run2-allimg .run2-img img {
+  flex: 1;
+  min-width: 100%;
+  height: 100%;
+  margin-top: 20%;
+}
+@media (min-width: 1024px) {
+  #run .run2 .run2-allimg .run2-img img {
+    margin-top: 5%;
+  }
+}
+#run .run2 .run2-allimg .run2-img img:nth-child(1), #run .run2 .run2-allimg .run2-img img:nth-child(4) {
+  transform: scale(0.9);
+  z-index: 1;
+}
+#run .run2 .run2-allimg .run2-img img:nth-child(2), #run .run2 .run2-allimg .run2-img img:nth-child(3) {
+  transform: scale(0.9);
   z-index: 2;
 }
 #run .run2 .run2-txt {
   position: absolute;
-  top: 85%;
+  top: 53%;
   background-color: #f6f6f6;
-  margin-bottom: 58px;
   z-index: 5;
   background-color: #f6f6f6;
   width: 85%;
-  padding: 58px;
+  padding: 30px;
 }
-#run .run2 .run2-txt h1 {
-  font-size: 48px;
+@media (min-width: 1024px) {
+  #run .run2 .run2-txt {
+    top: 270%;
+    left: 10%;
+    width: 40%;
+  }
+}
+#run .run2 .run2-txt h2 {
+  text-align: justify;
+  font-size: 28px;
   font-family: "Pretendard-Bold";
   color: #422b2b;
   margin-bottom: 31px;
 }
-#run .run2 .run2-txt p {
-  font-size: 24px;
+@media (min-width: 1024px) {
+  #run .run2 .run2-txt h2 {
+    font-size: 48px;
+  }
+}
+#run .run2 .run2-txt .run-mo {
+  text-align: justify;
+  font-size: 16px;
   font-family: "Pretendard-Light";
+}
+@media (min-width: 1024px) {
+  #run .run2 .run2-txt .run-mo {
+    font-size: 24px;
+  }
+}
+#run .run2 .run2-txt .run-pc {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #run .run2 .run2-txt .run-pc {
+    padding-top: 20px;
+    display: block;
+    text-align: justify;
+    font-size: 24px;
+    font-family: "Pretendard-Light";
+    text-align: left;
+  }
+}
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }/*# sourceMappingURL=gungdoong.css.map */

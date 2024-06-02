@@ -8,10 +8,15 @@
 
 .noticepg {
     h2 {
-        font: 48px 'Pretendard';
+        font-size: 24px;
+        font-family: $font-medium;
         text-decoration: underline;
         text-underline-position: under;
         text-decoration-thickness: 2px;
+
+        @include responsive(large-screens) {
+            font-size: 48px;
+        }
 
     }
 
@@ -20,13 +25,15 @@
         border: 1px solid black;
         
         h2 {
-            font: 30px 'Pretendard';
+            font-size: 24px;
+            font-family: $font-medium;
             padding: 25px 30px;
             text-decoration: none;
 
             @include responsive(large-screens) {
-                font: 48px 'Pretendard';
-                padding-left: 65px;
+                font-size: 48px;
+                font-family: $font-medium;
+                padding-left: 55px;
             }
         }
 
@@ -40,9 +47,9 @@
             border-top: 2px solid black;
 
             p {
-                font: 18px 'Pretendard';
-                line-height: 52px;
-                padding: 0 66px;
+                font-size: 11px;
+                font-family: $font-medium;
+                padding: 2% 10%;
 
                 &:last-child {
                     display: none;
@@ -54,6 +61,8 @@
                 p {
                     position: absolute;
                     top: 0; left: 0;
+                    font-size: 18px;
+                    padding: 7px 66px;
                     &:nth-child(2) {
                         left: 382px;
                     }
@@ -76,28 +85,41 @@
             }
 
             h3 {
-                font: 24px 'Pretendard';
+                font-size: 24px;
+                font-family: $font-medium;
 
                 @include responsive(large-screens) {
-                font: 30px 'Pretendard';
+                font-size: 30px;
+                font-family: $font-medium;
                 }
             }
 
             .info1 {
                 margin-top: 67px;
-                font: 24px 'Pretendard';
+                font-size: 20px;
+                font-family: $font-medium;
 
                 @include responsive(large-screens) {
                     margin-top: 124px;
+                    font-size: 24px;
+
                 }
             }
             .info2 {
                 margin: 40px 0;
-                font: 24px 'Pretendard';
+                font-size: 20px;
+                font-family: $font-medium;
+                @include responsive(large-screens) {
+                    font-size: 24px;
+                }
             }
             .info3 {
                 margin: 40px 20px;
-                font: 24px 'Pretendard';
+                font-size: 18px;
+                font-family: $font-medium;
+                @include responsive(large-screens) {
+                    font-size: 24px;
+                }
             }
 
             .img1 {
@@ -110,29 +132,33 @@
                 width: 100%;
                 height: auto;
             }
+            
         }
     }
 
     .pre_notice {
         position: relative;
-        width: 90%;
-        height: 107px;
+        width: 100%;
+        height: 80px;
         background-color: #f0f0f0;
         margin: 50px auto 17px;
         border-radius: 15px;
+        overflow: hidden;
 
         img {
             position: absolute;
-            left: 20px; top: 30px;
+            left: 20px; top: 15px;
             width: 50px;
             height: 50px;
             rotate: 90deg;
         }
         p {
             position: absolute;
-            top: 30px; left: 110px;
-            font: 24px 'Pretendard';
-            width: 270px;
+            top: 7%; left: 110px;
+            font-size: 1em;
+            font-family: $font-medium;
+            width: 180px;
+            line-height: 1.5;
         }
 
         date {
@@ -141,17 +167,21 @@
 
         @include responsive(large-screens) {
             margin: 60px auto 33px;
+            height: 107px;
+
 
             img {
-                left: 50px;
+                left: 50px; top: 30px;
             }
             p {
                 width: 100%;
                 top: 40px; left: 128px;
+                font-size: 18px;
             }
             date {
                 display: block;
-                font: 24px 'Pretendard';
+                font-size: 18px;
+                font-family: $font-medium;
                 text-align: right;
                 line-height: 107px;
                 padding-right: 40px;
@@ -162,15 +192,16 @@
 
     .next_notice {
         position: relative;
-        width: 90%;
-        height: 107px;
+        width: 100%;
+        height: 80px;
         background-color: #f0f0f0;
         margin: 0 auto 60px;
         border-radius: 15px;
+        overflow: hidden;
 
         img {
             position: absolute;
-            left: 20px; top: 30px;
+            left: 20px; top: 15px;
             width: 50px;
             height: 50px;
             rotate: -90deg;
@@ -178,17 +209,21 @@
 
         p {
             position: absolute;
-            top: 35%; left: 110px;
-            font: 24px 'Pretendard';
+            top: 30%; left: 110px;
+            font-size: 1em;
+            font-family: $font-medium;
         }
 
         @include responsive(large-screens) {
             margin: 0 auto 80px;
+            height: 107px;
+
             img {
-                left: 50px;
+                left: 50px; top: 30px;
             }
             p {
                 top: 40px; left: 128px;
+                font-size: 18px;
             }
         }
     }
@@ -196,13 +231,17 @@
     .list {
         width: 114px; height: 52px;
         margin: 0 auto 60px;
-        font: 24px 'Pretendard';
         background-color: #2f2411;
-        color: white;
         text-align: center;
         line-height: 52px;
 
         border-radius: 10px;
+
+        a {
+            font-size: 24px;
+            font-family: $font-medium;
+            color: white;
+        }
 
         @include responsive(large-screens) {
             margin: 0 auto 170px;

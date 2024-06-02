@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header_footer.css">
     <link rel="stylesheet" href="./css/main-info.css">
+    <script src="./js/main-info.js"></script>
     <title>축전 소개</title>
 </head>
 <body>
@@ -16,9 +15,9 @@
             <div class="logo-icon">
                 <a href=""><img src="./images/header_logo.png" alt="header_logo"></a>
                 <div class="search-menu">
-                    <a href=""><img src="./images/internet.png" alt=""></a>
-                    <a href=""><img src="./images/korean-hat.png" alt=""></a>
-                    <a href=""><img src="./images/search.png" alt="search"></a>
+                    <a href="#"><img src="./images/internet.png" alt=""></a>
+                    <a href="#" id="login-toggle"><img src="./images/korean-hat.png" alt=""></a>
+                    <a href="#"><img src="./images/search.png" alt="search"></a>
                     <div class="menu-toggle-btn">
                         <span>&nbsp</span>
                         <span>&nbsp</span>
@@ -26,6 +25,66 @@
                     </div>
                 </div> <!-- search-menu -->
             </div> <!-- logo-icon -->
+            <div id="side-menu" class="side-menu">
+                <div class="language-login">
+                    <div class="language">
+                        <a href="#">Language</a>
+                        <a href=""><img src="./images/language-white.png" alt="language"></a>    
+                    </div>
+                    <div class="login">
+                        <a href="#" id="mobile-login-toggle">로그인</a>
+                        <a href="#" id="login-toggle"><img src="./images/login-white.png" alt="login"></a>
+                    </div>
+                </div>
+                <nav class="side-nav">
+                    <ul class="gnb">
+                        <li>
+                            <a href=""><img src="./images/side-menu-icon.png" alt="">궁중문화축전</a>
+                            <ul class="submenu">
+                                <li><a href="">소개·연혁</a></li>
+                                <li><a href="">FI</a></li>
+                            </ul>
+                        </li>
+                        <li class="palace-menu">
+                            <a href=""><img src="./images/side-menu-icon.png" alt="">서울 속 고궁</a>
+                            <ul class="submenu2">
+                                <div class="palace1">
+                                    <li><a href="">경복궁</a></li>
+                                    <li><a href="">창덕궁</a></li>
+                                    <li><a href="">덕수궁</a></li>
+                                </div>
+                                <div class="palace2">
+                                    <li><a href="">창경궁</a></li>
+                                    <li><a href="">경희궁</a></li>
+                                    <li><a href="">종묘</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/side-menu-icon.png" alt="">궁이둥이</a>
+                            <ul class="submenu">
+                                <li><a href="">지원하기</a></li>
+                                <li><a href="">발자취</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/side-menu-icon.png" alt="">알림마당</a>
+                            <ul class="submenu">
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">보도자료</a></li>
+                                <li><a href="">문의하기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/side-menu-icon.png" alt="">예매하기</a>
+                            <ul class="submenu">
+                                <li><a href="">예매하기</a></li>
+                                <li><a href="">예매확인</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
             <div class="menu_box">
                 <nav class="mainmenu">
                     <ul class="gnb">
@@ -38,13 +97,13 @@
                         </li>
                         <li>
                             <a href="">서울 속 고궁</a>
-                            <ul class="submenu">
-                                <li><a href="">경복궁</a></li>
-                                <li><a href="">창덕궁</a></li>
-                                <li><a href="">덕수궁</a></li>
-                                <li><a href="">창경궁</a></li>
-                                <li><a href="">경희궁</a></li>
-                                <li><a href="">종묘</a></li>
+                                <ul class="submenu">
+                                    <li><a href="">경복궁</a></li>
+                                    <li><a href="">창덕궁</a></li>
+                                    <li><a href="">덕수궁</a></li>
+                                    <li><a href="">창경궁</a></li>
+                                    <li><a href="">경희궁</a></li>
+                                    <li><a href="">종묘</a></li>
                             </ul>
                         </li>
                         <li>
@@ -72,192 +131,289 @@
                     </ul>
                 </nav>
                 <form action="">
-                    <label for="find">검색하기</label>
-                    <input type="search" id="find" name="find" />
-                    <input type="button" value="검색" />
+                    <div class="search-box">
+                        <label for="find"></label>
+                        <input type="search" id="find" name="find" />
+                        <div class="search">
+                            <a href=""><img src="./images/search.png" alt=""></a>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
     </header>
 
+    <div class="modal-overlay"></div>   
+
+        <div class="form">
+    
+            <ul class="tab-group">
+              <li class="tab active"><a href="#signup">회원가입</a></li>
+              <li class="tab"><a href="#login">로그인</a></li>
+            </ul>
+            
+            <div class="tab-content">
+              <div id="signup">   
+                <h1>무료로 회원가입 하세요!</h1>
+                
+                <form action="/" method="post">
+                
+                <div class="top-row">
+                  <div class="field-wrap">
+                    <label>
+                      성<span class="req">*</span>
+                    </label>
+                    <input type="text" required autocomplete="off" />
+                  </div>
+              
+                  <div class="field-wrap">
+                    <label>
+                      이름<span class="req">*</span>
+                    </label>
+                    <input type="text"required autocomplete="off"/>
+                  </div>
+                </div>
+      
+                <div class="field-wrap">
+                  <label>
+                    이메일 주소<span class="req">*</span>
+                  </label>
+                  <input type="email"required autocomplete="off"/>
+                </div>
+                
+                <div class="field-wrap">
+                  <label>
+                    비밀번호 설정<span class="req">*</span>
+                  </label>
+                  <input type="password"required autocomplete="off"/>
+                </div>
+                
+                <button type="submit" class="button button-block"/>Get Started</button>
+                
+                </form>
+      
+              </div>
+              
+              <div id="login">   
+                <h1>환영합니다!</h1>
+                
+                <form action="/" method="post">
+                
+                  <div class="field-wrap">
+                  <label>
+                    이메일 주소<span class="req">*</span>
+                  </label>
+                  <input type="email"required autocomplete="off"/>
+                </div>
+                
+                <div class="field-wrap">
+                  <label>
+                    비밀번호<span class="req">*</span>
+                  </label>
+                  <input type="password"required autocomplete="off"/>
+                </div>
+                
+                <p class="forgot"><a href="#">혹시 비밀번호를 잊으셨나요?</a></p>
+                
+                <button class="button button-block"/>Log In</button>
+                
+                </form>
+      
+              </div>
+              
+            </div><!-- tab-content -->
+            
+      </div> <!-- /form -->
+
+
+
+
+
+
+
+
     <main>
 
-<section class="start-section">
-    <img src="./images/info_mainimg1.jpg" alt="main-img">
-    <div class="container">
-            <div class="main-info">
-                <h2>오늘, 궁을 만나다.</h2>
-                <p>
-                    ‘궁중문화축전’은 대한민국을 대표하는<br>
-                    문화유산이며 조선과 대한제국의 역사를<br>
-                    품고 있는 경복궁, 창덕궁, 창경궁,덕수궁,<br>
-                    경희궁 등 서울 소재 5개의 궁궐과 종묘, 사직단에서 펼쳐지는 문화유산<br>
-                    축제입니다.<br>
+        <section class="start-section">
+            <img src="./images/info_mainimg1.jpg" alt="main-img">
+            <div class="container">
+                    <div class="main-info">
+                        <h2>오늘, 궁을 만나다.</h2>
+                        <p>
+                            ‘궁중문화축전’은 대한민국을 대표하는<br>
+                            문화유산이며 조선과 대한제국의 역사를<br>
+                            품고 있는 경복궁, 창덕궁, 창경궁,덕수궁,<br>
+                            경희궁 등 서울 소재 5개의 궁궐과 종묘, 사직단에서<br> 펼쳐지는 문화유산
+                            축제입니다.<br>
+                        </p>
+                    </div>
+                </div> <!--container-->
+            </section>
+
+            <section class="slide">
+                <div class="slide-container">
+                    <ul class="slides" id="slideLeft">
+                        <li><img src="./images/slide_num1.png" alt="이미지"></li>
+                        <li><img src="./images/slide_num3.jpg" alt="이미지"></li>
+                        <li><img src="./images/slide_num5.jpg" alt="이미지"></li>
+                        <li><img src="./images/slide_num7.jpg" alt="이미지"></li>
+                        <li><img src="./images/slide_num9.png" alt="이미지"></li>
+                        <li><img src="./images/slide_num11.jpg" alt="이미지"></li>
+                    </ul>
+                </div>
+                <div class="slide-info">
+                    <p>
+                    문화재청이 주최하고 한국문화재재단이 주관하는 궁중문화축전에서는<br>
+                    내·외국인에게 ‘오늘, 궁을 만나다’라는 취지에 어울리는 다양한 프로그램이 펼쳐집니다.<br>
+                    <br>
+                    봄과 가을에 궁궐의 역사를 담고 있으면서 각각의 궁궐 전각과 장소의 특성을 반영한<br>
+                    공연, 전시, 체험, 의례 재현 등의 문화, 예술프로그램을 제공하고 있습니다.<br>
                 </p>
+                </div>
+                <div class="slide-container">
+                    <ul class="slides" id="slideRight">
+                        <li><img src="./images/slide_num2.jpg" alt="이미지"></li>
+                        <li><img src="./images/slide_num4.jpg" alt="이미지"></li>
+                        <li><img src="./images/slide_num6.jpg" alt="이미지"></li>
+                        <li><img src="./images/slide_num8.jpg" alt="이미지"></li>
+                        <li><img src="./images/slide_num10.jpg" alt="이미지"></li>
+                        <li><img src="./images/slide_num12.jpg" alt="이미지"></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="festival ">
+                <img src="./images/info_maining2.jpg" alt="main-img2">
+                <div class="container">
+                    <div class="main-info2">
+                        <h2>대한민국 대표 문화유산 축제</h2>
+                        <p>
+                            궁중문화축전은 궁을 사랑하는 많은 분들이 직접 축전의 주인공이 되고, 더 많은 분이 궁의 매력을 느낄 수 있도록 노력을 다하고 있습니다. 이와 함께 궁중문화축전은 한국을 방문한 외국인에게 품위 있고 흥미로운 역사, 문화 프로그램에 참여하는 기회를 제공함으로써 한국 문화유산과 한국의 문화 역량을 대외적으로 널리 알리는 특별한 장이 될 것입니다. 
+                        </p>
+                    </div>
+                </div> <!--container-->
+            </section>
+            
+            <section class="history">
+                <div class="container">
+                    <div class="history-hour">
+                        <h2>궁중문화축전 연혁 :<br> <strong>7년을 기리며</strong></h2>
+                    </div><!--history-hour-->
+            
+                        <small class="year-arr">
+                            <span class="year" data-img="poster2017.png">2017</span>
+                            <span class="year" data-img="poster2018.png">2018</span>
+                            <span class="year" data-img="poster2019.png">2019</span>
+                            <span class="year" data-img="poster2020.png">2020</span>
+                            <span class="year" data-img="poster2021.png">2021</span>
+                            <span class="year" data-img="poster2022.png">2022</span>
+                            <span class="year" data-img="poster2023.png">2023</span>
+                        </small>
+            
+                        <div class="num-festi">
+                            <strong>제8회<br>궁중문화축전</strong>
+                            <div class="more">
+                                더보기
+                            </div>
+                        </div>
+            
+                        <img id="poster-img" src="./images/poster2023.png" alt="포스터">
+                </div><!--container-->
+            </section><!--history-->
+
+            <div class="making_people">
+                <div class="container">
+                    <div class="logo_making">
+                        <img class="logo-img" src="./images/logo_making_sir3.png" alt="문화재청">
+                        <img class="logo-img" src="./images/logo_making_sir2.png" alt="한국문화재재단">
+                        <img class="logo-img" src="./images/logo_making_sir1.png" alt="궁중문화축전">
+                    </div><!--logo_making-->
+                        <div class="survice">
+
+                            <div class="survice_info">
+                                <h3>궁능서비스기획과</h3>
+                                <p>송인헌 <small>본부장 직무대리</small> 정명환 <small>사무관</small>  차지은 <small>주무관</small>  유경하 <small>주무관</small>  이윤정 <small>주무관</small>  송진욱 <small>큐레이터</small>  양설희 <small>실무관</small></p>
+                            </div>
+                            
+                            <div class="survice_info">
+                                <h3>경복궁 관리소</h3>
+                                <p>고정주 <small>소장</small> 오택근 <small>서기관</small> 김예진 <small>주무관</small></p>
+                        
+                            </div>
+                            
+                            <div class="survice_info">
+                                <h3>창덕궁 관리소</h3>
+                                <p>이명선 <small>소장</small> 정대영 <small>서기관</small>  김진숙 <small>주무관</small></p>
+                                
+                            </div>
+                            
+                            <div class="survice_info">
+                                <h3>덕수궁 관리소</h3>
+                                <p>권점수 <small>소장</small> 백옥연 <small>사무관</small>  이상희 <small>주무관</small></p>
+                                
+                            </div>
+                            
+                            <div class="survice_info">
+                                <h3>창경궁 관리소</h3>
+                                <p>김미란 <small>소장</small> 정일심 <small>주무관</small></p>
+                                
+                            </div>
+                            
+                            <div class="survice_info">
+                                <h3>종묘 관리소</h3>
+                                <p>이달희 <small>소장</small> 박상훈 <small>주무관</small></p>
+                                
+                            </div>
+                            
+                            <div class="survice_info">
+                                <h3>대변인실</h3>
+                                <p>정영훈 <small>대변인</small> 박지연 <small>사무관</small> 박다연 <small>실무관</small></p>
+                                
+                            </div>
+
+                        </div>
+
+                        <div class="service2">
+                            <div class="survice_info2">
+                                <p>최영창 <small>원장</small> 임재주 <small>문화유산활용본부장</small></p>
+                            </div>
+                            
+                            <div class="survice_info2">
+                                <h3>궁능사업실</h3>
+                                <p>박준우 <small>실장</small></p>
+                        
+                            </div>
+                            
+                            <div class="survice_info2">
+                                <h3>궁능문화축전팀</h3>
+                                <p>장보영 <small>팀장</small> 정희선, 박기령, 전고운, 김별, 황아름, 김주연</p>
+                            </div>
+                        </div>
+
+                        <div class="service3">
+                            <div class="survice_info3">
+                                <h3>개막제 감독</h3>
+                                <p>박동우</p>
+                            </div>
+                            
+                            <div class="survice_info3">
+                                <h3>시간여행, 세종 감독</h3>
+                                <p>송재성</p>
+                        
+                            </div>
+                            
+                            <div class="survice_info3">
+                                <h3>공생 감독</h3>
+                                <p>구병준</p>
+                            </div>
+            
+                            <div class="survice_info3">
+                                <h3>홍보매니저</h3>
+                                <p>최지희</p>
+                            </div>
+                        </div>
+                </div>
             </div>
-        </div> <!--container-->
-    </section>
-
-    <section class="slide">
-        <div class="slideLeft">
-            <img src="./images/slide_num1.png" alt="이미지1">
-            <img src="./images/slide_num2.jpg" alt="이미지2">
-            <img src="./images/slide_num3.jpg" alt="이미지3">
-            <img src="./images/slide_num1.png" alt="이미지1">
-            <img src="./images/slide_num2.jpg" alt="이미지2">
-            <img src="./images/slide_num3.jpg" alt="이미지3">
-        </div>
-        <div class="slide-info">
-            <p>
-               문화재청이 주최하고 한국문화재재단이 주관하는 궁중문화축전에서는<br>
-               내·외국인에게 ‘오늘, 궁을 만나다’라는 취지에 어울리는 다양한 프로그램이 펼쳐집니다.<br>
-               <br>
-               봄과 가을에 궁궐의 역사를 담고 있으면서 각각의 궁궐 전각과 장소의 특성을 반영한<br>
-               공연, 전시, 체험, 의례 재현 등의 문화, 예술프로그램을 제공하고 있습니다.<br>
-           </p>
-        </div>
-            <div class="slideRight">
-                <img src="./images/slide_num4.jpg" alt="이미지4">
-                <img src=".//images/slide_num5.jpg" alt="이미지5">
-                <img src="./images/slide_num6.jpg" alt="이미지6">
-                <img src="./images/slide_num4.jpg" alt="이미지4">
-                <img src=".//images/slide_num5.jpg" alt="이미지5">
-                <img src="./images/slide_num6.jpg" alt="이미지6">
-            </div>
-    </section>
-
-    <section class="festival ">
-        <img src="./images/info_maining2.jpg" alt="main-img2">
-        <div class="container">
-            <div class="main-info2">
-                <h2>대한민국 대표 문화유산 축제</h2>
-                <p>
-                    궁중문화축전은 궁을 사랑하는 많은 분들이 직접 축전의 주인공이 되고, 더 많은 분이 궁의 매력을 느낄 수 있도록 노력을 다하고 있습니다. 이와 함께 궁중문화축전은 한국을 방문한 외국인에게 품위 있고 흥미로운 역사, 문화 프로그램에 참여하는 기회를 제공함으로써 한국 문화유산과 한국의 문화 역량을 대외적으로 널리 알리는 특별한 장이 될 것입니다. 
-                </p>
-            </div>
-        </div> <!--container-->
-    </section>
-       
-    <section class="history">
-        <div class="container">
-            <div class="history-hour">
-                <h2>궁중문화축전 연혁 :<br> <strong>7년을 기리며</strong></h2>
-            </div><!--history-hour-->
-    
-                <small class="year-arr">
-                    <span class="year">2017</span>
-                    <span class="year">2018</span>
-                    <span class="year">2019</span>
-                    <span class="year">2020</span>
-                    <span class="year">2021</span>
-                    <span class="year">2022</span>
-                    <span class="year">2023</span>
-                </small>
-    
-                <div class="num-festi">
-                    <strong>제8회<br>궁중문화축전</strong>
-                    <div class="more">
-                        더보기
-                    </div>
-                </div>
-    
-                <img src="./images/poster2023(1).png" alt="포스터">
-        </div><!--container-->
-    </section><!--history-->
-
-    <div class="making_people">
-        <div class="container">
-            <div class="logo_making">
-                <img src="./images/logo_making_sir3.png" alt="문화재청">
-                <img src="./images/logo_making_sir2.png" alt="한국문화재재단">
-                <img src="./images/logo_making_sir1.png" alt="궁중문화축전">
-            </div><!--logo_making-->
-                <div class="survice">
-
-                    <div class="survice_info">
-                        <h3>궁능서비스기획과</h3>
-                        <p>송인헌 <small>본부장 직무대리</small> 정명환 <small>사무관</small>  차지은 <small>주무관</small>  유경하 <small>주무관</small>  이윤정 <small>주무관</small>  송진욱 <small>큐레이터</small>  양설희 <small>실무관</small></p>
-                    </div>
-                    
-                    <div class="survice_info">
-                        <h3>경복궁 관리소</h3>
-                        <p>고정주 <small>소장</small> 오택근 <small>서기관</small> 김예진 <small>주무관</small></p>
-                
-                    </div>
-                    
-                    <div class="survice_info">
-                        <h3>창덕궁 관리소</h3>
-                        <p>이명선 <small>소장</small> 정대영 <small>서기관</small>  김진숙 <small>주무관</small></p>
-                        
-                    </div>
-                    
-                    <div class="survice_info">
-                        <h3>덕수궁 관리소</h3>
-                        <p>권점수 <small>소장</small> 백옥연 <small>사무관</small>  이상희 <small>주무관</small></p>
-                        
-                    </div>
-                    
-                    <div class="survice_info">
-                        <h3>창경궁 관리소</h3>
-                        <p>김미란 <small>소장</small> 정일심 <small>주무관</small></p>
-                        
-                    </div>
-                    
-                    <div class="survice_info">
-                        <h3>종묘 관리소</h3>
-                        <p>이달희 <small>소장</small> 박상훈 <small>주무관</small></p>
-                        
-                    </div>
-                    
-                    <div class="survice_info">
-                        <h3>대변인실</h3>
-                        <p>정영훈 <small>대변인</small> 박지연 <small>사무관</small> 박다연 <small>실무관</small></p>
-                        
-                    </div>
-
-                </div>
-
-                <div class="service2">
-                    <div class="survice_info2">
-                        <p>최영창 <small>원장</small> 임재주 <small>문화유산활용본부장</small></p>
-                    </div>
-                    
-                    <div class="survice_info2">
-                        <h3>궁능사업실</h3>
-                        <p>박준우 <small>실장</small></p>
-                
-                    </div>
-                    
-                    <div class="survice_info2">
-                        <h3>궁능문화축전팀</h3>
-                        <p>장보영 <small>팀장</small> 정희선, 박기령, 전고운, 김별, 황아름, 김주연</p>
-                    </div>
-                </div>
-
-                <div class="service3">
-                    <div class="survice_info3">
-                        <h3>개막제 감독</h3>
-                        <p>박동우</p>
-                    </div>
-                    
-                    <div class="survice_info3">
-                        <h3>시간여행, 세종 감독</h3>
-                        <p>송재성</p>
-                
-                    </div>
-                    
-                    <div class="survice_info3">
-                        <h3>공생 감독</h3>
-                        <p>구병준</p>
-                    </div>
-    
-                    <div class="survice_info3">
-                        <h3>홍보매니저</h3>
-                        <p>최지희</p>
-                    </div>
-                </div>
-        </div>
-    </div>
 
         
     </main>
