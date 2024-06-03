@@ -21,7 +21,7 @@
 	// login.php
 
 	// JSON 파일 경로
-	$jsonFilePath = 'users.json';
+	$jsonFilePath = './users.json';
 
 	// POST 데이터 받기
 	$email = $_POST['email'];
