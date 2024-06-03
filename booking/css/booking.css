@@ -1,3 +1,138 @@
+@font-face {
+  font-family: "KimjungchulMyungjo-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KimjungchulMyungjo-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KimjungchulMyungjo-Light";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KimjungchulGothic-regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulGothic-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Thin";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-ExtraLight";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Medium";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* *:before, * *:after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font: 16px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 38px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+header,
+nav,
+main,
+aside,
+article,
+section,
+footer {
+  display: block;
+}
+
 .container {
   width: 100%;
   max-width: 1416px;
@@ -18,6 +153,11 @@ section.title {
 section.title h2 {
   font-size: 20px;
 }
+@media (min-width: 1024px) {
+  section.title h2 {
+    font-size: 48px;
+  }
+}
 section.title .filter {
   display: flex;
 }
@@ -25,6 +165,12 @@ section.title .filter img {
   width: 20px;
   height: 20px;
   margin-left: 12px;
+}
+@media (min-width: 1024px) {
+  section.title .filter img {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 section.popular {
@@ -37,62 +183,136 @@ section.popular .section-name {
 }
 section.popular .poster {
   position: relative;
+  overflow: hidden;
 }
 section.popular .poster .selected {
+  position: relative;
   width: 80%;
   margin: 0 auto;
 }
-section.popular .poster .selected img {
+section.popular .poster img {
   width: 100%;
   margin: 0 auto 16px;
 }
-section.popular .poster .selected .program-desc {
-  margin: 0 -16px;
+section.popular .poster .program1 {
+  position: absolute;
+  left: -260px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.popular .poster .program1 img {
+  width: 280px;
+  opacity: 0.5;
+}
+section.popular .poster .program1 .program-desc {
+  display: none;
+}
+section.popular .poster .program3 {
+  position: absolute;
+  right: -260px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.popular .poster .program3 img {
+  width: 280px;
+  opacity: 0.5;
+}
+section.popular .poster .program3 .program-desc {
+  display: none;
+}
+section.popular .poster .program4, section.popular .poster .program5 {
+  display: none;
+}
+@media (min-width: 1024px) {
+  section.popular .poster {
+    width: 100%;
+    display: none;
+  }
+}
+section.popular .poster-web {
+  display: none;
+}
+@media (min-width: 1024px) {
+  section.popular .poster-web {
+    margin: 0 auto;
+    width: 1440px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  section.popular .poster-web li {
+    width: 19%;
+  }
+  section.popular .poster-web li img {
+    width: 100%;
+  }
+}
+section.popular .slide-box {
+  margin: 0 35% 16px;
+  justify-content: space-between;
+  display: flex;
+}
+section.popular .slide-box div {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #eaeaea;
+}
+section.popular .slide-box .selected {
+  width: 32px;
+}
+@media (min-width: 1024px) {
+  section.popular .slide-box {
+    display: none;
+  }
+}
+section.popular .program-desc {
+  margin: 0 16px;
   border-radius: 8px;
   background-color: #eaeaea;
 }
-section.popular .poster .selected .program-desc .title {
+section.popular .program-desc .title {
   margin: 0 auto;
   padding: 24px 24px 8px;
   display: flex;
   justify-content: space-between;
 }
-section.popular .poster .selected .program-desc .title .name {
+section.popular .program-desc .title .name {
   font-size: 16px;
   font-weight: bold;
 }
-section.popular .poster .selected .program-desc .title .tag {
+section.popular .program-desc .title .tag {
   margin-top: -6px;
 }
-section.popular .poster .selected .program-desc .title .tag span {
+section.popular .program-desc .title .tag span {
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 10px;
   background-color: #ffbe0f;
 }
-section.popular .poster .selected .program-desc .place-period {
+section.popular .program-desc .place-period {
   padding: 0 0 24px 24px;
   display: flex;
   color: #333333;
 }
-section.popular .poster .selected .program-desc .place-period p {
+section.popular .program-desc .place-period p {
   margin-right: 16px;
   font-size: 13px;
   color: #cccccc;
 }
-section.popular .poster .selected .program-desc .detail {
+section.popular .program-desc .detail {
   padding: 0 24px 40px;
 }
-section.popular .poster .selected .program-desc .detail p {
+section.popular .program-desc .detail p {
   font-size: 14px;
 }
-section.popular .poster .selected .program-desc .button {
+section.popular .program-desc .button {
   padding-bottom: 40px;
   margin: 0 24px;
   display: flex;
   justify-content: space-between;
 }
-section.popular .poster .selected .program-desc .button button {
+section.popular .program-desc .button button {
   display: inline-block;
   width: 48%;
   padding: 8px;
@@ -102,15 +322,10 @@ section.popular .poster .selected .program-desc .button button {
   color: white;
   background-color: #2f2411;
 }
-section.popular .poster img {
-  width: 100%;
-}
-
-section.popular > .poster > .program5,
-section.popular > .poster > .program2,
-section.popular > .poster > .program3,
-section.popular > .poster > .program4 {
-  display: none;
+@media (min-width: 1024px) {
+  section.popular .program-desc {
+    display: none;
+  }
 }
 
 section.keyword > .hashtag {
@@ -119,6 +334,13 @@ section.keyword > .hashtag {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 8px;
   width: 100%;
+}
+@media (min-width: 1024px) {
+  section.keyword > .hashtag {
+    padding: 0 0 0 20%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 section.keyword > .hashtag div {
   padding: 8px;
@@ -129,6 +351,12 @@ section.keyword > .hashtag div {
   border: 1px solid #cccccc;
   border-radius: 24px;
   background-color: #fff;
+}
+@media (min-width: 1024px) {
+  section.keyword > .hashtag div {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
 }
 section.keyword > .hashtag .selected {
   font-weight: bold;
@@ -162,24 +390,55 @@ section.keyword > .program div .desc {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5019607843);
 }
+@media (min-width: 1024px) {
+  section.keyword > .program div .desc {
+    background-color: rgba(0, 0, 0, 0.5960784314);
+    height: 35%;
+  }
+}
 section.keyword > .program div .desc .title {
   margin-top: 8px;
   font-size: 14px;
   text-align: center;
   letter-spacing: -1px;
 }
+@media (min-width: 1024px) {
+  section.keyword > .program div .desc .title {
+    font-size: 18px;
+  }
+}
 section.keyword > .program div .desc .booking {
   display: none;
 }
 section.keyword > .program div .desc .period {
-  margin-top: -4px;
   font-size: 12px;
   text-align: center;
 }
+@media (min-width: 1024px) {
+  section.keyword > .program div .desc .period {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    margin-top: -4px;
+    font-size: 16px;
+  }
+}
 section.keyword > .program div .desc .place {
-  margin-top: -6px;
-  font-size: 12px;
-  text-align: center;
+  display: none;
+}
+@media (min-width: 1024px) {
+  section.keyword > .program div .desc .place {
+    display: block;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  section.keyword > .program div {
+    width: 24%;
+  }
 }
 
 section.place > .place-button {
@@ -195,4 +454,19 @@ section.place > .place-button .btn-big {
   text-align: center;
   line-height: 80px;
   background-color: #eaeaea;
+}
+@media (min-width: 1024px) {
+  section.place > .place-button .btn-big {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  section.place > .place-button {
+    grid-gap: 24px;
+  }
+  section.place > .place-button .btn-big:hover {
+    font-weight: bold;
+    color: #2f2411;
+    background-color: #ffbe0f;
+  }
 }/*# sourceMappingURL=booking.css.map */

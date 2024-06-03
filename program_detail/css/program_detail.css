@@ -19,14 +19,52 @@ section.title .title-tag-btn h2 {
   margin-right: 16px;
   font-size: 20px;
 }
+@media (min-width: 1024px) {
+  section.title .title-tag-btn h2 {
+    font-size: 36px;
+  }
+}
 section.title .title-tag-btn .tag {
   font-size: 12px;
+}
+@media (min-width: 1024px) {
+  section.title .title-tag-btn .tag {
+    font-size: 16px;
+  }
 }
 section.title .title-tag-btn .tag span {
   padding: 4px 8px;
   margin-right: 4px;
   border-radius: 8px;
   background-color: #eaeaea;
+}
+@media (min-width: 1024px) {
+  section.title .title-tag-btn .tag span {
+    margin-right: 8px;
+  }
+}
+section.title .title-tag-btn .tag .tobe {
+  background-color: wheat;
+}
+section.title .title-tag-btn .tag .ongoing {
+  color: white;
+  background-color: green;
+}
+section.title .title-tag-btn .tag .finish {
+  color: white;
+  background-color: darkgray;
+}
+section.title .title-tag-btn .tag .experience {
+  color: white;
+  background-color: #ffbe0f;
+}
+section.title .title-tag-btn .tag .official {
+  color: white;
+  background-color: darkred;
+}
+section.title .title-tag-btn .tag .booking {
+  color: white;
+  background-color: #2f2411;
 }
 section.title .title-tag-btn .ongoing, section.title .title-tag-btn .booking {
   display: none;
@@ -43,7 +81,7 @@ section.title .title-tag-btn .remaining {
   display: flex;
   flex-direction: column;
   margin-top: -3px;
-  padding: 8px 8px;
+  padding: 8px;
   border-radius: 8px;
   color: #fff;
   background-color: #2f2411;
@@ -53,6 +91,16 @@ section.title .title-tag-btn .remaining img {
   width: 24px;
   height: 24px;
   margin: 0 auto 6px;
+}
+@media (min-width: 1024px) {
+  section.title .title-tag-btn .remaining {
+    font-size: 14px;
+    padding: 12px;
+  }
+  section.title .title-tag-btn .remaining img {
+    width: 28px;
+    height: 28px;
+  }
 }
 @media (min-width: 1024px) {
   section.title .title-tag-btn {
@@ -66,6 +114,11 @@ section.title .place-period p {
   color: #cccccc;
   font-size: 12px;
   margin-right: 8px;
+}
+@media (min-width: 1024px) {
+  section.title .place-period p {
+    font-size: 16px;
+  }
 }
 
 .booking-btn {
@@ -134,14 +187,14 @@ section.images .slide .sub {
     margin-bottom: 56px;
   }
   section.images .poster {
-    width: 30.5%;
+    width: 33%;
   }
   section.images .poster img {
     width: 100%;
     margin-bottom: 0;
   }
   section.images .slide {
-    width: 68%;
+    width: 65%;
     margin-bottom: 0;
   }
   section.images .slide img {
@@ -163,6 +216,12 @@ section.detail div.title {
   font-weight: bold;
   letter-spacing: -1px;
   text-align: center;
+}
+@media (min-width: 1024px) {
+  section.detail div.title {
+    width: 72px;
+    font-size: 16px;
+  }
 }
 section.detail img {
   width: 100%;
@@ -204,6 +263,11 @@ section.additional .info-box {
   padding: 28px;
   border: 1px solid #2f2411;
 }
+@media (min-width: 1024px) {
+  section.additional .info-box {
+    padding-top: 32px;
+  }
+}
 section.additional .info-box div.title {
   width: 60px;
   padding-top: 6px;
@@ -212,6 +276,12 @@ section.additional .info-box div.title {
   font-weight: bold;
   text-align: center;
   border-top: 2px solid #2f2411;
+}
+@media (min-width: 1024px) {
+  section.additional .info-box div.title {
+    width: 72px;
+    font-size: 16px;
+  }
 }
 section.additional .info-box ul .sub-title {
   padding-left: 24px;
@@ -252,14 +322,31 @@ section.call {
   flex-wrap: nowrap;
 }
 section.call div.title {
-  width: 72px;
+  width: 56px;
   padding-bottom: 4px;
-  margin-right: 40px;
+  margin-bottom: 24px;
   border-bottom: 2px solid #2f2411;
   font-size: 14px;
-  letter-spacing: -1px;
   font-weight: bold;
+  letter-spacing: -1px;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  section.call div.title {
+    width: 72px;
+    font-size: 16px;
+  }
 }
 section.call p {
+  margin-left: 16px;
   font-size: 16px;
+}
+@media (min-width: 1024px) {
+  section.call p {
+    margin-left: 32px;
+    line-height: 1.4;
+  }
+  section.call p strong {
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=program_detail.css.map */

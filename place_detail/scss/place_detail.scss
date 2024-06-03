@@ -26,7 +26,12 @@ section.title {
     h2 { 
         width: 23%;
         font-size: 22px; 
-        border-bottom: 1px solid $basic-brown;
+        // border-bottom: 1px solid $basic-brown;
+
+        @include responsive(large-screens) {
+            width: 50%;
+            font-size: 36px;
+        }
     }
 
     .lnb {
@@ -81,6 +86,10 @@ section.time {
             width: 65px; height: 2px;
             background-color: $basic-brown;
         }
+
+        @include responsive(large-screens) {
+            width: 13%;
+        }
     }
 
     .conbox {
@@ -120,6 +129,10 @@ section.time {
                 font-size: 14px;
             }
         }  // info
+
+        @include responsive(large-screens) {
+            width: 85%;
+        }
 
     }  // conbox
 }
@@ -183,7 +196,7 @@ section.programs {
             .desc {
                 position: absolute;
                 bottom: 0;
-                width: 100%; height: 60%;
+                width: 100%; height: 40%;
                 overflow: hidden;  // 애니메이션
                 border-radius: 0 0 8px 8px;
                 color: #fff;
@@ -194,12 +207,26 @@ section.programs {
                     font-size: 14px;
                     letter-spacing: -1px;
                     text-align: center;
+
+                    @include responsive(large-screens) {
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
                 }
-                .period, .time {
+                .period {
                     display: inline-block;
-                    letter-spacing: -1px;
+                    // letter-spacing: -1px;
                     font-size: 11px;
                     margin-left: 8px;
+
+                    @include responsive(large-screens) {
+                        display: block;
+                        text-align: center;
+                        font-size: 14px;
+                    }
+                }
+                .time {
+                    display: none;
                 }
                 .hashtag {
                     display: none;
@@ -207,7 +234,8 @@ section.programs {
                     padding: 8px 0;
 
                     @include responsive(large-screens) {
-                        display: inline-block;
+                        // display: inline-block;
+                        font-size: 12px;
                         span {
                         margin-right: 8px;
                         padding: 4px 6px;
@@ -218,6 +246,30 @@ section.programs {
                     }
                 }
             }  // desc
+
+            .desc:hover {
+                height: 80%;
+                padding-top: 24px;
+                cursor: pointer;
+                // border-radius: 8px;
+
+                .title {
+                    color: $basic-yellow;
+                }
+
+                .time {
+                    display: inline-block;
+                    // letter-spacing: -1px;
+                    font-size: 11px;
+                    margin-left: 8px;
+
+                    @include responsive(large-screens) {
+                        display: block;
+                        text-align: center;
+                        font-size: 14px;
+                    }
+                }
+            }
         }  // conbox
 
         button.disable {
@@ -285,6 +337,10 @@ section.detail {
             width: 65px; height: 2px;
             background-color: $basic-brown;
         }
+
+        @include responsive(large-screens) {
+            width: 13%;
+        }
     }
 
     p.detail {
@@ -292,6 +348,7 @@ section.detail {
         font-size: 14px;
 
         @include responsive(large-screens) {
+            width: 85%;
             font-size: 16px;
         }
     }
@@ -325,6 +382,10 @@ section.address {
 
         font-size: 20px;
         font-weight: bold;
+
+        @include responsive(large-screens) {
+            width: 85%;
+        }
     }
 }
 
@@ -399,6 +460,11 @@ section.additional {
             display: block;
             width: 23%;
             border: 1px solid $background-lightgray;
+
+            .title {
+                margin: 13px 0 0 16px;
+                padding-top: 8px;
+            }
         }
     }
 }

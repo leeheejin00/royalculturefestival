@@ -15,6 +15,11 @@ section.title h2 {
   font-size: 20px;
   border-bottom: 1px solid #111;
 }
+@media (min-width: 1024px) {
+  section.title h2 {
+    font-size: 48px;
+  }
+}
 section.title .filter {
   display: flex;
   align-items: center;
@@ -23,12 +28,26 @@ section.title .filter p {
   margin-right: 12px;
   font-size: 14px;
 }
+@media (min-width: 1024px) {
+  section.title .filter p {
+    font-size: 20px;
+  }
+}
+section.title .filter p:hover {
+  cursor: pointer;
+  color: #ffbe0f;
+}
 
 section.booking-list .desc {
   margin-bottom: 32px;
   font-size: 14px;
   line-height: 1.3;
   color: #333333;
+}
+@media (min-width: 1024px) {
+  section.booking-list .desc {
+    font-size: 20px;
+  }
 }
 @media (min-width: 1024px) {
   section.booking-list {
@@ -64,9 +83,20 @@ section.booking-list > div .num-name .line {
 section.booking-list > div .num-name .booking-num {
   font-size: 12px;
 }
+@media (min-width: 1024px) {
+  section.booking-list > div .num-name .booking-num {
+    font-size: 16px;
+  }
+}
 section.booking-list > div .num-name .booking-name {
   font-size: 18px;
   line-height: 1.2;
+}
+@media (min-width: 1024px) {
+  section.booking-list > div .num-name .booking-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
 }
 section.booking-list > div .date-place-count {
   width: 50%;
@@ -78,16 +108,48 @@ section.booking-list > div .date-place-count {
 section.booking-list > div .date-place-count p > span {
   display: none;
 }
+@media (min-width: 1024px) {
+  section.booking-list > div .date-place-count p > span {
+    display: inline-block;
+    font-size: 14px;
+  }
+}
 section.booking-list > div .date-place-count .date {
   width: 70%;
   margin-right: 24px;
   font-size: 10px;
 }
+@media (min-width: 1024px) {
+  section.booking-list > div .date-place-count .date {
+    width: 90%;
+    font-size: 14px;
+  }
+}
 section.booking-list > div .date-place-count .place {
   display: none;
 }
+@media (min-width: 1024px) {
+  section.booking-list > div .date-place-count .place {
+    display: inline-block;
+    font-size: 14px;
+  }
+}
 section.booking-list > div .date-place-count .count {
   font-size: 10px;
+}
+@media (min-width: 1024px) {
+  section.booking-list > div .date-place-count .count {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1024px) {
+  section.booking-list > div .date-place-count {
+    display: inline-block;
+  }
+  section.booking-list > div .date-place-count .bold {
+    margin-right: 8px;
+    font-weight: bold;
+  }
 }
 section.booking-list > div img {
   width: 33%;
@@ -95,54 +157,66 @@ section.booking-list > div img {
 section.booking-list > div .more-btn {
   display: none;
 }
-section.booking-list > div .more-btn img {
-  width: 24px;
-}
 
 @media (min-width: 1024px) {
-  section.booking-list > div:hover {
+  section.booking-list > .booking01:hover,
+  section.booking-list > .booking02:hover {
     color: #fff;
     background-color: #2f2411;
   }
-  section.booking-list > div:hover .line {
+  section.booking-list > .booking01:hover .line,
+  section.booking-list > .booking02:hover .line {
     background-color: #fff;
   }
-  section.booking-list > div:hover .date-place-count {
+  section.booking-list > .booking01:hover .date-place-count,
+  section.booking-list > .booking02:hover .date-place-count {
     display: inline-block;
   }
-  section.booking-list > div:hover .date, section.booking-list > div:hover .place, section.booking-list > div:hover .count .bold {
+  section.booking-list > .booking01:hover .date, section.booking-list > .booking01:hover .place, section.booking-list > .booking01:hover .count .bold,
+  section.booking-list > .booking02:hover .date,
+  section.booking-list > .booking02:hover .place,
+  section.booking-list > .booking02:hover .count .bold {
     display: inline-block;
     font-size: 14px;
   }
-  section.booking-list > div:hover img {
-    display: none;
+  section.booking-list > .booking01:hover img,
+  section.booking-list > .booking02:hover img {
+    opacity: 0;
   }
-  section.booking-list > div:hover .more-btn {
+  section.booking-list > .booking01:hover .more-btn,
+  section.booking-list > .booking02:hover .more-btn {
     display: block;
     position: absolute;
     bottom: 32px;
     right: 32px;
+    cursor: pointer;
   }
-  section.booking-list > div:hover .more-btn .square {
+  section.booking-list > .booking01:hover .more-btn .square,
+  section.booking-list > .booking02:hover .more-btn .square {
     width: 90px;
     height: 60px;
     position: relative;
     padding: 12px 24px;
     border: 1px solid #fff;
   }
-  section.booking-list > div:hover .more-btn .square p {
+  section.booking-list > .booking01:hover .more-btn .square p,
+  section.booking-list > .booking02:hover .more-btn .square p {
     position: absolute;
     left: -3px;
     padding: -5px 0;
     font-size: 13px;
     line-height: 35px;
+    color: #fff;
     background-color: #2f2411;
   }
-  section.booking-list > div:hover .more-btn .square img {
+  section.booking-list > .booking01:hover .more-btn .square img,
+  section.booking-list > .booking02:hover .more-btn .square img {
+    opacity: 1;
     position: absolute;
-    right: 0;
-    width: 12px;
-    height: 12px;
+    right: 12px;
+    top: 16px;
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -152,7 +226,7 @@ section.booking-list > .page-num {
 @media (min-width: 1024px) {
   section.booking-list > .page-num {
     display: flex;
-    margin: 0 auto;
+    margin: 160px auto 56px;
     border: 0;
   }
   section.booking-list > .page-num a {
@@ -207,11 +281,21 @@ section.recommend-lists div .desc {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5019607843);
 }
+@media (min-width: 1024px) {
+  section.recommend-lists div .desc {
+    height: 38%;
+  }
+}
 section.recommend-lists div .desc .title {
   margin-top: 4px;
   font-size: 14px;
   letter-spacing: -1px;
   text-align: center;
+}
+@media (min-width: 1024px) {
+  section.recommend-lists div .desc .title {
+    font-size: 18px;
+  }
 }
 section.recommend-lists div .desc .booking {
   display: none;
@@ -222,9 +306,19 @@ section.recommend-lists div .desc .period {
   left: 12px;
   font-size: 10px;
 }
+@media (min-width: 1024px) {
+  section.recommend-lists div .desc .period {
+    font-size: 14px;
+  }
+}
 section.recommend-lists div .desc .place {
   position: absolute;
   bottom: 8px;
   right: 12px;
   font-size: 10px;
+}
+@media (min-width: 1024px) {
+  section.recommend-lists div .desc .place {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=mybooking.css.map */

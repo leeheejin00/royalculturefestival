@@ -31,16 +31,61 @@ section.title {
         h2 {
             margin-right: 16px;
             font-size: 20px;
+
+            @include responsive(large-screens) {
+                font-size: 36px;
+            }
         }
+
         .tag {
             font-size: 12px;
+
+            @include responsive(large-screens) {
+                font-size: 16px;
+            }
+
             span {
                 padding: 4px 8px;
                 margin-right: 4px;
                 border-radius: 8px;
                 background-color: $background-lightgray;
+
+                @include responsive(large-screens) {
+                    margin-right: 8px;
+                }
+            }
+
+            .tobe {
+                // color: white;
+                background-color: wheat;
+            }
+
+            .ongoing {
+                color: white;
+                background-color: green;
+            }
+            
+            .finish {
+                color: white;
+                background-color: darkgray;
+            }
+            
+            .experience {
+                color: white;
+                background-color: $basic-yellow;
+            }
+            
+            .official {
+                color: white;
+                background-color: darkred;
+            }
+
+            .booking {
+                color: white;
+                background-color: $basic-brown;
             }
         }
+
         .ongoing, .booking {
             display: none;
 
@@ -57,17 +102,25 @@ section.title {
             // align-items: center;
     
             margin-top: -3px;
-            padding: 8px 8px;
+            padding: 8px;
             border-radius: 8px;
             color: #fff;
             background-color: $basic-brown;
             font-size: 11px;
 
             img {
-                width: 24px;
-                height: 24px;
+                width: 24px; height: 24px;
                 margin: 0 auto 6px;
                 // margin-left: 8px;
+            }
+
+            @include responsive(large-screens) {
+                font-size: 14px;
+                padding: 12px;
+
+                img {
+                    width: 28px; height: 28px;
+                }
             }
         }  // remaining
 
@@ -82,6 +135,10 @@ section.title {
             color: $basic-gray;
             font-size: 12px;
             margin-right: 8px;
+
+            @include responsive(large-screens) {
+                font-size: 16px;
+            }
         }
         // .place {
         //     display: none;
@@ -162,14 +219,14 @@ section.images {
         margin-bottom: 56px;
 
             .poster {
-                width: 30.5%;
+                width: 33%;
                 img {
                     width: 100%;
                     margin-bottom: 0;
                 }
             }
             .slide {
-                width: 68%;
+                width: 65%;
                 margin-bottom: 0;
                 img {
                     height: 100%;
@@ -194,6 +251,11 @@ section.detail {
         font-weight: bold;
         letter-spacing: -1px;
         text-align: center;
+
+        @include responsive(large-screens) {
+            width: 72px;
+            font-size: 16px;
+        }
     }
 
     img {
@@ -237,6 +299,10 @@ section.additional {
         padding: 28px;
         border: 1px solid $basic-brown;
 
+        @include responsive(large-screens) {
+            padding-top: 32px;
+        }
+
         div.title {
             width: 60px;
             padding-top: 6px;
@@ -245,6 +311,11 @@ section.additional {
             font-weight: bold;
             text-align: center;
             border-top: 2px solid $basic-brown;
+
+            @include responsive(large-screens) {
+                width: 72px;
+                font-size: 16px;
+            }
         }
         ul {
             .sub-title {
@@ -293,18 +364,44 @@ section.call {
     // justify-content: space-between;
     
     div.title {
-        width: 72px;
+        width: 56px;
         padding-bottom: 4px;
-        margin-right: 40px;
-        // margin-bottom: 24px;
+        margin-bottom: 24px;
         border-bottom: 2px solid $basic-brown;
         font-size: 14px;
-        letter-spacing: -1px;
         font-weight: bold;
+        letter-spacing: -1px;
+        text-align: center;
+
+        @include responsive(large-screens) {
+            width: 72px;
+            font-size: 16px;
+        }
     }
+    
+    // div.title {
+    //     width: 72px;
+    //     padding-bottom: 4px;
+    //     margin-right: 40px;
+    //     // margin-bottom: 24px;
+    //     border-bottom: 2px solid $basic-brown;
+    //     font-size: 14px;
+    //     letter-spacing: -1px;
+    //     font-weight: bold;
+    // }
 
     p {
+        margin-left: 16px;
         font-size: 16px;
+
+        @include responsive(large-screens) {
+            margin-left: 32px;
+            line-height: 1.4;
+
+            strong {
+                font-size: 24px;
+            }
+        }
     }
 }
 
