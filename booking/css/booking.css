@@ -229,22 +229,81 @@ section.popular .poster .program4, section.popular .poster .program5 {
     display: none;
   }
 }
-section.popular .poster-web {
+section.popular .poster-web-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+section.popular .poster-web-container .poster-web {
   display: none;
 }
 @media (min-width: 1024px) {
-  section.popular .poster-web {
+  section.popular .poster-web-container .poster-web {
     margin: 0 auto;
-    width: 1440px;
+    animation: scroll 30s linear infinite;
+    width: 100%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    width: 200%;
   }
-  section.popular .poster-web li {
-    width: 19%;
-  }
-  section.popular .poster-web li img {
+  section.popular .poster-web-container .poster-web li {
+    position: relative;
     width: 100%;
+    padding: 10px;
+    overflow: hidden;
+  }
+  section.popular .poster-web-container .poster-web li img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  section.popular .poster-web-container .poster-web li .book-see {
+    display: flex;
+  }
+  section.popular .poster-web-container .poster-web li .book-see .book, section.popular .poster-web-container .poster-web li .book-see .see {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    bottom: 150px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: none;
+    font-size: 18px;
+    font-family: "KimjungchulMyungjo-Regular";
+    color: white;
+    background-color: #2f2411;
+    padding: 5px 13px;
+    border-radius: 5px;
+  }
+  section.popular .poster-web-container .poster-web li .book-see .book {
+    left: 68%;
+    margin-left: 2px;
+  }
+  section.popular .poster-web-container .poster-web li .book-see .book:hover {
+    color: #ffbe0f;
+  }
+  section.popular .poster-web-container .poster-web li .book-see .see {
+    left: 32%;
+  }
+  section.popular .poster-web-container .poster-web li .book-see .see:hover {
+    color: #ffbe0f;
+  }
+  section.popular .poster-web-container .poster-web li:hover img {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+  section.popular .poster-web-container .poster-web li:hover .book, section.popular .poster-web-container .poster-web li:hover .see {
+    opacity: 1;
+    display: block;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 }
 section.popular .slide-box {

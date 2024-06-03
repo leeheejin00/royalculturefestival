@@ -234,7 +234,6 @@ header .logo-icon .search-menu .search-input {
   }
 }
 header .side-menu {
-  background: url(../images/header_back.png) no-repeat;
   position: fixed;
   width: 45%;
   top: 0;
@@ -650,13 +649,11 @@ header .logo-icon .search-menu .menu-toggle-btn span {
   }
 }
 header .side-menu {
-  background: url(../images/header_back2.png) no-repeat;
   position: fixed;
   width: 45%;
   top: 0;
   right: -45%;
-  background-color: white;
-  opacity: 90%;
+  background-color: #2f2411;
   height: 100%;
   z-index: 1;
   transition: right 0.3s ease-in-out;
@@ -673,7 +670,7 @@ header .side-menu .language-login .language {
   padding: 2px;
   display: flex;
   align-items: center;
-  background-color: #2f2411;
+  background-color: white;
   margin-left: 10%;
   border-radius: 5px;
   margin-left: 15px;
@@ -688,7 +685,7 @@ header .side-menu .language-login .language:hover #languageToggle2 {
   display: block;
 }
 header .side-menu .language-login .language a {
-  color: white;
+  color: #2f2411;
   font-size: 10px;
   font-family: "Pretendard-Regular";
   text-align: center;
@@ -702,12 +699,12 @@ header .side-menu .language-login .login {
   cursor: pointer;
   display: flex;
   align-items: center;
-  background-color: #2f2411;
+  background-color: white;
   border-radius: 5px;
   margin-left: 5px;
 }
 header .side-menu .language-login .login a {
-  color: white;
+  color: #2f2411;
   font-size: 10px;
   font-family: "Pretendard-Regular";
 }
@@ -722,7 +719,7 @@ header .side-menu .side-nav {
 header .side-menu .side-nav .gnb li a {
   display: flex;
   align-items: baseline;
-  color: #2f2411;
+  color: white;
   padding: 10px;
   text-decoration: none;
   font-size: 18px;
@@ -738,7 +735,7 @@ header .side-menu .side-nav .gnb li a img {
 }
 header .side-menu .side-nav .gnb li ul li a {
   font-size: 14px;
-  color: #7e7e7e;
+  color: #acacac;
   font-family: "Pretendard-Regular";
   z-index: 2000;
 }
@@ -1593,8 +1590,6 @@ main .intro-imgbox a:hover .overlay2 h3 {
 #history .palace-img1 img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   -o-object-fit: cover;
      object-fit: cover;
 }

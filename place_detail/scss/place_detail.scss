@@ -62,11 +62,26 @@ section.title {
     }
 }
 
-// ==== image ====
-section.image > img {
+// ==== gallery ====
+.gallery {
+    overflow: hidden;
     width: 100%;
-    margin-bottom: 32px;
+    #slide {
+        position: relative; 
+        display: flex; 
+        width: 500%;
+        transition: transform 0.5s ease-in-out;
+        margin-bottom: 32px;
+        li {
+            width: 20%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
 }
+
 
 // ==== time ====
 section.time {

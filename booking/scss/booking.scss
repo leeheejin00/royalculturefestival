@@ -118,24 +118,83 @@ section.popular {
         }
     }  // poster
 
-    .poster-web {
-        display: none;
-
-        @include responsive(large-screens) {
-            margin: 0 auto;
-            width: 1440px;
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-
-            li {
-                width: 19%;
-
-                img {
+    .poster-web-container {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        .poster-web {
+            display: none;
+            @include responsive(large-screens) {
+                margin: 0 auto;
+                animation: scroll 30s linear infinite;
+                width: 100%;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                width: calc(100% * 2);
+                li {
+                    position: relative;
                     width: 100%;
+                    padding: 10px;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        transition: transform 0.3s ease-in-out;
+                    }  
+                    .book-see {
+                        display: flex;
+                        .book, .see {
+                            position: absolute;
+                            bottom: 10px;
+                            left: 50%;
+                            bottom: 150px;
+                            transform: translateX(-50%);
+                            opacity: 0;
+                            transition: opacity 0.3s ease-in-out;
+                            display: none;
+                            font-size: 18px;
+                            font-family: $font-regular;
+                            color: white;
+                            background-color: #2f2411;
+                            padding: 5px 13px;
+                            border-radius: 5px;
+                        }
+                        .book {
+                            left: 68%;
+                            margin-left: 2px;
+                            &:hover {
+                                color: #ffbe0f;
+                            }
+                        }
+                        .see {
+                            left: 32%;
+                            &:hover {
+                                color: #ffbe0f;
+                            }
+                        }
+                    }
+                    &:hover {
+                        img{
+                            transform: scale(1.1);
+                            opacity: 0.5;
+                        }
+                        .book, .see {
+                            opacity: 1;
+                            display: block;
+                        }
+                    }
                 }
-            }
-        }                    
+                
+                @keyframes scroll {
+                    0% {
+                        transform: translateX(0%);
+                    }
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+            }                    
+        }
     }
 
     .slide-box {

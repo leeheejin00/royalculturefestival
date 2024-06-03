@@ -131,11 +131,29 @@
             <section class="detail">
                 <div class="title">상세설명</div>
                 <img src="./images/opening_info_1120.jpg" alt="detail">
-                <div class="more-btn">
+                <div class="more-btn" id="moreBtn">
                     <p>더보기</p>
                     <img src="./images/arrow_down_white.png" alt="more btn">
                 </div>
             </section><!-- detail -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                const moreBtn = document.getElementById('moreBtn');
+                const detailImage = document.querySelector('.detail-image');
+                const detailSection = document.querySelector('.detail');
+
+                moreBtn.addEventListener('click', function() {
+                    if (detailSection.classList.contains('expanded')) {
+                        detailSection.classList.remove('expanded');
+                        moreBtn.querySelector('p').textContent = '더보기';
+                    } else {
+                        detailSection.classList.add('expanded');
+                        moreBtn.querySelector('p').textContent = '접기';
+                    }
+                });
+            });
+            </script>
+
 
             <section class="additional">
                 <div class="info-box">

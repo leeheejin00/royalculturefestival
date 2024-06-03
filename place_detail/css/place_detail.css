@@ -49,9 +49,23 @@ section.title h2 > .english {
   }
 }
 
-section.image > img {
+.gallery {
+  overflow: hidden;
   width: 100%;
+}
+.gallery #slide {
+  position: relative;
+  display: flex;
+  width: 500%;
+  transition: transform 0.5s ease-in-out;
   margin-bottom: 32px;
+}
+.gallery #slide li {
+  width: 20%;
+}
+.gallery #slide li img {
+  width: 100%;
+  height: 100%;
 }
 
 section.time {
