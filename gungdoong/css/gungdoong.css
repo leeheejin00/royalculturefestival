@@ -5,6 +5,20 @@
   margin: 32px auto;
 }
 
+.back { /* For Safari */
+  position: sticky;
+  bottom: 210px; /* 스크롤을 내릴 때 맨 아래에 고정되도록 합니다 */
+  right: 300px; /* 오른쪽에 위치하게 합니다 */
+  z-index: 1000; /* 다른 요소들보다 위에 위치하게 합니다 */
+  padding-left: 83%;
+}
+
+.back img {
+  width: 50px; /* 아이콘의 크기를 적절히 조정합니다 */
+  height: auto;
+}
+
+/* Sticky element styles */
 #intro .title-box {
   display: flex;
   justify-content: space-between;
@@ -271,6 +285,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .schedule .schedule-txt .schedule-box .sch {
+    height: 100%;
     flex-direction: column;
     width: 100%;
   }
@@ -283,7 +298,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .schedule .schedule-txt .schedule-box .sch h2 {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 #explain .explain-box .schedule .schedule-txt .schedule-box .sch p {
@@ -292,7 +307,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .schedule .schedule-txt .schedule-box .sch p {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 #explain .explain-box .schedule .schedule-txt .schedule-box .sch small {
@@ -303,7 +318,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .schedule .schedule-txt .schedule-box .sch small {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 #explain .explain-box .schedule .schedule-txt .schedule-box .sch:nth-child(4) {
@@ -324,7 +339,7 @@
 @media (min-width: 1024px) {
   #explain .explain-box .schedule .schedule-txt .schedule-box .arrow-right-icon {
     display: block;
-    padding-top: 7%;
+    padding-top: 5%;
     margin: 0 27px;
   }
 }
@@ -336,7 +351,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .schedule .schedule-txt .sch-dsce {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 #explain .explain-box .active {
@@ -394,7 +409,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .active .active-txt .active-box .act h2 {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 #explain .explain-box .active .active-txt .active-box .act p {
@@ -404,7 +419,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .active .active-txt .active-box .act p {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 #explain .explain-box .active .active-txt .active-box .act:nth-child(4) {
@@ -425,7 +440,7 @@
 @media (min-width: 1024px) {
   #explain .explain-box .active .active-txt .arrow-right-icon {
     display: block;
-    padding-top: 7%;
+    padding-top: 4%;
     margin: 0 27px;
   }
 }
@@ -437,7 +452,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .active .active-txt .where {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 #explain .explain-box .benefit {
@@ -573,9 +588,8 @@
   justify-content: center;
   align-items: flex-start;
   position: relative;
-  width: 100%;
   width: 300%;
-  animation: slide-right 15s infinite linear;
+  animation: slide-right 20s infinite linear;
 }
 @media (min-width: 1024px) {
   #run .run1 .run1-allimg .run1-img {
@@ -603,6 +617,44 @@
   transform: scale(0.9);
   z-index: 1;
 }
+#run .run1 .run1-allimg .run1-img img:nth-child(1) {
+  transform: scale(0.9);
+  min-width: 33.3333333333%;
+  z-index: 1;
+}
+#run .run1 .run1-allimg .run1-img img:nth-child(4) {
+  transform: scale(0.9);
+  min-width: 33.3333333333%;
+  z-index: 1;
+}
+#run .run1 .run1-allimg .run1-img img:nth-child(5) {
+  transform: scale(0.9);
+  z-index: 1;
+}
+#run .run1 .run1-allimg .run1-img img:nth-child(6) {
+  transform: scale(0.9);
+  z-index: 1;
+  min-width: 50%;
+}
+@media (min-width: 1024px) {
+  #run .run1 .run1-allimg .run1-img img:nth-child(6) {
+    min-width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  #run .run1 .run1-allimg .run1-img img:nth-child(7) {
+    transform: scale(0.9);
+    z-index: 1;
+    min-width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  #run .run1 .run1-allimg .run1-img img:nth-child(8) {
+    transform: scale(0.9);
+    z-index: 1;
+    min-width: 60%;
+  }
+}
 #run .run1 .run1-allimg .run1-img img:nth-child(2) {
   z-index: 1;
 }
@@ -617,15 +669,23 @@
 }
 @media (min-width: 1024px) {
   #run .run2 .run2-allimg-pc .run2-img-pc {
+    animation: move1 20s linear infinite;
     margin-top: 20%;
     display: flex;
     width: 100%;
-    overflow: hidden;
     opacity: 50%;
   }
   #run .run2 .run2-allimg-pc .run2-img-pc img {
     width: 20%;
     padding-right: 15px;
+  }
+  @keyframes move1 {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 }
 #run .run2 .run2-allimg {
@@ -644,35 +704,35 @@
 }
 @media (min-width: 1024px) {
   #run .run2 .run2-allimg .run2-img {
-    overflow: hidden;
     padding: 0;
-    width: 70%;
+    min-width: 60%;
     float: right;
     margin-bottom: 25%;
   }
 }
 #run .run2 .run2-allimg .run2-img img {
   flex: 1;
-  min-width: 100%;
+  min-width: 90%;
   height: 100%;
-  margin-top: 20%;
+  margin-top: 40%;
 }
 @media (min-width: 1024px) {
   #run .run2 .run2-allimg .run2-img img {
     margin-top: 5%;
+    min-width: 40%;
   }
 }
 #run .run2 .run2-allimg .run2-img img:nth-child(1), #run .run2 .run2-allimg .run2-img img:nth-child(4) {
-  transform: scale(0.9);
+  transform: scale(1);
   z-index: 1;
 }
 #run .run2 .run2-allimg .run2-img img:nth-child(2), #run .run2 .run2-allimg .run2-img img:nth-child(3) {
-  transform: scale(0.9);
+  transform: scale(1);
   z-index: 2;
 }
 #run .run2 .run2-txt {
   position: absolute;
-  top: 53%;
+  top: 60%;
   background-color: #f6f6f6;
   z-index: 5;
   background-color: #f6f6f6;
@@ -681,7 +741,7 @@
 }
 @media (min-width: 1024px) {
   #run .run2 .run2-txt {
-    top: 270%;
+    top: 75%;
     left: 10%;
     width: 40%;
   }

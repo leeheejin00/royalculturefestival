@@ -6,45 +6,222 @@
   padding: 0 32px;
 }
 
-.title-tag-btn {
+section.title {
+  margin-bottom: 32px;
+}
+section.title .title-tag-btn {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  margin-bottom: 8px;
 }
-.title-tag-btn .remaining {
-  display: flex;
-  align-items: center;
-}
-.title-tag-btn .remaining img {
-  width: 28px;
-  height: 28px;
-}
-
-.place-period {
-  display: flex;
-}
-.place-period p {
+section.title .title-tag-btn h2 {
   margin-right: 16px;
+  font-size: 20px;
+}
+@media (min-width: 1024px) {
+  section.title .title-tag-btn h2 {
+    font-size: 36px;
+  }
+}
+section.title .title-tag-btn .tag {
+  font-size: 12px;
+}
+@media (min-width: 1024px) {
+  section.title .title-tag-btn .tag {
+    font-size: 16px;
+  }
+}
+section.title .title-tag-btn .tag span {
+  padding: 4px 8px;
+  margin-right: 4px;
+  border-radius: 8px;
+  background-color: #eaeaea;
+}
+@media (min-width: 1024px) {
+  section.title .title-tag-btn .tag span {
+    margin-right: 8px;
+  }
+}
+section.title .title-tag-btn .tag .tobe {
+  background-color: wheat;
+}
+section.title .title-tag-btn .tag .ongoing {
+  color: white;
+  background-color: green;
+}
+section.title .title-tag-btn .tag .finish {
+  color: white;
+  background-color: darkgray;
+}
+section.title .title-tag-btn .tag .experience {
+  color: white;
+  background-color: #ffbe0f;
+}
+section.title .title-tag-btn .tag .official {
+  color: white;
+  background-color: darkred;
+}
+section.title .title-tag-btn .tag .booking {
+  color: white;
+  background-color: #2f2411;
+}
+section.title .title-tag-btn .ongoing, section.title .title-tag-btn .booking {
+  display: none;
+}
+@media (min-width: 1024px) {
+  section.title .title-tag-btn .ongoing, section.title .title-tag-btn .booking {
+    display: inline-block;
+  }
+}
+section.title .title-tag-btn .remaining {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: -3px;
+  padding: 8px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #2f2411;
+  font-size: 11px;
+}
+section.title .title-tag-btn .remaining img {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto 6px;
+}
+@media (min-width: 1024px) {
+  section.title .title-tag-btn .remaining {
+    font-size: 14px;
+    padding: 12px;
+  }
+  section.title .title-tag-btn .remaining img {
+    width: 28px;
+    height: 28px;
+  }
+}
+@media (min-width: 1024px) {
+  section.title .title-tag-btn {
+    margin-bottom: 8px;
+  }
+}
+section.title .place-period {
+  display: flex;
+}
+section.title .place-period p {
+  color: #cccccc;
+  font-size: 12px;
+  margin-right: 8px;
+}
+@media (min-width: 1024px) {
+  section.title .place-period p {
+    font-size: 16px;
+  }
 }
 
 .booking-btn {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  position: fixed;
+  bottom: 40px;
+  right: 24px;
+  z-index: 99;
+  display: flex;
+  padding: 12px 24px;
+  background-color: #2f2411;
+  border-radius: 36px;
+}
+.booking-btn img {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+@media (min-width: 1024px) {
+  .booking-btn img {
+    margin-right: 0;
+  }
+}
+.booking-btn .hover {
+  font-weight: bold;
+  color: #fff;
+}
+@media (min-width: 1024px) {
+  .booking-btn .hover {
+    display: none;
+  }
 }
 
-.poster img {
-  width: 100%;
+.booking-btn:hover {
+  background-color: #ffbe0f;
+}
+@media (min-width: 1024px) {
+  .booking-btn:hover img {
+    margin-right: 12px;
+  }
+}
+@media (min-width: 1024px) {
+  .booking-btn:hover .hover {
+    color: #2f2411;
+    display: block;
+  }
 }
 
-.slide img {
+section.images .poster img {
   width: 100%;
+  margin-bottom: 32px;
+}
+section.images .slide {
+  margin-bottom: 32px;
+}
+section.images .slide img {
+  width: 100%;
+}
+section.images .slide .sub {
+  display: none;
+}
+@media (min-width: 1024px) {
+  section.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 56px;
+  }
+  section.images .poster {
+    width: 33%;
+  }
+  section.images .poster img {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  section.images .slide {
+    width: 65%;
+    margin-bottom: 0;
+  }
+  section.images .slide img {
+    height: 100%;
+  }
 }
 
 section.detail {
   position: relative;
   height: 600px;
   overflow: hidden;
+}
+section.detail div.title {
+  width: 56px;
+  padding-bottom: 4px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #2f2411;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  section.detail div.title {
+    width: 72px;
+    font-size: 16px;
+  }
 }
 section.detail img {
   width: 100%;
@@ -61,46 +238,69 @@ section.detail .more-btn {
 }
 section.detail .more-btn p {
   margin-top: 30px;
+  font-size: 16px;
   text-align: center;
   color: white;
 }
 section.detail .more-btn img {
   margin: 0 auto;
-  width: 32px;
+  width: 24px;
+}
+@media (min-width: 1024px) {
+  section.detail {
+    height: 1400px;
+  }
 }
 
 section.additional {
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
 }
 section.additional .info-box {
   width: 100%;
   margin-top: 32px;
-  padding: 48px;
+  padding: 28px;
   border: 1px solid #2f2411;
 }
+@media (min-width: 1024px) {
+  section.additional .info-box {
+    padding-top: 32px;
+  }
+}
 section.additional .info-box div.title {
-  width: 70px;
-  padding-top: 8px;
-  margin-bottom: 40px;
+  width: 60px;
+  padding-top: 6px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  font-weight: bold;
   text-align: center;
   border-top: 2px solid #2f2411;
 }
+@media (min-width: 1024px) {
+  section.additional .info-box div.title {
+    width: 72px;
+    font-size: 16px;
+  }
+}
 section.additional .info-box ul .sub-title {
-  padding-left: 32px;
-  margin-bottom: 16px;
-  line-height: 20px;
+  padding-left: 24px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 16px;
   background-image: url(../images/title_icon02.png);
-  background-size: 20px;
+  background-size: 16px;
   background-repeat: no-repeat;
 }
 section.additional .info-box ul .content {
-  padding-left: 32px;
+  padding-left: 24px;
   margin-bottom: 24px;
+  font-size: 14px;
   line-height: 1.3;
 }
 section.additional .info-box ul .content .small {
-  font-size: 14px;
+  color: #cccccc;
+  font-size: 12px;
 }
 section.additional .info-box ul .content .space {
   padding-left: 12px;
@@ -120,4 +320,33 @@ section.call {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+}
+section.call div.title {
+  width: 56px;
+  padding-bottom: 4px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #2f2411;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  section.call div.title {
+    width: 72px;
+    font-size: 16px;
+  }
+}
+section.call p {
+  margin-left: 16px;
+  font-size: 16px;
+}
+@media (min-width: 1024px) {
+  section.call p {
+    margin-left: 32px;
+    line-height: 1.4;
+  }
+  section.call p strong {
+    font-size: 24px;
+  }
 }/*# sourceMappingURL=program_detail.css.map */

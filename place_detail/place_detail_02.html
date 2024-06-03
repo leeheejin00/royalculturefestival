@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header_footer.css">
+    <link rel="stylesheet" href="./css/place_detail.css">
+    <title>창덕궁</title>
+    <script>
+        window.onload = function() {
+            const toggleBtn = document.querySelector('.menu-toggle-btn');
+            const sideMenu = document.getElementById('side-menu');
+
+            toggleBtn.addEventListener('click', function() {
+                 if (sideMenu.style.right === '0px') {
+                    sideMenu.style.right = '-250px'; 
+                    toggleBtn.classList.remove('open'); 
+                } else {
+                    sideMenu.style.right = '0'; 
+                    toggleBtn.classList.add('open'); 
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-icon">
+                <a href=""><img src="../images/header_logo.png" alt="header_logo"></a>
+                <div class="search-menu">
+                    <a href=""><img src="../images/internet.png" alt=""></a>
+                    <a href=""><img src="../images/korean-hat.png" alt=""></a>
+                    <a href=""><img src="../images/search.png" alt="search"></a>
+                    <div class="menu-toggle-btn">
+                        <span>&nbsp</span>
+                        <span>&nbsp</span>
+                        <span>&nbsp</span>
+                    </div>
+                </div> <!-- search-menu -->
+            </div> <!-- logo-icon -->
+            <div id="side-menu" class="side-menu">
+                <nav class="side-nav">
+                    <ul class="gnb">
+                        <li>
+                            <a href="">궁중문화축전</a>
+                            <ul class="submenu">
+                                <li><a href="">소개.연혁</a></li>
+                                <li><a href="">FI</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">서울 속 고궁</a>
+                            <ul class="submenu">
+                                <li><a href="">경복궁</a></li>
+                                <li><a href="">창덕궁</a></li>
+                                <li><a href="">덕수궁</a></li>
+                                <li><a href="">창경궁</a></li>
+                                <li><a href="">경희궁</a></li>
+                                <li><a href="">종묘</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">궁이둥이</a>
+                            <ul class="submenu">
+                                <li><a href="">지원하기</a></li>
+                                <li><a href="">발자취</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">알림마당</a>
+                            <ul class="submenu">
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">보도자료</a></li>
+                                <li><a href="">문의하기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">예매하기</a>
+                            <ul class="submenu">
+                                <li><a href="">예매하기</a></li>
+                                <li><a href="">예매확인</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu_box">
+                <nav class="mainmenu">
+                    <ul class="gnb">
+                        <li>
+                            <a href="">궁중문화축전</a>
+                            <ul class="submenu">
+                                <li><a href="">소개.연혁</a></li>
+                                <li><a href="">FI</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">서울 속 고궁</a>
+                                <ul class="submenu">
+                                    <li><a href="">경복궁</a></li>
+                                    <li><a href="">창덕궁</a></li>
+                                    <li><a href="">덕수궁</a></li>
+                                    <li><a href="">창경궁</a></li>
+                                    <li><a href="">경희궁</a></li>
+                                    <li><a href="">종묘</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">궁이둥이</a>
+                            <ul class="submenu">
+                                <li><a href="">지원하기</a></li>
+                                <li><a href="">발자취</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">알림마당</a>
+                            <ul class="submenu">
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">보도자료</a></li>
+                                <li><a href="">문의하기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">예매하기</a>
+                            <ul class="submenu">
+                                <li><a href="">예매하기</a></li>
+                                <li><a href="">예매확인</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <form action="">
+                    <div class="search-box">
+                        <label for="find"></label>
+                        <input type="search" id="find" name="find" />
+                        <div class="search">
+                            <a href=""><img src="../images/search.png" alt=""></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="title">
+                <h2>창덕궁 <span class="english">Changdukgung</span></h2>
+                <div class="lnb">
+                    <a href="./place_detail_01.html">경복궁</a>
+                    <a href="./place_detail_03.html">덕수궁</a>
+                    <a href="./place_detail_04.html">창경궁</a>
+                    <a href="./place_detail_05.html">경희궁</a>
+                    <a href="./place_detail_06.html">종묘</a>
+                </div><!-- lnb -->
+            </section><!-- title -->
+
+            <section class="image">
+                <img src="./images/changduk01.jpg" alt="창덕궁 메인이미지" class="main-image">
+                <!-- 갤러리버튼 -->
+            </section><!-- image -->
+
+            <section class="time">
+                <div class="title">
+                    운영시간
+                    <div class="underline">&nbsp;</div>
+                </div>
+                <div class="conbox">
+                    <div class="select-month">
+                        <div class="month1">2-5월</div>
+                        <div class="month3 selected">6-8월</div>
+                        <div class="month6">9-10월</div>
+                        <div class="month9">11-1월</div>
+                        <!-- <div class="month11">11-12월</div> -->
+                    </div><!-- select-month -->
+                    <p class="time">오전 09시 ~ 오후 06시</p>
+                    <p class="last-enter">(입장마감 : 오후 05시)</p>
+                    <p class="info">
+                        매주 월요일은 휴궁일입니다. (궁중문화축전 기간은 휴궁일 없이 운영합니다)<br>
+                        <span class="light">※ 휴궁일이 공휴일(대체공휴일 포함)과 겹칠 경우 개방하며, 이 경우 개방한 공휴일 다음의 첫 번째 비공휴일을 휴궁일로 합니다.</span>
+                    </p>
+                </div><!-- conbox -->
+            </section><!-- time -->
+        </div><!-- container -->
+
+        <section class="programs">
+            <div class="container">
+                <div class="title-icon">
+                    <div class="title">
+                        프로그램
+                        <div class="underline">&nbsp;</div>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><img src="./images/calendar.png" alt="calendar"></a>
+                        <a href="#"><img src="./images/filter.png" alt="filter"></a>
+                    </div><!-- button -->
+                </div>
+                <div class="program-list">
+                    <div class="program01">
+                        <div class="conbox">
+                            <img src="./images/pg01.png" alt="">
+                            <div class="desc">
+                                <p class="title">창덕궁 달빛기행</p>
+                                <p class="period">01.01 ~ 12.31</p>
+                                <p class="time">10:00 | 14:00</p>
+                                <div class="hashtag">
+                                    <span class="ceremony">체험</span>
+                                    <span class="field">현장</span>
+                                </div><!-- hashtag -->
+                            </div><!-- desc -->
+                        </div><!-- conbox -->
+                        <button class="able">예매하기</button>
+                    </div>
+    
+                    <div class="program01">
+                        <div class="conbox">
+                            <img src="./images/pg01.png" alt="">
+                            <div class="desc">
+                                <p class="title">아침 궁을 깨우다</p>
+                                <p class="period">01.01 ~ 12.31</p>
+                                <p class="time">10:00 | 14:00</p>
+                                <div class="hashtag">
+                                    <span class="expierence">체험</span>
+                                    <span class="field">현장</span>
+                                </div><!-- hashtag -->
+                            </div><!-- desc -->
+                        </div><!-- conbox -->
+                        <button class="able">예매하기</button>
+                    </div>
+    
+                    <div class="program01">
+                        <div class="conbox">
+                            <img src="./images/pg01.png" alt="">
+                            <div class="desc">
+                                <p class="title">공생: 시공간의 중첩</p>
+                                <p class="period">01.01 ~ 12.31</p>
+                                <p class="time">10:00 | 14:00</p>
+                                <div class="hashtag">
+                                    <span class="art">전시</span>
+                                    <span class="field">현장</span>
+                                </div><!-- hashtag -->
+                            </div><!-- desc -->
+                        </div><!-- conbox -->
+                        <button class="disable">현장참여</button>
+                    </div>
+                </div><!-- program-list -->
+            </div><!-- container -->
+        </section><!-- programs -->
+
+        <div class="container">    
+
+            <section class="detail">
+                <div class="title">
+                    상세설명
+                    <div class="underline">&nbsp;</div>
+                </div>
+                <p class="detail">
+                    창덕궁은 1405년(태종 5) 법궁인 경복궁의 이궁(離宮, 법궁 이외에 별도로 지은 궁궐)으로 지은 궁궐입니다. 처음에는 적은 수의 건물만 있었으나 역대 왕들이 주로 창덕궁을 사용하게 되면서 건물과 후원영역이 점차 늘어나게 되었습니다. 1592년(선조 25) 임진왜란으로 한양의 궁궐들이 모두 불에 타 없어졌는데 1610년(광해군 2) 궁궐 중 가장 먼저 다시 짓게 되었고, 고종 대에 경복궁이 지어질 때까지 약 270여 년 동안 실질적인 법궁의 역할을 하였습니다. 창덕궁은 창경궁과 경계 없이 동궐(東闕)로 불렀으며, 시대마다 건물과 후원을 조성하여 서울에 남아있는 궁궐 중 최대의 공간을 형성하였습니다.<br><br>
+                    창덕궁은 조선시대를 거쳐 대한제국, 일제강점기, 그리고 대한민국 시기까지 사용된 궁궐이라는 특징을 가지고 있습니다. 조선 후기 많은 왕이 인정문에서 왕위에 올랐고 대조전에서 세상을 떠났습니다. 이와 같은 역사 속에서 대조전의 부속건물 흥복헌에서 1910년 대한제국의 마지막 어전회의가 열리기도 했습니다. 1917년에는 대화재로 희정당과 대조전이 불에 타자 경복궁의 강녕전과 교태전을 옮겨 지었는데, 내부를 마루와 유리창 등을 설치하여 서양식으로 꾸며졌습니다. 그리고 광복 이후에는 대한제국의 마지막 황실 가족이 낙선재 권역에서 생활하다가 세상을 떠났습니다. 비록 시대를 거치면서 많은 변형이 있었으나 1990년대부터 최대한 원형에 맞게 복원하여 현재의 모습이 되었습니다.<br><br>
+                    창덕궁은 경복궁처럼 인위적인 구조를 따르지 않고 주변 지형을 최대한 살려 자연과 조화를 이루도록 건축되었고, 특히 다른 궁궐에 비해 후원영역이 크게 조성되어 300여 년이 넘은 나무와 연못, 그리고 작은 정자 등이 자연과 어울리도록 배치되어 현재도 아름다운 경관을 볼 수 있습니다. 1997년 가장 한국적인 궁궐이라는 평가를 받아 궁궐 중 유일하게 유네스코 세계유산으로 등재되었습니다.
+                </p>
+            </section><!-- detail -->
+
+            <section class="address">
+                <div class="title">
+                    <span>주</span>소
+                    <div class="underline">&nbsp;</div>
+                </div>
+                <p class="address">서울 종로구 율곡로 99</p>
+            </section><!-- address -->
+
+            <section class="additional">
+                <div class="transp selected">
+                    <div class="add-menu">
+                        <div class="title selected">대중교통</div>
+                        <div class="title-price">이용요금</div>
+                        <div class="title-parking">주차안내</div>
+                    </div><!-- add-menu -->
+                    <div class="conbox">
+                        <div class="subway">
+                            <div class="title">지하철</div>
+                            <div class="details">
+                                <p><span class="station">3호선 안국역</span>3번 출구 (도보 5분)</p>
+                                <p><span class="station">5호선 종로3가역</span>6번 출구  (도보 10분)</p>
+                            </div>
+                        </div><!-- subway -->
+                        <div class="bus">
+                            <div class="title">버스</div>
+                            <div class="details">
+                                <p><span class="station">경복궁 남측</span>(간선)109, 151, 162, 171, 172, 272, 601 / (지선)7025 / (순환)90S투어, 91S투어 / (공항)6011 / (마을)종로01, 종로12</p>
+                            </div>
+                        </div><!-- subway -->
+                    </div><!-- conbox -->
+                </div><!-- transp -->
+                <div class="price">
+                    <div class="title">이용요금</div>
+                    <div class="conbox">
+                        <!-- ------ 이용요금 안내 내용 ------ -->
+                    </div>
+                </div><!-- price -->
+                <div class="parking">
+                    <div class="title">주차안내</div>
+                    <div class="conbox">
+                        <!-- ------ 주차 안내 내용 ------ -->
+                    </div>
+                </div><!-- parking -->
+            </section><!-- additional -->
+            
+        </div><!-- container -->
+    </main>
+
+    <footer>
+        <div class="sns">
+            <a href=""><img src="../images/instagram.png" alt="instagram"></a>
+            <a href=""><img src="../images/youtube.png" alt="youtube"></a>
+            <a href=""><img src="../images/naver blog.png" alt="blog"></a>
+        </div>
+        <div class="footer-back">
+            <div class="footLogo">
+                <a href=""><img src="../images/footer_logo.png" alt=""></a>
+            </div>
+            <form action="">
+                <label for="sitemap" class="custom-select">
+                    <select name="sitemap" id="sitemap">
+                        <option value="sitemap" selected>사이트맵</option>
+                    </select>
+                </label>
+            </form>
+            <hr>
+            <div class="public">
+                <a href="">개인정보처리방침</a>
+                <a href="">이용약관</a>
+            </div>
+            <address>한국문화재재단 서울특별시 종로구 율곡로 53 (안국동 148)</address>
+            <div class="question">
+                <address>일반문의전화 1522-2295</address>
+                <address>홍보 취재문의 02-3210-4683</address>
+            </div>
+            <div class="copyright">
+                <p>&copy;2020 Korea Cultural Heritage Foundation, All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

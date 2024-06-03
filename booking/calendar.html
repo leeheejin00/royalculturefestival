@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendar Example</title>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  td:hover {
+    background-color: #f2f2f2;
+  }
+</style>
+</head>
+<body>
+
+<h2>달력</h2>
+
+<div id="calendar"></div>
+
+<script>
+  function createCalendar(year, month) {
+    const startDate = new Date(year, month, 1);
+    const endDate = new Date(year, month + 1, 0);
+    
+    const daysInMonth = endDate.getDate();
+    const startingDay = startDate.getDay();
+    
+    const calendar = document.getElementById("calendar");
+    calendar.innerHTML = "";
+    
+    const table = document.createElement("table");
+    const header = document.createElement("tr");
+    
+    const weekdays = ["일", "월", "화", "수", "목", "금", "토"];
+    
+    for (let day of weekdays) {
+      const th = document.createElement("th");
+      th.textContent = day;
+      header.appendChild(th);
+    }
+    
+    table.appendChild(header);
+    
+    let date = 1;
+    
+    for (let i = 0; i < 6; i++) {
+      const row = document.createElement("tr");
+      for (let j = 0; j < 7; j++) {
+        if (i === 0 && j < startingDay) {
+          const td = document.createElement("td");
+          row.appendChild(td);
+        } else if (date > daysInMonth) {
+          break;
+        } else {
+          const td = document.createElement("td");
+          td.textContent = date;
+          row.appendChild(td);
+          date++;
+        }
+      }
+      table.appendChild(row);
+    }
+    
+    calendar.appendChild(table);
+  }
+  
+  createCalendar(2024, 5); // 달력 생성 (연도, 월)
+</script>
+
+</body>
+</html>

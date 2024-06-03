@@ -1,0 +1,361 @@
+@font-face {
+  font-family: "KimjungchulMyungjo-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KimjungchulMyungjo-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KimjungchulMyungjo-Light";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "KimjungchulGothic-regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulGothic-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Thin";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-ExtraLight";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Medium";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/Poject-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* *:before, * *:after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font: 16px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 38px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+header,
+nav,
+main,
+aside,
+article,
+section,
+footer {
+  display: block;
+}
+
+.container {
+  max-width: 1416px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+.disable {
+  color: #cccccc;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+section.info-calendar .mobile-title {
+  margin-bottom: 24px;
+}
+section.info-calendar .mobile-title .name {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+section.info-calendar .mobile-title .period, section.info-calendar .mobile-title .time {
+  margin: 0;
+  font-size: 12px;
+}
+section.info-calendar .mobile-title .small {
+  color: #cccccc;
+}
+@media (min-width: 1024px) {
+  section.info-calendar .mobile-title {
+    display: none;
+  }
+}
+section.info-calendar img {
+  width: 70%;
+  margin: 0 15% 16px;
+}
+section.info-calendar .info .title {
+  display: none;
+}
+@media (min-width: 1024px) {
+  section.info-calendar .info .title {
+    display: block;
+  }
+}
+section.info-calendar .info .calendar {
+  width: 100%;
+  height: 200px;
+  background-color: paleturquoise;
+}
+
+section.booking-info div.time-num div {
+  margin: 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+section.booking-info div.time-num div p.title {
+  width: 20%;
+  font-size: 14px;
+  font-weight: bold;
+}
+section.booking-info div.time-num div ul {
+  width: 78%;
+  display: flex;
+}
+section.booking-info div.time-num div ul li {
+  font-size: 14px;
+}
+section.booking-info div.time-num div ul li .bg {
+  margin-right: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  background-color: #eaeaea;
+}
+section.booking-info div.time-num div .small {
+  font-size: 10px;
+  color: #cccccc;
+}
+section.booking-info div.time-num .time li {
+  position: relative;
+}
+section.booking-info div.time-num .time li .bg {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+}
+section.booking-info div.time-num .time li .small {
+  position: absolute;
+  bottom: -2px;
+  right: 8px;
+}
+section.booking-info div.time-num .num li:first-child .bg,
+section.booking-info div.time-num .num li:nth-child(2) .bg,
+section.booking-info div.time-num .num li:nth-child(3) .bg {
+  display: inline-block;
+  width: 32px;
+  border-radius: 16px;
+  text-align: center;
+}
+section.booking-info div.time-num .num li:last-child {
+  margin-top: 16px;
+}
+@media (min-width: 1024px) {
+  section.booking-info div.time-num {
+    display: flex;
+  }
+}
+section.booking-info div.price,
+section.booking-info div.pay {
+  margin: 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+section.booking-info div.price p.title,
+section.booking-info div.pay p.title {
+  width: 20%;
+  font-size: 14px;
+  font-weight: bold;
+}
+section.booking-info div.price ul,
+section.booking-info div.pay ul {
+  width: 78%;
+  display: flex;
+  justify-content: space-between;
+}
+section.booking-info div.price ul li,
+section.booking-info div.pay ul li {
+  margin-right: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-align: center;
+  background-color: #eaeaea;
+}
+section.booking-info div.price ul li:last-child,
+section.booking-info div.pay ul li:last-child {
+  margin-right: 0;
+}
+section.booking-info div.price ul .selected,
+section.booking-info div.pay ul .selected {
+  font-weight: bold;
+  color: #2f2411;
+  background-color: #ffbe0f;
+}
+section.booking-info div.price .small,
+section.booking-info div.pay .small {
+  margin-top: 8px;
+  font-size: 10px;
+  color: #cccccc;
+}
+section.booking-info div.price li:first-child {
+  width: 40%;
+}
+section.booking-info div.price li:last-child {
+  width: 58%;
+}
+section.booking-info div.pay li {
+  width: 33%;
+}
+section.booking-info div.info {
+  margin: 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+section.booking-info div.info p.title {
+  width: 20%;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+section.booking-info div.info .info-box {
+  position: relative;
+  width: 78%;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #eaeaea;
+}
+section.booking-info div.info .info-box p {
+  font-size: 12px;
+}
+section.booking-info div.info .info-box p .bold {
+  margin-right: 4px;
+  font-weight: bold;
+}
+section.booking-info div.info .info-box .modify {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 11px;
+  text-decoration: underline;
+  color: #cccccc;
+}
+
+.note {
+  padding: 8px 0 8px;
+  background-color: #f8efe0;
+}
+.note .title {
+  margin-bottom: 8px;
+  padding-left: 24px;
+  font-size: 14px;
+  font-weight: bold;
+  background-image: url(../images/icon_brown.png);
+  background-size: 18px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.note .content {
+  font-size: 12px;
+  margin-bottom: 24px;
+}
+
+button.book {
+  width: 90%;
+  margin: 16px 5%;
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #ffbe0f;
+}/*# sourceMappingURL=booking_popup.css.map */

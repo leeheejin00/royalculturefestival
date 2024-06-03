@@ -14,10 +14,10 @@ header {
     width: $width-wide;
     background: url(../images/header_back.png) no-repeat;
     background-size: cover;
-    
+    transition: height 0.5s ease-out;
 
     @include responsive(large-screens) {
-        height: 340px;
+        height: 180px;
     }
 
     .logo-icon {
@@ -25,14 +25,18 @@ header {
         justify-content: space-between;
         align-items: center;
         .search-menu {
+            position: relative;
             display: flex;
             z-index: 100;
             a {
-                margin-right: 30px;
+                margin-right: 15px;
                 img {
                     width: 36px;
                     z-index: 100;
                 }
+            }
+            #languageSelect {
+                display: none;
             }
             a:first-child {
                 display: none;
@@ -41,6 +45,7 @@ header {
                 display: none;
             }
             .menu-toggle-btn {
+                cursor: pointer;
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
@@ -62,6 +67,27 @@ header {
                     transform: rotate(-45deg) translate(7px, -6px);
                 }
             }
+            .close-btn {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+                font-size: 24px;
+            }
+            .search-input {
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 100%;
+                width: 100px;
+                padding: 5px;
+                font-size: 16px;
+                border-bottom: 3px solid black;
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+                
+            }
         }
     }
 
@@ -80,7 +106,7 @@ header {
                 .menu-toggle-btn {
                     display: none;
                 }
-            }    
+            }   
         }
     }
     .side-menu {
@@ -90,14 +116,16 @@ header {
         top: 0;
         right: -45%; 
         background-color: white; 
+        height: 100%;
         z-index: 1;
-        transition: right 0.3s;
+        transition: right 0.3s ease-in-out;
         .language-login {
             display: flex;
             margin-top: 125px;
             margin-left: 5px;
             margin-bottom: 10px;
-            .language {
+            .language { 
+                cursor: pointer;
                 padding: 2px;
                 display: flex;
                 align-items: center;
@@ -105,19 +133,30 @@ header {
                 margin-left: 10%;
                 border-radius: 5px;
                 margin-left: 15px;
-
+                #languageToggle2 {
+                    display: none;
+                }
+                &:hover {
+                    #languageToggle {
+                        display: none;
+                    }
+                    #languageToggle2 {
+                        display: block;
+                    }
+                }
                 a {
                     color: white;
-                    font-size: 12px;
+                    font-size: 10px;
                     font-family: $font-pre-regular;
+                    text-align: center;
                     img {
                         padding-left: 5px;
-                        width: 60%;
+                        width: 55%;
                     }
                 }
             }
             .login {
-                padding: 2px;
+                cursor: pointer;
                 display: flex;
                 align-items: center;
                 background-color: #2f2411;
@@ -125,11 +164,11 @@ header {
                 margin-left: 5px;
                 a {
                     color: white;
-                    font-size: 12px;
+                    font-size: 10px;
                     font-family: $font-pre-regular;
                     img {
                         padding-left: 5px;
-                        width: 60%;
+                        width: 55%;
                     }
                 }
             }
@@ -139,6 +178,7 @@ header {
             z-index: 1;
             .gnb {
                 li {
+                    
                     a {
                         display: flex;
                         align-items: baseline;
@@ -168,7 +208,7 @@ header {
                             }
                         }
                     }
-                    .submenu2 {
+                    .submenu {
                         display: flex;
                     }
                 }
@@ -197,7 +237,11 @@ header {
                     li {
                         position: relative;
                         .submenu {
+                            display: none;
                             margin-top: 27px;
+                            overflow: hidden;
+                            max-height: 0;
+                            transition: max-height 0.5s ease-out;
                             li {
                                 a {
                                     font-family: $font-pre-regular;
@@ -209,6 +253,11 @@ header {
                                     }
                                 }   
                             }
+                        }
+                        .submenu.open {
+                            display: block;
+                            max-height: 1000px; /* 적절한 최대 높이로 설정 */
+                            transition: max-height 0.3s ease-in;
                         }
                     }
                         a {
@@ -311,9 +360,13 @@ footer {
                     font-family: $font-pre-regular;
                     font-size: 16px;
                     background: transparent;
-                    width: 214px;
+                    width: 25%;
+                    option {
+                        color: black;
+                    }
                     @include responsive(large-screens) {
                         font-size: 21px;
+                        width: 10%;
                     }
                 }
             }
@@ -359,9 +412,9 @@ footer {
             display: flex;
             justify-content: center;
             margin: 0 auto;
-            address {
+            .tel1 {
                     font-size: 14px;
-                    margin-right: 42px;
+                    margin-right: 10px;
                     margin-bottom: 34px;
                     font-family: $font-extra;
                     text-align: center;
@@ -369,6 +422,17 @@ footer {
                         font-size: 18px;
                     }
                 }
+                .tel2 {
+                    font-size: 14px;
+                    margin-left: 10px;
+                    margin-bottom: 34px;
+                    font-family: $font-extra;
+                    text-align: center;
+                    @include responsive(large-screens) {
+                        font-size: 18px;
+                    }
+                }
+                
             }
         .copyright {
             p {
