@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header_footer.css">
+    <link rel="stylesheet" href="./css/program_detail.css">
+    <link rel="stylesheet" href="">
+    <title>프로그램 상세 - 궁중직업실록</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-icon">
+                <a href=""><img src="../images/header_logo.png" alt="header_logo"></a>
+                <div class="search-menu">
+                    <a href=""><img src="../images/internet.png" alt=""></a>
+                    <a href=""><img src="../images/korean-hat.png" alt=""></a>
+                    <a href=""><img src="../images/search.png" alt="search"></a>
+                    <div class="menu-toggle-btn">
+                        <span>&nbsp</span>
+                        <span>&nbsp</span>
+                        <span>&nbsp</span>
+                    </div>
+                </div> <!-- search-menu -->
+            </div> <!-- logo-icon -->
+            <div class="menu_box">
+                <nav class="mainmenu">
+                    <ul class="gnb">
+                        <li>
+                            <a href="">궁중문화축전</a>
+                            <ul class="submenu">
+                                <li><a href="">소개.연혁</a></li>
+                                <li><a href="">FI</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">서울 속 고궁</a>
+                            <ul class="submenu">
+                                <li><a href="">경복궁</a></li>
+                                <li><a href="">창덕궁</a></li>
+                                <li><a href="">덕수궁</a></li>
+                                <li><a href="">창경궁</a></li>
+                                <li><a href="">경희궁</a></li>
+                                <li><a href="">종묘</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">궁이둥이</a>
+                            <ul class="submenu">
+                                <li><a href="">지원하기</a></li>
+                                <li><a href="">발자취</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">알림마당</a>
+                            <ul class="submenu">
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">보도자료</a></li>
+                                <li><a href="">문의하기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">예매하기</a>
+                            <ul class="submenu">
+                                <li><a href="">예매하기</a></li>
+                                <li><a href="">예매확인</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <form action="">
+                    <div class="search-box">
+                        <label for="find"></label>
+                        <input type="search" id="find" name="find" />
+                        <div class="search">
+                            <a href=""><img src="./images/search.png" alt=""></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="title">
+                <div class="title-tag-btn">
+                    <h2>2024 봄 어린이 &lt;궁중직업실록&gt;</h2>
+                    <div class="tag">
+                        <span class="tobe">예정</span>
+                        <span class="experience">체험</span>
+                        <span class="booking">사전예약</span>
+                    </div><!-- tag -->
+                    <div class="remaining">
+                        <img src="./images/calendar.png" alt="calendar-icon">
+                        예매현황
+                    </div>
+                </div><!-- title-tag-btn -->
+                <div class="place-period">
+                    <p class="place">창경궁 일원</p>
+                    <p class="period">2024.05.01 ~ 2024.05.05</p>
+                </div>
+            </section><!-- title -->
+
+            <div class="booking-btn">
+                <img src="./images/booking_icon.png" alt="booking-btn-white">
+                <!-- <img src="./images/booking_icon.png" class="hover" alt="booking-btn-yellow"> -->
+                <div class="hover" onclick="openPopup()">예매하기</div>
+
+                <script>
+                    function openPopup() {
+                      window.open("../booking/booking_popup.html", "Popup", "width=600,height=800");
+                    }
+                </script>
+            </div><!-- booking-btn -->
+    
+            <section class="images">
+                <div class="poster">
+                    <img src="./images/child_main_720.jpg" alt="poster">
+                </div>
+                <ul class="slide">
+                    <li class="main"><img src="./images/img1_child.jpg" alt="main-image"></li>
+                    <li class="sub"><img src="./images/img2.jpg" alt="sub-image1"></li>
+                    <li class="sub"><img src="./images/img2.jpg" alt="sub-image2"></li>
+                    <li class="sub"><img src="./images/img2.jpg" alt="sub-image3"></li>
+                </ul>
+            </section><!-- images -->
+
+            <section class="detail">
+                <div class="title">상세설명</div>
+                <img src="./images/child_info_1120_240405_1534.jpg" alt="detail">
+                <div class="more-btn">
+                    <p>더보기</p>
+                    <img src="./images/arrow_down_white.png" alt="more btn">
+                </div>
+            </section><!-- detail -->
+
+            <section class="additional">
+                <div class="info-box">
+                    <div class="title">예매안내</div>
+                    <ul>
+                        <li>
+                            <p class="sub-title">예매일시</p>
+                            <p class="content">
+                                - 예약 오픈 4월 05일(금), 오후 4시<br>
+                                - 예매/취소 마감 : 전일 17시까지<br>
+                                - 티켓링크 전화 예매 불가
+                            </p>
+                        </li>
+                        <li>
+                            <p class="sub-title">예매금액</p>
+                            <p class="content">
+                                - 숙수체험 : 무료 <br>
+                                - 의관체험 : 무료 <br>
+                                - 창경궁 탐험대 : 무료 <br>
+                                - 장고마마 체험 : 무료 <br>
+                                <span class="small">* 1인 2매 예매 가능</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <div class="title">예매방법</div>
+                    <ul>
+                        <li>
+                            <p class="sub-title">온라인 사전 예약</p>
+                            <p class="content">
+                                ① 예매 사이트(티켓링크) 접속 및 로그인<br>
+                                ② 참여 일자, 회차, 프로그램 선택 후 예매<br>
+                                <span class="small space">*(예매 시) 숙수체험 / 의관체험 / 창경궁 탐험대 / 장고마마체험 중 선택</span><br>
+                                <span class="small space">*선착순 예매로 조기 마감될 수 있습니다.</span><br>
+                                ③ 창경궁 내 명정전 오른편 공터(안내처)에서 본인 확인▶ 약차 선택 후 활동지 수령
+                            </p>
+                        </li>
+                        <li>
+                            <p class="sub-title">전화예매</p>
+                            <p class="content">
+                                - 전화예매 불가
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section><!-- additional -->
+
+            <section class="call">
+                <div class="title">문의전화</div>
+                <p>궁능활용프로그램 콜센터 <br> <strong>1522-2295</strong></p>
+            </section><!-- call -->
+        </div><!-- container -->
+    </main>
+
+    <footer>
+        <div class="sns">
+            <a href=""><img src="../images/instagram.png" alt="instagram"></a>
+            <a href=""><img src="../images/youtube.png" alt="youtube"></a>
+            <a href=""><img src="../images/naver blog.png" alt="blog"></a>
+        </div>
+        <div class="footer-back">
+            <div class="footLogo">
+                <a href=""><img src="images/footer_logo.png" alt=""></a>
+            </div>
+            <form action="">
+                <label for="sitemap" class="custom-select">
+                    <select name="sitemap" id="sitemap">
+                        <option value="sitemap" selected>사이트맵</option>
+                    </select>
+                </label>
+            </form>
+            <hr>
+            <div class="public">
+                <a href="">개인정보처리방침</a>
+                <a href="">이용약관</a>
+            </div>
+            <address>한국문화재재단 서울특별시 종로구 율곡로 53 (안국동 148)</address>
+            <div class="question">
+                <address>일반문의전화 1522-2295</address>
+                <address>홍보 취재문의 02-3210-4683</address>
+            </div>
+            <div class="copyright">
+                <p>&copy;2020 Korea Cultural Heritage Foundation, All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

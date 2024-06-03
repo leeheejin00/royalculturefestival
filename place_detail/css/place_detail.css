@@ -14,7 +14,12 @@ section.title {
 section.title h2 {
   width: 23%;
   font-size: 22px;
-  border-bottom: 1px solid #2f2411;
+}
+@media (min-width: 1024px) {
+  section.title h2 {
+    width: 50%;
+    font-size: 36px;
+  }
 }
 section.title .lnb {
   display: flex;
@@ -69,6 +74,11 @@ section.time .title .underline {
   height: 2px;
   background-color: #2f2411;
 }
+@media (min-width: 1024px) {
+  section.time .title {
+    width: 13%;
+  }
+}
 section.time .conbox {
   width: 70%;
 }
@@ -102,6 +112,11 @@ section.time .conbox .info {
 section.time .conbox .info .light {
   color: #cccccc;
   font-size: 14px;
+}
+@media (min-width: 1024px) {
+  section.time .conbox {
+    width: 85%;
+  }
 }
 
 section.programs {
@@ -158,7 +173,7 @@ section.programs {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60%;
+  height: 40%;
   overflow: hidden;
   border-radius: 0 0 8px 8px;
   color: #fff;
@@ -170,11 +185,26 @@ section.programs {
   letter-spacing: -1px;
   text-align: center;
 }
-.program-list .program01 .conbox .desc .period, .program-list .program01 .conbox .desc .time {
+@media (min-width: 1024px) {
+  .program-list .program01 .conbox .desc .title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+.program-list .program01 .conbox .desc .period {
   display: inline-block;
-  letter-spacing: -1px;
   font-size: 11px;
   margin-left: 8px;
+}
+@media (min-width: 1024px) {
+  .program-list .program01 .conbox .desc .period {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+.program-list .program01 .conbox .desc .time {
+  display: none;
 }
 .program-list .program01 .conbox .desc .hashtag {
   display: none;
@@ -183,7 +213,7 @@ section.programs {
 }
 @media (min-width: 1024px) {
   .program-list .program01 .conbox .desc .hashtag {
-    display: inline-block;
+    font-size: 12px;
   }
   .program-list .program01 .conbox .desc .hashtag span {
     margin-right: 8px;
@@ -191,6 +221,26 @@ section.programs {
     border-radius: 8px;
     color: #333333;
     background-color: #ffbe0f;
+  }
+}
+.program-list .program01 .conbox .desc:hover {
+  height: 80%;
+  padding-top: 24px;
+  cursor: pointer;
+}
+.program-list .program01 .conbox .desc:hover .title {
+  color: #ffbe0f;
+}
+.program-list .program01 .conbox .desc:hover .time {
+  display: inline-block;
+  font-size: 11px;
+  margin-left: 8px;
+}
+@media (min-width: 1024px) {
+  .program-list .program01 .conbox .desc:hover .time {
+    display: block;
+    text-align: center;
+    font-size: 14px;
   }
 }
 .program-list .program01 button.disable {
@@ -251,12 +301,18 @@ section.detail .title .underline {
   height: 2px;
   background-color: #2f2411;
 }
+@media (min-width: 1024px) {
+  section.detail .title {
+    width: 13%;
+  }
+}
 section.detail p.detail {
   width: 70%;
   font-size: 14px;
 }
 @media (min-width: 1024px) {
   section.detail p.detail {
+    width: 85%;
     font-size: 16px;
   }
 }
@@ -287,6 +343,11 @@ section.address p.address {
   width: 70%;
   font-size: 20px;
   font-weight: bold;
+}
+@media (min-width: 1024px) {
+  section.address p.address {
+    width: 85%;
+  }
 }
 
 section.additional {
@@ -355,5 +416,9 @@ section.additional div.price, section.additional div.parking {
     display: block;
     width: 23%;
     border: 1px solid #eaeaea;
+  }
+  section.additional div.price .title, section.additional div.parking .title {
+    margin: 13px 0 0 16px;
+    padding-top: 8px;
   }
 }/*# sourceMappingURL=place_detail.css.map */

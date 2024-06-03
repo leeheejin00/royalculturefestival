@@ -18,19 +18,31 @@ section.title > h2 {
     font-size: 20px;
     text-decoration: underline;
     margin-bottom: 32px;
+
+    @include responsive(large-screens) {
+        font-size: 48px;
+    }
 }
 
 // ====details ====
 section.details {
 
     p {
-        font-size: 14px;
+        font-size: 12px;
         margin-bottom: 24px;
+
+        @include responsive(large-screens) {
+            font-size: 16px;
+        }
     } 
 
     h3 {
         font-size: 20px;
         margin-bottom: 12px;
+
+        @include responsive(large-screens) {
+            font-size: 32px;
+        }
     }
 
     .booking-info {
@@ -56,7 +68,7 @@ section.details {
     
         .info-1-2 {
             position: relative;
-            width: 58%;
+            width: 55%;
             // margin-bottom: 24px;
 
             .print {
@@ -68,6 +80,7 @@ section.details {
                     top:0; right: 0;
                     color: $basic-gray;
                     text-decoration: underline;
+                    cursor: pointer;
                 }
             }  // print
 
@@ -76,29 +89,77 @@ section.details {
             
                 td {
                     font-size: 12px;
+
+                    @include responsive(large-screens) {
+                        font-size: 16px;
+                    }
                 }
             
                 .sort {
                     width: 60px; height: 40px;
                     text-align: left;
+
+                    @include responsive(large-screens) {
+                        width: 96px;
+                    }
                 }
             }  // info1
+
+            .info2 {
+                display: none;
+
+                @include responsive(large-screens) {
+                    display: block;
+
+                    td {
+                        font-size: 12px;
+
+                        @include responsive(large-screens) {
+                            font-size: 16px;
+                        }
+                    }
+                
+                    .sort {
+                        width: 60px; height: 40px;
+                        text-align: left;
+
+                        @include responsive(large-screens) {
+                            width: 120px;
+                        }
+                    }
+                }
+            }
         
             @include responsive(large-screens) {
                 width: 95%; 
             }
         }  // info-1-2
 
-        .info2 {
-            margin-bottom: 16px;
-            
-            td {
-                font-size: 12px;
-            }
+        .mobile-info2 {
+            width: 100%;
+            margin: 32px 0;
 
-            .sort {
-                width: 112px; height: 40px;
-                text-align: left;
+            p {
+                font-size: 14px;
+                font-weight: bold;
+                margin-bottom: 16px;
+            }
+            
+            ul {
+                display: flex;
+                // justify-content: space-between;
+                
+                .sort {
+                    margin-right: 16px;
+                    font-size: 12px;
+                    .box {
+                        margin-right: 8px;
+                    }
+                }
+            }  // ul
+
+            @include responsive(large-screens) {
+                display: none;
             }
         }  // info2
 
@@ -109,6 +170,11 @@ section.details {
                 font-size: 14px;
                 font-weight: bold;
                 margin-bottom: 8px;
+
+                @include responsive(large-screens) {
+                    margin-top: 24px;
+                    font-size: 16px;
+                }
             }
 
             table {
@@ -122,11 +188,20 @@ section.details {
                     padding: 16px 0;
                     font-size: 12px;
                     background-color: #eaeaea;
+
+                    @include responsive(large-screens) {
+                        padding: 8px 0;
+                        font-size: 14px;
+                    }
                 }
 
                 td {
                     font-size: 14px;
                     padding: 32px 0;
+
+                    @include responsive(large-screens) {
+                        padding: 16px 0;
+                    }
                 }
             }
         }  // info3
@@ -139,9 +214,10 @@ section.details {
             border-radius: 12px;
             color: white;
             background-color: #2f2411;
-            // @include responsive(large-screens) {
-            //     width: 90%;
-            // }
+            
+            @include responsive(large-screens) {
+                font-size: 16px;
+            }
         }
 
         @include responsive(large-screens) {

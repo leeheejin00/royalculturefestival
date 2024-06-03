@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/header_footer.css">
-    <link rel="stylesheet" href="">
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
     <title>header_footer</title>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -19,6 +19,123 @@
                 } else {
                     alert('Please enter "경복궁" to search.');
                 }
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById('languageIcon').addEventListener('click', function(event) {
+        event.preventDefault();
+        var languageSelect = document.getElementById('languageSelect');
+        if (languageSelect.style.display === 'none' || languageSelect.style.display === '') {
+            languageSelect.style.display = 'block';
+        } else {
+            languageSelect.style.display = 'none';
+        }
+    });
+    </script>   
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var searchIcon = document.getElementById("searchIcon");
+        var searchInput = document.getElementById("searchInput");
+
+        searchIcon.addEventListener("click", function(event) {
+            event.preventDefault();
+            if (searchInput.style.display === "none" || searchInput.style.display === "") {
+                searchInput.style.display = "block";
+                searchInput.focus();
+            } else {
+                searchInput.style.display = "none";
+            }
+        });
+
+        document.addEventListener("click", function(event) {
+            if (!searchInput.contains(event.target) && !searchIcon.contains(event.target)) {
+                searchInput.style.display = "none";
+            }
+        });
+    });
+    </script>
+
+    <script>
+        function submitForm() {
+            document.querySelector('form').submit();
+        }
+
+        function validateSearch() {
+            const searchInput = document.getElementById('find').value.trim();
+            if (searchInput === '') {
+                alert('검색어를 입력하세요.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <script>
+        window.onload = function() {
+            const toggleBtn = document.querySelector('.menu-toggle-btn');
+            const sideMenu = document.getElementById('side-menu');
+            const closeBtn = document.querySelector('.close-btn');
+
+            toggleBtn.addEventListener('click', function() {
+                if (sideMenu.style.right === '0px') {
+                    sideMenu.style.right = '-50%'; 
+                    toggleBtn.classList.remove('open'); 
+                } else {
+                    sideMenu.style.right = '0'; 
+                    toggleBtn.classList.add('open'); 
+                }
+            });
+
+            closeBtn.addEventListener('click', function() {
+                sideMenu.style.right = '-50%'; 
+                toggleBtn.classList.remove('open'); 
+            });
+        };
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuItems = document.querySelectorAll('.gnb > li > a');
+            const header = document.querySelector('header');
+
+            menuItems.forEach(item => {
+                item.addEventListener('mouseover', function (e) {
+                    e.preventDefault();
+                    const submenu = this.nextElementSibling;
+                    let allSubmenus = document.querySelectorAll('.submenu');
+
+                    // Close all submenus except the current one
+                    allSubmenus.forEach(sub => {
+                        if (sub !== submenu) {
+                            sub.classList.remove('open');
+                            sub.style.maxHeight = null;
+                        }
+                    });
+
+                    // Toggle the clicked submenu
+                    if (submenu && submenu.classList.contains('submenu')) {
+                        submenu.classList.toggle('open');
+                        if (submenu.classList.contains('open')) {
+                            submenu.style.maxHeight = submenu.scrollHeight + "px";
+                        } else {
+                            submenu.style.maxHeight = null;
+                        }
+
+                        // Adjust header height
+                        setTimeout(() => {
+                            let totalHeight = 180; 
+                            allSubmenus.forEach(sub => {
+                                if (sub.classList.contains('open')) {
+                                    totalHeight += sub.scrollHeight;
+                                }
+                            });
+                            header.style.height = totalHeight + "px";
+                        }, 300); 
+                    }
+                });
             });
         });
     </script>
@@ -49,42 +166,6 @@
                     <input type="text" id="searchInput" class="search-input" placeholder="Search...">
                 </div> <!-- search-menu -->
             </div> <!-- logo-icon -->
-            <script>
-                document.getElementById('languageIcon').addEventListener('click', function(event) {
-                event.preventDefault();
-                var languageSelect = document.getElementById('languageSelect');
-                if (languageSelect.style.display === 'none' || languageSelect.style.display === '') {
-                    languageSelect.style.display = 'block';
-                } else {
-                    languageSelect.style.display = 'none';
-                }
-            });
-            </script>   
-            
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                var searchIcon = document.getElementById("searchIcon");
-                var searchInput = document.getElementById("searchInput");
-
-                searchIcon.addEventListener("click", function(event) {
-                    event.preventDefault();
-                    if (searchInput.style.display === "none" || searchInput.style.display === "") {
-                        searchInput.style.display = "block";
-                        searchInput.focus();
-                    } else {
-                        searchInput.style.display = "none";
-                    }
-                });
-
-                document.addEventListener("click", function(event) {
-                    if (!searchInput.contains(event.target) && !searchIcon.contains(event.target)) {
-                        searchInput.style.display = "none";
-                    }
-                });
-            });
-            </script>
-
-
             <div id="side-menu" class="side-menu">
                 <div class="language-login">
                     <div class="language">
@@ -200,89 +281,6 @@
                 </form>
             </div>
         </div>
-        
-
-        <script>
-            function submitForm() {
-                document.querySelector('form').submit();
-            }
-    
-            function validateSearch() {
-                const searchInput = document.getElementById('find').value.trim();
-                if (searchInput === '') {
-                    alert('검색어를 입력하세요.');
-                    return false;
-                }
-                return true;
-            }
-        </script>
-
-        <script>
-            window.onload = function() {
-                const toggleBtn = document.querySelector('.menu-toggle-btn');
-                const sideMenu = document.getElementById('side-menu');
-                const closeBtn = document.querySelector('.close-btn');
-    
-                toggleBtn.addEventListener('click', function() {
-                    if (sideMenu.style.right === '0px') {
-                        sideMenu.style.right = '-50%'; 
-                        toggleBtn.classList.remove('open'); 
-                    } else {
-                        sideMenu.style.right = '0'; 
-                        toggleBtn.classList.add('open'); 
-                    }
-                });
-    
-                closeBtn.addEventListener('click', function() {
-                    sideMenu.style.right = '-50%'; 
-                    toggleBtn.classList.remove('open'); 
-                });
-            };
-        </script>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const menuItems = document.querySelectorAll('.gnb > li > a');
-                const header = document.querySelector('header');
-        
-                menuItems.forEach(item => {
-                    item.addEventListener('mouseover', function (e) {
-                        e.preventDefault();
-                        const submenu = this.nextElementSibling;
-                        let allSubmenus = document.querySelectorAll('.submenu');
-        
-                        // Close all submenus except the current one
-                        allSubmenus.forEach(sub => {
-                            if (sub !== submenu) {
-                                sub.classList.remove('open');
-                                sub.style.maxHeight = null;
-                            }
-                        });
-        
-                        // Toggle the clicked submenu
-                        if (submenu && submenu.classList.contains('submenu')) {
-                            submenu.classList.toggle('open');
-                            if (submenu.classList.contains('open')) {
-                                submenu.style.maxHeight = submenu.scrollHeight + "px";
-                            } else {
-                                submenu.style.maxHeight = null;
-                            }
-        
-                            // Adjust header height
-                            setTimeout(() => {
-                                let totalHeight = 180; 
-                                allSubmenus.forEach(sub => {
-                                    if (sub.classList.contains('open')) {
-                                        totalHeight += sub.scrollHeight;
-                                    }
-                                });
-                                header.style.height = totalHeight + "px";
-                            }, 300); 
-                        }
-                    });
-                });
-            });
-        </script>
     </header>
 
     <main>

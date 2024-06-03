@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="../..css/reset.css">
     <link rel="stylesheet" href="../css/header_footer.css">
     <link rel="stylesheet" href="./css/booking.css">
+    <script>
+        function openPopup() {
+          // 새 창을 열고 URL과 창의 속성을 설정합니다.
+          window.open("booking_popup.html", "Popup", "width=600,height=800");
+        }
+    </script>
     <title>예매하기</title>
 </head>
 <body>
@@ -96,56 +102,94 @@
         <section class="popular">
             <h4 class="section-name">인기 프로그램</h4>
             <ul class="poster">
-                <li class="program1 selected">
-                    <img src="./images/poster1.jpg" alt="경복궁 생과방">
-                    <div class="program-desc">
-                        <div class="title">
-                            <p class="name">경복궁 생과방</p>
-                            <p class="tag">
-                                <span class="ongoing">진행</span>
-                                <span class="experience">체험</span>
-                                <span class="book">사전예약</span>
-                            </p>
-                        </div>
-
-                        <div class="place-period">
-                            <p class="place">경복궁 생과방</p>
-                            <p class="period">2024.04.17 ~ 2024.06.24</p>
-                        </div>
-
-                        <div class="detail">
-                            <p>
-                                경복궁 소주방 전각에 위치한 '생과방'은 
-                                궁중의 육처소 가운데 하나이며,
-                                '국왕과 왕비'의 후식과 별식을 준비하던 곳으로
-                                '생물방' 혹은 '생것방'이라고도 불렸습니다. <br> <br>
-                                
-                                경복궁 생과방 프로그램은 조선왕조실록의 내용을 토대로
-                                실제 임금이 드셨던 궁중병과와 궁중약차를
-                                오늘날에도 즐길 수 있도록 구성된 체험 프로그램입니다.
-                            </p>
-                        </div>
-
-                        <div class="button">
-                            <button class="go-page">자세히보기</button>
-                            <button class="book">예매하기</button>
-                        </div>
-                    </div><!-- program-desc-->
-                </li><!-- program1 -->
-                <li class="program2">
-                    <img src="./images/poster1.jpg" alt="덕수궁 밤의 석조전">
+                <li class="program1">
+                    <img src="../program_detail/images/star_pst0319.jpg" alt="경복궁 별빛야행">
                 </li>
+
+                <li class="program2 selected">
+                    <img src="./images/poster1.jpg" alt="경복궁 생과방">
+                </li><!-- program2 -->
+
                 <li class="program3">
-                    <img src="#" alt="경복궁 별빛야행">
+                    <img src="../program_detail/images/sgb_main_720.jpg" alt="밤의 석조전">
                 </li>
                 <li class="program4">
-                    <img src="#" alt="뮤지컬 세종 1446">
+                    <img src="../program_detail/images/child_main_720.jpg" alt="궁중직업실록">
                 </li>
                 <li class="program5">
-                    <img src="./images/poster1.jpg" alt="아침 궁을 깨우다">
+                    <img src="../program_detail/images/morning_main_720.jpg" alt="아침 궁을 깨우다">
                 </li>
             </ul><!-- poster -->
 
+            <ul class="poster-web">
+                <li class="program1">
+                    <a href="../program_detail/program_detail_star.html">
+                        <img src="../program_detail/images/star_pst0319.jpg" alt="경복궁 별빛야행">
+                    </a>
+                </li>
+                <li class="program2">
+                    <a href="../program_detail/program_detail_sgb.html">
+                        <img src="./images/poster1.jpg" alt="경복궁 생과방">
+                    </a>
+                </li><!-- program2 -->
+                <li class="program3">
+                    <a href="../program_detail/program_detail_sj.html">
+                        <img src="../program_detail/images/seokjo_main_720.jpg" alt="밤의 석조전">
+                    </a>
+                </li>
+                <li class="program4">
+                    <a href="../program_detail/program_detail_child.html">
+                        <img src="../program_detail/images/child_main_720.jpg" alt="궁중직업실록">
+                    </a>
+                </li>
+                <li class="program5">
+                    <a href="../program_detail/program_detail_morning.html">
+                        <img src="../program_detail/images/morning_main_720.jpg" alt="아침 궁을 깨우다">
+                    </a>
+                </li>
+            </ul><!-- poster -->
+
+            <div class="slide-box">
+                <div>&nbsp;</div>
+                <div class="selected">&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+            </div>
+
+            <div class="program-desc">
+                <div class="title">
+                    <p class="name">경복궁 생과방</p>
+                    <p class="tag">
+                        <span class="ongoing">진행</span>
+                        <span class="experience">체험</span>
+                        <span class="book">사전예약</span>
+                    </p>
+                </div>
+
+                <div class="place-period">
+                    <p class="place">경복궁 생과방</p>
+                    <p class="period">2024.04.17 ~ 2024.06.24</p>
+                </div>
+
+                <div class="detail">
+                    <p>
+                        경복궁 소주방 전각에 위치한 '생과방'은 
+                        궁중의 육처소 가운데 하나이며,
+                        '국왕과 왕비'의 후식과 별식을 준비하던 곳으로
+                        '생물방' 혹은 '생것방'이라고도 불렸습니다. <br> <br>
+                        
+                        경복궁 생과방 프로그램은 조선왕조실록의 내용을 토대로
+                        실제 임금이 드셨던 궁중병과와 궁중약차를
+                        오늘날에도 즐길 수 있도록 구성된 체험 프로그램입니다.
+                    </p>
+                </div>
+
+                <div class="button">
+                    <button class="go-page">자세히보기</button>
+                    <button class="book" onclick="openPopup()">예매하기</button>
+                </div>
+            </div><!-- program-desc-->
         </section><!-- popular -->
         <div class="container">
             <section class="keyword">
@@ -206,7 +250,7 @@
                     <li class="btn-big"><a href="#">덕수궁</a></li>
                     <li class="btn-big"><a href="#">창경궁</a></li>
                     <li class="btn-big"><a href="#">경희궁</a></li>
-                    <li class="btn-big"><a href="#">종묘</a></li>
+                    <li class="btn-big"><a href="#">종&nbsp;묘</a></li>
                 </ul>
             </section><!-- place -->
         </div><!-- container -->
