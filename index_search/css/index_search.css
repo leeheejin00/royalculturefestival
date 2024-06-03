@@ -427,7 +427,8 @@ form .search-box .search img {
 }
 #notice .notice-allbox .notice .notice-box1 .notice-img img, #notice .notice-allbox .notice .notice-box3 .notice-img img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #notice .notice-allbox .notice .notice-box1 .notice_txt, #notice .notice-allbox .notice .notice-box3 .notice_txt {
   padding: 10px 0;
@@ -525,7 +526,8 @@ form .search-box .search img {
 }
 #notice .notice-allbox .notice .notice-box2 .notice-img img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #notice .notice-allbox .notice .notice-box2 .notice_txt {
   width: 50%;
@@ -619,7 +621,8 @@ form .search-box .search img {
   }
   #notice .notice-allbox .notice .notice-box3 .notice-img img {
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   #notice .notice-allbox .notice .notice-box3 .notice_txt {
     width: 50%;

@@ -176,11 +176,6 @@ section.title .filter img {
 section.popular {
   margin-bottom: 72px;
 }
-section.popular .section-name {
-  display: none;
-  font-size: 16px;
-  margin-bottom: 40px;
-}
 section.popular .poster {
   position: relative;
   overflow: hidden;
@@ -229,24 +224,6 @@ section.popular .poster .program4, section.popular .poster .program5 {
     display: none;
   }
 }
-section.popular .poster-web {
-  display: none;
-}
-@media (min-width: 1024px) {
-  section.popular .poster-web {
-    margin: 0 auto;
-    width: 1440px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-  section.popular .poster-web li {
-    width: 19%;
-  }
-  section.popular .poster-web li img {
-    width: 100%;
-  }
-}
 section.popular .slide-box {
   margin: 0 35% 16px;
   justify-content: space-between;
@@ -266,53 +243,61 @@ section.popular .slide-box .selected {
     display: none;
   }
 }
-section.popular .program-desc {
-  margin: 0 16px;
+section.popular .program-desc-box {
+  display: flex;
+  width: 1920px;
+}
+section.popular .program-desc-box .program-desc {
+  width: 260px;
+  height: auto;
+  margin: 0 32px;
   border-radius: 8px;
   background-color: #eaeaea;
+  overflow: hidden;
 }
-section.popular .program-desc .title {
+section.popular .program-desc-box .program-desc .title {
   margin: 0 auto;
   padding: 24px 24px 8px;
   display: flex;
   justify-content: space-between;
 }
-section.popular .program-desc .title .name {
+section.popular .program-desc-box .program-desc .title .name {
   font-size: 16px;
   font-weight: bold;
+  width: 60px;
 }
-section.popular .program-desc .title .tag {
-  margin-top: -6px;
+section.popular .program-desc-box .program-desc .title .tag {
+  margin-top: -4px;
 }
-section.popular .program-desc .title .tag span {
+section.popular .program-desc-box .program-desc .title .tag span {
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 10px;
   background-color: #ffbe0f;
 }
-section.popular .program-desc .place-period {
+section.popular .program-desc-box .program-desc .place-period {
   padding: 0 0 24px 24px;
   display: flex;
   color: #333333;
 }
-section.popular .program-desc .place-period p {
+section.popular .program-desc-box .program-desc .place-period p {
   margin-right: 16px;
   font-size: 13px;
   color: #cccccc;
 }
-section.popular .program-desc .detail {
+section.popular .program-desc-box .program-desc .detail {
   padding: 0 24px 40px;
 }
-section.popular .program-desc .detail p {
+section.popular .program-desc-box .program-desc .detail p {
   font-size: 14px;
 }
-section.popular .program-desc .button {
+section.popular .program-desc-box .program-desc .button {
   padding-bottom: 40px;
   margin: 0 24px;
   display: flex;
   justify-content: space-between;
 }
-section.popular .program-desc .button button {
+section.popular .program-desc-box .program-desc .button button {
   display: inline-block;
   width: 48%;
   padding: 8px;
@@ -323,7 +308,7 @@ section.popular .program-desc .button button {
   background-color: #2f2411;
 }
 @media (min-width: 1024px) {
-  section.popular .program-desc {
+  section.popular .program-desc-box .program-desc {
     display: none;
   }
 }
