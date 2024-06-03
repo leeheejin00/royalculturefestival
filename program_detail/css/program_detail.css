@@ -43,6 +43,29 @@ section.title .title-tag-btn .tag span {
     margin-right: 8px;
   }
 }
+section.title .title-tag-btn .tag .tobe {
+  background-color: wheat;
+}
+section.title .title-tag-btn .tag .ongoing {
+  color: white;
+  background-color: green;
+}
+section.title .title-tag-btn .tag .finish {
+  color: white;
+  background-color: darkgray;
+}
+section.title .title-tag-btn .tag .experience {
+  color: white;
+  background-color: #ffbe0f;
+}
+section.title .title-tag-btn .tag .official {
+  color: white;
+  background-color: darkred;
+}
+section.title .title-tag-btn .tag .booking {
+  color: white;
+  background-color: #2f2411;
+}
 section.title .title-tag-btn .ongoing, section.title .title-tag-btn .booking {
   display: none;
 }
@@ -164,14 +187,14 @@ section.images .slide .sub {
     margin-bottom: 56px;
   }
   section.images .poster {
-    width: 30.5%;
+    width: 33%;
   }
   section.images .poster img {
     width: 100%;
     margin-bottom: 0;
   }
   section.images .slide {
-    width: 68%;
+    width: 65%;
     margin-bottom: 0;
   }
   section.images .slide img {

@@ -65,9 +65,6 @@ section.popular {
             position: relative;
             width: 80%;
             margin: 0 auto;
-            
-
-            
         }  // selected
 
         img {
@@ -102,8 +99,44 @@ section.popular {
             .program-desc {
                 display: none;
             }
+        }  // program2
+
+        .program4, .program5 {
+            display: none;
+        }  // program 4,5
+
+        @include responsive(large-screens) {
+            width: 100%;
+            display: none;
+
+        //     .poster1, .poster3 {
+        //         position: relative; // 절대 위치 설정 해제
+        //         left: auto; // left 속성 초기화
+        //         right: auto; // right 속성 초기화
+        //         transform: none; // transform 속성 초기화
+        //     }
         }
     }  // poster
+
+    .poster-web {
+        display: none;
+
+        @include responsive(large-screens) {
+            margin: 0 auto;
+            width: 1440px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+
+            li {
+                width: 19%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }                    
+    }
 
     .slide-box {
         margin: 0 35% 16px;
@@ -120,6 +153,11 @@ section.popular {
         .selected {
             width: 32px;
         }
+
+        @include responsive(large-screens) {
+            display: none;
+        }
+
     }
 
     .program-desc {
@@ -190,6 +228,10 @@ section.popular {
                 background-color: $basic-brown;
             }
         }  // button
+
+        @include responsive(large-screens) {
+            display: none;
+        }
     }  // program-desc
 } 
 
@@ -210,10 +252,10 @@ section.popular {
 
 // section.popular > .poster > .program1,
 // section.popular > .poster > .program3,
-section.popular > .poster > .program4,
-section.popular > .poster > .program5 {
-    display: none;
-}
+// section.popular > .poster > .program4,
+// section.popular > .poster > .program5 {
+//     display: none;
+// }
 
 // ==== keyword ====
 section.keyword > .hashtag {

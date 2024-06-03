@@ -89,8 +89,8 @@
                 <div class="title-tag-btn">
                     <h2>2024 궁중문화축전 개막제</h2>
                     <div class="tag">
-                        <span class="ongoing">진행</span>
-                        <span class="experience">체험</span>
+                        <span class="finish">종료</span>
+                        <span class="official">공식행사</span>
                         <span class="booking">사전예약</span>
                     </div><!-- tag -->
                     <div class="remaining">
@@ -99,15 +99,21 @@
                     </div>
                 </div><!-- title-tag-btn -->
                 <div class="place-period">
-                    <p class="place">경복궁 생과방</p>
-                    <p class="period">2024.04.17 ~ 2024.06.24</p>
+                    <p class="place">경복궁 근정전</p>
+                    <p class="period">2024.04.26 ~ 2024.04.26</p>
                 </div>
             </section><!-- title -->
 
             <div class="booking-btn">
                 <img src="./images/booking_icon.png" alt="booking-btn-white">
                 <!-- <img src="./images/booking_icon.png" class="hover" alt="booking-btn-yellow"> -->
-                <div class="hover">예매하기</div>
+                <div class="hover" onclick="openPopup()">예매하기</div>
+
+                <script>
+                    function openPopup() {
+                      window.open("../booking/booking_popup.html", "Popup", "width=600,height=800");
+                    }
+                </script>
             </div><!-- booking-btn -->
     
             <section class="images">
@@ -115,7 +121,7 @@
                     <img src="./images/opening_main_720.jpg" alt="poster">
                 </div>
                 <ul class="slide">
-                    <li class="main"><img src="./images/img1.jpg" alt="main-image"></li>
+                    <li class="main"><img src="./images/img1_opening.jpg" alt="main-image"></li>
                     <li class="sub"><img src="./images/img2.jpg" alt="sub-image1"></li>
                     <li class="sub"><img src="./images/img2.jpg" alt="sub-image2"></li>
                     <li class="sub"><img src="./images/img2.jpg" alt="sub-image3"></li>

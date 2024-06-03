@@ -54,6 +54,36 @@ section.title {
                     margin-right: 8px;
                 }
             }
+
+            .tobe {
+                // color: white;
+                background-color: wheat;
+            }
+
+            .ongoing {
+                color: white;
+                background-color: green;
+            }
+            
+            .finish {
+                color: white;
+                background-color: darkgray;
+            }
+            
+            .experience {
+                color: white;
+                background-color: $basic-yellow;
+            }
+            
+            .official {
+                color: white;
+                background-color: darkred;
+            }
+
+            .booking {
+                color: white;
+                background-color: $basic-brown;
+            }
         }
 
         .ongoing, .booking {
@@ -189,14 +219,14 @@ section.images {
         margin-bottom: 56px;
 
             .poster {
-                width: 30.5%;
+                width: 33%;
                 img {
                     width: 100%;
                     margin-bottom: 0;
                 }
             }
             .slide {
-                width: 68%;
+                width: 65%;
                 margin-bottom: 0;
                 img {
                     height: 100%;

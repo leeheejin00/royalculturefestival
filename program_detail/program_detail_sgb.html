@@ -107,7 +107,13 @@
             <div class="booking-btn">
                 <img src="./images/booking_icon.png" alt="booking-btn-white">
                 <!-- <img src="./images/booking_icon.png" class="hover" alt="booking-btn-yellow"> -->
-                <div class="hover">예매하기</div>
+                <div class="hover" onclick="openPopup()">예매하기</div>
+
+                <script>
+                    function openPopup() {
+                      window.open("../booking/booking_popup.html", "Popup", "width=600,height=800");
+                    }
+                </script>
             </div><!-- booking-btn -->
     
             <section class="images">
@@ -115,7 +121,7 @@
                     <img src="./images/sgb_main_720.jpg" alt="poster">
                 </div>
                 <ul class="slide">
-                    <li class="main"><img src="./images/img1.jpg" alt="main-image"></li>
+                    <li class="main"><img src="./images/img1_sgb.jpg" alt="main-image"></li>
                     <li class="sub"><img src="./images/img2.jpg" alt="sub-image1"></li>
                     <li class="sub"><img src="./images/img2.jpg" alt="sub-image2"></li>
                     <li class="sub"><img src="./images/img2.jpg" alt="sub-image3"></li>
