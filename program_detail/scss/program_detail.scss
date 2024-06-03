@@ -184,6 +184,7 @@ section.detail {
     position: relative;
     height: 600px;
     overflow: hidden;
+    transition: height 0.3s ease;
 
     div.title {
         width: 56px;
@@ -194,12 +195,18 @@ section.detail {
         font-weight: bold;
         letter-spacing: -1px;
         text-align: center;
+
+        @include responsive(large-screens) {
+            width: 72px;
+            font-size: 16px;
+        }
     }
 
     img {
         width: 100%;
     }
     .more-btn {
+        cursor: pointer;
         height: 100px; width: 100%;
         position: absolute;
         bottom: 0;  left: 50%;
@@ -220,8 +227,15 @@ section.detail {
         }
     }
 
+    &.expanded {
+        height: auto;
+    }
+
     @include responsive(large-screens) {
         height: 1400px;
+        &.expanded {
+            height: auto;
+        }
     }
 }
 
