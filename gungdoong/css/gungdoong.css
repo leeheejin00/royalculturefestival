@@ -5,7 +5,8 @@
   margin: 32px auto;
 }
 
-.back { /* For Safari */
+.back {
+  position: -webkit-sticky; /* For Safari */
   position: sticky;
   bottom: 210px; /* 스크롤을 내릴 때 맨 아래에 고정되도록 합니다 */
   right: 300px; /* 오른쪽에 위치하게 합니다 */
