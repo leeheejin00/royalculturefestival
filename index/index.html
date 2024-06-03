@@ -23,6 +23,109 @@
             });
         };
     </script>
+    <script>
+        document.getElementById('languageIcon').addEventListener('click', function(event) {
+        event.preventDefault();
+        var languageSelect = document.getElementById('languageSelect');
+        if (languageSelect.style.display === 'none' || languageSelect.style.display === '') {
+            languageSelect.style.display = 'block';
+        } else {
+            languageSelect.style.display = 'none';
+        }
+    });
+    </script>   
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var searchIcon = document.getElementById("searchIcon");
+        var searchInput = document.getElementById("searchInput");
+
+        searchIcon.addEventListener("click", function(event) {
+            event.preventDefault();
+            if (searchInput.style.display === "none" || searchInput.style.display === "") {
+                searchInput.style.display = "block";
+                searchInput.focus();
+            } else {
+                searchInput.style.display = "none";
+            }
+        });
+
+        document.addEventListener("click", function(event) {
+            if (!searchInput.contains(event.target) && !searchIcon.contains(event.target)) {
+                searchInput.style.display = "none";
+            }
+        });
+    });
+    </script>
+
+    <script>
+        function submitForm() {
+            document.querySelector('form').submit();
+        }
+
+        function validateSearch() {
+            const searchInput = document.getElementById('find').value.trim();
+            if (searchInput === '') {
+                alert('검색어를 입력하세요.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <script>
+        window.onload = function() {
+            const toggleBtn = document.querySelector('.menu-toggle-btn');
+            const sideMenu = document.getElementById('side-menu');
+            const closeBtn = document.querySelector('.close-btn');
+
+            toggleBtn.addEventListener('click', function() {
+                if (sideMenu.style.right === '0px') {
+                    sideMenu.style.right = '-50%'; 
+                    toggleBtn.classList.remove('open'); 
+                } else {
+                    sideMenu.style.right = '0'; 
+                    toggleBtn.classList.add('open'); 
+                }
+            });
+
+            closeBtn.addEventListener('click', function() {
+                sideMenu.style.right = '-50%'; 
+                toggleBtn.classList.remove('open'); 
+            });
+        };
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuItems = document.querySelectorAll('.gnb > li > a');
+            
+            menuItems.forEach(item => {
+                item.addEventListener('mouseover', function (e) {
+                    e.preventDefault();
+                    const submenu = this.nextElementSibling;
+
+                    // 모든 서브메뉴를 닫기
+                    document.querySelectorAll('.submenu').forEach(sub => {
+                        if (sub !== submenu) {
+                            sub.classList.remove('open');
+                            sub.style.maxHeight = null;
+                        }
+                    });
+
+                    // 클릭한 서브메뉴 토글
+                    if (submenu && submenu.classList.contains('submenu')) {
+                        submenu.classList.toggle('open');
+                        if (submenu.classList.contains('open')) {
+                            submenu.style.maxHeight = submenu.scrollHeight + "px";
+                        } else {
+                            submenu.style.maxHeight = null;
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -53,41 +156,6 @@
                     <input type="text" id="searchInput" class="search-input" placeholder="Search...">
                 </div> <!-- search-menu -->
             </div> <!-- logo-icon -->
-            <script>
-                document.getElementById('languageIcon').addEventListener('click', function(event) {
-                event.preventDefault();
-                var languageSelect = document.getElementById('languageSelect');
-                if (languageSelect.style.display === 'none' || languageSelect.style.display === '') {
-                    languageSelect.style.display = 'block';
-                } else {
-                    languageSelect.style.display = 'none';
-                }
-            });
-            </script>   
-            
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                var searchIcon = document.getElementById("searchIcon");
-                var searchInput = document.getElementById("searchInput");
-
-                searchIcon.addEventListener("click", function(event) {
-                    event.preventDefault();
-                    if (searchInput.style.display === "none" || searchInput.style.display === "") {
-                        searchInput.style.display = "block";
-                        searchInput.focus();
-                    } else {
-                        searchInput.style.display = "none";
-                    }
-                });
-
-                document.addEventListener("click", function(event) {
-                    if (!searchInput.contains(event.target) && !searchIcon.contains(event.target)) {
-                        searchInput.style.display = "none";
-                    }
-                });
-            });
-            </script>
-
 
             <div id="side-menu" class="side-menu">
 
@@ -205,74 +273,6 @@
                 </form>
             </div>
         </div>
-        <script>
-            function submitForm() {
-                document.querySelector('form').submit();
-            }
-    
-            function validateSearch() {
-                const searchInput = document.getElementById('find').value.trim();
-                if (searchInput === '') {
-                    alert('검색어를 입력하세요.');
-                    return false;
-                }
-                return true;
-            }
-        </script>
-
-        <script>
-            window.onload = function() {
-                const toggleBtn = document.querySelector('.menu-toggle-btn');
-                const sideMenu = document.getElementById('side-menu');
-                const closeBtn = document.querySelector('.close-btn');
-    
-                toggleBtn.addEventListener('click', function() {
-                    if (sideMenu.style.right === '0px') {
-                        sideMenu.style.right = '-50%'; 
-                        toggleBtn.classList.remove('open'); 
-                    } else {
-                        sideMenu.style.right = '0'; 
-                        toggleBtn.classList.add('open'); 
-                    }
-                });
-    
-                closeBtn.addEventListener('click', function() {
-                    sideMenu.style.right = '-50%'; 
-                    toggleBtn.classList.remove('open'); 
-                });
-            };
-        </script>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const menuItems = document.querySelectorAll('.gnb > li > a');
-                
-                menuItems.forEach(item => {
-                    item.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const submenu = this.nextElementSibling;
-
-                        // 모든 서브메뉴를 닫기
-                        document.querySelectorAll('.submenu').forEach(sub => {
-                            if (sub !== submenu) {
-                                sub.classList.remove('open');
-                                sub.style.maxHeight = null;
-                            }
-                        });
-
-                        // 클릭한 서브메뉴 토글
-                        if (submenu && submenu.classList.contains('submenu')) {
-                            submenu.classList.toggle('open');
-                            if (submenu.classList.contains('open')) {
-                                submenu.style.maxHeight = submenu.scrollHeight + "px";
-                            } else {
-                                submenu.style.maxHeight = null;
-                            }
-                        }
-                    });
-                });
-            });
-        </script>
     </header>
 
     <main>
@@ -908,30 +908,38 @@
 
     <footer>
         <div class="sns">
-            <a href=""><img src="./images/instagram.png" alt="instagram"></a>
-            <a href=""><img src="./images/youtube.png" alt="youtube"></a>
-            <a href=""><img src="./images/naver blog.png" alt="blog"></a>
+            <a href="https://www.instagram.com/royalculturefestival_official/"><img src="./images/instagram.png" alt="instagram"></a>
+            <a href="https://www.youtube.com/channel/UC1_vDkQlNg0zjj-EQRXapww?view_as=subscriber"><img src="./images/youtube.png" alt="youtube"></a>
+            <a href="https://blog.naver.com/royalculture"><img src="./images/naver blog.png" alt="blog"></a>
         </div>
         <div class="footer-back">
             <div class="footLogo">
-                <a href=""><img src="images/footer_logo.png" alt=""></a>
+                <a href="../index/index.html"><img src="images/footer_logo.png" alt=""></a>
             </div>
             <form action="">
                 <label for="sitemap" class="custom-select">
                     <select name="sitemap" id="sitemap">
                         <option value="sitemap" selected>사이트맵</option>
+                        <option value="">국가유산진흥원</option>
+                        <option value="">한국의집</option>
+                        <option value="">KHMALL(문화상품)</option>
+                        <option value="">매장유산국비발굴단</option>
+                        <option value="">국가유산채널</option>
+                        <option value="">국가유산 방문 캠페인</option>
+                        <option value="">조선왕릉문화제</option>
+                        <option value="">패밀리사이트</option>
                     </select>
                 </label>
             </form>
             <hr>
             <div class="public">
-                <a href="">개인정보처리방침</a>
-                <a href="">이용약관</a>
+                <a href="https://www.kh.or.kr/combine/brd/1079/history/705">개인정보처리방침</a>
+                <a href="https://www.kh.or.kr/cms/content/view/706">이용약관</a>
             </div>
             <address>한국문화재재단 서울특별시 종로구 율곡로 53 (안국동 148)</address>
             <div class="question">
-                <address>일반문의전화 1522-2295</address>
-                <address>홍보 취재문의 02-3210-4683</address>
+                <address class="tel">일반문의전화 1522-2295</address>
+                <address class="tel2">홍보 취재문의 02-3210-4683</address>
             </div>
             <div class="copyright">
                 <p>&copy;2020 Korea Cultural Heritage Foundation, All Rights Reserved.</p>

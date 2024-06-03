@@ -285,6 +285,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .schedule .schedule-txt .schedule-box .sch {
+    height: 100%;
     flex-direction: column;
     width: 100%;
   }
@@ -297,7 +298,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .schedule .schedule-txt .schedule-box .sch h2 {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 #explain .explain-box .schedule .schedule-txt .schedule-box .sch p {
@@ -306,7 +307,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .schedule .schedule-txt .schedule-box .sch p {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 #explain .explain-box .schedule .schedule-txt .schedule-box .sch small {
@@ -317,7 +318,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .schedule .schedule-txt .schedule-box .sch small {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 #explain .explain-box .schedule .schedule-txt .schedule-box .sch:nth-child(4) {
@@ -338,7 +339,7 @@
 @media (min-width: 1024px) {
   #explain .explain-box .schedule .schedule-txt .schedule-box .arrow-right-icon {
     display: block;
-    padding-top: 7%;
+    padding-top: 5%;
     margin: 0 27px;
   }
 }
@@ -350,7 +351,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .schedule .schedule-txt .sch-dsce {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 #explain .explain-box .active {
@@ -408,7 +409,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .active .active-txt .active-box .act h2 {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 #explain .explain-box .active .active-txt .active-box .act p {
@@ -418,7 +419,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .active .active-txt .active-box .act p {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 #explain .explain-box .active .active-txt .active-box .act:nth-child(4) {
@@ -439,7 +440,7 @@
 @media (min-width: 1024px) {
   #explain .explain-box .active .active-txt .arrow-right-icon {
     display: block;
-    padding-top: 7%;
+    padding-top: 4%;
     margin: 0 27px;
   }
 }
@@ -451,7 +452,7 @@
 }
 @media (min-width: 1024px) {
   #explain .explain-box .active .active-txt .where {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 #explain .explain-box .benefit {

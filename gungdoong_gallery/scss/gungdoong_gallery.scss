@@ -80,7 +80,13 @@
         
 
         .history-img1, .history-img2, .history-img3, .history-img4, .history-img5, .history-img6, .history-img7, .history-img8, .history-img9, .history-img10 { 
+            cursor: pointer;
+            opacity: 0.7;
             position: relative;
+            &:hover {
+                opacity: 1;
+                scale: 1;
+            }
             .history-txt {
                 display: none;
                 @include responsive(large-screens) {
