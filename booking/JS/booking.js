@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
     const posters = document.querySelectorAll('.poster li');
     const descriptions = document.querySelectorAll('.program-desc');
-    
+
     posters.forEach((poster, index) => {
         poster.addEventListener('click', () => {
             // Remove selected class from all posters
             posters.forEach(p => p.classList.remove('selected'));
             // Add selected class to clicked poster
-                    poster.classList.add('selected');
+            poster.classList.add('selected');
 
             // Hide all descriptions
-                    descriptions.forEach(desc => desc.classList.remove('selected'));
-                    // Show the description that corresponds to the clicked poster
+            descriptions.forEach(desc => desc.classList.remove('selected'));
+            // Show the description that corresponds to the clicked poster
             document.getElementById(`desc${index + 1}`).classList.add('selected');
 
             // Reorder the posters for mobile view
