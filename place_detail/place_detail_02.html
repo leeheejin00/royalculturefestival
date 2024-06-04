@@ -157,10 +157,33 @@
                 </div><!-- lnb -->
             </section><!-- title -->
 
-            <section class="image">
-                <img src="./images/changduk01.jpg" alt="창덕궁 메인이미지" class="main-image">
+            <section class="gallery">
+                <ul id="slide">
+                    <li><img src="./images/cd_main.jpg" alt=""></li>
+                    <li><img src="./images/cd1.jpg" alt=""></li>
+                    <li><img src="./images/cd2.jpg" alt=""></li>
+                    <li><img src="./images/cd3.jpg" alt=""></li>
+                    <li><img src="./images/cd4.jpg" alt=""></li>
+                </ul>
                 <!-- 갤러리버튼 -->
             </section><!-- image -->
+            <script src="js/jquery.js"></script>
+            <script>
+                function auto() {
+                    $('#slide').stop().animate({left: '-100%'}, 500, function() {
+                        $('#slide').append($('#slide li:first-child')).css({left: 0});
+                    });
+                }
+        
+                let timer = setInterval(auto, 3000);
+        
+                $('.gallery').on('mouseover', function() {
+                    clearInterval(timer);
+                })
+                $('.gallery').on('mouseleave', function() {
+                    timer = setInterval(auto, 3000);
+                })
+            </script>
 
             <section class="time">
                 <div class="title">

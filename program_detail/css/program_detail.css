@@ -206,6 +206,7 @@ section.detail {
   position: relative;
   height: 600px;
   overflow: hidden;
+  transition: height 0.3s ease;
 }
 section.detail div.title {
   width: 56px;
@@ -227,6 +228,7 @@ section.detail img {
   width: 100%;
 }
 section.detail .more-btn {
+  cursor: pointer;
   height: 100px;
   width: 100%;
   position: absolute;
@@ -246,9 +248,15 @@ section.detail .more-btn img {
   margin: 0 auto;
   width: 24px;
 }
+section.detail.expanded {
+  height: auto;
+}
 @media (min-width: 1024px) {
   section.detail {
     height: 1400px;
+  }
+  section.detail.expanded {
+    height: auto;
   }
 }
 

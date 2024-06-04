@@ -234,7 +234,6 @@ header .logo-icon .search-menu .search-input {
   }
 }
 header .side-menu {
-  background: url(../images/header_back.png) no-repeat;
   position: fixed;
   width: 45%;
   top: 0;
@@ -650,30 +649,30 @@ header .logo-icon .search-menu .menu-toggle-btn span {
   }
 }
 header .side-menu {
-  background: url(../images/header_back2.png) no-repeat;
   position: fixed;
   width: 45%;
   top: 0;
   right: -45%;
-  background-color: white;
-  opacity: 90%;
+  background-color: #2f2411;
   height: 100%;
   z-index: 1;
   transition: right 0.3s ease-in-out;
 }
 header .side-menu .language-login {
+  width: 80%;
   display: flex;
   margin-top: 125px;
   margin-left: 5px;
   margin-bottom: 10px;
 }
 header .side-menu .language-login .language {
+  width: 40%;
   text-align: center;
   cursor: pointer;
   padding: 2px;
   display: flex;
   align-items: center;
-  background-color: #2f2411;
+  background-color: white;
   margin-left: 10%;
   border-radius: 5px;
   margin-left: 15px;
@@ -688,32 +687,34 @@ header .side-menu .language-login .language:hover #languageToggle2 {
   display: block;
 }
 header .side-menu .language-login .language a {
-  color: white;
+  color: #2f2411;
   font-size: 10px;
   font-family: "Pretendard-Regular";
   text-align: center;
 }
 header .side-menu .language-login .language a img {
   padding-left: 5px;
-  width: 55%;
+  width: 80%;
 }
 header .side-menu .language-login .login {
-  text-align: center;
+  width: 40%;
   cursor: pointer;
   display: flex;
   align-items: center;
-  background-color: #2f2411;
+  background-color: white;
   border-radius: 5px;
-  margin-left: 5px;
+  padding: 0;
 }
 header .side-menu .language-login .login a {
-  color: white;
+  color: #2f2411;
   font-size: 10px;
+  margin-right: 20%;
   font-family: "Pretendard-Regular";
 }
-header .side-menu .language-login .login a img {
-  padding-left: 5px;
-  width: 55%;
+header .side-menu .language-login .login a .loginimg {
+  width: 75%;
+  margin: 0;
+  padding: 0;
 }
 header .side-menu .side-nav {
   padding-left: 10px;
@@ -722,7 +723,7 @@ header .side-menu .side-nav {
 header .side-menu .side-nav .gnb li a {
   display: flex;
   align-items: baseline;
-  color: #2f2411;
+  color: white;
   padding: 10px;
   text-decoration: none;
   font-size: 18px;
@@ -738,7 +739,7 @@ header .side-menu .side-nav .gnb li a img {
 }
 header .side-menu .side-nav .gnb li ul li a {
   font-size: 14px;
-  color: #7e7e7e;
+  color: #acacac;
   font-family: "Pretendard-Regular";
   z-index: 2000;
 }
