@@ -176,58 +176,116 @@ section.title .filter img {
 section.popular {
   margin-bottom: 72px;
 }
-section.popular .section-name {
-  display: none;
-  font-size: 16px;
-  margin-bottom: 40px;
-}
 section.popular .poster {
-  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-}
-section.popular .poster .selected {
   position: relative;
-  width: 80%;
   margin: 0 auto;
 }
-section.popular .poster img {
+section.popular .poster li {
+  margin: 0 5px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  display: none;
+}
+section.popular .poster li.visible {
+  display: block;
+}
+section.popular .poster li img {
+  transition: all 0.3s ease;
+}
+section.popular .poster li.selected img {
+  width: 250px;
+  opacity: 1;
+}
+section.popular .poster li:not(.selected) img {
+  width: 200px;
+  opacity: 0.5;
+}
+section.popular .slide-box {
+  margin: 25px 35% 16px;
+  justify-content: space-between;
+  display: flex;
+}
+section.popular .slide-box div {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #ccc;
+}
+section.popular .slide-box .selected {
+  width: 32px;
+}
+section.popular .program-desc-box {
+  display: flex;
   width: 100%;
-  margin: 0 auto 16px;
+  justify-content: center;
 }
-section.popular .poster .program1 {
-  position: absolute;
-  left: -260px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-section.popular .poster .program1 img {
-  width: 280px;
-  opacity: 0.5;
-}
-section.popular .poster .program1 .program-desc {
+section.popular .program-desc-box .program-desc {
+  width: 350px;
+  height: auto;
+  margin: 0 32px;
+  border-radius: 8px;
+  background-color: #eaeaea;
+  overflow: hidden;
   display: none;
 }
-section.popular .poster .program3 {
-  position: absolute;
-  right: -260px;
-  top: 50%;
-  transform: translateY(-50%);
+section.popular .program-desc-box .program-desc.selected {
+  display: block;
 }
-section.popular .poster .program3 img {
-  width: 280px;
-  opacity: 0.5;
+section.popular .program-desc-box .program-desc .title {
+  margin: 0 auto;
+  padding: 24px 24px 8px;
+  display: flex;
+  justify-content: space-between;
 }
-section.popular .poster .program3 .program-desc {
-  display: none;
+section.popular .program-desc-box .program-desc .title .name {
+  font-size: 16px;
+  font-weight: bold;
 }
-section.popular .poster .program4, section.popular .poster .program5 {
-  display: none;
+section.popular .program-desc-box .program-desc .title .tag {
+  margin-top: -4px;
 }
-@media (min-width: 1024px) {
-  section.popular .poster {
-    width: 100%;
-    display: none;
-  }
+section.popular .program-desc-box .program-desc .title .tag span {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  background-color: #ffeb3b;
+}
+section.popular .program-desc-box .program-desc .place-period {
+  padding: 0 0 24px 24px;
+  display: flex;
+  color: #333;
+}
+section.popular .program-desc-box .program-desc .place-period p {
+  margin-right: 16px;
+  font-size: 13px;
+  color: #999;
+}
+section.popular .program-desc-box .program-desc .detail {
+  padding: 0 24px 40px;
+}
+section.popular .program-desc-box .program-desc .detail p {
+  font-size: 14px;
+}
+section.popular .program-desc-box .program-desc .button {
+  padding-bottom: 40px;
+  margin: 0 24px;
+  display: flex;
+  justify-content: space-between;
+}
+section.popular .program-desc-box .program-desc .button button {
+  display: inline-block;
+  width: 48%;
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 12px;
+  color: white;
+  background-color: #795548;
 }
 section.popular .poster-web-container {
   overflow: hidden;
@@ -262,9 +320,7 @@ section.popular .poster-web-container .poster-web {
   }
   section.popular .poster-web-container .poster-web li .book-see .book, section.popular .poster-web-container .poster-web li .book-see .see {
     position: absolute;
-    bottom: 10px;
-    left: 50%;
-    bottom: 150px;
+    bottom: 15px;
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -277,14 +333,13 @@ section.popular .poster-web-container .poster-web {
     border-radius: 5px;
   }
   section.popular .poster-web-container .poster-web li .book-see .book {
-    left: 68%;
-    margin-left: 2px;
+    left: 65%;
   }
   section.popular .poster-web-container .poster-web li .book-see .book:hover {
     color: #ffbe0f;
   }
   section.popular .poster-web-container .poster-web li .book-see .see {
-    left: 32%;
+    left: 24%;
   }
   section.popular .poster-web-container .poster-web li .book-see .see:hover {
     color: #ffbe0f;
@@ -307,7 +362,7 @@ section.popular .poster-web-container .poster-web {
   }
 }
 section.popular .slide-box {
-  margin: 0 35% 16px;
+  margin: 25px 35% 16px;
   justify-content: space-between;
   display: flex;
 }
@@ -322,67 +377,6 @@ section.popular .slide-box .selected {
 }
 @media (min-width: 1024px) {
   section.popular .slide-box {
-    display: none;
-  }
-}
-section.popular .program-desc {
-  margin: 0 16px;
-  border-radius: 8px;
-  background-color: #eaeaea;
-}
-section.popular .program-desc .title {
-  margin: 0 auto;
-  padding: 24px 24px 8px;
-  display: flex;
-  justify-content: space-between;
-}
-section.popular .program-desc .title .name {
-  font-size: 16px;
-  font-weight: bold;
-}
-section.popular .program-desc .title .tag {
-  margin-top: -6px;
-}
-section.popular .program-desc .title .tag span {
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 10px;
-  background-color: #ffbe0f;
-}
-section.popular .program-desc .place-period {
-  padding: 0 0 24px 24px;
-  display: flex;
-  color: #333333;
-}
-section.popular .program-desc .place-period p {
-  margin-right: 16px;
-  font-size: 13px;
-  color: #cccccc;
-}
-section.popular .program-desc .detail {
-  padding: 0 24px 40px;
-}
-section.popular .program-desc .detail p {
-  font-size: 14px;
-}
-section.popular .program-desc .button {
-  padding-bottom: 40px;
-  margin: 0 24px;
-  display: flex;
-  justify-content: space-between;
-}
-section.popular .program-desc .button button {
-  display: inline-block;
-  width: 48%;
-  padding: 8px;
-  border: 0;
-  border-radius: 8px;
-  font-size: 12px;
-  color: white;
-  background-color: #2f2411;
-}
-@media (min-width: 1024px) {
-  section.popular .program-desc {
     display: none;
   }
 }
@@ -423,58 +417,63 @@ section.keyword > .hashtag .selected {
   background-color: #2f2411;
 }
 
-section.keyword > .program {
+section.keyword > .program-box1, .program-box2, .program-box3, .program-box4, .program-box5, .program-box6 {
+  cursor: pointer;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 72px;
 }
-section.keyword > .program div {
+section.keyword > .program-box1 div, .program-box2 div, .program-box3 div, .program-box4 div, .program-box5 div, .program-box6 div {
   position: relative;
   width: 48%;
+  height: auto;
   margin-bottom: 16px;
   border-radius: 8px;
 }
-section.keyword > .program div img {
+section.keyword > .program-box1 div img, .program-box2 div img, .program-box3 div img, .program-box4 div img, .program-box5 div img, .program-box6 div img {
   width: 100%;
+  height: 100%;
   border-radius: 8px;
 }
-section.keyword > .program div .desc {
+section.keyword > .program-box1 div .desc, .program-box2 div .desc, .program-box3 div .desc, .program-box4 div .desc, .program-box5 div .desc, .program-box6 div .desc {
   margin-bottom: 0;
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 50%;
+  height: 45%;
   border-radius: 0 0 8px 8px;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.5019607843);
 }
 @media (min-width: 1024px) {
-  section.keyword > .program div .desc {
+  section.keyword > .program-box1 div .desc, .program-box2 div .desc, .program-box3 div .desc, .program-box4 div .desc, .program-box5 div .desc, .program-box6 div .desc {
     background-color: rgba(0, 0, 0, 0.5960784314);
     height: 35%;
   }
 }
-section.keyword > .program div .desc .title {
+section.keyword > .program-box1 div .desc .title, .program-box2 div .desc .title, .program-box3 div .desc .title, .program-box4 div .desc .title, .program-box5 div .desc .title, .program-box6 div .desc .title {
   margin-top: 8px;
   font-size: 14px;
   text-align: center;
   letter-spacing: -1px;
+  font-family: "Pretendard-Regular";
 }
 @media (min-width: 1024px) {
-  section.keyword > .program div .desc .title {
+  section.keyword > .program-box1 div .desc .title, .program-box2 div .desc .title, .program-box3 div .desc .title, .program-box4 div .desc .title, .program-box5 div .desc .title, .program-box6 div .desc .title {
+    display: none;
     font-size: 18px;
   }
 }
-section.keyword > .program div .desc .booking {
+section.keyword > .program-box1 div .desc .booking, .program-box2 div .desc .booking, .program-box3 div .desc .booking, .program-box4 div .desc .booking, .program-box5 div .desc .booking, .program-box6 div .desc .booking {
   display: none;
 }
-section.keyword > .program div .desc .period {
+section.keyword > .program-box1 div .desc .period, .program-box2 div .desc .period, .program-box3 div .desc .period, .program-box4 div .desc .period, .program-box5 div .desc .period, .program-box6 div .desc .period {
   font-size: 12px;
   text-align: center;
 }
 @media (min-width: 1024px) {
-  section.keyword > .program div .desc .period {
+  section.keyword > .program-box1 div .desc .period, .program-box2 div .desc .period, .program-box3 div .desc .period, .program-box4 div .desc .period, .program-box5 div .desc .period, .program-box6 div .desc .period {
     position: absolute;
     bottom: 16px;
     left: 16px;
@@ -482,11 +481,11 @@ section.keyword > .program div .desc .period {
     font-size: 16px;
   }
 }
-section.keyword > .program div .desc .place {
+section.keyword > .program-box1 div .desc .place, .program-box2 div .desc .place, .program-box3 div .desc .place, .program-box4 div .desc .place, .program-box5 div .desc .place, .program-box6 div .desc .place {
   display: none;
 }
 @media (min-width: 1024px) {
-  section.keyword > .program div .desc .place {
+  section.keyword > .program-box1 div .desc .place, .program-box2 div .desc .place, .program-box3 div .desc .place, .program-box4 div .desc .place, .program-box5 div .desc .place, .program-box6 div .desc .place {
     display: block;
     position: absolute;
     bottom: 16px;
@@ -494,8 +493,36 @@ section.keyword > .program div .desc .place {
     font-size: 16px;
   }
 }
+section.keyword > .program-box1 div:hover .desc, .program-box2 div:hover .desc, .program-box3 div:hover .desc, .program-box4 div:hover .desc, .program-box5 div:hover .desc, .program-box6 div:hover .desc {
+  height: 100%;
+  border-radius: 8px;
+}
+section.keyword > .program-box1 div:hover .desc .title, .program-box2 div:hover .desc .title, .program-box3 div:hover .desc .title, .program-box4 div:hover .desc .title, .program-box5 div:hover .desc .title, .program-box6 div:hover .desc .title {
+  padding-top: 17px;
+}
 @media (min-width: 1024px) {
-  section.keyword > .program div {
+  section.keyword > .program-box1 div:hover .desc .title, .program-box2 div:hover .desc .title, .program-box3 div:hover .desc .title, .program-box4 div:hover .desc .title, .program-box5 div:hover .desc .title, .program-box6 div:hover .desc .title {
+    display: block;
+    padding-top: 20px;
+  }
+}
+section.keyword > .program-box1 div:hover .desc .booking, .program-box2 div:hover .desc .booking, .program-box3 div:hover .desc .booking, .program-box4 div:hover .desc .booking, .program-box5 div:hover .desc .booking, .program-box6 div:hover .desc .booking {
+  display: block;
+  text-align: center;
+  color: #ffbe0f;
+  font-size: 18px;
+  font-family: "Pretendard-Bold";
+}
+@media (min-width: 1024px) {
+  section.keyword > .program-box1 div:hover .desc .booking, .program-box2 div:hover .desc .booking, .program-box3 div:hover .desc .booking, .program-box4 div:hover .desc .booking, .program-box5 div:hover .desc .booking, .program-box6 div:hover .desc .booking {
+    display: block;
+    padding-top: 22px;
+    font-size: 32px;
+    font-family: "Pretendard-Bold";
+  }
+}
+@media (min-width: 1024px) {
+  section.keyword > .program-box1 div, .program-box2 div, .program-box3 div, .program-box4 div, .program-box5 div, .program-box6 div {
     width: 24%;
   }
 }

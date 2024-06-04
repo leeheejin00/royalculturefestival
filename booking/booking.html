@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../..css/reset.css">
     <link rel="stylesheet" href="../css/header_footer.css">
     <link rel="stylesheet" href="./css/booking.css">
+    <script src="./js/booking.js"></script>
     <script>
         function openPopup() {
           // 새 창을 열고 URL과 창의 속성을 설정합니다.
@@ -100,27 +101,147 @@
         </div> <!-- container -->
         
         <section class="popular">
-            <h4 class="section-name">인기 프로그램</h4>
             <ul class="poster">
-                <li class="program1">
+                <li class="program1" onclick="selectItem(0)">
                     <img src="../program_detail/images/star_pst0319.jpg" alt="경복궁 별빛야행">
                 </li>
-
-                <li class="program2 selected">
+                <li class="program2" onclick="selectItem(1)">
                     <img src="./images/poster1.jpg" alt="경복궁 생과방">
-                </li><!-- program2 -->
-
-                <li class="program3">
+                </li>
+                <li class="program3" onclick="selectItem(2)">
                     <img src="../program_detail/images/sgb_main_720.jpg" alt="밤의 석조전">
                 </li>
-                <li class="program4">
+                <li class="program4" onclick="selectItem(3)">
                     <img src="../program_detail/images/child_main_720.jpg" alt="궁중직업실록">
                 </li>
-                <li class="program5">
+                <li class="program5" onclick="selectItem(4)">
                     <img src="../program_detail/images/morning_main_720.jpg" alt="아침 궁을 깨우다">
                 </li>
-            </ul><!-- poster -->
+            </ul>
+        
+            <div class="slide-box">
+                <div>&nbsp;</div>
+                <div class="selected">&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+                <div>&nbsp;</div>
+            </div>
+        
+            <div class="program-desc-box">
+                <div id="desc1" class="program-desc">
+                    <div class="title">
+                        <p class="name">경복궁 별빛야행</p>
+                        <p class="tag">
+                            <span class="ongoing">진행</span>
+                            <span class="experience">체험</span>
+                            <span class="book">사전예약</span>
+                        </p>
+                    </div>
+                    <div class="place-period">
+                        <p class="place">경복궁 별빛야행</p>
+                        <p class="period">2024.04.17 ~ 2024.06.24</p>
+                    </div>
+                    <div class="detail">
+                        <p>은은한 별빛 아래 경복궁 소주방에서 국악 공연을 즐기며 왕과 왕비의 최고의 일상식이었던 도슭 수라상을 맛보세요. 별빛 가득한 4월의 밤, 경복궁의 문이 열립니다.<br> <br>
+                        경복궁 별빛야행은 장고, 집옥재와 팔우정, 건청궁을 거치며 궁궐의 옛 이야기를 마주하고 쏟아지는 별빛아래에서 향원정의 정취를 느껴볼 수 있는 야간 체험 프로그램입니다.</p>
+                    </div>
+                    <div class="button">
+                        <button class="go-page">자세히보기</button>
+                        <button class="book" onclick="openPopup()">예매하기</button>
+                    </div>
+                </div>
 
+                <div id="desc2" class="program-desc selected">
+                    <div class="title">
+                        <p class="name">경복궁 생과방</p>
+                        <p class="tag">
+                            <span class="ongoing">진행</span>
+                            <span class="experience">체험</span>
+                            <span class="book">사전예약</span>
+                        </p>
+                    </div>
+                    <div class="place-period">
+                        <p class="place">경복궁 생과방</p>
+                        <p class="period">2024.04.17 ~ 2024.06.24</p>
+                    </div>
+                    <div class="detail">
+                        <p>경복궁 소주방 전각에 위치한 '생과방'은 궁중의 육처소 가운데 하나이며, '국왕과 왕비'의 후식과 별식을 준비하던 곳으로 '생물방' 혹은 '생것방'이라고도 불렸습니다. <br> <br> 경복궁 생과방 프로그램은 조선왕조실록의 내용을 토대로 실제 임금이 드셨던 궁중병과와 궁중약차를 오늘날에도 즐길 수 있도록 구성된 체험 프로그램입니다.</p>
+                    </div>
+                    <div class="button">
+                        <button class="go-page">자세히보기</button>
+                        <button class="book" onclick="openPopup()">예매하기</button>
+                    </div>
+                </div>
+
+                <div id="desc3" class="program-desc">
+                    <div class="title">
+                        <p class="name">밤의 석조전</p>
+                        <p class="tag">
+                            <span class="ongoing">진행</span>
+                            <span class="experience">체험</span>
+                            <span class="book">사전예약</span>
+                        </p>
+                    </div>
+                    <div class="place-period">
+                        <p class="place">밤의 석조전</p>
+                        <p class="period">2024.04.17 ~ 2024.06.24</p>
+                    </div>
+                    <div class="detail">
+                        <p>석조전에 담긴 황실의 일상을 엿보고 석조전 테라스에 준비된 가배(커피)와 서양 디저트를 맛보며, 귀빈을 맞이하던 접견실에서 뮤지컬 공연까지 관람해 보세요!<br> <br>
+                        밤의 석조전은 전문 해설사와 함께하는 석조전 야간 탐방 및 테라스 카페 체험, 귀빈을 맞이했던 접견실을 배경으로 하는 대한제국 배경 창작 뮤지컬 공연이 결합된 야간 체험 프로그램입니다.</p>
+                    </div>
+                    <div class="button">
+                        <button class="go-page">자세히보기</button>
+                        <button class="book" onclick="openPopup()">예매하기</button>
+                    </div>
+                </div>
+
+                <div id="desc4" class="program-desc">
+                    <div class="title">
+                        <p class="name">궁중직업실록</p>
+                        <p class="tag">
+                            <span class="ongoing">진행</span>
+                            <span class="experience">체험</span>
+                            <span class="book">사전예약</span>
+                        </p>
+                    </div>
+                    <div class="place-period">
+                        <p class="place">궁중직업실록</p>
+                        <p class="period">2024.04.17 ~ 2024.06.24</p>
+                    </div>
+                    <div class="detail">
+                        <p>푸르른 봄, 가족 화합의 상징 창경궁에서 특별한 활동지와 함께 궁궐 여기저기를 누비며 우리 삶 속에 한걸음 더 가까워진 역사의 가치와 의미를 되새겨 보세요.<br> <br>
+                        궁중직업실록은 과거 궁궐의 다양한 직업을 직접 경험하며, 선조들의 지혜화 삶의 방식을 알아가는 어린이 대상 프로그램입니다.</p>
+                    </div>
+                    <div class="button">
+                        <button class="go-page">자세히보기</button>
+                        <button class="book" onclick="openPopup()">예매하기</button>
+                    </div>
+                </div>
+
+                <div id="desc5" class="program-desc">
+                    <div class="title">
+                        <p class="name">아침 궁을 깨우다</p>
+                        <p class="tag">
+                            <span class="ongoing">진행</span>
+                            <span class="experience">체험</span>
+                            <span class="book">사전예약</span>
+                        </p>
+                    </div>
+                    <div class="place-period">
+                        <p class="place">아침 궁을 깨우다</p>
+                        <p class="period">2024.04.17 ~ 2024.06.24</p>
+                    </div>
+                    <div class="detail">
+                        <p>평소 걸어보지 못했던, 회화나무와 살구, 매화꽃이 예쁘게 물든 창덕궁의 왕과 왕비의 봄날 산책길을 따라 걸으며 그 속에 담긴 이야기를 나눠보세요.<br> <br>
+                        아침 궁을 깨우다는 따스한 봄날, 산책 가이드와 창덕궁 숲길을 천천히 걸어보며 아침 풍경을 감상해 보는 산책 투어 프로그램입니다..</p>
+                    </div>
+                    <div class="button">
+                        <button class="go-page">자세히보기</button>
+                        <button class="book" onclick="openPopup()">예매하기</button>
+                    </div>
+                </div>
+            </div>
             <div class="poster-web-container">
                 <ul class="poster-web">
                     <li class="program1">
@@ -197,7 +318,7 @@
                     </li>
                     <li class="program9">
                         <a href="../program_detail/program_detail_morning.html">
-                            <img src="./images/poster5.jpg" alt="고궁음악회">
+                            <img src="./images/100_main_720.jpg" alt="고궁음악회">
                             <div class="book-see">
                                 <a href="" class="book">예매하기</a>
                                 <a href="" class="see">자세히보기</p>
@@ -257,73 +378,187 @@
                     });
                 });
                 </script>
-
-            <div class="slide-box">
-                <div>&nbsp;</div>
-                <div class="selected">&nbsp;</div>
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
-            </div>
-
-            <div class="program-desc">
-                <div class="title">
-                    <p class="name">경복궁 생과방</p>
-                    <p class="tag">
-                        <span class="ongoing">진행</span>
-                        <span class="experience">체험</span>
-                        <span class="book">사전예약</span>
-                    </p>
-                </div>
-
-                <div class="place-period">
-                    <p class="place">경복궁 생과방</p>
-                    <p class="period">2024.04.17 ~ 2024.06.24</p>
-                </div>
-
-                <div class="detail">
-                    <p>
-                        경복궁 소주방 전각에 위치한 '생과방'은 
-                        궁중의 육처소 가운데 하나이며,
-                        '국왕과 왕비'의 후식과 별식을 준비하던 곳으로
-                        '생물방' 혹은 '생것방'이라고도 불렸습니다. <br> <br>
-                        
-                        경복궁 생과방 프로그램은 조선왕조실록의 내용을 토대로
-                        실제 임금이 드셨던 궁중병과와 궁중약차를
-                        오늘날에도 즐길 수 있도록 구성된 체험 프로그램입니다.
-                    </p>
-                </div>
-
-                <div class="button">
-                    <button class="go-page">자세히보기</button>
-                    <button class="book" onclick="openPopup()">예매하기</button>
-                </div>
-            </div><!-- program-desc-->
         </section><!-- popular -->
         <div class="container">
             <section class="keyword">
                 <h4 class="section-name">키워드별 추천</h4>
                 <div class="hashtag">
-                    <div class="monthly">#5월_추천</div>
-                    <div class="parents">#부모님과_함께</div>
-                    <div class="kids">#아이와_함께</div>
-                    <div class="sold-out">#매진임박</div>
-                    <div class="night selected selected">#야간관람</div>
-                    <div class="special">#이색체험</div>
-                </div><!-- hashtag -->
-    
-                <div class="program">
-                    <div class="program01">
-                        <img src="./images/gb-pg1.jpg" alt="경복궁 별빛야행">
+                    <div class="monthly" data-target="program-box1">#5월_추천</div>
+                    <div class="parents" data-target="program-box2">#부모님과_함께</div>
+                    <div class="kids" data-target="program-box3">#아이와_함께</div>
+                    <div class="sold-out" data-target="program-box4">#매진임박</div>
+                    <div class="night" data-target="program-box5">#야간관람</div>
+                    <div class="special" data-target="program-box6">#이색체험</div>
+                </div>
+                
+                <div class="program-box program-box1">
+                    <div class="program01" onclick="window.location.href='../program_detail/program_detail_sj.html'">
+                        <img src="./images/night_2.jpg" alt="밤의 석조전">
                         <div class="desc">
-                            <p class="title">2024 경복궁 별빛야행</p>
+                            <p class="title">2024 덕수궁 밤의석조전</p>
                             <p class="booking">예매하기</p>
-                            <p class="period">04.03 ~ 05.04</p>
+                            <p class="period">04.16 ~ 05.25</p>
+                            <p class="place">덕수궁 석조전</p>
+                        </div>
+                    </div>
+                    <div class="program02" onclick="window.location.href='../program_detail/program_detail_moon.html'">
+                        <img src="./images/may_2.jpg" alt="창덕궁 달빛기행">
+                        <div class="desc">
+                            <p class="title">창덕궁 달빛기행</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">4.11 ~ 6.2</p>
+                            <p class="place">창덕궁 일원</p>
+                        </div>
+                    </div>
+                    <div class="program03" onclick="window.location.href='../program_detail/program_detail_sgb.html'">
+                        <img src="./images/may_3.jpg" alt="경복궁 생과방">
+                        <div class="desc">
+                            <p class="title">경복궁 생과방</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">4.17 ~ 6.24</p>
                             <p class="place">경복궁 일원</p>
                         </div>
                     </div>
-                    <div class="program02">
-                        <img src="./images/ds-pg2.jpg" alt="밤의 석조전">
+                    <div class="program04" onclick="window.location.href='../program_detail/program_detail_star.html'">
+                        <img src="./images/may_4.jpg" alt="창경궁 물빛연화">
+                        <div class="desc">
+                            <p class="title">수라간 시식공감</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">5.22 ~ 5.20</p>
+                            <p class="place">경복궁 소주방 권역</p>
+                        </div>
+                    </div>
+                </div><!-- program -->
+
+                <div class="program-box program-box2">
+                    <div class="program01" onclick="window.location.href='../program_detail/program_detail_morning.html'">
+                        <img src="./images/par_1.jpg" alt="아침궁">
+                        <div class="desc">
+                            <p class="title">아침 궁을 깨우다</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">4.29 ~ 5.3</p>
+                            <p class="place">창덕궁 일원</p>
+                        </div>
+                    </div>
+                    <div class="program02" onclick="window.location.href='../program_detail/program_detail_sgb.html'">
+                        <img src="./images/may_3.jpg" alt="경복궁 생과방">
+                        <div class="desc">
+                            <p class="title">경복궁 생과방</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">4.17 ~ 6.24</p>
+                            <p class="place">경복궁 일원</p>
+                        </div>
+                    </div>
+                    <div class="program03" onclick="window.location.href='../program_detail/program_detail_moon.html'">
+                        <img src="./images/par_3.jpg" alt="창덕궁 달빛기행">
+                        <div class="desc">
+                            <p class="title">창경궁 물빛연화</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">04.27 ~ 05.05</p>
+                            <p class="place">창경궁 춘당지</p>
+                        </div>
+                    </div>
+                    <div class="program04" onclick="window.location.href='../program_detail/program_detail_child.html'">
+                        <img src="./images/par_4.jpg" alt="고궁음악회">
+                        <div class="desc">
+                            <p class="title">고궁음악회</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">5.4 ~ 5.5</p>
+                            <p class="place">경복궁 근정전</p>
+                        </div>
+                    </div>
+                </div><!-- program -->
+
+                <div class="program-box program-box3" >
+                    <div class="program01" onclick="window.location.href='../program_detail/program_detail_child.html'">
+                        <img src="./images/kids_1.jpg" alt="궁중직업실록">
+                        <div class="desc">
+                            <p class="title">궁중직업실록</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">5.1 ~ 5.5</p>
+                            <p class="place">창경궁 일원</p>
+                        </div>
+                    </div>
+                    <div class="program02" onclick="window.location.href='../program_detail/program_detail_child.html'">
+                        <img src="./images/kids_2.jpg" alt="전통 화장품">
+                        <div class="desc">
+                            <p class="title">전통화장품 만들기 체험</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">4.27 ~ 5.4</p>
+                            <p class="place">덕수궁 돈덕전</p>
+                        </div>
+                    </div>
+                    <div class="program03" onclick="window.location.href='../program_detail/program_detail_child.html'">
+                        <img src="./images/kids_3.jpg" alt="고궁뮤지컬">
+                        <div class="desc">
+                            <p class="title">고궁뮤지컬 - 세종,1446</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">4.28 ~ 4.30</p>
+                            <p class="place">경복궁 근정전</p>
+                        </div>
+                    </div>
+                    <div class="program04" onclick="window.location.href='../program_detail/program_detail_child.html'">
+                        <img src="./images/kids_4.jpg" alt="과거시험">
+                        <div class="desc">
+                            <p class="title">어린이 과거시험</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">5.4~5.5</p>
+                            <p class="place">경복궁 근정전</p>
+                        </div>
+                    </div>
+                </div><!-- program -->
+
+                <div class="program-box program-box4">
+                    <div class="program01" onclick="window.location.href='../program_detail/program_detail_child.html'">
+                        <img src="./images/kids_3.jpg" alt="고궁뮤지컬">
+                        <div class="desc">
+                            <p class="title">고궁뮤지컬 - 세종,1446</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">4.28 ~ 4.30</p>
+                            <p class="place">경복궁 근정전</p>
+                        </div>
+                    </div>
+                    <div class="program02" onclick="window.location.href='../program_detail/program_detail_star.html'">
+                        <img src="./images/soldout_2.jpg" alt="경복궁 별빛야행">
+                        <div class="desc">
+                            <p class="title">2024 덕수궁 밤의석조전</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">4.3 ~ 5.4</p>
+                            <p class="place">경복궁 일원</p>
+                        </div>
+                    </div>
+                    <div class="program03" onclick="window.location.href='../program_detail/program_detail_sj.html'">
+                        <img src="./images/soldout_3.jpg" alt="종묘 묘현례">
+                        <div class="desc">
+                            <p class="title">종묘 묘현례 체험</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">4.27 ~ 5.3</p>
+                            <p class="place">종묘 영녕전</p>
+                        </div>
+                    </div>
+                    <div class="program04" onclick="window.location.href='../program_detail/program_detail_child.html'">
+                        <img src="./images/par_4.jpg" alt="고궁음악회">
+                        <div class="desc">
+                            <p class="title">고궁음악회</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">5.4 ~ 5.5</p>
+                            <p class="place">경복궁 근정전</p>
+                        </div>
+                    </div>
+                </div><!-- program -->
+
+                <div class="program-box program-box5">
+                    <div class="program01" onclick="window.location.href='../program_detail/program_detail_star.html'">
+                        <img src="./images/soldout_2.jpg" alt="별빛야행">
+                        <div class="desc">
+                            <p class="title">2024 경복궁 별빛야행</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">4.03 ~ 5.4</p>
+                            <p class="place">경복궁 일원</p>
+                        </div>
+                    </div>
+                    <div class="program02" onclick="window.location.href='../program_detail/program_detail_sj.html'">
+                        <img src="./images/night_2.jpg" alt="밤의 석조전">
                         <div class="desc">
                             <p class="title">2024 덕수궁 밤의석조전</p>
                             <p class="booking">예매하기</p>
@@ -332,7 +567,7 @@
                         </div>
                     </div>
                     <div class="program03">
-                        <img src="./images/cd-pg3.jpg" alt="창덕궁 달빛기행">
+                        <img src="./images/may_2.jpg" alt="창덕궁 달빛기행">
                         <div class="desc">
                             <p class="title">2024 창덕궁 달빛기행</p>
                             <p class="booking">예매하기</p>
@@ -340,8 +575,8 @@
                             <p class="place">창덕궁 일원</p>
                         </div>
                     </div>
-                    <div class="program04">
-                        <img src="./images/cg-pg4.jpg" alt="창경궁 물빛연화">
+                    <div class="program04" onclick="window.location.href='../program_detail/program_detail_star.html'">
+                        <img src="./images/par_3.jpg" alt="창경궁 물빛연화">
                         <div class="desc">
                             <p class="title">2024 창경궁 물빛연화</p>
                             <p class="booking">예매하기</p>
@@ -350,7 +585,80 @@
                         </div>
                     </div>
                 </div><!-- program -->
+
+                <div class="program-box program-box6">
+                    <div class="program01" onclick="window.location.href='../program_detail/program_detail_child.html'">
+                        <img src="./images/kids_2.jpg" alt="전통화장품">
+                        <div class="desc">
+                            <p class="title">전통화장품 만들기 체험</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">4.27 ~ 5.4</p>
+                            <p class="place">덕수궁 돈덕전</p>
+                        </div>
+                    </div>
+                    <div class="program02" onclick="window.location.href='../program_detail/program_detail_child.html'">
+                        <img src="./images/kids_1.jpg" alt="궁중직업실록">
+                        <div class="desc">
+                            <p class="title">궁중직업실록</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">5.1 ~ 5.5</p>
+                            <p class="place">창경궁 일원</p>
+                        </div>
+                    </div>
+                    <div class="program03" onclick="window.location.href='../program_detail/program_detail_moon.html'">
+                        <img src="./images/soldout_3.jpg" alt="창덕궁 달빛기행">
+                        <div class="desc">
+                            <p class="title">종묘 묘현례 체험</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">4.27 ~ 5.3</p>
+                            <p class="place">종묘 영녕전</p>
+                        </div>
+                    </div>
+                    <div class="program04" onclick="window.location.href='../program_detail/program_detail_child.html'">
+                        <img src="./images/may_4.jpg" alt="수라간 시식공감">
+                        <div class="desc">
+                            <p class="title">수라간 시식공감</p>
+                            <p class="booking">예매하기</p>
+                            <p class="period">5.22 ~ 5.20</p>
+                            <p class="place">경복궁 소주방 권역</p>
+                        </div>
+                    </div>
+                </div><!-- program -->
+
             </section><!-- keyword -->
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const hashtags = document.querySelectorAll(".hashtag div");
+                    const programBoxes = document.querySelectorAll(".program-box");
+            
+                    hashtags.forEach(hashtag => {
+                        hashtag.addEventListener("click", function() {
+
+                            hashtags.forEach(tag => tag.classList.remove("selected"));
+
+                            this.classList.add("selected");
+            
+                            programBoxes.forEach(box => {
+                                box.style.display = "none";
+                            });
+            
+                            const targetBox = document.querySelector(`.${this.getAttribute("data-target")}`);
+                            if (targetBox) {
+                                targetBox.style.display = "flex";
+                            }
+                        });
+                    });
+            
+                    programBoxes.forEach((box, index) => {
+                        if (index !== 0) {
+                            box.style.display = "none";
+                        }
+                    });
+                });
+            </script>
+
+
             <section class="place">
                 <h4 class="section-name">장소별 프로그램</h4>
                 <ul class="place-button">

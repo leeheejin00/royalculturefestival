@@ -15,10 +15,15 @@ form .search-box input {
   border-right: 0;
   width: 100%;
   color: black;
+  font-size: 20px;
+  font-family: "Pretendard-Regular";
+}
+form .search-box .value {
+  font-size: 20px;
 }
 form .search-box .search {
   position: absolute;
-  top: -18px;
+  top: -3px;
   left: 93%;
 }
 @media (min-width: 1024px) {
@@ -730,6 +735,7 @@ form .search-box .search img {
 }
 #gallery .gallery-allbox .gallery-box {
   display: flex;
+  overflow: hidden;
   justify-content: flex-start;
   align-items: center;
   position: relative;
@@ -741,26 +747,34 @@ form .search-box .search img {
     overflow: hidden;
   }
 }
-#gallery .gallery-allbox .gallery-box .img-box1, #gallery .gallery-allbox .gallery-box .img-box2, #gallery .gallery-allbox .gallery-box .img-box3, #gallery .gallery-allbox .gallery-box .img-box4, #gallery .gallery-allbox .gallery-box .img-box5, #gallery .gallery-allbox .gallery-box .img-box6 {
+#gallery .gallery-allbox .gallery-box .img-box1, #gallery .gallery-allbox .gallery-box .img-box2, #gallery .gallery-allbox .gallery-box .img-box3, #gallery .gallery-allbox .gallery-box .img-box4, #gallery .gallery-allbox .gallery-box .img-box5, #gallery .gallery-allbox .gallery-box .img-box6, #gallery .gallery-allbox .gallery-box .img-box7, #gallery .gallery-allbox .gallery-box .img-box8, #gallery .gallery-allbox .gallery-box .img-box9, #gallery .gallery-allbox .gallery-box .img-box10, #gallery .gallery-allbox .gallery-box .img-box11, #gallery .gallery-allbox .gallery-box .img-box12 {
   cursor: pointer;
-  width: 15%; /* 6개의 이미지를 균등하게 분할 */
+  overflow: hidden;
+  width: 30%; /* 6개의 이미지를 균등하게 분할 */
+  height: 100%;
   flex: none;
 }
 @media (min-width: 1024px) {
-  #gallery .gallery-allbox .gallery-box .img-box1, #gallery .gallery-allbox .gallery-box .img-box2, #gallery .gallery-allbox .gallery-box .img-box3, #gallery .gallery-allbox .gallery-box .img-box4, #gallery .gallery-allbox .gallery-box .img-box5, #gallery .gallery-allbox .gallery-box .img-box6 {
-    width: 13%;
+  #gallery .gallery-allbox .gallery-box .img-box1, #gallery .gallery-allbox .gallery-box .img-box2, #gallery .gallery-allbox .gallery-box .img-box3, #gallery .gallery-allbox .gallery-box .img-box4, #gallery .gallery-allbox .gallery-box .img-box5, #gallery .gallery-allbox .gallery-box .img-box6, #gallery .gallery-allbox .gallery-box .img-box7, #gallery .gallery-allbox .gallery-box .img-box8, #gallery .gallery-allbox .gallery-box .img-box9, #gallery .gallery-allbox .gallery-box .img-box10, #gallery .gallery-allbox .gallery-box .img-box11, #gallery .gallery-allbox .gallery-box .img-box12 {
+    width: 20%;
   }
 }
-#gallery .gallery-allbox .gallery-box .img-box1 img, #gallery .gallery-allbox .gallery-box .img-box2 img, #gallery .gallery-allbox .gallery-box .img-box3 img, #gallery .gallery-allbox .gallery-box .img-box4 img, #gallery .gallery-allbox .gallery-box .img-box5 img, #gallery .gallery-allbox .gallery-box .img-box6 img {
+#gallery .gallery-allbox .gallery-box .img-box1 img, #gallery .gallery-allbox .gallery-box .img-box2 img, #gallery .gallery-allbox .gallery-box .img-box3 img, #gallery .gallery-allbox .gallery-box .img-box4 img, #gallery .gallery-allbox .gallery-box .img-box5 img, #gallery .gallery-allbox .gallery-box .img-box6 img, #gallery .gallery-allbox .gallery-box .img-box7 img, #gallery .gallery-allbox .gallery-box .img-box8 img, #gallery .gallery-allbox .gallery-box .img-box9 img, #gallery .gallery-allbox .gallery-box .img-box10 img, #gallery .gallery-allbox .gallery-box .img-box11 img, #gallery .gallery-allbox .gallery-box .img-box12 img {
+  overflow: hidden;
   width: 100%;
-  min-width: 100%;
+  height: 200px;
   position: relative;
-  height: 100%;
+  display: block;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
-#gallery .gallery-allbox .gallery-box .img-box1 img:hover, #gallery .gallery-allbox .gallery-box .img-box2 img:hover, #gallery .gallery-allbox .gallery-box .img-box3 img:hover, #gallery .gallery-allbox .gallery-box .img-box4 img:hover, #gallery .gallery-allbox .gallery-box .img-box5 img:hover, #gallery .gallery-allbox .gallery-box .img-box6 img:hover {
+#gallery .gallery-allbox .gallery-box .img-box1 img:hover, #gallery .gallery-allbox .gallery-box .img-box2 img:hover, #gallery .gallery-allbox .gallery-box .img-box3 img:hover, #gallery .gallery-allbox .gallery-box .img-box4 img:hover, #gallery .gallery-allbox .gallery-box .img-box5 img:hover, #gallery .gallery-allbox .gallery-box .img-box6 img:hover, #gallery .gallery-allbox .gallery-box .img-box7 img:hover, #gallery .gallery-allbox .gallery-box .img-box8 img:hover, #gallery .gallery-allbox .gallery-box .img-box9 img:hover, #gallery .gallery-allbox .gallery-box .img-box10 img:hover, #gallery .gallery-allbox .gallery-box .img-box11 img:hover, #gallery .gallery-allbox .gallery-box .img-box12 img:hover {
   opacity: 1;
   transform: scale(1);
+}
+@media (min-width: 1024px) {
+  #gallery .gallery-allbox .gallery-box .img-box1 img, #gallery .gallery-allbox .gallery-box .img-box2 img, #gallery .gallery-allbox .gallery-box .img-box3 img, #gallery .gallery-allbox .gallery-box .img-box4 img, #gallery .gallery-allbox .gallery-box .img-box5 img, #gallery .gallery-allbox .gallery-box .img-box6 img, #gallery .gallery-allbox .gallery-box .img-box7 img, #gallery .gallery-allbox .gallery-box .img-box8 img, #gallery .gallery-allbox .gallery-box .img-box9 img, #gallery .gallery-allbox .gallery-box .img-box10 img, #gallery .gallery-allbox .gallery-box .img-box11 img, #gallery .gallery-allbox .gallery-box .img-box12 img {
+    height: 500px;
+  }
 }
 #gallery .gallery-allbox .gallery-box .img-box1 img, #gallery .gallery-allbox .gallery-box .img-box2 img, #gallery .gallery-allbox .gallery-box .img-box3 img, #gallery .gallery-allbox .gallery-box .img-box4 img, #gallery .gallery-allbox .gallery-box .img-box5 img, #gallery .gallery-allbox .gallery-box .img-box6 img {
   transform: scale(0.9);
