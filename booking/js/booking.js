@@ -1,45 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
     const posters = document.querySelectorAll('.poster li');
     const descriptions = document.querySelectorAll('.program-desc');
-    const slides = document.querySelector('.slide-box').children;
-
-    let currentIndex = 1; // 초기 선택된 인덱스 설정
-
-    function updateVisuals() {
-        // 포스터 업데이트
-        posters.forEach((poster, index) => {
-            poster.classList.remove('visible', 'selected', 'left', 'right');
-            if (index === currentIndex - 1 || index === currentIndex || index === currentIndex + 1) {
-                poster.classList.add('visible');
-                if (index === currentIndex - 1) {
-                    poster.classList.add('left');
-                } else if (index === currentIndex) {
-                    poster.classList.add('selected');
-                    descriptions.forEach(desc => desc.classList.remove('selected'));
-                    descriptions[currentIndex].classList.add('selected');
-                    updateSlideBox();
-                } else if (index === currentIndex + 1) {
-                    poster.classList.add('right');
-                }
-            }
-        });
-    }
-
-    // 슬라이드 박스 업데이트
-    function updateSlideBox() {
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].classList.remove('selected');
-        }
-        slides[currentIndex].classList.add('selected');
-    }
-
-    updateVisuals(); // 초기 시각적 요소 업데이트
 
     posters.forEach((poster, index) => {
         poster.addEventListener('click', () => {
-            if (index !== currentIndex) {
-                currentIndex = index;
-                updateVisuals();
+            // Remove selected class from all posters
+            posters.forEach(p => p.classList.remove('selected'));
+            // Add selected class to clicked poster
+            poster.classList.add('selected');
+
+            // Hide all descriptions
+            descriptions.forEach(desc => desc.classList.remove('selected'));
+            // Show the description that corresponds to the clicked poster
+            document.getElementById(`desc${index + 1}`).classList.add('selected');
+
+            // Reorder the posters for mobile view
+            if (window.innerWidth <= 600) {
+                posters.forEach(p => p.style.order = '');
+                poster.style.order = '2'; // Selected image in the center
+                if (poster.previousElementSibling) poster.previousElementSibling.style.order = '1';
+                if (poster.nextElementSibling) poster.nextElementSibling.style.order = '3';
             }
         });
     });
