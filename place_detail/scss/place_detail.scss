@@ -119,8 +119,14 @@ section.time {
                 padding: 4px 12px;
                 margin: 0 8px 4px 0;
                 border: 1px solid $basic-gray;
-                border-radius: 8px;
+                border-radius: 16px;
                 font-size: 14px;
+                cursor: pointer;
+
+                @include responsive(large-screens) {
+                    padding: 4px 24px;
+                    margin-right: 12px;
+                }
             }
 
             .selected {
@@ -129,7 +135,7 @@ section.time {
             }
         } // select-month
 
-        .time {
+        .open-time {
             font-size: 20px;
             font-weight: bold;
         }

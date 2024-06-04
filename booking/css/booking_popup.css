@@ -184,10 +184,8 @@ section.info-calendar .info .title {
     display: block;
   }
 }
-section.info-calendar .info .calendar {
+section.info-calendar .info #calendar {
   width: 100%;
-  height: 200px;
-  background-color: paleturquoise;
 }
 
 section.booking-info div.time-num div {
