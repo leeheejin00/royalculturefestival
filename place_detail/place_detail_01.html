@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header_footer.css">
     <link rel="stylesheet" href="./css/place_detail.css">
+    <script src="js/jquery.js"></script>
     <title>경복궁</title>
     <script>
         window.onload = function() {
@@ -192,19 +193,45 @@
                 </div>
                 <div class="conbox">
                     <div class="select-month">
-                        <div class="month1">1-2월</div>
-                        <div class="month3 selected">3-5월</div>
-                        <div class="month6">6-8월</div>
-                        <div class="month9">9-10월</div>
-                        <div class="month11">11-12월</div>
+                        <div class="month1" onclick="setTime(0, event)">1-2월</div>
+                        <div class="month3 selected" onclick="setTime(1, event)">3-5월</div>
+                        <div class="month6" onclick="setTime(2, event)">6-8월</div>
+                        <div class="month9" onclick="setTime(3, event)">9-10월</div>
+                        <div class="month11" onclick="setTime(4, event)">11-12월</div>
                     </div><!-- select-month -->
-                    <p class="time">오전 09시 ~ 오후 06시</p>
+                    <p class="open-time">오전 09시 ~ 오후 06시</p>
                     <p class="last-enter">(입장마감 : 오후 05시)</p>
                     <p class="info">
                         매주 화요일은 휴궁일입니다. (궁중문화축전 기간은 휴궁일 없이 운영합니다)<br>
                         <span class="light">※ 휴궁일이 공휴일(대체공휴일 포함)과 겹칠 경우 개방하며, 이 경우 개방한 공휴일 다음의 첫 번째 비공휴일을 휴궁일로 합니다.</span>
                     </p>
                 </div><!-- conbox -->
+
+                <script>
+                    // 운영시간 변경
+                    const times = [
+                        { time: '오전 09시 ~ 오후 05시', lastEnter: '입장마감 : 오후 04시' },
+                        { time: '오전 09시 ~ 오후 06시', lastEnter: '입장마감 : 오후 05시' },
+                        { time: '오전 09시 ~ 오후 06시 30분', lastEnter: '입장마감 : 오후 05시 30분' },
+                        { time: '오전 09시 ~ 오후 06시', lastEnter: '입장마감 : 오후 05시' },
+                        { time: '오전 09시 ~ 오후 05시', lastEnter: '입장마감 : 오후 04시' }
+                    ];
+                
+                    function setTime(index, event) {
+                        // 선택된 월 표시 변경
+                        const selectedMonth = document.querySelector('.select-month div.selected');
+                        selectedMonth.classList.remove('selected');
+                        event.target.classList.add('selected');
+
+                        // 선택된 월에 따라 시간 변경
+                        updateTime(times[index].time, times[index].lastEnter);
+                    }
+
+                    function updateTime(time, lastEnter) {
+                        document.querySelector('.open-time').innerText = time;
+                        document.querySelector('.last-enter').innerText = lastEnter;
+                    }
+                </script>
             </section><!-- time -->
         </div><!-- container -->
 
