@@ -245,7 +245,6 @@ section.popular .program-desc-box .program-desc .title {
 section.popular .program-desc-box .program-desc .title .name {
   font-size: 16px;
   font-weight: bold;
-  width: 60px;
 }
 section.popular .program-desc-box .program-desc .title .tag {
   margin-top: -4px;
@@ -288,16 +287,17 @@ section.popular .program-desc-box .program-desc .button button {
   color: white;
   background-color: #795548;
 }
-section.popular .poster-web-container {
+
+.poster-web-container {
   overflow: hidden;
   width: 100%;
   position: relative;
 }
-section.popular .poster-web-container .poster-web {
+.poster-web-container .poster-web {
   display: none;
 }
 @media (min-width: 1024px) {
-  section.popular .poster-web-container .poster-web {
+  .poster-web-container .poster-web {
     margin: 0 auto;
     animation: scroll 30s linear infinite;
     width: 100%;
@@ -306,20 +306,20 @@ section.popular .poster-web-container .poster-web {
     justify-content: space-between;
     width: 200%;
   }
-  section.popular .poster-web-container .poster-web li {
+  .poster-web-container .poster-web li {
     position: relative;
     width: 100%;
     padding: 10px;
     overflow: hidden;
   }
-  section.popular .poster-web-container .poster-web li img {
+  .poster-web-container .poster-web li img {
     width: 100%;
     transition: transform 0.3s ease-in-out;
   }
-  section.popular .poster-web-container .poster-web li .book-see {
+  .poster-web-container .poster-web li .book-see {
     display: flex;
   }
-  section.popular .poster-web-container .poster-web li .book-see .book, section.popular .poster-web-container .poster-web li .book-see .see {
+  .poster-web-container .poster-web li .book-see .book, .poster-web-container .poster-web li .book-see .see {
     position: absolute;
     bottom: 15px;
     transform: translateX(-50%);
@@ -333,23 +333,23 @@ section.popular .poster-web-container .poster-web {
     padding: 5px 13px;
     border-radius: 5px;
   }
-  section.popular .poster-web-container .poster-web li .book-see .book {
+  .poster-web-container .poster-web li .book-see .book {
     left: 65%;
   }
-  section.popular .poster-web-container .poster-web li .book-see .book:hover {
+  .poster-web-container .poster-web li .book-see .book:hover {
     color: #ffbe0f;
   }
-  section.popular .poster-web-container .poster-web li .book-see .see {
+  .poster-web-container .poster-web li .book-see .see {
     left: 24%;
   }
-  section.popular .poster-web-container .poster-web li .book-see .see:hover {
+  .poster-web-container .poster-web li .book-see .see:hover {
     color: #ffbe0f;
   }
-  section.popular .poster-web-container .poster-web li:hover img {
+  .poster-web-container .poster-web li:hover img {
     transform: scale(1.1);
     opacity: 0.5;
   }
-  section.popular .poster-web-container .poster-web li:hover .book, section.popular .poster-web-container .poster-web li:hover .see {
+  .poster-web-container .poster-web li:hover .book, .poster-web-container .poster-web li:hover .see {
     opacity: 1;
     display: block;
   }
@@ -362,24 +362,38 @@ section.popular .poster-web-container .poster-web {
     }
   }
 }
-section.popular .slide-box {
+
+.slide-box {
   margin: 25px 35% 16px;
   justify-content: space-between;
   display: flex;
 }
-section.popular .slide-box div {
+.slide-box div {
   width: 8px;
   height: 8px;
   border-radius: 4px;
   background-color: #eaeaea;
 }
-section.popular .slide-box .selected {
+.slide-box .selected {
   width: 32px;
 }
 @media (min-width: 1024px) {
-  section.popular .slide-box {
+  .slide-box {
     display: none;
   }
+}
+
+.program-desc-box {
+  display: flex;
+  width: 1920px;
+}
+.program-desc-box .program-desc {
+  width: 260px;
+  height: auto;
+  margin: 0 32px;
+  border-radius: 8px;
+  background-color: #eaeaea;
+  overflow: hidden;
 }
 
 section.keyword > .hashtag {
