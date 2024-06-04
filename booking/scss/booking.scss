@@ -59,7 +59,9 @@ section.popular {
         overflow: hidden;
         position: relative;
         margin: 0 auto;
-
+        @include responsive(large-screens) {
+            display: none;
+        }
         li {
             margin: 0 5px;
             transition: all 0.3s ease;
@@ -103,12 +105,18 @@ section.popular {
         .selected {
             width: 32px;
         }
+        @include responsive(large-screens) {
+            display: none;
+        }
     }
 
     .program-desc-box {
         display: flex;
         width: 100%;
         justify-content: center;
+        @include responsive(large-screens) {
+            display: none;
+        }
 
         .program-desc {
             width: 350px;

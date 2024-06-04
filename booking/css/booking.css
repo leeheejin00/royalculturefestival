@@ -185,6 +185,11 @@ section.popular .poster {
   position: relative;
   margin: 0 auto;
 }
+@media (min-width: 1024px) {
+  section.popular .poster {
+    display: none;
+  }
+}
 section.popular .poster li {
   margin: 0 5px;
   transition: all 0.3s ease;
@@ -219,10 +224,20 @@ section.popular .slide-box div {
 section.popular .slide-box .selected {
   width: 32px;
 }
+@media (min-width: 1024px) {
+  section.popular .slide-box {
+    display: none;
+  }
+}
 section.popular .program-desc-box {
   display: flex;
   width: 100%;
   justify-content: center;
+}
+@media (min-width: 1024px) {
+  section.popular .program-desc-box {
+    display: none;
+  }
 }
 section.popular .program-desc-box .program-desc {
   width: 350px;
