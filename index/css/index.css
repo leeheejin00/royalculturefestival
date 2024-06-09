@@ -244,56 +244,57 @@ header .side-menu {
   transition: right 0.3s ease-in-out;
 }
 header .side-menu .language-login {
+  width: 80%;
   display: flex;
   margin-top: 125px;
   margin-left: 5px;
   margin-bottom: 10px;
 }
 header .side-menu .language-login .language {
+  padding: 15px;
+  width: 40%;
+  text-align: center;
   cursor: pointer;
   padding: 2px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  background-color: #2f2411;
+  margin-left: 10%;
+  border-radius: 5px;
+}
+header .side-menu .language-login .language a {
+  color: white;
+  font-size: 10px;
+  margin-right: 5px;
+  font-family: "Pretendard-Regular";
+}
+header .side-menu .language-login .language a img {
+  width: 15px;
+}
+header .side-menu .language-login .login {
+  padding: 15px;
+  width: 40%;
+  text-align: center;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #2f2411;
   margin-left: 10%;
   border-radius: 5px;
   margin-left: 15px;
 }
-header .side-menu .language-login .language #languageToggle2 {
-  display: none;
-}
-header .side-menu .language-login .language:hover #languageToggle {
-  display: none;
-}
-header .side-menu .language-login .language:hover #languageToggle2 {
-  display: block;
-}
-header .side-menu .language-login .language a {
-  color: white;
-  font-size: 10px;
-  font-family: "Pretendard-Regular";
-  text-align: center;
-}
-header .side-menu .language-login .language a img {
-  padding-left: 5px;
-  width: 55%;
-}
-header .side-menu .language-login .login {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  background-color: #2f2411;
-  border-radius: 5px;
-  margin-left: 5px;
-}
 header .side-menu .language-login .login a {
   color: white;
   font-size: 10px;
+  margin-right: 5px;
   font-family: "Pretendard-Regular";
+  writing-mode: horizontal-tb;
 }
 header .side-menu .language-login .login a img {
-  padding-left: 5px;
-  width: 55%;
+  width: 17px;
 }
 header .side-menu .side-nav {
   padding-left: 10px;
@@ -568,6 +569,17 @@ header {
   position: relative;
   overflow: hidden;
 }
+header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
 header video {
   position: absolute;
   top: 50%;
@@ -576,7 +588,7 @@ header video {
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -1;
+  z-index: 0;
   transform: translate(-50%, -50%);
 }
 @media (min-width: 1024px) {
@@ -590,7 +602,7 @@ header .video-container {
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
 }
 header .video-container video {
@@ -607,6 +619,11 @@ header .logo-icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 5;
+}
+header .logo-icon a img {
+  position: relative;
+  z-index: 5;
 }
 header .logo-icon .search-menu {
   display: flex;
@@ -672,49 +689,37 @@ header .side-menu .language-login .language {
   padding: 2px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: white;
-  margin-left: 10%;
   border-radius: 5px;
-  margin-left: 15px;
-}
-header .side-menu .language-login .language #languageToggle2 {
-  display: none;
-}
-header .side-menu .language-login .language:hover #languageToggle {
-  display: none;
-}
-header .side-menu .language-login .language:hover #languageToggle2 {
-  display: block;
 }
 header .side-menu .language-login .language a {
   color: #2f2411;
-  font-size: 10px;
+  font-size: 8px;
   font-family: "Pretendard-Regular";
-  text-align: center;
 }
 header .side-menu .language-login .language a img {
-  padding-left: 5px;
-  width: 80%;
+  width: 11px;
 }
 header .side-menu .language-login .login {
-  width: 40%;
+  width: 50%;
+  text-align: center;
   cursor: pointer;
+  padding: 3px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: white;
   border-radius: 5px;
-  padding: 0;
 }
 header .side-menu .language-login .login a {
   color: #2f2411;
-  font-size: 10px;
-  margin-right: 20%;
+  font-size: 8px;
   font-family: "Pretendard-Regular";
+  writing-mode: horizontal-tb;
 }
 header .side-menu .language-login .login a .loginimg {
-  width: 75%;
-  margin: 0;
-  padding: 0;
+  width: 11px;
 }
 header .side-menu .side-nav {
   padding-left: 10px;
@@ -751,10 +756,12 @@ header .side-menu .side-nav .gnb li .submenu {
   display: flex;
 }
 header .menu_box {
+  z-index: 5;
   display: none;
 }
 @media (min-width: 1024px) {
   header .menu_box {
+    z-index: 5;
     display: block;
     display: flex;
     justify-content: space-between;
@@ -770,6 +777,7 @@ header .menu_box {
   }
   header .menu_box .mainmenu .gnb li {
     position: relative;
+    z-index: 5;
   }
   header .menu_box .mainmenu .gnb li .submenu {
     display: none;
@@ -782,7 +790,7 @@ header .menu_box {
     font-family: "Pretendard-Regular";
     text-decoration: none;
     font-size: 18px;
-    color: #414141;
+    color: white;
   }
   header .menu_box .mainmenu .gnb li .submenu li a:hover {
     color: #ffbe0f;
@@ -805,6 +813,7 @@ header .menu_box {
     color: #ffbe0f;
   }
   header .menu_box form .search-box {
+    z-index: 5;
     position: relative;
     display: flex;
   }

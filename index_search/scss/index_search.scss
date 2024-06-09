@@ -11,11 +11,29 @@
     max-width: 1416px;
     margin: 32px auto;
 }
+header {
+    width: $width-wide;
+    background: url(../images/header_back.png) no-repeat;
+    background-size: cover;
+    transition: height 0.5s ease-out;
+
+    @include responsive(large-screens) {
+        height: 180px;
+    }
+    .menu_box {
+            form {
+                    display: none;
+            }
+        }
+    }
+
+
 
 form {
     .search-box {
         position: relative;
         display: flex;
+        
         input {
             border-top: 0;
             border-left: 0;

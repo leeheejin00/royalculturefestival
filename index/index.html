@@ -74,57 +74,42 @@
     </script>
 
     <script>
-        window.onload = function() {
-            const toggleBtn = document.querySelector('.menu-toggle-btn');
-            const sideMenu = document.getElementById('side-menu');
-            const closeBtn = document.querySelector('.close-btn');
+        document.addEventListener('DOMContentLoaded', function () {
+        const menuItems = document.querySelectorAll('.gnb > li > a');
+        
+        menuItems.forEach(item => {
+            item.addEventListener('mouseover', function (e) {
+                e.preventDefault();
+                const submenu = this.nextElementSibling;
 
-            toggleBtn.addEventListener('click', function() {
-                if (sideMenu.style.right === '0px') {
-                    sideMenu.style.right = '-50%'; 
-                    toggleBtn.classList.remove('open'); 
-                } else {
-                    sideMenu.style.right = '0'; 
-                    toggleBtn.classList.add('open'); 
+                // 모든 서브메뉴를 닫기
+                document.querySelectorAll('.submenu').forEach(sub => {
+                    if (sub !== submenu) {
+                        sub.classList.remove('open');
+                        sub.style.maxHeight = null;
+                    }
+                });
+
+                // 클릭한 서브메뉴 토글
+                if (submenu && submenu.classList.contains('submenu')) {
+                    submenu.classList.toggle('open');
+                    if (submenu.classList.contains('open')) {
+                        submenu.style.maxHeight = submenu.scrollHeight + "px";
+                    } else {
+                        submenu.style.maxHeight = null;
+                    }
                 }
             });
 
-            closeBtn.addEventListener('click', function() {
-                sideMenu.style.right = '-50%'; 
-                toggleBtn.classList.remove('open'); 
-            });
-        };
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuItems = document.querySelectorAll('.gnb > li > a');
-            
-            menuItems.forEach(item => {
-                item.addEventListener('mouseover', function (e) {
-                    e.preventDefault();
-                    const submenu = this.nextElementSibling;
-
-                    // 모든 서브메뉴를 닫기
-                    document.querySelectorAll('.submenu').forEach(sub => {
-                        if (sub !== submenu) {
-                            sub.classList.remove('open');
-                            sub.style.maxHeight = null;
-                        }
-                    });
-
-                    // 클릭한 서브메뉴 토글
-                    if (submenu && submenu.classList.contains('submenu')) {
-                        submenu.classList.toggle('open');
-                        if (submenu.classList.contains('open')) {
-                            submenu.style.maxHeight = submenu.scrollHeight + "px";
-                        } else {
-                            submenu.style.maxHeight = null;
-                        }
-                    }
-                });
+            item.parentElement.addEventListener('mouseleave', function () {
+                const submenu = item.nextElementSibling;
+                if (submenu && submenu.classList.contains('submenu')) {
+                    submenu.classList.remove('open');
+                    submenu.style.maxHeight = null;
+                }
             });
         });
+    });
     </script>
 </head>
 <body>
@@ -158,11 +143,9 @@
             </div> <!-- logo-icon -->
 
             <div id="side-menu" class="side-menu">
-
                 <div class="language-login">
                     <div class="language">
                         <a href="#" id="languageToggle">Language</a>
-                        <a href="#" id="languageToggle2">언어</a>
                         <a href=""><img src="./images/internet.png" alt="language"></a> 
                     </div>
                     <div class="login">

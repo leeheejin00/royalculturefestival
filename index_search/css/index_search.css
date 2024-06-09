@@ -5,6 +5,21 @@
   margin: 32px auto;
 }
 
+header {
+  width: 100%;
+  background: url(../images/header_back.png) no-repeat;
+  background-size: cover;
+  transition: height 0.5s ease-out;
+}
+@media (min-width: 1024px) {
+  header {
+    height: 180px;
+  }
+}
+header .menu_box form {
+  display: none;
+}
+
 form .search-box {
   position: relative;
   display: flex;
