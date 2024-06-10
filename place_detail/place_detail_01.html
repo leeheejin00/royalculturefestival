@@ -514,56 +514,112 @@
             </section><!-- address -->
 
             <section class="additional">
-                <div class="transp selected">
+                <div class="transp first">
                     <div class="add-menu">
-                        <div class="title selected">대중교통</div>
-                        <div class="title-price" onclick="changeContent()">이용요금</div>
-                        <div class="title-parking">주차안내</div>
+                        <div class="title-transp selected" onclick="contentTransp()">대중교통</div>
+                        <div class="title-price" onclick="contentFee()">이용요금</div>
+                        <div class="title-parking" onclick="contentPark()">주차안내</div>
                     </div><!-- add-menu -->
                     <div class="addition-conbox">
-                        <div class="subway">
+                        <div class="text-yellow">
                             <div class="title">지하철</div>
                             <div class="details">
                                 <p><span class="station">3호선 경복궁역</span>5번 출구 (도보 5분)</p>
                                 <p><span class="station">5호선 광화문역</span>5번 출구  (도보 5분)</p>
                             </div>
                         </div><!-- subway -->
-                        <div class="bus">
+                        <div class="text-yellow">
                             <div class="title">버스</div>
                             <div class="details">
                                 <p><span class="station">경복궁 남측</span>109, 171, 272, 601, 606, 1020, 7025</p>
                                 <p><span class="station">경복궁 서측</span>109, 171, 272, 601, 606, 1020, 7212, 6011, 9703</p>
                             </div>
-                        </div><!-- subway -->
+                        </div><!-- bus -->
                     </div><!-- conbox -->
                 </div><!-- transp -->
 
                 <script>
-                    function changeContent() {
+                    function contentTransp() {
                         var conbox = document.querySelector('.addition-conbox');
                         conbox.innerHTML = `
-                            <div class="adult">
-                                <div class="title">대인(만25세~만64세)</div>
+                            <div class="text-yellow">
+                                <div class="title">지하철</div>
+                                <div class="details">
+                                    <p><span class="station">3호선 경복궁역</span>5번 출구 (도보 5분)</p>
+                                    <p><span class="station">5호선 광화문역</span>5번 출구  (도보 5분)</p>
+                                </div>
+                            </div><!-- subway -->
+                            <div class="text-yellow">
+                                <div class="title">버스</div>
+                                <div class="details">
+                                    <p><span class="station">경복궁 남측</span>109, 171, 272, 601, 606, 1020, 7025</p>
+                                    <p><span class="station">경복궁 서측</span>109, 171, 272, 601, 606, 1020, 7212, 6011, 9703</p>
+                                </div>
+                            </div><!-- bus -->
+                        `;
+
+                        // 선택된 메뉴에 selected 클래스 추가
+                        document.querySelectorAll('.add-menu div').forEach(element => {
+                            element.classList.remove('selected');
+                        });
+                        document.querySelector('.title-transp').classList.add('selected');
+                    }
+
+                    function contentFee() {
+                        var conbox = document.querySelector('.addition-conbox');
+                        conbox.innerHTML = `
+                            <div class="text-yellow">
+                                <div class="title">대인(만25~64세)</div>
                                 <div class="details">
                                     <p><span class="station">3,000원</span></p>
                                 </div>
                             </div><!-- adult -->
-                            <div class="kid">
-                                <div class="title">소인(만7세~만18세)</div>
+                            <div class="text-yellow">
+                                <div class="title">소인(만7~18세)</div>
                                 <div class="details">
                                     <p><span class="station">1,500원</span></p>
                                 </div>
                             </div><!-- kid -->
-                            <div class="free">
-                                <div class="title">만6세이하<br>
-                                    만65세이상 (‘14.10.1.부터 시행)<br>
-                                    한복착용자<br>
-                                    매월 마지막 수요일 [문화가 있는 날]</div>
+                            <div class="text-yellow">
+                                <div class="title">만6세이하,<br>
+                                    만65세이상,<br>
+                                    한복착용자,<br>
+                                    문화가 있는 날</div>
                                 <div class="details">
                                     <p><span class="station">무료</span></p>
                                 </div>
                             </div><!-- free -->
                         `;
+
+                        // 선택된 메뉴에 selected 클래스 추가
+                        document.querySelectorAll('.add-menu div').forEach(element => {
+                            element.classList.remove('selected');
+                        });
+                        document.querySelector('.title-price').classList.add('selected');
+                    }
+
+                    function contentPark() {
+                        var conbox = document.querySelector('.addition-conbox');
+                        conbox.innerHTML = `
+                            <div class="text-yellow">
+                                <div class="title">운영시간</div>
+                                <div class="details">
+                                    <p>06:00 ~ 23:00</p>
+                                </div>
+                            </div><!-- adult -->
+                            <div class="text-yellow">
+                                <div class="title">장애인주차장</div>
+                                <div class="details">
+                                    <p>지상주차장 (9면)</p>
+                                </div>
+                            </div><!-- kid -->
+                        `;
+
+                        // 선택된 메뉴에 selected 클래스 추가
+                        document.querySelectorAll('.add-menu div').forEach(element => {
+                            element.classList.remove('selected');
+                        });
+                        document.querySelector('.title-parking').classList.add('selected');
                     }
                 </script>
 
