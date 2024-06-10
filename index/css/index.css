@@ -251,8 +251,7 @@ header .side-menu .language-login {
   margin-bottom: 10px;
 }
 header .side-menu .language-login .language {
-  padding: 15px;
-  width: 40%;
+  width: 45%;
   text-align: center;
   cursor: pointer;
   padding: 2px;
@@ -260,41 +259,36 @@ header .side-menu .language-login .language {
   align-items: center;
   justify-content: space-between;
   background-color: #2f2411;
-  margin-left: 10%;
   border-radius: 5px;
 }
 header .side-menu .language-login .language a {
   color: white;
-  font-size: 10px;
-  margin-right: 5px;
+  font-size: 8px;
   font-family: "Pretendard-Regular";
 }
 header .side-menu .language-login .language a img {
-  width: 15px;
+  width: 11px;
 }
 header .side-menu .language-login .login {
-  padding: 15px;
-  width: 40%;
+  width: 45%;
   text-align: center;
   cursor: pointer;
-  padding: 2px;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #2f2411;
-  margin-left: 10%;
   border-radius: 5px;
-  margin-left: 15px;
+  margin-left: 3px;
 }
 header .side-menu .language-login .login a {
   color: white;
-  font-size: 10px;
-  margin-right: 5px;
+  font-size: 8px;
   font-family: "Pretendard-Regular";
   writing-mode: horizontal-tb;
 }
 header .side-menu .language-login .login a img {
-  width: 17px;
+  width: 11px;
 }
 header .side-menu .side-nav {
   padding-left: 10px;
