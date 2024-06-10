@@ -1,15 +1,5 @@
-[
-    {
-        "email" : "bread0217@naver.com",
-        "password" : "123456789"
-    },
-    {
-        "email" : "dlgmlwls00@naver.com",
-        "password" : "123456789"
-    },
-    {
-        "email" : "whgkssk@naver.com",
-        "password" : "123456789"
-    }
-
-]
+{
+    "bread0217@naver.com": {"pw": "123456789", "name": "임규성"},
+    "dlgmlwls00@naver.com": {"pw": "123456789", "name": "이희진"},
+    "whgkssk@naver.com": {"pw": "123456789", "name": "조한나"}
+}

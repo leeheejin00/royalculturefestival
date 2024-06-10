@@ -118,42 +118,6 @@ document.addEventListener('DOMContentLoaded', function() {
           modalOverlay.style.display = 'block'; // 배경을 보이게 함
         });
       });
-
-      document.getElementById('login-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-    
-        var email = document.getElementById('login-email').value;
-        var password = document.getElementById('login-password').value;
-    
-        if (email === '' || password === '') {
-            alert('이메일과 비밀번호를 입력하세요.');
-            return;
-        }
-    
-        fetch('login.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: new URLSearchParams({ email, password })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert('로그인 성공');
-                // 성공 시 필요한 처리
-                window.location.href = '/dashboard'; // 예: 대시보드 페이지로 리디렉션
-            } else {
-                alert('로그인 실패: ' + data.message);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('로그인 중 오류가 발생했습니다.');
-        });
-    });  
-
-
 });
 
 function slideLeft() {

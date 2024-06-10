@@ -193,7 +193,7 @@ section.popular {
             }
         }
     }
-
+}
 
     .poster-web-container {
         overflow: hidden;
@@ -293,6 +293,16 @@ section.popular {
         }
 
     }
+.program-desc-box {
+    display: flex;
+    width: 1920px;
+        .program-desc {
+            width: 260px;
+            height: auto;
+            margin: 0 32px;
+            border-radius: 8px;
+            background-color: #eaeaea;
+            overflow: hidden;
 
     
 } 
@@ -318,7 +328,7 @@ section.popular {
 // section.popular > .poster > .program5 {
 //     display: none;
 // }
-
+}
 // ==== keyword ====
 section.keyword > .hashtag {
     margin: 24px auto;
