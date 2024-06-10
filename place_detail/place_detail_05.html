@@ -381,7 +381,7 @@
                 <div class="program-list">
                     <div class="program01">
                         <div class="conbox">
-                            <img src="./images/pg01.png" alt="">
+                            <img src="./images/kh_pg1.jpg" alt="">
                             <div class="desc">
                                 <p class="title">궁중문화축전 길놀이</p>
                                 <p class="period">01.01 ~ 12.31</p>
@@ -392,9 +392,18 @@
                                 </div><!-- hashtag -->
                             </div><!-- desc -->
                         </div><!-- conbox -->
-                        <button class="disable">현장참여</button>
+                        <button class="disable" onclick="disable()">현장참여</button>
                     </div>
                 </div><!-- program-list -->
+                <script>
+                    function openPopup() {
+                      window.open("../booking/booking_popup.html", "Popup", "width=600,height=800");
+                    }
+
+                    function disable() {
+                        alert('별도 예약 없이 현장에서 관람이 가능합니다.');
+                    }
+                </script>
             </div><!-- container -->
         </section><!-- programs -->
 

@@ -381,7 +381,7 @@
                 <div class="program-list">
                     <div class="program01">
                         <div class="conbox">
-                            <img src="./images/pg01.png" alt="">
+                            <img src="../booking/images/night_2.jpg" alt="">
                             <div class="desc">
                                 <p class="title">밤의 석조전</p>
                                 <p class="period">01.01 ~ 12.31</p>
@@ -392,12 +392,12 @@
                                 </div><!-- hashtag -->
                             </div><!-- desc -->
                         </div><!-- conbox -->
-                        <button class="able">예매하기</button>
+                        <button class="able" onclick="openPopup()">예매하기</button>
                     </div>
     
                     <div class="program01">
                         <div class="conbox">
-                            <img src="./images/pg01.png" alt="">
+                            <img src="./images/ds_pg2.jpg" alt="">
                             <div class="desc">
                                 <p class="title">우리의 빛나는 청춘</p>
                                 <p class="period">01.01 ~ 12.31</p>
@@ -408,9 +408,18 @@
                                 </div><!-- hashtag -->
                             </div><!-- desc -->
                         </div><!-- conbox -->
-                        <button class="disable">현장참여</button>
+                        <button class="disable" onclick="disable()">현장참여</button>
                     </div>
                 </div><!-- program-list -->
+                <script>
+                    function openPopup() {
+                      window.open("../booking/booking_popup.html", "Popup", "width=600,height=800");
+                    }
+
+                    function disable() {
+                        alert('별도 예약 없이 현장에서 관람이 가능합니다.');
+                    }
+                </script>
             </div><!-- container -->
         </section><!-- programs -->
 
