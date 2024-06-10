@@ -433,14 +433,19 @@ section.additional {
             }
             .selected {
                 font-weight: bold;
-                border-top: 2px solid #fff;
+                border-top: 2px solid $basic-yellow;
+                color: $basic-yellow;
             }
             .title-price, .title-parking {
                 border-top: 2px solid $basic-brown;
             }
+            div:hover {
+                cursor: pointer;
+                color: $basic-yellow;
+            }
         }  // add menu
 
-        .conbox {
+        .addition-conbox {
             .subway, .bus {
                 display: flex;
                 // justify-content: space-between;
