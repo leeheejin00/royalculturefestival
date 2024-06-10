@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../css/header_footer.css">
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="./css/booking_detail.css">
-    
-    
+    <script src="./js/login.js"></script>
+    <script src="./js/loginTab.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const searchIcon = document.getElementById('searchIcon');
@@ -147,7 +147,7 @@
     <header>
         <div class="container">
             <div class="logo-icon">
-                <a href="../index/index.html"><img src="../images/header_logo.png" alt="header_logo"></a>
+                <a href="../index/index.html"><img src="./images/header_logo.png" alt="header_logo"></a>
                 
                 <div class="search-menu">
                     <div style="display: flex; align-items: center;">
@@ -157,10 +157,10 @@
                             <option value="ko">Korean</option>
                             <option value="jp">Japanese</option>
                         </select>
-                        <a href="#"><img id="languageIcon" src="../images/internet.png" alt=""></a>
+                        <a href="#"><img id="languageIcon" src="./images/internet.png" alt=""></a>
                     </div>
-                    <a href="#"><img src="../images/korean-hat.png" alt=""></a>
-                    <a href="#"><img id="searchIcon" src="../images/search.png" alt="search"></a>
+                    <a href="#" id="login-toggle"><img src="./images/korean-hat.png" alt=""></a>
+                    <a href="#"><img id="searchIcon" src="./images/search.png" alt="search"></a>
                     <div class="menu-toggle-btn">
                         <span>&nbsp</span>
                         <span>&nbsp</span>
@@ -173,25 +173,24 @@
                 <div class="language-login">
                     <div class="language">
                         <a href="#" id="languageToggle">Language</a>
-                        <a href="#" id="languageToggle2">언어</a>
-                        <a href=""><img src="../images/language-white.png" alt="language"></a> 
+                        <a href=""><img src="./images/language-white.png" alt="language"></a> 
                     </div>
                     <div class="login">
-                        <a href="#">로그인</a>
-                        <a href="#"><img src="../images/login-white.png" alt="login"></a>
+                        <a href="#" id="mobile-login-toggle">로그인</a>
+                        <a href="#"><img src="./images/login-white.png" alt="login"></a>
                     </div>
                 </div>  
                 <nav class="side-nav">
                     <ul class="gnb">
                         <li>
-                            <a href="../index/index.html"><img src="../images/side-menu-icon.png" alt="">궁중문화축전</a>
+                            <a href="../index/index.html"><img src="./images/side-menu-icon.png" alt="">궁중문화축전</a>
                             <ul class="submenu">
                                 <li><a href="../main-info/main-info.html">소개·연혁</a></li>
                                 <li><a href="../fi-intro/fi-intro.html">FI</a></li>
                             </ul>
                         </li>
                         <li class="palace-menu">
-                            <a href="../place_detail/place_detail_01.html"><img src="../images/side-menu-icon.png" alt="">서울 속 고궁</a>
+                            <a href="../place_detail/place_detail_01.html"><img src="./images/side-menu-icon.png" alt="">서울 속 고궁</a>
                             <ul class="submenu">
                                 <div class="palace1">
                                     <li><a href="../place_detail/place_detail_01.html">경복궁</a></li>
@@ -206,7 +205,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="../gungdoong/gungdoong.html"><img src="../images/side-menu-icon.png" alt="">궁이둥이</a>
+                            <a href="../gungdoong/gungdoong.html"><img src="./images/side-menu-icon.png" alt="">궁이둥이</a>
                             <ul class="submenu">
                                 <li><a href="https://form.naver.com/response/Ttoamjl13J22pLF8uNXgGQ">지원하기</a></li>
                                 <li><a href="../gungdoong_gallery/gungdoong_gallery.html">발자취</a></li>
@@ -251,7 +250,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="../gungdoong/gungdoong.html">궁이둥이</a>
+                            <a href="./gungdoong/gungdoong.html">궁이둥이</a>
                             <ul class="submenu">
                                 <li><a href="https://form.naver.com/response/Ttoamjl13J22pLF8uNXgGQ">지원하기</a></li>
                                 <li><a href="../gungdoong_gallery/gungdoong_gallery.html">발자취</a></li>
@@ -273,18 +272,101 @@
                         </li>
                     </ul>
                 </nav>
-                <form action="../index_search/index_search.html" method="get" onsubmit="return validateSearch()">
+                <form action="./index_search/index_search.html" method="get" onsubmit="return validateSearch()">
                     <div class="search-box">
                         <label for="find"></label>
                         <input type="search" id="find" name="find" value="경복궁" />
                         <div class="search" onclick="submitForm()">
-                            <img src="../images/search.png" alt="Search">
+                            <img src="./images/search.png" alt="Search">
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </header>
+
+
+    <div class="modal-overlay"></div>   
+
+        <div class="form">
+    
+            <ul class="tab-group">
+              <li class="tab active"><a href="#signup">회원가입</a></li>
+              <li class="tab"><a href="#login">로그인</a></li>
+            </ul>
+            
+            <div class="tab-content">
+              <div id="signup">   
+                <h1>무료로 회원가입 하세요!</h1>
+                
+                <form action="/" method="post">
+                
+                <div class="top-row">
+                  <div class="field-wrap">
+                    <label>
+                      성<span class="req">*</span>
+                    </label>
+                    <input type="text" required autocomplete="off" />
+                  </div>
+              
+                  <div class="field-wrap">
+                    <label>
+                      이름<span class="req">*</span>
+                    </label>
+                    <input type="text"required autocomplete="off"/>
+                  </div>
+                </div>
+      
+                <div class="field-wrap">
+                  <label>
+                    이메일 주소<span class="req">*</span>
+                  </label>
+                  <input type="email"required autocomplete="off"/>
+                </div>
+                
+                <div class="field-wrap">
+                  <label>
+                    비밀번호 설정<span class="req">*</span>
+                  </label>
+                  <input type="password"required autocomplete="off"/>
+                </div>
+                
+                <button type="submit" class="button button-block">Get Started</button>
+                
+                </form>
+      
+              </div>
+              
+              <div id="login">   
+                <h1>환영합니다!</h1>
+                
+                <form id="login-form" action="login.php" method="post">
+                
+                  <div class="field-wrap">
+                  <label>
+                    이메일 주소<span class="req">*</span>
+                  </label>
+                  <input type="email" id="login-email" name="login-email" required autocomplete="off"/>
+                </div>
+                
+                <div class="field-wrap">
+                  <label>
+                    비밀번호<span class="req">*</span>
+                  </label>
+                  <input type="password" id="login-password" name="login-password" required autocomplete="off"/>
+                </div>
+                
+                <p class="forgot"><a href="#">혹시 비밀번호를 잊으셨나요?</a></p>
+                
+                <button class="button button-block">Log In</button>
+                
+                </form>
+      
+              </div>
+              
+            </div><!-- tab-content -->
+            
+      </div> <!-- /form -->
 
     <main>
         <div class="container">

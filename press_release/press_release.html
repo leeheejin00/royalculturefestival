@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header_footer.css">
     <link rel="stylesheet" href="./css/press_release.css">
-    <script src="./js/press_release.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/loginTab.js"></script>
     <title>보도자료</title>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -157,7 +158,7 @@
                         </select>
                         <a href="#"><img id="languageIcon" src="./images/internet.png" alt=""></a>
                     </div>
-                    <a href="#"><img src="./images/korean-hat.png" alt=""></a>
+                    <a href="#" id="login-toggle"><img src="./images/korean-hat.png" alt=""></a>
                     <a href="#"><img id="searchIcon" src="./images/search.png" alt="search"></a>
                     <div class="menu-toggle-btn">
                         <span>&nbsp</span>
@@ -174,7 +175,7 @@
                         <a href=""><img src="./images/language-white.png" alt="language"></a> 
                     </div>
                     <div class="login">
-                        <a href="#">로그인</a>
+                        <a href="#" id="mobile-login-toggle">로그인</a>
                         <a href="#"><img src="./images/login-white.png" alt="login"></a>
                     </div>
                 </div>  
@@ -283,28 +284,87 @@
         </div>
     </header>
 
-    <!--로그인/회원가입-->
+    <div class="modal-overlay"></div>   
+
+        <div class="form">
     
-    <div class="tab_menu">
-        <ul class="list">
-          <li class="is_on">
-            <a href="#tab1" class="btn">로그인</a>
-          </li>
-          <li>
-            <a href="#tab2" class="btn">회원가입</a>
-          </li>
-        </ul>
-        
-        <div class="cont_area">
-        <h1>Sign Up for Free</h1>
-          <div id="tab1" class="cont">
-            Tab Content1
-          </div>
-          <div id="tab2" class="cont">
-            Tab Content2
-          </div>
-        </div>
-      </div><!--tab_menu-->
+            <ul class="tab-group">
+              <li class="tab active"><a href="#signup">회원가입</a></li>
+              <li class="tab"><a href="#login">로그인</a></li>
+            </ul>
+            
+            <div class="tab-content">
+              <div id="signup">   
+                <h1>무료로 회원가입 하세요!</h1>
+                
+                <form action="/" method="post">
+                
+                <div class="top-row">
+                  <div class="field-wrap">
+                    <label>
+                      성<span class="req">*</span>
+                    </label>
+                    <input type="text" required autocomplete="off" />
+                  </div>
+              
+                  <div class="field-wrap">
+                    <label>
+                      이름<span class="req">*</span>
+                    </label>
+                    <input type="text"required autocomplete="off"/>
+                  </div>
+                </div>
+      
+                <div class="field-wrap">
+                  <label>
+                    이메일 주소<span class="req">*</span>
+                  </label>
+                  <input type="email"required autocomplete="off"/>
+                </div>
+                
+                <div class="field-wrap">
+                  <label>
+                    비밀번호 설정<span class="req">*</span>
+                  </label>
+                  <input type="password"required autocomplete="off"/>
+                </div>
+                
+                <button type="submit" class="button button-block">Get Started</button>
+                
+                </form>
+      
+              </div>
+              
+              <div id="login">   
+                <h1>환영합니다!</h1>
+                
+                <form id="login-form" action="login.php" method="post">
+                
+                  <div class="field-wrap">
+                  <label>
+                    이메일 주소<span class="req">*</span>
+                  </label>
+                  <input type="email" id="login-email" name="login-email" required autocomplete="off"/>
+                </div>
+                
+                <div class="field-wrap">
+                  <label>
+                    비밀번호<span class="req">*</span>
+                  </label>
+                  <input type="password" id="login-password" name="login-password" required autocomplete="off"/>
+                </div>
+                
+                <p class="forgot"><a href="#">혹시 비밀번호를 잊으셨나요?</a></p>
+                
+                <button class="button button-block">Log In</button>
+                
+                </form>
+      
+              </div>
+              
+            </div><!-- tab-content -->
+            
+      </div> <!-- /form -->
 
     <main>
 
@@ -319,8 +379,8 @@
                             <h3>10주년 맞아 더 특별하고 풍성해진<br>
                                 '궁중문화축전'</h3>
                             <p>[24. 5. 4]</p>
-                            <strong>더보기</strong>
-                            <hr class="more_arrow">
+                            <!-- <strong>더보기</strong>
+                            <hr class="more_arrow"> -->
                         </div><!--press_info_box-->
                     </div><!--press_release_box-->
                     
@@ -329,8 +389,8 @@
                         <div class="press_info_box2">
                             <h3><a href="../press_release_pg2/press_release_pg2.html">궁중문화축전, 경복궁 ‘케이헤리티지 마켓' 열어</a></h3>
                             <p>[24. 4. 18]</p>
-                            <strong>더보기</strong>
-                            <hr class="more_arrow2">
+                            <!-- <strong>더보기</strong>
+                            <hr class="more_arrow2"> -->
                         </div><!--press_info_box2-->
                     </div><!--press_release_bo2x-->
                 </div><!--news_box1-->
@@ -341,8 +401,8 @@
                         <div class="press_info_box3">
                             <h3>오색 단풍 궁궐에서 즐기는<br>'2023 가을 궁중문화축전'</h3>
                                 <p>[23. 10. 5]</p>
-                                <hr class="more_arrow3">
-                                <strong>더보기</strong>
+                                <!-- <hr class="more_arrow3">
+                                <strong>더보기</strong> -->
                             </div><!--press_info_box3-->
                         </div><!--press_release_box3-->
     
@@ -351,8 +411,8 @@
                         <div class="press_info_box4">
                             <h3>2024년 궁중문화축전<br>10주년 기념 슬로건 공모전</h3>
                                 <p>[23. 11. 17]</p>
-                                <hr class="more_arrow4">
-                                <strong>더보기</strong>
+                                <!-- <hr class="more_arrow4">
+                                <strong>더보기</strong> -->
                             </div><!--press_info_box4-->
                         </div><!--press_release_box4-->
 
@@ -361,8 +421,8 @@
                         <div class="press_info_box5">
                             <h3><a href="../press_release_pg/press_release_pg.html">박해일의 목소리로 듣는<br>창덕궁과 전통공예의 아름다움</a></h3>
                                 <p>[24.04.24]</p>
-                                <hr class="more_arrow5">
-                                <strong>더보기</strong>
+                                <!-- <hr class="more_arrow5">
+                                <strong>더보기</strong> -->
                             </div><!--press_info_box5-->
                         </div><!--press_release_box5-->
                 </div><!--news_box2-->
@@ -373,8 +433,8 @@
                         <div class="press_info_box6">
                             <h3>2023 봄 궁중문화축전<br>성황리 종료</h3>
                                 <p>[23.05.11]</p>
-                                <hr class="more_arrow6">
-                                <strong>더보기</strong>
+                                <!-- <hr class="more_arrow6">
+                                <strong>더보기</strong> -->
                             </div><!--press_info_box6-->
                         </div><!--press_release_box6-->
 
@@ -383,8 +443,8 @@
                         <div class="press_info_box7">
                             <h3>궁궐에서 열리는<br>'2023년 봄 궁중문화축전'</h3>
                                 <p>[23.04.18]</p>
-                                <hr class="more_arrow7">
-                                <strong>더보기</strong>
+                                <!-- <hr class="more_arrow7">
+                                <strong>더보기</strong> -->
                         </div><!--press_info_box7-->
                     </div><!--press_release_box7-->    
 
@@ -393,8 +453,8 @@
                         <div class="press_info_box8">
                             <h3>2022 가을<br>궁중문화축전 축제 마무리</h3>
                             <p>[22.10.12]</p>
-                            <hr class="more_arrow8">
-                            <strong>더보기</strong>
+                            <!-- <hr class="more_arrow8">
+                            <strong>더보기</strong> -->
                         </div><!--press_info_box8-->
                      </div><!--press_release_box8-->
 
@@ -403,8 +463,8 @@
                         <div class="press_info_box9">
                             <h3>고궁음악회<br>「덕수궁 풍류대장」개최</h3>
                             <p>[22.05.18]</p>
-                            <hr class="more_arrow9">
-                            <strong>더보기</strong>
+                            <!-- <hr class="more_arrow9">
+                            <strong>더보기</strong> -->
                         </div><!--press_info_box9-->
                     </div><!--press_release_box9-->
                 </div><!--news_box3-->
