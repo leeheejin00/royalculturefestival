@@ -375,7 +375,7 @@ section.additional {
   display: flex;
   justify-content: space-between;
 }
-section.additional div.selected {
+section.additional div.first {
   color: #fff;
   background-color: #2f2411;
 }
@@ -395,56 +395,32 @@ section.additional div.transp .add-menu .selected {
   font-weight: bold;
   border-top: 2px solid #ffbe0f;
   color: #ffbe0f;
-}
-section.additional div.transp .add-menu .title-price, section.additional div.transp .add-menu .title-parking {
-  border-top: 2px solid #2f2411;
+  margin-bottom: 12px;
 }
 section.additional div.transp .add-menu div:hover {
   cursor: pointer;
   color: #ffbe0f;
 }
-section.additional div.transp .addition-conbox .subway, section.additional div.transp .addition-conbox .bus {
+section.additional div.transp .addition-conbox .text-yellow {
   display: flex;
   margin-bottom: 12px;
 }
-section.additional div.transp .addition-conbox .subway .title, section.additional div.transp .addition-conbox .bus .title {
-  width: 20%;
+section.additional div.transp .addition-conbox .text-yellow .title {
+  width: 25%;
   margin-right: 16px;
   font-size: 14px;
 }
-section.additional div.transp .addition-conbox .subway .details, section.additional div.transp .addition-conbox .bus .details {
+section.additional div.transp .addition-conbox .text-yellow .details {
   width: 75%;
 }
-section.additional div.transp .addition-conbox .subway .details p, section.additional div.transp .addition-conbox .bus .details p {
+section.additional div.transp .addition-conbox .text-yellow .details p {
   font-size: 14px;
   line-height: 1.3;
 }
-section.additional div.transp .addition-conbox .subway .station, section.additional div.transp .addition-conbox .bus .station {
+section.additional div.transp .addition-conbox .text-yellow .station {
   margin-right: 8px;
   color: #ffbe0f;
 }
-@media (min-width: 1024px) {
-  section.additional div.transp {
-    width: 49%;
-  }
-  section.additional div.transp .title-price, section.additional div.transp .title-parking {
-    display: none;
-  }
-  section.additional div.transp p {
-    font-size: 16px;
-  }
-}
 section.additional div.price, section.additional div.parking {
   display: none;
-}
-@media (min-width: 1024px) {
-  section.additional div.price, section.additional div.parking {
-    display: block;
-    width: 23%;
-    border: 1px solid #eaeaea;
-  }
-  section.additional div.price .title, section.additional div.parking .title {
-    margin: 13px 0 0 16px;
-    padding-top: 8px;
-  }
 }/*# sourceMappingURL=place_detail.css.map */
