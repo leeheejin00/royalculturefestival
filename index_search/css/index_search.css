@@ -438,7 +438,7 @@ form .search-box .search img {
   #notice .notice-allbox .notice .notice-box1, #notice .notice-allbox .notice .notice-box3 {
     padding: 38px 0;
     border-bottom: 0;
-    width: 94%;
+    width: 50%;
     margin: 0 auto;
   }
 }
@@ -537,7 +537,7 @@ form .search-box .search img {
   #notice .notice-allbox .notice .notice-box2 {
     padding: 38px 0;
     border-bottom: 0;
-    width: 94%;
+    width: 50%;
     margin: 0 auto;
   }
 }
@@ -626,8 +626,10 @@ form .search-box .search img {
 }
 @media (min-width: 1024px) {
   #notice .notice-allbox .notice .notice-box3 {
-    width: 100%;
     padding: 38px 0;
+    border-bottom: 0;
+    width: 50%;
+    margin: 0 auto;
     border-top: 3px solid #eeeeee;
     border-bottom: 3px solid #eeeeee;
     display: flex;
@@ -637,7 +639,7 @@ form .search-box .search img {
     margin: 0 auto;
   }
   #notice .notice-allbox .notice .notice-box3 .notice-img {
-    width: 50%;
+    padding-left: 50px;
   }
   #notice .notice-allbox .notice .notice-box3 .notice-img img {
     width: 100%;
