@@ -259,10 +259,12 @@ header {
                             height: 30px;
                             line-height: 30px;
                             text-align: center;
-                            text-decoration: underline;
                             font-family: $font-regular;
                             &:hover {
                                 color: #ffbe0f;
+                                text-decoration: underline;
+                                text-underline-position: under;
+                                text-underline-offset: length($list: 5em);
                             }
                         }
                     }
@@ -275,12 +277,13 @@ header {
                             border-top: 0;
                             border-left: 0;
                             border-right: 0;
-                            color: black;
+                            padding-bottom: 3px;
+                            font-size: 16px;
                         }
                         .search{
                             position: absolute;
-                            top: -18px;
-                            left: 135px;
+                            top: -10px;
+                            left: 163px;
                             img {
                                 width: 30px;
                             }
