@@ -1,9 +1,9 @@
 @import "./style.scss";
 @import "./reset.scss";
 @import "./mixin.scss";
-@import "../../scss/header_footer.scss";
-@import "../../scss/mixin.scss";
-@import "../../scss/style.scss";
+@import "../header_footer/scss/header_footer.scss";
+@import "../scss/mixin.scss";
+@import "../scss/style.scss";
 
 .container {
     width: $width-wide;
@@ -101,7 +101,7 @@
         left: 13px;
         color: white;
         transition: all 0.25s ease;
-        -webkit-backface-visibility: hidden;
+        // -webkit-backface-visibility: hidden;
         pointer-events: none;
         font-size: 22px;
         
@@ -189,7 +189,7 @@
         background: #f1ebde;
         color: white;
         transition: all 0.5s ease;
-        -webkit-appearance: none;
+        // -webkit-appearance: none;
         
         &:hover, &:focus {
             background: #f1ebde;
@@ -397,9 +397,8 @@ header {
                 a {
                     display: flex;
                     align-items: baseline;
-                    color: white;
+                    color: black;
                     padding: 10px;
-                    text-decoration: none;
                     font-size: 18px;
                     font-family: $font-regular;
                     z-index: 200;
@@ -459,17 +458,17 @@ header {
                         overflow: hidden;
                         max-height: 0;
                         transition: max-height 0.5s ease-out;
-                          li {
-                              a {
-                                  font-family: $font-pre-regular;
-                                  text-decoration: none;
-                                  font-size: 18px;
-                                  color: white;
-                                  &:hover {
-                                      color: #ffbe0f;
-                                  }
-                              }   
-                          }
+                        li {
+                            a {
+                                font-family: $font-pre-regular;
+                                text-decoration: none;
+                                font-size: 18px;
+                                color: white;
+                                &:hover {
+                                    color: #ffbe0f;
+                                }
+                            }   
+                        }
                       }
                       .submenu.open {
                         display: block;

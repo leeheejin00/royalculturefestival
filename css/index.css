@@ -373,11 +373,13 @@ header .menu_box {
     height: 30px;
     line-height: 30px;
     text-align: center;
-    text-decoration: underline;
     font-family: "KimjungchulMyungjo-Regular";
   }
   header .menu_box .mainmenu .gnb a:hover {
     color: #ffbe0f;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-underline-offset: 1;
   }
   header .menu_box form .search-box {
     position: relative;
@@ -387,12 +389,13 @@ header .menu_box {
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    color: black;
+    padding-bottom: 3px;
+    font-size: 16px;
   }
   header .menu_box form .search-box .search {
     position: absolute;
-    top: -18px;
-    left: 135px;
+    top: -10px;
+    left: 163px;
   }
   header .menu_box form .search-box .search img {
     width: 30px;
@@ -411,7 +414,6 @@ footer .sns {
   background-color: #ffbe0f;
   display: flex;
   justify-content: center;
-  background-color: #ffbe0f;
   width: 100%;
   height: 67px;
 }
@@ -431,16 +433,20 @@ footer .sns a {
 }
 footer .sns a img {
   width: 48px;
+  transition: filter 0.3s ease;
+}
+footer .sns a:hover img {
+  width: 58px;
 }
 footer .sns a:last-child {
   margin-right: 0;
 }
 footer .footer-back {
-  background: url(../images/footer-pattern-bg.png);
+  background: url(../../images/footer-pattern-bg.png);
 }
 @media (min-width: 1024px) {
   footer .footer-back {
-    background: url(../images/header_backpc.png);
+    background: url(../../images/header_backpc.png);
     background-size: cover;
     background-color: #2f2411;
   }
@@ -639,7 +645,6 @@ footer .copyright p {
   left: 13px;
   color: white;
   transition: all 0.25s ease;
-  -webkit-backface-visibility: hidden;
   pointer-events: none;
   font-size: 22px;
 }
@@ -714,7 +719,6 @@ footer .copyright p {
   background: #f1ebde;
   color: white;
   transition: all 0.5s ease;
-  -webkit-appearance: none;
 }
 .form .button:hover, .form .button:focus {
   background: #f1ebde;
@@ -903,9 +907,8 @@ header .side-menu .side-nav {
 header .side-menu .side-nav .gnb li a {
   display: flex;
   align-items: baseline;
-  color: white;
+  color: black;
   padding: 10px;
-  text-decoration: none;
   font-size: 18px;
   font-family: "KimjungchulMyungjo-Regular";
   z-index: 200;
@@ -979,13 +982,14 @@ header .menu_box {
     color: white;
     font-size: 20px;
     height: 30px;
+    text-decoration: none;
     line-height: 30px;
     text-align: center;
-    text-decoration: underline;
     font-family: "KimjungchulMyungjo-Regular";
   }
   header .menu_box .mainmenu .gnb a:hover {
     color: #ffbe0f;
+    text-decoration: underline;
   }
   header .menu_box form .search-box {
     z-index: 5;
@@ -998,6 +1002,7 @@ header .menu_box {
     border-right: 0;
     border-bottom: 2px solid white;
     background: transparent;
+    color: white;
   }
   header .menu_box form .search-box .search {
     position: absolute;
