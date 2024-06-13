@@ -481,12 +481,13 @@ header {
                           color: white;
                           font-size: 20px;
                           height: 30px;
+                          text-decoration: none;
                           line-height: 30px;
                           text-align: center;
-                          text-decoration: underline;
                           font-family: $font-regular;
                           &:hover {
                               color: #ffbe0f;
+                              text-decoration: underline;
                           }
                       }
                   }
@@ -503,6 +504,7 @@ header {
                           border-right: 0;
                           border-bottom: 2px solid white;
                           background: transparent;
+                          color: white;
                       }
                       .search {
                           position: absolute;

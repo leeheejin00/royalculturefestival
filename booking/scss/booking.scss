@@ -3,8 +3,7 @@
 @import "./mixin.scss";
 @import "../../scss/mixin.scss";
 @import "../../scss/style.scss";
-@import "../../scss/header.scss";
-@import "../../scss/footer.scss";
+@import "../../header_footer/scss/header_footer.scss";
 
 .container {
     width: $width-wide;
