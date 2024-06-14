@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+hr {
+    height: 1px;
+    margin-top: 16px;
+    border: 0;
+    background-color: #29251d;
+}
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 32px 8px;
+  }
+  th, td {
+    padding: 12px 0;
+    text-align: center;
+    position: relative; /* 추가: 상대 위치 설정 */
+  }
+  th {
+    color: #29251d;
+    /* background-color: #f2f2f2; */
+  }
+  td:hover {
+    cursor: pointer;
+    background-color: #f2f2f200;
+  }
+  td:hover::before { /* 추가: 선택된 날짜 앞에 동그라미 요소 생성 */
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: #eeeeee;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* 추가: 동그라미를 날짜 뒤로 배치 */
+    overflow: hidden;
+  }
+  .today {
+    background-color: #efefef;
+    /* background-color: #ffbc0f; */
+  }
+  .selected:hover {
+    background-color: #ffffff00;
+  }
+  .selected::before { /* 추가: 선택된 날짜 앞에 동그라미 요소 생성 */
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: #ffbe0f;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* 추가: 동그라미를 날짜 뒤로 배치 */
+    overflow: hidden;
+  }
+  /* @media screen and (max-width: 600px) {
+    .selected::before { 
+        display: none;
+    }
+  } */
+  .button {
+    width: 40%;
+    margin: 32px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  button {
+    width: 10%;
+    border: 0;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ccc;
+    background: white;
+  }

@@ -134,8 +134,9 @@ footer {
 }
 
 .container {
-  max-width: 1416px;
-  margin: 32px auto;
+  width: 100%;
+  max-width: 568px;
+  margin: 0 auto;
   padding: 0 16px;
 }
 
@@ -167,11 +168,6 @@ section.info-calendar .mobile-title .period, section.info-calendar .mobile-title
 section.info-calendar .mobile-title .small {
   color: #cccccc;
 }
-@media (min-width: 1024px) {
-  section.info-calendar .mobile-title {
-    display: none;
-  }
-}
 section.info-calendar img {
   width: 70%;
   margin: 0 15% 16px;
@@ -179,13 +175,9 @@ section.info-calendar img {
 section.info-calendar .info .title {
   display: none;
 }
-@media (min-width: 1024px) {
-  section.info-calendar .info .title {
-    display: block;
-  }
-}
-section.info-calendar .info #calendar {
-  width: 100%;
+section.info-calendar .info #calendar-all {
+  width: 95%;
+  margin: 0 auto;
 }
 
 section.booking-info div.time-num div {
@@ -239,16 +231,12 @@ section.booking-info div.time-num .num li:nth-child(3) .bg {
 section.booking-info div.time-num .num li:last-child {
   margin-top: 16px;
 }
-@media (min-width: 1024px) {
-  section.booking-info div.time-num {
-    display: flex;
-  }
-}
 section.booking-info div.price,
 section.booking-info div.pay {
   margin: 24px 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 section.booking-info div.price p.title,
 section.booking-info div.pay p.title {
@@ -345,6 +333,7 @@ section.booking-info div.info .info-box .modify {
   background-repeat: no-repeat;
 }
 .note .content {
+  width: 100%;
   font-size: 12px;
   margin-bottom: 24px;
 }
@@ -355,5 +344,6 @@ button.book {
   padding: 8px 20px;
   border: 0;
   border-radius: 8px;
+  color: #29251d;
   background-color: #ffbe0f;
 }/*# sourceMappingURL=booking_popup.css.map */

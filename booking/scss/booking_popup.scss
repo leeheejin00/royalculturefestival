@@ -3,13 +3,11 @@
 @import "./mixin.scss";
 @import "../../scss/mixin.scss";
 @import "../../scss/style.scss";
-@import "../../scss/header.scss";
-@import "../../scss/footer.scss";
 
 .container {
-    // width: $width-wide;
-    max-width: 1416px;
-    margin: 32px auto;
+    width: 100%;
+    max-width: 568px;
+    margin: 0 auto;
     padding: 0 16px;
 }
 ul, ol, li { list-style: none; }
@@ -41,10 +39,6 @@ section.info-calendar {
         .small {
             color: $basic-gray;
         }
-
-        @include responsive(large-screens) {
-            display: none;
-        }
     }  // mobile-title
 
     img {
@@ -55,14 +49,11 @@ section.info-calendar {
     .info {
         .title {
             display: none;
-            
-            @include responsive(large-screens) {
-                display: block;
-            }
         }  // title
 
-        #calendar {
-            width: 100%;
+        #calendar-all {
+            width: 95%;
+            margin: 0 auto;
             // background-color: paleturquoise;
         }  // calendar
     }  // info
@@ -135,10 +126,6 @@ section.booking-info {
                 margin-top: 16px;
             }
         }  // num
-
-        @include responsive(large-screens) {
-            display: flex;
-        }
     }  // time-num
     
     div.price, 
@@ -146,6 +133,7 @@ section.booking-info {
         margin: 24px 0;
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
 
         p.title {
             width: 20%;
@@ -256,6 +244,7 @@ section.booking-info {
     }
 
     .content {
+        width: 100%;
         font-size: 12px;
         margin-bottom: 24px;
     }
@@ -269,5 +258,6 @@ button.book {
     // transform: translateX(50%);
     border: 0;
     border-radius: 8px;
+    color: #29251d;
     background-color: $basic-yellow;
 }
