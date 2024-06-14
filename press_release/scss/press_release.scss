@@ -96,7 +96,7 @@
         left: 13px;
         color: white;
         transition: all 0.25s ease;
-        -webkit-backface-visibility: hidden;
+        // -webkit-backface-visibility: hidden;
         pointer-events: none;
         font-size: 22px;
         
@@ -184,7 +184,7 @@
         background: #f1ebde;
         color: white;
         transition: all 0.5s ease;
-        -webkit-appearance: none;
+        // -webkit-appearance: none;
         
         &:hover, &:focus {
             background: #f1ebde;
@@ -347,7 +347,7 @@
                 }
 
                 .more_arrow {
-                    display: none;
+                    display: block;
                 }
             }
         }
@@ -395,7 +395,7 @@
                 }
 
                 .more_arrow2 {
-                    display: none;
+                    display: block;
                 }
             }
         }

@@ -9,6 +9,21 @@
     <script src="./js/login.js"></script>
     <title>index</title>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchIcon = document.getElementById('searchIcon');
+            const searchInput = document.getElementById('searchInput');
+
+            searchIcon.addEventListener('click', function() {
+                const query = searchInput.value;
+                if (query === '경복궁') {
+                    window.location.href = './index_search/index_search.html';
+                } else {
+                    alert('Please enter "경복궁" to search.');
+                }
+            });
+        });
+    </script>
+    <script>
         window.onload = function() {
             const toggleBtn = document.querySelector('.menu-toggle-btn');
             const sideMenu = document.getElementById('side-menu');
@@ -327,15 +342,21 @@
                         </li>
                     </ul>
                 </nav>
-                <form action="../index_search/index_search.html" method="get" onsubmit="return validateSearch()">
-                    <div class="search-box">
-                        <label for="find"></label>
-                        <input type="search" id="find" name="find" value="경복궁" />
-                        <div class="search" onclick="submitForm()">
-                            <img src="./images/main-search-white.png" alt="Search">
-                        </div>
-                    </div>
-                </form>
+                <form action="./index_search/index_search.html" method="get" onsubmit="return validateSearch()">
+    <div class="search-box">
+        <label for="find"></label>
+        <input type="search" id="find" name="find" value="경복궁" />
+        <div class="search" onclick="submitForm()">
+            <img src="./images/main-search-white.png" alt="Search">
+        </div>
+    </div>
+</form>
+
+<script>
+    function submitForm() {
+        document.querySelector('form').submit();
+    }
+</script>
             </div>
         </div>
     </header>
@@ -973,26 +994,25 @@
 
     <footer>
         <div class="sns">
-            <a href="https://www.instagram.com/royalculturefestival_official/"><img src="./images/instagram.png" alt="instagram"></a>
-            <a href="https://www.youtube.com/channel/UC1_vDkQlNg0zjj-EQRXapww?view_as=subscriber"><img src="./images/youtube.png" alt="youtube"></a>
-            <a href="https://blog.naver.com/royalculture"><img src="./images/naver blog.png" alt="blog"></a>
+            <a href="https://www.instagram.com/royalculturefestival_official/"><img src="../images/instagram.png" alt="instagram"></a>
+            <a href="https://www.youtube.com/channel/UC1_vDkQlNg0zjj-EQRXapww?view_as=subscriber"><img src="../images/youtube.png" alt="youtube"></a>
+            <a href="https://blog.naver.com/royalculture"><img src="../images/naver blog.png" alt="blog"></a>
         </div>
         <div class="footer-back">
             <div class="footLogo">
-                <a href="../index/index.html"><img src="images/footer_logo.png" alt=""></a>
+                <a href="../index.html"><img src="../images/footer_logo.png" alt=""></a>
             </div>
             <form action="">
                 <label for="sitemap" class="custom-select">
-                    <select name="sitemap" id="sitemap">
+                    <select name="sitemap" id="sitemap" onchange="navigateToSite()">
                         <option value="sitemap" selected>사이트맵</option>
-                        <option value="">국가유산진흥원</option>
-                        <option value="">한국의집</option>
-                        <option value="">KHMALL(문화상품)</option>
-                        <option value="">매장유산국비발굴단</option>
-                        <option value="">국가유산채널</option>
-                        <option value="">국가유산 방문 캠페인</option>
-                        <option value="">조선왕릉문화제</option>
-                        <option value="">패밀리사이트</option>
+                        <option value="https://www.kh.or.kr/kha">국가유산진흥원</option>
+                        <option value="https://www.kh.or.kr/kh">한국의집</option>
+                        <option value="https://www.khmall.or.kr/">KHMALL(문화상품)</option>
+                        <option value="https://www.kh.or.kr/bhse">매장유산국비발굴단</option>
+                        <option value="https://www.k-heritage.tv">국가유산채널</option>
+                        <option value="https://www.kh.or.kr/visit">국가유산 방문 캠페인</option>
+                        <option value="https://jrtf.or.kr/">조선왕릉문화제</option>
                     </select>
                 </label>
             </form>
@@ -1011,5 +1031,14 @@
             </div>
         </div>
     </footer>
+    <script>
+        function navigateToSite() {
+            var select = document.getElementById('sitemap');
+            var url = select.options[select.selectedIndex].value;
+            if (url) {
+                window.location.href = url;
+            }
+        }
+        </script>
 </body>
 </html>

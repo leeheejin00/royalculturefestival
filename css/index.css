@@ -1006,8 +1006,8 @@ header .menu_box {
   }
   header .menu_box form .search-box .search {
     position: absolute;
-    top: -18px;
-    left: 135px;
+    top: -12px;
+    left: 160px;
   }
   header .menu_box form .search-box .search img {
     width: 30px;

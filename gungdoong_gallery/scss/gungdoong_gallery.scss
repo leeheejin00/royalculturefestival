@@ -3,8 +3,6 @@
 @import "./mixin.scss";
 @import "../../scss/mixin.scss";
 @import "../../scss/style.scss";
-@import "../../scss/header.scss";
-@import "../../scss/footer.scss";
 @import "../../header_footer/scss/header_footer.scss";
 
 .modal-overlay {
@@ -96,7 +94,7 @@
         left: 13px;
         color: white;
         transition: all 0.25s ease;
-        -webkit-backface-visibility: hidden;
+        // -webkit-backface-visibility: hidden;
         pointer-events: none;
         font-size: 22px;
         
@@ -184,7 +182,7 @@
         background: #f1ebde;
         color: white;
         transition: all 0.5s ease;
-        -webkit-appearance: none;
+        // -webkit-appearance: none;
         
         &:hover, &:focus {
             background: #f1ebde;
@@ -369,6 +367,7 @@
     }
    
     .review1 {
+        cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: end;
@@ -387,7 +386,6 @@
                 width: 100%;
             }
             .re-txt {
-                
                 text-align: justify;
                 font-size: 18px;
                 font-family: $font-regular;
@@ -429,6 +427,9 @@
                     height: 2px;
                     border: 1px solid #b1aa9e;
                     background-color: #b1aa9e;
+                    &:hover {
+                        color: #ffbe0f;
+                    }
                 }
                 a {
                     text-align: justify;
@@ -436,6 +437,9 @@
                     font-size: 12px;
                     font-family: $font-medium;
                     color: white;
+                    &:hover {
+                        color: #ffbe0f;
+                    }
                     @include responsive(large-screens) {
                         font-size: 20px;
                     }
@@ -444,6 +448,7 @@
         } 
     }
     .review2 {
+        cursor: pointer;
         position: relative;
         margin-top: 114px;
         display: flex;
@@ -504,6 +509,10 @@
                     height: 2px;
                     border: 1px solid #b1aa9e;
                     background-color: #b1aa9e;
+                    &:hover {
+                        color: #ffbe0f;
+                        background-color: #ffbe0f
+                    }
                 }
                 a {
                     text-align: justify;
@@ -511,6 +520,9 @@
                     font-size: 12px;
                     font-family: $font-medium;
                     color: white;
+                    &:hover {
+                        color: #ffbe0f;
+                    }
                     @include responsive(large-screens) {
                         font-size: 20px;
                     }
@@ -520,6 +532,7 @@
         } 
     }
     .review3 {
+        cursor: pointer;
         position: relative;
         margin-top: 114px;
         display: flex;
@@ -585,6 +598,9 @@
                     font-size: 12px;
                     font-family: $font-medium;
                     color: white;
+                    &:hover {
+                        color: #ffbe0f;
+                    }
                     @include responsive(large-screens) {
                         font-size: 20px;
                     }
@@ -620,6 +636,7 @@
             margin: 17px 0;
             font-size: 16px;
             font-family: $font-gothic-regular;
+            cursor: pointer;
             @include responsive(large-screens) {
                 font-size: 36px;
             }
@@ -644,6 +661,7 @@
             margin: 13px 0;
             font-size: 14px;
             font-family: $font-gothic-regular;
+            cursor: pointer;
             @include responsive(large-screens) {
                 font-size: 24px;
                 margin-bottom: 80px;
