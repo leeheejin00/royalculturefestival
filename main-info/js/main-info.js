@@ -3,11 +3,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // 연혁 연도 클릭시 포스터 변경
     const yearElements = document.querySelectorAll('.year-arr .year');
     const posterImg = document.getElementById('poster-img');
+    const numFestiElement = document.querySelector('.num-festi2023 strong');
+    
+    // 각 연도에 해당하는 궁중문화축전 횟수
+    const festiNumbers = {
+        2017: '제2회 궁중문화축전',
+        2018: '제3회 궁중문화축전',
+        2019: '제4회 궁중문화축전',
+        2020: '제5회 궁중문화축전',
+        2021: '제6회 궁중문화축전',
+        2022: '제7회 궁중문화축전',
+        2023: '제8회 궁중문화축전'
+    };
 
     yearElements.forEach(year => {
         year.addEventListener('click', function() {
             const imgFile = year.getAttribute('data-img');
             posterImg.src = `./images/${imgFile}`;
+
+            const yearValue = year.textContent;
+            numFestiElement.innerHTML = festiNumbers[yearValue].replace(' ', '<br>');
         });
     });
 
@@ -27,97 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-
-
-    // 로그인 및 회원가입 창
-
-      var loginToggle = document.getElementById('login-toggle');
-      var mobileLoginToggle = document.getElementById('mobile-login-toggle'); // 모바일 로그인 버튼
-      var modalOverlay = document.querySelector('.modal-overlay');
-      var modalForm = document.querySelector('.form');
-
-      function showModal(e) {
-        e.preventDefault(); // 기본 동작 방지
-        modalForm.style.display = 'block'; // 폼을 보이게 함
-        modalOverlay.style.display = 'block'; // 배경을 보이게 함
-      }
-
-      loginToggle.addEventListener('click', showModal);
-      mobileLoginToggle.addEventListener('click', showModal); // 모바일 로그인 버튼 클릭 이벤트 추가
-
-    
-      // 로그인 토글 버튼 클릭 이벤트
-      loginToggle.addEventListener('click', function(e) {
-        e.preventDefault(); // 기본 동작 방지
-        modalForm.style.display = 'block'; // 폼을 보이게 함
-        modalOverlay.style.display = 'block'; // 배경을 보이게 함
-      });
-    
-      // 모달 오버레이 클릭 이벤트
-      modalOverlay.addEventListener('click', function() {
-        this.style.display = 'none'; // 배경을 숨김
-        modalForm.style.display = 'none'; // 폼을 숨김
-      });
-
-       // Find all input and textarea elements inside the form
-    var inputs = document.querySelectorAll('.form input, .form textarea');
-
-    // Attach event listeners for keyup, blur, and focus events
-    inputs.forEach(function(input) {
-        input.addEventListener('keyup', handleEvent);
-        input.addEventListener('blur', handleEvent);
-        input.addEventListener('focus', handleEvent);
-    });
-
-    function handleEvent(e) {
-        var input = e.target;
-        var label = input.previousElementSibling;
-
-        if (e.type === 'keyup') {
-            if (input.value === '') {
-                label.classList.remove('active', 'highlight');
-            } else {
-                label.classList.add('active', 'highlight');
-            }
-        } else if (e.type === 'blur') {
-            if (input.value === '') {
-                label.classList.remove('active', 'highlight');
-            } else {
-                label.classList.remove('highlight');
-            }
-        } else if (e.type === 'focus') {
-            if (input.value === '') {
-                label.classList.remove('highlight');
-            } else {
-                label.classList.add('highlight');
-            }
-        }
-    }
-    
-      // 탭 메커니즘 구현
-      document.querySelectorAll('.tab a').forEach(function(tab) {
-        tab.addEventListener('click', function(e) {
-          e.preventDefault();
-      
-          var parent = this.parentElement;
-          parent.classList.add('active');
-          Array.from(parent.parentElement.children).forEach(function(sibling) {
-            if (sibling !== parent) {
-              sibling.classList.remove('active');
-            }
-          });
-      
-          var target = this.getAttribute('href');
-          document.querySelectorAll('.tab-content > div').forEach(function(div) {
-            if (div !== document.querySelector(target)) {
-              div.style.display = 'none';
-            }
-          });
-      
-          document.querySelector(target).style.display = 'block';
-          modalOverlay.style.display = 'block'; // 배경을 보이게 함
-        });
-      });
 });
 
 function slideLeft() {

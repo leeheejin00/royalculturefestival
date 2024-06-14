@@ -6,23 +6,114 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../header_footer/css/header_footer.css">
     <link rel="stylesheet" href="./css/gungdoong_gallery.css">
+    <script src="./js/login.js"></script>
+    <script src="./js/loginTab.js"></script>
     <title>궁이둥이 갤러리</title>
 </head>
 <body>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchIcon = document.getElementById('searchIcon');
-            const searchInput = document.getElementById('searchInput');
+        window.onload = function() {
+            const toggleBtn = document.querySelector('.menu-toggle-btn');
+            const sideMenu = document.getElementById('side-menu');
 
-            searchIcon.addEventListener('click', function() {
-                const query = searchInput.value;
-                if (query === '경복궁') {
-                    window.location.href = '../index_search/index_search.html';
+            toggleBtn.addEventListener('click', function() {
+                 if (sideMenu.style.right === '0px') {
+                    sideMenu.style.right = '-250px'; 
+                    toggleBtn.classList.remove('open'); 
                 } else {
-                    alert('Please enter "경복궁" to search.');
+                    sideMenu.style.right = '0'; 
+                    toggleBtn.classList.add('open'); 
+                }
+            });
+        };
+    </script>
+    <script>
+        document.getElementById('languageIcon').addEventListener('click', function(event) {
+        event.preventDefault();
+        var languageSelect = document.getElementById('languageSelect');
+        if (languageSelect.style.display === 'none' || languageSelect.style.display === '') {
+            languageSelect.style.display = 'block';
+        } else {
+            languageSelect.style.display = 'none';
+        }
+    });
+    </script>   
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var searchIcon = document.getElementById("searchIcon");
+        var searchInput = document.getElementById("searchInput");
+
+        searchIcon.addEventListener("click", function(event) {
+            event.preventDefault();
+            if (searchInput.style.display === "none" || searchInput.style.display === "") {
+                searchInput.style.display = "block";
+                searchInput.focus();
+            } else {
+                searchInput.style.display = "none";
+            }
+        });
+
+        document.addEventListener("click", function(event) {
+            if (!searchInput.contains(event.target) && !searchIcon.contains(event.target)) {
+                searchInput.style.display = "none";
+            }
+        });
+    });
+    </script>
+
+    <script>
+        function submitForm() {
+            document.querySelector('form').submit();
+        }
+
+        function validateSearch() {
+            const searchInput = document.getElementById('find').value.trim();
+            if (searchInput === '') {
+                alert('검색어를 입력하세요.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const menuItems = document.querySelectorAll('.gnb > li > a');
+        
+        menuItems.forEach(item => {
+            item.addEventListener('mouseover', function (e) {
+                e.preventDefault();
+                const submenu = this.nextElementSibling;
+
+                // 모든 서브메뉴를 닫기
+                document.querySelectorAll('.submenu').forEach(sub => {
+                    if (sub !== submenu) {
+                        sub.classList.remove('open');
+                        sub.style.maxHeight = null;
+                    }
+                });
+
+                // 클릭한 서브메뉴 토글
+                if (submenu && submenu.classList.contains('submenu')) {
+                    submenu.classList.toggle('open');
+                    if (submenu.classList.contains('open')) {
+                        submenu.style.maxHeight = submenu.scrollHeight + "px";
+                    } else {
+                        submenu.style.maxHeight = null;
+                    }
+                }
+            });
+
+            item.parentElement.addEventListener('mouseleave', function () {
+                const submenu = item.nextElementSibling;
+                if (submenu && submenu.classList.contains('submenu')) {
+                    submenu.classList.remove('open');
+                    submenu.style.maxHeight = null;
                 }
             });
         });
+    });
     </script>
 </head>
 <body>
@@ -41,7 +132,7 @@
                         </select>
                         <a href="#"><img id="languageIcon" src="./images/internet.png" alt=""></a>
                     </div>
-                    <a href="#"><img src="./images/korean-hat.png" alt=""></a>
+                    <a href="#" id="login-toggle"><img src="./images/korean-hat.png" alt=""></a>
                     <a href="#"><img id="searchIcon" src="./images/search.png" alt="search"></a>
                     <div class="menu-toggle-btn">
                         <span>&nbsp</span>
@@ -51,51 +142,14 @@
                     <input type="text" id="searchInput" class="search-input" placeholder="Search...">
                 </div> <!-- search-menu -->
             </div> <!-- logo-icon -->
-            <script>
-                document.getElementById('languageIcon').addEventListener('click', function(event) {
-                event.preventDefault();
-                var languageSelect = document.getElementById('languageSelect');
-                if (languageSelect.style.display === 'none' || languageSelect.style.display === '') {
-                    languageSelect.style.display = 'block';
-                } else {
-                    languageSelect.style.display = 'none';
-                }
-            });
-            </script>   
-            
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                var searchIcon = document.getElementById("searchIcon");
-                var searchInput = document.getElementById("searchInput");
-
-                searchIcon.addEventListener("click", function(event) {
-                    event.preventDefault();
-                    if (searchInput.style.display === "none" || searchInput.style.display === "") {
-                        searchInput.style.display = "block";
-                        searchInput.focus();
-                    } else {
-                        searchInput.style.display = "none";
-                    }
-                });
-
-                document.addEventListener("click", function(event) {
-                    if (!searchInput.contains(event.target) && !searchIcon.contains(event.target)) {
-                        searchInput.style.display = "none";
-                    }
-                });
-            });
-            </script>
-
-
             <div id="side-menu" class="side-menu">
                 <div class="language-login">
                     <div class="language">
                         <a href="#" id="languageToggle">Language</a>
-                        <a href="#" id="languageToggle2">언어</a>
                         <a href=""><img src="./images/language-white.png" alt="language"></a> 
                     </div>
                     <div class="login">
-                        <a href="#">로그인</a>
+                        <a href="#" id="mobile-login-toggle">로그인</a>
                         <a href="#"><img src="./images/login-white.png" alt="login"></a>
                     </div>
                 </div>  
@@ -202,90 +256,90 @@
                 </form>
             </div>
         </div>
-        
-
-        <script>
-            function submitForm() {
-                document.querySelector('form').submit();
-            }
-    
-            function validateSearch() {
-                const searchInput = document.getElementById('find').value.trim();
-                if (searchInput === '') {
-                    alert('검색어를 입력하세요.');
-                    return false;
-                }
-                return true;
-            }
-        </script>
-
-        <script>
-            window.onload = function() {
-                const toggleBtn = document.querySelector('.menu-toggle-btn');
-                const sideMenu = document.getElementById('side-menu');
-                const closeBtn = document.querySelector('.close-btn');
-    
-                toggleBtn.addEventListener('click', function() {
-                    if (sideMenu.style.right === '0px') {
-                        sideMenu.style.right = '-50%'; 
-                        toggleBtn.classList.remove('open'); 
-                    } else {
-                        sideMenu.style.right = '0'; 
-                        toggleBtn.classList.add('open'); 
-                    }
-                });
-    
-                closeBtn.addEventListener('click', function() {
-                    sideMenu.style.right = '-50%'; 
-                    toggleBtn.classList.remove('open'); 
-                });
-            };
-        </script>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const menuItems = document.querySelectorAll('.gnb > li > a');
-                const header = document.querySelector('header');
-        
-                menuItems.forEach(item => {
-                    item.addEventListener('mouseover', function (e) {
-                        e.preventDefault();
-                        const submenu = this.nextElementSibling;
-                        let allSubmenus = document.querySelectorAll('.submenu');
-        
-                        // Close all submenus except the current one
-                        allSubmenus.forEach(sub => {
-                            if (sub !== submenu) {
-                                sub.classList.remove('open');
-                                sub.style.maxHeight = null;
-                            }
-                        });
-        
-                        // Toggle the clicked submenu
-                        if (submenu && submenu.classList.contains('submenu')) {
-                            submenu.classList.toggle('open');
-                            if (submenu.classList.contains('open')) {
-                                submenu.style.maxHeight = submenu.scrollHeight + "px";
-                            } else {
-                                submenu.style.maxHeight = null;
-                            }
-        
-                            // Adjust header height
-                            setTimeout(() => {
-                                let totalHeight = 180; 
-                                allSubmenus.forEach(sub => {
-                                    if (sub.classList.contains('open')) {
-                                        totalHeight += sub.scrollHeight;
-                                    }
-                                });
-                                header.style.height = totalHeight + "px";
-                            }, 300); 
-                        }
-                    });
-                });
-            });
-        </script>
     </header>
+
+
+    <div class="modal-overlay"></div>   
+
+        <div class="form">
+    
+            <ul class="tab-group">
+              <li class="tab active"><a href="#signup">회원가입</a></li>
+              <li class="tab"><a href="#login">로그인</a></li>
+            </ul>
+            
+            <div class="tab-content">
+              <div id="signup">   
+                <h1>무료로 회원가입 하세요!</h1>
+                
+                <form action="/" method="post">
+                
+                <div class="top-row">
+                  <div class="field-wrap">
+                    <label>
+                      성<span class="req">*</span>
+                    </label>
+                    <input type="text" required autocomplete="off" />
+                  </div>
+              
+                  <div class="field-wrap">
+                    <label>
+                      이름<span class="req">*</span>
+                    </label>
+                    <input type="text"required autocomplete="off"/>
+                  </div>
+                </div>
+      
+                <div class="field-wrap">
+                  <label>
+                    이메일 주소<span class="req">*</span>
+                  </label>
+                  <input type="email"required autocomplete="off"/>
+                </div>
+                
+                <div class="field-wrap">
+                  <label>
+                    비밀번호 설정<span class="req">*</span>
+                  </label>
+                  <input type="password"required autocomplete="off"/>
+                </div>
+                
+                <button type="submit" class="button button-block">Get Started</button>
+                
+                </form>
+      
+              </div>
+              
+              <div id="login">   
+                <h1>환영합니다!</h1>
+                
+                <form id="login-form" action="login.php" method="post">
+                
+                  <div class="field-wrap">
+                  <label>
+                    이메일 주소<span class="req">*</span>
+                  </label>
+                  <input type="email" id="login-email" name="login-email" required autocomplete="off"/>
+                </div>
+                
+                <div class="field-wrap">
+                  <label>
+                    비밀번호<span class="req">*</span>
+                  </label>
+                  <input type="password" id="login-password" name="login-password" required autocomplete="off"/>
+                </div>
+                
+                <p class="forgot"><a href="#">혹시 비밀번호를 잊으셨나요?</a></p>
+                
+                <button class="button button-block">Log In</button>
+                
+                </form>
+      
+              </div>
+              
+            </div><!-- tab-content -->
+            
+      </div> <!-- /form -->
 
     <main>
         <section id="history">
