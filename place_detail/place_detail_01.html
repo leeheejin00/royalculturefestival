@@ -400,11 +400,12 @@
                         프로그램
                         <div class="underline">&nbsp;</div>
                     </div>
-                    <div class="icon">
+                    <!-- <div class="icon">
                         <a href="#"><img src="./images/calendar.png" alt="calendar"></a>
                         <a href="#"><img src="./images/filter.png" alt="filter"></a>
-                    </div><!-- button -->
-                </div>
+                    </div> -->
+                </div><!-- title-icon -->
+
                 <div class="program-list">
                     <div class="program01">
                         <div class="conbox">
@@ -435,10 +436,10 @@
                                     <div class="hashtag">
                                         <span class="experience">체험</span>
                                         <span class="book">예약</span>
-                                    </div><!-- hashtag -->
-                                </div><!-- desc -->
+                                    </div>
+                                </div>
                             </a>
-                        </div><!-- conbox -->
+                        </div>
                         <button class="able" onclick="openPopup()">예매하기</button>
                     </div>
     
@@ -478,6 +479,7 @@
                         <button class="able" onclick="openPopup()">예매하기</button>
                     </div>
                 </div><!-- program-list -->
+                
                 <script>
                     function openPopup() {
                       window.open("../booking/booking_popup.html", "Popup", "width=600,height=800");
@@ -569,25 +571,19 @@
                         var conbox = document.querySelector('.addition-conbox');
                         conbox.innerHTML = `
                             <div class="text-yellow">
-                                <div class="title">대인(만25~64세)</div>
+                                <div class="title">대인</div>
                                 <div class="details">
-                                    <p><span class="station">3,000원</span></p>
+                                    <p><span class="station">3,000원 <span class="additional-info">(만25~64세)</span></span></p>
                                 </div>
                             </div><!-- adult -->
                             <div class="text-yellow">
-                                <div class="title">소인(만7~18세)</div>
+                                <div class="title">소인</div>
                                 <div class="details">
-                                    <p><span class="station">1,500원</span></p>
+                                    <p><span class="station">1,500원</span> <span class="additional-info">(만7~18세)</span></p>
                                 </div>
                             </div><!-- kid -->
-                            <div class="text-yellow">
-                                <div class="title">만6세이하,<br>
-                                    만65세이상,<br>
-                                    한복착용자,<br>
-                                    문화가 있는 날</div>
-                                <div class="details">
-                                    <p><span class="station">무료</span></p>
-                                </div>
+                            <div class="additional-info">
+                                <div>※무료 이용 가능 관람객: 만6세이하, 만65세이상, 한복착용자, 문화가 있는 날 방문자</div>
                             </div><!-- free -->
                         `;
 
@@ -607,12 +603,9 @@
                                     <p>06:00 ~ 23:00</p>
                                 </div>
                             </div><!-- adult -->
-                            <div class="text-yellow">
-                                <div class="title">장애인주차장</div>
-                                <div class="details">
-                                    <p>지상주차장 (9면)</p>
-                                </div>
-                            </div><!-- kid -->
+                            <div class="additional-info">
+                                <div>※장애인 주차장: 지상주차장 (9면)</div>
+                            </div><!-- free -->
                         `;
 
                         // 선택된 메뉴에 selected 클래스 추가
