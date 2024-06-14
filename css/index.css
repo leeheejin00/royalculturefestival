@@ -907,7 +907,7 @@ header .side-menu .side-nav {
 header .side-menu .side-nav .gnb li a {
   display: flex;
   align-items: baseline;
-  color: black;
+  color: white;
   padding: 10px;
   font-size: 18px;
   font-family: "KimjungchulMyungjo-Regular";
