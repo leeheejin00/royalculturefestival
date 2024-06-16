@@ -5,12 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../..css/reset.css">
     <link rel="stylesheet" href="./css/booking_popup.css">
+    <link rel="stylesheet" href="./css/calendar.css">
+    <style>
+        .selected {
+            font-weight: bold;
+            color: #2f2411;
+            background-color: #ffbe0f;
+        }
+        /* section.booking-info {
+            display: none;
+        }
+
+        section.note {
+            display: none;
+        }
+
+        button.book {
+            display: none;
+        } */
+    </style>
+    <script src="./js/calendar.js"></script>
 	<script src="./js/jquery.js"></script>
-    <script>
+    <!-- <script>
         $(function() {
             $('#calendar-all').load('calendar.html');
         })
-    </script>
+    </script> -->
     <title>예매하기 팝업</title>
 </head>
 <body> <!-- 폼태그로 변경 ? -->
@@ -32,9 +52,18 @@
                     <p class="time">18:40 | 19:40 <span class="small">( 매주 수~일 2회차 진행 )</span></p>
                 </div>
                 
-                <div id="calendar-all"></div>
+                <div id="calendar-all">
+                    <hr>
+                    <div class="button">
+                      <button onclick="prevMonth()">&lt;</button>
+                      <p id="calendar-month">2024년 4월</p>
+                      <button onclick="nextMonth()">&gt;</button>
+                    </div>
+                    <div id="calendar"></div>
+                    <hr>
+                </div><!-- calendar-all -->
             </div> <!-- info -->
-        </section> <!-- info-calendar-->
+        </section> <!-- info-calendar -->
     
         <section class="booking-info">
             <div class="time-num">
@@ -46,7 +75,7 @@
                             <p class="small">잔여인원: 3명</p>
                         </li>
                         <li>
-                            <div class="bg disable">19 : 40</div>
+                            <div class="bg disable" onclick="showDisabledAlert()">19 : 40</div>
                             <p class="small">잔여인원: 0명</p>
                         </li>
                     </ul>
@@ -80,7 +109,7 @@
             <div class="pay">
                 <p class="title">결제방법</p>
                 <ul>
-                    <li class="disable">무통장입금</li>
+                    <li class="disable" onclick="showDisabledAlert()">무통장입금</li>
                     <li>계좌이체</li>
                     <li>카드결제</li>
                 </ul>
@@ -95,6 +124,13 @@
                     <p class="email"> <span class="bold">EMAIL</span> hong.gd123@naver.com</p>
                 </div>
             </div> <!-- info -->
+
+            <script>
+                
+                function showDisabledAlert() {
+                    alert('해당 항목은 예매가 불가능합니다.');
+                }
+                </script>
         </section><!-- booking-info -->
     </div><!-- container -->
 
@@ -134,6 +170,7 @@
             </div>
         </div><!-- container -->
     </section> <!-- note -->
+
     <div class="container">
         <button class="book">예매하기</button>
     </div>
