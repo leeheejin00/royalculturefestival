@@ -61,11 +61,11 @@ hr {
     /* background-color: #ffbc0f; */
   }
 
-  .selected:hover {
+  .selected-date:hover {
     background-color: #ffffff00;
   }
 
-  .selected::before { /* 추가: 선택된 날짜 앞에 동그라미 요소 생성 */
+  .selected-date::before { /* 추가: 선택된 날짜 앞에 동그라미 요소 생성 */
     content: "";
     width: 40px;
     height: 40px;
@@ -80,7 +80,7 @@ hr {
   }
 
   /* @media screen and (max-width: 600px) {
-    .selected::before { 
+    .selected-date::before { 
         display: none;
     }
   } */

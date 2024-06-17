@@ -13,11 +13,23 @@
 ul, ol, li { list-style: none; }
 
 .bg {
+    background-color: $background-lightgray;
     cursor: pointer;
 }
+
+.select-time,
+.select-num,
+.select-price,
+.select-pay {
+    font-weight: bold;
+    color: $basic-brown;
+    background-color: $basic-yellow;
+}
+
 .disable {
     color: $basic-gray;
     cursor: default;
+    background-color: $background-lightgray;
 }
 .selected {
     font-weight: bold;
@@ -37,6 +49,7 @@ section.info-calendar {
         margin-bottom: 24px;
 
         .name {
+            position: relative;
             margin: 0 0 8px 0;
             font-size: 20px;
             font-weight: bold;
@@ -51,8 +64,10 @@ section.info-calendar {
     }  // mobile-title
 
     img {
-        width: 70%;
-        margin: 0 15% 16px;
+        position: absolute;
+        top: 56px; right: 32px;
+        width: 12%;
+        // margin: 0 15% 16px;
     }
 
     .info {
@@ -94,7 +109,6 @@ section.booking-info {
                         margin-right: 8px;
                         padding: 8px;
                         border-radius: 6px;
-                        background-color: $background-lightgray;
                     }
                 }  // li
             }  // ul
@@ -170,7 +184,15 @@ section.booking-info {
                 margin-right: 0;
             }
 
-            .selected {
+            // .selected {
+            //     font-weight: bold;
+            //     color: $basic-brown;
+            //     background-color: $basic-yellow;
+            // }
+            .discount {
+                cursor: pointer;
+            }
+            .select-price {
                 font-weight: bold;
                 color: $basic-brown;
                 background-color: $basic-yellow;
@@ -196,6 +218,11 @@ section.booking-info {
     div.pay {
         li {
             width: 33%;
+        }
+        .select-pay {
+            font-weight: bold;
+            color: $basic-brown;
+            background-color: $basic-yellow;
         }
     }
 
@@ -226,11 +253,14 @@ section.booking-info {
                 }
             }
             .modify {
-                position: absolute;
-                top: 8px; right: 8px;
+                // position: absolute;
+                // top: 8px; right: 8px;
+                padding-bottom: 2px;
+                margin-left: 4px;
                 font-size: 11px;
                 text-decoration: underline;
                 color: $basic-gray;
+                cursor: pointer;
             }
         }  // info-box
     }
@@ -251,6 +281,10 @@ section.booking-info {
         background-size: 18px;
         background-position: left center;
         background-repeat: no-repeat;
+    }
+
+    .content1 {
+        margin-top: 32px;
     }
 
     .content {

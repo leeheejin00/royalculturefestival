@@ -7,22 +7,11 @@
     <link rel="stylesheet" href="./css/booking_popup.css">
     <link rel="stylesheet" href="./css/calendar.css">
     <style>
-        .selected {
-            font-weight: bold;
-            color: #2f2411;
-            background-color: #ffbe0f;
-        }
-        /* section.booking-info {
-            display: none;
-        }
-
-        section.note {
-            display: none;
-        }
-
+        section.booking-info,
+        section.note,
         button.book {
             display: none;
-        } */
+        }
     </style>
     <script src="./js/calendar.js"></script>
 	<script src="./js/jquery.js"></script>
@@ -71,11 +60,11 @@
                     <p class="title">회차선택 <span class="line">&nbsp;</span></p>
                     <ul>
                         <li>
-                            <div class="bg">18 : 40</div>
+                            <div class="bg" onclick="toggleSelectTime(this)">18 : 40</div>
                             <p class="small">잔여인원: 3명</p>
                         </li>
                         <li>
-                            <div class="bg disable" onclick="showDisabledAlert()">19 : 40</div>
+                            <div class="bg disable" onclick="showDisabledTime()">19 : 40</div>
                             <p class="small">잔여인원: 0명</p>
                         </li>
                     </ul>
@@ -84,9 +73,9 @@
                 <div class="num">
                     <p class="title">예매인원</p>
                     <ul>
-                        <li><span class="bg">0</span></li>
-                        <li><span class="bg">1</span></li>
-                        <li><span class="bg">2</span></li>
+                        <li><span class="bg" onclick="toggleSelectNum(this)">0</span></li>
+                        <li><span class="bg" onclick="toggleSelectNum(this)">1</span></li>
+                        <li><span class="bg" onclick="toggleSelectNum(this)">2</span></li>
                         <li>
                             <p class="small">*최대 2명까지 예매 가능합니다.</p>
                         </li>
@@ -97,8 +86,8 @@
             <div class="price">
                 <p class="title">금액선택</p>
                 <ul>
-                    <li class="selected">일반예매 60,000원</li>
-                    <li>장애인/국가유공자 30,000원</li>
+                    <li class="bg" onclick="toggleSelectPrice(this)">일반예매 60,000원</li>
+                    <li class="discount" onclick="showDiscount(); toggleSelectPrice(this);">장애인/국가유공자 30,000원</li>
                 </ul>
                 <p class="small">
                     * 현장에서 증빙자료를 확인할 예정이오니 신분증(국가유공자증, 장애인 복지카드 등)을 반드시 지참하여 주시기 바랍니다. <br>
@@ -109,26 +98,112 @@
             <div class="pay">
                 <p class="title">결제방법</p>
                 <ul>
-                    <li class="disable" onclick="showDisabledAlert()">무통장입금</li>
-                    <li>계좌이체</li>
-                    <li>카드결제</li>
+                    <li class="disable" onclick="showDisabledPay()">무통장입금</li>
+                    <li class="bg" onclick="toggleSelectPay(this)">계좌이체</li>
+                    <li class="bg" onclick="toggleSelectPay(this)">카드결제</li>
                 </ul>
             </div> <!-- pay -->
     
             <div class="info">
                 <p class="title">예매자정보</p>
                 <div class="info-box">
-                    <p class="modify">수정하기</p>
-                    <p class="name"> <span class="bold">이&nbsp; &nbsp;름</span> 홍길동</p>
-                    <p class="phone"> <span class="bold">연락처</span> 010 - 1234 - 5678</p>
-                    <p class="email"> <span class="bold">EMAIL</span> hong.gd123@naver.com</p>
+                    <!-- <p class="modify">수정하기</p> -->
+                    <p class="name"> <span class="bold">이&nbsp; &nbsp;름</span> <span class="content">홍길동</span> <span class="modify" onclick="editContent('name')">수정하기</span></p>
+                    <p class="phone"> <span class="bold">연락처</span> <span class="content">010 - 1234 - 5678</span> <span class="modify" onclick="editContent('phone')">수정하기</span></p>
+                    <p class="email"> <span class="bold">EMAIL</span> <span class="content">hong.gd123@naver.com</span> <span class="modify" onclick="editContent('email')">수정하기</span></p>
                 </div>
+
+                <script>
+                    function editContent(field) {
+                        var contentElement = document.querySelector('.' + field + ' .content');
+                        var currentContent = contentElement.textContent.trim();
+                        
+                        var newValue = prompt("새로운 정보를 입력하세요:", currentContent);
+                        
+                        if (newValue !== null && newValue !== '') {
+                            // Update the content
+                            contentElement.textContent = newValue;
+                            
+                            // You may want to save this new value to your server or update elsewhere in your application
+                        } else {
+                            // User clicked cancel or entered empty value
+                            alert("수정이 취소되었습니다.");
+                        }
+                    }
+                    </script>
+            </div> <!-- info -->
             </div> <!-- info -->
 
             <script>
-                
-                function showDisabledAlert() {
-                    alert('해당 항목은 예매가 불가능합니다.');
+                // function toggleSelected(element) {
+                //     // element는 클릭된 div.bg 요소를 가리킵니다.
+                //     element.classList.toggle('selected');
+                // }
+
+                function toggleSelectTime(element) {
+                    // 클릭된 li 요소의 자식 span 요소들에서 select-num 클래스를 모두 제거합니다.
+                    var listItems = element.parentNode.parentNode.querySelectorAll('li span');
+                    listItems.forEach(function(item) {
+                        item.classList.remove('select-time');
+                    });
+
+                    // 클릭된 span 요소에 select-num 클래스를 추가합니다.
+                    element.classList.add('select-time');
+                }
+
+                function toggleSelectNum(element) {
+                    // 클릭된 li 요소의 자식 span 요소들에서 select-num 클래스를 모두 제거합니다.
+                    var listItems = element.parentNode.parentNode.querySelectorAll('li span');
+                    listItems.forEach(function(item) {
+                        item.classList.remove('select-num');
+                    });
+
+                    // 클릭된 span 요소에 select-num 클래스를 추가합니다.
+                    element.classList.add('select-num');
+                }
+
+                function toggleSelectPrice(element) {
+                    // 클릭된 li 요소들에서 select-price 클래스를 모두 제거합니다.
+                    var listItems = document.querySelectorAll('.price li');
+                    listItems.forEach(function(item) {
+                        item.classList.remove('select-price');
+                    });
+
+                    // 클릭된 li 요소에 select-price 클래스를 추가합니다.
+                    element.classList.add('select-price');
+                }
+
+                function toggleSelectPay(element) {
+                    // 클릭된 li 요소들에서 select-pay 클래스를 모두 제거합니다.
+                    var listItems = document.querySelectorAll('.pay li');
+                    listItems.forEach(function(item) {
+                        item.classList.remove('select-pay');
+                    });
+
+                    // 클릭된 li 요소에 select-pay 클래스를 추가합니다.
+                    element.classList.add('select-pay');
+                }
+
+                function showDiscount() {
+                    alert('현장에서 증빙 자료를 확인합니다. 하단 안내 사항을 확인해 주세요.');
+
+                    // // 예매금액 옵션에서 .selected 클래스 추가
+                    // var priceOptions = document.querySelectorAll('.price li');
+                    // priceOptions.forEach(function(option) {
+                    //     option.classList.remove('selected'); // 모든 옵션에서 .selected 클래스 제거
+                    // });
+
+                    // // 특정 옵션에 .selected 클래스 추가
+                    // var discountOption = document.querySelector('.price .discount');
+                    // discountOption.classList.add('selected');
+                }
+
+                function showDisabledTime() {
+                    alert('해당 회차는 매진되었습니다.');
+                }
+
+                function showDisabledPay() {
+                    alert('해당 수단으로 결제가 불가합니다.');
                 }
                 </script>
         </section><!-- booking-info -->
@@ -172,7 +247,17 @@
     </section> <!-- note -->
 
     <div class="container">
-        <button class="book">예매하기</button>
+        <button class="book" onclick="bookingFinish()">예매하기</button>
+
+        <script>
+            function bookingFinish() {
+                var confirmed = confirm('예매를 완료하시겠습니까?');
+                if (confirmed) {
+                    alert('예매가 완료되었습니다. 예매확인 페이지에서 확인해 주세요.');
+                    window.close();
+                }
+            }
+        </script>
     </div>
 </body>
 </html>

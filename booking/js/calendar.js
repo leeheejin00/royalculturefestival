@@ -67,6 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const selectedDate = parseInt(element.textContent); // 선택한 날짜 가져오기
         const dayOfWeek = new Date(currentYear, currentMonth, selectedDate).getDay(); // 선택한 날짜의 요일 가져오기 (0: 일요일, 1: 월요일, ..., 6: 토요일)
 
+        // 예제로 각 날짜를 클릭할 때마다 해당 요소들의 display 속성을 block으로 변경합니다.
+        document.querySelector('section.booking-info').style.display = 'block';
+        document.querySelector('section.note').style.display = 'block';
+        document.querySelector('button.book').style.display = 'block';
+
         // 월요일(1) 또는 화요일(2)인 경우에는 .selected 클래스 추가하지 않음
         if (dayOfWeek === 1 || dayOfWeek === 2) {
             var confirmMsg = '예매가 불가능합니다. 다른 날짜를 선택해주세요.';
@@ -80,11 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // 모든 날짜에 있는 selected 클래스 제거
             allDates.forEach(date => {
-                date.classList.remove('selected');
+                date.classList.remove('selected-date');
             });
 
             // 선택한 날짜에 selected 클래스 추가
-            element.classList.add('selected');
+            element.classList.add('selected-date');
 
             console.log('예매 처리 로직을 실행합니다.');
         }

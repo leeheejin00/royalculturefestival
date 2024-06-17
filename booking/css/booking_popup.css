@@ -145,12 +145,23 @@ ul, ol, li {
 }
 
 .bg {
+  background-color: #eaeaea;
   cursor: pointer;
+}
+
+.select-time,
+.select-num,
+.select-price,
+.select-pay {
+  font-weight: bold;
+  color: #2f2411;
+  background-color: #ffbe0f;
 }
 
 .disable {
   color: #cccccc;
   cursor: default;
+  background-color: #eaeaea;
 }
 
 .selected {
@@ -168,6 +179,7 @@ section.info-calendar .mobile-title {
   margin-bottom: 24px;
 }
 section.info-calendar .mobile-title .name {
+  position: relative;
   margin: 0 0 8px 0;
   font-size: 20px;
   font-weight: bold;
@@ -180,8 +192,10 @@ section.info-calendar .mobile-title .small {
   color: #cccccc;
 }
 section.info-calendar img {
-  width: 70%;
-  margin: 0 15% 16px;
+  position: absolute;
+  top: 56px;
+  right: 32px;
+  width: 12%;
 }
 section.info-calendar .info .title {
   display: none;
@@ -212,7 +226,6 @@ section.booking-info div.time-num div ul li .bg {
   margin-right: 8px;
   padding: 8px;
   border-radius: 6px;
-  background-color: #eaeaea;
 }
 section.booking-info div.time-num div .small {
   font-size: 10px;
@@ -274,8 +287,12 @@ section.booking-info div.price ul li:last-child,
 section.booking-info div.pay ul li:last-child {
   margin-right: 0;
 }
-section.booking-info div.price ul .selected,
-section.booking-info div.pay ul .selected {
+section.booking-info div.price ul .discount,
+section.booking-info div.pay ul .discount {
+  cursor: pointer;
+}
+section.booking-info div.price ul .select-price,
+section.booking-info div.pay ul .select-price {
   font-weight: bold;
   color: #2f2411;
   background-color: #ffbe0f;
@@ -294,6 +311,11 @@ section.booking-info div.price li:last-child {
 }
 section.booking-info div.pay li {
   width: 33%;
+}
+section.booking-info div.pay .select-pay {
+  font-weight: bold;
+  color: #2f2411;
+  background-color: #ffbe0f;
 }
 section.booking-info div.info {
   margin: 24px 0;
@@ -321,12 +343,12 @@ section.booking-info div.info .info-box p .bold {
   font-weight: bold;
 }
 section.booking-info div.info .info-box .modify {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+  padding-bottom: 2px;
+  margin-left: 4px;
   font-size: 11px;
   text-decoration: underline;
   color: #cccccc;
+  cursor: pointer;
 }
 
 .note {
@@ -342,6 +364,9 @@ section.booking-info div.info .info-box .modify {
   background-size: 18px;
   background-position: left center;
   background-repeat: no-repeat;
+}
+.note .content1 {
+  margin-top: 32px;
 }
 .note .content {
   width: 100%;
