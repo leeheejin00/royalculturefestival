@@ -1112,9 +1112,8 @@ section.popular .program-desc-box .program-desc .button button:hover {
   .poster-web-container .poster-web li .book-see {
     display: flex;
   }
-  .poster-web-container .poster-web li .book-see .book, .poster-web-container .poster-web li .book-see .see {
+  .poster-web-container .poster-web li .book-see .see {
     position: absolute;
-    bottom: 15px;
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -1123,17 +1122,10 @@ section.popular .program-desc-box .program-desc .button button:hover {
     font-family: "KimjungchulMyungjo-Regular";
     color: white;
     background-color: #2f2411;
-    padding: 5px 13px;
+    left: 50%;
+    bottom: 40%;
     border-radius: 5px;
-  }
-  .poster-web-container .poster-web li .book-see .book {
-    left: 65%;
-  }
-  .poster-web-container .poster-web li .book-see .book:hover {
-    color: #ffbe0f;
-  }
-  .poster-web-container .poster-web li .book-see .see {
-    left: 24%;
+    padding: 3px;
   }
   .poster-web-container .poster-web li .book-see .see:hover {
     color: #ffbe0f;

@@ -623,10 +623,11 @@ main {
                     color: white;
                     padding: 10px;
                     z-index: 2;
-                    transition: opacity 0.3s;
+                    transition: opacity 0.3s, height 0.3s;
                     .palace2024 {
                         font-size: 18px;
                         font-family: $font-pre-regular;
+                        transition: margin-top 0.3s;
                     }
                     h3 {
                         display: none;
@@ -664,7 +665,11 @@ main {
                 
                     &:hover {
                         .overlay2 {
-                            
+                            height: 100%;
+                            .palace2024 {
+                                margin-bottom: 20%;
+                            }
+                            border-radius: 10px;
                         }
                     }
                 }

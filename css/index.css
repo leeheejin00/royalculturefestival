@@ -1152,11 +1152,12 @@ main .intro-imgbox a .overlay2 {
     color: white;
     padding: 10px;
     z-index: 2;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, height 0.3s;
   }
   main .intro-imgbox a .overlay2 .palace2024 {
     font-size: 18px;
     font-family: "Pretendard-Regular";
+    transition: margin-top 0.3s;
   }
   main .intro-imgbox a .overlay2 h3 {
     display: none;
@@ -1187,6 +1188,14 @@ main .intro-imgbox a .overlay2 {
     color: #ffbe0f;
   }
 }
+main .intro-imgbox a:hover .overlay2 {
+  height: 100%;
+  border-radius: 10px;
+}
+main .intro-imgbox a:hover .overlay2 .palace2024 {
+  margin-bottom: 20%;
+}
+
 #palace {
   margin-top: 117px;
   position: relative;

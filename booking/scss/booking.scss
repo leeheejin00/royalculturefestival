@@ -437,10 +437,8 @@ section.popular {
                     }  
                     .book-see {
                         display: flex;
-                        .book, .see {
+                        .see {
                             position: absolute;
-                            bottom: 15px;
-                            
                             transform: translateX(-50%);
                             opacity: 0;
                             transition: opacity 0.3s ease-in-out;
@@ -449,17 +447,10 @@ section.popular {
                             font-family: $font-regular;
                             color: white;
                             background-color: #2f2411;
-                            padding: 5px 13px;
+                            left: 50%;
+                            bottom: 40%;
                             border-radius: 5px;
-                        }
-                        .book {
-                            left: 65%;
-                            &:hover {
-                                color: #ffbe0f;
-                            }
-                        }
-                        .see {
-                            left: 24%;
+                            padding: 3px;
                             &:hover {
                                 color: #ffbe0f;
                             }
@@ -583,6 +574,8 @@ section.keyword > .hashtag {
         background-color: $basic-brown;
     }
 }  // hashtag
+
+
 
 section.keyword > .program-box1, .program-box2, .program-box3, .program-box4, .program-box5, .program-box6 {
     cursor: pointer;
