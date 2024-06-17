@@ -160,17 +160,6 @@
     });
     </script>
 
-    <script>
-        document.getElementById('languageIconLink').addEventListener('click', function(event) {
-    event.preventDefault();
-    const languageSelect = document.getElementById('languageSelect');
-    if (window.getComputedStyle(languageSelect).display === 'none') {
-        languageSelect.style.display = 'block';
-    } else {
-        languageSelect.style.display = 'none';
-    }
-});
-    </script>
 </head>
 <body>
     <header>
@@ -180,13 +169,13 @@
                 
                 <div class="search-menu">
                     <div style="display: flex; align-items: center;">
-                        <select id="languageSelect">
+                        <select id="language-select">
                             <option value="en">English</option>
                             <option value="zh">Chinese</option>
                             <option value="ko">Korean</option>
                             <option value="jp">Japanese</option>
                         </select>
-                        <a href="#" id="languageIconLink"><img id="languageIcon" src="../images/internet.png" alt=""></a>
+                        <a href="#" id="intranet-icon"><img src="../images/internet.png" alt=""></a>
                     </div>
                     <a href="#"><img src="../images/korean-hat.png" alt=""></a>
                     <a href="#"><img id="searchIcon" src="../images/search.png" alt="search"></a>
@@ -198,17 +187,45 @@
                     <input type="text" id="searchInput" class="search-input" placeholder="Search...">
                 </div> <!-- search-menu -->
             </div> <!-- logo-icon -->
+            <script>
+                document.getElementById('intranet-icon').addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent the default action of the anchor tag
+                    var selectMenu = document.getElementById('language-select');
+                    if (selectMenu.style.display === 'none' || selectMenu.style.display === '') {
+                        selectMenu.style.display = 'block';
+                    } else {
+                        selectMenu.style.display = 'none';
+                    }
+                });
+                </script>
             <div id="side-menu" class="side-menu">
                 <div class="language-login">
                     <div class="language">
-                        <a href="#" id="languageToggle">Language</a>
-                        <a href=""><img src="../images/language-white.png" alt="language"></a> 
+                        <select id="language-select">
+                            <option value="en">English</option>
+                            <option value="zh">Chinese</option>
+                            <option value="ko">Korean</option>
+                            <option value="jp">Japanese</option>
+                        </select>
                     </div>
                     <div class="login">
                         <a href="#">로그인</a>
                         <a href="#"><img src="../images/login-white.png" alt="login"></a>
                     </div>
-                </div>  
+                </div> 
+                <script>
+                    document.addEventListener('DOMContentLoaded', (event) => {
+                const languageSelect = document.getElementById('language-select');
+                
+                languageSelect.addEventListener('click', () => {
+                    languageSelect.size = languageSelect.size === 1 ? 4 : 1;
+                });
+                
+                languageSelect.addEventListener('blur', () => {
+                    languageSelect.size = 1;
+                });
+            });
+                </script>
                 <nav class="side-nav">
                     <ul class="gnb">
                         <li>

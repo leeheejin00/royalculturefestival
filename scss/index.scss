@@ -664,14 +664,9 @@ main {
                 
                     &:hover {
                         .overlay2 {
-                            transform: translateY(0);
-                            height: 100%;
-                            border-radius: 10px;
-                          h3 {
-                            display: block;
-                          }
+                            
                         }
-                      }
+                    }
                 }
               }
             }
@@ -896,7 +891,7 @@ main {
                                 position: relative;
                                 img {
                                     width: 100%;
-                                    height: 450px;
+                                    height: 700px;
                                     display: block;
                                 }
                                 .baner-slide1, .baner-slide3 {

@@ -172,6 +172,9 @@ header .logo-icon .search-menu a img {
 header .logo-icon .search-menu #languageSelect {
   display: none;
 }
+header .logo-icon .search-menu #languageIconLink {
+  cursor: pointer;
+}
 header .logo-icon .search-menu a:first-child {
   display: none;
 }
