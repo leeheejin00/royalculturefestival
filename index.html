@@ -75,21 +75,6 @@
     </script>
 
     <script>
-        function submitForm() {
-            document.querySelector('form').submit();
-        }
-
-        function validateSearch() {
-            const searchInput = document.getElementById('find').value.trim();
-            if (searchInput === '') {
-                alert('검색어를 입력하세요.');
-                return false;
-            }
-            return true;
-        }
-    </script>
-
-    <script>
         document.addEventListener('DOMContentLoaded', function () {
         const menuItems = document.querySelectorAll('.gnb > li > a');
         
@@ -353,7 +338,7 @@
                         </li>
                     </ul>
                 </nav>
-                <form action="./index_search/index_search.html" method="get" onsubmit="return validateSearch()">
+                <form id="searchForm" action="./index_search/index_search.html" method="get" onsubmit="return validateSearch()">
                     <div class="search-box">
                         <label for="find"></label>
                         <input type="search" id="find" name="find" value="경복궁" />
@@ -362,10 +347,18 @@
                         </div>
                     </div>
                 </form>
-
                 <script>
                     function submitForm() {
-                        document.querySelector('form').submit();
+                        document.getElementById("searchForm").submit();
+                    }
+                    
+                    function validateSearch() {
+                        var find = document.getElementById("find").value;
+                        if (find.trim() === "") {
+                            alert("검색어를 입력하세요.");
+                            return false;
+                        }
+                        return true;
                     }
                 </script>
             </div>

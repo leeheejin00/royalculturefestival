@@ -668,6 +668,7 @@ main {
                             height: 100%;
                             .palace2024 {
                                 margin-bottom: 20%;
+                                font-size: 24px;
                             }
                             border-radius: 10px;
                         }
@@ -1082,7 +1083,7 @@ main {
                             .date-more {
                                 display: flex;
                                 justify-content: space-between;
-            
+                                
                                 .date {
                                     font-size: 12px;
                                     display: block;
@@ -1138,6 +1139,7 @@ main {
                 }
                 
                 .notice_box1 {
+                    position: relative;
                     opacity: 60%;
                     transform: scale(0.9);
                     z-index: 1;
@@ -1161,6 +1163,7 @@ main {
                     }
                 }
                 .notice_box2 {
+                    position: relative;
                     z-index: 2;
                     @include responsive(large-screens) {
                         z-index: 1;
@@ -1194,7 +1197,7 @@ main {
                 }
             
                 .notice_box3 {
-            
+                    position: relative;
                     @include responsive(large-screens) {
                         opacity: 100%;
                         transform: none;
