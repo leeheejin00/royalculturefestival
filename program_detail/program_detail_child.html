@@ -295,28 +295,23 @@
                         <span class="experience">체험</span>
                         <span class="booking">사전예약</span>
                     </div><!-- tag -->
-                    <div class="remaining">
+                    <div class="remaining" onclick="openPopup()">
                         <img src="./images/calendar.png" alt="calendar-icon">
-                        예매현황
+                        예매하기
                     </div>
+
+                    <script>
+                        function openPopup() {
+                          window.open("../booking/booking_popup.html", "Popup", "width=600,height=800");
+                        }
+                    </script>
+
                 </div><!-- title-tag-btn -->
                 <div class="place-period">
                     <p class="place">창경궁 일원</p>
                     <p class="period">2024.05.01 ~ 2024.05.05</p>
                 </div>
             </section><!-- title -->
-
-            <div class="booking-btn">
-                <img src="./images/booking_icon.png" alt="booking-btn-white">
-                <!-- <img src="./images/booking_icon.png" class="hover" alt="booking-btn-yellow"> -->
-                <div class="hover" onclick="openPopup()">예매하기</div>
-
-                <script>
-                    function openPopup() {
-                      window.open("../booking/booking_popup.html", "Popup", "width=600,height=800");
-                    }
-                </script>
-            </div><!-- booking-btn -->
     
             <section class="images">
                 <div class="poster">
