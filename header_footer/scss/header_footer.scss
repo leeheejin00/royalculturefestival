@@ -38,6 +38,11 @@ header {
             #languageSelect {
                 display: none;
             }
+            @include responsive(large-screens) {
+                #languageIconLink {
+                    cursor: pointer;
+                }
+            }
             a:first-child {
                 display: none;
             }

@@ -159,6 +159,18 @@
         });
     });
     </script>
+
+    <script>
+        document.getElementById('languageIconLink').addEventListener('click', function(event) {
+    event.preventDefault();
+    const languageSelect = document.getElementById('languageSelect');
+    if (window.getComputedStyle(languageSelect).display === 'none') {
+        languageSelect.style.display = 'block';
+    } else {
+        languageSelect.style.display = 'none';
+    }
+});
+    </script>
 </head>
 <body>
     <header>
@@ -174,7 +186,7 @@
                             <option value="ko">Korean</option>
                             <option value="jp">Japanese</option>
                         </select>
-                        <a href="#"><img id="languageIcon" src="../images/internet.png" alt=""></a>
+                        <a href="#" id="languageIconLink"><img id="languageIcon" src="../images/internet.png" alt=""></a>
                     </div>
                     <a href="#"><img src="../images/korean-hat.png" alt=""></a>
                     <a href="#"><img id="searchIcon" src="../images/search.png" alt="search"></a>
