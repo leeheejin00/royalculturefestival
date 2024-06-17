@@ -134,8 +134,9 @@ footer {
 }
 
 .container {
-  max-width: 1416px;
-  margin: 32px auto;
+  width: 100%;
+  max-width: 568px;
+  margin: 0 auto;
   padding: 0 16px;
 }
 
@@ -143,8 +144,30 @@ ul, ol, li {
   list-style: none;
 }
 
+.bg {
+  background-color: #eaeaea;
+  cursor: pointer;
+}
+
+.select-time,
+.select-num,
+.select-price,
+.select-pay {
+  font-weight: bold;
+  color: #2f2411;
+  background-color: #ffbe0f;
+}
+
 .disable {
   color: #cccccc;
+  cursor: default;
+  background-color: #eaeaea;
+}
+
+.selected {
+  font-weight: bold;
+  color: #2f2411;
+  background-color: #ffbe0f;
 }
 
 h1 {
@@ -156,6 +179,7 @@ section.info-calendar .mobile-title {
   margin-bottom: 24px;
 }
 section.info-calendar .mobile-title .name {
+  position: relative;
   margin: 0 0 8px 0;
   font-size: 20px;
   font-weight: bold;
@@ -167,25 +191,18 @@ section.info-calendar .mobile-title .period, section.info-calendar .mobile-title
 section.info-calendar .mobile-title .small {
   color: #cccccc;
 }
-@media (min-width: 1024px) {
-  section.info-calendar .mobile-title {
-    display: none;
-  }
-}
 section.info-calendar img {
-  width: 70%;
-  margin: 0 15% 16px;
+  position: absolute;
+  top: 56px;
+  right: 32px;
+  width: 12%;
 }
 section.info-calendar .info .title {
   display: none;
 }
-@media (min-width: 1024px) {
-  section.info-calendar .info .title {
-    display: block;
-  }
-}
-section.info-calendar .info #calendar {
+section.info-calendar .info #calendar-all {
   width: 100%;
+  margin: 0 auto 16px;
 }
 
 section.booking-info div.time-num div {
@@ -209,13 +226,13 @@ section.booking-info div.time-num div ul li .bg {
   margin-right: 8px;
   padding: 8px;
   border-radius: 6px;
-  background-color: #eaeaea;
 }
 section.booking-info div.time-num div .small {
   font-size: 10px;
   color: #cccccc;
 }
 section.booking-info div.time-num .time li {
+  margin-top: -24px;
   position: relative;
 }
 section.booking-info div.time-num .time li .bg {
@@ -238,11 +255,6 @@ section.booking-info div.time-num .num li:nth-child(3) .bg {
 }
 section.booking-info div.time-num .num li:last-child {
   margin-top: 16px;
-}
-@media (min-width: 1024px) {
-  section.booking-info div.time-num {
-    display: flex;
-  }
 }
 section.booking-info div.price,
 section.booking-info div.pay {
@@ -275,8 +287,12 @@ section.booking-info div.price ul li:last-child,
 section.booking-info div.pay ul li:last-child {
   margin-right: 0;
 }
-section.booking-info div.price ul .selected,
-section.booking-info div.pay ul .selected {
+section.booking-info div.price ul .discount,
+section.booking-info div.pay ul .discount {
+  cursor: pointer;
+}
+section.booking-info div.price ul .select-price,
+section.booking-info div.pay ul .select-price {
   font-weight: bold;
   color: #2f2411;
   background-color: #ffbe0f;
@@ -295,6 +311,11 @@ section.booking-info div.price li:last-child {
 }
 section.booking-info div.pay li {
   width: 33%;
+}
+section.booking-info div.pay .select-pay {
+  font-weight: bold;
+  color: #2f2411;
+  background-color: #ffbe0f;
 }
 section.booking-info div.info {
   margin: 24px 0;
@@ -322,12 +343,12 @@ section.booking-info div.info .info-box p .bold {
   font-weight: bold;
 }
 section.booking-info div.info .info-box .modify {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+  padding-bottom: 2px;
+  margin-left: 4px;
   font-size: 11px;
   text-decoration: underline;
   color: #cccccc;
+  cursor: pointer;
 }
 
 .note {
@@ -344,7 +365,11 @@ section.booking-info div.info .info-box .modify {
   background-position: left center;
   background-repeat: no-repeat;
 }
+.note .content1 {
+  margin-top: 32px;
+}
 .note .content {
+  width: 100%;
   font-size: 12px;
   margin-bottom: 24px;
 }
@@ -355,5 +380,6 @@ button.book {
   padding: 8px 20px;
   border: 0;
   border-radius: 8px;
+  color: #29251d;
   background-color: #ffbe0f;
 }/*# sourceMappingURL=booking_popup.css.map */

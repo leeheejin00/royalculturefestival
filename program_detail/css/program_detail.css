@@ -389,8 +389,16 @@ header .menu_box {
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    padding-bottom: 3px;
+    padding-bottom: 8px;
     font-size: 16px;
+    outline: none;
+    -webkit-appearance: none; /* 크롬, 사파리, 엣지 */
+    -moz-appearance: none; /* 파이어폭스 */
+    appearance: none; /* 기본 브라우저 */
+  }
+  header .menu_box form .search-box input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
   }
   header .menu_box form .search-box .search {
     position: absolute;
@@ -637,6 +645,7 @@ section.title .title-tag-btn .remaining {
   top: 0;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   margin-top: -3px;
   padding: 8px;
   border-radius: 8px;
@@ -658,6 +667,9 @@ section.title .title-tag-btn .remaining img {
     width: 28px;
     height: 28px;
   }
+}
+section.title .title-tag-btn .remaining:hover {
+  background-color: #ffbe0f;
 }
 @media (min-width: 1024px) {
   section.title .title-tag-btn {
@@ -782,12 +794,13 @@ section.detail div.title {
   }
 }
 section.detail img {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 section.detail .more-btn {
   cursor: pointer;
   height: 100px;
-  width: 100%;
+  width: 80%;
   position: absolute;
   bottom: 0;
   left: 50%;
