@@ -663,7 +663,8 @@ section.keyword > .program-box1, .program-box2, .program-box3, .program-box4, .p
                     padding-top: 17px;
                     @include responsive(large-screens) {
                         display: block;
-                        padding-top: 20px;
+                        padding-top: 50px;
+                        font-size: 24px;
                     }
                 }
                 .booking {

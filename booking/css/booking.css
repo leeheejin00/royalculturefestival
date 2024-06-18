@@ -1303,7 +1303,8 @@ section.keyword > .program-box1 div:hover .desc .title, .program-box2 div:hover 
 @media (min-width: 1024px) {
   section.keyword > .program-box1 div:hover .desc .title, .program-box2 div:hover .desc .title, .program-box3 div:hover .desc .title, .program-box4 div:hover .desc .title, .program-box5 div:hover .desc .title, .program-box6 div:hover .desc .title {
     display: block;
-    padding-top: 20px;
+    padding-top: 50px;
+    font-size: 24px;
   }
 }
 section.keyword > .program-box1 div:hover .desc .booking, .program-box2 div:hover .desc .booking, .program-box3 div:hover .desc .booking, .program-box4 div:hover .desc .booking, .program-box5 div:hover .desc .booking, .program-box6 div:hover .desc .booking {

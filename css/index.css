@@ -1157,8 +1157,14 @@ main .intro-imgbox a .overlay2 {
   main .intro-imgbox a .overlay2 .palace2024 {
     font-size: 18px;
     font-family: "Pretendard-Regular";
-    transition: margin-top 0.3s;
   }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  main .intro-imgbox a .overlay2 .palace2024 {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
   main .intro-imgbox a .overlay2 h3 {
     display: none;
   }
@@ -1193,6 +1199,7 @@ main .intro-imgbox a:hover .overlay2 {
   border-radius: 10px;
 }
 main .intro-imgbox a:hover .overlay2 .palace2024 {
+  display: block;
   margin-bottom: 20%;
   font-size: 24px;
 }
@@ -1651,12 +1658,12 @@ main .intro-imgbox a:hover .overlay2 .palace2024 {
     position: relative;
     padding: 12px 24px;
     border: 1px solid white;
-    border-left: 0;
   }
   #notice .notice-slide-flex .notice_box1 .notice-txt .date-more .more-btn .square p, #notice .notice-slide-flex .notice_box2 .notice-txt .date-more .more-btn .square p, #notice .notice-slide-flex .notice_box3 .notice-txt .date-more .more-btn .square p {
     position: absolute;
-    top: 4px;
+    top: 2px;
     left: -25px;
+    background-color: #2f2411;
     background-color: transparent;
     z-index: 3;
     padding: -5px 0;
@@ -1664,7 +1671,6 @@ main .intro-imgbox a:hover .overlay2 .palace2024 {
     line-height: 35px;
     font-family: "Pretendard-Regular";
     color: white;
-    background: transparent;
   }
   #notice .notice-slide-flex .notice_box1 .notice-txt .date-more .more-btn .square img, #notice .notice-slide-flex .notice_box2 .notice-txt .date-more .more-btn .square img, #notice .notice-slide-flex .notice_box3 .notice-txt .date-more .more-btn .square img {
     position: absolute;
@@ -1692,11 +1698,19 @@ main .intro-imgbox a:hover .overlay2 .palace2024 {
   #notice .notice-slide-flex .notice_box1:hover .main-info, #notice .notice-slide-flex .notice_box1:hover .main-info2 {
     visibility: hidden;
   }
+  #notice .notice-slide-flex .notice_box1:hover .date-more {
+    position: relative;
+    z-index: 3;
+  }
   #notice .notice-slide-flex .notice_box1:hover .border-box {
     border-left: 5px solid white;
+    position: relative;
+    z-index: 3;
   }
   #notice .notice-slide-flex .notice_box1:hover .border-box h3 {
     color: white;
+    position: relative;
+    z-index: 3;
   }
 }
 #notice .notice-slide-flex .notice_box2 {
@@ -1716,11 +1730,19 @@ main .intro-imgbox a:hover .overlay2 .palace2024 {
   #notice .notice-slide-flex .notice_box2:hover .main-info, #notice .notice-slide-flex .notice_box2:hover .main-info2 {
     visibility: hidden;
   }
+  #notice .notice-slide-flex .notice_box2:hover .date-more {
+    position: relative;
+    z-index: 3;
+  }
   #notice .notice-slide-flex .notice_box2:hover .border-box {
     border-left: 5px solid white;
+    position: relative;
+    z-index: 3;
   }
   #notice .notice-slide-flex .notice_box2:hover .border-box h3 {
     color: white;
+    position: relative;
+    z-index: 3;
   }
 }
 #notice .notice-slide-flex .notice_box1.active, #notice .notice-slide-flex .notice_box2.active, #notice .notice-slide-flex .notice_box3.active {
@@ -1731,6 +1753,16 @@ main .intro-imgbox a:hover .overlay2 .palace2024 {
 #notice .notice-slide-flex .notice_box1:hover, #notice .notice-slide-flex .notice_box2:hover, #notice .notice-slide-flex .notice_box3:hover {
   background-size: cover;
   background-position: center;
+}
+#notice .notice-slide-flex .notice_box1:hover::after, #notice .notice-slide-flex .notice_box2:hover::after, #notice .notice-slide-flex .notice_box3:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 추가: 어두운 오버레이 */
+  z-index: 1; /* 오버레이가 텍스트 위에 표시되도록 */
 }
 #notice .notice-slide-flex .notice_box3 {
   position: relative;
@@ -1748,11 +1780,19 @@ main .intro-imgbox a:hover .overlay2 .palace2024 {
   #notice .notice-slide-flex .notice_box3:hover .main-info, #notice .notice-slide-flex .notice_box3:hover .main-info2 {
     visibility: hidden;
   }
+  #notice .notice-slide-flex .notice_box3:hover .date-more {
+    position: relative;
+    z-index: 3;
+  }
   #notice .notice-slide-flex .notice_box3:hover .border-box {
     border-left: 5px solid white;
+    position: relative;
+    z-index: 3;
   }
   #notice .notice-slide-flex .notice_box3:hover .border-box h3 {
     color: white;
+    position: relative;
+    z-index: 3;
   }
 }
 
