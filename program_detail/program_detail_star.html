@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="../header_footer/css/header_footer.css">
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="./css/program_detail.css">
-    
+    <script src="./js/login.js"></script>
+    <script src="./js/loginTab.js"></script>
+    <title>프로그램상세 - 별빛야행</title>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const searchIcon = document.getElementById('searchIcon');
@@ -99,66 +101,86 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const menuItems = document.querySelectorAll('.gnb > li > a');
-            const header = document.querySelector('header');
+        const menuItems = document.querySelectorAll('.gnb > li > a');
+        const header = document.querySelector('header');
 
-            menuItems.forEach(item => {
-                item.addEventListener('mouseover', function (e) {
-                    e.preventDefault();
-                    const submenu = this.nextElementSibling;
-                    let allSubmenus = document.querySelectorAll('.submenu');
+        menuItems.forEach(item => {
+            item.addEventListener('mouseover', function (e) {
+                e.preventDefault();
+                const submenu = this.nextElementSibling;
+                let allSubmenus = document.querySelectorAll('.submenu');
 
-                    // Close all submenus except the current one
-                    allSubmenus.forEach(sub => {
-                        if (sub !== submenu) {
-                            sub.classList.remove('open');
-                            sub.style.maxHeight = null;
-                        }
-                    });
-
-                    // Toggle the clicked submenu
-                    if (submenu && submenu.classList.contains('submenu')) {
-                        submenu.classList.toggle('open');
-                        if (submenu.classList.contains('open')) {
-                            submenu.style.maxHeight = submenu.scrollHeight + "px";
-                        } else {
-                            submenu.style.maxHeight = null;
-                        }
-
-                        // Adjust header height
-                        setTimeout(() => {
-                            let totalHeight = 180; 
-                            allSubmenus.forEach(sub => {
-                                if (sub.classList.contains('open')) {
-                                    totalHeight += sub.scrollHeight;
-                                }
-                            });
-                            header.style.height = totalHeight + "px";
-                        }, 300); 
+                // Close all submenus except the current one
+                allSubmenus.forEach(sub => {
+                    if (sub !== submenu) {
+                        sub.classList.remove('open');
+                        sub.style.maxHeight = null;
                     }
                 });
+
+                // Toggle the clicked submenu
+                if (submenu && submenu.classList.contains('submenu')) {
+                    submenu.classList.toggle('open');
+                    if (submenu.classList.contains('open')) {
+                        submenu.style.maxHeight = submenu.scrollHeight + "px";
+                    } else {
+                        submenu.style.maxHeight = null;
+                    }
+
+                    // Adjust header height
+                    setTimeout(() => {
+                        let totalHeight = 180; 
+                        allSubmenus.forEach(sub => {
+                            if (sub.classList.contains('open')) {
+                                totalHeight += sub.scrollHeight;
+                            }
+                        });
+                        header.style.height = totalHeight + "px";
+                    }, 300); 
+                }
+            });
+
+            item.parentElement.addEventListener('mouseleave', function () {
+                const submenu = item.nextElementSibling;
+                if (submenu && submenu.classList.contains('submenu')) {
+                    submenu.classList.remove('open');
+                    submenu.style.maxHeight = null;
+
+                    // Adjust header height back to default
+                    setTimeout(() => {
+                        let totalHeight = 180; 
+                        const allSubmenus = document.querySelectorAll('.submenu');
+                        allSubmenus.forEach(sub => {
+                            if (sub.classList.contains('open')) {
+                                totalHeight += sub.scrollHeight;
+                            }
+                        });
+                        header.style.height = totalHeight + "px";
+                    }, 300); 
+                }
             });
         });
+    });
     </script>
-    <title>프로그램 상세 - 별빛야행</title>
+
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo-icon">
-                <a href="../index/index.html"><img src="../images/header_logo.png" alt="header_logo"></a>
+                <a href="../index.html"><img src="../images/header_logo.png" alt="header_logo"></a>
                 
                 <div class="search-menu">
                     <div style="display: flex; align-items: center;">
-                        <select id="languageSelect">
+                        <select id="language-select">
                             <option value="en">English</option>
                             <option value="zh">Chinese</option>
                             <option value="ko">Korean</option>
                             <option value="jp">Japanese</option>
                         </select>
-                        <a href="#"><img id="languageIcon" src="../images/internet.png" alt=""></a>
+                        <a href="#" id="intranet-icon"><img src="../images/internet.png" alt=""></a>
                     </div>
-                    <a href="#"><img src="../images/korean-hat.png" alt=""></a>
+                    <a href="#" id="login-toggle"><img src="../images/korean-hat.png" alt=""></a>
                     <a href="#"><img id="searchIcon" src="../images/search.png" alt="search"></a>
                     <div class="menu-toggle-btn">
                         <span>&nbsp</span>
@@ -168,29 +190,56 @@
                     <input type="text" id="searchInput" class="search-input" placeholder="Search...">
                 </div> <!-- search-menu -->
             </div> <!-- logo-icon -->
+            <script>
+                document.getElementById('intranet-icon').addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent the default action of the anchor tag
+                    var selectMenu = document.getElementById('language-select');
+                    if (selectMenu.style.display === 'none' || selectMenu.style.display === '') {
+                        selectMenu.style.display = 'block';
+                    } else {
+                        selectMenu.style.display = 'none';
+                    }
+                });
+                </script>
             <div id="side-menu" class="side-menu">
                 <div class="language-login">
                     <div class="language">
-                        <a href="#" id="languageToggle">Language</a>
-                        <a href="#" id="languageToggle2">언어</a>
-                        <a href=""><img src="../images/language-white.png" alt="language"></a> 
+                        <select id="language-select">
+                            <option value="en">English</option>
+                            <option value="zh">Chinese</option>
+                            <option value="ko">Korean</option>
+                            <option value="jp">Japanese</option>
+                        </select>
                     </div>
                     <div class="login">
-                        <a href="#">로그인</a>
+                        <a href="#" id="mobile-login-toggle">로그인</a>
                         <a href="#"><img src="../images/login-white.png" alt="login"></a>
                     </div>
-                </div>  
+                </div> 
+                <script>
+                    document.addEventListener('DOMContentLoaded', (event) => {
+                const languageSelect = document.getElementById('language-select');
+                
+                languageSelect.addEventListener('click', () => {
+                    languageSelect.size = languageSelect.size === 1 ? 4 : 1;
+                });
+                
+                languageSelect.addEventListener('blur', () => {
+                    languageSelect.size = 1;
+                });
+            });
+                </script>
                 <nav class="side-nav">
                     <ul class="gnb">
                         <li>
-                            <a href="../index/index.html"><img src="../images/side-menu-icon.png" alt="">궁중문화축전</a>
+                            <a href="#"><img src="./images/side-menu-icon.png" alt="">궁중문화축전</a>
                             <ul class="submenu">
                                 <li><a href="../main-info/main-info.html">소개·연혁</a></li>
                                 <li><a href="../fi-intro/fi-intro.html">FI</a></li>
                             </ul>
                         </li>
                         <li class="palace-menu">
-                            <a href="../place_detail/place_detail_01.html"><img src="../images/side-menu-icon.png" alt="">서울 속 고궁</a>
+                            <a href="#"><img src="../images/side-menu-icon.png" alt="">서울 속 고궁</a>
                             <ul class="submenu">
                                 <div class="palace1">
                                     <li><a href="../place_detail/place_detail_01.html">경복궁</a></li>
@@ -205,24 +254,24 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="../gungdoong/gungdoong.html"><img src="../images/side-menu-icon.png" alt="">궁이둥이</a>
+                            <a href="#"><img src="../images/side-menu-icon.png" alt="">궁이둥이</a>
                             <ul class="submenu">
-                                <li><a href="https://form.naver.com/response/Ttoamjl13J22pLF8uNXgGQ">지원하기</a></li>
+                                <li><a href="../gungdoong/gungdoong.html">지원하기</a></li>
                                 <li><a href="../gungdoong_gallery/gungdoong_gallery.html">발자취</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="../notice/notice.html"><img src="../images/side-menu-icon.png" alt="">알림마당</a>
+                            <a href="#"><img src="../images/side-menu-icon.png" alt="">알림마당</a>
                             <ul class="submenu">
                                 <li><a href="../notice/notice.html">공지사항</a></li>
                                 <li><a href="../press_release/press_release.html">보도자료</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="../booking/booking.html"><img src="../images/side-menu-icon.png" alt="">예매하기</a>
+                            <a href="#"><img src="../images/side-menu-icon.png" alt="">예매하기</a>
                             <ul class="submenu">
                                 <li><a href="../booking/booking.html">예매하기</a></li>
-                                <li><a href="../booking_detail/booking_detail.html">예매확인</a></li>
+                                <li><a href="../booking_my/booking_my.html">예매확인</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -232,14 +281,14 @@
                 <nav class="mainmenu">
                     <ul class="gnb">
                         <li>
-                            <a href="../index/index.html">궁중문화축전</a>
+                            <a href="#">궁중문화축전</a>
                             <ul class="submenu">
                                 <li><a href="../main-info/main-info.html">소개.연혁</a></li>
                                 <li><a href="../fi-intro/fi-intro.html">FI</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="../place_detail/place_detail_01.html">서울 속 고궁</a>
+                            <a href="#">서울 속 고궁</a>
                                 <ul class="submenu">
                                     <li><a href="../place_detail/place_detail_01.html">경복궁</a></li>
                                     <li><a href="../place_detail/place_detail_02.html">창덕궁</a></li>
@@ -250,24 +299,24 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="../gungdoong/gungdoong.html">궁이둥이</a>
+                            <a href="#">궁이둥이</a>
                             <ul class="submenu">
-                                <li><a href="https://form.naver.com/response/Ttoamjl13J22pLF8uNXgGQ">지원하기</a></li>
+                                <li><a href="../gungdoong/gungdoong.html">지원하기</a></li>
                                 <li><a href="../gungdoong_gallery/gungdoong_gallery.html">발자취</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="../notice/notice.html">알림마당</a>
+                            <a href="#">알림마당</a>
                             <ul class="submenu">
                                 <li><a href="../notice/notice.html">공지사항</a></li>
                                 <li><a href="../press_release/press_release.html">보도자료</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="../booking/booking.html">예매하기</a>
+                            <a href="#">예매하기</a>
                             <ul class="submenu">
                                 <li><a href="../booking/booking.html">예매하기</a></li>
-                                <li><a href="../booking_detail/booking_detail.html">예매확인</a></li>
+                                <li><a href="../booking_my/booking_my.html">예매확인</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -284,6 +333,87 @@
             </div>
         </div>
     </header>
+    <div class="modal-overlay"></div>   
+
+        <div class="form">
+    
+            <ul class="tab-group">
+              <li class="tab active"><a href="#signup">회원가입</a></li>
+              <li class="tab"><a href="#login">로그인</a></li>
+            </ul>
+            
+            <div class="tab-content">
+              <div id="signup">   
+                <h1>무료로 회원가입 하세요!</h1>
+                
+                <form action="/" method="post">
+                
+                <div class="top-row">
+                  <div class="field-wrap">
+                    <label>
+                      성<span class="req">*</span>
+                    </label>
+                    <input type="text" required autocomplete="off" />
+                  </div>
+              
+                  <div class="field-wrap">
+                    <label>
+                      이름<span class="req">*</span>
+                    </label>
+                    <input type="text"required autocomplete="off"/>
+                  </div>
+                </div>
+      
+                <div class="field-wrap">
+                  <label>
+                    이메일 주소<span class="req">*</span>
+                  </label>
+                  <input type="email"required autocomplete="off"/>
+                </div>
+                
+                <div class="field-wrap">
+                  <label>
+                    비밀번호 설정<span class="req">*</span>
+                  </label>
+                  <input type="password"required autocomplete="off"/>
+                </div>
+                
+                <button type="submit" class="button button-block">Get Started</button>
+                
+                </form>
+      
+              </div>
+              
+              <div id="login">   
+                <h1>환영합니다!</h1>
+                
+                <form id="login-form" action="login.php" method="post">
+                
+                  <div class="field-wrap">
+                  <label>
+                    이메일 주소<span class="req">*</span>
+                  </label>
+                  <input type="email" id="login-email" name="login-email" required autocomplete="off"/>
+                </div>
+                
+                <div class="field-wrap">
+                  <label>
+                    비밀번호<span class="req">*</span>
+                  </label>
+                  <input type="password" id="login-password" name="login-password" required autocomplete="off"/>
+                </div>
+                
+                <p class="forgot"><a href="#">혹시 비밀번호를 잊으셨나요?</a></p>
+                
+                <button class="button button-block">Log In</button>
+                
+                </form>
+      
+              </div>
+              
+            </div><!-- tab-content -->
+            
+      </div> <!-- /form -->
 
     <main>
         <div class="container">
@@ -420,20 +550,19 @@
         </div>
         <div class="footer-back">
             <div class="footLogo">
-                <a href="../index/index.html"><img src="../images/footer_logo.png" alt=""></a>
+                <a href="../index.html"><img src="../images/footer_logo.png" alt=""></a>
             </div>
             <form action="">
                 <label for="sitemap" class="custom-select">
-                    <select name="sitemap" id="sitemap">
+                    <select name="sitemap" id="sitemap" onchange="navigateToSite()">
                         <option value="sitemap" selected>사이트맵</option>
-                        <option value="">국가유산진흥원</option>
-                        <option value="">한국의집</option>
-                        <option value="">KHMALL(문화상품)</option>
-                        <option value="">매장유산국비발굴단</option>
-                        <option value="">국가유산채널</option>
-                        <option value="">국가유산 방문 캠페인</option>
-                        <option value="">조선왕릉문화제</option>
-                        <option value="">패밀리사이트</option>
+                        <option value="https://www.kh.or.kr/kha">국가유산진흥원</option>
+                        <option value="https://www.kh.or.kr/kh">한국의집</option>
+                        <option value="https://www.khmall.or.kr/">KHMALL(문화상품)</option>
+                        <option value="https://www.kh.or.kr/bhse">매장유산국비발굴단</option>
+                        <option value="https://www.k-heritage.tv">국가유산채널</option>
+                        <option value="https://www.kh.or.kr/visit">국가유산 방문 캠페인</option>
+                        <option value="https://jrtf.or.kr/">조선왕릉문화제</option>
                     </select>
                 </label>
             </form>
@@ -452,5 +581,14 @@
             </div>
         </div>
     </footer>
+    <script>
+        function navigateToSite() {
+            var select = document.getElementById('sitemap');
+            var url = select.options[select.selectedIndex].value;
+            if (url) {
+                window.location.href = url;
+            }
+        }
+        </script>
 </body>
 </html>

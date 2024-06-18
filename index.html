@@ -241,12 +241,32 @@
                     <div class="language">
                         <a href="#" id="languageToggle">Language</a>
                         <a href="#" ><img src="./images/internet.png" alt="language"></a> 
+                        <select id="language-select">
+                            <option value="en">English</option>
+                            <option value="zh">Chinese</option>
+                            <option value="ko">Korean</option>
+                            <option value="jp">Japanese</option>
+                        </select>
                     </div>
                     <div class="login">
                         <a href="#" id="mobile-login-toggle">로그인</a>
                         <a href="#"><img src="./images/korean-hat.png" alt="login" class="loginimg"></a>
                     </div>
                 </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', (event) => {
+                const languageSelect = document.getElementById('language-select');
+                
+                languageSelect.addEventListener('click', () => {
+                    languageSelect.size = languageSelect.size === 1 ? 4 : 1;
+                });
+                
+                languageSelect.addEventListener('blur', () => {
+                    languageSelect.size = 1;
+                });
+            });
+                </script>
+
                 <nav class="side-nav">
                     <ul class="gnb">
                         <li>

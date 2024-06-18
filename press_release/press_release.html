@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../header_footer/css/header_footer.css">
     <link rel="stylesheet" href="./css/press_release.css">
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
     <script src="./js/login.js"></script>
     <script src="./js/loginTab.js"></script>
     <title>보도자료</title>
@@ -161,6 +162,7 @@
         });
     });
     </script>
+
 </head>
 <body>
     <header>
@@ -170,13 +172,13 @@
                 
                 <div class="search-menu">
                     <div style="display: flex; align-items: center;">
-                        <select id="languageSelect">
+                        <select id="language-select">
                             <option value="en">English</option>
                             <option value="zh">Chinese</option>
                             <option value="ko">Korean</option>
                             <option value="jp">Japanese</option>
                         </select>
-                        <a href="#"><img id="languageIcon" src="../images/internet.png" alt=""></a>
+                        <a href="#" id="intranet-icon"><img src="../images/internet.png" alt=""></a>
                     </div>
                     <a href="#" id="login-toggle"><img src="../images/korean-hat.png" alt=""></a>
                     <a href="#"><img id="searchIcon" src="../images/search.png" alt="search"></a>
@@ -188,28 +190,56 @@
                     <input type="text" id="searchInput" class="search-input" placeholder="Search...">
                 </div> <!-- search-menu -->
             </div> <!-- logo-icon -->
+            <script>
+                document.getElementById('intranet-icon').addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent the default action of the anchor tag
+                    var selectMenu = document.getElementById('language-select');
+                    if (selectMenu.style.display === 'none' || selectMenu.style.display === '') {
+                        selectMenu.style.display = 'block';
+                    } else {
+                        selectMenu.style.display = 'none';
+                    }
+                });
+                </script>
             <div id="side-menu" class="side-menu">
                 <div class="language-login">
                     <div class="language">
-                        <a href="#" id="languageToggle">Language</a>
-                        <a href=""><img src="../images/language-white.png" alt="language"></a> 
+                        <select id="language-select">
+                            <option value="en">English</option>
+                            <option value="zh">Chinese</option>
+                            <option value="ko">Korean</option>
+                            <option value="jp">Japanese</option>
+                        </select>
                     </div>
                     <div class="login">
                         <a href="#" id="mobile-login-toggle">로그인</a>
                         <a href="#"><img src="../images/login-white.png" alt="login"></a>
                     </div>
-                </div>  
+                </div> 
+                <script>
+                    document.addEventListener('DOMContentLoaded', (event) => {
+                const languageSelect = document.getElementById('language-select');
+                
+                languageSelect.addEventListener('click', () => {
+                    languageSelect.size = languageSelect.size === 1 ? 4 : 1;
+                });
+                
+                languageSelect.addEventListener('blur', () => {
+                    languageSelect.size = 1;
+                });
+            });
+                </script>
                 <nav class="side-nav">
                     <ul class="gnb">
                         <li>
-                            <a href="../index.html"><img src="./images/side-menu-icon.png" alt="">궁중문화축전</a>
+                            <a href="#"><img src="./images/side-menu-icon.png" alt="">궁중문화축전</a>
                             <ul class="submenu">
                                 <li><a href="../main-info/main-info.html">소개·연혁</a></li>
                                 <li><a href="../fi-intro/fi-intro.html">FI</a></li>
                             </ul>
                         </li>
                         <li class="palace-menu">
-                            <a href="../place_detail/place_detail_01.html"><img src="../images/side-menu-icon.png" alt="">서울 속 고궁</a>
+                            <a href="#"><img src="../images/side-menu-icon.png" alt="">서울 속 고궁</a>
                             <ul class="submenu">
                                 <div class="palace1">
                                     <li><a href="../place_detail/place_detail_01.html">경복궁</a></li>
@@ -224,24 +254,24 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="../gungdoong/gungdoong.html"><img src="../images/side-menu-icon.png" alt="">궁이둥이</a>
+                            <a href="#"><img src="../images/side-menu-icon.png" alt="">궁이둥이</a>
                             <ul class="submenu">
-                                <li><a href="./gungdoong/gungdoong.html">지원하기</a></li>
+                                <li><a href="../gungdoong/gungdoong.html">지원하기</a></li>
                                 <li><a href="../gungdoong_gallery/gungdoong_gallery.html">발자취</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="../notice/notice.html"><img src="../images/side-menu-icon.png" alt="">알림마당</a>
+                            <a href="#"><img src="../images/side-menu-icon.png" alt="">알림마당</a>
                             <ul class="submenu">
                                 <li><a href="../notice/notice.html">공지사항</a></li>
                                 <li><a href="../press_release/press_release.html">보도자료</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="../booking/booking.html"><img src="../images/side-menu-icon.png" alt="">예매하기</a>
+                            <a href="#"><img src="../images/side-menu-icon.png" alt="">예매하기</a>
                             <ul class="submenu">
                                 <li><a href="../booking/booking.html">예매하기</a></li>
-                                <li><a href="../booking_detail/booking_detail.html">예매확인</a></li>
+                                <li><a href="../booking_my/booking_my.html">예매확인</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -251,14 +281,14 @@
                 <nav class="mainmenu">
                     <ul class="gnb">
                         <li>
-                            <a href="../index.html">궁중문화축전</a>
+                            <a href="#">궁중문화축전</a>
                             <ul class="submenu">
                                 <li><a href="../main-info/main-info.html">소개.연혁</a></li>
                                 <li><a href="../fi-intro/fi-intro.html">FI</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="../place_detail/place_detail_01.html">서울 속 고궁</a>
+                            <a href="#">서울 속 고궁</a>
                                 <ul class="submenu">
                                     <li><a href="../place_detail/place_detail_01.html">경복궁</a></li>
                                     <li><a href="../place_detail/place_detail_02.html">창덕궁</a></li>
@@ -269,29 +299,29 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="./gungdoong/gungdoong.html">궁이둥이</a>
+                            <a href="#">궁이둥이</a>
                             <ul class="submenu">
-                                <li><a href="./gungdoong/gungdoong.html">지원하기</a></li>
+                                <li><a href="../gungdoong/gungdoong.html">지원하기</a></li>
                                 <li><a href="../gungdoong_gallery/gungdoong_gallery.html">발자취</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="../notice/notice.html">알림마당</a>
+                            <a href="#">알림마당</a>
                             <ul class="submenu">
                                 <li><a href="../notice/notice.html">공지사항</a></li>
                                 <li><a href="../press_release/press_release.html">보도자료</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="../booking/booking.html">예매하기</a>
+                            <a href="#">예매하기</a>
                             <ul class="submenu">
                                 <li><a href="../booking/booking.html">예매하기</a></li>
-                                <li><a href="../booking_detail/booking_detail.html">예매확인</a></li>
+                                <li><a href="../booking_my/booking_my.html">예매확인</a></li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
-                <form action="./index_search/index_search.html" method="get" onsubmit="return validateSearch()">
+                <form action="../index_search/index_search.html" method="get" onsubmit="return validateSearch()">
                     <div class="search-box">
                         <label for="find"></label>
                         <input type="search" id="find" name="find" value="경복궁" />
@@ -393,7 +423,7 @@
                 <h2>보도자료</h2>
                 <!-- <img class="s_filter" src="./images/settings-sliders.png" alt="settings-sliders"> -->
                 <div class="news_box1">
-                    <div class="press_release_box">
+                    <div class="press_release_box" onclick="window.location.href='../press_release_pg/press_release_pg.html'">
                         <img class="press_release_1" src="./images/press_release_1.jpg" alt="보도자료1">
                         <div class="press_info_box">
                             <h3>5대 궁궐 무제한 입장권 ‘궁패스’<br>국내외 판매 시작</h3>
@@ -403,7 +433,7 @@
                         </div><!--press_info_box-->
                     </div><!--press_release_box-->
                     
-                    <div class="press_release_box2">
+                    <div class="press_release_box2" onclick="window.location.href='../press_release_pg2/press_release_pg2.html'">
                         <img class="press_release_2" src="./images/press_release_2.jpg" alt="보도자료2">
                         <div class="press_info_box2">
                             <h3><a href="../press_release_pg2/press_release_pg2.html">궁중문화축전, 경복궁 ‘케이헤리티지 마켓' 열어</a></h3>
@@ -415,7 +445,7 @@
                 </div><!--news_box1-->
 
                 <div class="news_box2">
-                    <div class="press_release_box3">
+                    <div class="press_release_box3" onclick="window.location.href='../press_release_pg3/press_release_pg3.html'">
                         <img class="press_release_3" src="./images/press_release_3.png" alt="보도자료3">
                         <div class="press_info_box3">
                             <h3><a href="../press_release_pg4/press_release_pg4.html">오색 단풍 궁궐에서 즐기는<br>'2023 가을 궁중문화축전'</a></h3>
@@ -425,7 +455,7 @@
                             </div><!--press_info_box3-->
                         </div><!--press_release_box3-->
     
-                    <div class="press_release_box4">
+                    <div class="press_release_box4" onclick="window.location.href='../press_release_pg4/press_release_pg4.html'">
                         <img class="press_release_4" src="./images/press_release_4.jpg" alt="보도자료4">
                         <div class="press_info_box4">
                             <h3><a href="../press_release_pg5/press_release_pg5.html">2024년 궁중문화축전<br>10주년 기념 슬로건 공모전</a></h3>
@@ -435,7 +465,7 @@
                             </div><!--press_info_box4-->
                         </div><!--press_release_box4-->
 
-                    <div class="press_release_box5">
+                    <div class="press_release_box5" onclick="window.location.href='../press_release_pg5/press_release_pg5.html'">
                         <img class="press_release_5" src="./images/press_release_5.jpg" alt="보도자료5">
                         <div class="press_info_box5">
                             <h3><a href="../press_release_pg/press_release_pg.html">박해일의 목소리로 듣는<br>창덕궁과 전통공예의 아름다움</a></h3>
@@ -447,7 +477,7 @@
                 </div><!--news_box2-->
 
                 <div class="news_box3">
-                    <div class="press_release_box6">
+                    <div class="press_release_box6" onclick="window.location.href='../press_release_pg6/press_release_pg6.html'">
                         <img class="press_release_6" src="./images/press_release_6.jpg" alt="보도자료6">
                         <div class="press_info_box6">
                             <h3><a href="../press_release_pg6/press_release_pg6.html">2023 봄 궁중문화축전<br>성황리 종료</a></h3>
@@ -457,7 +487,7 @@
                             </div><!--press_info_box6-->
                         </div><!--press_release_box6-->
 
-                    <div class="press_release_box7">
+                    <div class="press_release_box7" onclick="window.location.href='../press_release_pg7/press_release_pg7.html'">
                         <img class="press_release_7" src="./images/press_release_7.jpg" alt="보도자료7">
                         <div class="press_info_box7">
                             <h3><a href="../press_release_pg7/press_release_pg7.html">궁궐에서 열리는<br>'2023년 봄 궁중문화축전'</a></h3>
@@ -467,7 +497,7 @@
                         </div><!--press_info_box7-->
                     </div><!--press_release_box7-->    
 
-                    <div class="press_release_box8">
+                    <div class="press_release_box8" onclick="window.location.href='../press_release_pg8/press_release_pg8.html'">
                         <img class="press_release_8" src="./images/press_release_8.png" alt="보도자료8">
                         <div class="press_info_box8">
                             <h3><a href="../press_release_pg8/press_release_pg8.html">2022 가을<br>궁중문화축전 축제 마무리</a></h3>
@@ -477,7 +507,7 @@
                         </div><!--press_info_box8-->
                      </div><!--press_release_box8-->
 
-                    <div class="press_release_box9">
+                    <div class="press_release_box9" onclick="window.location.href='../press_release_pg9/press_release_pg9.html'">
                         <img class="press_release_9" src="./images/press_release_9.jpg" alt="보도자료9">
                         <div class="press_info_box9">
                             <h3><a href="../press_release_pg9/press_release_pg9.html">x고궁음악회<br>「덕수궁 풍류대장」개최</a></h3>
