@@ -533,22 +533,27 @@
             </section><!-- details -->
             <script>
                 function cancelBooking() {
-                var checkbox = document.querySelector('input[name="select"]');
-                if (!checkbox.checked) {
-                    alert('예매 취소할 티켓을 선택하세요!');
-                } else {
-                    var confirmCancel = confirm('정말로 예매를 취소하겠습니까?');
-                    if (confirmCancel) {
-                        // 예매 취소 로직을 여기에 추가하세요
-                        alert('예매가 취소되었습니다.');
+                    var checkbox = document.querySelector('input[name="select"]');
+                    if (!checkbox.checked) {
+                        alert('예매 취소할 티켓을 선택하세요!');
+                    } else {
+                        var confirmCancel = confirm('정말로 예매를 취소하겠습니까?');
+                        if (confirmCancel) {
+                            // 예매 취소 로직을 여기에 추가하세요
+                            alert('예매가 취소되었습니다.');
+                            // 예매 내역표를 제거하는 코드
+                            var bookingInfo = document.querySelector('.info3');
+                            if (bookingInfo) {
+                                bookingInfo.remove();
+                            }
+                        }
                     }
                 }
-            }
-
-            document.addEventListener('DOMContentLoaded', function() {
-                var cancelButton = document.querySelector('.cancel');
-                cancelButton.addEventListener('click', cancelBooking);
-            });
+        
+                document.addEventListener('DOMContentLoaded', function() {
+                    var cancelButton = document.querySelector('.cancel');
+                    cancelButton.addEventListener('click', cancelBooking);
+                });
             </script>
 
         </div><!-- container -->
