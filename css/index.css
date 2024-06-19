@@ -1072,6 +1072,7 @@ header .side-menu {
   transition: right 0.3s ease-in-out;
 }
 header .side-menu .language-login {
+  margin: 0 auto;
   width: 80%;
   display: flex;
   margin-top: 125px;
@@ -1098,7 +1099,8 @@ header .side-menu .language-login .language a img {
   width: 11px;
 }
 header .side-menu .language-login .login {
-  width: 50%;
+  margin: 0 auto;
+  width: 60%;
   text-align: center;
   cursor: pointer;
   padding: 3px;

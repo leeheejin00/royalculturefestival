@@ -344,6 +344,7 @@ header {
     z-index: 1;
     transition: right 0.3s ease-in-out;
     .language-login {
+        margin: 0 auto;
         width: 80%;
         display: flex;
         margin-top: 125px;
@@ -369,7 +370,8 @@ header {
             }
         }
         .login {
-            width: 50%;
+            margin: 0 auto;
+            width: 60%;
             text-align: center;
             cursor: pointer;
             padding: 3px;

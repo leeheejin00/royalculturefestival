@@ -236,36 +236,32 @@
                 });
                 </script>
 
-            <div id="side-menu" class="side-menu">
-                <div class="language-login">
-                    <div class="language">
-                        <a href="#" id="languageToggle">Language</a>
-                        <a href="#" ><img src="./images/internet.png" alt="language"></a> 
-                        <select id="language-select">
-                            <option value="en">English</option>
-                            <option value="zh">Chinese</option>
-                            <option value="ko">Korean</option>
-                            <option value="jp">Japanese</option>
-                        </select>
-                    </div>
-                    <div class="login">
-                        <a href="#" id="mobile-login-toggle">로그인</a>
-                        <a href="#"><img src="./images/korean-hat.png" alt="login" class="loginimg"></a>
-                    </div>
-                </div>
-                <script>
-                    document.addEventListener('DOMContentLoaded', (event) => {
-                const languageSelect = document.getElementById('language-select');
-                
-                languageSelect.addEventListener('click', () => {
-                    languageSelect.size = languageSelect.size === 1 ? 4 : 1;
-                });
-                
-                languageSelect.addEventListener('blur', () => {
-                    languageSelect.size = 1;
-                });
+<div id="side-menu" class="side-menu">
+    <div class="language-login">
+        <div class="login">
+            <a href="#" id="mobile-login-toggle">로그인</a>
+            <a href="#"><img src="./images/korean-hat.png" alt="login" class="loginimg"></a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const languageSelect = document.getElementById('language-select');
+            const languageIcon = document.getElementById('languageIcon');
+
+            const toggleLanguageSelect = () => {
+                languageSelect.size = languageSelect.size === 1 ? 4 : 1;
+            };
+
+            languageIcon.addEventListener('click', (event) => {
+                event.preventDefault();
+                toggleLanguageSelect();
             });
-                </script>
+
+            languageSelect.addEventListener('blur', () => {
+                languageSelect.size = 1;
+            });
+        });
+    </script>
 
                 <nav class="side-nav">
                     <ul class="gnb">
