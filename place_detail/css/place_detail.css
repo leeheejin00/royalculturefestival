@@ -1238,9 +1238,16 @@ section.programs {
   max-width: 208px;
   padding: 8px 0;
   border: 0;
-  border-radius: 24px;
+  border-radius: 16px;
+  font-family: "KimjungchulMyungjo-Regular";
   font-size: 12px;
-  background-color: #eaeaea;
+  background-color: #d7d2c4;
+}
+@media (min-width: 1024px) {
+  .program-list .program01 button.disable {
+    padding: 6px 16px;
+    font-size: 16px;
+  }
 }
 .program-list .program01 button.able {
   position: absolute;
@@ -1252,10 +1259,22 @@ section.programs {
   padding: 8px 0;
   border: 0;
   border-radius: 24px;
+  font-family: "KimjungchulMyungjo-Regular";
   font-size: 12px;
   cursor: pointer;
   color: #2f2411;
   background-color: #ffbe0f;
+}
+@media (min-width: 1024px) {
+  .program-list .program01 button.able {
+    padding: 6px 16px;
+    font-size: 16px;
+  }
+}
+.program-list .program01 button.able:hover {
+  font-weight: bold;
+  color: white;
+  background-color: #2f2411;
 }
 @media (min-width: 1024px) {
   .program-list {

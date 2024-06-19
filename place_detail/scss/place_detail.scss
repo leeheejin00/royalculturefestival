@@ -524,9 +524,15 @@ section.programs > .container {
             max-width: 208px;
             padding: 8px 0;
             border: 0;
-            border-radius: 24px;
+            border-radius: 16px;
+            font-family: $font-regular;
             font-size: 12px;
-            background-color: $background-lightgray;
+            background-color: #d7d2c4;
+
+            @include responsive(large-screens) {
+                padding: 6px 16px;
+                font-size: 16px;
+            }
         }
         button.able {
             position: absolute;
@@ -538,10 +544,22 @@ section.programs > .container {
             padding: 8px 0;
             border: 0;
             border-radius: 24px;
+            font-family: $font-regular;
             font-size: 12px;
             cursor: pointer;
             color: $basic-brown;
             background-color: $basic-yellow;
+
+            @include responsive(large-screens) {
+                padding: 6px 16px;
+                font-size: 16px;
+            }
+        }
+
+        button.able:hover {
+            font-weight: bold; 
+            color: white;
+            background-color: $basic-brown;
         }
     }  // program 01
 
