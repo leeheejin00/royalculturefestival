@@ -1840,6 +1840,7 @@ main .intro-imgbox a:hover .overlay2 .palace2024 {
     position: relative;
     padding: 12px 24px;
     border: 1px solid white;
+    border-left: 0;
   }
   #notice .notice-slide-flex .notice_box1 .notice-txt .date-more .more-btn .square p, #notice .notice-slide-flex .notice_box2 .notice-txt .date-more .more-btn .square p, #notice .notice-slide-flex .notice_box3 .notice-txt .date-more .more-btn .square p {
     position: absolute;
