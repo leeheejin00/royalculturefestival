@@ -1131,7 +1131,6 @@ section.popular {
   margin-bottom: 72px;
 }
 section.popular p.desc {
-  margin: -8px 0 16px 32px;
   font-size: 16px;
 }
 section.popular .poster {
@@ -1253,18 +1252,20 @@ section.popular .program-desc-box .program-desc .button {
 }
 section.popular .program-desc-box .program-desc .button button {
   display: inline-block;
-  width: 48%;
+  margin: 0 auto;
+  width: 90%;
   padding: 8px;
   border: 0;
   border-radius: 8px;
-  font-size: 12px;
+  font-size: 16px;
   color: white;
-  background-color: #795548;
+  font-family: "KimjungchulMyungjo-Regular";
+  background-color: #2f2411;
   cursor: pointer;
 }
 section.popular .program-desc-box .program-desc .button button:hover {
   background-color: #ffbe0f;
-  color: #795548;
+  color: #2f2411;
 }
 
 .poster-web-container {

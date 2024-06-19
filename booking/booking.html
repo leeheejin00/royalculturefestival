@@ -426,7 +426,9 @@
         </div> <!-- container -->
         
         <section class="popular">
-            <p class="desc">자세히보기 버튼을 클릭하면 예매 상세 페이지에서 예매가 가능합니다.</p>
+            <div class="container">
+                <p class="desc">자세히보기 버튼을 클릭하면 예매 상세 페이지에서 예매가 가능합니다.</p>
+            </div>
             <ul class="poster">
                 <li class="program1" onclick="selectItem(0)">
                     <img src="../program_detail/images/star_pst0319.jpg" alt="경복궁 별빛야행">
@@ -472,7 +474,7 @@
                         경복궁 별빛야행은 장고, 집옥재와 팔우정, 건청궁을 거치며 궁궐의 옛 이야기를 마주하고 쏟아지는 별빛아래에서 향원정의 정취를 느껴볼 수 있는 야간 체험 프로그램입니다.</p>
                     </div>
                     <div class="button">
-                        <button class="go-page">자세히보기</button>
+                        <!-- <button class="go-page">자세히보기</button> -->
                         <button class="book" onclick="openPopup()">예매하기</button>
                     </div>
                 </div>
@@ -494,7 +496,7 @@
                         <p>경복궁 소주방 전각에 위치한 '생과방'은 궁중의 육처소 가운데 하나이며, '국왕과 왕비'의 후식과 별식을 준비하던 곳으로 '생물방' 혹은 '생것방'이라고도 불렸습니다. <br> <br> 경복궁 생과방 프로그램은 조선왕조실록의 내용을 토대로 실제 임금이 드셨던 궁중병과와 궁중약차를 오늘날에도 즐길 수 있도록 구성된 체험 프로그램입니다.</p>
                     </div>
                     <div class="button">
-                        <button class="go-page">자세히보기</button>
+                        <!-- <button class="go-page">자세히보기</button> -->
                         <button class="book" onclick="openPopup()">예매하기</button>
                     </div>
                 </div>
@@ -517,7 +519,7 @@
                         밤의 석조전은 전문 해설사와 함께하는 석조전 야간 탐방 및 테라스 카페 체험, 귀빈을 맞이했던 접견실을 배경으로 하는 대한제국 배경 창작 뮤지컬 공연이 결합된 야간 체험 프로그램입니다.</p>
                     </div>
                     <div class="button">
-                        <button class="go-page">자세히보기</button>
+                        <!-- <button class="go-page" >자세히보기</button> -->
                         <button class="book" onclick="openPopup()">예매하기</button>
                     </div>
                 </div>
@@ -540,7 +542,7 @@
                         궁중직업실록은 과거 궁궐의 다양한 직업을 직접 경험하며, 선조들의 지혜화 삶의 방식을 알아가는 어린이 대상 프로그램입니다.</p>
                     </div>
                     <div class="button">
-                        <button class="go-page">자세히보기</button>
+                        <!-- <button class="go-page">자세히보기</button> -->
                         <button class="book" onclick="openPopup()">예매하기</button>
                     </div>
                 </div>
@@ -563,7 +565,7 @@
                         아침 궁을 깨우다는 따스한 봄날, 산책 가이드와 창덕궁 숲길을 천천히 걸어보며 아침 풍경을 감상해 보는 산책 투어 프로그램입니다..</p>
                     </div>
                     <div class="button">
-                        <button class="go-page">자세히보기</button>
+                        <!-- <button class="go-page">자세히보기</button> -->
                         <button class="book" onclick="openPopup()">예매하기</button>
                     </div>
                 </div>
@@ -690,6 +692,10 @@
                         });
                     });
                 });
+
+                function openPopup() {
+                  window.open("../booking/booking_popup.html", "Popup", "width=600,height=800");
+                }
                 </script>
         </section><!-- popular -->
 

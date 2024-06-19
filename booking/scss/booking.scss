@@ -263,7 +263,7 @@ section.popular {
     margin-bottom: 72px;
 
     p.desc {
-        margin: -8px 0 16px 32px;
+        // margin: -8px 0 16px 32px;
         font-size: 16px;
     }
 
@@ -399,18 +399,20 @@ section.popular {
 
                 button {
                     display: inline-block;
-                    width: 48%;
+                    margin: 0 auto;
+                    width: 90%;
                     padding: 8px;
                     border: 0;
                     border-radius: 8px;
-                    font-size: 12px;
+                    font-size: 16px;
                     color: white;
-                    background-color: #795548;
+                    font-family: $font-regular;
+                    background-color: $basic-brown;
                     cursor: pointer;
                     
                     &:hover {
                         background-color: #ffbe0f;
-                        color: #795548;
+                        color: $basic-brown;
                     }
                 }
             }
