@@ -1223,6 +1223,7 @@ header .menu_box {
     color: white;
   }
   header .menu_box form .search-box .search {
+    cursor: pointer;
     position: absolute;
     top: -8px;
     left: 160px;
