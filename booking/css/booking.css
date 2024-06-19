@@ -1101,10 +1101,11 @@ section.title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 24px 0;
+  margin-top: 24px;
 }
 section.title h2 {
   font-size: 20px;
+  border-bottom: 1px solid #111;
 }
 @media (min-width: 1024px) {
   section.title h2 {
@@ -1128,6 +1129,10 @@ section.title .filter img {
 
 section.popular {
   margin-bottom: 72px;
+}
+section.popular p.desc {
+  margin: -8px 0 16px 32px;
+  font-size: 16px;
 }
 section.popular .poster {
   width: 100%;

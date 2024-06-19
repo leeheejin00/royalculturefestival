@@ -94,7 +94,7 @@
         left: 13px;
         color: white;
         transition: all 0.25s ease;
-        -webkit-backface-visibility: hidden;
+        // -webkit-backface-visibility: hidden;
         pointer-events: none;
         font-size: 22px;
         
@@ -182,7 +182,7 @@
         background: #f1ebde;
         color: white;
         transition: all 0.5s ease;
-        -webkit-appearance: none;
+        // -webkit-appearance: none;
         
         &:hover, &:focus {
             background: #f1ebde;
@@ -267,7 +267,7 @@ section.booking-list {
         color: $basic-darkgray;
 
         @include responsive(large-screens) {
-            font-size: 20px;
+            font-size: 16px;
         }
     }
 
@@ -554,5 +554,34 @@ section.recommend-lists {
                 }
             }
         }  // .desc
+
+        &:hover {
+            .desc {
+                height: 100%;
+                border-radius: 8px;
+                .title {
+                    padding-top: 17px;
+                    @include responsive(large-screens) {
+                        display: block;
+                        padding-top: 50px;
+                        font-size: 24px;
+                    }
+                }
+                .booking {
+                    // padding-top: 4px;
+                    display: block;
+                    text-align: center;
+                    color: #ffbe0f;
+                    font-size: 18px;
+                    font-family: 'Pretendard-Bold';
+                    @include responsive(large-screens) {
+                        display: block;
+                        padding-top: 22px;
+                        font-size: 32px;
+                        font-family: $font-pre-bold;
+                    }
+                }
+            }
+        }
     }
 }  // recommend-lists 

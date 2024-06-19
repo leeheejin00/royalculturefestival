@@ -855,7 +855,6 @@ footer .copyright p {
   left: 13px;
   color: white;
   transition: all 0.25s ease;
-  -webkit-backface-visibility: hidden;
   pointer-events: none;
   font-size: 22px;
 }
@@ -930,7 +929,6 @@ footer .copyright p {
   background: #f1ebde;
   color: white;
   transition: all 0.5s ease;
-  -webkit-appearance: none;
 }
 .form .button:hover, .form .button:focus {
   background: #f1ebde;
@@ -1001,7 +999,7 @@ section.booking-list .desc {
 }
 @media (min-width: 1024px) {
   section.booking-list .desc {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1024px) {
@@ -1282,5 +1280,34 @@ section.recommend-lists div .desc .place {
 @media (min-width: 1024px) {
   section.recommend-lists div .desc .place {
     font-size: 14px;
+  }
+}
+section.recommend-lists div:hover .desc {
+  height: 100%;
+  border-radius: 8px;
+}
+section.recommend-lists div:hover .desc .title {
+  padding-top: 17px;
+}
+@media (min-width: 1024px) {
+  section.recommend-lists div:hover .desc .title {
+    display: block;
+    padding-top: 50px;
+    font-size: 24px;
+  }
+}
+section.recommend-lists div:hover .desc .booking {
+  display: block;
+  text-align: center;
+  color: #ffbe0f;
+  font-size: 18px;
+  font-family: "Pretendard-Bold";
+}
+@media (min-width: 1024px) {
+  section.recommend-lists div:hover .desc .booking {
+    display: block;
+    padding-top: 22px;
+    font-size: 32px;
+    font-family: "Pretendard-Bold";
   }
 }/*# sourceMappingURL=mybooking.css.map */
