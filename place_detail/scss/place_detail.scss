@@ -384,8 +384,6 @@ section.programs > .container {
             width: 85%;
         }
     }
-
-    
 }
 
 .title-icon {
@@ -399,9 +397,9 @@ section.programs > .container {
         font-size: 16px;
         font-weight: bold;
         .underline {
-            position: absolute;
-            bottom: -4px; left: 0;
-            width: 65px; height: 2px;
+            // position: absolute;
+            // bottom: -4px; left: 0;
+            width: 65px; height: 2.5px;
             background-color: $basic-brown;
         }
     }

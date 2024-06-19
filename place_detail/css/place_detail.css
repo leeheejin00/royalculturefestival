@@ -1124,11 +1124,8 @@ section.programs {
   font-weight: bold;
 }
 .title-icon .title .underline {
-  position: absolute;
-  bottom: -4px;
-  left: 0;
   width: 65px;
-  height: 2px;
+  height: 2.5px;
   background-color: #2f2411;
 }
 .title-icon .icon {

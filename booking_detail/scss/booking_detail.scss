@@ -436,9 +436,18 @@ section.details {
                     "a d"
                 ;
                 .poster-image { grid-area: a; }
-                .info-1-2 { grid-area: b; }
-                .info3 { grid-area: c; }
-                .cancel { grid-area: d ;}
+                .info-1-2 { 
+                    grid-area: b;
+                    align-self: end;
+                }
+                .info3 { 
+                    grid-area: c;
+                    align-self: end;
+                }
+                .cancel { 
+                    grid-area: d;
+                    height: 80px;
+                }
         }
     }  // booking-info
 }
