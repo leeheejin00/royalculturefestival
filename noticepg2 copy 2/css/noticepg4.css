@@ -1089,6 +1089,7 @@ footer .copyright p {
 }
 .noticepg .noticepg_box {
   margin-top: 50px;
+  margin-bottom: 50px;
   border: 1px solid black;
 }
 .noticepg .noticepg_box h2 {

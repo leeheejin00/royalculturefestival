@@ -3,8 +3,6 @@
 @import "./mixin.scss";
 @import "../../scss/mixin.scss";
 @import "../../scss/style.scss";
-@import "../../scss/header.scss";
-@import "../../scss/footer.scss";
 @import "../../header_footer/scss/header_footer.scss";
 
 .modal-overlay {
@@ -231,6 +229,7 @@
     }
 
     .noticepg_box {
+        margin-bottom: 50px;
         margin-top: 50px;
         border: 1px solid black;
         
@@ -400,43 +399,7 @@
         }
     }
 
-    .next_notice {
-        position: relative;
-        width: 100%;
-        height: 80px;
-        background-color: #f0f0f0;
-        margin: 0 auto 60px;
-        border-radius: 15px;
-        overflow: hidden;
-
-        img {
-            position: absolute;
-            left: 20px; top: 15px;
-            width: 50px;
-            height: 50px;
-            rotate: -90deg;
-        }
-
-        p {
-            position: absolute;
-            top: 30%; left: 110px;
-            font-size: 1em;
-            font-family: $font-medium;
-        }
-
-        @include responsive(large-screens) {
-            margin: 0 auto 80px;
-            height: 107px;
-
-            img {
-                left: 50px; top: 30px;
-            }
-            p {
-                top: 40px; left: 128px;
-                font-size: 18px;
-            }
-        }
-    }
+    
 
     .list {
         width: 114px; height: 52px;
@@ -444,10 +407,11 @@
         background-color: #2f2411;
         text-align: center;
         line-height: 52px;
-
+        margin-top: 30px;
         border-radius: 10px;
 
         a {
+
             font-size: 24px;
             font-family: $font-medium;
             color: white;
