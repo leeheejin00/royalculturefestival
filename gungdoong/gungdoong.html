@@ -112,7 +112,6 @@
                 const submenu = this.nextElementSibling;
                 let allSubmenus = document.querySelectorAll('.submenu');
 
-                // Close all submenus except the current one
                 allSubmenus.forEach(sub => {
                     if (sub !== submenu) {
                         sub.classList.remove('open');
@@ -120,7 +119,6 @@
                     }
                 });
 
-                // Toggle the clicked submenu
                 if (submenu && submenu.classList.contains('submenu')) {
                     submenu.classList.toggle('open');
                     if (submenu.classList.contains('open')) {
@@ -129,7 +127,6 @@
                         submenu.style.maxHeight = null;
                     }
 
-                    // Adjust header height
                     setTimeout(() => {
                         let totalHeight = 180; 
                         allSubmenus.forEach(sub => {
@@ -148,7 +145,6 @@
                     submenu.classList.remove('open');
                     submenu.style.maxHeight = null;
 
-                    // Adjust header height back to default
                     setTimeout(() => {
                         let totalHeight = 180; 
                         const allSubmenus = document.querySelectorAll('.submenu');
@@ -164,6 +160,7 @@
         });
     });
     </script>
+
 
 </head>
 <body>
@@ -192,17 +189,7 @@
                     <input type="text" id="searchInput" class="search-input" placeholder="Search...">
                 </div> <!-- search-menu -->
             </div> <!-- logo-icon -->
-            <script>
-                document.getElementById('intranet-icon').addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent the default action of the anchor tag
-                    var selectMenu = document.getElementById('language-select');
-                    if (selectMenu.style.display === 'none' || selectMenu.style.display === '') {
-                        selectMenu.style.display = 'block';
-                    } else {
-                        selectMenu.style.display = 'none';
-                    }
-                });
-                </script>
+            
             <div id="side-menu" class="side-menu">
                 <div class="language-login">
                     <div class="language">
@@ -220,16 +207,16 @@
                 </div> 
                 <script>
                     document.addEventListener('DOMContentLoaded', (event) => {
-                const languageSelect = document.getElementById('language-select');
-                
-                languageSelect.addEventListener('click', () => {
-                    languageSelect.size = languageSelect.size === 1 ? 4 : 1;
+                    const languageSelect = document.getElementById('language-select');
+                    
+                    languageSelect.addEventListener('click', () => {
+                        languageSelect.size = languageSelect.size === 1 ? 4 : 1;
+                    });
+                    
+                    languageSelect.addEventListener('blur', () => {
+                        languageSelect.size = 1;
+                    });
                 });
-                
-                languageSelect.addEventListener('blur', () => {
-                    languageSelect.size = 1;
-                });
-            });
                 </script>
                 <nav class="side-nav">
                     <ul class="gnb">
@@ -684,6 +671,6 @@
                 window.location.href = url;
             }
         }
-        </script>
+    </script>
 </body>
 </html>

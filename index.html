@@ -84,7 +84,6 @@
                 e.preventDefault();
                 const submenu = this.nextElementSibling;
 
-                // 모든 서브메뉴를 닫기
                 document.querySelectorAll('.submenu').forEach(sub => {
                     if (sub !== submenu) {
                         sub.classList.remove('open');
@@ -92,7 +91,6 @@
                     }
                 });
 
-                // 클릭한 서브메뉴 토글
                 if (submenu && submenu.classList.contains('submenu')) {
                     submenu.classList.toggle('open');
                     if (submenu.classList.contains('open')) {
@@ -226,7 +224,7 @@
             </div> <!-- logo-icon -->
             <script>
                 document.getElementById('intranet-icon').addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent the default action of the anchor tag
+                    event.preventDefault();
                     var selectMenu = document.getElementById('language-select');
                     if (selectMenu.style.display === 'none' || selectMenu.style.display === '') {
                         selectMenu.style.display = 'block';
@@ -236,32 +234,32 @@
                 });
                 </script>
 
-<div id="side-menu" class="side-menu">
-    <div class="language-login">
-        <div class="login">
-            <a href="#" id="mobile-login-toggle">로그인</a>
-            <a href="#"><img src="./images/korean-hat.png" alt="login" class="loginimg"></a>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const languageSelect = document.getElementById('language-select');
-            const languageIcon = document.getElementById('languageIcon');
+            <div id="side-menu" class="side-menu">
+                <div class="language-login">
+                    <div class="login">
+                        <a href="#" id="mobile-login-toggle">로그인</a>
+                        <a href="#"><img src="./images/korean-hat.png" alt="login" class="loginimg"></a>
+                    </div>
+            </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', (event) => {
+                        const languageSelect = document.getElementById('language-select');
+                        const languageIcon = document.getElementById('languageIcon');
 
-            const toggleLanguageSelect = () => {
-                languageSelect.size = languageSelect.size === 1 ? 4 : 1;
-            };
+                        const toggleLanguageSelect = () => {
+                            languageSelect.size = languageSelect.size === 1 ? 4 : 1;
+                        };
 
-            languageIcon.addEventListener('click', (event) => {
-                event.preventDefault();
-                toggleLanguageSelect();
-            });
+                        languageIcon.addEventListener('click', (event) => {
+                            event.preventDefault();
+                            toggleLanguageSelect();
+                        });
 
-            languageSelect.addEventListener('blur', () => {
-                languageSelect.size = 1;
-            });
-        });
-    </script>
+                        languageSelect.addEventListener('blur', () => {
+                            languageSelect.size = 1;
+                        });
+                    });
+                </script>
 
                 <nav class="side-nav">
                     <ul class="gnb">
@@ -368,7 +366,6 @@
                     function submitForm() {
                         document.getElementById("searchForm").submit();
                     }
-                    
                     function validateSearch() {
                         var find = document.getElementById("find").value;
                         if (find.trim() === "") {
@@ -543,7 +540,6 @@
               </div>
             </div>
             <script>
-                // 슬라이드 요소 선택
                 const images = document.querySelectorAll('.mo-palace-box1, .mo-palace-box2, .mo-palace-box3, .mo-palace-box4, .mo-palace-box5, .mo-palace-box6');
                 const texts = document.querySelectorAll('.palace-slide1, .palace-slide2, .palace-slide3, .palace-slide4, .palace-slide5, .palace-slide6');
                 
@@ -552,11 +548,9 @@
                 let interval;
             
                 function showSlide1(index) {
-                    // 모든 슬라이드 숨기기
                     images.forEach(img => img.style.display = 'none');
                     texts.forEach(text => text.style.display = 'none');
-            
-                    // 현재 슬라이드 보이기
+
                     images[index].style.display = 'block';
                     texts[index].style.display = 'block';
                 }
@@ -578,12 +572,10 @@
                 function stopSlideShow() {
                     clearInterval(interval);
                 }
-            
-                // 초기 슬라이드 설정
+
                 showSlide1(currentSlide);
                 startSlideShow();
-            
-                // 마우스 호버 이벤트 설정
+
                 images.forEach(img => {
                     img.addEventListener('mouseover', stopSlideShow);
                     img.addEventListener('mouseout', startSlideShow);
@@ -593,8 +585,7 @@
                     text.addEventListener('mouseover', stopSlideShow);
                     text.addEventListener('mouseout', startSlideShow);
                 });
-            
-                // 슬라이드 버튼 이벤트 설정
+
                 document.getElementById('prevSlide2').addEventListener('click', () => {
                     stopSlideShow();
                     prevSlide2();
@@ -627,8 +618,6 @@
                     
                     const palacTxt1 = document.querySelector('.palace-txt1');
                     const palaceTxt2 = document.querySelector('.palace-txt2');
-
-                    // 애니메이션 클래스 추가
               
                     palacTxt1.classList.add('slide-in-left');
                     palaceTxt2.classList.add('slide-in-left');
@@ -637,17 +626,14 @@
                     observer.observe(palaceTxt2);
                 }
 
-                // 화면 크기 확인 및 조건에 따라 초기화
                 function checkScreenSize() {
                     if (window.innerWidth >= 768) {
                         initObserver();
                     }
                 }
 
-                // 초기 체크
                 checkScreenSize();
 
-                // 화면 크기 변경 이벤트 리스너
                 window.addEventListener('resize', checkScreenSize);
             });
             </script>
@@ -969,7 +955,6 @@
                 });
             });
 
-            // Initialize the first palace section
             showPalace(0);
         });
         </script>
@@ -989,13 +974,11 @@
                 });
             }, options);
 
-            // const palacehistory = document.querySelector('.palace-history')
             const img1 = document.querySelector('.img1');
             const img2 = document.querySelector('.img2');
             const img3 = document.querySelector('.img3');
             const img4 = document.querySelector('.img4');
 
-            // palacehistory.classList.add('slide-in-right')
             img1.classList.add('slide-in-left');
             img2.classList.add('slide-in-right');
             img3.classList.add('slide-in-top');
@@ -1056,6 +1039,6 @@
                 window.location.href = url;
             }
         }
-        </script>
+    </script>
 </body>
 </html>
