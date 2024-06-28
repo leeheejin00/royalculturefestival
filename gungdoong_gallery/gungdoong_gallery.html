@@ -561,13 +561,13 @@
                         if (rect.top < window.innerHeight) {
                             setTimeout(() => {
                                 reviewTxt.style.opacity = 1;
-                            }, index * 500); // Each review fades in 500ms after the previous one
+                            }, index * 500);
                         }
                     });
                 }
 
                 window.addEventListener('scroll', checkScroll);
-                checkScroll(); // Initial check in case elements are already in view
+                checkScroll();
                 });
             </script>
         </section>

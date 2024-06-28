@@ -112,7 +112,6 @@
                 const submenu = this.nextElementSibling;
                 let allSubmenus = document.querySelectorAll('.submenu');
 
-                // Close all submenus except the current one
                 allSubmenus.forEach(sub => {
                     if (sub !== submenu) {
                         sub.classList.remove('open');
@@ -120,7 +119,6 @@
                     }
                 });
 
-                // Toggle the clicked submenu
                 if (submenu && submenu.classList.contains('submenu')) {
                     submenu.classList.toggle('open');
                     if (submenu.classList.contains('open')) {
@@ -129,7 +127,6 @@
                         submenu.style.maxHeight = null;
                     }
 
-                    // Adjust header height
                     setTimeout(() => {
                         let totalHeight = 180; 
                         allSubmenus.forEach(sub => {
@@ -148,7 +145,6 @@
                     submenu.classList.remove('open');
                     submenu.style.maxHeight = null;
 
-                    // Adjust header height back to default
                     setTimeout(() => {
                         let totalHeight = 180; 
                         const allSubmenus = document.querySelectorAll('.submenu');
@@ -194,7 +190,7 @@
             </div> <!-- logo-icon -->
             <script>
                 document.getElementById('intranet-icon').addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent the default action of the anchor tag
+                    event.preventDefault();
                     var selectMenu = document.getElementById('language-select');
                     if (selectMenu.style.display === 'none' || selectMenu.style.display === '') {
                         selectMenu.style.display = 'block';
@@ -548,7 +544,6 @@
 
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
-                // Modal functionality
                 var modal = document.getElementById('myModal');
                 var closeBtn = document.querySelector('.close');
 
