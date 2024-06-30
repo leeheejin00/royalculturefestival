@@ -3,7 +3,15 @@
 @import "./mixin.scss";
 @import "../../scss/mixin.scss";
 @import "../../scss/style.scss";
-@import "../../header_footer/scss/header_footer.scss";
+@import "../../header_footer/scss/header.scss";
+@import "../../header_footer/scss/footer.scss";
+
+header {
+    @include header;
+}
+footer {
+    @include footer;
+}
 
 .modal-overlay {
     display:none;
@@ -216,6 +224,7 @@
     width: $width-wide;
     max-width: 1416px;
     margin: 32px auto;
+    padding: 0 32px;
 }
 .back {
     position: -webkit-sticky; /* For Safari */

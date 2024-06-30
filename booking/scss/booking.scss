@@ -3,7 +3,15 @@
 @import "./mixin.scss";
 @import "../../scss/mixin.scss";
 @import "../../scss/style.scss";
-@import "../../header_footer/scss/header_footer.scss";
+@import "../../header_footer/scss/header.scss";
+@import "../../header_footer/scss/footer.scss";
+
+header {
+    @include header;
+}
+footer {
+    @include footer;
+}
 
 .modal-overlay {
     display:none;

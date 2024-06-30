@@ -12,12 +12,13 @@
 }
 
 @mixin header {
-    width: $width-wide;
+    width: 100%;
     background: url(../images/header_back.png) no-repeat;
     background-size: cover;
+    transition: height 0.5s ease-out;
 
     @include responsive(large-screens) {
-        height: 340px;
+        height: 180px;
     }
 
     .logo-icon {
@@ -25,10 +26,11 @@
         justify-content: space-between;
         align-items: center;
         .search-menu {
+            position: relative;
             display: flex;
             z-index: 100;
             a {
-                margin-right: 30px;
+                margin-right: 15px;
                 img {
                     width: 36px;
                     z-index: 100;
@@ -40,7 +42,11 @@
             a:nth-child(2) {
                 display: none;
             }
+            #language-select {
+                display: none;
+            }
             .menu-toggle-btn {
+                cursor: pointer;
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
@@ -62,6 +68,27 @@
                     transform: rotate(-45deg) translate(7px, -6px);
                 }
             }
+            .close-btn {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+                font-size: 24px;
+            }
+            .search-input {
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 100%;
+                width: 100px;
+                padding: 5px;
+                font-size: 16px;
+                border-bottom: 3px solid black;
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+                
+            }
         }
     }
 
@@ -80,56 +107,87 @@
                 .menu-toggle-btn {
                     display: none;
                 }
-            }    
+            }   
         }
     }
     .side-menu {
-        background: url(../images/header_back.png) no-repeat;
+        // background: url(../images/header_back.png) no-repeat;
         position: fixed;
         width: 45%; 
         top: 0;
         right: -45%; 
         background-color: white; 
+        height: 100%;
         z-index: 1;
-        transition: right 0.3s;
+        transition: right 0.3s ease-in-out;
         .language-login {
+            width: 80%;
             display: flex;
             margin-top: 125px;
             margin-left: 5px;
             margin-bottom: 10px;
             .language {
+                width: 45%;
+                text-align: center;
+                cursor: pointer;
                 padding: 2px;
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
                 background-color: #2f2411;
-                margin-left: 10%;
                 border-radius: 5px;
-                margin-left: 15px;
-
-                a {
+                position: relative;
+                select {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    background: none;
+                    border: none;
                     color: white;
-                    font-size: 12px;
-                    font-family: $font-pre-regular;
-                    img {
-                        padding-left: 5px;
-                        width: 60%;
-                    }
+                    font-size: 8px;
+                    font-family: "Arial", sans-serif; /* Replace with your font if needed */
+                    cursor: pointer;
+                    padding: 5px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                }
+                .language::before {
+                    content: url('../../images/language-white.png');
+                    z-index: 100;
+                    position: relative;
+                    width: 11px;
+                    height: 11px;
+                    margin-right: 5px;
+                }
+                
+                .language select:focus {
+                    outline: none;
+                }
+                
+                .language select option {
+                    background-color: #2f2411;
+                    color: white;
                 }
             }
             .login {
-                padding: 2px;
+                width: 45%;
+                text-align: center;
+                cursor: pointer;
+                padding: 5px;
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
                 background-color: #2f2411;
                 border-radius: 5px;
-                margin-left: 5px;
+                margin-left: 3px;
                 a {
                     color: white;
-                    font-size: 12px;
+                    font-size: 8px;
                     font-family: $font-pre-regular;
+                    writing-mode: horizontal-tb;
                     img {
-                        padding-left: 5px;
-                        width: 60%;
+                        width: 11px;
                     }
                 }
             }
@@ -139,6 +197,7 @@
             z-index: 1;
             .gnb {
                 li {
+                    
                     a {
                         display: flex;
                         align-items: baseline;
@@ -168,7 +227,7 @@
                             }
                         }
                     }
-                    .submenu2 {
+                    .submenu {
                         display: flex;
                     }
                 }
@@ -197,7 +256,11 @@
                     li {
                         position: relative;
                         .submenu {
+                            display: none;
                             margin-top: 27px;
+                            overflow: hidden;
+                            max-height: 0;
+                            transition: max-height 0.5s ease-out;
                             li {
                                 a {
                                     font-family: $font-pre-regular;
@@ -210,6 +273,11 @@
                                 }   
                             }
                         }
+                        .submenu.open {
+                            display: block;
+                            max-height: 1000px; /* 적절한 최대 높이로 설정 */
+                            transition: max-height 0.3s ease-in;
+                        }
                     }
                         a {
                             color: #171717;
@@ -217,10 +285,12 @@
                             height: 30px;
                             line-height: 30px;
                             text-align: center;
-                            text-decoration: underline;
                             font-family: $font-regular;
                             &:hover {
                                 color: #ffbe0f;
+                                text-decoration: underline;
+                                text-underline-position: under;
+                                text-underline-offset: length($list: 5em);
                             }
                         }
                     }
@@ -233,12 +303,21 @@
                             border-top: 0;
                             border-left: 0;
                             border-right: 0;
-                            color: black;
+                            padding-bottom: 8px;
+                            font-size: 16px;
+                            outline: none;
+                            -webkit-appearance: none; /* 크롬, 사파리, 엣지 */
+                            -moz-appearance: none; /* 파이어폭스 */
+                            appearance: none; /* 기본 브라우저 */
+                            &::-webkit-search-cancel-button {
+                                -webkit-appearance: none;
+                                appearance: none;
+                            }
                         }
                         .search{
                             position: absolute;
-                            top: -18px;
-                            left: 135px;
+                            top: -10px;
+                            left: 163px;
                             img {
                                 width: 30px;
                             }

@@ -23,7 +23,6 @@
         background-color: #ffbe0f;
         display: flex;
         justify-content: center;
-        background-color: #ffbe0f;
         width: $width-wide;
         height: 67px;
         @include responsive(large-screens) {
@@ -34,9 +33,13 @@
             margin-right: 42px;
             @include responsive(large-screens) {
                 margin-right: 20px;
-                }
+            }
             img {
                 width: 48px;
+                transition: filter 0.3s ease;
+            }
+            &:hover img {
+                width: 58px;
             }
         }
         a:last-child {
@@ -45,11 +48,11 @@
     }
 
     .footer-back {
-        background: url(../images/footer-pattern-bg.png);
+        background: url(../../images/footer-pattern-bg.png);
 
         
         @include responsive(large-screens) {
-            background: url(../images/header_backpc.png);
+            background: url(../../images/header_backpc.png);
             background-size: cover;
             background-color: #2f2411;
         }
@@ -66,14 +69,23 @@
             text-align: center;
             label {
                 select {
-                    border: 0;
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    padding-left: 5px;
+                    padding-right: 5px;
                     color: white;
                     font-family: $font-pre-regular;
                     font-size: 16px;
                     background: transparent;
-                    width: 214px;
+                    width: 25%;
+                    option {
+                        color: black;
+                    }
                     @include responsive(large-screens) {
                         font-size: 21px;
+                        width: 10%;
                     }
                 }
             }
@@ -119,9 +131,9 @@
             display: flex;
             justify-content: center;
             margin: 0 auto;
-            address {
+            .tel1 {
                     font-size: 14px;
-                    margin-right: 42px;
+                    margin-right: 10px;
                     margin-bottom: 34px;
                     font-family: $font-extra;
                     text-align: center;
@@ -129,6 +141,17 @@
                         font-size: 18px;
                     }
                 }
+                .tel2 {
+                    font-size: 14px;
+                    margin-left: 10px;
+                    margin-bottom: 34px;
+                    font-family: $font-extra;
+                    text-align: center;
+                    @include responsive(large-screens) {
+                        font-size: 18px;
+                    }
+                }
+                
             }
         .copyright {
             p {

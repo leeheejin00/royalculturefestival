@@ -3,7 +3,23 @@
 @import "./mixin.scss";
 @import "../../scss/mixin.scss";
 @import "../../scss/style.scss";
-@import "../../header_footer/scss/header_footer.scss";
+@import "../../scss/reset.scss";
+@import "../../header_footer/scss/header.scss";
+@import "../../header_footer/scss/footer.scss";
+
+header {
+    @include header;
+}
+footer {
+    @include footer;
+}
+
+.container {
+    width: $width-wide;
+    max-width: 1416px;
+    margin: 32px auto;
+    padding: 0 32px;
+}
 
 .modal-overlay {
     display:none;
