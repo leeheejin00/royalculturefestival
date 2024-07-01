@@ -1,15 +1,24 @@
 @import "./style.scss";
 @import "./reset.scss";
 @import "./mixin.scss";
-@import "../header_footer/scss/header_footer.scss";
 @import "../scss/mixin.scss";
 @import "../scss/style.scss";
+@import "../header_footer/scss/header.scss";
+@import "../header_footer/scss/footer.scss";
+
+header {
+    @include header;
+}
+footer {
+    @include footer;
+}
 
 .container {
     width: $width-wide;
     max-width: 1416px;
     margin: 32px auto; 
     z-index: 2;
+    padding: 0 32px;
 }
 
 .modal-overlay {
