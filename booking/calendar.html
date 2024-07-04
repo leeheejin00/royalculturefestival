@@ -36,8 +36,6 @@
 </head>
 <body>
 
-<!-- <h2>달력</h2> -->
-
 <div class="button">
   <button onclick="prevMonth()">&lt;</button>
   <button onclick="nextMonth()">&gt;</button>
@@ -45,11 +43,11 @@
 <div id="calendar"></div>
 
 <script>
-  let currentYear = 2024; // 현재 연도
-  let currentMonth = 5; // 현재 월 (0부터 시작)
+  let currentYear = 2024;
+  let currentMonth = 5;
 
   function createCalendar(year, month) {
-    const today = new Date(); // 오늘 날짜 가져오기
+    const today = new Date();
     const todayDate = today.getDate();
     
     const startDate = new Date(year, month, 1);
@@ -88,7 +86,7 @@
           const td = document.createElement("td");
           td.textContent = date;
           if (year === today.getFullYear() && month === today.getMonth() && date === todayDate) {
-            td.classList.add('today'); // 오늘 날짜에 클래스 추가
+            td.classList.add('today');
           }
           row.appendChild(td);
           date++;
@@ -100,26 +98,24 @@
     calendar.appendChild(table);
   }
   
-  createCalendar(currentYear, currentMonth); // 달력 생성 (현재 연도, 현재 월)
+  createCalendar(currentYear, currentMonth);
 
-  // 이전 달로 이동하는 함수
   function prevMonth() {
-    currentMonth--; // 현재 월을 감소시킴
-    if (currentMonth < 0) { // 현재 월이 0(1월)보다 작으면
-      currentMonth = 11; // 이전 연도의 12월로 설정
+    currentMonth--;
+    if (currentMonth < 0) { 
+      currentMonth = 11;
       currentYear--;
     }
-    createCalendar(currentYear, currentMonth); // 새로운 달력 생성
+    createCalendar(currentYear, currentMonth);
   }
 
-  // 다음 달로 이동하는 함수
   function nextMonth() {
-    currentMonth++; // 현재 월을 증가시킴
-    if (currentMonth > 11) { // 현재 월이 11(12월)을 넘어가면
-      currentMonth = 0; // 다음 연도의 1월로 설정
+    currentMonth++;
+    if (currentMonth > 11) {
+      currentMonth = 0;
       currentYear++;
     }
-    createCalendar(currentYear, currentMonth); // 새로운 달력 생성
+    createCalendar(currentYear, currentMonth);
   }
 </script>
 

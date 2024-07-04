@@ -108,7 +108,6 @@
                 const submenu = this.nextElementSibling;
                 let allSubmenus = document.querySelectorAll('.submenu');
 
-                // Close all submenus except the current one
                 allSubmenus.forEach(sub => {
                     if (sub !== submenu) {
                         sub.classList.remove('open');
@@ -116,7 +115,6 @@
                     }
                 });
 
-                // Toggle the clicked submenu
                 if (submenu && submenu.classList.contains('submenu')) {
                     submenu.classList.toggle('open');
                     if (submenu.classList.contains('open')) {
@@ -125,7 +123,6 @@
                         submenu.style.maxHeight = null;
                     }
 
-                    // Adjust header height
                     setTimeout(() => {
                         let totalHeight = 180; 
                         allSubmenus.forEach(sub => {
@@ -144,7 +141,6 @@
                     submenu.classList.remove('open');
                     submenu.style.maxHeight = null;
 
-                    // Adjust header height back to default
                     setTimeout(() => {
                         let totalHeight = 180; 
                         const allSubmenus = document.querySelectorAll('.submenu');
@@ -190,7 +186,7 @@
             </div> <!-- logo-icon -->
             <script>
                 document.getElementById('intranet-icon').addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent the default action of the anchor tag
+                    event.preventDefault();
                     var selectMenu = document.getElementById('language-select');
                     if (selectMenu.style.display === 'none' || selectMenu.style.display === '') {
                         selectMenu.style.display = 'block';
@@ -431,12 +427,7 @@
                 <div class="booking-info">
                     <a href="#" class="poster-image"><img src="./images/poster_starnight.jpg" alt="별빛야행 포스터"></a>
                     <div class="info-1-2">
-                        <!-- <h3>2024년 경복궁 별빛야행</h3> -->
                         <table class="info1">
-                            <!-- <colgroup>
-                                <col>
-                                <col>
-                            </colgroup> -->
                             <tbody>
                                 <tr>
                                     <td class="sort"><span class="box">예매자</span></td>
@@ -468,17 +459,6 @@
                                 </tr>
                             </tbody>
                         </table>
-
-                        <!-- <div class="info1">
-                            <p><span class="sort">예매자</span>홍길동</p>
-                            <p><span class="sort">일시</span>2024.05.03 (금) 19:40</p>
-                            <p><span class="sort">예매일</span>2024.04.16 (화)</p>
-                            <p><span class="sort">장소</span>경복궁 일원</p>
-                        </div>
-                        <div class="info2">
-                            <p><span class="sort">티켓수령방법</span>현장수령</p>
-                            <p><span class="sort">결제수단</span>신용카드</p>
-                        </div> -->
                     </div><!-- info-1-2 -->
 
                     <div class="mobile-info2">
@@ -537,17 +517,13 @@
                     } else {
                         var confirmCancel = confirm('정말로 예매를 취소하시겠습니까?');
                         if (confirmCancel) {
-                            // 예매 취소 로직을 여기에 추가하세요
                             alert('예매가 취소되었습니다.');
-                            // 예매 내역표를 제거하는 코드
                             var bookingInfo = document.querySelector('.info3');
                             if (bookingInfo) {
                                 bookingInfo.remove();
                             }
-                            // 버튼 텍스트 변경
                             var cancelButton = document.querySelector('.cancel');
                             cancelButton.textContent = '예매 취소 확인';
-                            // 티켓 정보 제거
                             var ticketInfo = document.querySelector('.mobile-info2');
                             if (ticketInfo) {
                                 ticketInfo.remove();
