@@ -674,10 +674,10 @@
                 </ul><!-- poster -->
             </div>
             <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    const posterWeb = document.querySelector('.poster-web');
-                    const listItems = document.querySelectorAll('.poster-web li');
-                
+                window.onload = function() {
+                const posterWeb = document.querySelector('.poster-web');
+                const listItems = document.querySelectorAll('.poster-web li');
+            
                     listItems.forEach(item => {
                         item.addEventListener('mouseenter', () => {
                             posterWeb.style.animationPlayState = 'paused';
@@ -686,12 +686,12 @@
                             posterWeb.style.animationPlayState = 'running';
                         });
                     });
-                });
+                };
 
                 function openPopup() {
-                  window.open("../booking/booking_popup.html", "Popup", "width=600,height=800");
+                window.open("../booking/booking_popup.html", "Popup", "width=600,height=800");
                 }
-                </script>
+            </script>
         </section><!-- popular -->
 
 

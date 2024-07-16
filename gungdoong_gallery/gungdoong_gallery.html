@@ -551,23 +551,22 @@
                 </div> <!-- review3 -->
             </div> <!-- container -->
             <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                const reviewTexts = document.querySelectorAll('.review-txt1, .review-txt2, .review-txt3');
-                
-                function checkScroll() {
-                    reviewTexts.forEach((reviewTxt, index) => {
-                        const rect = reviewTxt.getBoundingClientRect();
-                        if (rect.top < window.innerHeight) {
-                            setTimeout(() => {
-                                reviewTxt.style.opacity = 1;
-                            }, index * 500);
-                        }
-                    });
-                }
-
-                window.addEventListener('scroll', checkScroll);
-                checkScroll();
-                });
+                window.onload = function() {
+                    const reviewTexts = document.querySelectorAll('.review-txt1, .review-txt2, .review-txt3');
+                    
+                    function checkScroll() {
+                        reviewTexts.forEach((reviewTxt, index) => {
+                            const rect = reviewTxt.getBoundingClientRect();
+                            if (rect.top < window.innerHeight) {
+                                setTimeout(() => {
+                                    reviewTxt.style.opacity = 1;
+                                }, index * 500);
+                            }
+                        });
+                    }
+                    window.addEventListener('scroll', checkScroll);
+                    checkScroll();
+                };
             </script>
         </section>
 
