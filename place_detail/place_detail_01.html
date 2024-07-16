@@ -110,7 +110,6 @@
                 const submenu = this.nextElementSibling;
                 let allSubmenus = document.querySelectorAll('.submenu');
 
-                // Close all submenus except the current one
                 allSubmenus.forEach(sub => {
                     if (sub !== submenu) {
                         sub.classList.remove('open');
@@ -118,7 +117,6 @@
                     }
                 });
 
-                // Toggle the clicked submenu
                 if (submenu && submenu.classList.contains('submenu')) {
                     submenu.classList.toggle('open');
                     if (submenu.classList.contains('open')) {
@@ -127,7 +125,6 @@
                         submenu.style.maxHeight = null;
                     }
 
-                    // Adjust header height
                     setTimeout(() => {
                         let totalHeight = 180; 
                         allSubmenus.forEach(sub => {
@@ -146,7 +143,6 @@
                     submenu.classList.remove('open');
                     submenu.style.maxHeight = null;
 
-                    // Adjust header height back to default
                     setTimeout(() => {
                         let totalHeight = 180; 
                         const allSubmenus = document.querySelectorAll('.submenu');
@@ -192,7 +188,7 @@
             </div> <!-- logo-icon -->
             <script>
                 document.getElementById('intranet-icon').addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent the default action of the anchor tag
+                    event.preventDefault();
                     var selectMenu = document.getElementById('language-select');
                     if (selectMenu.style.display === 'none' || selectMenu.style.display === '') {
                         selectMenu.style.display = 'block';
@@ -479,7 +475,6 @@
                 </div><!-- conbox -->
 
                 <script>
-                    // 운영시간 변경
                     const times = [
                         { time: '오전 09시 ~ 오후 05시', lastEnter: '입장마감 : 오후 04시' },
                         { time: '오전 09시 ~ 오후 06시', lastEnter: '입장마감 : 오후 05시' },
@@ -489,12 +484,10 @@
                     ];
                 
                     function setTime(index, event) {
-                        // 선택된 월 표시 변경
                         const selectedMonth = document.querySelector('.select-month div.selected');
                         selectedMonth.classList.remove('selected');
                         event.target.classList.add('selected');
 
-                        // 선택된 월에 따라 시간 변경
                         updateTime(times[index].time, times[index].lastEnter);
                     }
 
@@ -513,10 +506,6 @@
                         프로그램
                         <div class="underline">&nbsp;</div>
                     </div>
-                    <!-- <div class="icon">
-                        <a href="#"><img src="./images/calendar.png" alt="calendar"></a>
-                        <a href="#"><img src="./images/filter.png" alt="filter"></a>
-                    </div> -->
                 </div><!-- title-icon -->
 
                 <div class="program-list">
@@ -673,7 +662,6 @@
                             </div><!-- bus -->
                         `;
 
-                        // 선택된 메뉴에 selected 클래스 추가
                         document.querySelectorAll('.add-menu div').forEach(element => {
                             element.classList.remove('selected');
                         });
@@ -700,7 +688,6 @@
                             </div><!-- free -->
                         `;
 
-                        // 선택된 메뉴에 selected 클래스 추가
                         document.querySelectorAll('.add-menu div').forEach(element => {
                             element.classList.remove('selected');
                         });
@@ -721,7 +708,6 @@
                             </div><!-- free -->
                         `;
 
-                        // 선택된 메뉴에 selected 클래스 추가
                         document.querySelectorAll('.add-menu div').forEach(element => {
                             element.classList.remove('selected');
                         });

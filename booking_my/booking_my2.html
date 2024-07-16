@@ -109,16 +109,14 @@
                     e.preventDefault();
                     const submenu = this.nextElementSibling;
                     let allSubmenus = document.querySelectorAll('.submenu');
-    
-                    // Close all submenus except the current one
+
                     allSubmenus.forEach(sub => {
                         if (sub !== submenu) {
                             sub.classList.remove('open');
                             sub.style.maxHeight = null;
                         }
                     });
-    
-                    // Toggle the clicked submenu
+
                     if (submenu && submenu.classList.contains('submenu')) {
                         submenu.classList.toggle('open');
                         if (submenu.classList.contains('open')) {
@@ -126,8 +124,7 @@
                         } else {
                             submenu.style.maxHeight = null;
                         }
-    
-                        // Adjust header height
+
                         setTimeout(() => {
                             let totalHeight = 180; 
                             allSubmenus.forEach(sub => {
@@ -145,8 +142,7 @@
                     if (submenu && submenu.classList.contains('submenu')) {
                         submenu.classList.remove('open');
                         submenu.style.maxHeight = null;
-    
-                        // Adjust header height back to default
+
                         setTimeout(() => {
                             let totalHeight = 180; 
                             const allSubmenus = document.querySelectorAll('.submenu');
@@ -192,7 +188,7 @@
                 </div> <!-- logo-icon -->
                 <script>
                     document.getElementById('intranet-icon').addEventListener('click', function(event) {
-                        event.preventDefault(); // Prevent the default action of the anchor tag
+                        event.preventDefault();
                         var selectMenu = document.getElementById('language-select');
                         if (selectMenu.style.display === 'none' || selectMenu.style.display === '') {
                             selectMenu.style.display = 'block';
@@ -450,25 +446,6 @@
                             </div>
                         </a>                        
                     </div><!-- booking01 -->
-    
-                    <!-- <div class="booking02">
-                        <div class="num-name">
-                            <div class="line"> &nbsp; </div>
-                            <p class="booking-num">14600851339</p>
-                            <p class="booking-name">2024년 경복궁 별빛야행</p>
-                        </div>
-                        <div class="date-place-count">
-                            <p class="date"><span class="bold">일시&nbsp;&nbsp;</span>2024.05.03.(금) 19:40</p>
-                            <p class="place"><span class="bold">장소&nbsp;&nbsp;</span>경복궁 일원</p>
-                            <p class="count"><span class="bold">매수&nbsp;&nbsp;</span>2매</p>
-                        </div>
-                        <div class="more-btn">
-                            <div class="square">
-                                <p>더보기</p>
-                                <img src="./images/right-arrow-white.png" alt="흰색 화살표">
-                            </div>
-                        </div>
-                    </div> -->
                     
                 </section><!-- booking-list -->
     

@@ -111,7 +111,6 @@
                 const submenu = this.nextElementSibling;
                 let allSubmenus = document.querySelectorAll('.submenu');
 
-                // Close all submenus except the current one
                 allSubmenus.forEach(sub => {
                     if (sub !== submenu) {
                         sub.classList.remove('open');
@@ -119,7 +118,6 @@
                     }
                 });
 
-                // Toggle the clicked submenu
                 if (submenu && submenu.classList.contains('submenu')) {
                     submenu.classList.toggle('open');
                     if (submenu.classList.contains('open')) {
@@ -128,7 +126,6 @@
                         submenu.style.maxHeight = null;
                     }
 
-                    // Adjust header height
                     setTimeout(() => {
                         let totalHeight = 180; 
                         allSubmenus.forEach(sub => {
@@ -147,7 +144,6 @@
                     submenu.classList.remove('open');
                     submenu.style.maxHeight = null;
 
-                    // Adjust header height back to default
                     setTimeout(() => {
                         let totalHeight = 180; 
                         const allSubmenus = document.querySelectorAll('.submenu');
@@ -193,7 +189,7 @@
             </div> <!-- logo-icon -->
             <script>
                 document.getElementById('intranet-icon').addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent the default action of the anchor tag
+                    event.preventDefault();
                     var selectMenu = document.getElementById('language-select');
                     if (selectMenu.style.display === 'none' || selectMenu.style.display === '') {
                         selectMenu.style.display = 'block';
@@ -465,10 +461,6 @@
                 <div class="conbox">
                     <div class="select-month">
                         <div class="month3 selected">1-12월</div>
-                        <!-- <div class="month1">2-5월</div>
-                        <div class="month6">9-10월</div>
-                        <div class="month9">11-1월</div>
-                        <div class="month11">11-12월</div> -->
                     </div><!-- select-month -->
                     <p class="open-time">오전 09시 ~ 오후 09시</p>
                     <p class="last-enter">(입장마감 : 오후 08시)</p>
@@ -487,10 +479,6 @@
                         프로그램
                         <div class="underline">&nbsp;</div>
                     </div>
-                    <!-- <div class="icon">
-                        <a href="#"><img src="./images/calendar.png" alt="calendar"></a>
-                        <a href="#"><img src="./images/filter.png" alt="filter"></a>
-                    </div> -->
                 </div>
                 <div class="program-list">
                     <div class="program01">
@@ -604,7 +592,6 @@
                             </div><!-- bus -->
                         `;
 
-                        // 선택된 메뉴에 selected 클래스 추가
                         document.querySelectorAll('.add-menu div').forEach(element => {
                             element.classList.remove('selected');
                         });
@@ -637,7 +624,6 @@
                             </div><!-- free -->
                         `;
 
-                        // 선택된 메뉴에 selected 클래스 추가
                         document.querySelectorAll('.add-menu div').forEach(element => {
                             element.classList.remove('selected');
                         });
@@ -661,7 +647,6 @@
                             </div><!-- kid -->
                         `;
 
-                        // 선택된 메뉴에 selected 클래스 추가
                         document.querySelectorAll('.add-menu div').forEach(element => {
                             element.classList.remove('selected');
                         });

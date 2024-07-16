@@ -26,8 +26,8 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 반투명 검은색 배경 */
-    z-index: 100; /* 모달이 다른 요소들 위에 나타나도록 함 */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
 }
 
     
@@ -240,7 +240,6 @@ section.title {
     h2 { 
         width: 23%;
         font-size: 22px; 
-        // border-bottom: 1px solid $basic-brown;
 
         @include responsive(large-screens) {
             width: 50%;
@@ -329,7 +328,7 @@ section.time {
             flex-wrap: wrap;
             margin-bottom: 24px;
 
-            div {  //오른쪽 정렬
+            div {
                 padding: 4px 12px;
                 margin: 0 8px 4px 0;
                 border: 1px solid $basic-gray;
@@ -376,7 +375,6 @@ section.time {
 section.programs {
     background-color: #f8efe0;
     padding: 16px 0;
-    // margin-bottom: 56px;
 }
 
 section.programs > .container {
@@ -401,12 +399,9 @@ section.programs > .container {
     
     .title {
         position: relative;
-        // width: 25%;
         font-size: 16px;
         font-weight: bold;
         .underline {
-            // position: absolute;
-            // bottom: -4px; left: 0;
             width: 65px; height: 2.5px;
             background-color: $basic-brown;
         }
@@ -414,7 +409,6 @@ section.programs > .container {
 
     .icon {
         display: flex;
-        // margin-left: 8px;
         
         img {
             width: 24px;
@@ -430,7 +424,6 @@ section.programs > .container {
     .program01 {
         position: relative;
         width: 48%;
-        // background-color: aqua;
         margin-bottom: 56px;
         
         .conbox {
@@ -447,7 +440,7 @@ section.programs > .container {
                 position: absolute;
                 bottom: 0;
                 width: 100%; height: 45%;
-                overflow: hidden;  // 애니메이션
+                overflow: hidden;
                 border-radius: 0 0 8px 8px;
                 color: #fff;
                 background-color: #00000090;
@@ -465,7 +458,6 @@ section.programs > .container {
                 }
                 .period {
                     display: inline-block;
-                    // letter-spacing: -1px;
                     font-size: 11px;
                     margin-left: 8px;
 
@@ -484,7 +476,6 @@ section.programs > .container {
                     padding: 8px 0;
 
                     @include responsive(large-screens) {
-                        // display: inline-block;
                         font-size: 12px;
                         span {
                         margin-right: 8px;
@@ -501,7 +492,6 @@ section.programs > .container {
                 height: 80%;
                 padding-top: 24px;
                 cursor: pointer;
-                // border-radius: 8px;
 
                 .title {
                     color: $basic-yellow;
@@ -510,10 +500,8 @@ section.programs > .container {
 
                 .time {
                     display: inline-block;
-                    // letter-spacing: -1px;
                     text-align: center;
                     font-size: 11px;
-                    // margin-left: 8px;
 
                     @include responsive(large-screens) {
                         display: block;
@@ -527,7 +515,6 @@ section.programs > .container {
             position: absolute;
             left: 50%; bottom: -24px;
             transform: translateX(-50%);
-            // margin: 0 auto;
             width: 50%;
             max-width: 208px;
             padding: 8px 0;
@@ -546,7 +533,6 @@ section.programs > .container {
             position: absolute;
             left: 50%; bottom: -24px;
             transform: translateX(-50%);
-            // margin: 0 auto;
             width: 50%;
             max-width: 208px;
             padding: 8px 0;
@@ -581,11 +567,6 @@ section.programs > .container {
         }
     }
 
-    // .program01:hover {
-    //     .hashtag {
-    //         display: inline-block;
-    //     }
-    // }
 }  // program list
 
 // ==== detail ====
@@ -597,7 +578,6 @@ section.detail {
 
     .title {
         position: relative;
-        // width: 25%;
         font-size: 16px;
         font-weight: bold;
         .underline {
@@ -632,7 +612,6 @@ section.address {
 
     .title {
         position: relative;
-        // width: 25%;
         font-size: 16px;
         font-weight: bold;
         span {
@@ -685,9 +664,6 @@ section.additional {
                 color: $basic-yellow;
                 margin-bottom: 12px;
             }
-            // .title-price, .title-parking {
-            //     border-top: 2px solid $basic-brown;
-            // }
             div:hover {
                 cursor: pointer;
                 color: $basic-yellow;
@@ -697,12 +673,10 @@ section.additional {
         .addition-conbox {
             .text-yellow {
                 display: flex;
-                // justify-content: space-between;
                 margin-bottom: 12px;
 
                 .title {
                     width: 20%;
-                    // margin-right: 16px;
                     font-size: 14px;
                     font-weight: bold;
 
@@ -734,27 +708,10 @@ section.additional {
             }
         }
 
-        // @include responsive(large-screens) {
-        //     width: 49%;
-        //     .title-price, .title-parking {
-        //         display: none;
-        //     }
-        //     p { font-size: 16px; }
-        // }
     }  // div.transp
 
     div.price, div.parking {
         display: none;
        
-        // @include responsive(large-screens) {
-        //     display: block;
-        //     width: 23%;
-        //     border: 1px solid $background-lightgray;
-
-        //     .title {
-        //         margin: 13px 0 0 16px;
-        //         padding-top: 8px;
-        //     }
-        // }
     }
 }
