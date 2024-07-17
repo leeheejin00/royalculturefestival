@@ -29,16 +29,16 @@
 
 <br><br>
 
-## 📂Design Guide
-
-#### 링크로 삽입하기
-![은하수](https://cdn.pixabay.com/photo/2023/08/14/15/42/milkyway-8190232_1280.jpg)
-  
-#### 깃에 올려 삽입하기
-![생과방](./Untitled-1.jpg)
+## 📂기획안 & Design Guide
+[🔗기획서로 연결](https://www.figma.com/design/uGumpecuNzkSPzbOUazflF/%5B%EC%B5%9C%EC%A2%85%5D%EA%B6%81%EC%A4%91%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%84-%EA%B8%B0%ED%9A%8D%EC%84%9C_240708?node-id=0-1&t=hn1de7QhfDOQl51q-1)
+![디자인가이드](./guide/guide_khfest.png)
 
 <br><br>
 
 ## 📂페이지의 구성과 동작
 
-<br><br>
+![메인](./guide/1_main.png)
+![서브1](./guide/2_sub1.png)
+![서브2](./guide/3_sub2.png)
+![서브3](./guide/4_sub3.png)
+![서브4](./guide/5_sub4.png)
