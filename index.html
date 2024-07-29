@@ -6,113 +6,13 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
-    <script src="./js/login.js"></script>
-    <script src="./js/loginTab.js"></script>
-    <title>index</title>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchIcon = document.getElementById('searchIcon');
-            const searchInput = document.getElementById('searchInput');
-
-            searchIcon.addEventListener('click', function() {
-                const query = searchInput.value;
-                if (query === '경복궁') {
-                    window.location.href = './index_search/index_search.html';
-                } else {
-                    alert('Please enter "경복궁" to search.');
-                }
-            });
-        });
-    </script>
-    <script>
-        window.onload = function() {
-            const toggleBtn = document.querySelector('.menu-toggle-btn');
-            const sideMenu = document.getElementById('side-menu');
-
-            toggleBtn.addEventListener('click', function() {
-                 if (sideMenu.style.right === '0px') {
-                    sideMenu.style.right = '-250px'; 
-                    toggleBtn.classList.remove('open'); 
-                } else {
-                    sideMenu.style.right = '0'; 
-                    toggleBtn.classList.add('open'); 
-                }
-            });
-        };
-    </script>
-    <script>
-        document.getElementById('languageIcon').addEventListener('click', function(event) {
-        event.preventDefault();
-        var languageSelect = document.getElementById('languageSelect');
-        if (languageSelect.style.display === 'none' || languageSelect.style.display === '') {
-            languageSelect.style.display = 'block';
-        } else {
-            languageSelect.style.display = 'none';
-        }
-    });
-    </script>   
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-        var searchIcon = document.getElementById("searchIcon");
-        var searchInput = document.getElementById("searchInput");
-
-        searchIcon.addEventListener("click", function(event) {
-            event.preventDefault();
-            if (searchInput.style.display === "none" || searchInput.style.display === "") {
-                searchInput.style.display = "block";
-                searchInput.focus();
-            } else {
-                searchInput.style.display = "none";
-            }
-        });
-
-        document.addEventListener("click", function(event) {
-            if (!searchInput.contains(event.target) && !searchIcon.contains(event.target)) {
-                searchInput.style.display = "none";
-            }
-        });
-    });
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-        const menuItems = document.querySelectorAll('.gnb > li > a');
-        
-        menuItems.forEach(item => {
-            item.addEventListener('mouseover', function (e) {
-                e.preventDefault();
-                const submenu = this.nextElementSibling;
-
-                document.querySelectorAll('.submenu').forEach(sub => {
-                    if (sub !== submenu) {
-                        sub.classList.remove('open');
-                        sub.style.maxHeight = null;
-                    }
-                });
-
-                if (submenu && submenu.classList.contains('submenu')) {
-                    submenu.classList.toggle('open');
-                    if (submenu.classList.contains('open')) {
-                        submenu.style.maxHeight = submenu.scrollHeight + "px";
-                    } else {
-                        submenu.style.maxHeight = null;
-                    }
-                }
-            });
-
-            item.parentElement.addEventListener('mouseleave', function () {
-                const submenu = item.nextElementSibling;
-                if (submenu && submenu.classList.contains('submenu')) {
-                    submenu.classList.remove('open');
-                    submenu.style.maxHeight = null;
-                }
-            });
-        });
-    });
-    </script>
+    <title>궁중문화축전</title>
 </head>
 <body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/loginTab.js"></script>
+    <script src="./js/index.js"></script>
     <header>
         <div class="modal-overlay"></div>   
 
@@ -222,17 +122,6 @@
                     <input type="text" id="searchInput" class="search-input" placeholder="Search...">
                 </div> <!-- search-menu -->
             </div> <!-- logo-icon -->
-            <script>
-                document.getElementById('intranet-icon').addEventListener('click', function(event) {
-                    event.preventDefault();
-                    var selectMenu = document.getElementById('language-select');
-                    if (selectMenu.style.display === 'none' || selectMenu.style.display === '') {
-                        selectMenu.style.display = 'block';
-                    } else {
-                        selectMenu.style.display = 'none';
-                    }
-                });
-                </script>
 
             <div id="side-menu" class="side-menu">
                 <div class="language-login">
@@ -241,25 +130,6 @@
                         <a href="#"><img src="./images/korean-hat.png" alt="login" class="loginimg"></a>
                     </div>
             </div>
-                <script>
-                    document.addEventListener('DOMContentLoaded', (event) => {
-                        const languageSelect = document.getElementById('language-select');
-                        const languageIcon = document.getElementById('languageIcon');
-
-                        const toggleLanguageSelect = () => {
-                            languageSelect.size = languageSelect.size === 1 ? 4 : 1;
-                        };
-
-                        languageIcon.addEventListener('click', (event) => {
-                            event.preventDefault();
-                            toggleLanguageSelect();
-                        });
-
-                        languageSelect.addEventListener('blur', () => {
-                            languageSelect.size = 1;
-                        });
-                    });
-                </script>
 
                 <nav class="side-nav">
                     <ul class="gnb">
@@ -361,20 +231,6 @@
                             <img src="./images/main-search-white.png" alt="Search">
                         </div>
                     </div>
-                </form>
-                <script>
-                    function submitForm() {
-                        document.getElementById("searchForm").submit();
-                    }
-                    function validateSearch() {
-                        var find = document.getElementById("find").value;
-                        if (find.trim() === "") {
-                            alert("검색어를 입력하세요.");
-                            return false;
-                        }
-                        return true;
-                    }
-                </script>
             </div>
         </div>
     </header>
@@ -539,85 +395,6 @@
                 </div>
               </div>
             </div>
-            <script>
-                const images = document.querySelectorAll('.mo-palace-box1, .mo-palace-box2, .mo-palace-box3, .mo-palace-box4, .mo-palace-box5, .mo-palace-box6');
-                const texts = document.querySelectorAll('.palace-slide1, .palace-slide2, .palace-slide3, .palace-slide4, .palace-slide5, .palace-slide6');              
-                let currentSlide = 0;
-                const slideInterval1 = 2000;
-                let interval;           
-                function showSlide1(index) {
-                    images.forEach(img => img.style.display = 'none');
-                    texts.forEach(text => text.style.display = 'none');
-                    images[index].style.display = 'block';
-                    texts[index].style.display = 'block';
-                }           
-                function nextSlide1() {
-                    currentSlide = (currentSlide + 1) % images.length;
-                    showSlide1(currentSlide);
-                }           
-                function prevSlide2() {
-                    currentSlide = (currentSlide - 1 + images.length) % images.length;
-                    showSlide1(currentSlide);
-                }           
-                function startSlideShow() {
-                    interval = setInterval(nextSlide1, slideInterval1);
-                }           
-                function stopSlideShow() {
-                    clearInterval(interval);
-                }
-                showSlide1(currentSlide);
-                startSlideShow();
-                images.forEach(img => {
-                    img.addEventListener('mouseover', stopSlideShow);
-                    img.addEventListener('mouseout', startSlideShow);
-                });          
-                texts.forEach(text => {
-                    text.addEventListener('mouseover', stopSlideShow);
-                    text.addEventListener('mouseout', startSlideShow);
-                });
-                document.getElementById('prevSlide2').addEventListener('click', () => {
-                    stopSlideShow();
-                    prevSlide2();
-                    startSlideShow();
-                });          
-                document.getElementById('nextSlide1').addEventListener('click', () => {
-                    stopSlideShow();
-                    nextSlide1();
-                    startSlideShow();
-                });
-            </script>
-
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                const options = {
-                    threshold: 0.5
-                };
-                function initObserver() {
-                    const observer = new IntersectionObserver((entries, observer) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add('visible');
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    }, options);                
-                    const palacTxt1 = document.querySelector('.palace-txt1');
-                    const palaceTxt2 = document.querySelector('.palace-txt2');
-              
-                    palacTxt1.classList.add('slide-in-left');
-                    palaceTxt2.classList.add('slide-in-left');
-                    observer.observe(palacTxt1);
-                    observer.observe(palaceTxt2);
-                }
-                function checkScreenSize() {
-                    if (window.innerWidth >= 768) {
-                        initObserver();
-                    }
-                }
-                checkScreenSize();
-                window.addEventListener('resize', checkScreenSize);
-            });
-            </script>
           </section>
 
           <section id="banner">
@@ -645,26 +422,6 @@
                     </div>
                 </div>
             </div>
-            <script src="js/jquery.js"></script>
-            <script>
-                function auto() {
-                    $('.banner-box').animate({left: '-80%'}, 500, function() {
-                        $('.banner-box').append($('.banner-box > div').first()).css({left: '0%'});
-                    });
-                }
-                let timer2 = setInterval(auto, 3000);
-            </script>
-
-            <script>
-                function auto2() {
-                    $('.baner-slide-mo').animate({left: '-80%'}, 500, function() {
-                        $('.baner-slide-mo').append($('.baner-slide-mo > div').first()).css({left: '0%'});
-                    });
-                }
-                let timer4 = setInterval(auto2, 3000);
-            </script>
-
-            
         </section>
         
 
@@ -754,59 +511,6 @@
                 </div>
                 </div>
             </div>
-            <script src="js/jquery.js"></script>
-            <script>
-               function moveRight() {
-                if ($(window).width() <= 768) {
-                    $('.notice-flex-box').stop().animate({ left: '-100%' }, 500, function() {
-                        $(this).css({ left: '0' }).append($('.notice_box1').removeClass('active').next().addClass('active'));
-                        resetActiveClass();
-                    });
-                }
-            }
-
-            function moveLeft() {
-                if ($(window).width() <= 768) {
-                    $('.notice-flex-box').stop().animate({ left: '100%' }, 500, function() {
-                        $(this).css({ left: '0' }).prepend($('.notice_box3').removeClass('active').prev().addClass('active'));
-                        resetActiveClass();
-                    });
-                }
-            }
-
-            function resetActiveClass() {
-                $('.notice_box1, .notice_box2, .notice_box3').removeClass('active');
-                $('.notice_box1').next().addClass('active');
-            }
-
-            function auto() {
-                moveRight();
-            }
-
-            let timer = setInterval(auto, 3000);
-
-            $('.notice-slide-flex').on('mouseover', function() {
-                clearInterval(timer);
-            });
-
-            $('.notice-slide-flex').on('mouseleave', function() {
-                timer = setInterval(auto, 3000);
-            });
-
-            $(document).ready(function() {
-                resetActiveClass();
-            });
-
-            $('#left').click(function(e) {
-                e.preventDefault();
-                moveLeft();
-            });
-
-            $('#right').click(function(e) {
-                e.preventDefault();
-                moveRight();
-            });
-            </script>
         </section>
         
         <section id="history">
@@ -906,71 +610,6 @@
                 </div>
             </div>
         </section>
-        <script>
-            window.onload = function() {
-                const palaceLinks = document.querySelectorAll('.palace_gnb li a');
-                const palaceSections = [
-                    '.palace-img1',
-                    '.palace-img2',
-                    '.palace-img3',
-                    '.palace-img4',
-                    '.palace-img5',
-                    '.palace-img6'
-                ];
-        
-                function showPalace(index) {
-                    palaceSections.forEach((selector, i) => {
-                        const section = document.querySelector(selector);
-                        if (i === index) {
-                            section.style.display = 'grid';
-                        } else {
-                            section.style.display = 'none';
-                        }
-                    });
-                }
-        
-                palaceLinks.forEach((link, index) => {
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        showPalace(index);
-                    });
-                });
-        
-                showPalace(0);
-            };
-        </script>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-            const options = {
-                threshold: 0.5
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, options);
-
-            const img1 = document.querySelector('.img1');
-            const img2 = document.querySelector('.img2');
-            const img3 = document.querySelector('.img3');
-            const img4 = document.querySelector('.img4');
-
-            img1.classList.add('slide-in-left');
-            img2.classList.add('slide-in-right');
-            img3.classList.add('slide-in-top');
-            img4.classList.add('slide-in-left');
-
-            observer.observe(img1);
-            observer.observe(img2);
-            observer.observe(img3);
-            observer.observe(img4);
-        });
-        </script>
     </main>
 
     <footer>
@@ -1012,14 +651,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        function navigateToSite() {
-            var select = document.getElementById('sitemap');
-            var url = select.options[select.selectedIndex].value;
-            if (url) {
-                window.location.href = url;
-            }
-        }
-    </script>
 </body>
 </html>
