@@ -806,35 +806,41 @@
                 </div>
             </div>
         </section>
-        <!-- <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const options = {
-                    threshold: 0.5
-                };
-            
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            setTimeout(() => {
-                                const img = entry.target.querySelector('img');
-                                const text = entry.target.querySelector('.overlay-text');
-                                if (img && text) {
-                                    img.style.opacity = 0;
-                                    text.style.display = 'block';
-                                }
-                            }, 1000);
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, options);
-            
-                const items = document.querySelectorAll('.img-container1, .img-container2, .img-container3, .img-container4, .palace-history, .palace');
-            
-                items.forEach(item => {
-                    observer.observe(item);
+        <script>
+           document.addEventListener('DOMContentLoaded', function() {
+            const options = {
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        startAlternation(entry.target);
+                    } else {
+                        entry.target.classList.remove('visible');
+                        stopAlternation(entry.target);
+                    }
                 });
-            });
-            </script> -->
+            }, options);
+
+            function startAlternation(element) {
+                element.alternationInterval = setInterval(() => {
+                    element.classList.toggle('alternate');
+                }, 3000); // 3초마다 전환
+            }
+
+            function stopAlternation(element) {
+                if (element.alternationInterval) {
+                    clearInterval(element.alternationInterval);
+                    element.alternationInterval = null;
+                }
+            }
+
+            const elements = document.querySelectorAll('.img-container1, .img-container2, .img-container3, .img-container4, .palace-history, .palace');
+            elements.forEach(el => observer.observe(el));
+        });
+        </script>
 
         <script>
             window.onload = function() {
