@@ -2081,7 +2081,6 @@ main .intro-imgbox a:hover .overlay2 .palace2024 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "a b b b" "c c d f" "c c e f";
-    padding: 10px;
   }
   #history .palace-img-pc .palace-history {
     background-color: #2f2411;
@@ -2225,6 +2224,9 @@ main .intro-imgbox a:hover .overlay2 .palace2024 {
        object-fit: cover;
     opacity: 0;
     transition: transform 1s, opacity 1s;
+  }
+  #history .palace-img-pc .img3 {
+    height: 300px;
   }
   #history .palace-img-pc .slide-in-left {
     transform: translateX(-100%);

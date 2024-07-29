@@ -1,4 +1,4 @@
-@import "./st0729 yle.scss";
+@import "./style.scss";
 @import "./reset.scss";
 @import "./mixin.scss";
 @import "../scss/mixin.scss";
@@ -1506,34 +1506,6 @@ main {
             display: none;
             @include responsive(large-screens) {
                 margin-bottom: 155px;
-                // &:hover {
-                //     .palace-history { 
-                //             background: url(../images/changkyung4.jpg) no-repeat;
-                //             background-image: cover;
-                //     }
-                //     .img-container1 { 
-                //         position: relative;
-                //         .overlay-text {
-                //             display: none;
-                //         }
-                   
-                //             background-color: #2f2411;
-                //             img {
-                //                 display: none;
-                //             }
-                //             .overlay-text {
-                //                 display: block;
-                //                 color: white;
-                //                 text-align: center;
-                //                 position: absolute;
-                //                 top: 50%;
-                //                 left: 50%;
-                //                 transform: translate(-50%, -50%);
-                //                 font-size: 32px;
-                //                 font-family: $font-extra;
-                //             }
-                //     }
-                // }
                 .palace-history {
                     background-color: #2f2411;
                     color: white;
@@ -1565,7 +1537,6 @@ main {
                 "c c d f"
                 "c c e f"
                 ;
-                padding: 10px;
                 .palace-history { 
                     grid-area: a; 
                     &:hover {
@@ -1687,6 +1658,9 @@ main {
                     object-fit: cover;
                     opacity: 0;
                     transition: transform 1s, opacity 1s;
+                }
+                .img3 {
+                    height: 300px;
                 }
                 .slide-in-left { transform: translateX(-100%); }
                 .slide-in-right { transform: translateX(100%); }
