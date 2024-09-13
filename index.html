@@ -12,7 +12,156 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/login.js"></script>
     <script src="./js/loginTab.js"></script>
-    <script src="./js/index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchIcon = document.getElementById('searchIcon');
+            const searchInput = document.getElementById('searchInput');
+
+            searchIcon.addEventListener('click', function() {
+                const query = searchInput.value;
+                if (query === '경복궁') {
+                    window.location.href = '../index_search/index_search.html';
+                } else {
+                    alert('Please enter "경복궁" to search.');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById('languageIcon').addEventListener('click', function(event) {
+        event.preventDefault();
+        var languageSelect = document.getElementById('languageSelect');
+        if (languageSelect.style.display === 'none' || languageSelect.style.display === '') {
+            languageSelect.style.display = 'block';
+        } else {
+            languageSelect.style.display = 'none';
+        }
+    });
+    </script>   
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var searchIcon = document.getElementById("searchIcon");
+        var searchInput = document.getElementById("searchInput");
+
+        searchIcon.addEventListener("click", function(event) {
+            event.preventDefault();
+            if (searchInput.style.display === "none" || searchInput.style.display === "") {
+                searchInput.style.display = "block";
+                searchInput.focus();
+            } else {
+                searchInput.style.display = "none";
+            }
+        });
+
+        document.addEventListener("click", function(event) {
+            if (!searchInput.contains(event.target) && !searchIcon.contains(event.target)) {
+                searchInput.style.display = "none";
+            }
+        });
+    });
+    </script>
+
+    <script>
+        function submitForm() {
+            document.querySelector('form').submit();
+        }
+
+        function validateSearch() {
+            const searchInput = document.getElementById('find').value.trim();
+            if (searchInput === '') {
+                alert('검색어를 입력하세요.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+    <script>
+        window.onload = function() {
+            const toggleBtn = document.querySelector('.menu-toggle-btn');
+            const sideMenu = document.getElementById('side-menu');
+            const closeBtn = document.querySelector('.close-btn');
+
+            toggleBtn.addEventListener('click', function() {
+                if (sideMenu.style.right === '0px') {
+                    sideMenu.style.right = '-50%'; 
+                    toggleBtn.classList.remove('open'); 
+                } else {
+                    sideMenu.style.right = '0'; 
+                    toggleBtn.classList.add('open'); 
+                }
+            });
+
+            closeBtn.addEventListener('click', function() {
+                sideMenu.style.right = '-50%'; 
+                toggleBtn.classList.remove('open'); 
+            });
+        };
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const menuItems = document.querySelectorAll('.gnb > li > a');
+        const header = document.querySelector('header');
+
+        menuItems.forEach(item => {
+            item.addEventListener('mouseover', function (e) {
+                e.preventDefault();
+                const submenu = this.nextElementSibling;
+                let allSubmenus = document.querySelectorAll('.submenu');
+
+                allSubmenus.forEach(sub => {
+                    if (sub !== submenu) {
+                        sub.classList.remove('open');
+                        sub.style.maxHeight = null;
+                    }
+                });
+
+                if (submenu && submenu.classList.contains('submenu')) {
+                    submenu.classList.toggle('open');
+                    if (submenu.classList.contains('open')) {
+                        submenu.style.maxHeight = submenu.scrollHeight + "px";
+                    } else {
+                        submenu.style.maxHeight = null;
+                    }
+
+                    setTimeout(() => {
+                        let totalHeight = 180; 
+                        allSubmenus.forEach(sub => {
+                            if (sub.classList.contains('open')) {
+                                totalHeight += sub.scrollHeight;
+                            }
+                        });
+                        header.style.height = totalHeight + "px";
+                    }, 300); 
+                }
+            });
+
+            item.parentElement.addEventListener('mouseleave', function () {
+                const submenu = item.nextElementSibling;
+                if (submenu && submenu.classList.contains('submenu')) {
+                    submenu.classList.remove('open');
+                    submenu.style.maxHeight = null;
+
+                    setTimeout(() => {
+                        let totalHeight = 180; 
+                        const allSubmenus = document.querySelectorAll('.submenu');
+                        allSubmenus.forEach(sub => {
+                            if (sub.classList.contains('open')) {
+                                totalHeight += sub.scrollHeight;
+                            }
+                        });
+                        header.style.height = totalHeight + "px";
+                    }, 300); 
+                }
+            });
+        });
+    });
+    </script>
+</head>
+<body>
     <header>
         <div class="modal-overlay"></div>   
 
@@ -99,6 +248,7 @@
             <source src="./mainvideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+
         <div class="container">
             <div class="logo-icon">
                 <a href="./index.html"><img src="./images/header-white-logo.png" alt="header_logo"></a>
@@ -110,7 +260,7 @@
                             <option value="ko">Korean</option>
                             <option value="jp">Japanese</option>
                         </select>
-                        <a href="#" id="intranet-icon"><img src="./images/language-white.png" alt=""></a>
+                        <a href="#" id="intranet-icon"><img src="./images/language-white.png" alt="language-white"></a>
                     </div>
                     <a href="#" id="login-toggle"><img src="./images/login-white.png" alt=""></a>
                     <a href=""><img id="searchIcon" src="./images/main-search-white.png" alt="search"></a>
@@ -122,7 +272,7 @@
                     <input type="text" id="searchInput" class="search-input" placeholder="Search...">
                 </div> <!-- search-menu -->
             </div> <!-- logo-icon -->
-            <script>
+            <!-- <script>
                 document.getElementById('intranet-icon').addEventListener('click', function(event) {
                     event.preventDefault();
                     var selectMenu = document.getElementById('language-select');
@@ -132,7 +282,7 @@
                         selectMenu.style.display = 'none';
                     }
                 });
-                </script>
+            </script> -->
 
             <div id="side-menu" class="side-menu">
                 <div class="language-login">
@@ -736,7 +886,7 @@
                         </ul>
                     </div>
                 </div>
-                <a href="./place_detail/place_detail_01.html">
+                <a href="../place_detail/place_detail_01.html">
                     <div class="palace-img1">
                         <img src="./images/palace-img1.png" alt="palace-img1">
                         <img src="./images/palace-img2.png" alt="palace-img2">
@@ -744,7 +894,7 @@
                         <img src="./images/palace-img4.png" alt="palace-img4">
                     </div>
                 </a>
-                <a href="./place_detail/place_detail_02.html">
+                <a href="../place_detail/place_detail_02.html">
                     <div class="palace-img2">
                         <img src="./images/chang1.jpg">
                         <img src="./images/chang2.jpg" alt="palace-img2">
@@ -752,7 +902,7 @@
                         <img src="./images/chang4.jpg" alt="palace-img4">
                     </div>
                 </a>
-                <a href="./place_detail/place_detail_03.html">
+                <a href="../place_detail/place_detail_03.html">
                     <div class="palace-img3">
                         <img src="./images/duc1.jpg">
                         <img src="./images/duc2.jpg" alt="palace-img2">
@@ -760,7 +910,7 @@
                         <img src="./images/duc4.jpg" alt="palace-img4">
                     </div>
                 </a>
-                <a href="./place_detail/place_detail_04.html">
+                <a href="../place_detail/place_detail_04.html">
                     <div class="palace-img4">
                         <img src="./images/changkyung1.jpg">
                         <img src="./images/changkyung2.jpg" alt="palace-img2">
@@ -768,7 +918,7 @@
                         <img src="./images/changkyung4.jpg" alt="palace-img4">
                     </div>
                 </a>
-                <a href="./place_detail/place_detail_05.html">
+                <a href="../place_detail/place_detail_05.html">
                     <div class="palace-img5">
                         <img src="./images/kyung1.JPG">
                         <img src="./images/kyung2.jpg" alt="palace-img2">
@@ -776,7 +926,7 @@
                         <img src="./images/kyung4.jpg" alt="palace-img4">
                     </div>
                 </a>
-                <a href="./place_detail/place_detail_06.html">
+                <a href="../place_detail/place_detail_06.html">
                     <div class="palace-img6">
                         <img src="./images/jongmo1.jpg">
                         <img src="./images/jongmo2.jpg" alt="palace-img2">
@@ -785,21 +935,21 @@
                     </div>
                 </a>
                 <div class="palace-img-pc">
-                    <a href="./place_detail/place_detail_06.html"><h2 class="palace-history">종 묘</h2></a>
-                    <a href="../place_detail/place_detail_01.html" class="img-container1">
-                        <img src="./images/palace-img1.png" alt="palace-img1" class="img1">
-                        <div class="overlay-text">경 복 궁</div>
-                    </a>
-                    <a href="./place_detail/place_detail_05.html" class="img-container2">
+                        <a href="../place_detail/place_detail_06.html"><h2 class="palace-history">종 묘</h2></a>
+                        <a href="../place_detail/place_detail_01.html" class="img-container1">
+                            <img src="./images/palace-img1.png" alt="palace-img1" class="img1">
+                            <div class="overlay-text">경 복 궁</div>
+                        </a>
+                    <a href="../place_detail/place_detail_05.html" class="img-container2">
                         <img src="./images/palace-img2.png" alt="palace-img2" class="img2">
                         <div class="overlay-text">경 희 궁</div>
                     </a>
-                    <a href="./place_detail/place_detail_03.html"><h2 class="palace">덕 수 궁</h2></a>
+                    <a href="../place_detail/place_detail_03.html"><h2 class="palace">덕 수 궁</h2></a>
                     <a href="../place_detail/place_detail_02.html" class="img-container3">
                         <img src="./images/palace-img3.png" alt="palace-img3" class="img3">
                         <div class="overlay-text">창 덕 궁</div>
                     </a>
-                    <a href="./place_detail/place_detail_04.html" class="img-container4">
+                    <a href="../place_detail/place_detail_04.html" class="img-container4">
                         <img src="./images/palace-img4.png" alt="palace-img4" class="img4">
                         <div class="overlay-text">창 경 궁</div>
                     </a>
@@ -807,73 +957,38 @@
             </div>
         </section>
         <script>
-           document.addEventListener('DOMContentLoaded', function() {
-            const options = {
-                threshold: 0.5
-            };
+            document.addEventListener('DOMContentLoaded', function() {
+            const palaceLinks = document.querySelectorAll('.palace_gnb li a');
+            const palaceSections = [
+                '.palace-img1',
+                '.palace-img2',
+                '.palace-img3',
+                '.palace-img4',
+                '.palace-img5',
+                '.palace-img6'
+            ];
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        startAlternation(entry.target);
+            function showPalace(index) {
+                palaceSections.forEach((selector, i) => {
+                    const section = document.querySelector(selector);
+                    if (i === index) {
+                        section.style.display = 'grid';
                     } else {
-                        entry.target.classList.remove('visible');
-                        stopAlternation(entry.target);
+                        section.style.display = 'none';
                     }
                 });
-            }, options);
-
-            function startAlternation(element) {
-                element.alternationInterval = setInterval(() => {
-                    element.classList.toggle('alternate');
-                }, 3000); // 3초마다 전환
             }
 
-            function stopAlternation(element) {
-                if (element.alternationInterval) {
-                    clearInterval(element.alternationInterval);
-                    element.alternationInterval = null;
-                }
-            }
-
-            const elements = document.querySelectorAll('.img-container1, .img-container2, .img-container3, .img-container4, .palace-history, .palace');
-            elements.forEach(el => observer.observe(el));
-        });
-        </script>
-
-        <script>
-            window.onload = function() {
-                const palaceLinks = document.querySelectorAll('.palace_gnb li a');
-                const palaceSections = [
-                    '.palace-img1',
-                    '.palace-img2',
-                    '.palace-img3',
-                    '.palace-img4',
-                    '.palace-img5',
-                    '.palace-img6'
-                ];
-        
-                function showPalace(index) {
-                    palaceSections.forEach((selector, i) => {
-                        const section = document.querySelector(selector);
-                        if (i === index) {
-                            section.style.display = 'grid';
-                        } else {
-                            section.style.display = 'none';
-                        }
-                    });
-                }
-        
-                palaceLinks.forEach((link, index) => {
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        showPalace(index);
-                    });
+            palaceLinks.forEach((link, index) => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showPalace(index);
                 });
-        
-                showPalace(0);
-            };
+            });
+
+            // Initialize the first palace section
+            showPalace(0);
+        });
         </script>
 
         <script>
@@ -891,11 +1006,13 @@
                 });
             }, options);
 
+            // const palacehistory = document.querySelector('.palace-history')
             const img1 = document.querySelector('.img1');
             const img2 = document.querySelector('.img2');
             const img3 = document.querySelector('.img3');
             const img4 = document.querySelector('.img4');
 
+            // palacehistory.classList.add('slide-in-right')
             img1.classList.add('slide-in-left');
             img2.classList.add('slide-in-right');
             img3.classList.add('slide-in-top');
@@ -907,6 +1024,7 @@
             observer.observe(img4);
         });
         </script>
+
     </main>
 
     <footer>

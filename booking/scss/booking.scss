@@ -1,8 +1,8 @@
-@import "./style.scss";
 @import "./reset.scss";
 @import "./mixin.scss";
 @import "../../scss/mixin.scss";
 @import "../../scss/style.scss";
+@import "../../scss/reset.scss";
 @import "../../header_footer/scss/header.scss";
 @import "../../header_footer/scss/footer.scss";
 
@@ -409,12 +409,12 @@ section.popular {
                     font-size: 16px;
                     color: white;
                     font-family: $font-regular;
-                    background-color: $basic-brown;
+                    background-color: #2f2411;
                     cursor: pointer;
                     
                     &:hover {
                         background-color: #ffbe0f;
-                        color: $basic-brown;
+                        color: #2f2411;
                     }
                 }
             }
@@ -498,7 +498,7 @@ section.popular {
         div {
             width: 8px; height: 8px;
             border-radius: 4px;
-            background-color: $background-lightgray;
+            background-color: #999;
         }
 
         .selected {
@@ -545,9 +545,9 @@ section.keyword > .hashtag {
         letter-spacing: -1px;
         cursor: pointer;
         text-align: center;
-        border: 1px solid $basic-gray;
+        border: 1px solid #999;
         border-radius:24px;
-        background-color: $color-white;
+        background-color: white;
 
         @include responsive(large-screens) {
             padding: 8px 24px;
@@ -558,7 +558,7 @@ section.keyword > .hashtag {
     .selected {
         font-weight: bold;
         color: $color-hover;
-        background-color: $basic-brown;
+        background-color: #2f2411;
     }
 }  // hashtag
 
@@ -685,7 +685,7 @@ section.place > .place-button {
         font-size: 14px;
         text-align: center;
         line-height: 80px;
-        background-color: $background-lightgray;
+        background-color: #d7d7d7;
 
         @include responsive(large-screens) {
             font-size: 16px;
@@ -697,8 +697,8 @@ section.place > .place-button {
         
         .btn-big:hover {
             font-weight: bold;
-            color: $basic-brown;
-            background-color: $basic-yellow;
+            color: #2f2411;
+            background-color: #ffbe0f;
         }
     }
 }

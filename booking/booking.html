@@ -9,7 +9,7 @@
     <script src="./js/booking.js"></script>
     <script src="./js/login.js"></script>
     <script src="./js/loginTab.js"></script>
-
+    <title>예약하기</title>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const searchIcon = document.getElementById('searchIcon');
@@ -159,6 +159,7 @@
     });
     </script>
 
+
 </head>
 <body>
     <header>
@@ -186,17 +187,7 @@
                     <input type="text" id="searchInput" class="search-input" placeholder="Search...">
                 </div> <!-- search-menu -->
             </div> <!-- logo-icon -->
-            <script>
-                document.getElementById('intranet-icon').addEventListener('click', function(event) {
-                    event.preventDefault();
-                    var selectMenu = document.getElementById('language-select');
-                    if (selectMenu.style.display === 'none' || selectMenu.style.display === '') {
-                        selectMenu.style.display = 'block';
-                    } else {
-                        selectMenu.style.display = 'none';
-                    }
-                });
-                </script>
+            
             <div id="side-menu" class="side-menu">
                 <div class="language-login">
                     <div class="language">
@@ -214,16 +205,16 @@
                 </div> 
                 <script>
                     document.addEventListener('DOMContentLoaded', (event) => {
-                const languageSelect = document.getElementById('language-select');
-                
-                languageSelect.addEventListener('click', () => {
-                    languageSelect.size = languageSelect.size === 1 ? 4 : 1;
+                    const languageSelect = document.getElementById('language-select');
+                    
+                    languageSelect.addEventListener('click', () => {
+                        languageSelect.size = languageSelect.size === 1 ? 4 : 1;
+                    });
+                    
+                    languageSelect.addEventListener('blur', () => {
+                        languageSelect.size = 1;
+                    });
                 });
-                
-                languageSelect.addEventListener('blur', () => {
-                    languageSelect.size = 1;
-                });
-            });
                 </script>
                 <nav class="side-nav">
                     <ul class="gnb">
